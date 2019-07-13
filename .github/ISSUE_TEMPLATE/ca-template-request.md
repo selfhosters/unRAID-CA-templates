@@ -2,7 +2,7 @@
 name: CA Template Request
 about: Request to add a container template to CA
 title: CA Template Request - <application name>
-labels: ''
+labels: Template Request
 assignees: Roxedus, gilbN
 
 ---
