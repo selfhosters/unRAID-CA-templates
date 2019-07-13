@@ -4,6 +4,6 @@ A [Data Hoarding/Homelab](https://discord.gg/7hk4YD3) community repo where you c
 ## "Ask and Ye Shall Receive" 
 
 
-#### How to request an application: 
+#### How to request a template: 
 
 Create a new issue using the `CA Template Request` issue template. If you know how to create CA container templates PR's are welcome!
