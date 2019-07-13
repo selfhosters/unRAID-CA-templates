@@ -7,7 +7,7 @@ assignees: Roxedus, gilbN
 
 ---
 
-##NOTE
+## NOTE
  **If you know how to make unraid container templates PR's are welcome! **
 
 ***
