@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container>
 	<TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/template/monitorr.xml</TemplateURL>
-	<Name>monitorr</Name>
+	<Name>Monitorr</Name>
 	<Repository>monitorr/monitorr</Repository>
 	<Registry>https://hub.docker.com/r/monitorr/monitorr/</Registry>
 	<Project>https://github.com/Monitorr/Monitorr/</Project>
