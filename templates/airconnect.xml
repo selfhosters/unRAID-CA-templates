@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container>
-  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/template/airconnect.xml</TemplateURL>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/airconnect.xml</TemplateURL>
   <Name>AirConnect</Name>
   <Repository>1activegeek/airconnect</Repository>
   <Registry>https://hub.docker.com/r/1activegeek/airconnect/</Registry>
