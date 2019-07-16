@@ -5,7 +5,7 @@
 	<Repository>starbix/plex-ldap</Repository>
 	<Registry>https://hub.docker.com/r/starbix/plex-ldap/</Registry>
 	<Project>https://github.com/hjone72/LDAP-for-Plex/</Project>
-	<Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/plex-ldap.png</Icon>
+	<Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/plex_ldap.png</Icon>
 	<Network>bridge</Network>
 	<BindTime>true</BindTime>
 	<Privileged>false</Privileged>
