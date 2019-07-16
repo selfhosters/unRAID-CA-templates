@@ -1,14 +1,18 @@
 <?xml version="1.0"?>
 <Container version="2">
-	<TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/plex-ldap.xml</TemplateURL>
+	<TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/template/plex-ldap.xml</TemplateURL>
 	<Name>LDAPforPlex</Name>
 	<Repository>starbix/plex-ldap</Repository>
 	<Registry>https://hub.docker.com/r/starbix/plex-ldap/</Registry>
 	<Project>https://github.com/hjone72/LDAP-for-Plex/</Project>
+	<Icon>https://github.com/selfhosters/unRAID-CA-templates/raw/master/template/plex-ldap.png</Icon>
 	<Network>bridge</Network>
 	<BindTime>true</BindTime>
 	<Privileged>false</Privileged>
 	<Category>Tools:</Category>
+	<Overview>
+		An LDAP server that uses Plex as the provider.
+	</Overview>
 	<Description>
 		An LDAP server that uses Plex as the provider.
 	</Description>
