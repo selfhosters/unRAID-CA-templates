@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-	<TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/template/plex-ldap.xml</TemplateURL>
+	<TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/plex-ldap.xml</TemplateURL>
 	<Name>LDAPforPlex</Name>
 	<Repository>starbix/plex-ldap</Repository>
 	<Registry>https://hub.docker.com/r/starbix/plex-ldap/</Registry>
