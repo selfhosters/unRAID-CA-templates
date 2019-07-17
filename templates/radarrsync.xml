@@ -22,7 +22,7 @@ PROFILE_ID -&amp;gt; The profile number you want the video to be added with. (St
 [b]Ensure that the root path is the same on both servers. ie /movie[b]</Overview>
   <Category>Downloaders: Status:Stable</Category>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/radarrsync.xml</TemplateURL>
-  <Icon>/plugins/dynamix.docker.manager/images/question.png</Icon>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/radarrsync.png</Icon>
   <Description>RadarrSync Syncs two Radarr servers through web API. This is a modified version designed to be run in a docker container. This version supports only two servers.&#xD;
 [br][br]&#xD;
 RADARR_URL -&amp;gt; The endpoint of your radarr server&#xD;
