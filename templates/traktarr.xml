@@ -8,13 +8,13 @@
   <Support>https://hub.docker.com/r/eafxx/traktarr</Support>
   <Project>https://github.com/l3uddz/traktarr</Project>
   <Overview>Script to add new series and movies to Sonarr/Radarr based on Trakt lists. [br][br]      &#xD;
-Also check out the wiki for more details: https://github.com/elmerfdz/traktarr/wiki. [br]</Overview>
+For more info on env variables and setup of your config file, check out: https://hub.docker.com/r/eafxx/traktarr [br]</Overview>
   <Category>Tools:</Category>
   <WebUI></WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/traktarr.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/traktarr.png</Icon>
   <Description>Script to add new series and movies to Sonarr/Radarr based on Trakt lists. [br][br]      &#xD;
-Also check out the wiki for more details: https://github.com/elmerfdz/traktarr/wiki. [br]</Description>
+For more info on env variables and setup of your config file, check out: https://hub.docker.com/r/eafxx/traktarr [br]</Description>
     <Networking>
     <Mode>bridge</Mode>
   </Networking>
