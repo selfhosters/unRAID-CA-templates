@@ -89,5 +89,5 @@ Also check out the wiki for more details: https://github.com/elmerfdz/traktarr/w
   <Config Name="Enable Blacklist" Target="BLACKLIST" Default="" Mode="" Description="Container Variable: BLACKLIST" Type="Variable" Display="always" Required="false" Mask="false">yes</Config>
   <Config Name="Run now" Target="RUNNOW" Default="" Mode="" Description="Container Variable: RUNNOW" Type="Variable" Display="always" Required="false" Mask="false">no</Config>
   <Config Name="Disable Traktarr Update on Restart" Target="SKIPUPDATE" Default="" Mode="" Description="Container Variable: SKIPUPDATE" Type="Variable" Display="always" Required="false" Mask="false">no</Config>
-  <Config Name="Traktarr GitHub Branch" Target="APP_BRANCH" Default="" Mode="" Description="Container Variable: APP_BRANCH" Type="Variable" Display="always" Required="false" Mask="false">develop</Config>
+  <Config Name="Traktarr GitHub Branch" Target="APP_BRANCH" Default="" Mode="" Description="Container Variable: APP_BRANCH" Type="Variable" Display="always" Required="false" Mask="false">master</Config>
 </Container>
