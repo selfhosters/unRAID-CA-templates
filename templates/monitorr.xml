@@ -47,7 +47,7 @@
 		</Variable>
 	</Environment>
 	<Config Name="Webui" Target="80" Default="" Mode="tcp" Description="Webui - Default 80" Type="Port" Display="always" Required="false" Mask="false">80</Config>
-	<Config Name="Appdata" Target="/app" Default="" Mode="rw" Description="Appdata" Type="Path" Display="advanced" Required="false" Mask="false"></Config>
-	<Config Name="PUID" Target="PUID" Default="" Mode="" Description="PUID" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
-	<Config Name="PGID" Target="PGID" Default="" Mode="" Description="PGID" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
+	<Config Name="Appdata" Target="/app" Default="" Mode="rw" Description="Appdata" Type="Path" Display="always" Required="false" Mask="false"></Config>
+	<Config Name="PUID" Target="PUID" Default="" Mode="" Description="PUID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
+	<Config Name="PGID" Target="PGID" Default="" Mode="" Description="PGID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
 </Container>
