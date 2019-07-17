@@ -17,7 +17,6 @@ Also check out the wiki for more details: https://github.com/elmerfdz/traktarr/w
 Also check out the wiki for more details: https://github.com/elmerfdz/traktarr/wiki. [br]</Description>
     <Networking>
     <Mode>bridge</Mode>
-    <Publish/>
   </Networking>
   <Data>
     <Volume>
