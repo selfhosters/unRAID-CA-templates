@@ -48,7 +48,7 @@ Provides a PHP front end to simply present PLEX libraries on the web without the
 			<Mode/>
 		</Variable>
 	</Environment>
-	<Config Name="Host Port" Target="80" Default="" Mode="tcp" Description="Webui - Default 80" Type="Port" Display="always" Required="false" Mask="false">80</Config>
+	<Config Name="Host Port" Target="80" Default="" Mode="tcp" Description="Webui - Default 80" Type="Port" Display="always" Required="false" Mask="false"></Config>
 	<Config Name="Host Path" Target="/config" Default="" Mode="rw" Description="Appdata" Type="Path" Display="advanced" Required="false" Mask="false"></Config>
 	<Config Name="PUID" Target="PUID" Default="" Mode="" Description="Container Variable: PUID" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
 	<Config Name="PGID" Target="PGID" Default="" Mode="" Description="Container Variable: PGID" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
