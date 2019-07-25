@@ -15,6 +15,8 @@
 		[br]&#xD;
 		Variable:[b][span style='color: #E80000;']ZONE[/span][/b]: Your domain name. e.g. [b]example.com[/b] &#xD;
 		[br]&#xD;
+		Variable:[b][span style='color: #E80000;']SUBDOMAIN[/span][/b]: Your subdomain. e.g. [b]sub[/b].example.com (Only enter subdomain name, not entire address!) &#xD;
+		[br]&#xD;
 		Variable:[b][span style='color: #E80000;']PROXIED[/span][/b]: Set this to [b]true[/b] if the domain is using the Cloudflare proxy (CDN). Defaults to [b]false[/b]&#xD;
 		[br]&#xD;
 		Variable:[b][span style='color: #E80000;']RRTYPE[/span][/b]: Set to [b]AAAA[/b] to use set IPv6 records instead of IPv4 records. Defaults to [b]A[/b] for IPv4 records. &#xD;
@@ -30,6 +32,8 @@
 		Variable:[b][span style='color: #E80000;']API_KEY[/span][/b]: The [b]Global API Key[/b] found on the [b]My Profile[/b] page. [b][span style='color: #E80000;']https://dash.cloudflare.com/profile[/span][/b]&#xD;
 		[br]&#xD;
 		Variable:[b][span style='color: #E80000;']ZONE[/span][/b]: Your domain name. e.g. [b]example.com[/b] &#xD;
+		[br]&#xD;
+		Variable:[b][span style='color: #E80000;']SUBDOMAIN[/span][/b]: Your subdomain. e.g. [b]sub[/b].example.com (Only enter subdomain prefix, not the entire address.) &#xD;
 		[br]&#xD;
 		Variable:[b][span style='color: #E80000;']PROXIED[/span][/b]: Set this to [b]true[/b] if the domain is using the Cloudflare proxy (CDN). Defaults to [b]false[/b]&#xD;
 		[br]&#xD;
@@ -58,6 +62,11 @@
 			<Mode/>
 		</Variable>
 		<Variable>
+			<Value></Value>
+			<Name>SUBDOMAIN</Name>
+			<Mode/>
+		</Variable>
+		<Variable>
 			<Value>false</Value>
 			<Name>PROXIED</Name>
 			<Mode/>
@@ -71,6 +80,7 @@
 	<Config Name="Email" Target="EMAIL" Default="" Mode="" Description="Container Variable: EMAIL" Type="Variable" Display="always" Required="true" Mask="false"></Config>
 	<Config Name="API Key" Target="API_KEY" Default="" Mode="" Description="Container Variable: API_KEY" Type="Variable" Display="always" Required="true" Mask="true"></Config>
 	<Config Name="Domain" Target="ZONE" Default="" Mode="" Description="Container Variable: ZONE" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+	<Config Name="Subdomain (Optional)" Target="SUBDOMAIN" Default="" Mode="" Description="Container Variable: SUBDOMAIN" Type="Variable" Display="always" Required="false" Mask="false"></Config>
 	<Config Name="Cloudflare Proxy" Target="PROXIED" Default="" Mode="" Description="Container Variable: PROXIED" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
 	<Config Name="IPv6/IPv4 records" Target="RRTYP" Default="" Mode="" Description="Container Variable: RRTYP" Type="Variable" Display="always" Required="false" Mask="false">A</Config>
 </Container>
