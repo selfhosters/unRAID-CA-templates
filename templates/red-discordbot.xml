@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>red-discordbot-dev</Name>
+  <Name>red-discordbot</Name>
   <Repository>phasecorex/red-discordbot:full</Repository>
   <Registry>https://hub.docker.com/r/phasecorex/red-discordbot/</Registry>
   <Network>bridge</Network>
