@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>unifi-poller</Name>
+  <Repository>golift/unifi-poller</Repository>
+  <Registry>https://hub.docker.com/r/golift/unifi-poller/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/golift/unifi-poller/</Support>
+  <Project>https://github.com/davidnewhall/unifi-poller</Project>
+  <Overview>Collect ALL UniFi Controller, Device and Client Data - Export to InfluxDB and Grafana
+[br]
+[br]
+READ THE INSTRUCTIONS! [br]
+https://github.com/davidnewhall/unifi-poller/wiki/Installation[br]
+https://github.com/davidnewhall/unifi-poller/wiki/Grafana[br]
+https://github.com/davidnewhall/unifi-poller/wiki/InfluxDB[br]
+[br]
+[br]
+Copy the example configuration file from this repository and mount it as an overlay into the container. The example configuration file is also included in the container at the default location /etc/unifi-poller/up.conf
+[br][br]
+https://raw.githubusercontent.com/davidnewhall/unifi-poller/master/examples/up.conf.example</Overview>
+  <Category>Tools: Network:Management Status:Stable</Category>
+  <WebUI/>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/unifi-poller.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/unifi-poller.png</Icon>
+  <Description>Collect ALL UniFi Controller, Device and Client Data - Export to InfluxDB and Grafana
+[br]
+[br]
+READ THE INSTRUCTIONS! [br]
+https://github.com/davidnewhall/unifi-poller/wiki/Installation[br]
+https://github.com/davidnewhall/unifi-poller/wiki/Grafana[br]
+https://github.com/davidnewhall/unifi-poller/wiki/InfluxDB[br]
+[br]
+[br]
+Copy the example configuration file from this repository and mount it as an overlay into the container. The example configuration file is also included in the container at the default location /etc/unifi-poller/up.conf
+[br][br]
+https://raw.githubusercontent.com/davidnewhall/unifi-poller/master/examples/up.conf.example</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish/>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/etc/unifi-poller/up.conf</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>influx</Value>
+      <Name>UP_POLLING_MODE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>unifi</Value>
+      <Name>UP_INFLUX_DB</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>root</Value>
+      <Name>UP_INFLUX_USER</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>root</Value>
+      <Name>UP_INFLUX_PASS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>UP_INFLUX_URL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>influx</Value>
+      <Name>UP_UNIFI_USER</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>UP_UNIFI_PASS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>UP_UNIFI_URL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>false</Value>
+      <Name>UP_REAUTHENTICATE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>false</Value>
+      <Name>UP_VERIFY_SSL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>false</Value>
+      <Name>UP_COLLECT_IDS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>false</Value>
+      <Name>UP_QUIET_MODE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>false</Value>
+      <Name>UP_DEBUG_MODE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>30s</Value>
+      <Name>UP_POLLING_INTERVAL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>0</Value>
+      <Name>UP_MAX_ERRORS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>all</Value>
+      <Name>UP_POLL_SITES</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Config" Target="/etc/unifi-poller/up.conf" Default="" Mode="rw" Description="Container Path: /etc/unifi-poller/up.conf" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Polling Mode" Target="UP_POLLING_MODE" Default="influx" Mode="" Description="Container Variable: UP_POLLING_MODE" Type="Variable" Display="always" Required="false" Mask="false">influx</Config>
+  <Config Name="Influx Database" Target="UP_INFLUX_DB" Default="unifi" Mode="" Description="Container Variable: UP_INFLUX_DB" Type="Variable" Display="always" Required="false" Mask="false">unifi</Config>
+  <Config Name="Influx User" Target="UP_INFLUX_USER" Default="root" Mode="" Description="Container Variable: UP_INFLUX_USER" Type="Variable" Display="always" Required="false" Mask="false">root</Config>
+  <Config Name="Influx Password" Target="UP_INFLUX_PASS" Default="root" Mode="" Description="Container Variable: UP_INFLUX_PASS" Type="Variable" Display="always" Required="false" Mask="false">root</Config>
+  <Config Name="InfluxDB URL" Target="UP_INFLUX_URL" Default="http://unraid.ip:8086" Mode="" Description="Container Variable: UP_INFLUX_URL" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Unifi User" Target="UP_UNIFI_USER" Default="influx" Mode="" Description="Container Variable: UP_UNIFI_USER" Type="Variable" Display="always" Required="false" Mask="false">influx</Config>
+  <Config Name="Unifi User Password" Target="UP_UNIFI_PASS" Default="" Mode="" Description="Container Variable: UP_UNIFI_PASS" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Unifi URL" Target="UP_UNIFI_URL" Default="" Mode="" Description="Container Variable: UP_UNIFI_URL" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Unifi Reauthenticate" Target="UP_REAUTHENTICATE" Default="false" Mode="" Description="Container Variable: UP_REAUTHENTICATE" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="Unifi Verify SSL" Target="UP_VERIFY_SSL" Default="false" Mode="" Description="Container Variable: UP_VERIFY_SSL" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="Unifi Collect IDS" Target="UP_COLLECT_IDS" Default="false" Mode="" Description="Container Variable: UP_COLLECT_IDS" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="Quiet mode" Target="UP_QUIET_MODE" Default="false" Mode="" Description="Container Variable: UP_QUIET_MODE" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="Debug Mode" Target="UP_DEBUG_MODE" Default="false" Mode="" Description="Container Variable: UP_DEBUG_MODE" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="Polling Interval" Target="UP_POLLING_INTERVAL" Default="30s" Mode="" Description="Container Variable: UP_POLLING_INTERVAL" Type="Variable" Display="always" Required="false" Mask="false">30s</Config>
+  <Config Name="Max Errors" Target="UP_MAX_ERRORS" Default="0" Mode="" Description="Container Variable: UP_MAX_ERRORS" Type="Variable" Display="always" Required="false" Mask="false">0</Config>
+  <Config Name="Poll Sites" Target="UP_POLL_SITES" Default="all" Mode="" Description="Container Variable: UP_POLL_SITES" Type="Variable" Display="always" Required="false" Mask="false">all</Config>
+</Container>
