@@ -145,7 +145,7 @@
   <Config Name="APP_KEY" Target="APP_KEY" Default="SomeRandom32CharacterLongAlphanumericString" Mode="" Description="Container Variable: APP_KEY" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="MAIL_DRIVER" Target="MAIL_DRIVER" Default="smtp" Mode="" Description="Container Variable: MAIL_DRIVER" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="MAIL_PORT" Target="MAIL_PORT" Default="587" Mode="" Description="Container Variable: MAIL_PORT" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="MAIL_ENCRYPTION" Target="MAIL_ENCRYPTION" Default="" Mode="" Description="Container Variable: MAIL_ENCRYPTION" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="MAIL_ENCRYPTION" Target="MAIL_ENCRYPTION" Default="tls" Mode="" Description="Container Variable: MAIL_ENCRYPTION" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="MAIL_HOST" Target="MAIL_HOST" Default="smtp.example.com" Mode="" Description="Container Variable: MAIL_HOST" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="MAIL_USERNAME" Target="MAIL_USERNAME" Default="johndoe@example.com" Mode="" Description="Container Variable: MAIL_USERNAME" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="MAIL_FROM_ADDRESS" Target="MAIL_FROM_ADDRESS" Default="invoice@example.com" Mode="" Description="Container Variable: MAIL_FROM_ADDRESS" Type="Variable" Display="always" Required="false" Mask="false"></Config>
