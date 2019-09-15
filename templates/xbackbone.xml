@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>xbackbone-docker</Name>
+  <Name>xbackbone</Name>
   <Repository>pe46dro/xbackbone-docker</Repository>
   <Registry>https://hub.docker.com/r/pe46dro/xbackbone-docker/</Registry>
   <Network>bridge</Network>
