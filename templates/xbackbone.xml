@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>xbackbone-docker</Name>
+  <Repository>pe46dro/xbackbone-docker</Repository>
+  <Registry>https://hub.docker.com/r/pe46dro/xbackbone-docker/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/pe46dro/xbackbone-docker/</Support>
+  <Project>https://github.com/Pe46dro/XBackBone-docker</Project>
+  <Overview>Container for XBackBone, a simple and lightweight ShareX PHP backend &#xD;
+[br][br]&#xD;
+&#xD;
+-e URL&#xD;
+[br]&#xD;
+This will specify the app url, slashes need to be escaped like this -e URL=http://127.0.0.1&#xD;
+&#xD;
+[br][br]&#xD;
+[b]Permissions[/b]&#xD;
+[br]&#xD;
+[br]&#xD;
+The folder on host system need to have both UID and GID 1000&#xD;
+[br][br]&#xD;
+[b]Example[/b]&#xD;
+[br][br]&#xD;
+mkdir -p /mnt/user/appdata/xbb/storage&#xD;
+[br]&#xD;
+mkdir -p /mnt/user/appdata/xbb/database&#xD;
+[br]&#xD;
+mkdir -p /mnt/user/appdata/xbb/logs&#xD;
+[br][br]&#xD;
+chown -R 1000:1000 /mnt/user/appdata/xbb</Overview>
+  <Category>Cloud:</Category>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/xbackbone.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/xbackbone.png</Icon>
+  <Description>Container for XBackBone, a simple and lightweight ShareX PHP backend &#xD;
+[br][br]&#xD;
+&#xD;
+-e URL&#xD;
+[br]&#xD;
+This will specify the app url, slashes need to be escaped like this -e URL=http://127.0.0.1&#xD;
+&#xD;
+[br][br]&#xD;
+[b]Permissions[/b]&#xD;
+[br]&#xD;
+[br]&#xD;
+The folder on host system need to have both UID and GID 1000&#xD;
+[br][br]&#xD;
+[b]Example[/b]&#xD;
+[br][br]&#xD;
+mkdir -p /mnt/user/appdata/xbb/storage&#xD;
+[br]&#xD;
+mkdir -p /mnt/user/appdata/xbb/database&#xD;
+[br]&#xD;
+mkdir -p /mnt/user/appdata/xbb/logs&#xD;
+[br][br]&#xD;
+chown -R 1000:1000 /mnt/user/appdata/xbb</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>9876</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/app/storage</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/app/resources/database</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/app/logs</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>http:\/\/192.168.1.1:9876</Value>
+      <Name>URL</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Port" Target="80" Default="9876" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false">9876</Config>
+  <Config Name="URL" Target="URL" Default="http:\/\/192.168.1.2:9876" Mode="" Description="This will specify the app url, slashes need to be escaped like this -e URL=http:\/\/127.0.0.1" Type="Variable" Display="always" Required="false" Mask="false">http:\/\/192.168.1.1:9876</Config>
+  <Config Name="Storage" Target="/app/storage" Default="" Mode="rw" Description="Container Path: /app/storage" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Database" Target="/app/resources/database" Default="" Mode="rw" Description="Container Path: /app/resources/database" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Logs" Target="/app/logs" Default="" Mode="rw" Description="Container Path: /app/logs" Type="Path" Display="always" Required="false" Mask="false"></Config>
+</Container>
