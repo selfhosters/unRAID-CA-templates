@@ -173,8 +173,8 @@ APP_URL: https://github.com/monicahq/monica/blob/master/docs/installation/ssl.md
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="WebUI" Target="80" Default="3000" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="false" Mask="false">3003</Config>
-  <Config Name="Appdata" Target="/var/www/monica/storage" Default="" Mode="rw" Description="Container Path: /var/www/monica/storage" Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/Docker/monicahq</Config>
+  <Config Name="WebUI" Target="80" Default="3000" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Appdata" Target="/var/www/monica/storage" Default="" Mode="rw" Description="Container Path: /var/www/monica/storage" Type="Path" Display="always" Required="false" Mask="false"></Config>
   <Config Name="APP_ENV" Target="APP_ENV" Default="production" Mode="" Description="Container Variable: APP_ENV" Type="Variable" Display="always" Required="false" Mask="false">production</Config>
   <Config Name="APP_DEBUG" Target="APP_DEBUG" Default="false" Mode="" Description="Container Variable: APP_DEBUG" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
   <Config Name="APP_KEY" Target="APP_KEY" Default="ChangeMeBy32KeyLengthOrGenerated" Mode="" Description="Container Variable: APP_KEY" Type="Variable" Display="always" Required="false" Mask="false">ChangeMeBy32KeyLengthOrGenerated</Config>
@@ -189,7 +189,7 @@ APP_URL: https://github.com/monicahq/monica/blob/master/docs/installation/ssl.md
   <Config Name="Database Password" Target="DB_PASSWORD" Default="monica" Mode="" Description="Container Variable: DB_PASSWORD" Type="Variable" Display="always" Required="false" Mask="false">monica</Config>
   <Config Name="DB_USE_UTF8MB4" Target="DB_USE_UTF8MB4" Default="" Mode="" Description="# Use utf8mb4 database charset format to support emoji characters&#13;&#10;# &#x26A0; be sure your DBMS supports utf8mb4 format" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
   <Config Name="MAIL_DRIVER" Target="MAIL_DRIVER" Default="" Mode="" Description="Container Variable: MAIL_DRIVER" Type="Variable" Display="always" Required="false" Mask="false">smtp</Config>
-  <Config Name="Mail Host" Target="MAIL_HOST" Default="example.com" Mode="" Description="Container Variable: MAIL_HOST" Type="Variable" Display="always" Required="false" Mask="false">smtp.gmail.com</Config>
+  <Config Name="Mail Host" Target="MAIL_HOST" Default="example.com" Mode="" Description="Container Variable: MAIL_HOST" Type="Variable" Display="always" Required="false" Mask="false">smtp.mail.com</Config>
   <Config Name="Mail Port" Target="MAIL_PORT" Default="587" Mode="" Description="Container Variable: MAIL_PORT" Type="Variable" Display="always" Required="false" Mask="false">587</Config>
   <Config Name="MAIL_ENCRYPTION" Target="MAIL_ENCRYPTION" Default="TLS" Mode="" Description="Container Variable: MAIL_ENCRYPTION" Type="Variable" Display="always" Required="false" Mask="false">TLS</Config>
   <Config Name="Mail Username" Target="MAIL_USERNAME" Default="user@example.com" Mode="" Description="Container Variable: MAIL_USERNAME" Type="Variable" Display="always" Required="false" Mask="false"></Config>
