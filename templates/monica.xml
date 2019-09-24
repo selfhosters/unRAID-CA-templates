@@ -183,7 +183,7 @@ APP_URL: https://github.com/monicahq/monica/blob/master/docs/installation/ssl.md
   <Config Name="APP_URL" Target="APP_URL" Default="https://FQDM.tld" Mode="" Description="Container Variable: APP_URL&#13;&#10;REQUIRES SSL! Read Description!" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="Database Connection" Target="DB_CONNECTION" Default="mysql" Mode="" Description="Container Variable: DB_CONNECTION" Type="Variable" Display="always" Required="false" Mask="false">mysql</Config>
   <Config Name="Database Host" Target="DB_HOST" Default="192.168.1.2" Mode="" Description="Container Variable: DB_HOST" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Database Port" Target="DB_PORT" Default="3306" Mode="" Description="Container Variable: DB_PORT" Type="Variable" Display="always" Required="false" Mask="false">3307</Config>
+  <Config Name="Database Port" Target="DB_PORT" Default="3306" Mode="" Description="Container Variable: DB_PORT" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="Database" Target="DB_DATABASE" Default="monica" Mode="" Description="Container Variable: DB_DATABASE" Type="Variable" Display="always" Required="false" Mask="false">monica</Config>
   <Config Name="Database Username" Target="DB_USERNAME" Default="monica" Mode="" Description="Container Variable: DB_USERNAME" Type="Variable" Display="always" Required="false" Mask="false">monica</Config>
   <Config Name="Database Password" Target="DB_PASSWORD" Default="monica" Mode="" Description="Container Variable: DB_PASSWORD" Type="Variable" Display="always" Required="false" Mask="false">monica</Config>
