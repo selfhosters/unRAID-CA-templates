@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>monicahq</Name>
+  <Name>monica</Name>
   <Repository>monicahq/monicahq</Repository>
   <Registry>https://hub.docker.com/r/monicahq/monicahq/</Registry>
   <Network>bridge</Network>
