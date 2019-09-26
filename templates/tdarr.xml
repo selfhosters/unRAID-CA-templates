@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>tdarr</Name>
+  <Repository>haveagitgat/tdarr</Repository>
+  <Registry>https://hub.docker.com/r/haveagitgat/tdarr/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://discord.gg/GF8X8cq</Support>
+  <Project>https://github.com/HaveAGitGat/Tdarr</Project>
+  <Overview>Tdarr is a self hosted web-app for automating media library transcode management and making sure your content is in your preferred codecs and works well in the 'arr' family of apps. &#xD;
+[br][br]&#xD;
+Built with the aim of modularisation, parallelisation and scalability, each library you add has its own transcode settings, filters and schedule. Workers can be fired up and closed down as necessary, and are split into 3 types - 'general', 'transcode' and 'health check'. Worker limits can be managed by the scheduler as well as manually.&#xD;
+[br][br]&#xD;
+For a desktop application with similar functionality please see HBBatchBeast.&#xD;
+[br][br]&#xD;
+Get plugins here: https://github.com/HaveAGitGat/Tdarr_Plugins</Overview>
+  <Category>Productivity: Tools: MediaApp:Video Status:Beta</Category>
+  <WebUI>http://[IP]:[PORT:8265]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/tdarr.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/tdarr.png</Icon>
+  <Description>Tdarr is a self hosted web-app for automating media library transcode management and making sure your content is in your preferred codecs and works well in the 'arr' family of apps. &#xD;
+[br][br]&#xD;
+Built with the aim of modularisation, parallelisation and scalability, each library you add has its own transcode settings, filters and schedule. Workers can be fired up and closed down as necessary, and are split into 3 types - 'general', 'transcode' and 'health check'. Worker limits can be managed by the scheduler as well as manually.&#xD;
+[br][br]&#xD;
+For a desktop application with similar functionality please see HBBatchBeast.&#xD;
+[br][br]&#xD;
+Get plugins here: https://github.com/HaveAGitGat/Tdarr_Plugins</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8265</HostPort>
+        <ContainerPort>8265</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/home/Tdarr/Media</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/var/lib/mongodb/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/home/Tdarr/Documents/Tdarr</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/home/Tdarr/cache</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="WebUI" Target="8265" Default="8265" Mode="tcp" Description="Container Port: 8265" Type="Port" Display="always" Required="false" Mask="false">8265</Config>
+  <Config Name="Video Library" Target="/home/Tdarr/Media" Default="" Mode="rw" Description="Container Path: /home/Tdarr/Media" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Database Files" Target="/var/lib/mongodb/" Default="" Mode="rw" Description="Container Path: /var/lib/mongodb/" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Appdata" Target="/home/Tdarr/Documents/Tdarr" Default="" Mode="rw" Description="Container Path: /home/Tdarr/Documents/Tdarr" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Transcode Cache" Target="/home/Tdarr/cache" Default="" Mode="rw" Description="Container Path: /home/Tdarr/cache" Type="Path" Display="always" Required="false" Mask="false"></Config>
+</Container>
