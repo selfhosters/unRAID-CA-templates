@@ -16,7 +16,7 @@ For a desktop application with similar functionality please see HBBatchBeast.&#x
 Get plugins here: https://github.com/HaveAGitGat/Tdarr_Plugins&#xD;
 [br][br]&#xD;
 &#xD;
-[b][span style='color: #E80000;'] NOTE: This container need a separate MonogDB instance! [/span][/b] </Overview>
+[b][span style='color: #E80000;'] NOTE: This container needs a separate MonogDB instance! [/span][/b] </Overview>
   <Category>Productivity: MediaApp:Video Status:Beta</Category>
   <WebUI>http://[IP]:[PORT:8265]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/tdarr.xml</TemplateURL>
@@ -32,7 +32,7 @@ For a desktop application with similar functionality please see HBBatchBeast.&#x
 Get plugins here: https://github.com/HaveAGitGat/Tdarr_Plugins&#xD;
 [br][br]&#xD;
 &#xD;
-[b][span style='color: #E80000;'] NOTE: This container need a separate MonogDB instance! [/span][/b] </Description>
+[b][span style='color: #E80000;'] NOTE: This container needs a separate MonogDB instance! [/span][/b] </Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
