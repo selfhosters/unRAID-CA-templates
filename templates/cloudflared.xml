@@ -7,7 +7,7 @@
   <Privileged>false</Privileged>
   <Support>https://hub.docker.com/r/crazymax/cloudflared/</Support>
   <Project>https://github.com/crazy-max/docker-cloudflared</Project>
-  <Overview>Cloudflared proxy-dns multi-platform Docker image based on Alpine Linux   Converted By Community Applications   Always verify this template (and values) against the dockerhub support page for the container</Overview>
+  <Overview>Cloudflared proxy-dns multi-platform Docker image based on Alpine Linux</Overview>
   <Category>Tools:</Category>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/cloudflared.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/cloudflared.jpg</Icon>
