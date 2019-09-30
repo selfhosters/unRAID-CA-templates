@@ -18,12 +18,12 @@
     <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort>5053</HostPort>
+        <HostPort></HostPort>
         <ContainerPort>5053</ContainerPort>
         <Protocol>udp</Protocol>
       </Port>
       <Port>
-        <HostPort>49312</HostPort>
+        <HostPort></HostPort>
         <ContainerPort>49312</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
@@ -31,7 +31,7 @@
   </Networking>
   <Environment>
     <Variable>
-      <Value>https://1.1.1.1/dns-query,https://1.0.0.1/dns-query</Value>
+      <Value></Value>
       <Name>TUNNEL_DNS_UPSTREAM</Name>
       <Mode/>
     </Variable>
