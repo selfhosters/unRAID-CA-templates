@@ -38,5 +38,5 @@
   </Environment>
   <Config Name="Listen port for the DNS over HTTPS proxy server" Target="5053" Default="5053" Mode="udp" Description="Container Port: 5053" Type="Port" Display="always" Required="false" Mask="false"></Config>
   <Config Name="Listen port for metrics reporting" Target="49312" Default="49312" Mode="tcp" Description="Container Port: 49312" Type="Port" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Upstream endpoint URL" Target="TUNNEL_DNS_UPSTREAM" Default="" Mode="" Description="Container Variable: TUNNEL_DNS_UPSTREAM Upstream endpoint URL, you can specify multiple endpoints for redundancy" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Upstream endpoint URL" Target="TUNNEL_DNS_UPSTREAM" Default="https://1.1.1.1/dns-query,https://1.0.0.1/dns-query" Mode="" Description="Container Variable: TUNNEL_DNS_UPSTREAM Upstream endpoint URL, you can specify multiple endpoints for redundancy" Type="Variable" Display="always" Required="false" Mask="false"></Config>
 </Container>
