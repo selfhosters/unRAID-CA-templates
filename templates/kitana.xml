@@ -14,7 +14,7 @@
 [br][b][span style='color: #E80000;']To set the baseurl for this application, open advanced view, and add [span style='color: #00e814;']-p /kitana -P [/span] to the "Post Arguments"  [/span][/b]</Overview>
   <Category>HomeAutomation: Tools: MediaApp:Other</Category>
   <WebUI>http://[IP]:[PORT:31337]</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/kitana.xml<TemplateURL/>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/kitana.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/pannal/Kitana/master/static/img/android-icon-192x192.png</Icon>
   <ExtraParams/>
   <PostArgs>-B 0.0.0.0:31337 -p /kitana -P</PostArgs>
