@@ -17,7 +17,7 @@
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/kitana.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/pannal/Kitana/master/static/img/android-icon-192x192.png</Icon>
   <ExtraParams/>
-  <PostArgs>-B 0.0.0.0:31337 -p /kitana -P</PostArgs>
+  <PostArgs>-B 0.0.0.0:31337</PostArgs>
   <CPUset/>
   <DonateText>If you like this, buy me a beer</DonateText>
   <DonateLink>https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;amp;hosted_button_id=G9VKR2B8PMNKG</DonateLink>
