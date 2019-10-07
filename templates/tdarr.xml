@@ -5,7 +5,7 @@
   <Registry>https://hub.docker.com/r/haveagitgat/tdarr/</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
-  <Support>https://discord.gg/GF8X8cq</Support>
+  <Support>https://forums.unraid.net/topic/84070-support-haveagitgat-tdarr-audiovideo-library-analytics-transcode-automation/</Support>
   <Project>https://github.com/HaveAGitGat/Tdarr</Project>
   <Overview>Tdarr is a self hosted web-app for automating media library transcode management and making sure your content is in your preferred codecs and works well in the 'arr' family of apps. &#xD;
 [br][br]&#xD;
