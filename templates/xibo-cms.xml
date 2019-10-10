@@ -207,7 +207,7 @@ U: xibo_admin P: password   </Description>
   <Labels/>
   <Config Name="WebUI" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="false" Mask="false">8976</Config>
   <Config Name="Database" Target="MYSQL_DATABASE" Default="cms" Mode="" Description="Container Variable: MYSQL_DATABASE" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Database User" Target="MYSQL_USER" Default="" Mode="" Description="Container Variable: MYSQL_USER" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Database User" Target="MYSQL_USER" Default="cms" Mode="" Description="Container Variable: MYSQL_USER" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="Database Password" Target="MYSQL_PASSWORD" Default="cmspassword" Mode="" Description="Container Variable: MYSQL_PASSWORD" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="Database host" Target="MYSQL_HOST" Default="unraidIP" Mode="" Description="Container Variable: MYSQL_HOST" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="Datapase port" Target="MYSQL_PORT" Default="3306" Mode="" Description="Container Variable: MYSQL_PORT" Type="Variable" Display="always" Required="false" Mask="false"></Config>
