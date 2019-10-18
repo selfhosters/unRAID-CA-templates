@@ -66,8 +66,20 @@ Get plugins here: https://github.com/HaveAGitGat/Tdarr_Plugins&#xD;
       <Name>MONGO_URL</Name>
       <Mode/>
     </Variable>
-  </Environment>
+		<Variable>
+			<Value>99</Value>
+			<Name>PUID</Name>
+			<Mode/>
+		</Variable>
+		<Variable>
+			<Value>100</Value>
+			<Name>PGID</Name>
+			<Mode/>
+		</Variable>
+	</Environment>
   <Labels/>
+  <Config Name="PUID" Target="PUID" Default="" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
+	<Config Name="PGID" Target="PGID" Default="" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
   <Config Name="WebUI" Target="8265" Default="8265" Mode="tcp" Description="Container Port: 8265" Type="Port" Display="always" Required="false" Mask="false">8265</Config>
   <Config Name="Media Library" Target="/home/Tdarr/Media" Default="" Mode="rw" Description="Container Path: /home/Tdarr/Media" Type="Path" Display="always" Required="false" Mask="false"></Config>
   <Config Name="MongoDB Database" Target="MONGO_URL" Default="mongodb://unraidIP:27017/Tdarr" Mode="" Description="Container Variable: MONGO_URL" Type="Variable" Display="always" Required="false" Mask="false"></Config>
