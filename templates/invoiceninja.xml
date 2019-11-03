@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>invoiceninja</Name>
+  <Repository>anojht/invoiceninja</Repository>
+  <Registry>https://hub.docker.com/r/anojht/invoiceninja</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/anojht/invoiceninja</Support>
+  <Project>https://www.invoiceninja.com/</Project>
+  <Overview> An open-source invoicing and time-tracking app built with Laravel https://www.invoiceninja.com  </Overview>
+  <Category>Productivity: Tools:</Category>
+  <WebUI>http://[IP]:[PORT:8000]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/invoiceninja.xml</TemplateURL>
+	<Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/invoiceninja.jpg</Icon>
+  <Description> An open-source invoicing and time-tracking app built with Laravel https://www.invoiceninja.com  </Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8000</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8443</HostPort>
+        <ContainerPort>443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/var/www/app/storage</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/var/www/app/public/logo</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>production</Value>
+      <Name>APP_ENV</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>0</Value>
+      <Name>APP_DEBUG</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>mysql</Value>
+      <Name>DB_TYPE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>false</Value>
+      <Name>DB_STRICT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>ip:port</Value>
+      <Name>DB_HOST</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>ninja</Value>
+      <Name>DB_DATABASE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>ninja</Value>
+      <Name>DB_USERNAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>ninja</Value>
+      <Name>DB_PASSWORD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>https://invoice.example.com</Value>
+      <Name>APP_URL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>SomeRandom32CharacterLongAlphanumericString</Value>
+      <Name>APP_KEY</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>smtp</Value>
+      <Name>MAIL_DRIVER</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>587</Value>
+      <Name>MAIL_PORT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>tls</Value>
+      <Name>MAIL_ENCRYPTION</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>smtp.example.com</Value>
+      <Name>MAIL_HOST</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>johndoe@example.com</Value>
+      <Name>MAIL_USERNAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>johndoe@example.com</Value>
+      <Name>MAIL_FROM_ADDRESS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>John Doe</Value>
+      <Name>MAIL_FROM_NAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>SUPERSECRETEMAILPASSWORD</Value>
+      <Name>MAIL_PASSWORD</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="APP_ENV" Target="APP_ENV" Default="production" Mode="" Description="Container Variable: APP_ENV" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Debug Mode" Target="APP_DEBUG" Default="0" Mode="" Description="Container Variable: APP_DEBUG" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Database Type" Target="DB_TYPE" Default="mysql" Mode="" Description="Container Variable: DB_TYPE" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="DB_STRICT" Target="DB_STRICT" Default="false" Mode="" Description="Container Variable: DB_STRICT" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Database Host" Target="DB_HOST" Default="unraidIP:port" Mode="" Description="Container Variable: DB_HOST" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Database Name" Target="DB_DATABASE" Default="ninja" Mode="" Description="Container Variable: DB_DATABASE" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Database username" Target="DB_USERNAME" Default="ninja" Mode="" Description="Container Variable: DB_USERNAME" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Database Password" Target="DB_PASSWORD" Default="ninja" Mode="" Description="Container Variable: DB_PASSWORD" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="APP_URL" Target="APP_URL" Default="https://invoice.domain.com" Mode="" Description="Container Variable: APP_URL" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="APP_KEY" Target="APP_KEY" Default="SomeRandom32CharacterLongAlphanumericString" Mode="" Description="Container Variable: APP_KEY" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="MAIL_DRIVER" Target="MAIL_DRIVER" Default="smtp" Mode="" Description="Container Variable: MAIL_DRIVER" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="MAIL_PORT" Target="MAIL_PORT" Default="587" Mode="" Description="Container Variable: MAIL_PORT" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="MAIL_ENCRYPTION" Target="MAIL_ENCRYPTION" Default="tls" Mode="" Description="Container Variable: MAIL_ENCRYPTION" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="MAIL_HOST" Target="MAIL_HOST" Default="smtp.example.com" Mode="" Description="Container Variable: MAIL_HOST" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="MAIL_USERNAME" Target="MAIL_USERNAME" Default="johndoe@example.com" Mode="" Description="Container Variable: MAIL_USERNAME" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="MAIL_FROM_ADDRESS" Target="MAIL_FROM_ADDRESS" Default="invoice@example.com" Mode="" Description="Container Variable: MAIL_FROM_ADDRESS" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="MAIL_FROM_NAME" Target="MAIL_FROM_NAME" Default="Invoice Department" Mode="" Description="Container Variable: MAIL_FROM_NAME" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="MAIL_PASSWORD" Target="MAIL_PASSWORD" Default="SUPERSECRETEMAILPASSWORD" Mode="" Description="Container Variable: MAIL_PASSWORD" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="HTTP Port" Target="80" Default="8000" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="HTTPS Port" Target="443" Default="8443" Mode="tcp" Description="Container Port: 443" Type="Port" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Storage" Target="/var/www/app/storage" Default="" Mode="rw" Description="Container Path: /var/www/app/storage" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Logo" Target="/var/www/app/public/logo" Default="" Mode="rw" Description="Container Path: /var/www/app/public/logo" Type="Path" Display="always" Required="false" Mask="false"></Config>
+</Container>

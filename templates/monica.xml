@@ -1,0 +1,204 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>monica</Name>
+  <Repository>monicahq/monicahq</Repository>
+  <Registry>https://hub.docker.com/r/monicahq/monicahq/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/monicahq/monicahq/</Support>
+  <Project>https://github.com/monicahq/monica</Project>
+  <Overview>Monica, the Personal Relationship Manager &#xD;
+[br][br]&#xD;
+Complete list of env : https://raw.githubusercontent.com/monicahq/monica/master/.env.example&#xD;
+[br][br]&#xD;
+APP_URL: https://github.com/monicahq/monica/blob/master/docs/installation/ssl.md&#xD;
+</Overview>
+  <Category>Productivity:</Category>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/monica.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/monica.png</Icon>
+  <Description>Monica, the Personal Relationship Manager &#xD;
+[br][br]&#xD;
+Complete list of env : https://raw.githubusercontent.com/monicahq/monica/master/.env.example&#xD;
+[br][br]&#xD;
+APP_URL: https://github.com/monicahq/monica/blob/master/docs/installation/ssl.md&#xD;
+</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>3000</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/var/www/monica/storage</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>production</Value>
+      <Name>APP_ENV</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>false</Value>
+      <Name>APP_DEBUG</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>ChangeMeBy32KeyLengthOrGenerated</Value>
+      <Name>APP_KEY</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>ChangeMeBy20+KeyLength</Value>
+      <Name>HASH_SALT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>18</Value>
+      <Name>HASH_LENGTH</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>APP_URL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>mysql</Value>
+      <Name>DB_CONNECTION</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>DB_HOST</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>3306</Value>
+      <Name>DB_PORT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>monica</Value>
+      <Name>DB_DATABASE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>monica</Value>
+      <Name>DB_USERNAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>monica</Value>
+      <Name>DB_PASSWORD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>true</Value>
+      <Name>DB_USE_UTF8MB4</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>smtp</Value>
+      <Name>MAIL_DRIVER</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>smtp.example.com</Value>
+      <Name>MAIL_HOST</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>587</Value>
+      <Name>MAIL_PORT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>TLS</Value>
+      <Name>MAIL_ENCRYPTION</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>MAIL_USERNAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>MAIL_PASSWORD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>MAIL_FROM_ADDRESS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>Monica instance</Value>
+      <Name>MAIL_FROM_NAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>APP_EMAIL_NEW_USERS_NOTIFICATION</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>en</Value>
+      <Name>APP_DEFAULT_LOCALE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>false</Value>
+      <Name>APP_DISABLE_SIGNUP</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>false</Value>
+      <Name>APP_SIGNUP_DOUBLE_OPTIN</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>*</Value>
+      <Name>APP_TRUSTED_PROXIES</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="WebUI" Target="80" Default="3000" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Appdata" Target="/var/www/monica/storage" Default="" Mode="rw" Description="Container Path: /var/www/monica/storage" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="APP_ENV" Target="APP_ENV" Default="production" Mode="" Description="Container Variable: APP_ENV" Type="Variable" Display="always" Required="false" Mask="false">production</Config>
+  <Config Name="APP_DEBUG" Target="APP_DEBUG" Default="false" Mode="" Description="Container Variable: APP_DEBUG" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="APP_KEY" Target="APP_KEY" Default="ChangeMeBy32KeyLengthOrGenerated" Mode="" Description="Container Variable: APP_KEY" Type="Variable" Display="always" Required="false" Mask="false">ChangeMeBy32KeyLengthOrGenerated</Config>
+  <Config Name="HASH_SALT" Target="HASH_SALT" Default="ChangeMeBy20+KeyLength" Mode="" Description="Container Variable: HASH_SALT" Type="Variable" Display="always" Required="false" Mask="false">ChangeMeBy20+KeyLength</Config>
+  <Config Name="HASH_LENGTH" Target="HASH_LENGTH" Default="" Mode="" Description="Container Variable: HASH_LENGTH" Type="Variable" Display="always" Required="false" Mask="false">18</Config>
+  <Config Name="APP_URL" Target="APP_URL" Default="https://FQDM.tld" Mode="" Description="Container Variable: APP_URL&#13;&#10;REQUIRES SSL! Read Description!" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Database Connection" Target="DB_CONNECTION" Default="mysql" Mode="" Description="Container Variable: DB_CONNECTION" Type="Variable" Display="always" Required="false" Mask="false">mysql</Config>
+  <Config Name="Database Host" Target="DB_HOST" Default="192.168.1.2" Mode="" Description="Container Variable: DB_HOST" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Database Port" Target="DB_PORT" Default="3306" Mode="" Description="Container Variable: DB_PORT" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Database" Target="DB_DATABASE" Default="monica" Mode="" Description="Container Variable: DB_DATABASE" Type="Variable" Display="always" Required="false" Mask="false">monica</Config>
+  <Config Name="Database Username" Target="DB_USERNAME" Default="monica" Mode="" Description="Container Variable: DB_USERNAME" Type="Variable" Display="always" Required="false" Mask="false">monica</Config>
+  <Config Name="Database Password" Target="DB_PASSWORD" Default="monica" Mode="" Description="Container Variable: DB_PASSWORD" Type="Variable" Display="always" Required="false" Mask="false">monica</Config>
+  <Config Name="DB_USE_UTF8MB4" Target="DB_USE_UTF8MB4" Default="" Mode="" Description="# Use utf8mb4 database charset format to support emoji characters&#13;&#10;# &#x26A0; be sure your DBMS supports utf8mb4 format" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="MAIL_DRIVER" Target="MAIL_DRIVER" Default="" Mode="" Description="Container Variable: MAIL_DRIVER" Type="Variable" Display="always" Required="false" Mask="false">smtp</Config>
+  <Config Name="Mail Host" Target="MAIL_HOST" Default="example.com" Mode="" Description="Container Variable: MAIL_HOST" Type="Variable" Display="always" Required="false" Mask="false">smtp.mail.com</Config>
+  <Config Name="Mail Port" Target="MAIL_PORT" Default="587" Mode="" Description="Container Variable: MAIL_PORT" Type="Variable" Display="always" Required="false" Mask="false">587</Config>
+  <Config Name="MAIL_ENCRYPTION" Target="MAIL_ENCRYPTION" Default="TLS" Mode="" Description="Container Variable: MAIL_ENCRYPTION" Type="Variable" Display="always" Required="false" Mask="false">TLS</Config>
+  <Config Name="Mail Username" Target="MAIL_USERNAME" Default="user@example.com" Mode="" Description="Container Variable: MAIL_USERNAME" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Mail Password" Target="MAIL_PASSWORD" Default="secretpassword" Mode="" Description="Container Variable: MAIL_PASSWORD" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="MAIL_FROM_ADDRESS" Target="MAIL_FROM_ADDRESS" Default="user@example.com" Mode="" Description="Container Variable: MAIL_FROM_ADDRESS" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="MAIL_FROM_NAME" Target="MAIL_FROM_NAME" Default="Monica instance" Mode="" Description="Container Variable: MAIL_FROM_NAME" Type="Variable" Display="always" Required="false" Mask="false">Monica instance</Config>
+  <Config Name="APP_EMAIL_NEW_USERS_NOTIFICATION" Target="APP_EMAIL_NEW_USERS_NOTIFICATION" Default="" Mode="" Description="Container Variable: APP_EMAIL_NEW_USERS_NOTIFICATION" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="APP_DEFAULT_LOCALE" Target="APP_DEFAULT_LOCALE" Default="en" Mode="" Description="Default locale used in the application." Type="Variable" Display="always" Required="false" Mask="false">en</Config>
+  <Config Name="Disable Signup" Target="APP_DISABLE_SIGNUP" Default="" Mode="" Description="Ability to disable signups on your instance." Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="Email Optin" Target="APP_SIGNUP_DOUBLE_OPTIN" Default="" Mode="" Description="Enable user email verification." Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="APP_TRUSTED_PROXIES" Target="APP_TRUSTED_PROXIES" Default="*" Mode="" Description="# Set trusted proxy IP addresses.&#13;&#10;# To trust all proxies that connect directly to your server, use a " Type="Variable" Display="always" Required="false" Mask="false">*</Config>
+</Container>

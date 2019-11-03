@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>adminer</Name>
+  <Repository>adminer</Repository>
+  <Registry>http://hub.docker.com/_/adminer/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/_/adminer/</Support>
+  <Project>https://github.com/vrana/adminer</Project>
+  <Overview>Adminer (formerly phpMinAdmin) is a full-featured database management tool written in PHP. Conversely to phpMyAdmin, it consist of a single file ready to deploy to the target server. Adminer is available for MySQL, PostgreSQL, SQLite, MS SQL, Oracle, Firebird, SimpleDB, Elasticsearch and MongoDB.&#xD;
+    [br]&#xD;
+    [br]&#xD;
+    Go to  [b][u][span style='color: #E80000;']https://github.com/vrana/adminer/tree/master/designs[/span][/u][/b] for themes&#xD;
+[br] [br]&#xD;
+Plugins: https://github.com/vrana/adminer/tree/master/plugins</Overview>
+  <Category>Tools:</Category>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/adminer.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/adminer.gif</Icon>
+  <Description>Adminer (formerly phpMinAdmin) is a full-featured database management tool written in PHP. Conversely to phpMyAdmin, it consist of a single file ready to deploy to the target server. Adminer is available for MySQL, PostgreSQL, SQLite, MS SQL, Oracle, Firebird, SimpleDB, Elasticsearch and MongoDB.&#xD;
+    [br]&#xD;
+    [br]&#xD;
+    Go to  [b][u][span style='color: #E80000;']https://github.com/vrana/adminer/tree/master/designs[/span][/u][/b] for themes&#xD;
+[br] [br]&#xD;
+Plugins: https://github.com/vrana/adminer/tree/master/plugins</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort></HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data/>
+  <Environment>
+    <Variable>
+      <Value>mvt</Value>
+      <Name>ADMINER_DESIGN</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>ADMINER_PLUGINS</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="WebUI Port" Target="8080" Default="8080" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Theme" Target="ADMINER_DESIGN" Default="flat" Mode="" Description="Container Variable: ADMINER_DESIGN" Type="Variable" Display="always" Required="false" Mask="false">mvt</Config>
+  <Config Name="Plugins" Target="ADMINER_PLUGINS" Default="" Mode="" Description="e.g. ADMINER_PLUGINS='tables-filter tinymce'" Type="Variable" Display="always" Required="false" Mask="false"/>
+</Container>

@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>chevereto</Name>
+  <Repository>nmtan/chevereto</Repository>
+  <Registry>https://hub.docker.com/r/nmtan/chevereto/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://chevereto.com/community-support/</Support>
+  <Project>https://github.com/Chevereto/Chevereto-Free/</Project>
+  <Overview>Chevereto is an image hosting software that allows you to create a beautiful and full-featured image hosting website on your own server. &#xD;
+[br][br]&#xD;
+It's your hosting and your rules, so say goodbye to closures and restrictions. This repo here is Chevereto Free, which is a fork of Chevereto V3 in which only the most essential features are preserved and it is released as Open Source software.&#xD;
+[br][br]&#xD;
+[b][span style='color: #E80000;'] NOTE: This container needs a separate MariaDB/MySQL instance! [/span][/b] </Overview>
+  <Category>Productivity: MediaApp:Photos</Category>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/chevereto.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/chevereto.png</Icon>
+  <DonateText>If you appreciate my work, then please consider buying me a beer :D</DonateText>
+  <DonateLink>https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;amp;hosted_button_id=L5MWTNDLLB6AC&amp;amp;source=url</DonateLink>
+  <Description>Chevereto is an image hosting software that allows you to create a beautiful and full-featured image hosting website on your own server. &#xD;
+[br][br]&#xD;
+It's your hosting and your rules, so say goodbye to closures and restrictions. This repo here is Chevereto Free, which is a fork of Chevereto V3 in which only the most essential features are preserved and it is released as Open Source software.&#xD;
+[br][br]&#xD;
+[b][span style='color: #E80000;'] NOTE: This container needs a separate MariaDB/MySQL instance! [/span][/b] </Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/var/www/html/images</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value></Value>
+      <Name>CHEVERETO_DB_HOST</Name>
+      <Mode/>
+    </Variable>
+		<Variable>
+			<Value></Value>
+			<Name>CHEVERETO_DB_USERNAME</Name>
+			<Mode/>
+		</Variable>
+		<Variable>
+			<Value></Value>
+			<Name>CHEVERETO_DB_PASSWORD</Name>
+			<Mode/>
+		</Variable>
+    <Variable>
+			<Value></Value>
+			<Name>CHEVERETO_DB_NAME</Name>
+			<Mode/>
+		</Variable>
+    <Variable>
+			<Value>chv_</Value>
+			<Name>CHEVERETO_DB_PREFIX</Name>
+			<Mode/>
+		</Variable>
+    <Variable>
+			<Value></Value>
+			<Name>CHEVERETO_DEFAULT_TIMEZONE</Name>
+			<Mode/>
+		</Variable>
+	</Environment>
+  <Labels/>
+  <Config Name="CHEVERETO_DB_HOST" Target="CHEVERETO_DB_HOST" Default="" Mode="" Description="Container Variable: Database Host" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+	<Config Name="CHEVERETO_DB_USERNAME" Target="CHEVERETO_DB_USERNAME" Default="" Mode="" Description="Container Variable: Database User" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="CHEVERETO_DB_PASSWORD" Target="CHEVERETO_DB_PASSWORD" Default="" Mode="" Description="Container Variable: Database Password" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="CHEVERETO_DB_NAME" Target="CHEVERETO_DB_NAME" Default="" Mode="" Description="Container Variable: Database Name" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="CHEVERETO_DB_PREFIX" Target="CHEVERETO_DB_PREFIX" Default="chv_" Mode="" Description="Container Variable: Database Prefix" Type="Variable" Display="always" Required="false" Mask="false">chv_</Config>
+  <Config Name="CHEVERETO_DEFAULT_TIMEZONE" Target="CHEVERETO_DEFAULT_TIMEZONE" Default="" Mode="" Description="Container Variable: Default Timezone" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+</Container>

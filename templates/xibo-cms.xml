@@ -1,0 +1,242 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>xibo-cms</Name>
+  <Repository>xibosignage/xibo-cms:1.8</Repository>
+  <Registry>https://hub.docker.com/r/xibosignage/xibo-cms/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/xibosignage/xibo-cms/</Support>
+  <Project>https://github.com/xibosignage/xibo-docker</Project>
+  <Overview>Xibo Content Management System&#xD;
+[br][br]&#xD;
+Xibo&#x2019;s digital signage platform is made up of a Content Management System (CMS), a choice of players, a choice of hosting options and different levels of support to meet your requirements. To get started with Xibo you need a CMS and at least 1 signage player.&#xD;
+[br][br]&#xD;
+After the containers have come up you should be able to login with the details:&#xD;
+[br][br]&#xD;
+U: xibo_admin P: password   </Overview>
+  <Category>Productivity:</Category>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/template/xibo-cms.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/xibo.png</Icon>
+  <Description>Xibo Content Management System&#xD;
+[br][br]&#xD;
+Xibo&#x2019;s digital signage platform is made up of a Content Management System (CMS), a choice of players, a choice of hosting options and different levels of support to meet your requirements. To get started with Xibo you need a CMS and at least 1 signage player.&#xD;
+[br][br]&#xD;
+After the containers have come up you should be able to login with the details:&#xD;
+[br][br]&#xD;
+U: xibo_admin P: password   </Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort></HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/var/www/cms/custom</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/var/www/backup</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/var/www/cms/web/theme/custom</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/var/www/cms/library</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/var/www/cms/web/userscripts</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>cms</Value>
+      <Name>MYSQL_DATABASE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>cms</Value>
+      <Name>MYSQL_USER</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>cms</Value>
+      <Name>MYSQL_PASSWORD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>MYSQL_HOST</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>MYSQL_PORT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>true</Value>
+      <Name>MYSQL_BACKUP_ENABLED</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>smtp.gmail.com:587</Value>
+      <Name>CMS_SMTP_SERVER</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>example@gmail.com</Value>
+      <Name>CMS_SMTP_USERNAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>password</Value>
+      <Name>CMS_SMTP_PASSWORD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>YES</Value>
+      <Name>CMS_SMTP_USE_TLS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>YES</Value>
+      <Name>CMS_SMTP_USE_STARTTLS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>gmail.com</Value>
+      <Name>CMS_SMTP_REWRITE_DOMAIN</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>none</Value>
+      <Name>CMS_SMTP_HOSTNAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>YES</Value>
+      <Name>CMS_SMTP_FROM_LINE_OVERRIDE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>none</Value>
+      <Name>CMS_ALIAS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>1440</Value>
+      <Name>CMS_PHP_SESSION_GC_MAXLIFETIME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>2G</Value>
+      <Name>CMS_PHP_POST_MAX_SIZE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>2G</Value>
+      <Name>CMS_PHP_UPLOAD_MAX_FILESIZE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>300</Value>
+      <Name>CMS_PHP_MAX_EXECUTION_TIME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>256M</Value>
+      <Name>CMS_PHP_MEMORY_LIMIT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>2</Value>
+      <Name>CMS_APACHE_START_SERVERS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>5</Value>
+      <Name>CMS_APACHE_MIN_SPARE_SERVERS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>10</Value>
+      <Name>CMS_APACHE_MAX_SPARE_SERVERS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>60</Value>
+      <Name>CMS_APACHE_MAX_REQUEST_WORKERS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>300</Value>
+      <Name>CMS_APACHE_MAX_CONNECTIONS_PER_CHILD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>30</Value>
+      <Name>CMS_APACHE_TIMEOUT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>localhost</Value>
+      <Name>CMS_SERVER_NAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>XMR_HOST</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="WebUI" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="false" Mask="false">8976</Config>
+  <Config Name="Database" Target="MYSQL_DATABASE" Default="cms" Mode="" Description="Container Variable: MYSQL_DATABASE" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Database User" Target="MYSQL_USER" Default="cms" Mode="" Description="Container Variable: MYSQL_USER" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Database Password" Target="MYSQL_PASSWORD" Default="cmspassword" Mode="" Description="Container Variable: MYSQL_PASSWORD" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Database host" Target="MYSQL_HOST" Default="unraidIP" Mode="" Description="Container Variable: MYSQL_HOST" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Datapase port" Target="MYSQL_PORT" Default="3306" Mode="" Description="Container Variable: MYSQL_PORT" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Database backup" Target="MYSQL_BACKUP_ENABLED" Default="true" Mode="" Description="Container Variable: MYSQL_BACKUP_ENABLED" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="SMTP Server" Target="CMS_SMTP_SERVER" Default="smtp.gmail.com:587" Mode="" Description="Container Variable: CMS_SMTP_SERVER" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="SMTP Username" Target="CMS_SMTP_USERNAME" Default="username" Mode="" Description="Container Variable: CMS_SMTP_USERNAME" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="SMTP Password" Target="CMS_SMTP_PASSWORD" Default="password" Mode="" Description="Container Variable: CMS_SMTP_PASSWORD" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="SMTP TLS" Target="CMS_SMTP_USE_TLS" Default="YES" Mode="" Description="Container Variable: CMS_SMTP_USE_TLS" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="SMTP STARTTLS" Target="CMS_SMTP_USE_STARTTLS" Default="YES" Mode="" Description="Container Variable: CMS_SMTP_USE_STARTTLS" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="SMTP Rewrite domain" Target="CMS_SMTP_REWRITE_DOMAIN" Default="gmail.com" Mode="" Description="Container Variable: CMS_SMTP_REWRITE_DOMAIN" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="SMTP Hostname" Target="CMS_SMTP_HOSTNAME" Default="none" Mode="" Description="Container Variable: CMS_SMTP_HOSTNAME" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="CMS_SMTP_FROM_LINE_OVERRIDE" Target="CMS_SMTP_FROM_LINE_OVERRIDE" Default="YES" Mode="" Description="Container Variable: CMS_SMTP_FROM_LINE_OVERRIDE" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="CMS Alias" Target="CMS_ALIAS" Default="none" Mode="" Description="Container Variable: CMS_ALIAS" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="PHP Session max lifetime" Target="CMS_PHP_SESSION_GC_MAXLIFETIME" Default="1440" Mode="" Description="Container Variable: CMS_PHP_SESSION_GC_MAXLIFETIME" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="PHP Post max size" Target="CMS_PHP_POST_MAX_SIZE" Default="2G" Mode="" Description="Container Variable: CMS_PHP_POST_MAX_SIZE" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="PHP Max upload filesize" Target="CMS_PHP_UPLOAD_MAX_FILESIZE" Default="2G" Mode="" Description="Container Variable: CMS_PHP_UPLOAD_MAX_FILESIZE" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="PHP Max Execution time" Target="CMS_PHP_MAX_EXECUTION_TIME" Default="300" Mode="" Description="Container Variable: CMS_PHP_MAX_EXECUTION_TIME" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="PHP Memory limit" Target="CMS_PHP_MEMORY_LIMIT" Default="256M" Mode="" Description="Container Variable: CMS_PHP_MEMORY_LIMIT" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="CMS_APACHE_START_SERVERS" Target="CMS_APACHE_START_SERVERS" Default="2" Mode="" Description="Container Variable: CMS_APACHE_START_SERVERS" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="CMS_APACHE_MIN_SPARE_SERVERS" Target="CMS_APACHE_MIN_SPARE_SERVERS" Default="5" Mode="" Description="Container Variable: CMS_APACHE_MIN_SPARE_SERVERS" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="CMS_APACHE_MAX_SPARE_SERVERS" Target="CMS_APACHE_MAX_SPARE_SERVERS" Default="10" Mode="" Description="Container Variable: CMS_APACHE_MAX_SPARE_SERVERS" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="CMS_APACHE_MAX_REQUEST_WORKERS" Target="CMS_APACHE_MAX_REQUEST_WORKERS" Default="60" Mode="" Description="Container Variable: CMS_APACHE_MAX_REQUEST_WORKERS" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="CMS_APACHE_MAX_CONNECTIONS_PER_CHILD" Target="CMS_APACHE_MAX_CONNECTIONS_PER_CHILD" Default="300" Mode="" Description="Container Variable: CMS_APACHE_MAX_CONNECTIONS_PER_CHILD" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="CMS_APACHE_TIMEOUT" Target="CMS_APACHE_TIMEOUT" Default="30" Mode="" Description="Container Variable: CMS_APACHE_TIMEOUT" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="CMS Server name" Target="CMS_SERVER_NAME" Default="localhost" Mode="" Description="Container Variable: CMS_SERVER_NAME" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="XMR Host" Target="XMR_HOST" Default="unraidIP:port" Mode="" Description="Container Variable: XMR_HOST" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Host Path 1" Target="/var/www/cms/custom" Default="/mnt/user/appdata/cms/custom" Mode="rw" Description="Container Path: /var/www/cms/custom" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Host Path 2" Target="/var/www/backup" Default="/mnt/user/appdata/cms/backup" Mode="rw" Description="Container Path: /var/www/backup" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Host Path 3" Target="/var/www/cms/web/theme/custom" Default="/mnt/user/appdata/cms/web/theme/custom" Mode="rw" Description="Container Path: /var/www/cms/web/theme/custom" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Host Path 4" Target="/var/www/cms/library" Default="/mnt/user/appdata/cms/library" Mode="rw" Description="Container Path: /var/www/cms/library" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Host Path 5" Target="/var/www/cms/web/userscripts" Default="/mnt/user/appdata/cms/web/userscripts" Mode="rw" Description="Container Path: /var/www/cms/web/userscripts" Type="Path" Display="always" Required="false" Mask="false"></Config>
+</Container>

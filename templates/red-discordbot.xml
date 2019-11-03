@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>red-discordbot</Name>
+  <Repository>phasecorex/red-discordbot:full</Repository>
+  <Registry>https://hub.docker.com/r/phasecorex/red-discordbot/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/phasecorex/red-discordbot/</Support>
+  <Project>https://github.com/PhasecoreX/docker-red-discordbot</Project>
+  <Overview>The newest Red-Discordbot in a convenient multi-arch container &#xD;
+[br][br]&#xD;
+[b]How to create a bot account:[/b] https://discordpy.readthedocs.io/en/v1.0.1/discord.html#creating-a-bot-account&#xD;
+[br][br]&#xD;
+[b]Readme:[/b] https://github.com/PhasecoreX/docker-red-discordbot</Overview>
+  <Category>Tools:</Category>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/red-discordbot.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/red-discordbot.png</Icon>
+  <Description>The newest Red-Discordbot in a convenient multi-arch container &#xD;
+[br][br]&#xD;
+[b]How to create a bot account:[/b] https://discordpy.readthedocs.io/en/v1.0.1/discord.html#creating-a-bot-account&#xD;
+[br][br]&#xD;
+[b]Readme:[/b] https://github.com/PhasecoreX/docker-red-discordbot</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish/>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>PREFIX</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>TOKEN</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="PUID" Target="PUID" Default="" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
+  <Config Name="Data" Target="/data" Default="" Mode="rw" Description="Container Path: /data&#13;&#10;Folder to persist Red-DiscordBot data." Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Prefix" Target="PREFIX" Default="" Mode="" Description="The prefix you want Red-DiscordBot to use." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Token" Target="TOKEN" Default="" Mode="" Description="The bot token you want Red-DiscordBot to use." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+</Container>

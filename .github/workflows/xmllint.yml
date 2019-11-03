@@ -1,0 +1,24 @@
+name: Linter
+
+on: [push, pull_request]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+    - name: Prep Enviroment
+      run: sudo apt-get update -q && sudo apt-get install -qy libxml2-utils
+      
+    - name: Run linter
+      env:
+        sha: ${{ github.sha }}
+      run: |
+        for file in $(git diff-tree --no-commit-id --name-only -r $sha ); do
+          if [[ $file == *.xml ]]
+          then
+            xmllint $file
+           fi
+        done;
