@@ -8,16 +8,16 @@
 	<Support>https://forum.duplicacy.com</Support>
 	<Project>https://duplicacy.com</Project>
   <Overview>Web GUI for Duplicacy. Duplicacy backs up your files to many cloud storages with client-side encryption and the highest level of deduplication&#xD;
-http://duplicacy.com [br]
-Note: [br]
-1. It's imporatant to pass hostname (Advanced View > Extra Parameters > --hostname=), as duplicacy license is requested based on hostname and machine-id provided by dbus. [br]
-2. Machine-id will be persisted in the /config directory. [br]
-3. Default hostname set to 'duplicacy-unraid'. [br]
-4. If you want to backup the unRAID FLASH drive then you will have to run Duplicacy as root i.e. USR_ID=0 and GRP_ID=0 [br]
-5. /config -- is where configuration data will be stored. Should be backed up. [br]
-6. /logs -- logs will go there. [br]
-7. /cache -- transient and temporary files will be stored here. Can be safely deleted. [br]
-8. Readme: https://hub.docker.com/r/saspus/duplicacy-web </Overview>
+    http://duplicacy.com [br]
+    Note: [br]
+    1. It's imporatant to pass hostname (Advanced View > Extra Parameters > --hostname=), as duplicacy license is requested based on hostname and machine-id provided by dbus. [br]
+    2. Machine-id will be persisted in the /config directory. [br]
+    3. Default hostname set to 'duplicacy-unraid'. [br]
+    4. If you want to backup the unRAID FLASH drive then you will have to run Duplicacy as root i.e. USR_ID=0 and GRP_ID=0 [br]
+    5. /config -- is where configuration data will be stored. Should be backed up. [br]
+    6. /logs -- logs will go there. [br]
+    7. /cache -- transient and temporary files will be stored here. Can be safely deleted. [br]
+    8. Readme: https://hub.docker.com/r/saspus/duplicacy-web </Overview>
 	<Category>Backup: Cloud: Network:Other Productivity: Tools:Utilities</Category>
   <WebUI>http://[IP]:[PORT:3875]/</WebUI>
 	<TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/duplicacy.xml</TemplateURL>
