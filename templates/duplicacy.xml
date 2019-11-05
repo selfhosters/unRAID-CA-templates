@@ -24,7 +24,7 @@
 	<Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/duplicacy.png</Icon>
   <ExtraParams>--hostname=duplicacy-unraid</ExtraParams>
   <Description>Web GUI for Duplicacy. Duplicacy backs up your files to many cloud storages with client-side encryption and the highest level of deduplication&#xD;
-http://duplicacy.com</Description>
+    http://duplicacy.com</Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
