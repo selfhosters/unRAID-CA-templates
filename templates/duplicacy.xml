@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Duplicacy</Name>
+  <Repository>saspus/duplicacy-web</Repository>
+  <Registry>https://hub.docker.com/r/saspus/duplicacy-web</Registry>
+	<Network>bridge</Network>
+	<Privileged>false</Privileged>
+	<Support>https://forum.duplicacy.com</Support>
+	<Project>https://duplicacy.com</Project>
+  <Overview>Web GUI for Duplicacy. Duplicacy backs up your files to many cloud storages with client-side encryption and the highest level of deduplication&#xD;
+    http://duplicacy.com [br]
+    Note: [br]
+    - It's imporatant to pass hostname (Advanced View > Extra Parameters > --hostname=), as duplicacy license is requested based on hostname and machine-id provided by dbus. [br]
+    - Machine-id will be persisted in the /config directory. [br]
+    - Default hostname set to 'duplicacy-unraid'. [br]
+    - If you want to backup the unRAID FLASH drive then you will have to run Duplicacy as root i.e. USR_ID=0 and GRP_ID=0 [br]
+    - /config -- is where configuration data will be stored. Should be backed up. [br]
+    - /logs -- logs will go there. [br]
+    - /cache -- transient and temporary files will be stored here. Can be safely deleted. [br]
+    - Readme: https://hub.docker.com/r/saspus/duplicacy-web </Overview>
+	<Category>Backup: Cloud: Network:Other Productivity: Tools:Utilities</Category>
+  <WebUI>http://[IP]:[PORT:3875]/</WebUI>
+	<TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/duplicacy.xml</TemplateURL>
+	<Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/duplicacy.png</Icon>
+  <ExtraParams>--hostname=duplicacy-unraid</ExtraParams>
+  <Description>Web GUI for Duplicacy. Duplicacy backs up your files to many cloud storages with client-side encryption and the highest level of deduplication&#xD;
+    http://duplicacy.com</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>3875</HostPort>
+        <ContainerPort>3875</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/appdata/duplicacy/config</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/appdata/duplicacy/cache</HostDir>
+      <ContainerDir>/cache</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/backuproot</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/appdata/duplicacy/logs</HostDir>
+      <ContainerDir>/logs</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>99</Value>
+      <Name>USR_ID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>GRP_ID</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Port" Target="3875" Default="" Mode="tcp" Description="Container Port: 3875" Type="Port" Display="always" Required="false" Mask="false">3875</Config>
+  <Config Name="Config" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="false" Mask="false">/mnt/appdata/duplicacy/config</Config>
+  <Config Name="Cache" Target="/cache" Default="" Mode="rw" Description="Container Path: /cache" Type="Path" Display="always" Required="false" Mask="false">/mnt/appdata/duplicacy/cache</Config>
+  <Config Name="User Data" Target="/backuproot" Default="" Mode="rw" Description="Container Path: /backuproot" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Logs" Target="/logs" Default="" Mode="rw" Description="Container Path: /logs" Type="Path" Display="always" Required="false" Mask="false">/mnt/appdata/duplicacy/logs</Config>
+  <Config Name="User ID" Target="USR_ID" Default="0" Mode="" Description="Container Variable: USR_ID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
+  <Config Name="Group ID" Target="GRP_ID" Default="0" Mode="" Description="Container Variable: GRP_ID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
+</Container>
