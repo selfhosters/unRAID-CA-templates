@@ -49,6 +49,11 @@ RUN: ./manage.py createsuperuser in the container terminal to create the superus
       <ContainerDir>/consume</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/export</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>    
   </Data>
   <Environment>
     <Variable>
@@ -67,6 +72,7 @@ RUN: ./manage.py createsuperuser in the container terminal to create the superus
   <Config Name="Data" Target="/usr/src/paperless/data" Default="/mnt/user/appdata/paperless/" Mode="rw" Description="Container Path: /usr/src/paperless/data" Type="Path" Display="always" Required="false" Mask="false"></Config>
   <Config Name="Media" Target="/usr/src/paperless/media" Default="" Mode="rw" Description="Container Path: /usr/src/paperless/media" Type="Path" Display="always" Required="false" Mask="false"></Config>
   <Config Name="Consumption" Target="/consume" Default="" Mode="rw" Description="Container Path: /consume" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Export" Target="/export" Default="" Mode="rw" Description="Container Path: /export" Type="Path" Display="always" Required="false" Mask="false"></Config>
   <Config Name="PAPERLESS_OCR_LANGUAGES" Target="PAPERLESS_OCR_LANGUAGES" Default="" Mode="" Description="Container Variable: PAPERLESS_OCR_LANGUAGES" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="PUID" Target="USERMAP_UID" Default="99" Mode="" Description="Container Variable: USERMAP_UID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
 </Container>
