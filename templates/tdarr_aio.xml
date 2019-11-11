@@ -84,6 +84,6 @@ Get plugins here: https://github.com/HaveAGitGat/Tdarr_Plugins&#xD;
   <Config Name="WebUI" Target="8265" Default="8265" Mode="tcp" Description="Container Port: 8265" Type="Port" Display="always" Required="false" Mask="false">8265</Config>
   <Config Name="Media Library" Target="/home/Tdarr/Media" Default="" Mode="rw" Description="Container Path: /home/Tdarr/Media" Type="Path" Display="always" Required="false" Mask="false"></Config>
   <Config Name="Appdata" Target="/home/Tdarr/Documents" Default="" Mode="rw" Description="Container Path: /home/Tdarr/Documents" Type="Path" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="TdarrDB" Target="/home/Tdarr/TdarrDB" Default="" Mode="rw" Description="Container Path: /var/lib/mongodb" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="TdarrDB" Target="/var/lib/mongodb" Default="" Mode="rw" Description="Container Path: /var/lib/mongodb" Type="Path" Display="always" Required="false" Mask="false"></Config>
   <Config Name="Transcode Cache" Target="/home/Tdarr/cache" Default="" Mode="rw" Description="Container Path: /home/Tdarr/cache" Type="Path" Display="always" Required="false" Mask="false"></Config>
 </Container>
