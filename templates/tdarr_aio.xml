@@ -56,7 +56,7 @@ Get plugins here: https://github.com/HaveAGitGat/Tdarr_Plugins&#xD;
     </Volume>
         <Volume>
       <HostDir></HostDir>
-      <ContainerDir>/home/Tdarr/TdarrDB</ContainerDir>
+      <ContainerDir>/var/lib/mongodb</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
