@@ -1,6 +1,6 @@
 [![Datahoarder](https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/.github/ISSUE_TEMPLATE/discord_unraid_unraid.png )](https://discord.gg/qWPbc8R)
 
-![Discord](https://img.shields.io/discord/641230698166091777.svg?color=darkorange&style=for-the-badge)
+![Discord](https://img.shields.io/discord/641230698166091777?color=%23ff8c2f&label=Discord&logo=discord&logoColor=%23ff8c2f&style=for-the-badge)
 ![GitHub](https://img.shields.io/github/license/selfhosters/unRAID-CA-templates.svg?color=darkorange&style=for-the-badge)
 ![GitHub contributors](https://img.shields.io/github/contributors/selfhosters/unRAID-CA-templates.svg?color=darkorange&style=for-the-badge)
 
