@@ -5,7 +5,7 @@
 ![GitHub contributors](https://img.shields.io/github/contributors/selfhosters/unRAID-CA-templates.svg?color=darkorange&style=for-the-badge)
 
 # unRAID-CA-templates
-An [Unraid](https://discord.gg/7hk4YD3) community repo where you can request unRAID container templates to be added to Community Applications: [Squidly271/community.applications](https://github.com/Squidly271/community.applications). 
+An [Unraid](https://discord.gg/qWPbc8R) community repo where you can request unRAID container templates to be added to Community Applications: [Squidly271/community.applications](https://github.com/Squidly271/community.applications). 
 
 ## "Ask and Ye Shall Receive" 
 
