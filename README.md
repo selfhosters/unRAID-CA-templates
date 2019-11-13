@@ -1,11 +1,11 @@
-[![Datahoarder](https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/.github/ISSUE_TEMPLATE/logo.png)](https://discord.gg/7hk4YD3)
+[![Datahoarder](https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/.github/ISSUE_TEMPLATE/discord_unraid_unraid.png )](https://discord.gg/qWPbc8R)
 
-![Discord](https://img.shields.io/discord/375055448187076609.svg?color=lightgrey&style=for-the-badge)
-![GitHub](https://img.shields.io/github/license/selfhosters/unRAID-CA-templates.svg?color=lightgrey&style=for-the-badge)
-![GitHub contributors](https://img.shields.io/github/contributors/selfhosters/unRAID-CA-templates.svg?color=lightgrey&style=for-the-badge)
+![Discord](https://img.shields.io/discord/641230698166091777.svg?color=darkorange&style=for-the-badge)
+![GitHub](https://img.shields.io/github/license/selfhosters/unRAID-CA-templates.svg?color=darkorange&style=for-the-badge)
+![GitHub contributors](https://img.shields.io/github/contributors/selfhosters/unRAID-CA-templates.svg?color=darkorange&style=for-the-badge)
 
 # unRAID-CA-templates
-A [Data Hoarding/Homelab](https://discord.gg/7hk4YD3) community repo where you can request unRAID container templates to be added to Community Applications: [Squidly271/community.applications](https://github.com/Squidly271/community.applications). 
+An [Unraid](https://discord.gg/7hk4YD3) community repo where you can request unRAID container templates to be added to Community Applications: [Squidly271/community.applications](https://github.com/Squidly271/community.applications). 
 
 ## "Ask and Ye Shall Receive" 
 
