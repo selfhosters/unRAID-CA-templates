@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Draw.io</Name>
-  <Repository>fjudith/draw.io</Repository>
+  <Repository>jgraph/drawio</Repository>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
   <Support>https://about.draw.io/support/</Support>
