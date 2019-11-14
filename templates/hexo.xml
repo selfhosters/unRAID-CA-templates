@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>blog</Name>
+  <Repository>fletchto99/hexo-dev-blog</Repository>
+  <Registry>https://hub.docker.com/r/fletchto99/hexo-dev-blog/</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/fletchto99/hexo-dev-docker/issues</Support>
+  <Project>https://github.com/fletchto99/hexo-dev-docker</Project>
+  <Overview>A self-hosted blogging platform in which posts are written in markdown</Overview>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/hexo.xml</TemplateURL>
+  <Icon>https://avatars3.githubusercontent.com/u/1769238?s=400&amp;amp;v=4</Icon>
+  <Description>
+    Hexo is a "A fast, simple & powerful blog framework" written in node.js. It supports many plugins and generates a static site. Read more about it at https://hexo.io/
+  </Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>1337</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Value></Value>
+      <Name>HEXO_PLUGINS</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="WebUI Port" Target="8080" Default="" Mode="tcp" Description="The WebUI Port" Type="Port" Display="always" Required="false" Mask="false">8080</Config>
+  <Config Name="HEXO_PLUGINS" Target="HEXO_PLUGINS" Default="" Mode="" Description="A space seperated list of hexo plugins to install" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+</Container>
