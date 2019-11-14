@@ -12,7 +12,7 @@
   <Category/>
   <WebUI>http://[IP]:[PORT:8080]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/hexo.xml</TemplateURL>
-  <Icon>https://avatars3.githubusercontent.com/u/1769238?s=400&amp;amp;v=4</Icon>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/hexo.png</Icon>
   <Description>
     Hexo is a "A fast, simple & powerful blog framework" written in node.js. It supports many plugins and generates a static site. Read more about it at https://hexo.io/
   </Description>
