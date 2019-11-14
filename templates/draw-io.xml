@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Draw.io</Name>
+  <Repository>fjudith/draw.io</Repository>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://about.draw.io/support/</Support>
+  <Project>https://github.com/jgraph/drawio</Project>
+  <Overview>A lightweight diagram drawing application</Overview>
+  <Category>Productivity:</Category>
+  <WebUI>http://[IP]:[PORT:3000]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/draw-io.xml</TemplateURL>
+  <Icon>https://avatars3.githubusercontent.com/u/1769238?s=400&amp;amp;v=4</Icon>
+  <Description>
+    draw.io is an open source technology stack for building diagramming applications, and the world’s most widely used browser-based end-user diagramming applications.
+  </Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>3000</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Config Name="WebUI Port" Target="8080" Default="" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="false" Mask="false">3000</Config>
+</Container>
