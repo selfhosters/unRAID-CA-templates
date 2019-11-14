@@ -27,7 +27,7 @@
   </Networking>
   <Environment>
     <Variable>
-      <Value>/Value>
+      <Value></Value>
       <Name>SHARELATEX_APP_NAME</Name>
       <Mode/>
     </Variable>
@@ -67,18 +67,13 @@
       <Mode/>
     </Variable>
     <Variable>
-      <Value>true</Value>
+      <Value></Value>
       <Name>SHARELATEX_BEHIND_PROXY</Name>
       <Mode/>
     </Variable>
     <Variable>
       <Value></Value>
       <Name>SHARELATEX_SESSION_SECRET</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value>true</Value>
-      <Name>SHARELATEX_ALLOW_PUBLIC_ACCESS</Name>
       <Mode/>
     </Variable>
     <Variable>
@@ -113,7 +108,6 @@
   <Config Name="SHARELATEX_MONGO_URL" Target="SHARELATEX_MONGO_URL" Default="" Mode="" Description="The URL of the Mongo database to use" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="SHARELATEX_BEHIND_PROXY" Target="SHARELATEX_BEHIND_PROXY" Default="" Mode="" Description=" Set to true if running behind a proxy like nginx/apache allowing it to correctly detect the forwarded IP address" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
   <Config Name="SHARELATEX_SESSION_SECRET" Target="SHARELATEX_SESSION_SECRET" Default="" Mode="" Description="A random string which is used to secure tokens, if load balancing this needs to be set to the same toke across boxes. If only 1 instance is being run it does not need to be set by the user." Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="SHARELATEX_ALLOW_PUBLIC_ACCESS" Target="SHARELATEX_ALLOW_PUBLIC_ACCESS" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="SHARELATEX_SECURE_COOKIE" Target="SHARELATEX_SECURE_COOKIE" Default="" Mode="" Description="Set this to something non-zero to use a secure cookie. Only use this if your Overleaf instance is running behind a reverse proxy with SSL configured." Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="SHARELATEX_RESTRICT_INVITES_TO_EXISTING_ACCOUNTS" Target="SHARELATEX_RESTRICT_INVITES_TO_EXISTING_ACCOUNTS" Default="" Mode="" Description="If set to true, will restrict project invites to email addresses which correspond with existing user accounts." Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="SHARELATEX_ALLOW_PUBLIC_ACCESS" Target="SHARELATEX_ALLOW_PUBLIC_ACCESS" Default="" Mode="" Description="If set to 'true', will allow non-authenticated users to view the site. The default is false, which means non-authenticated users will be unconditionally redirected to the login page when they try to view any part of the site. Note, setting this option does not disable authentication or security in any way. This option is necessary if your users intend to make their projects public and have non-authenticated users view those projects." Type="Variable" Display="always" Required="false" Mask="false"></Config>
