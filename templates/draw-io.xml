@@ -3,6 +3,7 @@
   <Name>Draw.io</Name>
   <Repository>jgraph/drawio</Repository>
   <Network>bridge</Network>
+  <Shell>sh</Shell>
   <Privileged>false</Privileged>
   <Support>https://about.draw.io/support/</Support>
   <Project>https://github.com/jgraph/drawio</Project>
@@ -22,7 +23,71 @@
         <ContainerPort>8080</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
+      <Port>
+        <HostPort>3443</HostPort>
+        <ContainerPort>8443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
     </Publish>
   </Networking>
+  <Data/>
+  <Environment>
+    <Variable>
+      <Value>false</Value>
+      <Name>LETS_ENCRYPT_ENABLED</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>PUBLIC_DNS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>ORGANISATION_UNIT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>ORGANISATION</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>CITY</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>STATE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>COUNTRY_CODE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>KEYSTORE_PASS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>KEY_PASS</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
   <Config Name="WebUI Port" Target="8080" Default="" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="false" Mask="false">3000</Config>
+  <Config Name="WebUI SSL Port" Target="8443" Default="" Mode="tcp" Description="Container Port: 8443" Type="Port" Display="always" Required="false" Mask="false">3443</Config>
+  <Config Name="Enable Lets Encrypt" Target="LETS_ENCRYPT_ENABLED" Default="" Mode="" Description="Enables Let's Encrypt certificate instead of self-signed certificates" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="PUBLIC_DNS" Target="PUBLIC_DNS" Default="" Mode="" Description=" DNS domain to be used as certificate " Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="ORGANISATION_UNIT" Target="ORGANISATION_UNIT" Default="" Mode="" Description="Organisation unit to be used as certificate " Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="ORGANISATION" Target="ORGANISATION" Default="" Mode="" Description="Organisation name to be used as certificate " Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="CITY" Target="CITY" Default="" Mode="" Description="City name to be used as certificate " Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="STATE" Target="STATE" Default="" Mode="" Description=" State name to be used as certificate " Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="COUNTRY_CODE" Target="COUNTRY_CODE" Default="" Mode="" Description="Country code to be used as certificate " Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="KEYSTORE_PASS" Target="KEYSTORE_PASS" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="KEY_PASS" Target="KEY_PASS" Default="" Mode="" Description="Private key password; default &amp;lt;ref:KEYSTORE_PASS&amp;gt;" Type="Variable" Display="always" Required="false" Mask="false"/>
 </Container>
