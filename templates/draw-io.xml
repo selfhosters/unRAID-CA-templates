@@ -11,7 +11,7 @@
   <Category>Productivity:</Category>
   <WebUI>http://[IP]:[PORT:3000]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/draw-io.xml</TemplateURL>
-  <Icon>https://avatars3.githubusercontent.com/u/1769238?s=400&amp;amp;v=4</Icon>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/draw-io.png</Icon>
   <Description>
     draw.io is an open source technology stack for building diagramming applications, and the world’s most widely used browser-based end-user diagramming applications.
   </Description>
