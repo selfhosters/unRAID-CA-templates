@@ -88,6 +88,6 @@
   <Config Name="CITY" Target="CITY" Default="" Mode="" Description="City name to be used as certificate " Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="STATE" Target="STATE" Default="" Mode="" Description=" State name to be used as certificate " Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="COUNTRY_CODE" Target="COUNTRY_CODE" Default="" Mode="" Description="Country code to be used as certificate " Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="KEYSTORE_PASS" Target="KEYSTORE_PASS" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="KEY_PASS" Target="KEY_PASS" Default="" Mode="" Description="Private key password; default &amp;lt;ref:KEYSTORE_PASS&amp;gt;" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="KEYSTORE_PASS" Target="KEYSTORE_PASS" Default="V3ry1nS3cur3P4ssw0rd" Mode="" Description="'.keystore'/.jks' store password" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="KEY_PASS" Target="KEY_PASS" Default="default" Mode="" Description="Private key password &amp;lt;ref:KEYSTORE_PASS&amp;gt;" Type="Variable" Display="always" Required="false" Mask="false"/>
 </Container>
