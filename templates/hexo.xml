@@ -14,7 +14,7 @@
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/hexo.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/hexo.png</Icon>
   <Description>
-    Hexo is a "A fast, simple & powerful blog framework" written in node.js. It supports many plugins and generates a static site. Read more about it at https://hexo.io/
+    Hexo is a "A fast, simple and powerful blog framework" written in node.js. It supports many plugins and generates a static site. Read more about it at https://hexo.io/
   </Description>
   <Networking>
     <Mode>bridge</Mode>
