@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>Privatebin</Name>
+  <Name>PrivateBin</Name>
   <Repository>privatebin/nginx-fpm-alpine</Repository>
   <Registry>https://hub.docker.com/r/privatebin/nginx-fpm-alpine/</Registry>
   <Network>bridge</Network>
