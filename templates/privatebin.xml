@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>PrivateBin</Name>
+  <Repository>privatebin/nginx-fpm-alpine</Repository>
+  <Registry>https://hub.docker.com/r/privatebin/nginx-fpm-alpine/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/PrivateBin/PrivateBin/issues/</Support>
+  <Project>https://github.com/PrivateBin/PrivateBin/</Project>
+  <Overview>A minimalist, open source online pastebin where the server has zero knowledge of pasted data. Data is encrypted/decrypted in the browser using 256 bits AES.</Overview>
+  <Category>Tools:Utilities</Category>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/privatebin.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/privatebin.png</Icon>
+  <ExtraParams>--read-only --restart="always"</ExtraParams>
+  <Description>A minimalist, open source online pastebin where the server has zero knowledge of pasted data. Data is encrypted/decrypted in the browser using 256 bits AES.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort></HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/srv/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="WebUI" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="yes" Mask="false"></Config>
+  <Config Name="Config" Target="/srv/data" Default="" Mode="rw" Description="Container Path: /srv/data" Type="Path" Display="always" Required="yes" Mask="false"></Config>
+</Container>
