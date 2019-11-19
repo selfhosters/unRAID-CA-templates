@@ -8,7 +8,7 @@
   <Support>https://hub.docker.com/r/mongoclient/mongoclient/</Support>
   <Project>https://github.com/nosqlclient/nosqlclient</Project>
   <Overview>Cross-platform and self hosted, easy to use, intuitive mongodb management tool - Formerly Mongoclient</Overview>
-  <Category>Tools:Utilities</Category>
+  <Category>Tools: Other:</Category>
   <WebUI>http://[IP]:[PORT:3000]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/nosqlclient.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/nosqlclient.png</Icon>
@@ -17,7 +17,6 @@
     <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort></HostPort>
         <ContainerPort>3000</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
@@ -25,7 +24,6 @@
   </Networking>
   <Data>
     <Volume>
-      <HostDir></HostDir>
       <ContainerDir>/data/db</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -38,7 +36,7 @@
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="Web Port" Target="3000" Default="" Mode="tcp" Description="Container Port: 3000" Type="Port" Display="always" Required="true" Mask="false"></Config>
-  <Config Name="Config" Target="/data/db" Default="" Mode="rw" Description="Container Path: /data/db" Type="Path" Display="always" Required="true" Mask="false"></Config>
-  <Config Name="Mongo URL" Target="MONGO_URL" Default="" Mode="" Description="Container Variable: MONGO_URL" Type="Variable" Display="always" Required="false" Mask="false">mongodb://UNRAID_IP:27017/nosqlclient</Config>
+  <Config Name="Web Port" Target="3000" Default="3000" Mode="tcp" Description="Container Port: 3000" Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="Mongo URL" Target="MONGO_URL" Default="" Mode="" Description="Container Variable: MONGO_URL" Type="Variable" Display="always" Required="true" Mask="false">mongodb://UNRAID_IP:27017/nosqlclient</Config>
+  <Config Name="Appdata" Target="/data/db" Default="/mnt/user/appdata/mongoclient" Mode="rw" Description="Container Path: /data/db" Type="Path" Display="advanced-hide" Required="true" Mask="false"/>
 </Container>
