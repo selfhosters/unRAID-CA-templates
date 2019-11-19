@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>blog</Name>
+  <Name>hexo-blog</Name>
   <Repository>fletchto99/hexo-dev-blog</Repository>
   <Registry>https://hub.docker.com/r/fletchto99/hexo-dev-blog/</Registry>
   <Network>bridge</Network>

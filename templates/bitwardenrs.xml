@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>bitwardenrs</Name>
+  <Repository>bitwardenrs/server</Repository>
+  <Registry>https://hub.docker.com/r/bitwardenrs/server/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/dani-garcia/bitwarden_rs/issues/</Support>
+  <Project>https://github.com/dani-garcia/bitwarden_rs/</Project>
+  <Branch>
+  <Tag>latest</Tag>
+  <TagDescription>The "default image", runs on amd64. (x86, 64bit)</TagDescription>
+  </Branch>
+  <Branch>
+  <Tag>alpine</Tag>
+  <TagDescription>Alpine-based amd64 image, same as above but a little bit smaller.</TagDescription>
+  </Branch>
+  <Overview>This is a Bitwarden server API implementation written in Rust compatible with upstream Bitwarden clients, perfect for self-hosted deployment where running the official resource-heavy service might not be ideal.&#xD;
+    [br][br]&#xD;
+    Basically full implementation of Bitwarden API is provided including: &#xD;
+    [br][br]&#xD;
+    -Basic single user functionality&#xD;
+    [br]&#xD;
+    -Organizations support&#xD;
+    [br]&#xD;
+    -Attachments&#xD;
+    [br]&#xD;
+    -Vault API support&#xD;
+    [br]&#xD;
+    -Serving the static files for Vault interface&#xD;
+    [br]&#xD;
+    -Website icons API&#xD;
+    [br]&#xD;
+    -Authenticator and U2F support&#xD;
+    [br]&#xD;
+    -YubiKey OTP&#xD;
+    [br][br]&#xD;
+  </Overview>
+  <Category>Tools: Utilities</Category>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/bitwardenrs.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/bitwardenrs.png</Icon>
+  <Description>This is a Bitwarden server API implementation written in Rust compatible with upstream Bitwarden clients, perfect for self-hosted deployment where running the official resource-heavy service might not be ideal.&#xD;
+    [br][br]&#xD;
+    Basically full implementation of Bitwarden API is provided including: &#xD;
+    [br][br]&#xD;
+    -Basic single user functionality&#xD;
+    [br]&#xD;
+    -Organizations support&#xD;
+    [br]&#xD;
+    -Attachments&#xD;
+    [br]&#xD;
+    -Vault API support&#xD;
+    [br]&#xD;
+    -Serving the static files for Vault interface&#xD;
+    [br]&#xD;
+    -Website icons API&#xD;
+    [br]&#xD;
+    -Authenticator and U2F support&#xD;
+    [br]&#xD;
+    -YubiKey OTP&#xD;
+    [br][br]&#xD;
+  </Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/data/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>false</Value>
+      <Name>SIGNUPS_ALLOWED</Name>
+      <Mode/>
+    </Variable>
+		<Variable>
+			<Value>true</Value>
+			<Name>INVITATIONS_ALLOWED</Name>
+			<Mode/>
+		</Variable>
+    <Variable>
+			<Value></Value>
+			<Name>SERVER_ADMIN_EMAIL</Name>
+			<Mode/>
+		</Variable>
+    <Variable>
+			<Value>true</Value>
+			<Name>WEBSOCKET_ENABLED</Name>
+			<Mode/>
+		</Variable>
+    <Variable>
+			<Value>/attachments</Value>
+			<Name>ATTACHMENTS_FOLDER</Name>
+			<Mode/>
+		</Variable>
+    <Variable>
+			<Value>/icon_cache</Value>
+			<Name>ICON_CACHE_FOLDER</Name>
+			<Mode/>
+		</Variable>
+    <Variable>
+			<Value></Value>
+			<Name>ADMIN_TOKEN</Name>
+			<Mode/>
+		</Variable>  
+	</Environment>
+  <Labels/>
+  <Config Name="WebUI HTTP Port" Target="80" Default="8080" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Storage" Target="/data" Default="" Mode="rw" Description="Container Path: /data" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="SIGNUPS_ALLOWED" Target="SIGNUPS_ALLOWED" Default="false" Mode="" Description="Container Variable: Signups" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="INVITATIONS_ALLOWED" Target="INVITATIONS_ALLOWED" Default="true" Mode="" Description="Container Variable: Invitations" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="SERVER_ADMIN_EMAIL" Target="SERVER_ADMIN_EMAIL" Default="me@domain.com" Mode="" Description="Container Variable: Server Admin E-Mail" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="WEBSOCKET_ENABLED" Target="WEBSOCKET_ENABLED" Default="true" Mode="" Description="Container Variable: Websockets Enabled" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="ATTACHMENTS_FOLDER" Target="ATTACHMENTS_FOLDER" Default="/attachments" Mode="" Description="Container Variable: Attachments Folder" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="ICON_CACHE_FOLDER" Target="ICON_CACHE_FOLDER" Default="/icon_cache" Mode="" Description="Container Variable: Icon Cache Folder" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="ADMIN_TOKEN" Target="ADMIN_TOKEN" Default="" Mode="" Description="Container Variable: ADMIN_TOKEN" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+</Container>
