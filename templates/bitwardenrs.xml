@@ -109,14 +109,20 @@
 			<Name>ICON_CACHE_FOLDER</Name>
 			<Mode/>
 		</Variable>
+    <Variable>
+			<Value></Value>
+			<Name>ADMIN_TOKEN</Name>
+			<Mode/>
+		</Variable>  
 	</Environment>
   <Labels/>
   <Config Name="WebUI HTTP Port" Target="80" Default="8080" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false"></Config>
   <Config Name="Storage" Target="/data" Default="" Mode="rw" Description="Container Path: /data" Type="Path" Display="always" Required="true" Mask="false"></Config>
   <Config Name="SIGNUPS_ALLOWED" Target="SIGNUPS_ALLOWED" Default="false" Mode="" Description="Container Variable: Signups" Type="Variable" Display="always" Required="true" Mask="false"></Config>
-	<Config Name="INVITATIONS_ALLOWED" Target="INVITATIONS_ALLOWED" Default="true" Mode="" Description="Container Variable: Invitations" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="INVITATIONS_ALLOWED" Target="INVITATIONS_ALLOWED" Default="true" Mode="" Description="Container Variable: Invitations" Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Config Name="SERVER_ADMIN_EMAIL" Target="SERVER_ADMIN_EMAIL" Default="me@domain.com" Mode="" Description="Container Variable: Server Admin E-Mail" Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Config Name="WEBSOCKET_ENABLED" Target="WEBSOCKET_ENABLED" Default="true" Mode="" Description="Container Variable: Websockets Enabled" Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Config Name="ATTACHMENTS_FOLDER" Target="ATTACHMENTS_FOLDER" Default="/attachments" Mode="" Description="Container Variable: Attachments Folder" Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Config Name="ICON_CACHE_FOLDER" Target="ICON_CACHE_FOLDER" Default="/icon_cache" Mode="" Description="Container Variable: Icon Cache Folder" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="ADMIN_TOKEN" Target="ADMIN_TOKEN" Default="" Mode="" Description="Container Variable: ADMIN_TOKEN" Type="Variable" Display="always" Required="true" Mask="false"></Config>
 </Container>
