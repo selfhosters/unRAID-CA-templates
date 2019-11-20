@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Logarr</Name>
+  <Repository>monitorr/logarr-alpha</Repository>
+  <Registry>https://hub.docker.com/r/monitorr/logarr-alpha/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/monitorr/logarr-alpha/</Support>
+  <Project>https://github.com/Monitorr/logarr/</Project>
+  <Overview>Self-hosted, single-page, log consolidation tool written in PHP&#xD;
+  &#xD;
+  [br][br]&#xD;
+  NOTE: Logarr is currently in ALPHA TESTING phase!
+  [br][br]&#xD;
+  </Overview>
+  <Category>Tools: Utilities</Category>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/logarr.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/logarr.png</Icon>
+  <Description>Self-hosted, single-page, log consolidation tool written in PHP&#xD;
+  &#xD;
+  [br][br]&#xD;
+  NOTE: Logarr is currently in ALPHA TESTING phase!
+  [br][br]&#xD;
+  </Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort></HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/app</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="WebUI" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Config" Target="/app" Default="" Mode="rw" Description="Container Path: /app" Type="Path" Display="always" Required="true" Mask="false"></Config>
+</Container>
