@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Komga</Name>
+  <Repository>gotson/komga</Repository>
+  <Registry>https://hub.docker.com/r/gotson/komga/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/gotson/komga/</Support>
+  <Project>https://github.com/gotson/komga/</Project>
+  <Overview>A Media server for comics/mangas/BDs with API and OPDS support.&#xD;
+Check logs for auto-generated username/password.</Overview>
+  <Category>Network:Web MediaServer:Books Tools:Utilities</Category>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/komga.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/komga.png</Icon>
+  <Description>A Media server for comics/mangas/BDs with API and OPDS support.&#xD;
+Check logs for auto-generated username/password.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/komga/</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/komga/books/</HostDir>
+      <ContainerDir>/books</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>#recycle,@eaDir</Value>
+      <Name>KOMGA_LIBRARIES_SCAN_DIRECTORY_EXCLUSIONS</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="WebUI" Target="8080" Default="" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+  <Config Name="Exclusions" Target="KOMGA_LIBRARIES_SCAN_DIRECTORY_EXCLUSIONS" Default="" Mode="" Description="Container Variable: KOMGA_LIBRARIES_SCAN_DIRECTORY_EXCLUSIONS" Type="Variable" Display="always" Required="true" Mask="false">#recycle,@eaDir</Config>
+  <Config Name="Config" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/komga/</Config>
+  <Config Name="Books" Target="/books" Default="" Mode="rw" Description="Container Path: /books" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/komga/books/</Config>
+</Container>
