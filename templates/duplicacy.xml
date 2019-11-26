@@ -37,12 +37,12 @@
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/appdata/duplicacy/config</HostDir>
+      <HostDir>/mnt/user/appdata/duplicacy/config</HostDir>
       <ContainerDir>/config</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/appdata/duplicacy/cache</HostDir>
+      <HostDir>/mnt/user/appdata/duplicacy/cache</HostDir>
       <ContainerDir>/cache</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -52,7 +52,7 @@
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/appdata/duplicacy/logs</HostDir>
+      <HostDir>/mnt/user/appdata/duplicacy/logs</HostDir>
       <ContainerDir>/logs</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -71,10 +71,10 @@
   </Environment>
   <Labels/>
   <Config Name="Port" Target="3875" Default="" Mode="tcp" Description="Container Port: 3875" Type="Port" Display="always" Required="false" Mask="false">3875</Config>
-  <Config Name="Config" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="false" Mask="false">/mnt/appdata/duplicacy/config</Config>
-  <Config Name="Cache" Target="/cache" Default="" Mode="rw" Description="Container Path: /cache" Type="Path" Display="always" Required="false" Mask="false">/mnt/appdata/duplicacy/cache</Config>
+  <Config Name="Config" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/duplicacy/config</Config>
+  <Config Name="Cache" Target="/cache" Default="" Mode="rw" Description="Container Path: /cache" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/duplicacy/cache</Config>
   <Config Name="User Data" Target="/backuproot" Default="" Mode="rw" Description="Container Path: /backuproot" Type="Path" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Logs" Target="/logs" Default="" Mode="rw" Description="Container Path: /logs" Type="Path" Display="always" Required="false" Mask="false">/mnt/appdata/duplicacy/logs</Config>
+  <Config Name="Logs" Target="/logs" Default="" Mode="rw" Description="Container Path: /logs" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/duplicacy/logs</Config>
   <Config Name="User ID" Target="USR_ID" Default="0" Mode="" Description="Container Variable: USR_ID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
   <Config Name="Group ID" Target="GRP_ID" Default="0" Mode="" Description="Container Variable: GRP_ID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
 </Container>
