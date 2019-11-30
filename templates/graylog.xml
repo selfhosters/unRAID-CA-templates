@@ -17,6 +17,7 @@ The default root user is named 'admin'&#xD;
 </Overview>
   <Category>Tools:</Category>
   <WebUI>http://[IP]:[PORT:9000]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/graylog.xml</TemplateURL>	
 	<Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/graylog.png</Icon>
   <Description>Official Graylog Docker image.&#xD;
 [br][br]&#xD;
