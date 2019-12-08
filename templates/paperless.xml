@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>paperless</Name>
+  <Repository>danielquinn/paperless</Repository>
+  <Registry>https://hub.docker.com/r/danielquinn/paperless/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://gitter.im/danielquinn/paperless</Support>
+  <Project>https://github.com/the-paperless-project/paperless</Project>
+  <Overview>Index and archive all of your scanned paper documents&#xD;
+[br][br]&#xD;
+More variables here: https://github.com/the-paperless-project/paperless/blob/master/paperless.conf.example&#xD;
+[br][br]&#xD;
+&#xD;
+RUN: ./manage.py createsuperuser in the container terminal to create the superuser. </Overview>
+  <Category>Productivity:</Category>
+  <WebUI>http://[IP]:[PORT:8000]</WebUI>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/paperless.png</Icon>
+  <PostArgs>runserver 0.0.0.0:8000 --insecure --noreload</PostArgs>
+  <Description>Index and archive all of your scanned paper documents&#xD;
+[br][br]&#xD;
+More variables here: https://github.com/the-paperless-project/paperless/blob/master/paperless.conf.example&#xD;
+[br][br]&#xD;
+&#xD;
+RUN: ./manage.py createsuperuser in the container terminal to create the superuser. </Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort></HostPort>
+        <ContainerPort>8000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/usr/src/paperless/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/usr/src/paperless/media</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/consume</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/export</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>    
+  </Data>
+  <Environment>
+    <Variable>
+      <Value/>
+      <Name>PAPERLESS_OCR_LANGUAGES</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>99</Value>
+      <Name>USERMAP_UID</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Port" Target="8000" Default="8000" Mode="tcp" Description="Container Port: 8000" Type="Port" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Data" Target="/usr/src/paperless/data" Default="/mnt/user/appdata/paperless/" Mode="rw" Description="Container Path: /usr/src/paperless/data" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Media" Target="/usr/src/paperless/media" Default="" Mode="rw" Description="Container Path: /usr/src/paperless/media" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Consumption" Target="/consume" Default="" Mode="rw" Description="Container Path: /consume" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Export" Target="/export" Default="" Mode="rw" Description="Container Path: /export" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="PAPERLESS_OCR_LANGUAGES" Target="PAPERLESS_OCR_LANGUAGES" Default="" Mode="" Description="Container Variable: PAPERLESS_OCR_LANGUAGES" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="PUID" Target="USERMAP_UID" Default="99" Mode="" Description="Container Variable: USERMAP_UID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
+</Container>

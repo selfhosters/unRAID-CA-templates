@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>huginn</Name>
+  <Repository>huginn/huginn</Repository>
+  <Registry>https://hub.docker.com/r/huginn/huginn/</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/huginn/huginn/</Support>
+  <Project>https://github.com/huginn/huginn/</Project>
+  <Overview>Build agents that monitor and act on your behalf. Your agents are standing by! &#xD;
+[br][br]&#xD;
+Huginn is a system for building agents that perform automated tasks for you online. They can read the web, watch for events, and take actions on your behalf. Huginn's Agents create and consume events, propagating them along a directed graph. Think of it as a hackable version of IFTTT or Zapier on your own server. You always know who has your data. You do.&#xD;
+[br][br]&#xD;
+Log in to your Huginn instance using the username admin and password password&#xD;
+[br][br]&#xD;
+See https://hub.docker.com/r/huginn/huginn/ for more information on running Huginn with a separate database container &#xD;
+[br][br]&#xD;
+More variables can be found here: https://github.com/huginn/huginn/blob/master/.env.example</Overview>
+  <Category>HomeAutomation:</Category>
+  <WebUI>http://[IP]:[PORT:3000]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/huginn.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/huginn.png</Icon>
+  <Description>Build agents that monitor and act on your behalf. Your agents are standing by! &#xD;
+[br][br]&#xD;
+Huginn is a system for building agents that perform automated tasks for you online. They can read the web, watch for events, and take actions on your behalf. Huginn's Agents create and consume events, propagating them along a directed graph. Think of it as a hackable version of IFTTT or Zapier on your own server. You always know who has your data. You do.&#xD;
+[br][br]&#xD;
+Log in to your Huginn instance using the username admin and password password&#xD;
+[br][br]&#xD;
+See https://hub.docker.com/r/huginn/huginn/ for more information on running Huginn with a separate database container &#xD;
+[br][br]&#xD;
+More variables can be found here: https://github.com/huginn/huginn/blob/master/.env.example</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort></HostPort>
+        <ContainerPort>3000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/var/lib/mysql</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="WebUI" Target="3000" Default="3000" Mode="tcp" Description="Container Port: 3000" Type="Port" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Database files" Target="/var/lib/mysql" Default="/mnt/user/appdata/huginn" Mode="rw" Description="Container Path: /var/lib/mysql" Type="Path" Display="always" Required="false" Mask="false"></Config>
+</Container>
