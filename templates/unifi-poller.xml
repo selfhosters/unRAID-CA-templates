@@ -4,8 +4,6 @@
   <Repository>golift/unifi-poller</Repository>
   <Registry>https://hub.docker.com/r/golift/unifi-poller/</Registry>
   <Network>bridge</Network>
-  <MyIP/>
-  <Shell>sh</Shell>
   <Privileged>false</Privileged>
   <Support>https://hub.docker.com/r/golift/unifi-poller/</Support>
   <Project>https://github.com/davidnewhall/unifi-poller</Project>
@@ -16,15 +14,8 @@ This template works with poller versions 1.6.2+&#xD;
 READ THE INSTRUCTIONS! &#xD;
 https://github.com/davidnewhall/unifi-poller/wiki/Installation</Overview>
   <Category>Tools:Utilities Network:Management </Category>
-  <WebUI/>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/unifi-poller.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/wiki/davidnewhall/unifi-poller/images/unifi-poller-logo.png</Icon>
-  <ExtraParams/>
-  <PostArgs/>
-  <CPUset/>
-  <DateInstalled>1575873151</DateInstalled>
-  <DonateText/>
-  <DonateLink/>
   <Description>Collect ALL UniFi Controller, Device and Client Data - Export to InfluxDB or Prometheus. Visualize with Grafana using included dashboards!&#xD;
 &#xD;
 This template works with poller versions 1.6.2+&#xD;
