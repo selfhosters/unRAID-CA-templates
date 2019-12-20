@@ -11,7 +11,7 @@
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/bw_plex.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/bw_plex.png</Icon>
   <ExtraParams/>
-  <PostArgs>bash -c "bw_plex --url https://YOURE_URL -t YOURE_TOKEN -df /config watch"</PostArgs>
+  <PostArgs>bash -c "bw_plex -df /config watch"</PostArgs>
   <Description>binge watching for plex</Description>
   <Networking>
     <Mode>none</Mode>
