@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
+  <!--Generated with Selfhosters compose>template script-->
   <Name>bw_plex</Name>
   <Repository>hellowlol/bw_plex:latest</Repository>
   <Registry>https://hub.docker.com/r/hellowlol/bw_plex</Registry>
