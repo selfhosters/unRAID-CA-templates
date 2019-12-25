@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>phpldapadmin</Name>
+  <Repository>osixia/phpldapadmin</Repository>
+  <Registry>https://hub.docker.com/r/osixia/phpldapadmin/~/dockerfile/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/osixia/docker-phpLDAPadmin</Support>
+  <Project>https://hub.docker.com/r/osixia/phpldapadmin/</Project>
+  <Overview>A docker image to run phpldapadmin. It provides a user interface to an openldap database. It must be on the same custom network as openldap and must be linked via --link openldap:PHPLDAPADMIN_LDAP_HOSTS e.g. --link openldap:example.org&#xD;
+An example config.php can be found here: https://github.com/commandprompt/phpldapadmin/blob/master/config/config.php.example</Overview>
+  <Category>Tools: Utilities</Category>
+  <WebUI>https://[IP]:[PORT:443]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/phpldapadmin.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/phpldapadmin.png</Icon>
+  <ExtraParams>--link openldap:example.org</ExtraParams>
+  <PostArgs>--loglevel debug</PostArgs>
+  <CPUset/>
+  <DonateText/>
+  <DonateLink/>
+  <Description>A docker image to run phpldapadmin. It provides a user interface to an openldap database. It must be on the same custom network as openldap and must be linked via --link openldap:PHPLDAPADMIN_LDAP_HOSTS e.g. --link openldap:example.org&#xD;
+An example config.php can be found here: https://github.com/commandprompt/phpldapadmin/blob/master/config/config.php.example</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>4444</HostPort>
+        <ContainerPort>443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/phpldapadmin/</HostDir>
+      <ContainerDir>/container/service/phpldapadmin/assets/config/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>letsencrypt-keys</HostDir>
+      <ContainerDir>/container/service/phpldapadmin/assets/apache2/certs/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>example.org</Value>
+      <Name>PHPLDAPADMIN_LDAP_HOSTS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>PHPLDAPADMIN_SERVER_ADMIN</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>true</Value>
+      <Name>PHPLDAPADMIN_HTTPS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>live/example.org/cert.pem</Value>
+      <Name>PHPLDAPADMIN_HTTPS_CRT_FILENAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>live/example.org/privkey.pem</Value>
+      <Name>PHPLDAPADMIN_HTTPS_KEY_FILENAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>live/example.org/fullchain.pem</Value>
+      <Name>PHPLDAPADMIN_HTTPS_CA_CRT_FILENAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>/phpldapadmin</Value>
+      <Name>PHPLDAPADMIN_SERVER_PATH</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>true</Value>
+      <Name>PHPLDAPADMIN_TRUST_PROXY_SSL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>false</Value>
+      <Name>PHPLDAPADMIN_LDAP_CLIENT_TLS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>demand</Value>
+      <Name>PHPLDAPADMIN_LDAP_CLIENT_TLS_REQCERT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>ldap-ca.crt</Value>
+      <Name>PHPLDAPADMIN_LDAP_CLIENT_TLS_CA_CRT_FILENAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>ldap-client.crt</Value>
+      <Name>PHPLDAPADMIN_LDAP_CLIENT_TLS_CRT_FILENAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>ldap-client.key</Value>
+      <Name>PHPLDAPADMIN_LDAP_CLIENT_TLS_KEY_FILENAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>phpldapadmin</Value>
+      <Name>PHPLDAPADMIN_SSL_HELPER_PREFIX</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>ldap</Value>
+      <Name>LDAP_CLIENT_SSL_HELPER_PREFIX</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Host Port 1" Target="443" Default="" Mode="tcp" Description="Container Port: 443" Type="Port" Display="always" Required="true" Mask="false">4444</Config>
+  <Config Name="Host Path 1" Target="/container/service/phpldapadmin/assets/config/" Default="/mnt/user/appdata/phpldapadmin" Mode="rw" Description="Place your config.php in this path after setting up basic stuff in it like a hostname value" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/phpldapadmin/</Config>
+  <Config Name="PHPLDAPADMIN_LDAP_HOSTS" Target="PHPLDAPADMIN_LDAP_HOSTS" Default="example.org" Mode="" Description="Set in the phpldapadmin server config.php" Type="Variable" Display="always" Required="true" Mask="false">example.org</Config>
+  <Config Name="PHPLDAPADMIN_SERVER_ADMIN" Target="PHPLDAPADMIN_SERVER_ADMIN" Default="webmaster@example.org" Mode="" Description="Server admin email." Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="PHPLDAPADMIN_HTTPS" Target="PHPLDAPADMIN_HTTPS" Default="true" Mode="" Description="Use apache ssl config. Defaults to true" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="PHPLDAPADMIN_HTTPS_CRT_FILENAME" Target="PHPLDAPADMIN_HTTPS_CRT_FILENAME" Default="live/example.org/cert.pem" Mode="" Description="Apache ssl certificate filename. If getting certs from Let's Encrypt, this should be of the form: live/example.org/cert.pem" Type="Variable" Display="always" Required="false" Mask="false">live/example.org/cert.pem</Config>
+  <Config Name="PHPLDAPADMIN_HTTPS_KEY_FILENAME" Target="PHPLDAPADMIN_HTTPS_KEY_FILENAME" Default="live/example.org/privkey.pem" Mode="" Description="Apache ssl certificate private key filename.  If getting certs from Let's Encrypt, this should be of the form: live/example.org/privkey.pem" Type="Variable" Display="always" Required="false" Mask="false">live/example.org/privkey.pem</Config>
+  <Config Name="PHPLDAPADMIN_HTTPS_CA_CRT_FILENAME" Target="PHPLDAPADMIN_HTTPS_CA_CRT_FILENAME" Default="live/example.org/fullchain.pem" Mode="" Description="Apache ssl CA certificate filename. If getting certs from Let's Encrypt, this should be of the form: live/example.org/fullchain.pem" Type="Variable" Display="always" Required="false" Mask="false">live/example.org/fullchain.pem</Config>
+  <Config Name="LDAP SSL Certificate Path" Target="/container/service/phpldapadmin/assets/apache2/certs/" Default="" Mode="rw" Description="Shared volume with Let's Encrypt certs. Create a docker volume -&amp;gt; docker create volume letsencrypt-keys, then link it in your linuxserver.io/letsencrypt docker container with container path: /config/etc/letsencrypt and host path: letsencrypt-keys" Type="Path" Display="always" Required="false" Mask="false">letsencrypt-keys</Config>
+  <Config Name="PHPLDAPADMIN_SERVER_PATH" Target="PHPLDAPADMIN_SERVER_PATH" Default="/phpldapadmin" Mode="" Description="Server path (useful if behind a reverse proxy). Defaults to /phpldapadmin" Type="Variable" Display="advanced" Required="false" Mask="false">/phpldapadmin</Config>
+  <Config Name="PHPLDAPADMIN_TRUST_PROXY_SSL" Target="PHPLDAPADMIN_TRUST_PROXY_SSL" Default="true" Mode="" Description="Set to true to trust X-Forwarded-Proto header" Type="Variable" Display="advanced" Required="false" Mask="false">true</Config>
+  <Config Name="PHPLDAPADMIN_LDAP_CLIENT_TLS" Target="PHPLDAPADMIN_LDAP_CLIENT_TLS" Default="true" Mode="" Description="Enable ldap client tls config, ldap server certificate check and set client certificate. Defaults to true" Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
+  <Config Name="PHPLDAPADMIN_LDAP_CLIENT_TLS_REQCERT" Target="PHPLDAPADMIN_LDAP_CLIENT_TLS_REQCERT" Default="demand" Mode="" Description="Set ldap.conf TLS_REQCERT. Defaults to demand" Type="Variable" Display="advanced" Required="false" Mask="false">demand</Config>
+  <Config Name="PHPLDAPADMIN_LDAP_CLIENT_TLS_CA_CRT_FILENAME" Target="PHPLDAPADMIN_LDAP_CLIENT_TLS_CA_CRT_FILENAME" Default="ldap-ca.crt" Mode="" Description="Set ldap.conf TLS_CACERT to /container/service/ldap-client/assets/certs/$PHPLDAPADMIN_LDAP_CLIENT_TLS_CA_CRT_FILENAME. Defaults to ldap-ca.crt" Type="Variable" Display="advanced" Required="false" Mask="false">ldap-ca.crt</Config>
+  <Config Name="PHPLDAPADMIN_LDAP_CLIENT_TLS_CRT_FILENAME" Target="PHPLDAPADMIN_LDAP_CLIENT_TLS_CRT_FILENAME" Default="ldap-client.crt" Mode="" Description="Set .ldaprc TLS_CERT to /container/service/ldap-client/assets/certs/$PHPLDAPADMIN_LDAP_CLIENT_TLS_CRT_FILENAME. Defaults to ldap-client.crt" Type="Variable" Display="advanced" Required="false" Mask="false">ldap-client.crt</Config>
+  <Config Name="PHPLDAPADMIN_LDAP_CLIENT_TLS_KEY_FILENAME" Target="PHPLDAPADMIN_LDAP_CLIENT_TLS_KEY_FILENAME" Default="ldap-client.key" Mode="" Description="Set .ldaprc TLS_KEY to /container/service/ldap-client/assets/certs/$PHPLDAPADMIN_LDAP_CLIENT_TLS_KEY_FILENAME. Defaults to ldap-client.key" Type="Variable" Display="advanced" Required="false" Mask="false">ldap-client.key</Config>
+  <Config Name="PHPLDAPADMIN_SSL_HELPER_PREFIX" Target="PHPLDAPADMIN_SSL_HELPER_PREFIX" Default="phpldapadmin" Mode="" Description="ssl-helper environment variables prefix. Defaults to phpldapadmin, ssl-helper first search config from PHPLDAPADMIN_SSL_HELPER_* variables, before SSL_HELPER_* variables." Type="Variable" Display="advanced" Required="false" Mask="false">phpldapadmin</Config>
+  <Config Name="LDAP_CLIENT_SSL_HELPER_PREFIX" Target="LDAP_CLIENT_SSL_HELPER_PREFIX" Default="ldap" Mode="" Description="ssl-helper environment variables prefix. Defaults to ldap, ssl-helper first search config from LDAP_SSL_HELPER_* variables, before SSL_HELPER_* variables." Type="Variable" Display="advanced" Required="false" Mask="false">ldap</Config>
+</Container>
