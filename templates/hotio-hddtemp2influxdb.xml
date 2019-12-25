@@ -75,11 +75,11 @@
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="UMASK" Target="UMASK" Default="002" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="UMASK" Target="UMASK" Default="002" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="advanced" Required="false" Mask="false"/>
   <Config Name="INTERVAL" Target="INTERVAL" Default="30" Mode="" Description="Container Variable: INTERVAL" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="LOG_LEVEL" Target="LOG_LEVEL" Default="2" Mode="" Description="Container Variable: LOG_LEVEL" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="LOG_LEVEL" Target="LOG_LEVEL" Default="2" Mode="" Description="Container Variable: LOG_LEVEL" Type="Variable" Display="advanced" Required="false" Mask="false"/>
   <Config Name="DEVICES" Target="DEVICES" Default="sdb;sdc" Mode="" Description="Container Variable: DEVICES" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="INFLUXDB_HOST" Target="INFLUXDB_HOST" Default="http://influxdb:8086" Mode="" Description="Container Variable: INFLUXDB_HOST" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="INFLUXDB_DB" Target="INFLUXDB_DB" Default="hddtemp2influxdb" Mode="" Description="Container Variable: INFLUXDB_DB" Type="Variable" Display="always" Required="false" Mask="false"/>
