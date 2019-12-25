@@ -4,8 +4,6 @@
   <Repository>osixia/openldap</Repository>
   <Registry>https://hub.docker.com/r/osixia/openldap/~/dockerfile/</Registry>
   <Network>bridge</Network>
-  <MyIP/>
-  <Shell>sh</Shell>
   <Privileged>false</Privileged>
   <Support>https://github.com/osixia/docker-openldap</Support>
   <Project>https://hub.docker.com/r/osixia/openldap/</Project>
@@ -16,9 +14,6 @@
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/openldap.png</Icon>
   <ExtraParams/>
   <PostArgs>--loglevel debug --copy-service</PostArgs>
-  <CPUset/>
-  <DonateText/>
-  <DonateLink/>
   <Description> A docker image to run OpenLDAP, The container default log level is info. Available levels are: none, error, warning, info, debug and trace. To use this container with phpldapadmin, create a custom network that both containers are on and then link them using --link openldap:PHPLDAPADMIN_LDAP_HOSTS in the extra parameters of the phpldapadmin docker container (which should be equal to HOSTNAME in this container). Any other docker that wants to use LDAP credentials will need the same extra parameter including Let's Encrypt if you are using linuxserver.io's ldap-auth container.</Description>
   <Networking>
     <Mode>bridge</Mode>
@@ -165,10 +160,10 @@
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="LDAP database files" Target="/var/lib/ldap/" Default="" Mode="rw" Description="LDAP database files" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/openldap/data</Config>
-  <Config Name="LDAP config files" Target="/etc/ldap/slapd.d/" Default="" Mode="rw" Description="LDAP config files" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/openldap/config</Config>
-  <Config Name="Host Port 1" Target="389" Default="" Mode="tcp" Description="Container Port: 389" Type="Port" Display="always" Required="true" Mask="false">389</Config>
-  <Config Name="Host Port 2" Target="636" Default="" Mode="tcp" Description="Container Port: 636" Type="Port" Display="always" Required="true" Mask="false">636</Config>
+  <Config Name="LDAP database files" Target="/var/lib/ldap/" Default="" Mode="rw" Description="LDAP database files" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/openldap/data</Config>
+  <Config Name="LDAP config files" Target="/etc/ldap/slapd.d/" Default="" Mode="rw" Description="LDAP config files" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/openldap/config</Config>
+  <Config Name="LDAP port" Target="389" Default="" Mode="tcp" Description="Container Port: 389" Type="Port" Display="always" Required="true" Mask="false">389</Config>
+  <Config Name="LDAPS port" Target="636" Default="" Mode="tcp" Description="Container Port: 636" Type="Port" Display="always" Required="true" Mask="false">636</Config>
   <Config Name="LDAP_ORGANISATION" Target="LDAP_ORGANISATION" Default="" Mode="" Description="Organisation name e.g. Example Inc." Type="Variable" Display="always" Required="true" Mask="false">Example Inc.</Config>
   <Config Name="LDAP_DOMAIN" Target="LDAP_DOMAIN" Default="" Mode="" Description="Ldap domain e.g. example.org" Type="Variable" Display="always" Required="true" Mask="false">example.org</Config>
   <Config Name="HOSTNAME" Target="HOSTNAME" Default="" Mode="" Description="Set the hostname of the running openldap server. This is the value linked to other containers so they can connect with ldaps://example.org:636. In that example, example.org is the hostname." Type="Variable" Display="always" Required="true" Mask="false">example.org</Config>

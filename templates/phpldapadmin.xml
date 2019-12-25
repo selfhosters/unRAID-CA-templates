@@ -4,7 +4,6 @@
   <Repository>osixia/phpldapadmin</Repository>
   <Registry>https://hub.docker.com/r/osixia/phpldapadmin/~/dockerfile/</Registry>
   <Network>bridge</Network>
-  <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
   <Support>https://github.com/osixia/docker-phpLDAPadmin</Support>
@@ -17,16 +16,13 @@ An example config.php can be found here: https://github.com/commandprompt/phplda
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/phpldapadmin.png</Icon>
   <ExtraParams>--link openldap:example.org</ExtraParams>
   <PostArgs>--loglevel debug</PostArgs>
-  <CPUset/>
-  <DonateText/>
-  <DonateLink/>
   <Description>A docker image to run phpldapadmin. It provides a user interface to an openldap database. It must be on the same custom network as openldap and must be linked via --link openldap:PHPLDAPADMIN_LDAP_HOSTS e.g. --link openldap:example.org&#xD;
 An example config.php can be found here: https://github.com/commandprompt/phpldapadmin/blob/master/config/config.php.example</Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort>4444</HostPort>
+        <HostPort>443</HostPort>
         <ContainerPort>443</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
@@ -34,13 +30,13 @@ An example config.php can be found here: https://github.com/commandprompt/phplda
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/phpldapadmin/</HostDir>
-      <ContainerDir>/container/service/phpldapadmin/assets/config/</ContainerDir>
+      <HostDir>letsencrypt-keys</HostDir>
+      <ContainerDir>/container/service/phpldapadmin/assets/apache2/certs/</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>letsencrypt-keys</HostDir>
-      <ContainerDir>/container/service/phpldapadmin/assets/apache2/certs/</ContainerDir>
+      <HostDir>/mnt/user/appdata/phpldapadmin/</HostDir>
+      <ContainerDir>/container/service/phpldapadmin/assets/config/</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
@@ -51,7 +47,7 @@ An example config.php can be found here: https://github.com/commandprompt/phplda
       <Mode/>
     </Variable>
     <Variable>
-      <Value></Value>
+      <Value>webmaster@example.org</Value>
       <Name>PHPLDAPADMIN_SERVER_ADMIN</Name>
       <Mode/>
     </Variable>
@@ -122,10 +118,9 @@ An example config.php can be found here: https://github.com/commandprompt/phplda
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="Host Port 1" Target="443" Default="" Mode="tcp" Description="Container Port: 443" Type="Port" Display="always" Required="true" Mask="false">4444</Config>
-  <Config Name="Host Path 1" Target="/container/service/phpldapadmin/assets/config/" Default="/mnt/user/appdata/phpldapadmin" Mode="rw" Description="Place your config.php in this path after setting up basic stuff in it like a hostname value" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/phpldapadmin/</Config>
+  <Config Name="WebUI port" Target="443" Default="" Mode="tcp" Description="WebUI port" Type="Port" Display="always" Required="true" Mask="false">443</Config>
   <Config Name="PHPLDAPADMIN_LDAP_HOSTS" Target="PHPLDAPADMIN_LDAP_HOSTS" Default="example.org" Mode="" Description="Set in the phpldapadmin server config.php" Type="Variable" Display="always" Required="true" Mask="false">example.org</Config>
-  <Config Name="PHPLDAPADMIN_SERVER_ADMIN" Target="PHPLDAPADMIN_SERVER_ADMIN" Default="webmaster@example.org" Mode="" Description="Server admin email." Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="PHPLDAPADMIN_SERVER_ADMIN" Target="PHPLDAPADMIN_SERVER_ADMIN" Default="webmaster@example.org" Mode="" Description="Server admin email." Type="Variable" Display="always" Required="true" Mask="false">webmaster@example.org</Config>
   <Config Name="PHPLDAPADMIN_HTTPS" Target="PHPLDAPADMIN_HTTPS" Default="true" Mode="" Description="Use apache ssl config. Defaults to true" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
   <Config Name="PHPLDAPADMIN_HTTPS_CRT_FILENAME" Target="PHPLDAPADMIN_HTTPS_CRT_FILENAME" Default="live/example.org/cert.pem" Mode="" Description="Apache ssl certificate filename. If getting certs from Let's Encrypt, this should be of the form: live/example.org/cert.pem" Type="Variable" Display="always" Required="false" Mask="false">live/example.org/cert.pem</Config>
   <Config Name="PHPLDAPADMIN_HTTPS_KEY_FILENAME" Target="PHPLDAPADMIN_HTTPS_KEY_FILENAME" Default="live/example.org/privkey.pem" Mode="" Description="Apache ssl certificate private key filename.  If getting certs from Let's Encrypt, this should be of the form: live/example.org/privkey.pem" Type="Variable" Display="always" Required="false" Mask="false">live/example.org/privkey.pem</Config>
@@ -140,4 +135,5 @@ An example config.php can be found here: https://github.com/commandprompt/phplda
   <Config Name="PHPLDAPADMIN_LDAP_CLIENT_TLS_KEY_FILENAME" Target="PHPLDAPADMIN_LDAP_CLIENT_TLS_KEY_FILENAME" Default="ldap-client.key" Mode="" Description="Set .ldaprc TLS_KEY to /container/service/ldap-client/assets/certs/$PHPLDAPADMIN_LDAP_CLIENT_TLS_KEY_FILENAME. Defaults to ldap-client.key" Type="Variable" Display="advanced" Required="false" Mask="false">ldap-client.key</Config>
   <Config Name="PHPLDAPADMIN_SSL_HELPER_PREFIX" Target="PHPLDAPADMIN_SSL_HELPER_PREFIX" Default="phpldapadmin" Mode="" Description="ssl-helper environment variables prefix. Defaults to phpldapadmin, ssl-helper first search config from PHPLDAPADMIN_SSL_HELPER_* variables, before SSL_HELPER_* variables." Type="Variable" Display="advanced" Required="false" Mask="false">phpldapadmin</Config>
   <Config Name="LDAP_CLIENT_SSL_HELPER_PREFIX" Target="LDAP_CLIENT_SSL_HELPER_PREFIX" Default="ldap" Mode="" Description="ssl-helper environment variables prefix. Defaults to ldap, ssl-helper first search config from LDAP_SSL_HELPER_* variables, before SSL_HELPER_* variables." Type="Variable" Display="advanced" Required="false" Mask="false">ldap</Config>
+  <Config Name="Appdata" Target="/container/service/phpldapadmin/assets/config/" Default="/mnt/user/appdata/phpldapadmin" Mode="rw" Description="Place your config.php in this path after setting up basic stuff in it like a hostname value" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/phpldapadmin/</Config>
 </Container>
