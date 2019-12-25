@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <!--Generated with Selfhosters compose>template script-->
+  <Name>bw_plex</Name>
+  <Repository>hellowlol/bw_plex:latest</Repository>
+  <Registry>https://hub.docker.com/r/hellowlol/bw_plex</Registry>
+  <Privileged>false</Privileged>
+  <Project>https://github.com/Hellowlol/bw_plex</Project>
+  <Overview>binge watching for plex</Overview>
+  <Category>Tools: MediaServer:Other</Category>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/bw_plex.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/bw_plex.png</Icon>
+  <ExtraParams/>
+  <PostArgs>bash -c "bw_plex -df /config watch"</PostArgs>
+  <Description>binge watching for plex</Description>
+  <Networking>
+    <Mode>none</Mode>
+    <Publish/>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/Media/</HostDir>
+      <ContainerDir>/mnt/user/Media/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/bw_plex</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>http://plex:32400</Value>
+      <Name>http://plex:32400</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>YOUR_TOKEN</Value>
+      <Name>YOUR_TOKEN</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="url" Target="http://plex:32400" Default="http://plex:32400" Mode="" Description="Container Variable: url" Type="Variable" Display="always" Required="false" Mask="false">http://plex:32400</Config>
+  <Config Name="token" Target="YOUR_TOKEN" Default="YOUR_TOKEN" Mode="" Description="Container Variable: token" Type="Variable" Display="always" Required="false" Mask="false">YOUR_TOKEN</Config>
+  <Config Name="Container path /mnt/user/Media/" Target="/mnt/user/Media/" Default="/mnt/user/Media/" Mode="rw" Description="Container Path: /mnt/user/Media/" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/Media/</Config>
+  <Config Name="Appdata" Target="/config" Default="/mnt/user/appdata/bw_plex" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/bw_plex</Config>
+</Container>

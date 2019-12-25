@@ -11,7 +11,7 @@
   <Category>Productivity: Tools:</Category>
   <WebUI>http://[IP]:[PORT:8000]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/invoiceninja.xml</TemplateURL>
-	<Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/invoiceninja.jpg</Icon>
+	<Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/invoiceninja.png</Icon>
   <Description> An open-source invoicing and time-tracking app built with Laravel https://www.invoiceninja.com  </Description>
   <Networking>
     <Mode>bridge</Mode>

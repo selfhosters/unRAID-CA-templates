@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>hddtemp2influxdb</Name>
+  <Repository>hotio/hddtemp2influxdb</Repository>
+  <Registry>https://hub.docker.com/r/hotio/hddtemp2influxdb</Registry>
+  <Shell>bash</Shell>
+  <Privileged>true</Privileged>
+  <Support>https://discord.gg/3SnkuKp</Support>
+  <Project>https://github.com/hotio/docker-hddtemp2influxdb</Project>
+  <Category>Tools: Other:</Category>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/hotio-hddtemp2influxdb.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/hotio-hddtemp2influxdb.png</Icon>
+  <Overview>A docker image that reads hdd temperatures using smartctl and writes them to InfluxDB. To change the hostname sent to the influx database, edit the Extra Parameters. For nvme drives don't include the namespace, use nvme0 instead of nvme0n1.</Overview>
+  <Description>A docker image that reads hdd temperatures using smartctl and writes them to InfluxDB. To change the hostname sent to the influx database, edit the Extra Parameters. For nvme drives don't include the namespace, use nvme0 instead of nvme0n1.</Description>
+  <DonateText/>
+  <DonateLink/>
+  <WebUI/>
+  <ExtraParams>--hostname UnRaid</ExtraParams>
+  <Network>bridge</Network>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish/>
+  </Networking>
+  <Data/>
+  <Environment>
+    <Variable>
+      <Value/>
+      <Name>PUID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>PGID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>UMASK</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>INTERVAL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>LOG_LEVEL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>DEVICES</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>INFLUXDB_HOST</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>INFLUXDB_DB</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>INFLUXDB_USER</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>INFLUXDB_PASS</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="UMASK" Target="UMASK" Default="002" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="INTERVAL" Target="INTERVAL" Default="30" Mode="" Description="Container Variable: INTERVAL" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="LOG_LEVEL" Target="LOG_LEVEL" Default="2" Mode="" Description="Container Variable: LOG_LEVEL" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="DEVICES" Target="DEVICES" Default="sdb;sdc" Mode="" Description="Container Variable: DEVICES" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="INFLUXDB_HOST" Target="INFLUXDB_HOST" Default="http://influxdb:8086" Mode="" Description="Container Variable: INFLUXDB_HOST" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="INFLUXDB_DB" Target="INFLUXDB_DB" Default="hddtemp2influxdb" Mode="" Description="Container Variable: INFLUXDB_DB" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="INFLUXDB_USER" Target="INFLUXDB_USER" Default="" Mode="" Description="Container Variable: INFLUXDB_USER" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="INFLUXDB_PASS" Target="INFLUXDB_PASS" Default="" Mode="" Description="Container Variable: INFLUXDB_PASS" Type="Variable" Display="always" Required="false" Mask="true"/>
+</Container>
