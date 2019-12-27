@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>lidarr</Name>
+  <Repository>hotio/lidarr</Repository>
+  <Registry>https://hub.docker.com/r/hotio/lidarr</Registry>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://discord.gg/3SnkuKp</Support>
+  <Project>https://github.com/hotio/docker-lidarr</Project>
+  <Category>Downloaders: MediaApp:Music</Category>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/hotio-lidarr.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/hotio-lidarr.png</Icon>
+  <Overview>Lidarr is a music collection manager for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new tracks from your favorite artists and will grab, sort and rename them.</Overview>
+  <Description>Lidarr is a music collection manager for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new tracks from your favorite artists and will grab, sort and rename them.</Description>
+  <MyIP/>
+  <DonateText/>
+  <DonateLink/>
+  <DonateImg/>
+  <WebUI>http://[IP]:[PORT:8686]</WebUI>
+  <ExtraParams/>
+  <PostArgs/>
+  <Network>bridge</Network>
+  <Config Name="Host Port for 8686" Target="8686" Default="8686" Mode="tcp" Description="Container Port: 8686" Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="Host Path for /config" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="UMASK" Target="UMASK" Default="002" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="always" Required="false" Mask="false"/>
+</Container>

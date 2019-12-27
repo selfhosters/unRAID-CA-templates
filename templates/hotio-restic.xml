@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>restic</Name>
+  <Repository>hotio/restic</Repository>
+  <Registry>https://hub.docker.com/r/hotio/restic</Registry>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://discord.gg/3SnkuKp</Support>
+  <Project>https://github.com/hotio/docker-restic</Project>
+  <Category>Backup:</Category>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/hotio-restic.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/hotio-restic.png</Icon>
+  <Overview>Restic is a program that does backups right. This docker image also contains rclone, for remote backups. See this docker image's project page for detailed configuration instructions.</Overview>
+  <Description>Restic is a program that does backups right. This docker image also contains rclone, for remote backups. See this docker image's project page for detailed configuration instructions.</Description>
+  <MyIP/>
+  <DonateText/>
+  <DonateLink/>
+  <DonateImg/>
+  <WebUI/>
+  <ExtraParams>--hostname unraid</ExtraParams>
+  <PostArgs/>
+  <Network>bridge</Network>
+  <Config Name="Host Path for /config" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="UMASK" Target="UMASK" Default="002" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="always" Required="false" Mask="false"/>
+</Container>

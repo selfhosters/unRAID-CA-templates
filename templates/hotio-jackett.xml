@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>jackett</Name>
+  <Repository>hotio/jackett</Repository>
+  <Registry>https://hub.docker.com/r/hotio/jackett</Registry>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://discord.gg/3SnkuKp</Support>
+  <Project>https://github.com/hotio/docker-jackett</Project>
+  <Category>Downloaders: MediaApp:Other</Category>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/hotio-jackett.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/hotio-jackett.png</Icon>
+  <Overview>Jackett works as a proxy server: it translates queries from apps into tracker-site-specific http queries, parses the html response, then sends results back to the requesting software.</Overview>
+  <Description>Jackett works as a proxy server: it translates queries from apps into tracker-site-specific http queries, parses the html response, then sends results back to the requesting software.</Description>
+  <MyIP/>
+  <DonateText/>
+  <DonateLink/>
+  <DonateImg/>
+  <WebUI>http://[IP]:[PORT:9117]</WebUI>
+  <ExtraParams/>
+  <PostArgs/>
+  <Network>bridge</Network>
+  <Config Name="Host Port for 9117" Target="9117" Default="9117" Mode="tcp" Description="Container Port: 9117" Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="Host Path for /config" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="UMASK" Target="UMASK" Default="002" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="always" Required="false" Mask="false"/>
+</Container>

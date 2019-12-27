@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>tautulli</Name>
+  <Repository>hotio/tautulli</Repository>
+  <Registry>https://hub.docker.com/r/hotio/tautulli</Registry>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://discord.gg/3SnkuKp</Support>
+  <Project>https://github.com/hotio/docker-tautulli</Project>
+  <Category>Downloaders: MediaApp:Video</Category>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/hotio-tautulli.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/hotio-tautulli.png</Icon>
+  <Overview>A Python based monitoring and tracking tool for Plex Media Server.</Overview>
+  <Description>A Python based monitoring and tracking tool for Plex Media Server.</Description>
+  <MyIP/>
+  <DonateText/>
+  <DonateLink/>
+  <DonateImg/>
+  <WebUI>http://[IP]:[PORT:8181]</WebUI>
+  <ExtraParams/>
+  <PostArgs/>
+  <Network>bridge</Network>
+  <Config Name="Host Port for 8181" Target="8181" Default="8181" Mode="tcp" Description="Container Port: 8181" Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="Host Path for /config" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="UMASK" Target="UMASK" Default="002" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="always" Required="false" Mask="false"/>
+</Container>

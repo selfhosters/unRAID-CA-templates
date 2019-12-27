@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>rclone</Name>
+  <Repository>hotio/rclone</Repository>
+  <Registry>https://hub.docker.com/r/hotio/rclone</Registry>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://discord.gg/3SnkuKp</Support>
+  <Project>https://github.com/hotio/docker-rclone</Project>
+  <Category>Downloaders: Other:</Category>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/hotio-rclone.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/hotio-rclone.png</Icon>
+  <Overview>Mount a remote filesystem using rclone. To access the rclone mount from another container, use '--volumes-from rclone' as an extra parameter to that container.</Overview>
+  <Description>Mount a remote filesystem using rclone. To access the rclone mount from another container, use '--volumes-from rclone' as an extra parameter to that container.</Description>
+  <MyIP/>
+  <DonateText/>
+  <DonateLink/>
+  <DonateImg/>
+  <WebUI/>
+  <ExtraParams>--security-opt apparmor:unconfined --cap-add SYS_ADMIN --device /dev/fuse</ExtraParams>
+  <PostArgs/>
+  <Network>bridge</Network>
+  <Config Name="Host Path for /config" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Host Path for /mountpoint" Target="/mountpoint" Default="" Mode="rw,shared" Description="Container Path: /mountpoint" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="UMASK" Target="UMASK" Default="002" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="MOUNTPOINT" Target="MOUNTPOINT" Default="/mountpoint" Mode="" Description="Container Variable: MOUNTPOINT" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="REMOTE" Target="REMOTE" Default="remote:path/to/files" Mode="" Description="Container Variable: REMOTE" Type="Variable" Display="always" Required="true" Mask="false"/>
+</Container>

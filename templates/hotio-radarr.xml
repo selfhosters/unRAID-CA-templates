@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>radarr</Name>
+  <Repository>hotio/radarr</Repository>
+  <Registry>https://hub.docker.com/r/hotio/radarr</Registry>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://discord.gg/3SnkuKp</Support>
+  <Project>https://github.com/hotio/docker-radarr</Project>
+  <Category>Downloaders: MediaApp:Video</Category>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/hotio-radarr.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/hotio-radarr.png</Icon>
+  <Overview>Radarr is an independent fork of Sonarr reworked for automatically downloading movies via Usenet and BitTorrent.</Overview>
+  <Description>Radarr is an independent fork of Sonarr reworked for automatically downloading movies via Usenet and BitTorrent.</Description>
+  <MyIP/>
+  <DonateText/>
+  <DonateLink/>
+  <DonateImg/>
+  <WebUI>http://[IP]:[PORT:7878]</WebUI>
+  <ExtraParams/>
+  <PostArgs/>
+  <Network>bridge</Network>
+  <Config Name="Host Port for 7878" Target="7878" Default="7878" Mode="tcp" Description="Container Port: 7878" Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="Host Path for /config" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="UMASK" Target="UMASK" Default="002" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="always" Required="false" Mask="false"/>
+</Container>

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>apcupsd2influxdb</Name>
+  <Repository>hotio/apcupsd2influxdb</Repository>
+  <Registry>https://hub.docker.com/r/hotio/apcupsd2influxdb</Registry>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://discord.gg/3SnkuKp</Support>
+  <Project>https://github.com/hotio/docker-apcupsd2influxdb</Project>
+  <Category>Tools: Other:</Category>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/hotio-apcupsd2influxdb.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/hotio-apcupsd2influxdb.png</Icon>
+  <Overview>A docker image that reads apcupsd status and pushes it to InfluxDB.</Overview>
+  <Description>A docker image that reads apcupsd status and pushes it to InfluxDB.</Description>
+  <MyIP/>
+  <DonateText/>
+  <DonateLink/>
+  <DonateImg/>
+  <WebUI/>
+  <ExtraParams>--hostname unraid</ExtraParams>
+  <PostArgs/>
+  <Network>bridge</Network>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="UMASK" Target="UMASK" Default="002" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="INTERVAL" Target="INTERVAL" Default="10" Mode="" Description="Container Variable: INTERVAL" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="LOG_LEVEL" Target="LOG_LEVEL" Default="2" Mode="" Description="Container Variable: LOG_LEVEL" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="APCUPSD_HOST" Target="APCUPSD_HOST" Default="apcupsdhost:3551" Mode="" Description="Container Variable: APCUPSD_HOST" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="NOMPOWER" Target="NOMPOWER" Default="1200" Mode="" Description="Container Variable: NOMPOWER" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="NOMAPNT" Target="NOMAPNT" Default="1440" Mode="" Description="Container Variable: NOMAPNT" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="INFLUXDB_HOST" Target="INFLUXDB_HOST" Default="http://influxdb:8086" Mode="" Description="Container Variable: INFLUXDB_HOST" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="INFLUXDB_DB" Target="INFLUXDB_DB" Default="apcupsd2influxdb" Mode="" Description="Container Variable: INFLUXDB_DB" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="INFLUXDB_USER" Target="INFLUXDB_USER" Default="" Mode="" Description="Container Variable: INFLUXDB_USER" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="INFLUXDB_PASS" Target="INFLUXDB_PASS" Default="" Mode="" Description="Container Variable: INFLUXDB_PASS" Type="Variable" Display="always" Required="false" Mask="true"/>
+</Container>
