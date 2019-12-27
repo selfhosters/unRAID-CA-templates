@@ -7,88 +7,28 @@
   <Privileged>false</Privileged>
   <Support>https://discord.gg/3SnkuKp</Support>
   <Project>https://github.com/hotio/docker-plex</Project>
-  <Overview>Plex Media Server docker image with support for Plex Claim, Plex Pass, the ability to disable Plex Relay and fast updates.</Overview>
   <Category>MediaServer:Video MediaServer:Music MediaServer:Photos</Category>
-  <WebUI>http://[IP]:[PORT:32400]/web</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/hotio-plex.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/hotio-plex.png</Icon>
+  <Overview>Plex Media Server docker image with support for Plex Claim, Plex Pass, the ability to disable Plex Relay and fast updates.</Overview>
+  <Description>Plex Media Server docker image with support for Plex Claim, Plex Pass, the ability to disable Plex Relay and fast updates.</Description>
+  <MyIP/>
   <DonateText/>
   <DonateLink/>
-  <Description>Plex Media Server docker image with support for Plex Claim, Plex Pass, the ability to disable Plex Relay and fast updates.</Description>
-  <Networking>
-    <Mode>bridge</Mode>
-    <Publish>
-      <Port>
-        <HostPort>32400</HostPort>
-        <ContainerPort>32400</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-    </Publish>
-  </Networking>
-  <Data>
-    <Volume>
-      <HostDir>/mnt/user/appdata/plex</HostDir>
-      <ContainerDir>/config</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-    <Volume>
-      <HostDir/>
-      <ContainerDir>/transcode</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-  </Data>
-  <Environment>
-    <Variable>
-      <Value/>
-      <Name>PLEX_CLAIM</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>ADVERTISE_IP</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>ALLOWED_NETWORKS</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value>no</Value>
-      <Name>PLEX_PASS</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value>no</Value>
-      <Name>DISABLE_RELAY</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value>99</Value>
-      <Name>PUID</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value>100</Value>
-      <Name>PGID</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value>002</Value>
-      <Name>UMASK</Name>
-      <Mode/>
-    </Variable>
-  </Environment>
-  <Labels/>
-  <Config Name="Host Port for: 32400" Target="32400" Default="32400" Mode="tcp" Description="Container Port: 32400" Type="Port" Display="always" Required="true" Mask="false">32400</Config>
-  <Config Name="Host Path for: /config" Target="/config" Default="/mnt/user/appdata/plex" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/plex</Config>
-  <Config Name="Host Path for: /transcode" Target="/transcode" Default="" Mode="rw" Description="Container Path: /transcode" Type="Path" Display="always" Required="false" Mask="false"/>
-  <Config Name="PLEX_CLAIM" Target="PLEX_CLAIM" Default="" Mode="" Description="Container Variable: PLEX_CLAIM" Type="Variable" Display="always" Required="false" Mask="true"/>
+  <DonateImg/>
+  <WebUI>http://[IP]:[PORT:32400]/web</WebUI>
+  <ExtraParams/>
+  <PostArgs/>
+  <Network>bridge</Network>
+  <Config Name="Host Port for 32400" Target="32400" Default="32400" Mode="tcp" Description="Container Port: 32400" Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="Host Path for /config" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Host Path for /transcode" Target="/transcode" Default="" Mode="rw" Description="Container Path: /transcode" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="UMASK" Target="UMASK" Default="002" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="PLEX_CLAIM" Target="PLEX_CLAIM" Default="" Mode="" Description="Container Variable: PLEX_CLAIM" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="ADVERTISE_IP" Target="ADVERTISE_IP" Default="" Mode="" Description="Container Variable: ADVERTISE_IP" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="ALLOWED_NETWORKS" Target="ALLOWED_NETWORKS" Default="" Mode="" Description="Container Variable: ALLOWED_NETWORKS" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="PLEX_PASS" Target="PLEX_PASS" Default="no" Mode="" Description="Container Variable: PLEX_PASS" Type="Variable" Display="always" Required="false" Mask="false">no</Config>
-  <Config Name="DISABLE_RELAY" Target="DISABLE_RELAY" Default="no" Mode="" Description="Container Variable: DISABLE_RELAY" Type="Variable" Display="always" Required="false" Mask="false">no</Config>
-  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
-  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
-  <Config Name="UMASK" Target="UMASK" Default="002" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="advanced" Required="false" Mask="false">002</Config>
+  <Config Name="PLEX_PASS" Target="PLEX_PASS" Default="no" Mode="" Description="Container Variable: PLEX_PASS" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="DISABLE_RELAY" Target="DISABLE_RELAY" Default="no" Mode="" Description="Container Variable: DISABLE_RELAY" Type="Variable" Display="always" Required="false" Mask="false"/>
 </Container>

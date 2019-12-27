@@ -12,103 +12,20 @@
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/hotio-cloudflare-ddns.png</Icon>
   <Overview>Cloudflare DDNS updates for both ipv4 and ipv6 + InfluxDB/Grafana support. To change the hostname sent to the influx database, edit the Extra Parameters.</Overview>
   <Description>Cloudflare DDNS updates for both ipv4 and ipv6 + InfluxDB/Grafana support. To change the hostname sent to the influx database, edit the Extra Parameters.</Description>
+  <MyIP/>
   <DonateText/>
   <DonateLink/>
+  <DonateImg/>
   <WebUI/>
-  <ExtraParams>--hostname UnRaid</ExtraParams>
+  <ExtraParams>--hostname unraid</ExtraParams>
+  <PostArgs/>
   <Network>bridge</Network>
-  <Networking>
-    <Mode>bridge</Mode>
-    <Publish/>
-  </Networking>
-  <Data/>
-  <Environment>
-    <Variable>
-      <Name>PUID</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Name>PGID</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>UMASK</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>INTERVAL</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>DETECTION_MODE</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>LOG_LEVEL</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>CF_USER</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>CF_APIKEY</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>CF_ZONES</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>CF_HOSTS</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>CF_RECORDTYPES</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>INFLUXDB_ENABLED</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>INFLUXDB_HOST</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>INFLUXDB_DB</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>INFLUXDB_USER</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>INFLUXDB_PASS</Name>
-      <Mode/>
-    </Variable>
-  </Environment>
-  <Labels/>
-  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="advanced" Required="false" Mask="false"/>
-  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="advanced" Required="false" Mask="false"/>
-  <Config Name="UMASK" Target="UMASK" Default="002" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="UMASK" Target="UMASK" Default="002" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="INTERVAL" Target="INTERVAL" Default="300" Mode="" Description="Container Variable: INTERVAL" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="DETECTION_MODE" Target="DETECTION_MODE" Default="dig-google.com" Mode="" Description="Container Variable: DETECTION_MODE" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="LOG_LEVEL" Target="LOG_LEVEL" Default="2" Mode="" Description="Container Variable: LOG_LEVEL" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="LOG_LEVEL" Target="LOG_LEVEL" Default="2" Mode="" Description="Container Variable: LOG_LEVEL" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="CF_USER" Target="CF_USER" Default="your.cf.email@example.com" Mode="" Description="Container Variable: CF_USER" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="CF_APIKEY" Target="CF_APIKEY" Default="" Mode="" Description="Container Variable: CF_APIKEY" Type="Variable" Display="always" Required="false" Mask="true"/>
   <Config Name="CF_ZONES" Target="CF_ZONES" Default="example.com;foobar.com;foobar.com" Mode="" Description="Container Variable: CF_ZONES" Type="Variable" Display="always" Required="false" Mask="false"/>
