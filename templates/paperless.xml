@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>paperless</Name>
-  <Repository>danielquinn/paperless</Repository>
-  <Registry>https://hub.docker.com/r/danielquinn/paperless/</Registry>
+  <Repository>thepaperlessproject/paperless</Repository>
+  <Registry>https://hub.docker.com/r/thepaperlessproject/paperless/</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
   <Support>https://gitter.im/danielquinn/paperless</Support>
