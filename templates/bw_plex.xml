@@ -48,6 +48,6 @@
   <Labels/>
   <Config Name="url" Target="http://plex:32400" Default="http://plex:32400" Mode="" Description="Container Variable: url" Type="Variable" Display="always" Required="false" Mask="false">http://plex:32400</Config>
   <Config Name="token" Target="YOUR_TOKEN" Default="YOUR_TOKEN" Mode="" Description="Container Variable: token" Type="Variable" Display="always" Required="false" Mask="false">YOUR_TOKEN</Config>
-  <Config Name="Container path /mnt/user/Media/" Target="/mnt/user/Media/" Default="/mnt/user/Media/" Mode="rw" Description="Container Path: /mnt/user/Media/" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/Media/</Config>
+  <Config Name="Media path" Target="/mnt/user/Media/" Default="/mnt/user/Media/" Mode="rw" Description="Same mapping as plex uses, for faster processing of files." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/Media/</Config>
   <Config Name="Appdata" Target="/config" Default="/mnt/user/appdata/bw_plex" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/bw_plex</Config>
 </Container>
