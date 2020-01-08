@@ -73,8 +73,9 @@ It's your hosting and your rules, so say goodbye to closures and restrictions. T
 		</Variable>
 	</Environment>
   <Labels/>
+  <Config Name="CHEVERETO_PORT" Target="80" Default="8080" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false"></Config>
   <Config Name="CHEVERETO_DB_HOST" Target="CHEVERETO_DB_HOST" Default="" Mode="" Description="Container Variable: Database Host" Type="Variable" Display="always" Required="true" Mask="false"></Config>
-	<Config Name="CHEVERETO_DB_USERNAME" Target="CHEVERETO_DB_USERNAME" Default="" Mode="" Description="Container Variable: Database User" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="CHEVERETO_DB_USERNAME" Target="CHEVERETO_DB_USERNAME" Default="" Mode="" Description="Container Variable: Database User" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="CHEVERETO_DB_PASSWORD" Target="CHEVERETO_DB_PASSWORD" Default="" Mode="" Description="Container Variable: Database Password" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="CHEVERETO_DB_NAME" Target="CHEVERETO_DB_NAME" Default="" Mode="" Description="Container Variable: Database Name" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="CHEVERETO_DB_PREFIX" Target="CHEVERETO_DB_PREFIX" Default="chv_" Mode="" Description="Container Variable: Database Prefix" Type="Variable" Display="always" Required="false" Mask="false">chv_</Config>
