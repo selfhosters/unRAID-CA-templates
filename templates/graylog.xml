@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>graylog</Name>
+  <Repository>graylog/graylog:3.1</Repository>
+  <Registry>https://hub.docker.com/r/graylog/graylog/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/graylog/graylog/</Support>
+  <Project>https://www.graylog.org/</Project>
+  <Overview>Official Graylog Docker image.&#xD;
+[br][br]&#xD;
+For more variables see the Graylog configuration file: https://github.com/Graylog2/graylog2-server/blob/3.1/misc/graylog.conf and http://docs.graylog.org/en/stable/pages/configuration/server.conf.html&#xD;
+[br][br]&#xD;
+The default root user is named 'admin'&#xD;
+[br][br]&#xD;
+[b]To create the SHA256 string run 'echo -n YOUR16CHARACTERPASSWORD | sha256sum'  &#xD;
+</Overview>
+  <Category>Tools:</Category>
+  <WebUI>http://[IP]:[PORT:9000]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/graylog.xml</TemplateURL>	
+	<Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/graylog.png</Icon>
+  <Description>Official Graylog Docker image.&#xD;
+[br][br]&#xD;
+For more variables see the Graylog configuration file: https://github.com/Graylog2/graylog2-server/blob/3.1/misc/graylog.conf and http://docs.graylog.org/en/stable/pages/configuration/server.conf.html&#xD;
+[br][br]&#xD;
+The default root user is named 'admin'&#xD;
+[br][br]&#xD;
+[b]To create the SHA256 string run 'echo -n YOUR16CHARACTERPASSWORD | sha256sum'  &#xD;
+</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort/>
+        <ContainerPort>9000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort/>
+        <ContainerPort>1514</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort/>
+        <ContainerPort>1514</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort/>
+        <ContainerPort>12201</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort/>
+        <ContainerPort>12201</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir/>
+      <ContainerDir>/usr/share/graylog/data/journal</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value/>
+      <Name>GRAYLOG_PASSWORD_SECRET</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>GRAYLOG_ROOT_PASSWORD_SHA2</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>GRAYLOG_HTTP_EXTERNAL_URI</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>GRAYLOG_MONGODB_URI</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>GRAYLOG_ELASTICSEARCH_HOSTS</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="GRAYLOG_PASSWORD_SECRET" Target="GRAYLOG_PASSWORD_SECRET" Default="" Mode="" Description="CHANGE ME (must be at least 16 characters)!" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="GRAYLOG_ROOT_PASSWORD_SHA2" Target="GRAYLOG_ROOT_PASSWORD_SHA2" Default="" Mode="" Description="Container Variable: GRAYLOG_ROOT_PASSWORD_SHA2" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="GRAYLOG_HTTP_EXTERNAL_URI" Target="GRAYLOG_HTTP_EXTERNAL_URI" Default="http://unraidIP:9000/" Mode="" Description="Container Variable: GRAYLOG_HTTP_EXTERNAL_URI" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Graylog web interface and REST API" Target="9000" Default="9000" Mode="tcp" Description="Container Port: 9000" Type="Port" Display="always" Required="false" Mask="false"/>
+  <Config Name="Syslog TCP" Target="1514" Default="1514" Mode="tcp" Description="Container Port: 1514" Type="Port" Display="always" Required="false" Mask="false"/>
+  <Config Name="Syslog UDP" Target="1514" Default="1514" Mode="udp" Description="Container Port: 1514" Type="Port" Display="always" Required="false" Mask="false"/>
+  <Config Name="GELF TCP" Target="12201" Default="12201" Mode="tcp" Description="Container Port: 12201" Type="Port" Display="always" Required="false" Mask="false"/>
+  <Config Name="GELF UDP" Target="12201" Default="12201" Mode="udp" Description="Container Port: 12201" Type="Port" Display="always" Required="false" Mask="false"/>
+  <Config Name="MongoDB connection string" Target="GRAYLOG_MONGODB_URI" Default="mongodb://unraidIP:27017/graylog" Mode="" Description="Container Variable: GRAYLOG_MONGODB_URI" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="List of Elasticsearch hosts Graylog should connect to" Target="GRAYLOG_ELASTICSEARCH_HOSTS" Default="http://unraidIP:9200" Mode="" Description="Need to be specified as a comma-separated list of valid URIs for the http ports of your elasticsearch nodes" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Appdata" Target="/usr/share/graylog/data/journal" Default="/mnt/user/appdata/greylog" Mode="rw" Description="Container Path: /usr/share/graylog/data/journal" Type="Path" Display="always" Required="false" Mask="false"/>
+</Container>

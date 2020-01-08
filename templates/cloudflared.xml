@@ -10,10 +10,10 @@
   <Overview>Cloudflared proxy-dns multi-platform Docker image based on Alpine Linux</Overview>
   <Category>Tools:</Category>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/cloudflared.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/cloudflared.jpg</Icon>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/cloudflared.png</Icon>
   <DonateText>All kinds of contributions are welcome &#x1F64C;! The most basic way to show your support is to star &#x1F31F; the project, or to raise issues &#x1F4AC; But we're not gonna lie to each other, I'd rather you buy me a beer or two &#x1F37B;!</DonateText>
   <DonateLink>https://www.patreon.com/crazymax</DonateLink>
-  <Description>Cloudflared proxy-dns multi-platform Docker image based on Alpine Linux   Converted By Community Applications   Always verify this template (and values) against the dockerhub support page for the container</Description>
+  <Description>Cloudflared proxy-dns multi-platform Docker image based on Alpine Linux</Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
