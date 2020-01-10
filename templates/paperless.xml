@@ -5,7 +5,7 @@
   <Registry>https://hub.docker.com/r/thepaperlessproject/paperless/</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
-  <Support>https://gitter.im/danielquinn/paperless</Support>
+  <Support>https://forums.unraid.net/topic/87196-support-paperless-docker/</Support>
   <Project>https://github.com/the-paperless-project/paperless</Project>
   <Overview>Index and archive all of your scanned paper documents&#xD;
 [br][br]&#xD;
