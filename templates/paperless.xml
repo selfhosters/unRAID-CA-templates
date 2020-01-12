@@ -58,11 +58,6 @@ Additional Template Variables: https://github.com/the-paperless-project/paperles
   <Environment>
     <Variable>
       <Value/>
-      <Name>PAPERLESS_OCR_LANGUAGES</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
       <Name>PAPERLESS_OCR_LANGUAGE</Name>
       <Mode/>
     </Variable>
@@ -93,7 +88,6 @@ Additional Template Variables: https://github.com/the-paperless-project/paperles
   <Config Name="Media" Target="/usr/src/paperless/media" Default="" Mode="rw" Description="Container Path: /usr/src/paperless/media . &#13;&#10;Once consumed, files will be stored here." Type="Path" Display="always" Required="true" Mask="false"/>
   <Config Name="Consumption" Target="/consume" Default="" Mode="rw" Description="Container Path: /consume . &#13;&#10;Files placed here will be consumed by paperless." Type="Path" Display="always" Required="true" Mask="false"/>
   <Config Name="Export" Target="/export" Default="" Mode="rw" Description="Container Path: /export . &#13;&#10;Location for files used by the exporter utility.&#13;&#10;See https://paperless.readthedocs.io/en/latest/utilities.html#the-exporter" Type="Path" Display="always" Required="false" Mask="false"/>
-  <Config Name="PAPERLESS_OCR_LANGUAGES" Target="PAPERLESS_OCR_LANGUAGES" Default="eng" Mode="" Description="Container Variable: PAPERLESS_OCR_LANGUAGES . If you want the OCR to recognize other languages in addition to the default English, set this parameter to a space separated list of three-letter language-codes after ISO 639-2/T" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="PAPERLESS_OCR_LANGUAGE" Target="PAPERLESS_OCR_LANGUAGE" Default="eng" Mode="" Description="Container Variable: PAPERLESS_OCR_LANGUAGE . Override the language that tesseract will attempt to use when parsing documents. Use a 3-letter language code consistent with ISO 639: https://www.loc.gov/standards/iso639-2/php/code_list.php" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="PAPERLESS_FORGIVING_OCR" Target="PAPERLESS_FORGIVING_OCR" Default="false" Mode="" Description="Container Variable: PAPERLESS_FORGIVING_OCR . &#13;&#10;When true, Paperless will consume documents even if the language detection fails." Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="PAPERLESS_INLINE_DOC" Target="PAPERLESS_INLINE_DOC" Default="false" Mode="" Description="Container Variable: PAPERLESS_INLINE_DOC.&#13;&#10;When true, PDF files will be viewed in the browser. When false (default), PDF files will be downloaded." Type="Variable" Display="always" Required="false" Mask="false"/>
