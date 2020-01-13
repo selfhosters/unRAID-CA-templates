@@ -7,21 +7,18 @@
   <Privileged>false</Privileged>
   <Support>https://hub.docker.com/r/requarks/wiki/</Support>
   <Project>https://github.com/Requarks/wiki</Project>
-  <Overview>A modern, lightweight and powerful wiki app built on NodeJS, Git and Markdown&#xD;
-</Overview>
+  <Overview>A modern, lightweight and powerful wiki app built on NodeJS, Git and Markdown&#xD;</Overview>
   <Category>Cloud: Productivity: Status:Beta</Category>
   <WebUI>http://[IP]:[PORT:3000]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/wikijs.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/wikijs.png</Icon>
   <DonateText>Wiki.js is an open source project that has been made possible due to the generous contributions by community backers. If you are interested in supporting this project, please consider becoming a patron or donating to our OpenCollective.</DonateText>
   <DonateLink>https://opencollective.com/wikijs</DonateLink>
-  <Description>A modern, lightweight and powerful wiki app built on NodeJS, Git and Markdown&#xD;
-</Description>
+  <Description>A modern, lightweight and powerful wiki app built on NodeJS, Git and Markdown&#xD;</Description>
   <Networking>
-    <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort></HostPort>
+        <HostPort/>
         <ContainerPort>3000</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
@@ -29,7 +26,7 @@
   </Networking>
   <Data>
     <Volume>
-      <HostDir></HostDir>
+      <HostDir/>
       <ContainerDir>/logs</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -41,12 +38,12 @@
       <Mode/>
     </Variable>
     <Variable>
-      <Value></Value>
+      <Value/>
       <Name>DB_HOST</Name>
       <Mode/>
     </Variable>
     <Variable>
-      <Value></Value>
+      <Value/>
       <Name>DB_PORT</Name>
       <Mode/>
     </Variable>
@@ -76,15 +73,14 @@
       <Mode/>
     </Variable>
   </Environment>
-  <Labels/>
-  <Config Name="WebUI" Target="3000" Default="3000" Mode="tcp" Description="Container Port: 3000" Type="Port" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Logs" Target="/logs" Default="" Mode="rw" Description="Container Path: /logs" Type="Path" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Database Type" Target="DB_TYPE" Default="mariadb" Mode="" Description="DB_TYPE : Type of database (mysql, postgres, mariadb, mssql or sqlite)" Type="Variable" Display="always" Required="false" Mask="false">mariadb</Config>
-  <Config Name="Database Host" Target="DB_HOST" Default="192.168.1.2" Mode="" Description="DB_HOST : Hostname or IP of the database" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Database Port" Target="DB_PORT" Default="3306" Mode="" Description="DB_PORT : Port of the database" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Database User" Target="DB_USER" Default="wikijs" Mode="" Description="DB_USER : Username to connect to the database" Type="Variable" Display="always" Required="false" Mask="false">wikijs</Config>
-  <Config Name="Database Password" Target="DB_PASS" Default="secretpassword" Mode="" Description="DB_PASS : Password to connect to the database" Type="Variable" Display="always" Required="false" Mask="false">wikijs</Config>
-  <Config Name="Database Name" Target="DB_NAME" Default="wikijs" Mode="" Description="DB_NAME : Database name" Type="Variable" Display="always" Required="false" Mask="false">wikijs</Config>
-  <Config Name="Optional: Database SSL" Target="DB_SSL" Default="false" Mode="" Description="DB_SSL : Set to either 1 or true to enable. (optional, off if omitted)" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
-  <Config Name="DB_FILEPATH" Target="DB_FILEPATH" Default="" Mode="" Description="For SQLite only: DB_FILEPATH : Path to the SQLite file" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="WebUI" Target="3000" Default="3000" Mode="tcp" Description="Container Port: 3000" Type="Port" Display="always" Required="false" Mask="false"/>
+  <Config Name="Logs" Target="/logs" Default="/mnt/user/appdata/wikijs/logs" Mode="rw" Description="Container Path: /logs" Type="Path" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Database Type" Target="DB_TYPE" Default="mariadb" Mode="" Description="DB_TYPE : Type of database (mysql, postgres, mariadb, mssql or sqlite)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Database Host" Target="DB_HOST" Default="192.168.1.2" Mode="" Description="DB_HOST : Hostname or IP of the database" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Database Port" Target="DB_PORT" Default="3306" Mode="" Description="DB_PORT : Port of the database" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Database User" Target="DB_USER" Default="wikijs" Mode="" Description="DB_USER : Username to connect to the database" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Database Password" Target="DB_PASS" Default="secretpassword" Mode="" Description="DB_PASS : Password to connect to the database" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Database Name" Target="DB_NAME" Default="wikijs" Mode="" Description="DB_NAME : Database name" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Optional: Database SSL" Target="DB_SSL" Default="false" Mode="" Description="DB_SSL : Set to either 1 or true to enable. (optional, off if omitted)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="DB_FILEPATH" Target="DB_FILEPATH" Default="/mnt/user/appdata/wikijs/db" Mode="" Description="For SQLite only: DB_FILEPATH : Path to the SQLite file" Type="Variable" Display="advanced" Required="false" Mask="false"/>
 </Container>

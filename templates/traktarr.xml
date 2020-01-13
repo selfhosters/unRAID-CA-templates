@@ -10,83 +10,78 @@
   <Overview>Script to add new series and movies to Sonarr/Radarr based on Trakt lists. [br][br]      &#xD;
 For more info on env variables and setup of your config file, check out: https://hub.docker.com/r/eafxx/traktarr [br]</Overview>
   <Category>Tools:</Category>
-  <WebUI></WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/traktarr.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/traktarr.png</Icon>
   <Description>Script to add new series and movies to Sonarr/Radarr based on Trakt lists. [br][br]      &#xD;
 For more info on env variables and setup of your config file, check out: https://hub.docker.com/r/eafxx/traktarr [br]</Description>
-    <Networking>
-    <Mode>bridge</Mode>
-  </Networking>
   <Data>
     <Volume>
-      <HostDir></HostDir>
+      <HostDir/>
       <ContainerDir>/config</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
   <Environment>
     <Variable>
-      <Value>99</Value>
+      <Value/>
       <Name>PUID</Name>
       <Mode/>
     </Variable>
     <Variable>
-      <Value>100</Value>
+      <Value/>
       <Name>PGID</Name>
       <Mode/>
     </Variable>
     <Variable>
-      <Value>2.5</Value>
+      <Value/>
       <Name>DELAY</Name>
       <Mode/>
     </Variable>
     <Variable>
-      <Value>rating</Value>
+      <Value/>
       <Name>SORT</Name>
       <Mode/>
     </Variable>
     <Variable>
-      <Value>yes</Value>
+      <Value/>
       <Name>NOSEARCH</Name>
       <Mode/>
     </Variable>
     <Variable>
-      <Value>yes</Value>
+      <Value/>
       <Name>NOTIFICATIONS</Name>
       <Mode/>
     </Variable>
     <Variable>
-      <Value>yes</Value>
+      <Value/>
       <Name>BLACKLIST</Name>
       <Mode/>
     </Variable>
     <Variable>
-      <Value>no</Value>
+      <Value/>
       <Name>RUNNOW</Name>
       <Mode/>
     </Variable>
     <Variable>
-      <Value>no</Value>
+      <Value/>
       <Name>SKIPUPDATE</Name>
       <Mode/>
     </Variable>
     <Variable>
-      <Value>master</Value>
+      <Value/>
       <Name>APP_BRANCH</Name>
       <Mode/>
     </Variable>
   </Environment>
-  <Labels/>
-  <Config Name="Config" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Key 1" Target="PUID" Default="" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
-  <Config Name="Key 2" Target="PGID" Default="" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
-  <Config Name="Delay add  (optional)" Target="DELAY" Default="" Mode="" Description="Container Variable: DELAY  (FLOAT) in secs - default 2.5" Type="Variable" Display="always" Required="false" Mask="false">2.5</Config>
-  <Config Name="Sort" Target="SORT" Default="" Mode="" Description="Container Variable: SORT" Type="Variable" Display="always" Required="false" Mask="false">rating</Config>
-  <Config Name="Disable Search" Target="NOSEARCH" Default="" Mode="" Description="Container Variable: NOSEARCH, Disable search when adding to Sonarr/Radarr" Type="Variable" Display="always" Required="false" Mask="false">yes</Config>
-  <Config Name="Enable Notifications" Target="NOTIFICATIONS" Default="" Mode="" Description="Container Path: NOTIFICATIONS" Type="Variable" Display="always" Required="false" Mask="false">yes</Config>
-  <Config Name="Enable Blacklist" Target="BLACKLIST" Default="" Mode="" Description="Container Variable: BLACKLIST" Type="Variable" Display="always" Required="false" Mask="false">yes</Config>
-  <Config Name="Run now" Target="RUNNOW" Default="" Mode="" Description="Container Variable: RUNNOW" Type="Variable" Display="always" Required="false" Mask="false">no</Config>
-  <Config Name="Disable Traktarr Update on Restart" Target="SKIPUPDATE" Default="" Mode="" Description="Container Variable: SKIPUPDATE" Type="Variable" Display="always" Required="false" Mask="false">no</Config>
-  <Config Name="Traktarr GitHub Branch" Target="APP_BRANCH" Default="" Mode="" Description="Container Variable: APP_BRANCH" Type="Variable" Display="always" Required="false" Mask="false">master</Config>
+  <Config Name="Config" Target="/config" Default="/mnt/user/appdata/traktarr" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Delay add  (optional)" Target="DELAY" Default="2.5" Mode="" Description="Container Variable: DELAY  (FLOAT) in secs - default 2.5" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Sort" Target="SORT" Default="rating" Mode="" Description="Container Variable: SORT" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Disable Search" Target="NOSEARCH" Default="yes" Mode="" Description="Container Variable: NOSEARCH, Disable search when adding to Sonarr/Radarr" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Enable Notifications" Target="NOTIFICATIONS" Default="yes" Mode="" Description="Container Path: NOTIFICATIONS" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Enable Blacklist" Target="BLACKLIST" Default="yes" Mode="" Description="Container Variable: BLACKLIST" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Run now" Target="RUNNOW" Default="no" Mode="" Description="Container Variable: RUNNOW" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Disable Traktarr Update on Restart" Target="SKIPUPDATE" Default="no" Mode="" Description="Container Variable: SKIPUPDATE" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Traktarr GitHub Branch" Target="APP_BRANCH" Default="master" Mode="" Description="Container Variable: APP_BRANCH" Type="Variable" Display="always" Required="false" Mask="false"/>
 </Container>

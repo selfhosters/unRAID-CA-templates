@@ -30,7 +30,4 @@ This is a containerized build of the fantastic program by philippe44 called AirC
 [b]https://github.com/philippe44/AirConnect[/b]&#xD;
 [br][br]&#xD;
 [b][span style='color: #E80000;']For the most part this container needs nothing more than to launch it using Host networking.[/span][/b]</Description>
-  <Networking>
-    <Mode>host</Mode>
-  </Networking>
 </Container>

@@ -26,10 +26,8 @@
   <Description>Web GUI for Duplicacy. Duplicacy backs up your files to many cloud storages with client-side encryption and the highest level of deduplication&#xD;
     http://duplicacy.com</Description>
   <Networking>
-    <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort>3875</HostPort>
         <ContainerPort>3875</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
@@ -37,22 +35,18 @@
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/Duplicacy/config</HostDir>
       <ContainerDir>/config</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/user/appdata/Duplicacy/cache</HostDir>
       <ContainerDir>/cache</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir></HostDir>
       <ContainerDir>/backuproot</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/user/appdata/Duplicacy/logs</HostDir>
       <ContainerDir>/logs</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -61,20 +55,17 @@
     <Variable>
       <Value>99</Value>
       <Name>USR_ID</Name>
-      <Mode/>
     </Variable>
     <Variable>
       <Value>100</Value>
       <Name>GRP_ID</Name>
-      <Mode/>
     </Variable>
   </Environment>
-  <Labels/>
-  <Config Name="Port" Target="3875" Default="" Mode="tcp" Description="Container Port: 3875" Type="Port" Display="always" Required="false" Mask="false">3875</Config>
-  <Config Name="Config" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/Duplicacy/config</Config>
-  <Config Name="Cache" Target="/cache" Default="" Mode="rw" Description="Container Path: /cache" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/Duplicacy/cache</Config>
-  <Config Name="User Data" Target="/backuproot" Default="" Mode="rw" Description="Container Path: /backuproot" Type="Path" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Logs" Target="/logs" Default="" Mode="rw" Description="Container Path: /logs" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/Duplicacy/logs</Config>
-  <Config Name="User ID" Target="USR_ID" Default="0" Mode="" Description="Container Variable: USR_ID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
-  <Config Name="Group ID" Target="GRP_ID" Default="0" Mode="" Description="Container Variable: GRP_ID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
+  <Config Name="Port" Target="3875" Default="3875" Mode="tcp" Description="Container Port: 3875" Type="Port" Display="always" Required="false" Mask="false"/>
+  <Config Name="Config" Target="/config" Default="/mnt/user/appdata/Duplicacy/config" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Cache" Target="/cache" Default="/mnt/user/appdata/Duplicacy/cache" Mode="rw" Description="Container Path: /cache" Type="Path" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="User Data" Target="/backuproot" Default="" Mode="rw" Description="Container Path: /backuproot" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="Logs" Target="/logs" Default="/mnt/user/appdata/Duplicacy/logs" Mode="rw" Description="Container Path: /logs" Type="Path" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="User ID" Target="USR_ID" Default="99" Mode="" Description="Container Variable: USR_ID" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Group ID" Target="GRP_ID" Default="100" Mode="" Description="Container Variable: GRP_ID" Type="Variable" Display="advanced" Required="false" Mask="false"/>
 </Container>

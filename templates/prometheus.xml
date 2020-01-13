@@ -8,16 +8,14 @@
   <Support>https://hub.docker.com/r/prom/prometheus/</Support>
   <Project>https://github.com/prometheus/prometheus</Project>
   <Overview>Prometheus is a systems and service monitoring system. It collects metrics from configured targets at given intervals, evaluates rule expressions, displays the results, and can trigger alerts if some condition is observed to be true.</Overview>
-  <Category/>
   <WebUI>http://[IP]:[PORT:9090]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/prometheus.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/prometheus.png</Icon>
   <Description>Prometheus is a systems and service monitoring system. It collects metrics from configured targets at given intervals, evaluates rule expressions, displays the results, and can trigger alerts if some condition is observed to be true.</Description>
   <Networking>
-    <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort></HostPort>
+        <HostPort/>
         <ContainerPort>9090</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
@@ -25,13 +23,19 @@
   </Networking>
   <Data>
     <Volume>
-      <HostDir></HostDir>
+      <HostDir/>
       <ContainerDir>/prometheus-data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir/>
+      <ContainerDir>/etc/prometheus/</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
   <Environment/>
-  <Labels/>
-  <Config Name="Port" Target="9090" Default="9090" Mode="tcp" Description="Container Port: 9090" Type="Port" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Appdata" Target="/prometheus-data" Default="" Mode="rw" Description="Container Path: /prometheus-data" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Port" Target="9090" Default="9090" Mode="tcp" Description="Container Port: 9090" Type="Port" Display="always" Required="false" Mask="false"/>
+  <Config Name="Appdata" Target="/prometheus-data" Default="/mnt/user/appdata/prometheus/data" Mode="rw" Description="Container Path: /prometheus-data" Type="Path" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Config" Target="/etc/prometheus/" Default="/mnt/user/appdata/prometheus/etc" Mode="rw" Description="Container Path: /etc/prometheus/" Type="Path" Display="advanced" Required="false" Mask="false"/>
+
 </Container>

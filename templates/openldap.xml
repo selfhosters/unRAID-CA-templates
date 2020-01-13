@@ -9,22 +9,18 @@
   <Project>https://hub.docker.com/r/osixia/openldap/</Project>
   <Overview> A docker image to run OpenLDAP, The container default log level is info. Available levels are: none, error, warning, info, debug and trace. To use this container with phpldapadmin, create a custom network that both containers are on and then link them using --link openldap:PHPLDAPADMIN_LDAP_HOSTS in the extra parameters of the phpldapadmin docker container (which should be equal to HOSTNAME in this container). Any other docker that wants to use LDAP credentials will need the same extra parameter including Let's Encrypt if you are using linuxserver.io's ldap-auth container.</Overview>
   <Category>Tools: Utilities</Category>
-  <WebUI/>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/openldap.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/openldap.png</Icon>
   <ExtraParams/>
   <PostArgs>--loglevel debug --copy-service</PostArgs>
   <Description> A docker image to run OpenLDAP, The container default log level is info. Available levels are: none, error, warning, info, debug and trace. To use this container with phpldapadmin, create a custom network that both containers are on and then link them using --link openldap:PHPLDAPADMIN_LDAP_HOSTS in the extra parameters of the phpldapadmin docker container (which should be equal to HOSTNAME in this container). Any other docker that wants to use LDAP credentials will need the same extra parameter including Let's Encrypt if you are using linuxserver.io's ldap-auth container.</Description>
   <Networking>
-    <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort>389</HostPort>
         <ContainerPort>389</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
       <Port>
-        <HostPort>636</HostPort>
         <ContainerPort>636</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
@@ -32,159 +28,111 @@
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/openldap/data</HostDir>
       <ContainerDir>/var/lib/ldap/</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/user/appdata/openldap/config</HostDir>
       <ContainerDir>/etc/ldap/slapd.d/</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>letsencrypt-keys</HostDir>
-      <ContainerDir>/container/service/slapd/assets/certs/</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/user/appdata/openldap/ldif/</HostDir>
       <ContainerDir>/container/service/slapd/assets/config/bootstrap/ldif/custom</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
   <Environment>
     <Variable>
-      <Value>Example Inc.</Value>
       <Name>LDAP_ORGANISATION</Name>
-      <Mode/>
     </Variable>
     <Variable>
-      <Value>example.org</Value>
       <Name>LDAP_DOMAIN</Name>
-      <Mode/>
     </Variable>
     <Variable>
-      <Value>example.org</Value>
       <Name>HOSTNAME</Name>
-      <Mode/>
     </Variable>
     <Variable>
-      <Value></Value>
       <Name>LDAP_ADMIN_PASSWORD</Name>
-      <Mode/>
     </Variable>
     <Variable>
-      <Value></Value>
       <Name>LDAP_CONFIG_PASSWORD</Name>
-      <Mode/>
     </Variable>
     <Variable>
-      <Value>true</Value>
       <Name>LDAP_TLS</Name>
-      <Mode/>
     </Variable>
     <Variable>
-      <Value>live/example.org/cert.pem</Value>
       <Name>LDAP_TLS_CRT_FILENAME</Name>
-      <Mode/>
     </Variable>
     <Variable>
-      <Value>live/example.org/privkey.pem</Value>
       <Name>LDAP_TLS_KEY_FILENAME</Name>
-      <Mode/>
     </Variable>
     <Variable>
-      <Value>live/example.org/fullchain.pem</Value>
       <Name>LDAP_TLS_CA_CRT_FILENAME</Name>
-      <Mode/>
     </Variable>
     <Variable>
-      <Value/>
       <Name>LDAP_READONLY_USER</Name>
-      <Mode/>
     </Variable>
-	<Variable>
-      <Value/>
+	  <Variable>
       <Name>LDAP_READONLY_USER_USERNAME</Name>
-      <Mode/>
     </Variable>
     <Variable>
-      <Value/>
       <Name>LDAP_READONLY_USER_PASSWORD</Name>
-      <Mode/>
     </Variable>
     <Variable>
-      <Value>false</Value>
       <Name>LDAP_RFC2307BIS_SCHEMA</Name>
-      <Mode/>
     </Variable>
     <Variable>
-      <Value>mdb</Value>
       <Name>LDAP_BACKEND</Name>
-      <Mode/>
     </Variable>
     <Variable>
-      <Value>false</Value>
       <Name>LDAP_TLS_ENFORCE</Name>
-      <Mode/>
     </Variable>
     <Variable>
-      <Value>try</Value>
       <Name>LDAP_TLS_VERIFY_CLIENT</Name>
-      <Mode/>
     </Variable>
     <Variable>
-      <Value>SECURE256:+SECURE128:-VERS-TLS-ALL:+VERS-TLS1.2:-RSA:-DHE-DSS:-CAMELLIA-128-CBC:-CAMELLIA-256-CBC</Value>
       <Name>LDAP_TLS_CIPHER_SUITE</Name>
-      <Mode/>
     </Variable>
     <Variable>
-      <Value>false</Value>
       <Name>KEEP_EXISTING_CONFIG</Name>
-      <Mode/>
     </Variable>
     <Variable>
-      <Value>true</Value>
       <Name>LDAP_REMOVE_CONFIG_AFTER_SETUP</Name>
-      <Mode/>
     </Variable>
     <Variable>
-      <Value>ldap</Value>
       <Name>LDAP_SSL_HELPER_PREFIX</Name>
-      <Mode/>
     </Variable>
     <Variable>
-      <Value/>
       <Name>LDAP_BASE_DN</Name>
-      <Mode/>
     </Variable>
   </Environment>
-  <Labels/>
-  <Config Name="LDAP database files" Target="/var/lib/ldap/" Default="" Mode="rw" Description="LDAP database files" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/openldap/data</Config>
-  <Config Name="LDAP config files" Target="/etc/ldap/slapd.d/" Default="" Mode="rw" Description="LDAP config files" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/openldap/config</Config>
-  <Config Name="LDAP port" Target="389" Default="" Mode="tcp" Description="Container Port: 389" Type="Port" Display="always" Required="true" Mask="false">389</Config>
-  <Config Name="LDAPS port" Target="636" Default="" Mode="tcp" Description="Container Port: 636" Type="Port" Display="always" Required="true" Mask="false">636</Config>
-  <Config Name="LDAP_ORGANISATION" Target="LDAP_ORGANISATION" Default="" Mode="" Description="Organisation name e.g. Example Inc." Type="Variable" Display="always" Required="true" Mask="false">Example Inc.</Config>
-  <Config Name="LDAP_DOMAIN" Target="LDAP_DOMAIN" Default="" Mode="" Description="Ldap domain e.g. example.org" Type="Variable" Display="always" Required="true" Mask="false">example.org</Config>
-  <Config Name="HOSTNAME" Target="HOSTNAME" Default="" Mode="" Description="Set the hostname of the running openldap server. This is the value linked to other containers so they can connect with ldaps://example.org:636. In that example, example.org is the hostname." Type="Variable" Display="always" Required="true" Mask="false">example.org</Config>
-  <Config Name="LDAP_ADMIN_PASSWORD" Target="LDAP_ADMIN_PASSWORD" Default="" Mode="" Description="Ldap Admin password. Defaults to admin" Type="Variable" Display="always" Required="true" Mask="false"/>
-  <Config Name="LDAP_CONFIG_PASSWORD" Target="LDAP_CONFIG_PASSWORD" Default="" Mode="" Description="Ldap Config password. Defaults to config" Type="Variable" Display="always" Required="true" Mask="false"/>
-  <Config Name="LDAP_TLS" Target="LDAP_TLS" Default="true" Mode="" Description="Add openldap TLS capabilities. Can't be removed once set to true. Defaults to true." Type="Variable" Display="always" Required="false" Mask="false">true</Config>
-  <Config Name="LDAP_TLS_CRT_FILENAME" Target="LDAP_TLS_CRT_FILENAME" Default="live/example.org/cert.pem" Mode="" Description="Ldap ssl certificate filename.&#13;&#10;If getting certs from Let's Encrypt, this should be of the form: live/example.org/cert.pem" Type="Variable" Display="always" Required="false" Mask="false">live/example.org/cert.pem</Config>
-  <Config Name="LDAP_TLS_KEY_FILENAME" Target="LDAP_TLS_KEY_FILENAME" Default="live/example.org/privkey.pem" Mode="" Description="Ldap ssl certificate private key filename. If getting certs from Let's Encrypt, this should be of the form: live/example.org/privkey.pem" Type="Variable" Display="always" Required="false" Mask="false">live/example.org/privkey.pem</Config>
-  <Config Name="LDAP_TLS_CA_CRT_FILENAME" Target="LDAP_TLS_CA_CRT_FILENAME" Default="ca.crt" Mode="" Description="Ldap ssl CA certificate filename.  If getting certs from Let's Encrypt, this should be of the form: live/example.org/fullchain.pem" Type="Variable" Display="always" Required="false" Mask="false">live/example.org/fullchain.pem</Config>
-  <Config Name="LDAP SSL Certificate Path" Target="/container/service/slapd/assets/certs/" Default="" Mode="rw" Description="Shared volume with Let's Encrypt certs. Create a docker volume -&amp;gt; docker create volume letsencrypt-keys, then link it in your linuxserver.io/letsencrypt docker container with container path: /config/etc/letsencrypt and host path: letsencrypt-keys" Type="Path" Display="always" Required="false" Mask="false">letsencrypt-keys</Config>
-  <Config Name="LDIF Custom Configs Path" Target="/container/service/slapd/assets/config/bootstrap/ldif/custom" Default="" Mode="rw" Description="Place custom LDIF configs here for apps that require them (such as apache-guacamole)." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/openldap/ldif/</Config>
-  <Config Name="LDAP_READONLY_USER" Target="LDAP_READONLY_USER" Default="" Mode="" Description="Add a read only user. Defaults to false" Type="Variable" Display="advanced" Required="false" Mask="false"/>
-  <Config Name="LDAP_READONLY_USER_USERNAME" Target="LDAP_READONLY_USER_USERNAME" Default="" Mode="" Description="Read only user username. Defaults to readonly" Type="Variable" Display="advanced" Required="false" Mask="false"/>
-  <Config Name="LDAP_READONLY_USER_PASSWORD" Target="LDAP_READONLY_USER_PASSWORD" Default="" Mode="" Description="Read only user password. Defaults to readonly" Type="Variable" Display="advanced" Required="false" Mask="false"/>
-  <Config Name="LDAP_RFC2307BIS_SCHEMA" Target="LDAP_RFC2307BIS_SCHEMA" Default="false" Mode="" Description="Use rfc2307bis schema instead of nis schema. Defaults to false" Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
-  <Config Name="LDAP_BACKEND" Target="LDAP_BACKEND" Default="mdb" Mode="" Description="Ldap backend. Defaults to mdb (previously hdb in image versions up to v1.1.10)" Type="Variable" Display="advanced" Required="false" Mask="false">mdb</Config>
-  <Config Name="LDAP_TLS_ENFORCE" Target="LDAP_TLS_ENFORCE" Default="false" Mode="" Description="Enforce TLS but except ldapi connections. Can't be disabled once set to true. Defaults to false." Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
-  <Config Name="LDAP_TLS_VERIFY_CLIENT" Target="LDAP_TLS_VERIFY_CLIENT" Default="demand" Mode="" Description="TLS verify client. Defaults to demand" Type="Variable" Display="advanced" Required="false" Mask="false">try</Config>
-  <Config Name="LDAP_TLS_CIPHER_SUITE" Target="LDAP_TLS_CIPHER_SUITE" Default="SECURE256:+SECURE128:-VERS-TLS-ALL:+VERS-TLS1.2:-RSA:-DHE-DSS:-CAMELLIA-128-CBC:-CAMELLIA-256-CBC" Mode="" Description="TLS cipher suite. Defaults to SECURE256:+SECURE128:-VERS-TLS-ALL:+VERS-TLS1.2:-RSA:-DHE-DSS:-CAMELLIA-128-CBC:-CAMELLIA-256-CBC" Type="Variable" Display="advanced" Required="false" Mask="false">SECURE256:+SECURE128:-VERS-TLS-ALL:+VERS-TLS1.2:-RSA:-DHE-DSS:-CAMELLIA-128-CBC:-CAMELLIA-256-CBC</Config>
-  <Config Name="KEEP_EXISTING_CONFIG" Target="KEEP_EXISTING_CONFIG" Default="false" Mode="" Description="Do not change the ldap config. Defaults to false&#13;&#10;&#13;&#10;    if set to true with an existing database, config will remain unchanged. Image tls and replication config will not be run. The container can be started with LDAP_ADMIN_PASSWORD and LDAP_CONFIG_PASSWORD empty or filled with fake data.&#13;&#10;    if set to true when bootstrapping a new database, bootstap ldif and schema will not be added and tls and replication config will not be run.&#13;&#10;" Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
-  <Config Name="LDAP_REMOVE_CONFIG_AFTER_SETUP" Target="LDAP_REMOVE_CONFIG_AFTER_SETUP" Default="true" Mode="" Description="Container Variable: LDAP_REMOVE_CONFIG_AFTER_SETUP" Type="Variable" Display="advanced" Required="false" Mask="false">true</Config>
-  <Config Name="LDAP_SSL_HELPER_PREFIX" Target="LDAP_SSL_HELPER_PREFIX" Default="ldap" Mode="" Description="ssl-helper environment variables prefix. Defaults to ldap, ssl-helper first search config from LDAP_SSL_HELPER_* variables, before SSL_HELPER_* variables." Type="Variable" Display="advanced" Required="false" Mask="false">ldap</Config>
-  <Config Name="LDAP_BASE_DN" Target="LDAP_BASE_DN" Default="" Mode="" Description="LDAP_BASE_DN: Ldap base DN. If empty automatically set from LDAP_DOMAIN value. Defaults to (empty)&#13;&#10;" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="LDAP database files" Target="/var/lib/ldap/" Default="/mnt/user/appdata/openldap/data" Mode="rw" Description="LDAP database files" Type="Path" Display="advanced" Required="true" Mask="false"/>
+  <Config Name="LDAP config files" Target="/etc/ldap/slapd.d/" Default="/mnt/user/appdata/openldap/config" Mode="rw" Description="LDAP config files" Type="Path" Display="advanced" Required="true" Mask="false"/>
+  <Config Name="LDAP port" Target="389" Default="389" Mode="tcp" Description="Container Port: 389" Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="LDAPS port" Target="636" Default="636" Mode="tcp" Description="Container Port: 636" Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="LDAP_ORGANISATION" Target="LDAP_ORGANISATION" Default="Example Inc." Description="Organisation name e.g. Example Inc." Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="LDAP_DOMAIN" Target="LDAP_DOMAIN" Default="example.org" Description="Ldap domain e.g. example.org" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="HOSTNAME" Target="HOSTNAME" Default="example.org" Description="Set the hostname of the running openldap server. This is the value linked to other containers so they can connect with ldaps://example.org:636. In that example, example.org is the hostname." Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="LDAP_ADMIN_PASSWORD" Target="LDAP_ADMIN_PASSWORD" Default="admin" Description="Ldap Admin password. Defaults to admin" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="LDAP_CONFIG_PASSWORD" Target="LDAP_CONFIG_PASSWORD" Default="config" Description="Ldap Config password. Defaults to config" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="LDAP_TLS" Target="LDAP_TLS" Default="true" Description="Add openldap TLS capabilities. Can't be removed once set to true. Defaults to true." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="LDAP_TLS_CRT_FILENAME" Target="LDAP_TLS_CRT_FILENAME" Default="live/example.org/cert.pem" Description="Ldap ssl certificate filename.&#13;&#10;If getting certs from Let's Encrypt, this should be of the form: live/example.org/cert.pem" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="LDAP_TLS_KEY_FILENAME" Target="LDAP_TLS_KEY_FILENAME" Default="live/example.org/privkey.pem" Description="Ldap ssl certificate private key filename. If getting certs from Let's Encrypt, this should be of the form: live/example.org/privkey.pem" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="LDAP_TLS_CA_CRT_FILENAME" Target="LDAP_TLS_CA_CRT_FILENAME" Default="ca.crt" Description="Ldap ssl CA certificate filename.  If getting certs from Let's Encrypt, this should be of the form: live/example.org/fullchain.pem" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="LDAP SSL Certificate Path" Target="/container/service/slapd/assets/certs/" Default="letsencrypt-keys" Mode="rw" Description="Shared volume with Let's Encrypt certs. Create a docker volume -&amp;gt; docker create volume letsencrypt-keys, then link it in your linuxserver.io/letsencrypt docker container with container path: /config/etc/letsencrypt and host path: letsencrypt-keys" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="LDIF Custom Configs Path" Target="/container/service/slapd/assets/config/bootstrap/ldif/custom" Default="/mnt/user/appdata/openldap/ldif/" Mode="rw" Description="Place custom LDIF configs here for apps that require them (such as apache-guacamole)." Type="Path" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="LDAP_READONLY_USER" Target="LDAP_READONLY_USER" Default="" Description="Add a read only user. Defaults to false" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="LDAP_READONLY_USER_USERNAME" Target="LDAP_READONLY_USER_USERNAME" Default="" Description="Read only user username. Defaults to readonly" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="LDAP_READONLY_USER_PASSWORD" Target="LDAP_READONLY_USER_PASSWORD" Default="" Description="Read only user password. Defaults to readonly" Type="Variable" Display="advanced" Required="false" Mask="true"/>
+  <Config Name="LDAP_RFC2307BIS_SCHEMA" Target="LDAP_RFC2307BIS_SCHEMA" Default="false" Description="Use rfc2307bis schema instead of nis schema. Defaults to false" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="LDAP_BACKEND" Target="LDAP_BACKEND" Default="mdb" Description="Ldap backend. Defaults to mdb (previously hdb in image versions up to v1.1.10)" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="LDAP_TLS_ENFORCE" Target="LDAP_TLS_ENFORCE" Default="false" Description="Enforce TLS but except ldapi connections. Can't be disabled once set to true. Defaults to false." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="LDAP_TLS_VERIFY_CLIENT" Target="LDAP_TLS_VERIFY_CLIENT" Default="demand" Description="TLS verify client. Defaults to demand" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="LDAP_TLS_CIPHER_SUITE" Target="LDAP_TLS_CIPHER_SUITE" Default="SECURE256:+SECURE128:-VERS-TLS-ALL:+VERS-TLS1.2:-RSA:-DHE-DSS:-CAMELLIA-128-CBC:-CAMELLIA-256-CBC" Description="TLS cipher suite. Defaults to SECURE256:+SECURE128:-VERS-TLS-ALL:+VERS-TLS1.2:-RSA:-DHE-DSS:-CAMELLIA-128-CBC:-CAMELLIA-256-CBC" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="KEEP_EXISTING_CONFIG" Target="KEEP_EXISTING_CONFIG" Default="false" Description="Do not change the ldap config. Defaults to false&#13;&#10;&#13;&#10;    if set to true with an existing database, config will remain unchanged. Image tls and replication config will not be run. The container can be started with LDAP_ADMIN_PASSWORD and LDAP_CONFIG_PASSWORD empty or filled with fake data.&#13;&#10;    if set to true when bootstrapping a new database, bootstap ldif and schema will not be added and tls and replication config will not be run.&#13;&#10;" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="LDAP_REMOVE_CONFIG_AFTER_SETUP" Target="LDAP_REMOVE_CONFIG_AFTER_SETUP" Default="true" Description="Container Variable: LDAP_REMOVE_CONFIG_AFTER_SETUP" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="LDAP_SSL_HELPER_PREFIX" Target="LDAP_SSL_HELPER_PREFIX" Default="ldap" Description="ssl-helper environment variables prefix. Defaults to ldap, ssl-helper first search config from LDAP_SSL_HELPER_* variables, before SSL_HELPER_* variables." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="LDAP_BASE_DN" Target="LDAP_BASE_DN" Default="" Description="LDAP_BASE_DN: Ldap base DN. If empty automatically set from LDAP_DOMAIN value. Defaults to (empty)&#13;&#10;" Type="Variable" Display="advanced" Required="false" Mask="false"/>
 </Container>

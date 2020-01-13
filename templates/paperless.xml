@@ -24,10 +24,9 @@ More variables here: https://github.com/the-paperless-project/paperless/blob/mas
 &#xD;
 RUN: ./manage.py createsuperuser in the container terminal to create the superuser. </Description>
   <Networking>
-    <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort></HostPort>
+        <HostPort/>
         <ContainerPort>8000</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
@@ -35,22 +34,22 @@ RUN: ./manage.py createsuperuser in the container terminal to create the superus
   </Networking>
   <Data>
     <Volume>
-      <HostDir></HostDir>
+      <HostDir/>
       <ContainerDir>/usr/src/paperless/data</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir></HostDir>
+      <HostDir/>
       <ContainerDir>/usr/src/paperless/media</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir></HostDir>
+      <HostDir/>
       <ContainerDir>/consume</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir></HostDir>
+      <HostDir/>
       <ContainerDir>/export</ContainerDir>
       <Mode>rw</Mode>
     </Volume>    
@@ -62,17 +61,15 @@ RUN: ./manage.py createsuperuser in the container terminal to create the superus
       <Mode/>
     </Variable>
     <Variable>
-      <Value>99</Value>
       <Name>USERMAP_UID</Name>
       <Mode/>
     </Variable>
   </Environment>
-  <Labels/>
-  <Config Name="Port" Target="8000" Default="8000" Mode="tcp" Description="Container Port: 8000" Type="Port" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Data" Target="/usr/src/paperless/data" Default="/mnt/user/appdata/paperless/" Mode="rw" Description="Container Path: /usr/src/paperless/data" Type="Path" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Media" Target="/usr/src/paperless/media" Default="" Mode="rw" Description="Container Path: /usr/src/paperless/media" Type="Path" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Consumption" Target="/consume" Default="" Mode="rw" Description="Container Path: /consume" Type="Path" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Export" Target="/export" Default="" Mode="rw" Description="Container Path: /export" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Port" Target="8000" Default="8000" Mode="tcp" Description="Container Port: 8000" Type="Port" Display="always" Required="false" Mask="false"/>
+  <Config Name="Data" Target="/usr/src/paperless/data" Default="/mnt/user/appdata/paperless/" Mode="rw" Description="Container Path: /usr/src/paperless/data" Type="Path" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Media" Target="/usr/src/paperless/media" Default="" Mode="rw" Description="Container Path: /usr/src/paperless/media" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="Consumption" Target="/consume" Default="" Mode="rw" Description="Container Path: /consume" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="Export" Target="/export" Default="" Mode="rw" Description="Container Path: /export" Type="Path" Display="always" Required="false" Mask="false"/>
   <Config Name="PAPERLESS_OCR_LANGUAGES" Target="PAPERLESS_OCR_LANGUAGES" Default="" Mode="" Description="Container Variable: PAPERLESS_OCR_LANGUAGES" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="PUID" Target="USERMAP_UID" Default="99" Mode="" Description="Container Variable: USERMAP_UID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
+  <Config Name="PUID" Target="USERMAP_UID" Default="99" Mode="" Description="Container Variable: USERMAP_UID" Type="Variable" Display="advanced" Required="false" Mask="false"/>
 </Container>

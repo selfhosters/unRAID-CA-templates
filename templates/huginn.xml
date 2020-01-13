@@ -31,10 +31,8 @@ See https://hub.docker.com/r/huginn/huginn/ for more information on running Hugi
 [br][br]&#xD;
 More variables can be found here: https://github.com/huginn/huginn/blob/master/.env.example</Description>
   <Networking>
-    <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort></HostPort>
         <ContainerPort>3000</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
@@ -42,13 +40,11 @@ More variables can be found here: https://github.com/huginn/huginn/blob/master/.
   </Networking>
   <Data>
     <Volume>
-      <HostDir></HostDir>
       <ContainerDir>/var/lib/mysql</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
   <Environment/>
-  <Labels/>
-  <Config Name="WebUI" Target="3000" Default="3000" Mode="tcp" Description="Container Port: 3000" Type="Port" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Database files" Target="/var/lib/mysql" Default="/mnt/user/appdata/huginn" Mode="rw" Description="Container Path: /var/lib/mysql" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="WebUI" Target="3000" Default="3000" Mode="tcp" Description="Container Port: 3000" Type="Port" Display="always" Required="false" Mask="false"/>
+  <Config Name="Database files" Target="/var/lib/mysql" Default="/mnt/user/appdata/huginn" Mode="rw" Description="Container Path: /var/lib/mysql" Type="Path" Display="advanced" Required="false" Mask="false"/>
 </Container>
