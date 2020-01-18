@@ -35,6 +35,9 @@
     [br]&#xD;
     -YubiKey OTP&#xD;
     [br][br]&#xD;
+    For more configuration see the wiki
+    [br]
+    https://github.com/dani-garcia/bitwarden_rs/wiki
   </Overview>
   <Category>Tools: Utilities</Category>
   <WebUI>http://[IP]:[PORT:80]</WebUI>
@@ -60,6 +63,9 @@
     [br]&#xD;
     -YubiKey OTP&#xD;
     [br][br]&#xD;
+    For more configuration see the wiki
+    [br]
+    https://github.com/dani-garcia/bitwarden_rs/wiki
   </Description>
   <Networking>
     <Publish>
@@ -103,5 +109,4 @@
   <Config Name="SIGNUPS_ALLOWED" Target="SIGNUPS_ALLOWED" Default="true" Description="Container Variable: Signups" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="INVITATIONS_ALLOWED" Target="INVITATIONS_ALLOWED" Default="true" Description="Container Variable: Invitations" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="WEBSOCKET_ENABLED" Target="WEBSOCKET_ENABLED" Default="false" Description="Container Variable: Websockets Enabled" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="ADMIN_TOKEN" Target="ADMIN_TOKEN" Default="" Description="Container Variable: ADMIN_TOKEN" Type="Variable" Display="always" Required="false" Mask="true"/>
 </Container>
