@@ -106,7 +106,7 @@
   <Config Name="WebUI HTTP Port" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false"/>
   <Config Name="Storage" Target="/data" Default="/mnt/user/appdata/bitwarden" Mode="rw" Description="Container Path: /data" Type="Path" Display="advanced" Required="true" Mask="false"/>
   <Config Name="SERVER_ADMIN_EMAIL" Target="SERVER_ADMIN_EMAIL" Default="me@domain.com" Description="Container Variable: Server Admin E-Mail" Type="Variable" Display="always" Required="true" Mask="false"/>
-  <Config Name="SIGNUPS_ALLOWED" Target="SIGNUPS_ALLOWED" Default="true" Description="Container Variable: Signups" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="INVITATIONS_ALLOWED" Target="INVITATIONS_ALLOWED" Default="true" Description="Container Variable: Invitations" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="SIGNUPS_ALLOWED" Target="SIGNUPS_ALLOWED" Default="true|false" Description="Container Variable: Signups" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="INVITATIONS_ALLOWED" Target="INVITATIONS_ALLOWED" Default="true|false" Description="Container Variable: Invitations" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="WEBSOCKET_ENABLED" Target="WEBSOCKET_ENABLED" Default="false" Description="Container Variable: Websockets Enabled" Type="Variable" Display="always" Required="false" Mask="false"/>
 </Container>

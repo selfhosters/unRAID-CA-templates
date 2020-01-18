@@ -91,7 +91,7 @@
 	<Config Name="Ping IP Alt" Target="ping_ip_alt" Default="8.8.8.8" Mode="" Description="Container Variable: ping_ip_alt" Type="Variable" Display="always" Required="false" Mask="false"/>
 	<Config Name="Ping Count" Target="ping_count" Default="4" Mode="" Description="Container Variable: ping_count" Type="Variable" Display="always" Required="false" Mask="false"/>
 	<Config Name="Sleep Secs" Target="sleep_secs" Default="10" Mode="" Description="Container Variable: sleep_secs" Type="Variable" Display="always" Required="false" Mask="false"/>
-	<Config Name="Run on Startup" Target="run_startup" Default="yes" Mode="" Description="Container Variable: run_startup (yes/no)" Type="Variable" Display="always" Required="false" Mask="false"/>
+	<Config Name="Run on Startup" Target="run_startup" Default="yes|no" Mode="" Description="Container Variable: run_startup (yes/no)" Type="Variable" Display="always" Required="false" Mask="false"/>
 	<Config Name="Enable Discord Notifications" Target="discord_notifications" Default="no" Mode="" Description="Container Variable: discord_notifications (yes/no)" Type="Variable" Display="always" Required="false" Mask="false"/>
 	<Config Name="Discord Webhook URL" Target="discord_url" Default="" Mode="" Description="Container Variable: discord_url" Type="Variable" Display="always" Required="false" Mask="false"/>
 	<Config Name="Docker Sock" Target="/var/run/docker.sock" Default="/var/run/docker.sock" Mode="rw" Description="Container Path: /var/run/docker.sock" Type="Path" Display="advanced-hide" Required="true" Mask="false"/>
