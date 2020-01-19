@@ -14,7 +14,7 @@ Check logs for auto-generated username/password.</Overview>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/komga.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/komga.png</Icon>
   <Description>A Media server for comics/mangas/BDs with API and OPDS support.&#xD;
-Check logs for auto-generated username/password.</Description>
+Check container logs for auto-generated username/password.</Description>
   <Networking>
     <Publish>
       <Port>
