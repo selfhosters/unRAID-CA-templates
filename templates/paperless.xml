@@ -4,25 +4,25 @@
   <Repository>thepaperlessproject/paperless</Repository>
   <Registry>https://hub.docker.com/r/thepaperlessproject/paperless/</Registry>
   <Network>bridge</Network>
+  <Shell>bash</Shell>
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/87196-support-paperless-docker/</Support>
   <Project>https://github.com/the-paperless-project/paperless</Project>
-  <Overview>Index and archive all of your scanned paper documents&#xD;
+  <Overview>Index and archive all of your scanned paper documents.&#xD;
 [br][br]&#xD;
-More variables here: https://github.com/the-paperless-project/paperless/blob/master/paperless.conf.example&#xD;
-[br][br]&#xD;
-&#xD;
-RUN: ./manage.py createsuperuser in the container terminal to create the superuser. </Overview>
+For installation instructions see: https://forums.unraid.net/topic/87196-support-paperless-docker/ [br][br]&#xD;
+Paperless Documentation: https://paperless.readthedocs.io/en/latest/[br]&#xD;
+Additional Template Variables: https://github.com/the-paperless-project/paperless/blob/master/paperless.conf.example</Overview>
   <Category>Productivity:</Category>
   <WebUI>http://[IP]:[PORT:8000]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/paperless.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/paperless.png</Icon>
   <PostArgs>runserver 0.0.0.0:8000 --insecure --noreload</PostArgs>
-  <Description>Index and archive all of your scanned paper documents&#xD;
+  <Description>Index and archive all of your scanned paper documents.&#xD;
 [br][br]&#xD;
-More variables here: https://github.com/the-paperless-project/paperless/blob/master/paperless.conf.example&#xD;
-[br][br]&#xD;
-&#xD;
-RUN: ./manage.py createsuperuser in the container terminal to create the superuser. </Description>
+For installation instructions see: https://forums.unraid.net/topic/87196-support-paperless-docker/ [br][br]&#xD;
+Paperless Documentation: https://paperless.readthedocs.io/en/latest/[br]&#xD;
+Additional Template Variables: https://github.com/the-paperless-project/paperless/blob/master/paperless.conf.example</Description>
   <Networking>
     <Publish>
       <Port>
@@ -52,24 +52,43 @@ RUN: ./manage.py createsuperuser in the container terminal to create the superus
       <HostDir/>
       <ContainerDir>/export</ContainerDir>
       <Mode>rw</Mode>
-    </Volume>    
+    </Volume>
   </Data>
   <Environment>
     <Variable>
       <Value/>
-      <Name>PAPERLESS_OCR_LANGUAGES</Name>
+      <Name>PAPERLESS_OCR_LANGUAGE</Name>
       <Mode/>
     </Variable>
     <Variable>
+      <Value/>
+      <Name>PAPERLESS_FORGIVING_OCR</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>PAPERLESS_INLINE_DOC</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>PAPERLESS_TIME_ZONE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
       <Name>USERMAP_UID</Name>
       <Mode/>
     </Variable>
   </Environment>
   <Config Name="Port" Target="8000" Default="8000" Mode="tcp" Description="Container Port: 8000" Type="Port" Display="always" Required="false" Mask="false"/>
-  <Config Name="Data" Target="/usr/src/paperless/data" Default="/mnt/user/appdata/paperless/" Mode="rw" Description="Container Path: /usr/src/paperless/data" Type="Path" Display="advanced" Required="false" Mask="false"/>
-  <Config Name="Media" Target="/usr/src/paperless/media" Default="" Mode="rw" Description="Container Path: /usr/src/paperless/media" Type="Path" Display="always" Required="false" Mask="false"/>
-  <Config Name="Consumption" Target="/consume" Default="" Mode="rw" Description="Container Path: /consume" Type="Path" Display="always" Required="false" Mask="false"/>
-  <Config Name="Export" Target="/export" Default="" Mode="rw" Description="Container Path: /export" Type="Path" Display="always" Required="false" Mask="false"/>
-  <Config Name="PAPERLESS_OCR_LANGUAGES" Target="PAPERLESS_OCR_LANGUAGES" Default="" Mode="" Description="Container Variable: PAPERLESS_OCR_LANGUAGES" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Data" Target="/usr/src/paperless/data" Default="/mnt/user/appdata/paperless/data" Mode="rw" Description="Container Path: /usr/src/paperless/data . &#13;&#10;This contains the paperless database. Should be in appdata." Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Media" Target="/usr/src/paperless/media" Default="" Mode="rw" Description="Container Path: /usr/src/paperless/media . &#13;&#10;Once consumed, files will be stored here." Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Consumption" Target="/consume" Default="" Mode="rw" Description="Container Path: /consume . &#13;&#10;Files placed here will be consumed by paperless." Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Export" Target="/export" Default="" Mode="rw" Description="Container Path: /export . &#13;&#10;Location for files used by the exporter utility.&#13;&#10;See https://paperless.readthedocs.io/en/latest/utilities.html#the-exporter" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="PAPERLESS_OCR_LANGUAGE" Target="PAPERLESS_OCR_LANGUAGE" Default="eng" Mode="" Description="Container Variable: PAPERLESS_OCR_LANGUAGE . Override the language that tesseract will attempt to use when parsing documents. Use a 3-letter language code consistent with ISO 639: https://www.loc.gov/standards/iso639-2/php/code_list.php" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="PAPERLESS_FORGIVING_OCR" Target="PAPERLESS_FORGIVING_OCR" Default="false" Mode="" Description="Container Variable: PAPERLESS_FORGIVING_OCR . &#13;&#10;When true, Paperless will consume documents even if the language detection fails." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="PAPERLESS_INLINE_DOC" Target="PAPERLESS_INLINE_DOC" Default="false" Mode="" Description="Container Variable: PAPERLESS_INLINE_DOC.&#13;&#10;When true, PDF files will be viewed in the browser. When false (default), PDF files will be downloaded." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="PAPERLESS_TIME_ZONE" Target="PAPERLESS_TIME_ZONE" Default="UTC" Mode="" Description="Container Variable: PAPERLESS_TIME_ZONE.&#13;&#10;Override the default UTC time zone. For details see: https://docs.djangoproject.com/en/1.10/ref/settings/#std:setting-TIME_ZONE" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="PUID" Target="USERMAP_UID" Default="99" Mode="" Description="Container Variable: USERMAP_UID" Type="Variable" Display="advanced" Required="false" Mask="false"/>
 </Container>
