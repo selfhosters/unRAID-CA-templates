@@ -6,7 +6,6 @@
 	<Registry>https://hub.docker.com/r/tronyx/docker-plpp/</Registry>
 	<Project>https://github.com/Tensai75/plpp</Project>
 	<Network>bridge</Network>
-	<BindTime>true</BindTime>
 	<Privileged>false</Privileged>
 	<Support>https://hub.docker.com/r/tronyx/docker-plpp/</Support>
 	<Description>PHP Library Presenter for PLEX&#xD;
@@ -20,36 +19,35 @@ Provides a PHP front end to simply present PLEX libraries on the web without the
 	<WebUI>http://[IP]:[PORT:80]</WebUI>
 	<Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/plpp.png</Icon>
 	<Networking>
-		<Mode>bridge</Mode>
 		<Publish>
 			<Port>
-				<HostPort></HostPort>
+				<HostPort/>
 				<ContainerPort>80</ContainerPort>
 				<Protocol>tcp</Protocol>
-			</Port>s
+			</Port>
 		</Publish>
 	</Networking>
 	<Data>
 		<Volume>
-			<HostDir></HostDir>
+			<HostDir/>
 			<ContainerDir>/config</ContainerDir>
 			<Mode>rw</Mode>
 		</Volume>
 	</Data>
 	<Environment>
 		<Variable>
-			<Value>99</Value>
+			<Value/>
 			<Name>PUID</Name>
 			<Mode/>
 		</Variable>
 		<Variable>
-			<Value>100</Value>
+			<Value/>
 			<Name>PGID</Name>
 			<Mode/>
 		</Variable>
 	</Environment>
-	<Config Name="Host Port" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="false" Mask="false"></Config>
-	<Config Name="Host Path" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="false" Mask="false"></Config>
-	<Config Name="PUID" Target="PUID" Default="" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
-	<Config Name="PGID" Target="PGID" Default="" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
+  <Config Name="Web UI" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="false" Mask="false"/>
+  <Config Name="AppData" Target="/config" Default="/mnt/user/appdata/plpp" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced" Required="true" Mask="false"/>
+  <Config Name="PUID" Target="PUID" Default="99" Description="Container Variable: PUID" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="PGID" Target="PGID" Default="100" Description="Container Variable: PGID" Type="Variable" Display="advanced" Required="false" Mask="false"/>
 </Container>

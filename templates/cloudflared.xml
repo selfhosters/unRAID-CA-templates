@@ -15,15 +15,12 @@
   <DonateLink>https://www.patreon.com/crazymax</DonateLink>
   <Description>Cloudflared proxy-dns multi-platform Docker image based on Alpine Linux</Description>
   <Networking>
-    <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort></HostPort>
         <ContainerPort>5053</ContainerPort>
         <Protocol>udp</Protocol>
       </Port>
       <Port>
-        <HostPort></HostPort>
         <ContainerPort>49312</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
@@ -31,12 +28,10 @@
   </Networking>
   <Environment>
     <Variable>
-      <Value></Value>
       <Name>TUNNEL_DNS_UPSTREAM</Name>
-      <Mode/>
     </Variable>
   </Environment>
-  <Config Name="Listen port for the DNS over HTTPS proxy server" Target="5053" Default="5053" Mode="udp" Description="Container Port: 5053" Type="Port" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Listen port for metrics reporting" Target="49312" Default="49312" Mode="tcp" Description="Container Port: 49312" Type="Port" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Upstream endpoint URL" Target="TUNNEL_DNS_UPSTREAM" Default="https://1.1.1.1/dns-query,https://1.0.0.1/dns-query" Mode="" Description="Container Variable: TUNNEL_DNS_UPSTREAM Upstream endpoint URL, you can specify multiple endpoints for redundancy" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Listen port for the DNS over HTTPS proxy server" Target="5053" Default="5053" Mode="udp" Description="Container Port: 5053" Type="Port" Display="always" Required="false" Mask="false"/>
+  <Config Name="Listen port for metrics reporting" Target="49312" Default="49312" Mode="tcp" Description="Container Port: 49312" Type="Port" Display="always" Required="false" Mask="false"/>
+  <Config Name="Upstream endpoint URL" Target="TUNNEL_DNS_UPSTREAM" Default="https://1.1.1.1/dns-query,https://1.0.0.1/dns-query" Description="Container Variable: TUNNEL_DNS_UPSTREAM Upstream endpoint URL, you can specify multiple endpoints for redundancy" Type="Variable" Display="always" Required="false" Mask="false"/>
 </Container>

@@ -24,7 +24,6 @@ For installation instructions see: https://forums.unraid.net/topic/87196-support
 Paperless Documentation: https://paperless.readthedocs.io/en/latest/[br]&#xD;
 Additional Template Variables: https://github.com/the-paperless-project/paperless/blob/master/paperless.conf.example</Description>
   <Networking>
-    <Mode>bridge</Mode>
     <Publish>
       <Port>
         <HostPort/>
@@ -82,7 +81,6 @@ Additional Template Variables: https://github.com/the-paperless-project/paperles
       <Mode/>
     </Variable>
   </Environment>
-  <Labels/>
   <Config Name="Port" Target="8000" Default="8000" Mode="tcp" Description="Container Port: 8000" Type="Port" Display="always" Required="false" Mask="false"/>
   <Config Name="Data" Target="/usr/src/paperless/data" Default="/mnt/user/appdata/paperless/data" Mode="rw" Description="Container Path: /usr/src/paperless/data . &#13;&#10;This contains the paperless database. Should be in appdata." Type="Path" Display="always" Required="true" Mask="false"/>
   <Config Name="Media" Target="/usr/src/paperless/media" Default="" Mode="rw" Description="Container Path: /usr/src/paperless/media . &#13;&#10;Once consumed, files will be stored here." Type="Path" Display="always" Required="true" Mask="false"/>
