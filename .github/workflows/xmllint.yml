@@ -17,7 +17,7 @@ jobs:
         sha: ${{ github.sha }}
       run: |
         for file in $(git diff-tree --no-commit-id --name-only -r $sha ); do
-          if [[ ${file} == *.xml ]] && [[ -f ${file} ]]; then
+          if [[ ${file} == *.xml ]] && [[ -f ${file} ]]
           then
             xmllint $file
            fi
