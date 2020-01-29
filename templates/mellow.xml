@@ -11,37 +11,10 @@
   <Category>Tools:Utilities</Category>
   <WebUI>http://[IP]:[PORT:5060]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/mellow.xml</TemplateURL>	
-	<Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/mellow.png</Icon>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/mellow.png</Icon>
   <ExtraParams>--restart=unless-stopped</ExtraParams>
-  <DonateText/>
-  <DonateLink/>
   <Description>Discord Bot which can communicate with several APIs which are related to home streaming.</Description>
-  <Networking>
-    <Mode>bridge</Mode>
-    <Publish>
-      <Port>
-        <HostPort>5060</HostPort>
-        <ContainerPort>5060</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-    </Publish>
-  </Networking>
-  <Data>
-    <Volume>
-      <HostDir>/mnt/user/appdata/mellow</HostDir>
-      <ContainerDir>/usr/src/app/data/</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-  </Data>
-  <Environment>
-    <Variable>
-      <Value></Value>
-      <Name>JWT_SECRET</Name>
-      <Mode/>
-    </Variable>
-  </Environment>
-  <Labels/>
   <Config Name="Host Port 1" Target="5060" Default="" Mode="tcp" Description="Container Port: 5060" Type="Port" Display="always" Required="true" Mask="false">5060</Config>
   <Config Name="Host Path 1" Target="/usr/src/app/data/" Default="" Mode="rw" Description="Container Path: /usr/src/app/data/" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/mellow</Config>
   <Config Name="Host Key 1" Target="JWT_SECRET" Default="" Mode="" Description="Random strong password to make sure the JWT tokens are signed uniquely and the auth is secure." Type="Variable" Display="always" Required="false" Mask="false">gdfgeg$Y$G$YY#$GRGrgdg</Config>
-</Container>
+  </Container>
