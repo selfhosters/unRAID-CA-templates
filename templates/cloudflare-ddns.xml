@@ -40,47 +40,33 @@
 		Variable:[b][span style='color: #E80000;']RRTYPE[/span][/b]: Set to [b]AAAA[/b] to use set IPv6 records instead of IPv4 records. Defaults to [b]A[/b] for IPv4 records. &#xD;
 		[br][br]&#xD;
 		[b][span style='color: #E80000;']NOTE:[/span][/b][b] AAAA[/b]: You will also need to run docker with IPv6 support, or run the container with host networking enabled.</Description>
-	<Networking>
-		<Mode>bridge</Mode>
-		<Publish/>
-		</Networking>
+	<Networking/>
 	<Data/>
 	<Environment>
 		<Variable>
-			<Value></Value>
 			<Name>EMAIL</Name>
-			<Mode/>
 		</Variable>
 		<Variable>
-			<Value></Value>
 			<Name>API_KEY</Name>
-			<Mode/>
 		</Variable>
 		<Variable>
-			<Value></Value>
 			<Name>ZONE</Name>
-			<Mode/>
 		</Variable>
 		<Variable>
-			<Value></Value>
 			<Name>SUBDOMAIN</Name>
-			<Mode/>
 		</Variable>
 		<Variable>
-			<Value>false</Value>
+			<Value>false|true</Value>
 			<Name>PROXIED</Name>
-			<Mode/>
 		</Variable>
 		<Variable>
-			<Value>A</Value>
 			<Name>RRTYP</Name>
-			<Mode/>
 		</Variable>
 	</Environment>
-	<Config Name="Email" Target="EMAIL" Default="" Mode="" Description="Container Variable: EMAIL" Type="Variable" Display="always" Required="true" Mask="false"></Config>
-	<Config Name="API Key" Target="API_KEY" Default="" Mode="" Description="Container Variable: API_KEY" Type="Variable" Display="always" Required="true" Mask="true"></Config>
-	<Config Name="Domain" Target="ZONE" Default="" Mode="" Description="Container Variable: ZONE" Type="Variable" Display="always" Required="true" Mask="false"></Config>
-	<Config Name="Subdomain (Optional)" Target="SUBDOMAIN" Default="" Mode="" Description="Container Variable: SUBDOMAIN" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-	<Config Name="Cloudflare Proxy" Target="PROXIED" Default="" Mode="" Description="Container Variable: PROXIED" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
-	<Config Name="IPv6/IPv4 records" Target="RRTYP" Default="" Mode="" Description="Container Variable: RRTYP" Type="Variable" Display="always" Required="false" Mask="false">A</Config>
+	<Config Name="Email" Target="EMAIL" Default="" Description="Container Variable: EMAIL" Type="Variable" Display="always" Required="true" Mask="false"/>
+	<Config Name="API Key" Target="API_KEY" Default="" Description="Container Variable: API_KEY" Type="Variable" Display="always" Required="true" Mask="true"/>
+	<Config Name="Domain" Target="ZONE" Default="" Description="Container Variable: ZONE" Type="Variable" Display="always" Required="true" Mask="false"/>
+	<Config Name="Subdomain (Optional)" Target="SUBDOMAIN" Default="" Description="Container Variable: SUBDOMAIN" Type="Variable" Display="always" Required="false" Mask="false"/>
+	<Config Name="Cloudflare Proxy" Target="PROXIED" Default="true|false" Description="Container Variable: PROXIED" Type="Variable" Display="always" Required="false" Mask="false"/>
+	<Config Name="IPv6/IPv4 records" Target="RRTYP" Default="A" Description="Container Variable: RRTYP" Type="Variable" Display="always" Required="false" Mask="false"/>
 </Container>
