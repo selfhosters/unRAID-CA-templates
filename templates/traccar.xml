@@ -12,7 +12,7 @@
 Link to traccar.xml: https://raw.githubusercontent.com/traccar/traccar/master/setup/traccar.xml&#xD;
 [br][br]&#xD;
 [b]Add it to your host path before starting the container. [b]</Overview>
-  <Category/>
+  <Category>MediaApp:Other</Category>
   <WebUI>http://[IP]:[PORT:8082]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/traccar.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/traccar.png</Icon>

@@ -39,7 +39,7 @@
     [br]
     https://github.com/dani-garcia/bitwarden_rs/wiki
   </Overview>
-  <Category>Tools: Utilities</Category>
+  <Category>Tools:</Category>
   <WebUI>http://[IP]:[PORT:80]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/bitwardenrs.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/bitwardenrs.png</Icon>

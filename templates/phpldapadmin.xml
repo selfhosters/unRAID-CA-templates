@@ -9,7 +9,7 @@
  <Project>https://hub.docker.com/r/osixia/phpldapadmin/</Project>
  <Overview>A docker image to run phpldapadmin. It provides a user interface to an openldap database. It must be on the same custom network as openldap and must be linked via --link openldap:PHPLDAPADMIN_LDAP_HOSTS e.g. --link openldap:example.org&#xD;
 An example config.php can be found here: https://github.com/commandprompt/phpldapadmin/blob/master/config/config.php.example</Overview>
- <Category>Tools: Utilities</Category>
+ <Category>Network:Other Tools:</Category>
  <WebUI>https://[IP]:[PORT:443]/</WebUI>
  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/phpldapadmin.xml</TemplateURL>
  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/phpldapadmin.png</Icon>

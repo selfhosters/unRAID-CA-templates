@@ -8,7 +8,7 @@
   <Support>https://github.com/osixia/docker-openldap</Support>
   <Project>https://hub.docker.com/r/osixia/openldap/</Project>
   <Overview> A docker image to run OpenLDAP, The container default log level is info. Available levels are: none, error, warning, info, debug and trace. To use this container with phpldapadmin, create a custom network that both containers are on and then link them using --link openldap:PHPLDAPADMIN_LDAP_HOSTS in the extra parameters of the phpldapadmin docker container (which should be equal to HOSTNAME in this container). Any other docker that wants to use LDAP credentials will need the same extra parameter including Let's Encrypt if you are using linuxserver.io's ldap-auth container.</Overview>
-  <Category>Tools: Utilities</Category>
+  <Category>HomeAutomation: Network:Management Tools:</Category>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/openldap.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/openldap.png</Icon>
   <ExtraParams/>

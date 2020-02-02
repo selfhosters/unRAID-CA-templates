@@ -9,7 +9,7 @@
   <Support>https://github.com/fletchto99/hexo-dev-docker/issues</Support>
   <Project>https://github.com/fletchto99/hexo-dev-docker</Project>
   <Overview>A self-hosted blogging platform in which posts are written in markdown</Overview>
-  <Category/>
+  <Category>Productivity:</Category>
   <WebUI>http://[IP]:[PORT:8080]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/hexo.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/hexo.png</Icon>

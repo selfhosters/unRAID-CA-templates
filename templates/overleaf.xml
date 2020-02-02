@@ -10,6 +10,7 @@
   <Registry>https://hub.docker.com/r/sharelatex/sharelatex</Registry>
   <Overview>A self-hosted LaTeX editor</Overview>
   <WebUI>http://[IP]:[PORT:3000]</WebUI>
+  <Category>Productivity:</Category>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/overleaf.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/overleaf.png</Icon>
   <Description>Overleaf is a self-hosted LaTeX editor, based on the overleaf docker image (formerly sharelatex).</Description>
