@@ -5,7 +5,7 @@
   <Registry>https://hub.docker.com/r/phasecorex/red-discordbot/</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
-  <Support>https://hub.docker.com/r/phasecorex/red-discordbot/</Support>
+  <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
   <Project>https://github.com/PhasecoreX/docker-red-discordbot</Project>
   <Overview>The newest Red-Discordbot in a convenient multi-arch container &#xD;
 [br][br]&#xD;

@@ -7,7 +7,7 @@
   <Registry>https://hub.docker.com/r/hellowlol/bw_plex</Registry>
   <Privileged>false</Privileged>
   <Project>https://github.com/Hellowlol/bw_plex</Project>
-  <Support>https://github.com/Hellowlol/bw_plex</Support>
+  <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
   <Overview>
   binge watching for plex
   [br]In order to send command line options to this container you need to enable advanced view, and edit the Post Arguments, adding your arguments after the word `watch`, and before the double-quote

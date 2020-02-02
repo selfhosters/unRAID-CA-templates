@@ -5,7 +5,7 @@
   <Registry>https://hub.docker.com/r/pe46dro/xbackbone-docker/</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
-  <Support>https://hub.docker.com/r/pe46dro/xbackbone-docker/</Support>
+  <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
   <Project>https://github.com/Pe46dro/XBackBone-docker</Project>
   <Overview>Container for XBackBone, a simple and lightweight ShareX PHP backend &#xD;
 [br][br]&#xD;

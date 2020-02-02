@@ -5,7 +5,7 @@
   <Registry>https://hub.docker.com/r/bitwardenrs/server/</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
-  <Support>https://github.com/dani-garcia/bitwarden_rs/issues/</Support>
+  <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
   <Project>https://github.com/dani-garcia/bitwarden_rs/</Project>
   <Branch>
     <Tag>latest</Tag>

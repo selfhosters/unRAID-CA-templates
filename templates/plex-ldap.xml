@@ -6,6 +6,7 @@
 	<Registry>https://hub.docker.com/r/starbix/plex-ldap/</Registry>
 	<Project>https://github.com/hjone72/LDAP-for-Plex/</Project>
 	<Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/plex_ldap.png</Icon>
+	<Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
 	<Network>bridge</Network>
 	<Privileged>false</Privileged>
 	<Category>Tools:</Category>

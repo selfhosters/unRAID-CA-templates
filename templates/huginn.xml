@@ -6,7 +6,7 @@
   <Network>bridge</Network>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>https://github.com/huginn/huginn/</Support>
+  <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
   <Project>https://github.com/huginn/huginn/</Project>
   <Overview>Build agents that monitor and act on your behalf. Your agents are standing by! &#xD;
 [br][br]&#xD;
