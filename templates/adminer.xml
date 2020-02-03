@@ -7,7 +7,6 @@
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
   <Project>https://github.com/vrana/adminer</Project>
-  <WebUI>http://[IP]:[PORT:8080]</WebUI>
   <Overview>Adminer (formerly phpMinAdmin) is a full-featured database management tool written in PHP. Conversely to phpMyAdmin, it consist of a single file ready to deploy to the target server. Adminer is available for MySQL, PostgreSQL, SQLite, MS SQL, Oracle, Firebird, SimpleDB, Elasticsearch and MongoDB.&#xD;
     [br]&#xD;
     [br]&#xD;
