@@ -34,10 +34,9 @@ Get plugins here: https://github.com/HaveAGitGat/Tdarr_Plugins&#xD;
 &#xD;
 [b][span style='color: #E80000;'] NOTE: This container needs a separate MonogDB instance! [/span][/b] </Description>
   <Networking>
-    <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort>8265</HostPort>
+        <HostPort/>
         <ContainerPort>8265</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
@@ -45,44 +44,43 @@ Get plugins here: https://github.com/HaveAGitGat/Tdarr_Plugins&#xD;
   </Networking>
   <Data>
     <Volume>
-      <HostDir></HostDir>
+      <HostDir/>
       <ContainerDir>/home/Tdarr/Media</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir></HostDir>
+      <HostDir/>
       <ContainerDir>/home/Tdarr/Documents</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir></HostDir>
+      <HostDir/>
+      <ContainerDir>/var/lib/mongodb</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir/>
       <ContainerDir>/home/Tdarr/cache</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
   <Environment>
-    <Variable>
-      <Value></Value>
-      <Name>MONGO_URL</Name>
-      <Mode/>
-    </Variable>
 		<Variable>
-			<Value>99</Value>
+			<Value/>
 			<Name>PUID</Name>
 			<Mode/>
 		</Variable>
 		<Variable>
-			<Value>100</Value>
+			<Value/>
 			<Name>PGID</Name>
 			<Mode/>
 		</Variable>
 	</Environment>
-  <Labels/>
-  <Config Name="PUID" Target="PUID" Default="" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
-	<Config Name="PGID" Target="PGID" Default="" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
-  <Config Name="WebUI" Target="8265" Default="8265" Mode="tcp" Description="Container Port: 8265" Type="Port" Display="always" Required="false" Mask="false">8265</Config>
-  <Config Name="Media Library" Target="/home/Tdarr/Media" Default="" Mode="rw" Description="Container Path: /home/Tdarr/Media" Type="Path" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="MongoDB Database" Target="MONGO_URL" Default="mongodb://unraidIP:27017/Tdarr" Mode="" Description="Container Variable: MONGO_URL" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Appdata" Target="/home/Tdarr/Documents" Default="" Mode="rw" Description="Container Path: /home/Tdarr/Documents" Type="Path" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Transcode Cache" Target="/home/Tdarr/cache" Default="" Mode="rw" Description="Container Path: /home/Tdarr/cache" Type="Path" Display="always" Required="false" Mask="false"></Config>
-</Container>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+	<Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="WebUI" Target="8265" Default="8265" Mode="tcp" Description="Container Port: 8265" Type="Port" Display="always" Required="false" Mask="false"/>
+  <Config Name="Media Library" Target="/home/Tdarr/Media" Default="/mnt/user/Media" Mode="rw" Description="Container Path: /home/Tdarr/Media" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="Appdata" Target="/home/Tdarr/Documents" Default="/mnt/user/appdata/tdarr" Mode="rw" Description="Container Path: /home/Tdarr/Documents" Type="Path" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Transcode Cache" Target="/home/Tdarr/cache" Default="/mnt/cache/tdarr-cache" Mode="rw" Description="Container Path: /home/Tdarr/cache" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="MongoDB Database" Target="MONGO_URL" Default="mongodb://unraidIP:27017/Tdarr" Mode="" Description="Container Variable: MONGO_URL" Type="Variable" Display="always" Required="false" Mask="false"/>
+  </Container>

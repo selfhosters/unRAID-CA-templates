@@ -5,7 +5,7 @@
   <Registry>https://hub.docker.com/r/pe46dro/xbackbone-docker/</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
-  <Support>https://hub.docker.com/r/pe46dro/xbackbone-docker/</Support>
+  <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
   <Project>https://github.com/Pe46dro/XBackBone-docker</Project>
   <Overview>Container for XBackBone, a simple and lightweight ShareX PHP backend &#xD;
 [br][br]&#xD;
@@ -56,10 +56,9 @@ mkdir -p /mnt/user/appdata/xbb/logs&#xD;
 [br][br]&#xD;
 chown -R 1000:1000 /mnt/user/appdata/xbb</Description>
   <Networking>
-    <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort>9876</HostPort>
+        <HostPort/>
         <ContainerPort>80</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
@@ -67,32 +66,31 @@ chown -R 1000:1000 /mnt/user/appdata/xbb</Description>
   </Networking>
   <Data>
     <Volume>
-      <HostDir></HostDir>
+      <HostDir/>
       <ContainerDir>/app/storage</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir></HostDir>
+      <HostDir/>
       <ContainerDir>/app/resources/database</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir></HostDir>
+      <HostDir/>
       <ContainerDir>/app/logs</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
   <Environment>
     <Variable>
-      <Value>http:\/\/192.168.1.1:9876</Value>
+      <Value/>
       <Name>URL</Name>
       <Mode/>
     </Variable>
   </Environment>
-  <Labels/>
-  <Config Name="Port" Target="80" Default="9876" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false">9876</Config>
-  <Config Name="URL" Target="URL" Default="http:\/\/192.168.1.2:9876" Mode="" Description="This will specify the app url, slashes need to be escaped like this -e URL=http:\/\/127.0.0.1" Type="Variable" Display="always" Required="false" Mask="false">http:\/\/192.168.1.1:9876</Config>
-  <Config Name="Storage" Target="/app/storage" Default="" Mode="rw" Description="Container Path: /app/storage" Type="Path" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Database" Target="/app/resources/database" Default="" Mode="rw" Description="Container Path: /app/resources/database" Type="Path" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Logs" Target="/app/logs" Default="" Mode="rw" Description="Container Path: /app/logs" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Port" Target="80" Default="9876" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="URL" Target="URL" Default="http:\/\/192.168.1.2:9876" Mode="" Description="This will specify the app url, slashes need to be escaped like this -e URL=http:\/\/127.0.0.1" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Storage" Target="/app/storage" Default="/mnt/user/appdata/xbackbone/images" Mode="rw" Description="Container Path: /app/storage" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="Database" Target="/app/resources/database" Default="/mnt/user/appdata/xbackbone/db" Mode="rw" Description="Container Path: /app/resources/database" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="Logs" Target="/app/logs" Default="/mnt/user/appdata/xbackbone/logs" Mode="rw" Description="Container Path: /app/logs" Type="Path" Display="always" Required="false" Mask="false"/>
 </Container>

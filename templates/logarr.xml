@@ -7,29 +7,17 @@
   <Privileged>false</Privileged>
   <Support>https://hub.docker.com/r/monitorr/logarr-alpha/</Support>
   <Project>https://github.com/Monitorr/logarr/</Project>
-  <Overview>Self-hosted, single-page, log consolidation tool written in PHP&#xD;
-  &#xD;
-  [br][br]&#xD;
-  NOTE: Logarr is currently in ALPHA TESTING phase!&#xD;
-  [br][br]&#xD;
-  </Overview>
+  <Description>Logarr is a self-hosted, single-page, log consolidation tool written in PHP </Description>
+  <Overview>Logarr is a self-hosted, single-page, log consolidation tool written in PHP </Overview>
   <Category>Tools: Status:Beta</Category>
   <WebUI>http://[IP]:[PORT:80]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/logarr.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/logarr.png</Icon>
   <DonateText>Buy us a beer!</DonateText>
   <DonateLink>https://paypal.me/monitorrapp</DonateLink>
-  <Description>Self-hosted, single-page, log consolidation tool written in PHP&#xD;
-  &#xD;
-  [br][br]&#xD;
-  NOTE: Logarr is currently in ALPHA TESTING phase!&#xD;
-  [br][br]&#xD;
-  </Description>
   <Networking>
-    <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort>80</HostPort>
         <ContainerPort>80</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
@@ -37,13 +25,13 @@
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/logarr</HostDir>
       <ContainerDir>/app</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
   <Environment/>
-  <Labels/>
-  <Config Name="WebUI" Target="80" Default="80" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false">80</Config>
-  <Config Name="Config" Target="/app" Default="/mnt/user/appdata/logarr" Mode="rw" Description="Container Path: /app" Type="Path" Display="always-hide" Required="true" Mask="false">/mnt/user/appdata/logarr</Config>
+  <Config Name="WebUI" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="Config" Target="/app" Default="/mnt/user/appdata/Logarr" Mode="rw" Description="Container Path: /app" Type="Path" Display="advanced" Required="true" Mask="false"/>
+  <Config Name="PUID" Target="PUID" Default="99" Description="Container Variable: PUID" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+	<Config Name="PGID" Target="PGID" Default="100" Description="Container Variable: PGID" Type="Variable" Display="advanced" Required="false" Mask="false"/>
 </Container>

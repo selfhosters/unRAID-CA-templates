@@ -21,10 +21,9 @@
     READ THE INSTRUCTIONS! https://github.com/unifi-poller/unifi-poller/wiki/Installation</Overview>
   <Description>Collect ALL UniFi Controller, Device and Client Data - Export to InfluxDB or Prometheus. Visualize with Grafana using included dashboards.</Description>
   <Networking>
-    <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort>9031</HostPort>
+        <HostPort/>
         <ContainerPort>9031</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>

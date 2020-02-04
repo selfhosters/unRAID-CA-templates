@@ -36,32 +36,29 @@ RADARR4K_KEY -&amp;gt; The API key for this server&#xD;
 PROFILE_ID -&amp;gt; The profile number you want the video to be added with. (Start counting  from Any:1 SD:2 ect Ultra-HD is normally 5.  )&#xD;
 [br][br]&#xD;
 [b]Ensure that the root path is the same on both servers. ie /movie[b]</Description>
-  <Networking>
-    <Mode>bridge</Mode>
-  </Networking>
   <Environment>
     <Variable>
-      <Value></Value>
+      <Value/>
       <Name>RADARR_URL</Name>
       <Mode/>
     </Variable>
     <Variable>
-      <Value></Value>
+      <Value/>
       <Name>RADARR_KEY</Name>
       <Mode/>
     </Variable>
     <Variable>
-      <Value></Value>
+      <Value/>
       <Name>RADARR4K_URL</Name>
       <Mode/>
     </Variable>
     <Variable>
-      <Value></Value>
+      <Value/>
       <Name>RADARR4K_KEY</Name>
       <Mode/>
     </Variable>
     <Variable>
-      <Value></Value>
+      <Value/>
       <Name>PROFILE_ID</Name>
       <Mode/>
     </Variable>
