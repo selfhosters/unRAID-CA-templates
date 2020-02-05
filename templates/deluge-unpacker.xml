@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>deluge-unpacker</Name>
+  <Repository>golift/deluge-unpacker</Repository>
+  <Registry>https://hub.docker.com/r/golift/deluge-unpacker</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/davidnewhall/deluge-unpacker/issues/new</Support>
+  <Project>https://github.com/davidnewhall/deluge-unpacker</Project>
+  <Icon>https://raw.githubusercontent.com/wiki/davidnewhall/deluge-unpacker/images/logo.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/deluge-unpacker.xml</TemplateURL>
+  <Category>Tools:</Category>
+  <Description>Deluge RAR download extractor for Sonarr and Radarr!</Description>
+  <Overview>
+  Deluge RAR download extractor for Sonarr and Radarr! Mount /downloads on all 3 or 4 containers to the same path on your host.
+  This application will automatically poll all of the apps (Deluge, Sonarr, Radarr) to check for downloads. When a completed
+  download contains a rar file, this application will extract the file and move the extracted contents back into the download
+  location. Files will be extracted recursively in an attempt to get all subs. [b]If you don't use one of Sonarr or Radarr, simply
+  empty those two fields for that app and it wont be polled.[/b] If you put all your containers on the same custom bridge you may not
+  need to expose any ports, and you can use DNS to reach other containers. It's a very convenient configuration!
+  </Overview>
+  <Config Name="Downloads Location" Target="/downloads" Default="" Mode="rw" Description="Container Path: /downloads - this must be the same path on this app, deluge and sonarr/radarr!" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Debug Log Output" Target="DU_DEBUG" Default="false|true" Description="Container Variable: DU_DEBUG - Turns on more logs" Type="Variable" Display="always-hide" Required="false" Mask="false"></Config>
+  <Config Name="Deluge URL" Target="DU_DELUGE_URL" Default="http://deluge:8112" Description="Container Variable: DU_DELUGE_URL" Type="Variable" Display="always-hide" Required="true" Mask="false"></Config>
+  <Config Name="Deluge Password" Target="DU_DELUGE_PASSWORD" Default="" Description="Container Variable: DU_DELUGE_PASSWORD - Required. Only works if Deluge has a password set" Type="Variable" Display="always-hide" Required="true" Mask="false"></Config>
+  <Config Name="Sonarr URL" Target="DU_SONARR_URL" Default="http://sonarr:8989" Description="Container Variable: DU_SONARR_URL" Type="Variable" Display="always-hide" Required="false" Mask="false"></Config>
+  <Config Name="Sonarr API Key" Target="DU_SONARR_API_KEY" Default="" Description="Container Variable: DU_SONARR_API_KEY" Type="Variable" Display="always-hide" Required="false" Mask="false"></Config>
+  <Config Name="Radarr URL" Target="DU_RADARR_URL" Default="http://radarr:7878" Description="Container Variable: DU_RADARR_URL" Type="Variable" Display="always-hide" Required="false" Mask="false"></Config>
+  <Config Name="Radarr API Key" Target="DU_RADARR_API_KEY" Default="" Description="Container Variable: DU_RADARR_API_KEY" Type="Variable" Display="always-hide" Required="false" Mask="false"></Config>
+  <!-- hide -->
+  <Config Name="Global Timeout" Target="DU_TIMEOUT" Default="10s|20s|30s|45s|1m|1m15s|1m30s|1m45s|2m" Description="Container Variable: DU_DELUGE_TIMEOUT - Recommend 30s-1m" Type="Variable" Display="advanced-hide" Required="false" Mask="false">1m</Config>
+  <Config Name="Deluge HTTP Username" Target="DU_DELUGE_HTTP_USERNAME" Default="" Description="Container Variable: DU_DELUGE_HTTP_USERNAME - Use this only if deluge is behind a reverse proxy with http auth enabled" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Config Name="Deluge HTTP Password" Target="DU_DELUGE_HTTP_PASSWORD" Default="" Description="Container Variable: DU_DELUGE_HTTP_PASSWORD - Use this only if deluge is behind a reverse proxy with http auth enabled" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Config Name="Parallel Extractions" Target="DU_PARALLEL" Default="1|2|3|4|5|6|7|8" Description="Container Variable: DU_PARALLEL - Recommend 1" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Config Name="Polling Interval" Target="DU_INTERVAL" Default="1m|2m|3m|4m|5m|10m|15m" Description="Container Variable: DU_INTERVAL - Recommend 2m-10m" Type="Variable" Display="advanced-hide" Required="false" Mask="false">5m</Config>
+  <Config Name="Delete Delay" Target="DU_DELETE_DELAY" Default="1m|5m|10m|15m|20m|30m|1h|2h" Description="Container Variable: DU_DELETE_DELAY - How long to wait before deleting extracted files. Recommend 5-30m" Type="Variable" Display="advanced-hide" Required="false" Mask="false">10m</Config>
+</Container>
