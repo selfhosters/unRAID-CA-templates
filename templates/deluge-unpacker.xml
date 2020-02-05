@@ -9,6 +9,7 @@
   <Support>https://github.com/davidnewhall/deluge-unpacker/issues/new</Support>
   <Project>https://github.com/davidnewhall/deluge-unpacker</Project>
   <Icon>https://raw.githubusercontent.com/wiki/davidnewhall/deluge-unpacker/images/logo.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/deluge-unpacker.xml</TemplateURL>
   <Category>Tools:</Category>
   <Description>Deluge RAR download extractor for Sonarr and Radarr!</Description>
   <Overview>
