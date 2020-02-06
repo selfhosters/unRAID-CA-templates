@@ -3,138 +3,56 @@
   <Name>UniFi-Poller</Name>
   <Repository>golift/unifi-poller</Repository>
   <Registry>https://hub.docker.com/r/golift/unifi-poller/</Registry>
+  <Shell>sh</Shell>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
-  <Support>https://hub.docker.com/r/golift/unifi-poller/</Support>
-  <Project>https://github.com/davidnewhall/unifi-poller</Project>
-  <Overview>Collect ALL UniFi Controller, Device and Client Data - Export to InfluxDB or Prometheus. Visualize with Grafana using included dashboards!&#xD;
-&#xD;
-This template works with poller versions 1.6.2+&#xD;
-&#xD;
-READ THE INSTRUCTIONS! &#xD;
-https://github.com/davidnewhall/unifi-poller/wiki/Installation</Overview>
-  <Category>Tools:Utilities Network:Management </Category>
+  <Changes>See https://github.com/unifi-poller/unifi-poller/wiki/CHANGES</Changes>
+  <Support>https://community.ui.com/questions/UniFi-Poller-Store-UniFi-Controller-Metrics-in-Prometheus-or-InfluxDB/58a0ea34-d2b3-41cd-93bb-d95d3896d1a1</Support>
+  <Project>https://github.com/unifi-poller/unifi-poller</Project>
+  <Category>Tools:Utilities Network:Management</Category>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/unifi-poller.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/wiki/davidnewhall/unifi-poller/images/unifi-poller-logo.png</Icon>
-  <Description>Collect ALL UniFi Controller, Device and Client Data - Export to InfluxDB or Prometheus. Visualize with Grafana using included dashboards!&#xD;
-&#xD;
-This template works with poller versions 1.6.2+&#xD;
-&#xD;
-READ THE INSTRUCTIONS! &#xD;
-https://github.com/davidnewhall/unifi-poller/wiki/Installation</Description>
+  <Icon>https://raw.githubusercontent.com/wiki/unifi-poller/unifi-poller/images/unifi-poller-logo.png</Icon>
+  <Overview>
+    [b]Collect ALL UniFi Controller, Device and Client Data - Export to InfluxDB or Prometheus.[/b]
+    Visualize with Grafana using included dashboards![br]
+    [b]IMPORTAT! ACTION REQUIRED![/b] As of UniFi Poller version 2 all of the
+    environment variables and config file format changed.
+    You must reconfigure this container after you upgrade![br]
+    [b]READ THE INSTRUCTIONS![/b]
+    [u][a href="https://github.com/unifi-poller/unifi-poller/wiki/Configuration"]https://github.com/unifi-poller/unifi-poller/wiki/Configuration[/a][/u][br]
+  </Overview>
+  <Description>Collect ALL UniFi Controller, Device and Client Data - Export to InfluxDB or Prometheus. Visualize with Grafana using included dashboards.</Description>
   <Networking>
+    <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort/>
+        <HostPort>9031</HostPort>
         <ContainerPort>9031</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
     </Publish>
   </Networking>
-  <Data/>
-  <Environment>
-    <Variable>
-      <Value/>
-      <Name>UP_MODE</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>UP_INFLUX_USER</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>UP_INFLUX_URL</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>UP_INFLUX_DB</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>UP_UNIFI_USER</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>UP_UNIFI_PASS</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>UP_UNIFI_URL</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>UP_DEBUG</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>UP_INTERVAL</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>UP_INFLUX_PASS</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>UP_HTTP_LISTEN</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>UP_SITES</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>UP_SAVE_IDS</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>UP_SAVE_SITES</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>UP_REAUTHENTICATE</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>UP_VERIFY_SSL</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>UP_QUIET</Name>
-      <Mode/>
-    </Variable>
-  </Environment>
-  <Config Name="Poller Mode" Target="UP_MODE" Default="influx" Mode="" Description="Container Variable: UP_MODE&#13;&#10;- Options: influx, prometheus, both" Type="Variable" Display="always-hide" Required="true" Mask="false"/>
-  <Config Name="InfluxDB User" Target="UP_INFLUX_USER" Default="unraid" Mode="" Description="Container Variable: UP_INFLUX_USER&#13;&#10;- Username for InfluxDB." Type="Variable" Display="always-hide" Required="false" Mask="false"/>
-  <Config Name="InfluxDB URL" Target="UP_INFLUX_URL" Default="http://unraid.ip:8086" Mode="" Description="Container Variable: UP_INFLUX_URL&#13;&#10;- URL for InfluxDB. Not important if using Prometheus only." Type="Variable" Display="always-hide" Required="false" Mask="false"/>
-  <Config Name="InfluxDB Database" Target="UP_INFLUX_DB" Default="unifi" Mode="" Description="Container Variable: UP_INFLUX_DB&#13;&#10;- InfluxDB database name. Create this first with: CREATE DATABASE unifi" Type="Variable" Display="always-hide" Required="false" Mask="false"/>
-  <Config Name="UniFi User" Target="UP_UNIFI_USER" Default="influxdb" Mode="" Description="Container Variable: UP_UNIFI_USER&#13;&#10;- Username for UniFi Controller." Type="Variable" Display="always-hide" Required="true" Mask="false"/>
-  <Config Name="UniFi Password" Target="UP_UNIFI_PASS" Default="" Mode="" Description="Container Variable: UP_UNIFI_PASS&#13;&#10;- Password for UniFi Controller." Type="Variable" Display="always-hide" Required="true" Mask="true"/>
-  <Config Name="UniFi URL" Target="UP_UNIFI_URL" Default="https://unraid.ip:8443" Mode="" Description="Container Variable: UP_UNIFI_URL&#13;&#10;- URL for UnFi controller." Type="Variable" Display="always-hide" Required="true" Mask="false"/>
-  <Config Name="Debug Mode" Target="UP_DEBUG" Default="true|false" Mode="" Description="Container Variable: UP_DEBUG&#13;&#10;- Includes more log out." Type="Variable" Display="always-hide" Required="false" Mask="false"/>
-  <Config Name="Polling Interval" Target="UP_INTERVAL" Default="30s" Mode="" Description="Container Variable: UP_POLLING_INTERVAL&#13;&#10;- Interval in Golang time format to store metrics in InfluxDB. ie. 30s, 1m, 1m30s" Type="Variable" Display="always-hide" Required="false" Mask="false"/>
-  <Config Name="InfluxDB Password" Target="UP_INFLUX_PASS" Default="unraid" Mode="" Description="Container Variable: UP_INFLUX_PASS&#13;&#10;- Password for InflluxDB (if required)" Type="Variable" Display="always-hide" Required="false" Mask="true"/>
-  <Config Name="HTTP Listen Address" Target="UP_HTTP_LISTEN" Default="0.0.0.0:9031" Mode="" Description="Container Value: UP_HTTP_LISTEN&#13;&#10;- Web port poller listens while in prometheus (or both) MODE. Must be in 0.0.0.0:port format." Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="Poll Sites" Target="UP_SITES" Default="all" Mode="" Description="Container Variable: UP_SITES&#13;&#10;- List of sites to poll on controller, comma separated. Use cryptic ID values here." Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="HTTP Port" Target="9031" Default="9031" Mode="tcp" Description="This needs to match UP_HTTP_LISTEN - this is the port prometheus connects to to pick up metrics." Type="Port" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="Save IDS" Target="UP_SAVE_IDS" Default="false" Mode="" Description="Container Variable: UP_SAVE_IDS&#13;&#10;- Save intrusion detection data in InfluxDB. This data does not contain graphable metrics." Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="Save Sites" Target="UP_SAVE_SITES" Default="true" Mode="" Description="Container Value: UP_SAVE_SITES&#13;&#10;- Disable this to save space and resources in InfluxBD. This data powers the Network Sites dashboard." Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="UniFi Re-authenticate" Target="UP_REAUTHENTICATE" Default="false" Mode="" Description="Container Variable: UP_REAUTHENTICATE&#13;&#10;- This is a debug method. Do not enable unless instructed to do so." Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="UniFi Verify SSL" Target="UP_VERIFY_SSL" Default="false" Mode="" Description="Container Variable: UP_VERIFY_SSL&#13;&#10;- Enable this if you have a valid SSL cert on your controller." Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="Quiet mode" Target="UP_QUIET" Default="false" Mode="" Description="Container Variable: UP_QUIET&#13;&#10;- Disables most log output." Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Environment/>
+  <!-- poller -->
+  <Config Name="Poller Debug Mode" Target="UP_POLLER_DEBUG" Default="false|true" Mode="" Description="Container Variable: UP_POLLER_DEBUG - Setting true includes more log output." Type="Variable" Display="always-hide" Required="false" Mask="false"></Config>
+  <Config Name="Poller Quiet Mode" Target="UP_POLLER_QUIET" Default="false|true" Mode="" Description="Container Variable: UP_POLLER_QUIET - Setting true disables most log output." Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <!-- unifi -->
+  <Config Name="UniFi 1st Controller Host URL" Target="UP_UNIFI_CONTROLLER_0_URL" Default="https://unraid.ip:8443" Mode="" Description="Container Variable: UP_UNIFI_CONTROLLER_0_URL - URL for UniFi controller." Type="Variable" Display="always-hide" Required="true" Mask="false"></Config>
+  <Config Name="UniFi 1st Controller Username" Target="UP_UNIFI_CONTROLLER_0_USER" Default="unifipoller" Mode="" Description="Container Variable: UP_UNIFI_CONTROLLER_0_USER - Username for UniFi Controller." Type="Variable" Display="always-hide" Required="true" Mask="false">unifipoller</Config>
+  <Config Name="UniFi 1st Controller Password" Target="UP_UNIFI_CONTROLLER_0_PASS" Default="" Mode="" Description="Container Variable: UP_UNIFI_CONTROLLER_0_PASS - Password for UniFi Controller." Type="Variable" Display="always-hide" Required="true" Mask="true"></Config>
+  <Config Name="UniFi 1st Controller Save DPI" Target="UP_UNIFI_CONTROLLER_0_SAVE_DPI" Default="false|true" Mode="" Description="Container Variable: UP_UNIFI_CONTROLLER_0_SAVE_DPI - Poll and save deep packet inspection data. This is a lot of data, and it must be enabled on the controller." Type="Variable" Display="always-hide" Required="false" Mask="false"></Config>
+  <Config Name="UniFi 1st Controller Save IDS" Target="UP_UNIFI_CONTROLLER_0_SAVE_IDS" Default="false|true" Mode="" Description="Container Variable: UP_UNIFI_CONTROLLER_0_SAVE_IDS - Save intrusion detection data (InfluxDB only). This data does not contain graphable metrics." Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Config Name="UniFi 1st Controller Save Sites" Target="UP_UNIFI_CONTROLLER_0_SAVE_SITES" Default="true|false" Mode="" Description="Container Value: UP_UNIFI_CONTROLLER_0_SAVE_SITES - Set this to 'false' to save space and resources in InfluxDB. This data powers the Network Sites dashboard." Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Config Name="UniFi 1st Controller Poll Sites" Target="UP_UNIFI_CONTROLLER_0_SITES_0" Default="all" Mode="" Description="Container Variable: UP_UNIFI_CONTROLLER_0_SITES_0 - List of sites to poll on controller, comma separated. Use cryptic ID values here; set to 'all' for all sites." Type="Variable" Display="advanced-hide" Required="false" Mask="false">all</Config>
+  <Config Name="UniFi 1st Controller Verify SSL" Target="UP_UNIFI_CONTROLLER_0_VERIFY_SSL" Default="false|true" Mode="" Description="Container Variable: UP_UNIFI_CONTROLLER_0_VERIFY_SSL - Enable this if you have a valid SSL cert on your controller." Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <!-- influx -->
+  <Config Name="InfluxDB Host URL" Target="UP_INFLUXDB_URL" Default="http://unraid.ip:8086" Mode="" Description="Container Variable: UP_INFLUXDB_URL - URL for InfluxDB. Not important if using Prometheus only." Type="Variable" Display="always-hide" Required="false" Mask="false"></Config>
+  <Config Name="InfluxDB Username" Target="UP_INFLUXDB_USER" Default="unifipoller" Mode="" Description="Container Variable: UP_INFLUXDB_USER - Username for InfluxDB. Usually unimportant because InfluxDB has no auth by default." Type="Variable" Display="advanced-hide" Required="false" Mask="false">unifipoller</Config>
+  <Config Name="InfluxDB Password" Target="UP_INFLUXDB_PASS" Default="" Mode="" Description="Container Variable: UP_INFLUXDB_PASS - Password for InfluxDB (if required)" Type="Variable" Display="advanced-hide" Required="false" Mask="true"></Config>
+  <Config Name="InfluxDB Database" Target="UP_INFLUXDB_DB" Default="unifi" Mode="" Description="Container Variable: UP_INFLUXDB_DB - InfluxDB database name. Create this first with: CREATE DATABASE unifi" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Config Name="InfluxDB Interval" Target="UP_INFLUXDB_INTERVAL" Default="15s|30s|45s|1m|90s|2m|3m|4m|5m" Mode="" Description="Container Variable: UP_INFLUXDB_INTERVAL - Polling interval for saving metrics into InfluxDB. 30s-90s recommend." Type="Variable" Display="advanced-hide" Required="false" Mask="false">30s</Config>
+  <Config Name="InfluxDB Disabled" Target="UP_INFLUXDB_DISABLE" Default="false|true" Mode="" Description="Container Variable: UP_INFLUXDB_DISABLE - Disable InfluxDB polling. Set this true if you only use Prometheus." Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <!-- prometheus -->
+  <Config Name="Prometheus Listener" Target="UP_PROMETHEUS_HTTP_LISTEN" Default="0.0.0.0:9031" Mode="" Description="Container Value: UP_PROMETHEUS_HTTP_LISTEN - IP and port poller listens on for HTTP Prometheus scrapes. Must be in 0.0.0.0:port format." Type="Variable" Display="advanced-hide" Required="false" Mask="false">0.0.0.0:9031</Config>
+  <Config Name="Prometheus Disabled" Target="UP_PROMETHEUS_DISABLE" Default="false|true" Mode="" Description="Container Variable: UP_PROMETHEUS_DISABLE - Disable Prometheus listener. Set true if you only use InfluxDB." Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
 </Container>

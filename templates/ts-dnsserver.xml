@@ -3,6 +3,7 @@
   <Name>ts-dnsserver</Name>
   <Repository>roxedus/ts-dnsserver</Repository>
   <BaseImage>roxedus/base-alpine:latest</BaseImage>
+  <Network>bridge</Network>
   <Registry>https://hub.docker.com/r/roxedus/ts-dnsserver/</Registry>
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
