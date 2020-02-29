@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>unpackerr</Name>
+  <Repository>golift/unpackerr</Repository>
+  <Registry>https://hub.docker.com/r/golift/unpackerr</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/davidnewhall/unpackerr/issues/new</Support>
+  <Project>https://github.com/davidnewhall/unpackerr</Project>
+  <Icon>https://raw.githubusercontent.com/wiki/davidnewhall/unpackerr/images/logo.png</Icon>
+  <Category>Tools:</Category>
+  <Description>Download extractor for Sonarr, Radarr and Lidarr!</Description>
+  <Overview>
+  RAR download extractor for Sonarr, Radarr and Lidarr! Mount /downloads on all 3 or 4 containers to the same path on your host.
+  This application will automatically poll all of the apps (Lidarr, Sonarr, Radarr) to check for downloads. When a completed
+  download contains a rar file, this application will extract the file and move the extracted contents back into the download
+  location. Files will be extracted recursively in an attempt to get all subtitles. [b]If you don't use one of Lidarr, Sonarr
+  or Radarr, simply empty those two fields for that app and it wont be polled.[/b] If you put all your containers on the same
+  custom bridge you may not need to expose any ports, and you can use DNS to reach other containers. It's a very convenient configuration!
+  </Overview>
+  <Config Name="Downloads Location" Target="/downloads" Default="" Mode="rw" Description="Container Path: /downloads - this must be the same path on this app and sonarr/radarr/lidarr!" Type="Path" Display="always-hide" Required="true" Mask="false"></Config>
+  <Config Name="Debug Log Output" Target="UN_DEBUG" Default="false|true" Description="UN_DEBUG - Turns on more logs. You should use this at least once so you know what it does." Type="Variable" Display="always-hide" Required="false" Mask="false"></Config>
+  <Config Name="Log File Path" Target="UN_LOG_FILE" Default="" Description="UN_LOG_FILE - Logs will be written to this path if provided. Recommended, but required." Type="Variable" Display="always" Required="false" Mask="false">/downloads/unpackerr.log</Config>
+  <Config Name="Sonarr URL" Target="UN_SONARR_0_URL" Default="" Description="UN_SONARR_0_URL - Sonarr URL" Type="Variable" Display="always-hide" Required="false" Mask="false">http://sonarr:8989</Config>
+  <Config Name="Sonarr API Key" Target="UN_SONARR_0_API_KEY" Default="" Description="UN_SONARR_0_API_KEY - API Key - leave blank if not using Sonarr" Type="Variable" Display="always-hide" Required="false" Mask="false"></Config>
+  <Config Name="Sonarr Download Path" Target="UN_SONARR_0_PATH" Default="" Description="UN_SONARR_0_PATH - Path to find Sonarr downloads. Must be within /downloads location (above)" Type="Variable" Display="always-hide" Required="false" Mask="false">/downloads</Config>
+  <Config Name="Radarr URL" Target="UN_RADARR_0_URL" Default="" Description="UN_RADARR_0_URL - Radarr URL" Type="Variable" Display="always-hide" Required="false" Mask="false">http://radarr:7878</Config>
+  <Config Name="Radarr API Key" Target="UN_RADARR_0_API_KEY" Default="" Description="UN_RADARR_0_API_KEY - API Key - leave blank if not using Radarr" Type="Variable" Display="always-hide" Required="false" Mask="false"></Config>
+  <Config Name="Radarr Download Path" Target="UN_RADARR_0_PATH" Default="" Description="UN_RADARR_0_PATH - Path to find Radarr downloads. Must be within /downloads location (above)" Type="Variable" Display="always-hide" Required="false" Mask="false">/downloads</Config>
+  <Config Name="Lidarr URL" Target="UN_LIDARR_0_URL" Default="" Description="UN_LIDARR_0_URL - Lidarr URL" Type="Variable" Display="always-hide" Required="false" Mask="false">http://lidarr:8686</Config>
+  <Config Name="Lidarr API Key" Target="UN_LIDARR_0_API_KEY" Default="" Description="UN_LIDARR_0_API_KEY - API Key - leave blank if not using Lidarr" Type="Variable" Display="always-hide" Required="false" Mask="false"></Config>
+  <!-- hide -->
+  <Config Name="Global Timeout" Target="UN_TIMEOUT" Default="10s|15s|20s|30s|1m" Description="UN_TIMEOUT - How long to wait for the apps to respond to API requests. Recommend 10-15s" Type="Variable" Display="advanced-hide" Required="false" Mask="false">15s</Config>
+  <Config Name="Parallel Extractions" Target="UN_PARALLEL" Default="1|2|3|4|5|6|7|8" Description="UN_PARALLEL - Most setups will not benefit from more than 1. Recommend 1" Type="Variable" Display="advanced-hide" Required="false" Mask="false">1</Config>
+  <Config Name="Polling Interval" Target="UN_INTERVAL" Default="1m|2m|3m|4m|5m|10m|15m" Description="UN_INTERVAL - How often to talk to Sonarr, Radarr and Lidarr. Recommend 1-4m" Type="Variable" Display="advanced-hide" Required="false" Mask="false">2m</Config>
+  <Config Name="Delete Delay" Target="UN_DELETE_DELAY" Default="1m|5m|10m|15m|20m|30m|1h" Description="UN_DELETE_DELAY - How long to wait before deleting extracted files. Recommend 5-30m" Type="Variable" Display="advanced-hide" Required="false" Mask="false">5m</Config>
+  <Config Name="Start Delay" Target="UN_START_DELAY" Default="1m|5m|10m|15m|20m|30m|1h" Description="UN_START_DELAY - How long to wait before extracting completed downloads. Recommend 1m for local and 5m+ for remote" Type="Variable" Display="advanced-hide" Required="false" Mask="false">1m</Config>
+  <Config Name="Retry Delay" Target="UN_RETRY_DELAY" Default="1m|5m|10m|15m|20m|30m|1h" Description="UN_RETRY_DELAY - How long to wait before retrying failed extractions. Recommend 5m" Type="Variable" Display="advanced-hide" Required="false" Mask="false">5m</Config>
+</Container>
