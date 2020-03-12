@@ -5,9 +5,10 @@
   <Registry>https://hub.docker.com/r/darkalfx/requestrr/</Registry>
   <Category>Tools:Utilities</Category>
   <Privileged>false</Privileged>
-  <Support>https://discord.gg/ATCM64M</Support>
+  <Network>bridge</Network>
+  <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
   <Project>https://github.com/darkalfx/requestrr</Project>
-  <Overview>Requestrr is a chatbot used to simplify using services like Sonarr/Radarr/Ombi via the use of chat. Current platform is Discord only, but the bot was built around the ideology of quick adaptation for new features as well as new platforms.</Overview>
+  <Overview>Requestrr is a chatbot used to simplify using services like Sonarr/Radarr/Ombi via the use of chat. Current platform is Discord only, but the bot was built around the ideology of quick adaptation for new features as well as new platforms. [/b] AppSupport: https://discord.gg/ATCM64M</Overview>
   <WebUI>http://[IP]:[PORT:5060]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/requestrr.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/requestrr.png</Icon>
