@@ -13,6 +13,6 @@
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/requestrr.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/requestrr.png</Icon>
   <ExtraParams>--restart=unless-stopped</ExtraParams>
-  <Config Name="WebUI" Target="5060" Default="5060" Mode="tcp" Description="Container Port: 5060" Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="WebUI" Target="4545" Default="4545" Mode="tcp" Description="Container Port: 5060" Type="Port" Display="always" Required="true" Mask="false"/>
   <Config Name="Config" Target="/root/config/" Default="/mnt/user/appdata/requestrr" Mode="rw" Description="Container Path: /root/config/" Type="Path" Display="advanced" Required="false" Mask="false"/>
 </Container>
