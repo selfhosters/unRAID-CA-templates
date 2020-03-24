@@ -9,10 +9,10 @@
   <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
   <Project>https://github.com/darkalfx/requestrr</Project>
   <Overview>Requestrr is a chatbot used to simplify using services like Sonarr/Radarr/Ombi via the use of chat. Current platform is Discord only, but the bot was built around the ideology of quick adaptation for new features as well as new platforms. [/b] AppSupport: https://discord.gg/ATCM64M</Overview>
-  <WebUI>http://[IP]:[PORT:5060]</WebUI>
+  <WebUI>http://[IP]:[PORT:4545]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/requestrr.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/requestrr.png</Icon>
   <ExtraParams>--restart=unless-stopped</ExtraParams>
-  <Config Name="WebUI" Target="4545" Default="4545" Mode="tcp" Description="Container Port: 5060" Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="WebUI" Target="4545" Default="4545" Mode="tcp" Description="Container Port: 4545" Type="Port" Display="always" Required="true" Mask="false"/>
   <Config Name="Config" Target="/root/config/" Default="/mnt/user/appdata/requestrr" Mode="rw" Description="Container Path: /root/config/" Type="Path" Display="advanced" Required="false" Mask="false"/>
 </Container>
