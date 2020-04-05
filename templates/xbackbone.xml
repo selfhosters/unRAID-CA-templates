@@ -33,64 +33,10 @@ chown -R 1000:1000 /mnt/user/appdata/xbb</Overview>
   <WebUI>http://[IP]:[PORT:80]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/xbackbone.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/xbackbone.png</Icon>
-  <Description>Container for XBackBone, a simple and lightweight ShareX PHP backend &#xD;
-[br][br]&#xD;
-&#xD;
--e URL&#xD;
-[br]&#xD;
-This will specify the app url, slashes need to be escaped like this -e URL=http://127.0.0.1&#xD;
-&#xD;
-[br][br]&#xD;
-[b]Permissions[/b]&#xD;
-[br]&#xD;
-[br]&#xD;
-The folder on host system need to have both UID and GID 1000&#xD;
-[br][br]&#xD;
-[b]Example[/b]&#xD;
-[br][br]&#xD;
-mkdir -p /mnt/user/appdata/xbb/storage&#xD;
-[br]&#xD;
-mkdir -p /mnt/user/appdata/xbb/database&#xD;
-[br]&#xD;
-mkdir -p /mnt/user/appdata/xbb/logs&#xD;
-[br][br]&#xD;
-chown -R 1000:1000 /mnt/user/appdata/xbb</Description>
-  <Networking>
-    <Publish>
-      <Port>
-        <HostPort/>
-        <ContainerPort>80</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-    </Publish>
-  </Networking>
-  <Data>
-    <Volume>
-      <HostDir/>
-      <ContainerDir>/app/storage</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-    <Volume>
-      <HostDir/>
-      <ContainerDir>/app/resources/database</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-    <Volume>
-      <HostDir/>
-      <ContainerDir>/app/logs</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-  </Data>
-  <Environment>
-    <Variable>
-      <Value/>
-      <Name>URL</Name>
-      <Mode/>
-    </Variable>
-  </Environment>
   <Config Name="Port" Target="80" Default="9876" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false"/>
   <Config Name="URL" Target="URL" Default="http:\/\/192.168.1.2:9876" Mode="" Description="This will specify the app url, slashes need to be escaped like this -e URL=http:\/\/127.0.0.1" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Storage" Target="/app/storage" Default="/mnt/user/appdata/xbackbone/images" Mode="rw" Description="Container Path: /app/storage" Type="Path" Display="always" Required="false" Mask="false"/>
   <Config Name="Database" Target="/app/resources/database" Default="/mnt/user/appdata/xbackbone/db" Mode="rw" Description="Container Path: /app/resources/database" Type="Path" Display="always" Required="false" Mask="false"/>
   <Config Name="Logs" Target="/app/logs" Default="/mnt/user/appdata/xbackbone/logs" Mode="rw" Description="Container Path: /app/logs" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="Max Upload Size" Target="PHP_UPLOAD_MAX_FILESIZE" Default="" Mode="" Description="Container Variable: PHP_UPLOAD_MAX_FILESIZE" Type="Variable" Display="always" Required="true" Mask="false">10M</Config>
 </Container>
