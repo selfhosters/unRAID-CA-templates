@@ -15,6 +15,7 @@ You will need to setup separate instances of syncarr&#xD;
 [b]IMPORTANT: REMOVE THE VARIABLES YOU'RE NOT USING[b/]&#xD;
 </Overview>
   <Category>MediaServer:Video MediaServer:Music</Category>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/syncarr.xml</TemplateURL>
   <Config Name="SYNC_INTERVAL_SECONDS" Target="SYNC_INTERVAL_SECONDS" Default="300" Mode="" Description="Container Variable: SYNC_INTERVAL_SECONDS" Type="Variable" Display="always" Required="false" Mask="false">300</Config>
   <Config Name="SYNCARR_BIDIRECTIONAL_SYNC" Target="SYNCARR_BIDIRECTIONAL_SYNC" Default="0" Mode="" Description="Container Variable: SYNCARR_BIDIRECTIONAL_SYNC" Type="Variable" Display="always" Required="false" Mask="false">0</Config>
   <Config Name="SYNCARR_AUTO_SEARCH" Target="SYNCARR_AUTO_SEARCH" Default="0" Mode="" Description="Container Variable: SYNCARR_AUTO_SEARCH" Type="Variable" Display="always" Required="false" Mask="false">0</Config>
