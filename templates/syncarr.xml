@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>syncarr</Name>
+  <Repository>syncarr/syncarr</Repository>
+  <Registry>https://hub.docker.com/r/syncarr/syncarr/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
+  <Project>https://github.com/syncarr/syncarr</Project>
+  <Overview>Syncs two Radarr/Sonarr/Lidarr servers through the web API. Useful for syncing a 4k radarr/sonarr instance to a 1080p radarr/sonarr instance.&#xD;
+&#xD;
+[b]Note you cannot have a mix of radarr, lidarr, or sonarr config setups at the same time.&#xD;
+You will need to setup separate instances of syncarr&#xD;
+[/b]&#xD;
+[b]IMPORTANT: REMOVE THE VARIABLES YOU'RE NOT USING[b/]&#xD;
+</Overview>
+  <Category>MediaServer:Video MediaServer:Music</Category>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/syncarr.xml</TemplateURL>
+  <Config Name="SYNC_INTERVAL_SECONDS" Target="SYNC_INTERVAL_SECONDS" Default="300" Mode="" Description="Container Variable: SYNC_INTERVAL_SECONDS" Type="Variable" Display="always" Required="false" Mask="false">300</Config>
+  <Config Name="SYNCARR_BIDIRECTIONAL_SYNC" Target="SYNCARR_BIDIRECTIONAL_SYNC" Default="0" Mode="" Description="Container Variable: SYNCARR_BIDIRECTIONAL_SYNC" Type="Variable" Display="always" Required="false" Mask="false">0</Config>
+  <Config Name="SYNCARR_AUTO_SEARCH" Target="SYNCARR_AUTO_SEARCH" Default="0" Mode="" Description="Container Variable: SYNCARR_AUTO_SEARCH" Type="Variable" Display="always" Required="false" Mask="false">0</Config>
+  <Config Name="SYNCARR_MONITOR_NEW_CONTENT" Target="SYNCARR_MONITOR_NEW_CONTENT" Default="0" Mode="" Description="Container Variable: SYNCARR_MONITOR_NEW_CONTENT" Type="Variable" Display="always" Required="false" Mask="false">0</Config>
+  <Config Name="RADARR_A_URL" Target="RADARR_A_URL" Default="" Mode="" Description="Container Variable: RADARR_A_URL" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="RADARR_A_KEY" Target="RADARR_A_KEY" Default="" Mode="" Description="Container Variable: RADARR_A_KEY" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="RADARR_B_URL" Target="RADARR_B_URL" Default="" Mode="" Description="Container Variable: RADARR_B_URL" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="RADARR_B_KEY" Target="RADARR_B_KEY" Default="" Mode="" Description="Container Variable: RADARR_B_KEY" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="RADARR_B_PROFILE" Target="RADARR_B_PROFILE" Default="" Mode="" Description="Container Variable: RADARR_B_PROFILE" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="RADARR_B_PATH" Target="RADARR_B_PATH" Default="" Mode="" Description="Container Variable: RADARR_B_PATH" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="SONARR_A_URL" Target="SONARR_A_URL" Default="" Mode="" Description="Container Variable: SONARR_A_URL" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="SONARR_A_KEY" Target="SONARR_A_KEY" Default="" Mode="" Description="Container Variable: SONARR_A_KEY" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="SONARR_B_URL" Target="SONARR_B_URL" Default="" Mode="" Description="Container Variable: SONARR_B_URL" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="SONARR_B_KEY" Target="SONARR_B_KEY" Default="" Mode="" Description="Container Variable: SONARR_B_KEY" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="SONARR_B_PROFILE" Target="SONARR_B_PROFILE" Default="" Mode="" Description="Container Variable: SONARR_B_PROFILE" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="SONARR_B_PATH" Target="SONARR_B_PATH" Default="" Mode="" Description="Container Variable: SONARR_B_PATH" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="LIDARR_A_URL" Target="LIDARR_A_URL" Default="" Mode="" Description="Container Variable: LIDARR_A_URL" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="LIDARR_A_KEY" Target="LIDARR_A_KEY" Default="" Mode="" Description="Container Variable: LIDARR_A_KEY" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="LIDARR_B_URL" Target="LIDARR_B_URL" Default="" Mode="" Description="Container Variable: LIDARR_B_URL" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="LIDARR_B_KEY" Target="LIDARR_B_KEY" Default="" Mode="" Description="Container Variable: LIDARR_B_KEY" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="LIDARR_B_PROFILE" Target="LIDARR_B_PROFILE" Default="" Mode="" Description="Container Variable: LIDARR_B_PROFILE" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="LIDARR_B_PATH" Target="LIDARR_B_PATH" Default="" Mode="" Description="Container Variable: LIDARR_B_PATH" Type="Variable" Display="always" Required="false" Mask="false"/>
+</Container>
