@@ -10,7 +10,7 @@
   <Overview>&#xD;
         CrushFTP9 is an extremely powerful, easy to use FTP solution that can use sftp, ftp, webDav, and http.&#xD;
     </Overview>
-  <Category>Network:FTP Network:Other Productivity:Tools Network:Web</Category>
+  <Category>Network:FTP Network:Other Network:Web</Category>
   <WebUI>http://[IP]:[PORT:8080]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/crushftp9.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/crushftp.png</Icon>
