@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>Kdenlive VPN</Name>
+  <Name>Kdenlive VNC</Name>
   <Repository>tessypowder/docker-kdenlive:latest</Repository>
   <Registry>https://hub.docker.com/r/tessypowder/docker-kdenlive/</Registry>
   <Category>MediaApp:Video MediaApp:Music Productivity: Tools:</Category>
