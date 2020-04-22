@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>youtube-dl material</Name>
+  <Repository>tzahi12345/youtubedl-material</Repository>
+  <Registry>https://hub.docker.com/r/tzahi12345/youtubedl-material/</Registry>
+  <Category>Downloaders: MediaApp:Video MediaApp:Music Status:Beta</Category>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>hhttps://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
+  <Project>https://github.com/Tzahi12345/YoutubeDL-Material</Project>
+  <Overview>YoutubeDL-Material is a self-hosted youtube-dl Server with a modern Material-based GUI and the capability to apply advanced configurations, like setting your own download paths based on rules.&#xD;
+&#xD;
+It is designed to be more customizable than the alternatives out there.&#xD;
+&#xD;
+It will also keep a record of already downloaded items. Enjoy! :)</Overview>
+  <WebUI>http://[IP]:[PORT:17442]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/youtubedl-material.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/youtubedl-material.png</Icon>
+  <Config Name="WebUI" Target="17442" Default="17442" Mode="tcp" Description="Container: 17442" Type="Port" Display="always" Required="true" Mask="false">17442</Config>
+  <Config Name="Audio Downloads" Target="/audio/" Default="" Mode="rw" Description="Container Path: /audio/" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/downloads/youtube-dl/</Config>
+  <Config Name="Video Downloads" Target="/video/" Default="" Mode="rw" Description="Container Path: /video/" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/downloads/youtube-dl/</Config>
+  <Config Name="WebUI Title" Target="ytdl_title_top" Default="" Mode="" Description="Container Variable: ytdl_title_top" Type="Variable" Display="always" Required="false" Mask="false">YoutubeDL Material</Config>
+  <Config Name="AppData" Target="/app/appdata" Default="" Mode="rw" Description="Container Path: /app/appdata" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/youtubedl-material</Config>
+  <Config Name="Advanced Configuration Mode" Target="ytdl_allow_advanced_download" Default="true" Mode="" Description="Allow advanced configuration (true/false)" Type="Variable" Display="advanced" Required="false" Mask="false">true</Config>
+</Container>
