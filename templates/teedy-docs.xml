@@ -13,7 +13,7 @@
   </Branch>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
-  <Support>https://hub.docker.com/r/sismics/docs/</Support>
+  <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
   <Project>https://github.com/sismics/docs</Project>
   <Overview>Teedy is an open-source, lightweight document management system (DMS) for individuals and businesses.&#xD;
 &#xD;
