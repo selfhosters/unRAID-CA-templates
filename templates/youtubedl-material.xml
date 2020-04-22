@@ -16,10 +16,10 @@ It will also keep a record of already downloaded items. Enjoy! :)</Overview>
   <WebUI>http://[IP]:[PORT:17442]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/youtubedl-material.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/youtubedl-material.png</Icon>
-  <Config Name="WebUI" Target="17442" Default="17442" Mode="tcp" Description="WebUI Port" Type="Port" Display="always" Required="true" Mask="false">
-  <Config Name="Audio Downloads" Target="/audio/" Default="" Mode="rw" Description="Audio Downloads" Type="Path" Display="always" Required="true" Mask="false">
-  <Config Name="Video Downloads" Target="/video/" Default="" Mode="rw" Description="Video Downloads" Type="Path" Display="always" Required="true" Mask="false">
-  <Config Name="WebUI Title" Target="ytdl_title_top" Default="YoutubeDL Material" Mode="" Description="Container Variable: ytdl_title_top" Type="Variable" Display="always" Required="false" Mask="false">
-  <Config Name="AppData" Target="/app/appdata" Default="/mnt/user/appdata/youtubedl-material" Mode="rw" Description="Container Path: /app/appdata" Type="Path" Display="always" Required="true" Mask="false">
-  <Config Name="Advanced Configuration Mode" Target="ytdl_allow_advanced_download" Default="true|false" Mode="" Description="Allow advanced configuration (true/false)" Type="Variable" Display="advanced" Required="false" Mask="false">
+  <Config Name="WebUI" Target="17442" Default="17442" Mode="tcp" Description="WebUI Port" Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="Audio Downloads" Target="/audio/" Default="" Mode="rw" Description="Audio Downloads" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Video Downloads" Target="/video/" Default="" Mode="rw" Description="Video Downloads" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="WebUI Title" Target="ytdl_title_top" Default="YoutubeDL Material" Mode="" Description="Container Variable: ytdl_title_top" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="AppData" Target="/app/appdata" Default="/mnt/user/appdata/youtubedl-material" Mode="rw" Description="Container Path: /app/appdata" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Advanced Configuration Mode" Target="ytdl_allow_advanced_download" Default="true|false" Mode="" Description="Allow advanced configuration (true/false)" Type="Variable" Display="advanced" Required="false" Mask="false"/>
 </Container>
