@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>ecoDMS</Name>
+  <Repository>ecodms/allinone-18.09</Repository>
+  <Registry>https://hub.docker.com/r/ecodms/allinone-18.09/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/ecodms/allinone-18.09/</Support>
+  <Project>https://www.ecodms.de/index.php/en/</Project>
+  <Overview>ecoDMS 18.09 (apu) Full Installation - Document Management System (DMS) - Audit-compliant archive for scanning, archiving, managing and retrieving all data and documents.</Overview>
+  <Category>Cloud: Productivity:</Category>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <Icon>https://www.ecodms.de/images/mainpages/products/ecodms-archiv.png</Icon>
+  <Description>ecoDMS 18.09 (apu) Full Installation - Document Management System (DMS) - Audit-compliant archive for scanning, archiving, managing and retrieving all data and documents.</Description>
+  <Config Name="Scaninput path" Target="/srv/scaninput" Default="" Mode="rw" Description="Container Path: /srv/scaninput" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Restore path" Target="/srv/restore" Default="" Mode="rw" Description="Container Path: /srv/restore" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Backup path" Target="/srv/backup" Default="" Mode="rw" Description="Container Path: /srv/backup" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Data path" Target="/srv/data" Default="" Mode="rw" Description="Container Path: /srv/data" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="ecoDMS Connection Manager" Target="17001" Default="" Mode="tcp" Description="Container Port: 17001" Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="ecoDMS Database" Target="17002" Default="" Mode="tcp" Description="Container Port: 17002" Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="ecoDMS Weboberfl&#xE4;che" Target="8080" Default="" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="ecoDMS API" Target="8180" Default="" Mode="tcp" Description="Container Port: 8180" Type="Port" Display="always" Required="true" Mask="false"/>
+</Container>
