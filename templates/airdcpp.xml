@@ -24,4 +24,6 @@ Username / password for the default admin account is: admin / password</Descript
   <Config Name="Data Storage" Target="/airdcpp" Default="" Mode="rw" Description="Container Path: /airdcpp" Type="Path" Display="always" Required="true" Mask="false"/>
   <Config Name="Downloads" Target="/Downloads" Default="" Mode="rw" Description="Container Path: /Downloads" Type="Path" Display="always" Required="true" Mask="false"/>
   <Config Name="Share" Target="/Share" Default="" Mode="rw" Description="Container Path: /Share" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced-hide" Required="false" Mask="false">99</Config>
+  <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
 </Container>
