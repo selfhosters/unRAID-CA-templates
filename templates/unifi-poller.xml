@@ -7,7 +7,7 @@
   <Network>bridge</Network>
   <Privileged>false</Privileged>
   <Changes>See https://github.com/unifi-poller/unifi-poller/wiki/CHANGES</Changes>
-  <Support>https://community.ui.com/questions/UniFi-Poller-Store-UniFi-Controller-Metrics-in-Prometheus-or-InfluxDB/58a0ea34-d2b3-41cd-93bb-d95d3896d1a1</Support>
+  <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
   <Project>https://github.com/unifi-poller/unifi-poller</Project>
   <Category>Tools:Utilities Network:Management</Category>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/unifi-poller.xml</TemplateURL>
@@ -21,18 +21,6 @@
     [b]READ THE INSTRUCTIONS![/b]
     [u][a href="https://github.com/unifi-poller/unifi-poller/wiki/Configuration"]https://github.com/unifi-poller/unifi-poller/wiki/Configuration[/a][/u][br]
   </Overview>
-  <Description>Collect ALL UniFi Controller, Device and Client Data - Export to InfluxDB or Prometheus. Visualize with Grafana using included dashboards.</Description>
-  <Networking>
-    <Mode>bridge</Mode>
-    <Publish>
-      <Port>
-        <HostPort>9031</HostPort>
-        <ContainerPort>9031</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-    </Publish>
-  </Networking>
-  <Environment/>
   <!-- poller -->
   <Config Name="Poller Debug Mode" Target="UP_POLLER_DEBUG" Default="false|true" Mode="" Description="Container Variable: UP_POLLER_DEBUG - Setting true includes more log output." Type="Variable" Display="always-hide" Required="false" Mask="false"></Config>
   <Config Name="Poller Quiet Mode" Target="UP_POLLER_QUIET" Default="false|true" Mode="" Description="Container Variable: UP_POLLER_QUIET - Setting true disables most log output." Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>

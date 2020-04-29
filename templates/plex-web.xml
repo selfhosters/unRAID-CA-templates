@@ -5,36 +5,13 @@
   <Registry>https://hub.docker.com/r/tronyx/plex-web/</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
-  <Support>https://hub.docker.com/r/tronyx/plex-web/</Support>
+  <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
   <Project>https://github.com/banjoanton/plex-web</Project>
   <Overview>PlexWeb is a web app for Plex servers. Connect to your server via your URL and token to access features like viewing current activity and adding playlists based on IMDb lists. Based on Flask.</Overview>
   <Category>MediaServer:Other Status:Stable</Category>
   <WebUI>http://[IP]:[PORT:5000]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/plex-web.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/plex-web.png</Icon>
-  <Description>PlexWeb is a web app for Plex servers. Connect to your server via your URL and token to access features like viewing current activity and adding playlists based on IMDb lists. Based on Flask.</Description>
-  <Networking>
-    <Publish>
-      <Port>
-        <HostPort/>
-        <ContainerPort>5000</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-    </Publish>
-  </Networking>
-  <Data/>
-  <Environment>
-    <Variable>
-      <Value/>
-      <Name>PUID</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>PGID</Name>
-      <Mode/>
-    </Variable>
-  </Environment>
   <Config Name="WebUI" Target="5000" Default="5000" Mode="tcp" Description="Container Port: 5000" Type="Port" Display="always" Required="true" Mask="false"/>
   <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="advanced" Required="true" Mask="false"/>
   <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="advanced" Required="true" Mask="false"/>

@@ -12,55 +12,6 @@
   <WebUI>http://[IP]:[PORT:8888]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/unmanic.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/unmanic.png</Icon>
-  <Description>Unmanic is a simple tool for optimising your video library to a single format. The ultimate goal of Unmanic is to take the complexity out of converting your whole media library. The idea is to simply point Unmanic at your library and let it manage it.</Description>
-  <Networking>
-    <Publish>
-      <Port>
-        <HostPort/>
-        <ContainerPort>8888</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-    </Publish>
-  </Networking>
-  <Data>
-    <Volume>
-      <HostDir/>
-      <ContainerDir>/config</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-    <Volume>
-      <HostDir/>
-      <ContainerDir>/library/movies</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-    <Volume>
-      <HostDir/>
-      <ContainerDir>/library/tv</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-    <Volume>
-      <HostDir/>
-      <ContainerDir>/tmp/unmanic</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-  </Data>
-  <Environment>
-    <Variable>
-      <Value/>
-      <Name>PUID</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>PGID</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>DEBUGGING</Name>
-      <Mode/>
-    </Variable>
-  </Environment>
   <Config Name="WebUI" Target="8888" Default="8888" Mode="tcp" Description="Container Port: 8888" Type="Port" Display="always" Required="false" Mask="false"/>
   <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="advanced" Required="false" Mask="false"/>
   <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="advanced" Required="false" Mask="false"/>

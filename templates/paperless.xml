@@ -18,11 +18,6 @@ Additional Template Variables: https://github.com/the-paperless-project/paperles
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/paperless.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/paperless.png</Icon>
   <PostArgs>runserver 0.0.0.0:8000 --insecure --noreload</PostArgs>
-  <Description>Index and archive all of your scanned paper documents.&#xD;
-[br][br]&#xD;
-For installation instructions see: https://forums.unraid.net/topic/87196-support-paperless-docker/ [br][br]&#xD;
-Paperless Documentation: https://paperless.readthedocs.io/en/latest/[br]&#xD;
-Additional Template Variables: https://github.com/the-paperless-project/paperless/blob/master/paperless.conf.example</Description>
   <Config Name="Port" Target="8000" Default="8000" Mode="tcp" Description="Container Port: 8000" Type="Port" Display="always" Required="false" Mask="false"/>
   <Config Name="Data" Target="/usr/src/paperless/data" Default="/mnt/user/appdata/paperless/data" Mode="rw" Description="Container Path: /usr/src/paperless/data . &#13;&#10;This contains the paperless database. Should be in appdata." Type="Path" Display="always" Required="true" Mask="false"/>
   <Config Name="Media" Target="/usr/src/paperless/media" Default="" Mode="rw" Description="Container Path: /usr/src/paperless/media . &#13;&#10;Once consumed, files will be stored here." Type="Path" Display="always" Required="true" Mask="false"/>

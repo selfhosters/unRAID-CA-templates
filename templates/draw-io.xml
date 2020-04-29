@@ -6,56 +6,13 @@
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
   <Registry>https://hub.docker.com/r/jgraph/drawio</Registry>
-  <Support>https://about.draw.io/support/</Support>
+  <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
   <Project>https://github.com/jgraph/drawio</Project>
   <Overview>A lightweight diagram drawing application</Overview>
   <Category>Productivity:</Category>
   <WebUI>http://[IP]:[PORT:8080]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/draw-io.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/draw-io.png</Icon>
-  <Description>draw.io is an open source technology stack for building diagramming applications, and the world’s most widely used browser-based end-user diagramming applications.</Description>
-  <Networking>
-    <Publish>
-      <Port>
-        <ContainerPort>8080</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-      <Port>
-        <ContainerPort>8443</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-    </Publish>
-  </Networking>
-  <Data/>
-  <Environment>
-    <Variable>
-      <Name>LETS_ENCRYPT_ENABLED</Name>
-    </Variable>
-    <Variable>
-      <Name>PUBLIC_DNS</Name>
-    </Variable>
-    <Variable>
-      <Name>ORGANISATION_UNIT</Name>
-    </Variable>
-    <Variable>
-      <Name>ORGANISATION</Name>
-    </Variable>
-    <Variable>
-      <Name>CITY</Name>
-    </Variable>
-    <Variable>
-      <Name>STATE</Name>
-    </Variable>
-    <Variable>
-      <Name>COUNTRY_CODE</Name>
-    </Variable>
-    <Variable>
-      <Name>KEYSTORE_PASS</Name>
-    </Variable>
-    <Variable>
-      <Name>KEY_PASS</Name>
-    </Variable>
-  </Environment>
   <Config Name="WebUI Port" Target="8080" Default="3000" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="false" Mask="false"/>
   <Config Name="WebUI SSL Port" Target="8443" Default="3443" Mode="tcp" Description="Container Port: 8443" Type="Port" Display="advanced" Required="false" Mask="false"/>
   <Config Name="Enable Lets Encrypt" Target="LETS_ENCRYPT_ENABLED" Default="false" Description="Enables Let's Encrypt certificate instead of self-signed certificates" Type="Variable" Display="advanced" Required="false" Mask="false"/>
