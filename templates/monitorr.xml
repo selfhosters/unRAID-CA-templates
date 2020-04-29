@@ -2,40 +2,22 @@
 <Container version="2">
   <Name>Monitorr</Name>
   <Repository>monitorr/monitorr</Repository>
-  <Registry>https://hub.docker.com/r/monitorr/logarr-alpha/</Registry>
+  <Registry>https://hub.docker.com/r/monitorr/monitorr/</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
-  <Support>https://github.com/Monitorr/Monitorr/</Support>
+  <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository</Support>
   <Project>https://github.com/Monitorr/Monitorr/</Project>
-  <Description>Monitorr is a webfront to live display the status of any webapp or service[br][br]&#xD; &#xD; See full configuration instructions in the WiKi: https://github.com/Monitorr/Monitorr/wiki[br]&#xD; [br][br][b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]&#xD;
-		[b]80[/b] Port for Monitorr's webui [br]&#xD; [b]/app[/b] Location for storing configuration files[br]
-	</Description>
   <Overview>Monitorr is a webfront to live display the status of any webapp or service[br][br]&#xD; &#xD; See full configuration instructions in the WiKi: https://github.com/Monitorr/Monitorr/wiki[br]&#xD; [br][br][b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]&#xD;
-		[b]8700[/b] Port for Monitorr's webui [br]&#xD; [b]/app[/b] Location for storing configuration files[br]
-	</Overview>
+    [b]8700[/b] Port for Monitorr's webui [br]&#xD; [b]/app[/b] Location for storing configuration files[br]
+  </Overview>
   <Category>Tools: Status:Beta</Category>
   <WebUI>http://[IP]:[PORT:80]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/monitorr.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/monitorr.png</Icon>
   <DonateText>Buy us a beer!</DonateText>
   <DonateLink>https://paypal.me/monitorrapp</DonateLink>
-  <Networking>
-    <Publish>
-      <Port>
-        <ContainerPort>80</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-    </Publish>
-  </Networking>
-  <Data>
-    <Volume>
-      <ContainerDir>/app</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-  </Data>
-  <Environment/>
   <Config Name="WebUI" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false"/>
   <Config Name="Config" Target="/app" Default="/mnt/user/appdata/Monitorr" Mode="rw" Description="Container Path: /app" Type="Path" Display="advanced" Required="true" Mask="false"/>
   <Config Name="PUID" Target="PUID" Default="99" Description="Container Variable: PUID" Type="Variable" Display="advanced" Required="false" Mask="false"/>
-	<Config Name="PGID" Target="PGID" Default="100" Description="Container Variable: PGID" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="PGID" Target="PGID" Default="100" Description="Container Variable: PGID" Type="Variable" Display="advanced" Required="false" Mask="false"/>
 </Container>

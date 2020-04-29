@@ -5,120 +5,18 @@
   <Registry>https://hub.docker.com/r/monicahq/monicahq/</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
-  <Support>https://hub.docker.com/r/monicahq/monicahq/</Support>
+  <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository</Support>
   <Project>https://github.com/monicahq/monica</Project>
   <Overview>Monica, the Personal Relationship Manager &#xD;
 [br][br]&#xD;
 Complete list of env : https://raw.githubusercontent.com/monicahq/monica/master/.env.example&#xD;
 [br][br]&#xD;
 APP_URL: https://github.com/monicahq/monica/blob/master/docs/installation/ssl.md&#xD;
-</Overview>
+  </Overview>
   <Category>Productivity:</Category>
   <WebUI>http://[IP]:[PORT:80]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/monica.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/monica.png</Icon>
-  <Description>Monica, the Personal Relationship Manager &#xD;
-[br][br]&#xD;
-Complete list of env : https://raw.githubusercontent.com/monicahq/monica/master/.env.example&#xD;
-[br][br]&#xD;
-APP_URL: https://github.com/monicahq/monica/blob/master/docs/installation/ssl.md&#xD;
-</Description>
-  <Networking>
-    <Publish>
-      <Port>
-        <ContainerPort>80</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-    </Publish>
-  </Networking>
-  <Data>
-    <Volume>
-      <ContainerDir>/var/www/monica/storage</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-  </Data>
-  <Environment>
-    <Variable>
-      <Name>APP_ENV</Name>
-    </Variable>
-    <Variable>
-      <Name>APP_DEBUG</Name>
-    </Variable>
-    <Variable>
-      <Name>APP_KEY</Name>
-    </Variable>
-    <Variable>
-      <Name>HASH_SALT</Name>
-    </Variable>
-    <Variable>
-      <Name>HASH_LENGTH</Name>
-    </Variable>
-    <Variable>
-      <Name>APP_URL</Name>
-    </Variable>
-    <Variable>
-      <Name>DB_CONNECTION</Name>
-    </Variable>
-    <Variable>
-      <Name>DB_HOST</Name>
-    </Variable>
-    <Variable>
-      <Name>DB_PORT</Name>
-    </Variable>
-    <Variable>
-      <Name>DB_DATABASE</Name>
-    </Variable>
-    <Variable>
-      <Name>DB_USERNAME</Name>
-    </Variable>
-    <Variable>
-      <Name>DB_PASSWORD</Name>
-    </Variable>
-    <Variable>
-      <Name>DB_USE_UTF8MB4</Name>
-    </Variable>
-    <Variable>
-      <Name>MAIL_DRIVER</Name>
-    </Variable>
-    <Variable>
-      <Name>MAIL_HOST</Name>
-    </Variable>
-    <Variable>
-      <Name>MAIL_PORT</Name>
-    </Variable>
-    <Variable>
-      <Name>MAIL_ENCRYPTION</Name>
-    </Variable>
-    <Variable>
-      <Name>MAIL_USERNAME</Name>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>MAIL_PASSWORD</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Name>MAIL_FROM_ADDRESS</Name>
-    </Variable>
-    <Variable>
-      <Name>MAIL_FROM_NAME</Name>
-    </Variable>
-    <Variable>
-      <Name>APP_EMAIL_NEW_USERS_NOTIFICATION</Name>
-    </Variable>
-    <Variable>
-      <Name>APP_DEFAULT_LOCALE</Name>
-    </Variable>
-    <Variable>
-      <Name>APP_DISABLE_SIGNUP</Name>
-    </Variable>
-    <Variable>
-      <Name>APP_SIGNUP_DOUBLE_OPTIN</Name>
-    </Variable>
-    <Variable>
-      <Name>APP_TRUSTED_PROXIES</Name>
-    </Variable>
-  </Environment>
   <Config Name="WebUI" Target="80" Default="80" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="false" Mask="false"/>
   <Config Name="Appdata" Target="/var/www/monica/storage" Default="/mnt/user/appdata/monica" Mode="rw" Description="Container Path: /var/www/monica/storage" Type="Path" Display="advanced" Required="false" Mask="false"/>
   <Config Name="APP_ENV" Target="APP_ENV" Default="production" Description="Container Variable: APP_ENV" Type="Variable" Display="always" Required="false" Mask="false"/>

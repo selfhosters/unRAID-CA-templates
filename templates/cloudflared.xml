@@ -5,7 +5,7 @@
   <Registry>https://hub.docker.com/r/crazymax/cloudflared/</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
-  <Support>https://hub.docker.com/r/crazymax/cloudflared/</Support>
+  <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository</Support>
   <Project>https://github.com/crazy-max/docker-cloudflared</Project>
   <Overview>Cloudflared proxy-dns multi-platform Docker image based on Alpine Linux</Overview>
   <Category>Tools:</Category>
@@ -13,24 +13,6 @@
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/cloudflared.png</Icon>
   <DonateText>All kinds of contributions are welcome &#x1F64C;! The most basic way to show your support is to star &#x1F31F; the project, or to raise issues &#x1F4AC; But we're not gonna lie to each other, I'd rather you buy me a beer or two &#x1F37B;!</DonateText>
   <DonateLink>https://www.patreon.com/crazymax</DonateLink>
-  <Description>Cloudflared proxy-dns multi-platform Docker image based on Alpine Linux</Description>
-  <Networking>
-    <Publish>
-      <Port>
-        <ContainerPort>5053</ContainerPort>
-        <Protocol>udp</Protocol>
-      </Port>
-      <Port>
-        <ContainerPort>49312</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-    </Publish>
-  </Networking>
-  <Environment>
-    <Variable>
-      <Name>TUNNEL_DNS_UPSTREAM</Name>
-    </Variable>
-  </Environment>
   <Config Name="Listen port for the DNS over HTTPS proxy server" Target="5053" Default="5053" Mode="udp" Description="Container Port: 5053" Type="Port" Display="always" Required="false" Mask="false"/>
   <Config Name="Listen port for metrics reporting" Target="49312" Default="49312" Mode="tcp" Description="Container Port: 49312" Type="Port" Display="always" Required="false" Mask="false"/>
   <Config Name="Upstream endpoint URL" Target="TUNNEL_DNS_UPSTREAM" Default="https://1.1.1.1/dns-query,https://1.0.0.1/dns-query" Description="Container Variable: TUNNEL_DNS_UPSTREAM Upstream endpoint URL, you can specify multiple endpoints for redundancy" Type="Variable" Display="always" Required="false" Mask="false"/>

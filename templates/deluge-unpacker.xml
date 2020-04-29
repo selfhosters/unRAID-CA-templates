@@ -11,7 +11,6 @@
   <Icon>https://raw.githubusercontent.com/wiki/davidnewhall/deluge-unpacker/images/logo.png</Icon>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/deluge-unpacker.xml</TemplateURL>
   <Category>Tools:</Category>
-  <Description>Deluge RAR download extractor for Sonarr and Radarr!</Description>
   <Overview>
   Deluge RAR download extractor for Sonarr and Radarr! Mount /downloads on all 3 or 4 containers to the same path on your host.
   This application will automatically poll all of the apps (Deluge, Sonarr, Radarr) to check for downloads. When a completed

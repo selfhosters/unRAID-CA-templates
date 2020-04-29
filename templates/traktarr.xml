@@ -12,8 +12,6 @@ For more info on env variables and setup of your config file, check out: https:/
   <Category>Tools:</Category>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/traktarr.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/traktarr.png</Icon>
-  <Description>Script to add new series and movies to Sonarr/Radarr based on Trakt lists. [br][br]      &#xD;
-For more info on env variables and setup of your config file, check out: https://hub.docker.com/r/eafxx/traktarr [br]</Description>
   <Data>
     <Volume>
       <HostDir/>

@@ -6,11 +6,10 @@
   <Network>bridge</Network>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>https://github.com/davidnewhall/unpackerr/issues/new</Support>
+  <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
   <Project>https://github.com/davidnewhall/unpackerr</Project>
   <Icon>https://raw.githubusercontent.com/wiki/davidnewhall/unpackerr/images/logo.png</Icon>
   <Category>Tools:</Category>
-  <Description>Download extractor for Sonarr, Radarr and Lidarr!</Description>
   <Overview>
   RAR download extractor for Sonarr, Radarr and Lidarr! Mount /downloads on all 3 or 4 containers to the same path on your host.
   This application will automatically poll all of the apps (Lidarr, Sonarr, Radarr) to check for downloads. When a completed
