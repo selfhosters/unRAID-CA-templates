@@ -11,7 +11,6 @@
     <Category>Tools: Network:Management</Category>
     <WebUI>http://[IP]:[PORT:5800]</WebUI>
     <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/idrac6.png</Icon>
-    <Description>Allows access to the iDRAC 6 console without installing Java or messing with Java Web Start. Java is only run inside of the container and access is provided via web interface or directly with VNC.</Description>
     <Config Name="idrac host" Target="IDRAC_HOST" Default="" Mode="" Description="Host for your iDRAC instance. Make sure your instance is reachable with https://IDRAC_HOST;. See IDRAC_PORT for using custom ports. HTTPS is always used." Type="Variable" Display="always" Required="true" Mask="false"/>
     <Config Name="idrac user" Target="IDRAC_USER" Default="root" Mode="" Description="Username for your iDRAC instance." Type="Variable" Display="always" Required="true" Mask="false"/>
     <Config Name="idrac password" Target="IDRAC_PASSWORD" Default="calvin" Mode="" Description="Password for your iDRAC instance." Type="Variable" Display="always" Required="true" Mask="true"/>

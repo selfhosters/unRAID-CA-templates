@@ -5,7 +5,7 @@
   <Registry>https://hub.docker.com/r/gotson/komga/</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
-  <Support>https://hub.docker.com/r/gotson/komga/</Support>
+  <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
   <Project>https://github.com/gotson/komga/</Project>
   <Overview>A Media server for comics/mangas/BDs with API and OPDS support.&#xD;
 Check logs for auto-generated username/password.</Overview>
@@ -13,31 +13,6 @@ Check logs for auto-generated username/password.</Overview>
   <WebUI>http://[IP]:[PORT:8080]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/komga.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/komga.png</Icon>
-  <Description>A Media server for comics/mangas/BDs with API and OPDS support.&#xD;
-Check container logs for auto-generated username/password.</Description>
-  <Networking>
-    <Publish>
-      <Port>
-        <ContainerPort>8080</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-    </Publish>
-  </Networking>
-  <Data>
-    <Volume>
-      <ContainerDir>/config</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-    <Volume>
-      <ContainerDir>/books</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-  </Data>
-  <Environment>
-    <Variable>
-      <Name>KOMGA_LIBRARIES_SCAN_DIRECTORY_EXCLUSIONS</Name>
-    </Variable>
-  </Environment>
   <Config Name="WebUI" Target="8080" Default="8080" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="true" Mask="false"/>
   <Config Name="Exclusions" Target="KOMGA_LIBRARIES_SCAN_DIRECTORY_EXCLUSIONS" Default="#recycle,@eaDir" Description="Container Variable: KOMGA_LIBRARIES_SCAN_DIRECTORY_EXCLUSIONS" Type="Variable" Display="advanced" Required="true" Mask="false"/>
   <Config Name="Config" Target="/config" Default="/mnt/user/appdata/komga/" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced" Required="true" Mask="false"/>

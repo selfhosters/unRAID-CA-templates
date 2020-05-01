@@ -5,7 +5,7 @@
   <Network>bridge</Network>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>https://github.com/overleaf/overleaf/wiki</Support>
+  <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository</Support>
   <Project>https://github.com/overleaf/docker-image</Project>
   <Registry>https://hub.docker.com/r/sharelatex/sharelatex</Registry>
   <Overview>A self-hosted LaTeX editor</Overview>
@@ -13,87 +13,6 @@
   <Category>Productivity:</Category>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/overleaf.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/overleaf.png</Icon>
-  <Description>Overleaf is a self-hosted LaTeX editor, based on the overleaf docker image (formerly sharelatex).</Description>
-  <Networking>
-    <Publish>
-      <Port>
-        <ContainerPort>80</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-    </Publish>
-  </Networking>
-  <Environment>
-    <Variable>
-      <Value/>
-      <Name>SHARELATEX_APP_NAME</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>SHARELATEX_NAV_TITLE</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>SHARELATEX_SITE_URL</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>SHARELATEX_ADMIN_EMAIL</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>SHARELATEX_REDIS_HOST</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>SHARELATEX_REDIS_PORT</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>SHARELATEX_REDIS_PASS</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>SHARELATEX_MONGO_URL</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>SHARELATEX_BEHIND_PROXY</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>SHARELATEX_SESSION_SECRET</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>SHARELATEX_SECURE_COOKIE</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>SHARELATEX_RESTRICT_INVITES_TO_EXISTING_ACCOUNTS</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>SHARELATEX_ALLOW_PUBLIC_ACCESS</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>SHARELATEX_ALLOW_ANONYMOUS_READ_AND_WRITE_SHARING</Name>
-      <Mode/>
-    </Variable>
-  </Environment>
   <Config Name="PORT" Target="80" Default="80" Mode="tcp" Description="WebUI HTTP port" Type="Port" Display="always" Required="true" Mask="false"/>
   <Config Name="SHARELATEX_APP_NAME" Target="SHARELATEX_APP_NAME" Default="" Description="The name to display when talking about the running app. Defaults to 'Overleaf (Community Edition)'." Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="SHARELATEX_NAV_TITLE" Target="SHARELATEX_NAV_TITLE" Default="" Description="Set the tab title of the application" Type="Variable" Display="always" Required="false" Mask="false"/>

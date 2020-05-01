@@ -5,7 +5,7 @@
   <Registry>https://hub.docker.com/r/dmanius/radarrsync-docker/</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
-  <Support>https://hub.docker.com/r/dmanius/radarrsync-docker/</Support>
+  <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
   <Project>https://github.com/dairefinn/RadarrSync</Project>
   <Overview>RadarrSync Syncs two Radarr servers through web API. This is a modified version designed to be run in a docker container. This version supports only two servers.&#xD;
 [br][br]&#xD;
@@ -23,46 +23,6 @@ PROFILE_ID -&amp;gt; The profile number you want the video to be added with. (St
   <Category>Downloaders: Status:Stable</Category>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/radarrsync.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/radarrsync.png</Icon>
-  <Description>RadarrSync Syncs two Radarr servers through web API. This is a modified version designed to be run in a docker container. This version supports only two servers.&#xD;
-[br][br]&#xD;
-RADARR_URL -&amp;gt; The endpoint of your radarr server&#xD;
-[br]&#xD;
-RADARR_KEY -&amp;gt; The API key for your radarr server&#xD;
-[br]&#xD;
-RADARR4K_URL -&amp;gt; The endpoint of your radarr server you want to sync to&#xD;
-[br]&#xD;
-RADARR4K_KEY -&amp;gt; The API key for this server&#xD;
-[br]&#xD;
-PROFILE_ID -&amp;gt; The profile number you want the video to be added with. (Start counting  from Any:1 SD:2 ect Ultra-HD is normally 5.  )&#xD;
-[br][br]&#xD;
-[b]Ensure that the root path is the same on both servers. ie /movie[b]</Description>
-  <Environment>
-    <Variable>
-      <Value/>
-      <Name>RADARR_URL</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>RADARR_KEY</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>RADARR4K_URL</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>RADARR4K_KEY</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>PROFILE_ID</Name>
-      <Mode/>
-    </Variable>
-  </Environment>
   <Config Name="Radarr URL" Target="RADARR_URL" Default="" Mode="" Description="Container Variable: RADARR_URL" Type="Variable" Display="always" Required="true" Mask="false"/>
   <Config Name="Radarr API Key" Target="RADARR_KEY" Default="" Mode="" Description="Container Variable: RADARR_KEY" Type="Variable" Display="always" Required="true" Mask="false"/>
   <Config Name="Radarr Server 2 URL " Target="RADARR4K_URL" Default="" Mode="" Description="Container Variable: RADARR4K_URL" Type="Variable" Display="always" Required="true" Mask="false"/>

@@ -1,0 +1,8 @@
+{
+    "[xml]": {
+        "editor.tabSize": 2,
+        "editor.autoIndent": "full",
+        "editor.detectIndentation": false,
+        "editor.insertSpaces": true,
+    }
+}

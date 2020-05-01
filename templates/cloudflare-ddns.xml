@@ -1,72 +1,34 @@
 <?xml version="1.0"?>
 <Container version="2">
-	<Name>Cloudflare-DDNS</Name>
-	<Repository>oznu/cloudflare-ddns</Repository>
-	<Registry>https://hub.docker.com/r/oznu/cloudflare-ddns/</Registry>
-	<Network>bridge</Network>
-	<Privileged>false</Privileged>
-	<Support>https://github.com/oznu/docker-cloudflare-ddns</Support>
-	<Project>https://github.com/oznu/docker-cloudflare-ddns</Project>
-	<Overview>This small Alpine Linux based Docker image will allow you to use the free CloudFlare DNS Service as a Dynamic DNS Provider (DDNS).&#xD;
-		[br][br]&#xD;
-		 Variable:[b][span style='color: #E80000;']EMAIL[/span][/b]: Your Cloudflare email. &#xD;
-		[br]&#xD;
-		Variable:[b][span style='color: #E80000;']API_KEY[/span][/b]: The [b]Global API Key[/b] found on the [b]My Profile[/b] page. [b][span style='color: #E80000;']https://dash.cloudflare.com/profile[/span][/b]&#xD;
-		[br]&#xD;
-		Variable:[b][span style='color: #E80000;']ZONE[/span][/b]: Your domain name. e.g. [b]example.com[/b] &#xD;
-		[br]&#xD;
-		Variable:[b][span style='color: #E80000;']SUBDOMAIN[/span][/b]: Your subdomain. e.g. [b]sub[/b].example.com (Only enter subdomain name, not entire address!) &#xD;
-		[br]&#xD;
-		Variable:[b][span style='color: #E80000;']PROXIED[/span][/b]: Set this to [b]true[/b] if the domain is using the Cloudflare proxy (CDN). Defaults to [b]false[/b]&#xD;
-		[br]&#xD;
-		Variable:[b][span style='color: #E80000;']RRTYPE[/span][/b]: Set to [b]AAAA[/b] to use set IPv6 records instead of IPv4 records. Defaults to [b]A[/b] for IPv4 records. &#xD;
-		[br][br]&#xD;
-		[b][span style='color: #E80000;']NOTE:[/span][/b][b] AAAA[/b]: You will also need to run docker with IPv6 support, or run the container with host networking enabled.</Overview>
-	<Category>Tools: Network:Management Status:Stable</Category>
-	<TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/template/cloudflare-ddns.xml</TemplateURL>
-	<Icon>https://i.imgur.com/PKa3Sm2.png</Icon>
-	<Description>This small Alpine Linux based Docker image will allow you to use the free CloudFlare DNS Service as a Dynamic DNS Provider (DDNS).&#xD;
-		[br][br]&#xD;
-		 Variable:[b][span style='color: #E80000;']EMAIL[/span][/b]: Your Cloudflare email. &#xD;
-		[br]&#xD;
-		Variable:[b][span style='color: #E80000;']API_KEY[/span][/b]: The [b]Global API Key[/b] found on the [b]My Profile[/b] page. [b][span style='color: #E80000;']https://dash.cloudflare.com/profile[/span][/b]&#xD;
-		[br]&#xD;
-		Variable:[b][span style='color: #E80000;']ZONE[/span][/b]: Your domain name. e.g. [b]example.com[/b] &#xD;
-		[br]&#xD;
-		Variable:[b][span style='color: #E80000;']SUBDOMAIN[/span][/b]: Your subdomain. e.g. [b]sub[/b].example.com (Only enter subdomain prefix, not the entire address.) &#xD;
-		[br]&#xD;
-		Variable:[b][span style='color: #E80000;']PROXIED[/span][/b]: Set this to [b]true[/b] if the domain is using the Cloudflare proxy (CDN). Defaults to [b]false[/b]&#xD;
-		[br]&#xD;
-		Variable:[b][span style='color: #E80000;']RRTYPE[/span][/b]: Set to [b]AAAA[/b] to use set IPv6 records instead of IPv4 records. Defaults to [b]A[/b] for IPv4 records. &#xD;
-		[br][br]&#xD;
-		[b][span style='color: #E80000;']NOTE:[/span][/b][b] AAAA[/b]: You will also need to run docker with IPv6 support, or run the container with host networking enabled.</Description>
-	<Networking/>
-	<Data/>
-	<Environment>
-		<Variable>
-			<Name>EMAIL</Name>
-		</Variable>
-		<Variable>
-			<Name>API_KEY</Name>
-		</Variable>
-		<Variable>
-			<Name>ZONE</Name>
-		</Variable>
-		<Variable>
-			<Name>SUBDOMAIN</Name>
-		</Variable>
-		<Variable>
-			<Value>false|true</Value>
-			<Name>PROXIED</Name>
-		</Variable>
-		<Variable>
-			<Name>RRTYP</Name>
-		</Variable>
-	</Environment>
-	<Config Name="Email" Target="EMAIL" Default="" Description="Container Variable: EMAIL" Type="Variable" Display="always" Required="true" Mask="false"/>
-	<Config Name="API Key" Target="API_KEY" Default="" Description="Container Variable: API_KEY" Type="Variable" Display="always" Required="true" Mask="true"/>
-	<Config Name="Domain" Target="ZONE" Default="" Description="Container Variable: ZONE" Type="Variable" Display="always" Required="true" Mask="false"/>
-	<Config Name="Subdomain (Optional)" Target="SUBDOMAIN" Default="" Description="Container Variable: SUBDOMAIN" Type="Variable" Display="always" Required="false" Mask="false"/>
-	<Config Name="Cloudflare Proxy" Target="PROXIED" Default="true|false" Description="Container Variable: PROXIED" Type="Variable" Display="always" Required="false" Mask="false"/>
-	<Config Name="IPv6/IPv4 records" Target="RRTYP" Default="A" Description="Container Variable: RRTYP" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Name>Cloudflare-DDNS</Name>
+  <Repository>oznu/cloudflare-ddns</Repository>
+  <Registry>https://hub.docker.com/r/oznu/cloudflare-ddns/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository</Support>
+  <Project>https://github.com/oznu/docker-cloudflare-ddns</Project>
+  <Overview>This small Alpine Linux based Docker image will allow you to use the free CloudFlare DNS Service as a Dynamic DNS Provider (DDNS).&#xD;
+    [br][br]&#xD;
+     Variable:[b][span style='color: #E80000;']EMAIL[/span][/b]: Your Cloudflare email. &#xD;
+    [br]&#xD;
+    Variable:[b][span style='color: #E80000;']API_KEY[/span][/b]: The [b]Global API Key[/b] found on the [b]My Profile[/b] page. [b][span style='color: #E80000;']https://dash.cloudflare.com/profile[/span][/b]&#xD;
+    [br]&#xD;
+    Variable:[b][span style='color: #E80000;']ZONE[/span][/b]: Your domain name. e.g. [b]example.com[/b] &#xD;
+    [br]&#xD;
+    Variable:[b][span style='color: #E80000;']SUBDOMAIN[/span][/b]: Your subdomain. e.g. [b]sub[/b].example.com (Only enter subdomain name, not entire address!) &#xD;
+    [br]&#xD;
+    Variable:[b][span style='color: #E80000;']PROXIED[/span][/b]: Set this to [b]true[/b] if the domain is using the Cloudflare proxy (CDN). Defaults to [b]false[/b]&#xD;
+    [br]&#xD;
+    Variable:[b][span style='color: #E80000;']RRTYPE[/span][/b]: Set to [b]AAAA[/b] to use set IPv6 records instead of IPv4 records. Defaults to [b]A[/b] for IPv4 records. &#xD;
+    [br][br]&#xD;
+    [b][span style='color: #E80000;']NOTE:[/span][/b][b] AAAA[/b]: You will also need to run docker with IPv6 support, or run the container with host networking enabled.</Overview>
+  <Category>Tools: Network:Management Status:Stable</Category>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/template/cloudflare-ddns.xml</TemplateURL>
+  <Icon>https://i.imgur.com/PKa3Sm2.png</Icon>
+  <Config Name="Email" Target="EMAIL" Default="" Description="Container Variable: EMAIL" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="API Key" Target="API_KEY" Default="" Description="Container Variable: API_KEY" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="Domain" Target="ZONE" Default="" Description="Container Variable: ZONE" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Subdomain (Optional)" Target="SUBDOMAIN" Default="" Description="Container Variable: SUBDOMAIN" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Cloudflare Proxy" Target="PROXIED" Default="true|false" Description="Container Variable: PROXIED" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="IPv6/IPv4 records" Target="RRTYP" Default="A" Description="Container Variable: RRTYP" Type="Variable" Display="always" Required="false" Mask="false"/>
 </Container>

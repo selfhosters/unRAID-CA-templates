@@ -2,112 +2,17 @@
 <Container version="2">
   <Name>openldap</Name>
   <Repository>osixia/openldap</Repository>
-  <Registry>https://hub.docker.com/r/osixia/openldap/~/dockerfile/</Registry>
+  <Registry>https://hub.docker.com/r/osixia/openldap/</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
-  <Support>https://github.com/osixia/docker-openldap</Support>
-  <Project>https://hub.docker.com/r/osixia/openldap/</Project>
+  <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository</Support>
+  <Project>https://github.com/osixia/docker-openldap</Project>
   <Overview> A docker image to run OpenLDAP, The container default log level is info. Available levels are: none, error, warning, info, debug and trace. To use this container with phpldapadmin, create a custom network that both containers are on and then link them using --link openldap:PHPLDAPADMIN_LDAP_HOSTS in the extra parameters of the phpldapadmin docker container (which should be equal to HOSTNAME in this container). Any other docker that wants to use LDAP credentials will need the same extra parameter including Let's Encrypt if you are using linuxserver.io's ldap-auth container.</Overview>
   <Category>HomeAutomation: Network:Management Tools:</Category>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/openldap.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/openldap.png</Icon>
   <ExtraParams/>
   <PostArgs>--loglevel debug --copy-service</PostArgs>
-  <Description> A docker image to run OpenLDAP, The container default log level is info. Available levels are: none, error, warning, info, debug and trace. To use this container with phpldapadmin, create a custom network that both containers are on and then link them using --link openldap:PHPLDAPADMIN_LDAP_HOSTS in the extra parameters of the phpldapadmin docker container (which should be equal to HOSTNAME in this container). Any other docker that wants to use LDAP credentials will need the same extra parameter including Let's Encrypt if you are using linuxserver.io's ldap-auth container.</Description>
-  <Networking>
-    <Publish>
-      <Port>
-        <ContainerPort>389</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-      <Port>
-        <ContainerPort>636</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-    </Publish>
-  </Networking>
-  <Data>
-    <Volume>
-      <ContainerDir>/var/lib/ldap/</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-    <Volume>
-      <ContainerDir>/etc/ldap/slapd.d/</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-    <Volume>
-      <Mode>rw</Mode>
-    </Volume>
-    <Volume>
-      <ContainerDir>/container/service/slapd/assets/config/bootstrap/ldif/custom</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-  </Data>
-  <Environment>
-    <Variable>
-      <Name>LDAP_ORGANISATION</Name>
-    </Variable>
-    <Variable>
-      <Name>LDAP_DOMAIN</Name>
-    </Variable>
-    <Variable>
-      <Name>HOSTNAME</Name>
-    </Variable>
-    <Variable>
-      <Name>LDAP_ADMIN_PASSWORD</Name>
-    </Variable>
-    <Variable>
-      <Name>LDAP_CONFIG_PASSWORD</Name>
-    </Variable>
-    <Variable>
-      <Name>LDAP_TLS</Name>
-    </Variable>
-    <Variable>
-      <Name>LDAP_TLS_CRT_FILENAME</Name>
-    </Variable>
-    <Variable>
-      <Name>LDAP_TLS_KEY_FILENAME</Name>
-    </Variable>
-    <Variable>
-      <Name>LDAP_TLS_CA_CRT_FILENAME</Name>
-    </Variable>
-    <Variable>
-      <Name>LDAP_READONLY_USER</Name>
-    </Variable>
-	  <Variable>
-      <Name>LDAP_READONLY_USER_USERNAME</Name>
-    </Variable>
-    <Variable>
-      <Name>LDAP_READONLY_USER_PASSWORD</Name>
-    </Variable>
-    <Variable>
-      <Name>LDAP_RFC2307BIS_SCHEMA</Name>
-    </Variable>
-    <Variable>
-      <Name>LDAP_BACKEND</Name>
-    </Variable>
-    <Variable>
-      <Name>LDAP_TLS_ENFORCE</Name>
-    </Variable>
-    <Variable>
-      <Name>LDAP_TLS_VERIFY_CLIENT</Name>
-    </Variable>
-    <Variable>
-      <Name>LDAP_TLS_CIPHER_SUITE</Name>
-    </Variable>
-    <Variable>
-      <Name>KEEP_EXISTING_CONFIG</Name>
-    </Variable>
-    <Variable>
-      <Name>LDAP_REMOVE_CONFIG_AFTER_SETUP</Name>
-    </Variable>
-    <Variable>
-      <Name>LDAP_SSL_HELPER_PREFIX</Name>
-    </Variable>
-    <Variable>
-      <Name>LDAP_BASE_DN</Name>
-    </Variable>
-  </Environment>
   <Config Name="LDAP database files" Target="/var/lib/ldap/" Default="/mnt/user/appdata/openldap/data" Mode="rw" Description="LDAP database files" Type="Path" Display="advanced" Required="true" Mask="false"/>
   <Config Name="LDAP config files" Target="/etc/ldap/slapd.d/" Default="/mnt/user/appdata/openldap/config" Mode="rw" Description="LDAP config files" Type="Path" Display="advanced" Required="true" Mask="false"/>
   <Config Name="LDAP port" Target="389" Default="389" Mode="tcp" Description="Container Port: 389" Type="Port" Display="always" Required="true" Mask="false"/>

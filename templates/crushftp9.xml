@@ -8,8 +8,8 @@
   <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository</Support>
   <Project>https://github.com/mikeylikesrocks/unraid-crushftp9</Project>
   <Overview>&#xD;
-        CrushFTP9 is an extremely powerful, easy to use FTP solution that can use sftp, ftp, webDav, and http.&#xD;
-    </Overview>
+  CrushFTP9 is an extremely powerful, easy to use FTP solution that can use sftp, ftp, webDav, and http.&#xD;
+  </Overview>
   <Category>Network:FTP Network:Other Network:Web</Category>
   <WebUI>http://[IP]:[PORT:8080]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/crushftp9.xml</TemplateURL>
