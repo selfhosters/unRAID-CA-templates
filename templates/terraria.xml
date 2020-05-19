@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>terraria</Name>
+  <Repository>stefan99353/terraria</Repository>
+  <Registry>https://hub.docker.com/r/stefan99353/terraria/</Registry>
+  <Network>bridge</Network>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/stefan99353/terraria/</Support>
+  <Project>https://github.com/Stefan99353/docker-terraria</Project>
+  <Overview>Dockerized Terraria Server.&#xD;
+&#xD;
+This Server only uses environment variables for configuring the server.</Overview>
+  <Category>GameServers:</Category>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/terraria.png</Icon>
+  <ExtraParams>-i</ExtraParams>
+  <Description>Dockerized Terraria Server</Description>
+  <Labels/>
+  <Config Name="Game Version" Target="VERSION" Default="latest" Mode="" Description="Server version that should be installed. Possible values are " Type="Variable" Display="always" Required="true" Mask="false">latest</Config>
+  <Config Name="Server Port" Target="7777" Default="7777" Mode="tcp" Description="Container Port: 7777" Type="Port" Display="always" Required="true" Mask="false">7777</Config>
+  <Config Name="Banlist" Target="BANLIST" Default="banlist.txt" Mode="" Description="Container Variable: BANLIST" Type="Variable" Display="always" Required="false" Mask="false">banlist.txt</Config>
+  <Config Name="Secure" Target="SECURE" Default="0" Mode="" Description="Add additional cheat protection to server.&#13;&#10;0: Off&#13;&#10;1: On" Type="Variable" Display="always" Required="false" Mask="false">0</Config>
+  <Config Name="Max Players" Target="PLAYERS" Default="16" Mode="" Description="Container Variable: PLAYERS" Type="Variable" Display="always" Required="false" Mask="false">16</Config>
+  <Config Name="Server Password" Target="PASSWORD" Default="docker" Mode="" Description="Container Variable: PASSWORD" Type="Variable" Display="always" Required="false" Mask="true">docker</Config>
+  <Config Name="World filename (with extension .wld)" Target="WORLD" Default="world1.wld" Mode="" Description="Load a world and automatically start the server" Type="Variable" Display="always" Required="true" Mask="false">world1.wld</Config>
+  <Config Name="Autocreate" Target="AUTOCREATE" Default="1" Mode="" Description="Creates a world if the file specified by WORLD is not found. World size: 1(small), 2(medium), 3(large)" Type="Variable" Display="always" Required="false" Mask="false">1</Config>
+  <Config Name="Difficulty" Target="DIFFICULTY" Default="0" Mode="" Description="Sets world difficulty when using AUTOCREATE. Difficulty: 0(normal), 1(expert), 2(master), 3(journey)" Type="Variable" Display="always" Required="false" Mask="false">0</Config>
+  <Config Name="Worldname" Target="WORLDNAME" Default="world1" Mode="" Description="Sets the name of the world when using AUTOCREATE" Type="Variable" Display="always" Required="false" Mask="false">world1</Config>
+  <Config Name="Data Volume" Target="/appdata" Default="/mnt/user/appdata/terraria/" Mode="rw" Description="Container Path: /appdata" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/terraria/</Config>
+  <Config Name="UID" Target="UID" Default="99" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
+</Container>
