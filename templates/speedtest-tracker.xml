@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>speedtest-tracker</Name>
+  <Repository>henrywhitaker3/speedtest-tracker</Repository>
+  <Registry>https://hub.docker.com/r/henrywhitaker3/speedtest-tracker/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
+  <Project>https://hub.docker.com/r/henrywhitaker3/speedtest-tracker</Project>
+  <Overview>This program runs a speedtest check every hour and graphs the results. The back-end is written in Laravel and the front-end uses React. It uses the speedtest-cli package to get the data and uses Chart.js to plot the results.&#xD;
+&#xD;
+</Overview>
+  <Category>Tools:</Category>
+  <WebUI>http://[IP]:[PORT:80]/</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/speedtest-tracker.png</Icon>
+  <ExtraParams>--restart unless-stopped</ExtraParams>
+  <Config Name="WebUI" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Appdata" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Slack/Discord Webhook" Target="SLACK_WEBHOOK" Default="" Mode="" Description="Container Variable: SLACK_WEBHOOK" Type="Variable" Display="always" Required="false" Mask="false"/>
+</Container>
