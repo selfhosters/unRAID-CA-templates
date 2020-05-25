@@ -5,60 +5,21 @@
   <Registry>https://hub.docker.com/r/traccar/traccar/</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
-  <Support>https://hub.docker.com/r/traccar/traccar/</Support>
+  <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
   <Project>https://github.com/traccar/traccar</Project>
   <Overview>Traccar is an open source GPS tracking system. This repository contains Java-based back-end service. It supports more than 170 GPS protocols and more than 1500 models of GPS tracking devices. Traccar can be used with any major SQL database system. It also provides easy to use REST API.&#xD;
 [br][br]&#xD;
 Link to traccar.xml: https://raw.githubusercontent.com/traccar/traccar/master/setup/traccar.xml&#xD;
 [br][br]&#xD;
 [b]Add it to your host path before starting the container. [b]</Overview>
-  <Category/>
+  <Category>MediaApp:Other</Category>
   <WebUI>http://[IP]:[PORT:8082]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/traccar.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/traccar.png</Icon>
   <ExtraParams>--restart always --hostname traccar</ExtraParams>
-  <Description>Traccar is an open source GPS tracking system. This repository contains Java-based back-end service. It supports more than 170 GPS protocols and more than 1500 models of GPS tracking devices. Traccar can be used with any major SQL database system. It also provides easy to use REST API.&#xD;
-[br][br]&#xD;
-Link to traccar.xml: https://raw.githubusercontent.com/traccar/traccar/master/setup/traccar.xml&#xD;
-[br][br]&#xD;
-[b]Add it to your host path before starting the container. [b]</Description>
-  <Networking>
-    <Mode>bridge</Mode>
-    <Publish>
-      <Port>
-        <HostPort></HostPort>
-        <ContainerPort>8082</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-      <Port>
-        <HostPort></HostPort>
-        <ContainerPort>5000-5150</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-      <Port>
-        <HostPort></HostPort>
-        <ContainerPort>5000-5150</ContainerPort>
-        <Protocol>udp</Protocol>
-      </Port>
-    </Publish>
-  </Networking>
-  <Data>
-    <Volume>
-      <HostDir></HostDir>
-      <ContainerDir>/opt/traccar/logs</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-    <Volume>
-      <HostDir></HostDir>
-      <ContainerDir>/opt/traccar/conf/traccar.xml</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-  </Data>
-  <Environment/>
-  <Labels/>
-  <Config Name="WebUI" Target="8082" Default="8082" Mode="tcp" Description="Container Port: 8082" Type="Port" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Host port 1" Target="5000-5150" Default="5000-5150" Mode="tcp" Description="Container Port: 5000-5150" Type="Port" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Host port 2" Target="5000-5150" Default="5000-5150" Mode="udp" Description="Container Port: 5000-5150" Type="Port" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Logs" Target="/opt/traccar/logs" Default="/mnt/user/appdata/traccar/logs" Mode="rw" Description="Container Path: /opt/traccar/logs" Type="Path" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="traccar.xml host path" Target="/opt/traccar/conf/traccar.xml" Default="" Mode="rw" Description="Container Path: /opt/traccar/conf/traccar.xml" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="WebUI" Target="8082" Default="8082" Mode="tcp" Description="Container Port: 8082" Type="Port" Display="always" Required="false" Mask="false"/>
+  <Config Name="Host port 1" Target="5000-5150" Default="5000-5150" Mode="tcp" Description="Container Port: 5000-5150" Type="Port" Display="always" Required="false" Mask="false"/>
+  <Config Name="Host port 2" Target="5000-5150" Default="5000-5150" Mode="udp" Description="Container Port: 5000-5150" Type="Port" Display="always" Required="false" Mask="false"/>
+  <Config Name="Logs" Target="/opt/traccar/logs" Default="/mnt/user/appdata/traccar/logs" Mode="rw" Description="Container Path: /opt/traccar/logs" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="traccar.xml host path" Target="/opt/traccar/conf/traccar.xml" Default="/mnt/user/appdata/traccar/traccar.xml" Mode="rw" Description="Container Path: /opt/traccar/conf/traccar.xml" Type="Path" Display="always" Required="false" Mask="false"/>
 </Container>

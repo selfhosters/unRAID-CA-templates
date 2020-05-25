@@ -5,111 +5,27 @@
   <Network>bridge</Network>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>https://github.com/overleaf/overleaf/wiki</Support>
+  <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository</Support>
   <Project>https://github.com/overleaf/docker-image</Project>
+  <Registry>https://hub.docker.com/r/sharelatex/sharelatex</Registry>
   <Overview>A self-hosted LaTeX editor</Overview>
-  <Category/>
   <WebUI>http://[IP]:[PORT:3000]</WebUI>
-  <TemplateURL/>
+  <Category>Productivity:</Category>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/overleaf.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/overleaf.png</Icon>
-  <Description>
-    Overleaf is a self-hosted LaTeX editor, based on the overleaf docker image (formerly sharelatex).
-  </Description>
-  <Networking>
-    <Mode>bridge</Mode>
-    <Publish>
-      <Port>
-        <HostPort>8080</HostPort>
-        <ContainerPort>80</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-    </Publish>
-  </Networking>
-  <Environment>
-    <Variable>
-      <Value></Value>
-      <Name>SHARELATEX_APP_NAME</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value></Value>
-      <Name>SHARELATEX_NAV_TITLE</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value></Value>
-      <Name>SHARELATEX_SITE_URL</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value></Value>
-      <Name>SHARELATEX_ADMIN_EMAIL</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value></Value>
-      <Name>SHARELATEX_REDIS_HOST</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value></Value>
-      <Name>SHARELATEX_REDIS_PORT</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value></Value>
-      <Name>SHARELATEX_REDIS_PASS</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value></Value>
-      <Name>SHARELATEX_MONGO_URL</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value></Value>
-      <Name>SHARELATEX_BEHIND_PROXY</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value></Value>
-      <Name>SHARELATEX_SESSION_SECRET</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value></Value>
-      <Name>SHARELATEX_SECURE_COOKIE</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value></Value>
-      <Name>SHARELATEX_RESTRICT_INVITES_TO_EXISTING_ACCOUNTS</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value></Value>
-      <Name>SHARELATEX_ALLOW_PUBLIC_ACCESS</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value></Value>
-      <Name>SHARELATEX_ALLOW_ANONYMOUS_READ_AND_WRITE_SHARING</Name>
-      <Mode/>
-    </Variable>
-  </Environment>
-  <Config Name="PORT" Target="80" Default="" Mode="tcp" Description="WebUI HTTP port" Type="Port" Display="always" Required="false" Mask="false">8080</Config>
-  <Config Name="SHARELATEX_APP_NAME" Target="SHARELATEX_APP_NAME" Default="" Mode="" Description="The name to display when talking about the running app. Defaults to 'Overleaf (Community Edition)'." Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="SHARELATEX_NAV_TITLE" Target="SHARELATEX_NAV_TITLE" Default="" Mode="" Description="Set the tab title of the application" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="SHARELATEX_SITE_URL" Target="SHARELATEX_SITE_URL" Default="" Mode="" Description="Where your instance of Overleaf is publicly available. This is used in public links, and when connecting over websockets, so must be configured correctly!" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="SHARELATEX_ADMIN_EMAIL" Target="SHARELATEX_ADMIN_EMAIL" Default="" Mode="" Description="The email address where users can reach the person who runs the site." Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="SHARELATEX_REDIS_HOST" Target="SHARELATEX_REDIS_HOST" Default="" Mode="" Description="The host name of the Redis instance to use" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="SHARELATEX_REDIS_PORT" Target="SHARELATEX_REDIS_PORT" Default="" Mode="" Description="The port of the Redis instance to use" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="SHARELATEX_REDIS_PASS" Target="SHARELATEX_REDIS_PASS" Default="" Mode="" Description="The password to use when connecting to Redis (if applicable)" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="SHARELATEX_MONGO_URL" Target="SHARELATEX_MONGO_URL" Default="" Mode="" Description="The URL of the Mongo database to use" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="SHARELATEX_BEHIND_PROXY" Target="SHARELATEX_BEHIND_PROXY" Default="" Mode="" Description=" Set to true if running behind a proxy like nginx/apache allowing it to correctly detect the forwarded IP address" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="SHARELATEX_SESSION_SECRET" Target="SHARELATEX_SESSION_SECRET" Default="" Mode="" Description="A random string which is used to secure tokens, if load balancing this needs to be set to the same toke across boxes. If only 1 instance is being run it does not need to be set by the user." Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="SHARELATEX_SECURE_COOKIE" Target="SHARELATEX_SECURE_COOKIE" Default="" Mode="" Description="Set this to something non-zero to use a secure cookie. Only use this if your Overleaf instance is running behind a reverse proxy with SSL configured." Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="SHARELATEX_RESTRICT_INVITES_TO_EXISTING_ACCOUNTS" Target="SHARELATEX_RESTRICT_INVITES_TO_EXISTING_ACCOUNTS" Default="" Mode="" Description="If set to true, will restrict project invites to email addresses which correspond with existing user accounts." Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="SHARELATEX_ALLOW_PUBLIC_ACCESS" Target="SHARELATEX_ALLOW_PUBLIC_ACCESS" Default="" Mode="" Description="If set to 'true', will allow non-authenticated users to view the site. The default is false, which means non-authenticated users will be unconditionally redirected to the login page when they try to view any part of the site. Note, setting this option does not disable authentication or security in any way. This option is necessary if your users intend to make their projects public and have non-authenticated users view those projects." Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="SHARELATEX_ALLOW_ANONYMOUS_READ_AND_WRITE_SHARING" Target="SHARELATEX_ALLOW_ANONYMOUS_READ_AND_WRITE_SHARING" Default="" Mode="" Description=" If set to 'true', will allow anonymous users to view and edit projects shared via the new link-sharing feature." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="PORT" Target="80" Default="80" Mode="tcp" Description="WebUI HTTP port" Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="SHARELATEX_APP_NAME" Target="SHARELATEX_APP_NAME" Default="" Description="The name to display when talking about the running app. Defaults to 'Overleaf (Community Edition)'." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="SHARELATEX_NAV_TITLE" Target="SHARELATEX_NAV_TITLE" Default="" Description="Set the tab title of the application" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="SHARELATEX_SITE_URL" Target="SHARELATEX_SITE_URL" Default="" Description="Where your instance of Overleaf is publicly available. This is used in public links, and when connecting over websockets, so must be configured correctly!" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="SHARELATEX_ADMIN_EMAIL" Target="SHARELATEX_ADMIN_EMAIL" Default="" Description="The email address where users can reach the person who runs the site." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="SHARELATEX_REDIS_HOST" Target="SHARELATEX_REDIS_HOST" Default="" Description="The host name of the Redis instance to use" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="SHARELATEX_REDIS_PORT" Target="SHARELATEX_REDIS_PORT" Default="" Description="The port of the Redis instance to use" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="SHARELATEX_REDIS_PASS" Target="SHARELATEX_REDIS_PASS" Default="" Description="The password to use when connecting to Redis (if applicable)" Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="SHARELATEX_MONGO_URL" Target="SHARELATEX_MONGO_URL" Default="" Description="The URL of the Mongo database to use" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="SHARELATEX_BEHIND_PROXY" Target="SHARELATEX_BEHIND_PROXY" Default="" Description=" Set to true if running behind a proxy like nginx/apache allowing it to correctly detect the forwarded IP address" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="SHARELATEX_SESSION_SECRET" Target="SHARELATEX_SESSION_SECRET" Default="" Description="A random string which is used to secure tokens, if load balancing this needs to be set to the same toke across boxes. If only 1 instance is being run it does not need to be set by the user." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="SHARELATEX_SECURE_COOKIE" Target="SHARELATEX_SECURE_COOKIE" Default="" Description="Set this to something non-zero to use a secure cookie. Only use this if your Overleaf instance is running behind a reverse proxy with SSL configured." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="SHARELATEX_RESTRICT_INVITES_TO_EXISTING_ACCOUNTS" Target="SHARELATEX_RESTRICT_INVITES_TO_EXISTING_ACCOUNTS" Default="" Description="If set to true, will restrict project invites to email addresses which correspond with existing user accounts." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="SHARELATEX_ALLOW_PUBLIC_ACCESS" Target="SHARELATEX_ALLOW_PUBLIC_ACCESS" Default="" Description="If set to 'true', will allow non-authenticated users to view the site. The default is false, which means non-authenticated users will be unconditionally redirected to the login page when they try to view any part of the site. Note, setting this option does not disable authentication or security in any way. This option is necessary if your users intend to make their projects public and have non-authenticated users view those projects." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="SHARELATEX_ALLOW_ANONYMOUS_READ_AND_WRITE_SHARING" Target="SHARELATEX_ALLOW_ANONYMOUS_READ_AND_WRITE_SHARING" Default="" Description=" If set to 'true', will allow anonymous users to view and edit projects shared via the new link-sharing feature." Type="Variable" Display="always" Required="false" Mask="false"/>
 </Container>

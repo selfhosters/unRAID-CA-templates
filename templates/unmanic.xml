@@ -12,63 +12,12 @@
   <WebUI>http://[IP]:[PORT:8888]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/unmanic.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/unmanic.png</Icon>
-  <Description>Unmanic is a simple tool for optimising your video library to a single format. The ultimate goal of Unmanic is to take the complexity out of converting your whole media library. The idea is to simply point Unmanic at your library and let it manage it.</Description>
-  <Networking>
-    <Mode>bridge</Mode>
-    <Publish>
-      <Port>
-        <HostPort></HostPort>
-        <ContainerPort>8888</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-    </Publish>
-  </Networking>
-  <Data>
-    <Volume>
-      <HostDir></HostDir>
-      <ContainerDir>/config</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-    <Volume>
-      <HostDir></HostDir>
-      <ContainerDir>/library/movies</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-    <Volume>
-      <HostDir></HostDir>
-      <ContainerDir>/library/tv</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-    <Volume>
-      <HostDir></HostDir>
-      <ContainerDir>/tmp/unmanic</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-  </Data>
-  <Environment>
-    <Variable>
-      <Value>99</Value>
-      <Name>PUID</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value>100</Value>
-      <Name>PGID</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value>false</Value>
-      <Name>DEBUGGING</Name>
-      <Mode/>
-    </Variable>
-  </Environment>
-  <Labels/>
-  <Config Name="WebUI" Target="8888" Default="8888" Mode="tcp" Description="Container Port: 8888" Type="Port" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Key 1" Target="PUID" Default="" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
-  <Config Name="Key 2" Target="PGID" Default="" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
-  <Config Name="Appdata" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Library Movies" Target="/library/movies" Default="" Mode="rw" Description="Container Path: /library/movies" Type="Path" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Library TV" Target="/library/tv" Default="" Mode="rw" Description="Container Path: /library/tv" Type="Path" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Encoding Cache Directory" Target="/tmp/unmanic" Default="" Mode="rw" Description="Container Path: /tmp/unmanic" Type="Path" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Debugging" Target="DEBUGGING" Default="false" Mode="" Description="Container Variable: DEBUGGING" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="WebUI" Target="8888" Default="8888" Mode="tcp" Description="Container Port: 8888" Type="Port" Display="always" Required="false" Mask="false"/>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Appdata" Target="/config" Default="/mnt/user/appdata/unmanic" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="Library Movies" Target="/library/movies" Default="/mnt/user/Media/Movies" Mode="rw" Description="Container Path: /library/movies" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="Library TV" Target="/library/tv" Default="/mnt/user/Media/TV" Mode="rw" Description="Container Path: /library/tv" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="Encoding Cache Directory" Target="/tmp/unmanic" Default="" Mode="rw" Description="Container Path: /tmp/unmanic" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="Debugging" Target="DEBUGGING" Default="false" Mode="" Description="Container Variable: DEBUGGING" Type="Variable" Display="advanced" Required="false" Mask="false"/>
 </Container>

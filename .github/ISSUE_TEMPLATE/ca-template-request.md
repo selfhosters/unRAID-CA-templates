@@ -9,6 +9,7 @@ assignees: ''
 
 ### NOTE
  **If you know how to make unraid container templates PR's are welcome!**
+Check out our guide: [Writing a template compatible for Unraid - Selfhosters.net](https://selfhosters.net/docker/templating/templating/)
 
 ***
 

@@ -5,7 +5,7 @@
   <Registry>https://hub.docker.com/r/xibosignage/xibo-xmr/</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
-  <Support>https://hub.docker.com/r/xibosignage/xibo-xmr/</Support>
+  <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
   <Project>https://github.com/xibosignage/xibo-xmr</Project>
   <Overview>XMR (Xibo Message Relay) &#xD;
 [br][br]&#xD;
@@ -13,58 +13,11 @@ XMR is a php application built on ReactPHP which acts as a ZeroMQ message exchan
   <Category>Productivity:</Category>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/template/xibo-xmr.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/xibo.png</Icon>
-  <Description>XMR (Xibo Message Relay) &#xD;
-[br][br]&#xD;
-XMR is a php application built on ReactPHP which acts as a ZeroMQ message exchange between the Xibo CMS and connected Xibo Players. It doesn't do anything beyond forward messages from the CMS to a pub/sub socket.</Description>
-  <Networking>
-    <Mode>bridge</Mode>
-    <Publish>
-      <Port>
-        <HostPort></HostPort>
-        <ContainerPort>9505</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-      <Port>
-        <HostPort></HostPort>
-        <ContainerPort>50001</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-    </Publish>
-  </Networking>
-  <Data/>
-  <Environment>
-    <Variable>
-      <Value></Value>
-      <Name>XMR_DEBUG</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value></Value>
-      <Name>XMR_QUEUE_POLL</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value></Value>
-      <Name>XMR_QUEUE_SIZE</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value></Value>
-      <Name>XMR_IPV6RESPSUPPORT</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value></Value>
-      <Name>XMR_IPV6PUBSUPPORT</Name>
-      <Mode/>
-    </Variable>
-  </Environment>
-  <Labels/>
-  <Config Name="Publish port" Target="9505" Default="9505" Mode="tcp" Description="Container Port: 9505" Type="Port" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Listen port" Target="50001" Default="50001" Mode="tcp" Description="Container Port: 50001" Type="Port" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Debug" Target="XMR_DEBUG" Default="false" Mode="" Description="Container Variable: XMR_DEBUG" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Queue poll" Target="XMR_QUEUE_POLL" Default="5" Mode="" Description="Container Variable: XMR_QUEUE_POLL" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Queue size" Target="XMR_QUEUE_SIZE" Default="10" Mode="" Description="Container Variable: XMR_QUEUE_SIZE" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="IPV6 Res Support" Target="XMR_IPV6RESPSUPPORT" Default="false" Mode="" Description="Container Variable: XMR_IPV6RESPSUPPORT" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="IPV6 Pub Support" Target="XMR_IPV6PUBSUPPORT" Default="false" Mode="" Description="Container Variable: XMR_IPV6PUBSUPPORT" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Publish port" Target="9505" Default="9505" Mode="tcp" Description="Container Port: 9505" Type="Port" Display="always" Required="false" Mask="false"/>
+  <Config Name="Listen port" Target="50001" Default="50001" Mode="tcp" Description="Container Port: 50001" Type="Port" Display="always" Required="false" Mask="false"/>
+  <Config Name="Debug" Target="XMR_DEBUG" Default="false" Mode="" Description="Container Variable: XMR_DEBUG" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Queue poll" Target="XMR_QUEUE_POLL" Default="5" Mode="" Description="Container Variable: XMR_QUEUE_POLL" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Queue size" Target="XMR_QUEUE_SIZE" Default="10" Mode="" Description="Container Variable: XMR_QUEUE_SIZE" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="IPV6 Res Support" Target="XMR_IPV6RESPSUPPORT" Default="false" Mode="" Description="Container Variable: XMR_IPV6RESPSUPPORT" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="IPV6 Pub Support" Target="XMR_IPV6PUBSUPPORT" Default="false" Mode="" Description="Container Variable: XMR_IPV6PUBSUPPORT" Type="Variable" Display="always" Required="false" Mask="false"/>
 </Container>

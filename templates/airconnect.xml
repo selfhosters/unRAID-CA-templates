@@ -6,12 +6,9 @@
   <Registry>https://hub.docker.com/r/1activegeek/airconnect/</Registry>
   <Network>host</Network>
   <Privileged>false</Privileged>
-  <Support>https://github.com/1activegeek/docker-airconnect</Support>
+  <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
   <Project>https://github.com/philippe44/AirConnect</Project>
   <Overview>AirConnect container for turning Chromecast into Airplay targets&#xD;
-[b]https://hub.docker.com/r/1activegeek/airconnect[/b]&#xD;
-[br]&#xD;
-[b]https://github.com/1activegeek/docker-airconnect[/b]&#xD;
 [br][br]&#xD;
 This is a containerized build of the fantastic program by philippe44 called AirConnect. It allows you to be able to use AirPlay to push audio to Chromecast and UPNP based devices. There are some advanced details and information that you should review on his GitHub Project. &#xD;
 [br][br]&#xD;
@@ -20,17 +17,4 @@ This is a containerized build of the fantastic program by philippe44 called AirC
 For the most part this container needs nothing more than to launch it using Host networking.</Overview>
   <Category>MediaServer:Video MediaServer:Music MediaServer:Other Status:Stable</Category>
   <Icon>https://i.imgur.com/hatCnm0.png</Icon>
-  <Description>AirConnect container for turning Chromecast into Airplay targets&#xD;
-[b]https://hub.docker.com/r/1activegeek/airconnect[/b]&#xD;
-[br]&#xD;
-[b]https://github.com/1activegeek/docker-airconnect[/b]&#xD;
-[br][br]&#xD;
-This is a containerized build of the fantastic program by philippe44 called AirConnect. It allows you to be able to use AirPlay to push audio to Chromecast and UPNP based devices. There are some advanced details and information that you should review on his GitHub Project. &#xD;
-[br][br]&#xD;
-[b]https://github.com/philippe44/AirConnect[/b]&#xD;
-[br][br]&#xD;
-[b][span style='color: #E80000;']For the most part this container needs nothing more than to launch it using Host networking.[/span][/b]</Description>
-  <Networking>
-    <Mode>host</Mode>
-  </Networking>
 </Container>

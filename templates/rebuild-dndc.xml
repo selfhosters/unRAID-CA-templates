@@ -1,106 +1,101 @@
 <?xml version="1.0"?>
 <Container version="2">
-	<Name>Rebuild-DNDC</Name>
-	<Repository>eafxx/rebuild-dndc:unraid-m</Repository>
-	<Registry>https://hub.docker.com/r/eafxx/rebuild-dndc</Registry>
-	<Network>bridge</Network>
-	<Privileged>false</Privileged>
-	<Support>https://hub.docker.com/r/eafxx/rebuild-dndc</Support>
-	<Project>https://github.com/elmerfdz/unRAIDscripts</Project>
-	<Overview>- Rebuild Docker Network Dependent Containers, e.g. Monitor a VPN or any container and rebuild dependent containers using the VPN container network stack --net=container:vpn_cotnainer_name. [br]
+  <Name>Rebuild-DNDC</Name>
+  <Repository>eafxx/rebuild-dndc:unraid-m</Repository>
+  <Registry>https://hub.docker.com/r/eafxx/rebuild-dndc</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/eafxx/rebuild-dndc</Support>
+  <Project>https://github.com/elmerfdz/unRAIDscripts</Project>
+  <Overview>- Rebuild Docker Network Dependent Containers, e.g. Monitor a VPN or any container and rebuild dependent containers using the VPN container network stack --net=container:vpn_cotnainer_name. [br]
   - RDNDC will monitor the master/vpn container during updates, restarts and after server boot. [br]
   - Please refer to the readme before deploying this container: https://github.com/elmerfdz/unRAIDscripts</Overview>
-	<Category>Tools:</Category>
-	<WebUI></WebUI>
-	<TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/rebuild-dndc.xml</TemplateURL>
-	<Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/rdndc.png</Icon>
-	<Description>- Rebuild Docker Network Dependent Containers, e.g. Monitor a VPN or any container and rebuild dependent containers using the VPN container network stack --net=container:vpn_cotnainer_name. [br]
+  <Category>Tools:</Category>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/rebuild-dndc.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/rdndc.png</Icon>
+  <Description>- Rebuild Docker Network Dependent Containers, e.g. Monitor a VPN or any container and rebuild dependent containers using the VPN container network stack --net=container:vpn_cotnainer_name. [br]
   - RDNDC will monitor the master/vpn container during updates, restarts and after server boot. [br]
   - Please refer to the readme before deploying this container: https://github.com/elmerfdz/unRAIDscripts</Description>
-	<Networking>
-		<Mode>bridge</Mode>
-	</Networking>
-	<Data>
-		<Volume>
-			<HostDir>/var/run/docker.sock</HostDir>
-			<ContainerDir>/var/run/docker.sock</ContainerDir>
-			<Mode>rw</Mode>
-		</Volume>
-		<Volume>
-			<HostDir>/boot/config/plugins/dockerMan/templates-user</HostDir>
-			<ContainerDir>/config/docker-templates</ContainerDir>
-			<Mode>ro</Mode>
-		</Volume>
-		<Volume>
-			<HostDir>/mnt/appdata/rebuild-dndc/config/rebuild-dndc</HostDir>
-			<ContainerDir>/config/rebuild-dndc</ContainerDir>
-			<Mode>rw</Mode>
-		</Volume>
-	</Data>
-	<Environment>
-		<Variable>
-			<Value></Value>
-			<Name>mastercontname</Name>
-			<Mode/>
-		</Variable>
-		<Variable>
-			<Value>yes</Value>
-			<Name>mastercontconcheck</Name>
-			<Mode/>
-		</Variable>
-		<Variable>
-			<Value>1.1.1.1</Value>
-			<Name>ping_ip</Name>
-			<Mode/>
-		</Variable>
-		<Variable>
-			<Value>8.8.8.8</Value>
-			<Name>ping_ip_alt</Name>
-			<Mode/>
-		</Variable>
-		<Variable>
-			<Value>4</Value>
-			<Name>ping_count</Name>
-			<Mode/>
-		</Variable>
-		<Variable>
-			<Value>10</Value>
-			<Name>sleep_secs</Name>
-			<Mode/>
-		</Variable>
-		<Variable>
-			<Value>yes</Value>
-			<Name>run_startup</Name>
-			<Mode/>
-		</Variable>
-		<Variable>
-			<Value>yes</Value>
-			<Name>discord_notifications</Name>
-			<Mode/>
-		</Variable>
-		<Variable>
-			<Value></Value>
-			<Name>discord_url</Name>
-			<Mode/>
-		</Variable>
-		<Variable>
-			<Value>*/5 * * * *</Value>
-			<Name>cron</Name>
-			<Mode/>
-		</Variable>
-	</Environment>
-	<Labels/>
-	<Config Name="Master Container Name" Target="mastercontname" Default="" Mode="" Description="Container Variable: mastercontname" Type="Variable" Display="always" Required="true" Mask="false"></Config>
-	<Config Name="Master Container Connection Check" Target="mastercontconcheck" Default="" Mode="" Description="Container Variable: mastercontconcheck (yes/no)" Type="Variable" Display="always" Required="false" Mask="false">yes</Config>
-	<Config Name="Ping IP" Target="ping_ip" Default="" Mode="" Description="Container Variable: ping_ip" Type="Variable" Display="always" Required="false" Mask="false">1.1.1.1</Config>
-	<Config Name="Ping IP Alt" Target="ping_ip_alt" Default="" Mode="" Description="Container Variable: ping_ip_alt" Type="Variable" Display="always" Required="false" Mask="false">8.8.8.8</Config>
-	<Config Name="Ping Count" Target="ping_count" Default="" Mode="" Description="Container Variable: ping_count" Type="Variable" Display="always" Required="false" Mask="false">4</Config>
-	<Config Name="Sleep Secs" Target="sleep_secs" Default="" Mode="" Description="Container Variable: sleep_secs" Type="Variable" Display="always" Required="false" Mask="false">10</Config>
-	<Config Name="Run on Startup" Target="run_startup" Default="" Mode="" Description="Container Variable: run_startup (yes/no)" Type="Variable" Display="always" Required="false" Mask="false">yes</Config>
-	<Config Name="Enable Discord Notifications" Target="discord_notifications" Default="" Mode="" Description="Container Variable: discord_notifications (yes/no)" Type="Variable" Display="always" Required="false" Mask="false">no</Config>
-	<Config Name="Discord Webhook URL" Target="discord_url" Default="" Mode="" Description="Container Variable: discord_url" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-	<Config Name="Docker Sock" Target="/var/run/docker.sock" Default="" Mode="rw" Description="Container Path: /var/run/docker.sock" Type="Path" Display="always" Required="true" Mask="false">/var/run/docker.sock</Config>
-	<Config Name="CRON Schedule" Target="cron" Default="" Mode="" Description="Container Variable: cron" Type="Variable" Display="always" Required="false" Mask="false">*/5 * * * *</Config>
-	<Config Name="Docker Template Location" Target="/config/docker-templates" Default="" Mode="ro" Description="Container Path: /config/docker-templates" Type="Path" Display="always" Required="true" Mask="false">/boot/config/plugins/dockerMan/templates-user</Config>
-	<Config Name="Config" Target="/config/rebuild-dndc" Default="" Mode="rw" Description="Container Path: /config/rebuild-dndc" Type="Path" Display="always" Required="false" Mask="false">/mnt/appdata/rebuild-dndc/config/rebuild-dndc</Config>
+  <Data>
+    <Volume>
+      <HostDir/>
+      <ContainerDir>/var/run/docker.sock</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir/>
+      <ContainerDir>/config/docker-templates</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+    <Volume>
+      <HostDir/>
+      <ContainerDir>/config/rebuild-dndc</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value/>
+      <Name>mastercontname</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>mastercontconcheck</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>ping_ip</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>ping_ip_alt</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>ping_count</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>sleep_secs</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>run_startup</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>discord_notifications</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>discord_url</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>cron</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Config Name="Master Container Name" Target="mastercontname" Default="" Mode="" Description="Container Variable: mastercontname" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Master Container Connection Check" Target="mastercontconcheck" Default="yes" Mode="" Description="Container Variable: mastercontconcheck (yes/no)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Ping IP" Target="ping_ip" Default="1.1.1.1" Mode="" Description="Container Variable: ping_ip" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Ping IP Alt" Target="ping_ip_alt" Default="8.8.8.8" Mode="" Description="Container Variable: ping_ip_alt" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Ping Count" Target="ping_count" Default="4" Mode="" Description="Container Variable: ping_count" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Sleep Secs" Target="sleep_secs" Default="10" Mode="" Description="Container Variable: sleep_secs" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Run on Startup" Target="run_startup" Default="yes|no" Mode="" Description="Container Variable: run_startup (yes/no)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Enable Discord Notifications" Target="discord_notifications" Default="no" Mode="" Description="Container Variable: discord_notifications (yes/no)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Discord Webhook URL" Target="discord_url" Default="" Mode="" Description="Container Variable: discord_url" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Docker Sock" Target="/var/run/docker.sock" Default="/var/run/docker.sock" Mode="rw" Description="Container Path: /var/run/docker.sock" Type="Path" Display="advanced-hide" Required="true" Mask="false"/>
+  <Config Name="CRON Schedule" Target="cron" Default="*/5 * * * *" Mode="" Description="Container Variable: cron" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Docker Template Location" Target="/config/docker-templates" Default="/boot/config/plugins/dockerMan/templates-user" Mode="ro" Description="Container Path: /config/docker-templates" Type="Path" Display="advanced-hide" Required="true" Mask="false"/>
+  <Config Name="Config" Target="/config/rebuild-dndc" Default="/mnt/user/appdata/rebuild-dndc" Mode="rw" Description="Container Path: /config/rebuild-dndc" Type="Path" Display="advanced" Required="false" Mask="false"/>
 </Container>
