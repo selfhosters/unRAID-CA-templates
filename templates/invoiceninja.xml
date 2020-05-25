@@ -9,7 +9,7 @@
   <Project>https://www.invoiceninja.com/</Project>
   <Overview> An open-source invoicing and time-tracking app built with Laravel https://www.invoiceninja.com  </Overview>
   <Category>Productivity: Tools:</Category>
-  <WebUI>http://[IP]:[PORT:8000]/</WebUI>
+  <WebUI>http://[IP]:[PORT:80]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/invoiceninja.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/invoiceninja.png</Icon>
   <Config Name="APP_ENV" Target="APP_ENV" Default="production" Description="Container Variable: APP_ENV" Type="Variable" Display="advanced" Required="false" Mask="false"/>
