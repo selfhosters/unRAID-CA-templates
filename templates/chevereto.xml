@@ -13,7 +13,7 @@ It's your hosting and your rules, so say goodbye to closures and restrictions. T
 [br][br]&#xD;
 [b][span style='color: #E80000;'] NOTE: This container needs a separate MariaDB/MySQL instance! [/span][/b] </Overview>
   <Category>Productivity: MediaApp:Photos</Category>
-  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/chevereto.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/chevereto.png</Icon>
   <DonateText>If you appreciate my work, then please consider buying me a beer :D</DonateText>
