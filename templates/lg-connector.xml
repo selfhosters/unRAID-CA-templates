@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>lg-connector</Name>
+  <Repository>fison67/lg-connector:0.0.3</Repository>
+  <Registry>https://hub.docker.com/r/fison67/lg-connector/</Registry>
+  <Network>host</Network>
+  <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
+  <Project>https://github.com/fison67/LG-Connector</Project>
+  <Overview>Connector for LG devices with SmartThings&#xD;
+&#xD;
+Simplifies the setup of LG devices with SmartThings.&#xD;
+If LG Connector is installed, virtual devices are registered automatically by the LG Connector SmartApp.&#xD;
+You don't have to do anything to add LG devices in SmartThings IDE.&#xD;
+&#xD;
+Default Login ID &amp;amp; Password is [ admin / 12345 ]</Overview>
+  <Category>HomeAutomation:</Category>
+  <WebUI>http://[IP]:[PORT:30020]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/lg-connector.png</Icon>
+  <DonateLink>https://paypal.me/fison67</DonateLink>
+  <Config Name="Appdata" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="false" Mask="false"/>
+</Container>

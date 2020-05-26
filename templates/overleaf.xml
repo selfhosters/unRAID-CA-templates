@@ -9,7 +9,7 @@
   <Project>https://github.com/overleaf/docker-image</Project>
   <Registry>https://hub.docker.com/r/sharelatex/sharelatex</Registry>
   <Overview>A self-hosted LaTeX editor</Overview>
-  <WebUI>http://[IP]:[PORT:3000]</WebUI>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
   <Category>Productivity:</Category>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/overleaf.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/overleaf.png</Icon>
