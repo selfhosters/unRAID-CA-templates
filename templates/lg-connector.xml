@@ -16,5 +16,6 @@ Default Login ID &amp;amp; Password is [ admin / 12345 ]</Overview>
   <Category>HomeAutomation:</Category>
   <WebUI>http://[IP]:[PORT:30020]/</WebUI>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/lg-connector.png</Icon>
+  <DonateLink>https://paypal.me/fison67</DonateLink>
   <Config Name="Appdata" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="false" Mask="false">
 </Container>
