@@ -8,7 +8,7 @@
   <Support>https://rancher.com/docs/rancher/v2.x/en/installation/other-installation-methods/single-node-docker/</Support>
   <Project>https://github.com/rancher/rancher</Project>
   <Overview>A container management platform built for organizations that deploy containers in production. The docker version of Rancher cannot be made HA (Highly Available), however the clusters it creates can be. It is also possible to connect to and use clusters created by rancher when it is down. Useful as a management interface for deploying, scaling, and editting apps on other systems. (in the cloud, a raspberry pi cluster, vms running k3os, etc.) Perfect for running and managing the apps that you'd rather not go down while maintaining your server.</Overview>
-  <Category/>
+  <Category>Network:Management</Category>
   <WebUI>https://[IP]:[PORT:3443]</WebUI>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/rancher.png</Icon>
   <Description>A container management platform built for organizations that deploy containers in production. The docker version of Rancher cannot be made HA (Highly Available), however the clusters it creates can be. It is also possible to connect to and use clusters created by rancher when it is down. Useful as a management interface for deploying, scaling, and editting apps on other systems. (in the cloud, a raspberry pi cluster, vms running k3os, etc.) Perfect for running and managing the apps that you'd rather not go down while maintaining your server.</Description>
