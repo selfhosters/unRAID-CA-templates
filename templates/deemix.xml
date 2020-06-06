@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>deemix</Name>
-  <Repository>bocki/deemix</Repository>
+  <Repository>registry.gitlab.com/bockiii/deemix-docker</Repository>
   <Registry>https://registry.gitlab.com/bockiii/deemix-docker</Registry>
   <Network>bridge</Network>
   <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
