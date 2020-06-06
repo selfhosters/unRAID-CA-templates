@@ -2,7 +2,7 @@
 <Container version="2">
   <Name>deemix</Name>
   <Repository>bocki/deemix</Repository>
-  <Registry>https://hub.docker.com/r/bocki/deemix/</Registry>
+  <Registry>https://registry.gitlab.com/bockiii/deemix-docker</Registry>
   <Network>bridge</Network>
   <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
   <Project>https://notabug.org/RemixDev/deemix</Project>
@@ -11,8 +11,8 @@
   <WebUI>http://[IP]:[PORT:9666]/</WebUI>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/deemix.png</Icon>
   <Config Name="WebUI" Target="9666" Default="" Mode="tcp" Description="Container Port: 9666" Type="Port" Display="always" Required="false" Mask="false"/>
-  <Config Name="PUID" Target="PUID" Default="" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
-  <Config Name="PGID" Target="PGID" Default="" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
+  <Config Name="PUID" Target="PUID" Default="" Mode="" Description="Container Variable: PUID" Type="Variable" Display="advanced-hide" Required="false" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="" Mode="" Description="Container Variable: PGID" Type="Variable" Display="advanced-hide" Required="false" Mask="false">100</Config>
   <Config Name="Downloads" Target="/downloads" Default="" Mode="rw" Description="Container Path: /downloads" Type="Path" Display="always" Required="false" Mask="false"/>
   <Config Name="Appdata" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="false" Mask="false"/>
   <Config Name="ARL Token" Target="ARL" Default="" Mode="" Description="Container Variable: ARL" Type="Variable" Display="always" Required="false" Mask="false"/>
