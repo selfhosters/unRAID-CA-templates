@@ -12,7 +12,7 @@
   PASTA allows you to connect to your Plex server and view more details about the audio tracks and subtitles, as well as set the tracks and subtitles or entire shows, or single episodes very quickly.
   </Overview>
   <Category>Tools: Other:</Category>
-  <WebUI>http://[IP]:[PORT:24291]/</WebUI>
+  <WebUI>http://[IP]:[PORT:80]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/pasta.xml</TemplateURL>
   <Icon>https://www.pastatool.com/images/android-chrome-512.png</Icon>
   <Config Name="WebUI" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false"/>
