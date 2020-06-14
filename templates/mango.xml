@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>hkalexling/mango</Name>
+  <Name>Mango</Name>
   <Repository>hkalexling/mango</Repository>
   <Registry>https://hub.docker.com/r/hkalexling/mango</Registry>
   <Network>bridge</Network>
