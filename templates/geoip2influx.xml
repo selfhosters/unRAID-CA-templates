@@ -26,5 +26,5 @@ https://github.com/gilbN/geoip2influx/blob/master/README.md&#xD;
   <Config Name="InfluxDB password" Target="INFLUX_PASS" Default="" Mode="" Description="Container Variable: INFLUX_PASS" Type="Variable" Display="always" Required="false" Mask="true"/>
   <Config Name="MaxmindDB license key" Target="MAXMINDDB_LICENSE_KEY" Default="" Mode="" Description="Container Variable: MAXMINDDB_LICENSE_KEY" Type="Variable" Display="always" Required="true" Mask="true"/>
   <Config Name="Appdata" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="true" Mask="false"/>
-  <Config Name="Nginx access.log path" Target="/config/log/nginx/" Default="" Mode="rw" Description="Container Path: /config/log/nginx/" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Nginx access.log folder" Target="/config/log/nginx/" Default="" Mode="rw" Description="Container Path: /config/log/nginx/" Type="Path" Display="always" Required="true" Mask="false"/>
 </Container>
