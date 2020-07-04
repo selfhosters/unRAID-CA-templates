@@ -18,4 +18,5 @@
   <Config Name="WebUI" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="false" Mask="false"></Config>
   <Config Name="Appdata" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="false" Mask="false"></Config>
   <Config Name="Slack/Discord Webhook" Target="SLACK_WEBHOOK" Default="" Mode="" Description="Container Variable: SLACK_WEBHOOK" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="OOKLA Accept EULA and GDPR" Target="OOKLA_EULA_GDPR" Default="false|true" Mode="" Description="Container Variable: OOKLA_EULA_GDPR" Type="Variable" Display="always" Required="true" Mask="false"/>
 </Container>
