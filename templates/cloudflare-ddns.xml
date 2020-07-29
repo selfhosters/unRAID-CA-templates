@@ -30,5 +30,5 @@
   <Config Name="Domain" Target="ZONE" Default="" Description="Container Variable: ZONE" Type="Variable" Display="always" Required="true" Mask="false"/>
   <Config Name="Subdomain (Optional)" Target="SUBDOMAIN" Default="" Description="Container Variable: SUBDOMAIN" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Cloudflare Proxy" Target="PROXIED" Default="true|false" Description="Container Variable: PROXIED" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="IPv6/IPv4 records" Target="RRTYP" Default="A" Description="Container Variable: RRTYP" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="IPv6/IPv4 records" Target="RRTYPE" Default="A" Description="Container Variable: RRTYPE" Type="Variable" Display="always" Required="false" Mask="false"/>
 </Container>
