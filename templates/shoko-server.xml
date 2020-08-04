@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>shoko-server</Name>
-  <Repository>cazzar/shokoserver</Repository>
-  <Registry>https://hub.docker.com/r/cazzar/shokoserver/</Registry>
+  <Repository>shokoanime/server</Repository>
+  <Registry>https://hub.docker.com/r/shokoanime/server/</Registry>
   <Category>Tools:Utilities</Category>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
@@ -12,8 +12,8 @@
   <WebUI>http://[IP]:[PORT:8111]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/shoko-server.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/shoko-server.png</Icon>
-  <Config Name="AppData" Target="/home/shoko/.shoko/" Default="" Mode="rw" Description="Container Path: /home/shoko/.shoko/" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/shakoserver</Config>
+  <Config Name="AppData" Target="/home/shoko/.shoko/" Default="" Mode="rw" Description="Container Path: /home/shoko/.shoko/" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/shokoserver</Config>
   <Config Name="WebUI" Target="8111" Default="" Mode="tcp" Description="Container Port: 8111" Type="Port" Display="always" Required="true" Mask="false">8111</Config>
-  <Config Name="Anime Folder" Target="/anime" Default="" Mode="rw" Description="Container Path: /anime" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/shakoserver/anime</Config>
-  <Config Name="Import Folder" Target="/import" Default="" Mode="rw" Description="Container Path: /import" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/shakoserver/import</Config>
+  <Config Name="Anime Folder" Target="/anime" Default="" Mode="rw" Description="Container Path: /anime" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/shokoserver/anime</Config>
+  <Config Name="Import Folder" Target="/import" Default="" Mode="rw" Description="Container Path: /import" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/shokoserver/import</Config>
 </Container>
