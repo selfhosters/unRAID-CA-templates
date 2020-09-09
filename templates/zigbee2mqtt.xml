@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Zigbee2MQTT</Name>
+  <Repository>koenkk/zigbee2mqtt</Repository>
+  <Registry>https://hub.docker.com/r/koenkk/zigbee2mqtt/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://www.zigbee2mqtt.io/information/docker.html</Support>
+  <Project/>
+  <Overview>Zigbee &#x1F41D; to MQTT bridge &#x1F309; using zigbee-shepherd &#x1F415;   Converted By Community Applications   Always verify this template (and values) against the dockerhub support page for the container</Overview>
+  <Category/>
+  <WebUI/>
+  <Icon>/img/zigbee2mqtt.png</Icon>
+  <Description>Zigbee &#x1F41D; to MQTT bridge &#x1F309; using zigbee-shepherd &#x1F415;   Converted By Community Applications   Always verify this template (and values) against the dockerhub support page for the container</Description>
+  <Config Name="Config Directory" Target="/app/data" Default="/mnt/user/appdata/zigbee2mqtt/" Mode="rw" Description="Container Path: /app/data" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Zigbee module" Target="" Default="PATH_TO_ZIGBEE_MODULE" Mode="" Description="Path to zigbee module, preferably serial/by-id" Type="Device" Display="always" Required="true" Mask="false"/>
+  <Config Name="Timezone" Target="TZ" Default="America/Chicago" Mode="" Description="Enter your timezone" Type="Variable" Display="always" Required="true" Mask="false"/>
+</Container>
