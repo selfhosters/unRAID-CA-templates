@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>shoko-server</Name>
-  <Repository>shokoanime/server</Repository>
+  <Repository>shokoanime/server:daily</Repository>
   <Registry>https://hub.docker.com/r/shokoanime/server/</Registry>
   <Category>Tools:Utilities</Category>
   <Network>bridge</Network>
