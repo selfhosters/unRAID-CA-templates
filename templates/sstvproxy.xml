@@ -15,9 +15,9 @@ For Plex setup see: https://github.com/stokkes/docker-sstvproxy#plex</Overview>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/template/sstvproxy.xml</TemplateURL>
   <Config Name="YAP exposed local port" Target="8098" Default="8098" Mode="tcp" Description="Container Port: 8098" Type="Port" Display="always" Required="true" Mask="false"/>
   <Config Name="YAP exposed external port" Target="8099" Default="8099" Mode="tcp" Description="Container Port: 8099" Type="Port" Display="always" Required="true" Mask="false"/>
-  <Config Name="Appdata" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="true" Mask="false"/>
-  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="true" Mask="false"/>
-  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Appdata" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced" Required="true" Mask="false"/>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="advanced-hide" Required="true" Mask="false"/>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="advanced-hide" Required="true" Mask="false"/>
   <Config Name="YAP_GIT_BRANCH" Target="YAP_GIT_BRANCH" Default="master" Mode="" Description="For specifying which branch to use (master or dev), defaults to master if not set." Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="YAP_SERVICE" Target="YAP_SERVICE" Default="" Mode="" Description="Short code for smoothstreams service" Type="Variable" Display="always" Required="true" Mask="false"/>
   <Config Name="YAP_USERNAME" Target="YAP_USERNAME" Default="" Mode="" Description="Container Variable: YAP_USERNAME" Type="Variable" Display="always" Required="true" Mask="false"/>
