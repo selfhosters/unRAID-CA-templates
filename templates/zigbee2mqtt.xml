@@ -9,7 +9,6 @@
   <Project>https://www.zigbee2mqtt.io/</Project>
   <Overview>Zigbee to MQTT bridge using zigbee-shepherd allows you to use your Zigbee devices without the vendors bridge or gateway. It bridges events and allows you to control your Zigbee devices via MQTT. In this way you can integrate your Zigbee devices with whatever smart home infrastructure you are using. Converted By Community Applications   Always verify this template (and values) against the dockerhub support page for the container</Overview>
   <Category>HomeAutomation:</Category>
-  <WebUI/>
   <Icon>https://raw.githubusercontent.com/mar005/unRAID-CA-templates/master/templates/img/zigbee2mqtt.png</Icon>
   <Description>Zigbee to MQTT bridge using zigbee-shepherd allows you to use your Zigbee devices without the vendors bridge or gateway. It bridges events and allows you to control your Zigbee devices via MQTT. In this way you can integrate your Zigbee devices with whatever smart home infrastructure you are using. Converted By Community Applications   Always verify this template (and values) against the dockerhub support page for the container</Description>
   <Config Name="Config Directory" Target="/app/data" Default="/mnt/user/appdata/zigbee2mqtt/" Mode="rw" Description="Container Path: /app/data" Type="Path" Display="always" Required="true" Mask="false"/>
