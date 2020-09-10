@@ -6,7 +6,7 @@
   <Network>bridge</Network>
   <Privileged>false</Privileged>
   <Support>https://www.zigbee2mqtt.io/information/docker.html</Support>
-  <Project/>
+  <Project>https://www.zigbee2mqtt.io/</Project>
   <Overview>Zigbee &#x1F41D; to MQTT bridge &#x1F309; using zigbee-shepherd &#x1F415;   Converted By Community Applications   Always verify this template (and values) against the dockerhub support page for the container</Overview>
   <Category/>
   <WebUI/>
