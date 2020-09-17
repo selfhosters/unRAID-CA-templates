@@ -11,6 +11,7 @@
   <WebUI>http://[IP]:[PORT:8091]/</WebUI>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/zwave2mqtt.png</Icon>
   <Config Name="WebUI" Target="8091" Default="" Mode="tcp" Description="Container Port: 8091" Type="Port" Display="always" Required="false" Mask="false"/>
+  <Config Name="OZW_NETWORK_KEY" Target="OZW_NETWORK_KEY" Default="" Mode="" Description="Container Variable: OZW_NETWORK_KEY" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Appdata" Target="/usr/src/app/store" Default="" Mode="rw" Description="Container Path: /usr/src/app/store" Type="Path" Display="advanced" Required="false" Mask="false"/>
   <Config Name="Serial device" Target="" Default="/dev/ttyACM0" Mode="" Description="Container Device: /dev/ttyACM0" Type="Device" Display="always" Required="false" Mask="false"/>
 </Container>
