@@ -5,7 +5,7 @@
   <Registry>https://hub.docker.com/r/requarks/wiki/</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
-  <Support>https://hub.docker.com/r/requarks/wiki/</Support>
+  <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
   <Project>https://github.com/Requarks/wiki</Project>
   <Overview>A modern, lightweight and powerful wiki app built on NodeJS, Git and Markdown&#xD;</Overview>
   <Category>Cloud: Productivity: Status:Beta</Category>
@@ -14,65 +14,6 @@
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/wikijs.png</Icon>
   <DonateText>Wiki.js is an open source project that has been made possible due to the generous contributions by community backers. If you are interested in supporting this project, please consider becoming a patron or donating to our OpenCollective.</DonateText>
   <DonateLink>https://opencollective.com/wikijs</DonateLink>
-  <Description>A modern, lightweight and powerful wiki app built on NodeJS, Git and Markdown&#xD;</Description>
-  <Networking>
-    <Publish>
-      <Port>
-        <HostPort/>
-        <ContainerPort>3000</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-    </Publish>
-  </Networking>
-  <Data>
-    <Volume>
-      <HostDir/>
-      <ContainerDir>/logs</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-  </Data>
-  <Environment>
-    <Variable>
-      <Value>mariadb</Value>
-      <Name>DB_TYPE</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>DB_HOST</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>DB_PORT</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value>wikijs</Value>
-      <Name>DB_USER</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value>wikijs</Value>
-      <Name>DB_PASS</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value>wikijs</Value>
-      <Name>DB_NAME</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value>false</Value>
-      <Name>DB_SSL</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>DB_FILEPATH</Name>
-      <Mode/>
-    </Variable>
-  </Environment>
   <Config Name="WebUI" Target="3000" Default="3000" Mode="tcp" Description="Container Port: 3000" Type="Port" Display="always" Required="false" Mask="false"/>
   <Config Name="Logs" Target="/logs" Default="/mnt/user/appdata/wikijs/logs" Mode="rw" Description="Container Path: /logs" Type="Path" Display="advanced" Required="false" Mask="false"/>
   <Config Name="Database Type" Target="DB_TYPE" Default="mariadb" Mode="" Description="DB_TYPE : Type of database (mysql, postgres, mariadb, mssql or sqlite)" Type="Variable" Display="always" Required="false" Mask="false"/>

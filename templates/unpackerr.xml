@@ -6,11 +6,10 @@
   <Network>bridge</Network>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>https://github.com/davidnewhall/unpackerr/issues/new</Support>
+  <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
   <Project>https://github.com/davidnewhall/unpackerr</Project>
   <Icon>https://raw.githubusercontent.com/wiki/davidnewhall/unpackerr/images/logo.png</Icon>
   <Category>Tools:</Category>
-  <Description>Download extractor for Sonarr, Radarr and Lidarr!</Description>
   <Overview>
   RAR download extractor for Sonarr, Radarr and Lidarr! Mount /downloads on all 3 or 4 containers to the same path on your host.
   This application will automatically poll all of the apps (Lidarr, Sonarr, Radarr) to check for downloads. When a completed
@@ -19,7 +18,7 @@
   or Radarr, simply empty those two fields for that app and it wont be polled.[/b] If you put all your containers on the same
   custom bridge you may not need to expose any ports, and you can use DNS to reach other containers. It's a very convenient configuration!
   </Overview>
-  <Config Name="Downloads Location" Target="/downloads" Default="" Mode="rw" Description="Container Path: /downloads - this must be the same path on this app and sonarr/radarr/lidarr!" Type="Path" Display="always-hide" Required="true" Mask="false"></Config>
+  <Config Name="Downloads Location" Target="/downloads" Default="" Mode="rw" Description="Container Path: /downloads - this must be the same path on this app and sonarr/radarr/lidarr!" Type="Path" Display="always" Required="true" Mask="false"></Config>
   <Config Name="Debug Log Output" Target="UN_DEBUG" Default="false|true" Description="UN_DEBUG - Turns on more logs. You should use this at least once so you know what it does." Type="Variable" Display="always-hide" Required="false" Mask="false"></Config>
   <Config Name="Log File Path" Target="UN_LOG_FILE" Default="" Description="UN_LOG_FILE - Logs will be written to this path if provided. Recommended, but required." Type="Variable" Display="always" Required="false" Mask="false">/downloads/unpackerr.log</Config>
   <Config Name="Sonarr URL" Target="UN_SONARR_0_URL" Default="" Description="UN_SONARR_0_URL - Sonarr URL" Type="Variable" Display="always-hide" Required="false" Mask="false">http://sonarr:8989</Config>

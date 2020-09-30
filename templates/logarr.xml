@@ -5,9 +5,8 @@
   <Registry>https://hub.docker.com/r/monitorr/logarr-alpha/</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
-  <Support>https://hub.docker.com/r/monitorr/logarr-alpha/</Support>
+  <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository</Support>
   <Project>https://github.com/Monitorr/logarr/</Project>
-  <Description>Logarr is a self-hosted, single-page, log consolidation tool written in PHP </Description>
   <Overview>Logarr is a self-hosted, single-page, log consolidation tool written in PHP </Overview>
   <Category>Tools: Status:Beta</Category>
   <WebUI>http://[IP]:[PORT:80]</WebUI>
@@ -15,23 +14,8 @@
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/logarr.png</Icon>
   <DonateText>Buy us a beer!</DonateText>
   <DonateLink>https://paypal.me/monitorrapp</DonateLink>
-  <Networking>
-    <Publish>
-      <Port>
-        <ContainerPort>80</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-    </Publish>
-  </Networking>
-  <Data>
-    <Volume>
-      <ContainerDir>/app</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-  </Data>
-  <Environment/>
   <Config Name="WebUI" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false"/>
   <Config Name="Config" Target="/app" Default="/mnt/user/appdata/Logarr" Mode="rw" Description="Container Path: /app" Type="Path" Display="advanced" Required="true" Mask="false"/>
   <Config Name="PUID" Target="PUID" Default="99" Description="Container Variable: PUID" Type="Variable" Display="advanced" Required="false" Mask="false"/>
-	<Config Name="PGID" Target="PGID" Default="100" Description="Container Variable: PGID" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="PGID" Target="PGID" Default="100" Description="Container Variable: PGID" Type="Variable" Display="advanced" Required="false" Mask="false"/>
 </Container>

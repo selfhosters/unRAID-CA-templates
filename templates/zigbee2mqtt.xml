@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>zigbee2mqtt</Name>
+  <Repository>koenkk/zigbee2mqtt</Repository>
+  <Registry>https://hub.docker.com/r/koenkk/zigbee2mqtt/</Registry>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/zigbee2mqtt.xml</TemplateURL>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
+  <Project>https://github.com/koenkk/zigbee2mqtt</Project>
+  <Overview>Zigbee to MQTT bridge using zigbee-shepherd allows you to use your Zigbee devices without the vendors bridge or gateway. It bridges events and allows you to control your Zigbee devices via MQTT. In this way you can integrate your Zigbee devices with whatever smart home infrastructure you are using.</Overview>
+  <Category>HomeAutomation:</Category>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/zigbee2mqtt.png</Icon>
+  <Config Name="Appdata" Target="/app/data" Default="" Mode="rw" Description="Container Path: /app/data" Type="Path" Display="advanced" Required="true" Mask="false"/>
+  <Config Name="Zigbee module" Target="" Default="PATH_TO_ZIGBEE_MODULE" Mode="" Description="Path to zigbee module, preferably serial/by-id" Type="Device" Display="always" Required="true" Mask="false"/>
+</Container>

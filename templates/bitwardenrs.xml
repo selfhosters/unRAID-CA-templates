@@ -43,66 +43,6 @@
   <WebUI>http://[IP]:[PORT:80]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/bitwardenrs.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/bitwardenrs.png</Icon>
-  <Description>This is a Bitwarden server API implementation written in Rust compatible with upstream Bitwarden clients, perfect for self-hosted deployment where running the official resource-heavy service might not be ideal.&#xD;
-    [br][br]&#xD;
-    Basically full implementation of Bitwarden API is provided including: &#xD;
-    [br][br]&#xD;
-    -Basic single user functionality&#xD;
-    [br]&#xD;
-    -Organizations support&#xD;
-    [br]&#xD;
-    -Attachments&#xD;
-    [br]&#xD;
-    -Vault API support&#xD;
-    [br]&#xD;
-    -Serving the static files for Vault interface&#xD;
-    [br]&#xD;
-    -Website icons API&#xD;
-    [br]&#xD;
-    -Authenticator and U2F support&#xD;
-    [br]&#xD;
-    -YubiKey OTP&#xD;
-    [br][br]&#xD;
-    For more configuration see the wiki
-    [br]
-    https://github.com/dani-garcia/bitwarden_rs/wiki
-  </Description>
-  <Networking>
-    <Publish>
-      <Port>
-        <ContainerPort>80</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-    </Publish>
-  </Networking>
-  <Data>
-    <Volume>
-      <ContainerDir>/data/</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-  </Data>
-  <Environment>
-    <Variable>
-      <Value>false|true</Value>
-      <Name>SIGNUPS_ALLOWED</Name>
-    </Variable>
-		<Variable>
-			<Value>true|false</Value>
-			<Name>INVITATIONS_ALLOWED</Name>
-		</Variable>
-    <Variable>
-			<Value/>
-			<Name>SERVER_ADMIN_EMAIL</Name>
-		</Variable>
-    <Variable>
-			<Value>true|false</Value>
-			<Name>WEBSOCKET_ENABLED</Name>
-		</Variable>
-    <Variable>
-			<Value/>
-			<Name>ADMIN_TOKEN</Name>
-		</Variable>  
-	</Environment>
   <Config Name="WebUI HTTP Port" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false"/>
   <Config Name="Storage" Target="/data" Default="/mnt/user/appdata/bitwarden" Mode="rw" Description="Container Path: /data" Type="Path" Display="advanced" Required="true" Mask="false"/>
   <Config Name="SERVER_ADMIN_EMAIL" Target="SERVER_ADMIN_EMAIL" Default="me@domain.com" Description="Container Variable: Server Admin E-Mail" Type="Variable" Display="always" Required="true" Mask="false"/>

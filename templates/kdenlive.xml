@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Kdenlive VNC</Name>
+  <Repository>tessypowder/docker-kdenlive:latest</Repository>
+  <Registry>https://hub.docker.com/r/tessypowder/docker-kdenlive/</Registry>
+  <Category>MediaApp:Video MediaApp:Music Productivity: Tools:</Category>
+  <Network>bridge</Network>
+  <Support>hhttps://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
+  <Project>https://github.com/TessyPowder/kdenlive-vnc-docker</Project>
+  <Privileged>false</Privileged>
+  <Overview>An instance of kdenlive accessible through vnc and noVnc (=Web Interface)</Overview>
+  <WebUI>http://[IP]:[PORT:5800]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/kdenlive.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/kdenlive.png</Icon>
+  <Config Name="WebUI" Target="5800" Default="" Mode="tcp" Description="Container Port: 5800" Type="Port" Display="always" Required="true" Mask="false">5800</Config>
+  <Config Name="VNC Port" Target="5900" Default="" Mode="tcp" Description="Container Port: 5900" Type="Port" Display="always" Required="true" Mask="false">5900</Config>
+  <Config Name="Content" Target="/sharedContent" Default="" Mode="rw" Description="Container Path: /sharedContent" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/kdenlive/</Config>
+</Container>

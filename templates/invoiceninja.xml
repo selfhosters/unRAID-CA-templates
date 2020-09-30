@@ -5,92 +5,13 @@
   <Registry>https://hub.docker.com/r/anojht/invoiceninja</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
-  <Support>https://github.com/anojht/invoiceninja</Support>
+  <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
   <Project>https://www.invoiceninja.com/</Project>
   <Overview> An open-source invoicing and time-tracking app built with Laravel https://www.invoiceninja.com  </Overview>
   <Category>Productivity: Tools:</Category>
-  <WebUI>http://[IP]:[PORT:8000]/</WebUI>
+  <WebUI>http://[IP]:[PORT:80]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/invoiceninja.xml</TemplateURL>
-	<Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/invoiceninja.png</Icon>
-  <Description> An open-source invoicing and time-tracking app built with Laravel https://www.invoiceninja.com  </Description>
-  <Networking>
-    <Publish>
-      <Port>
-        <ContainerPort>80</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-      <Port>
-        <ContainerPort>443</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-    </Publish>
-  </Networking>
-  <Data>
-    <Volume>
-      <ContainerDir>/var/www/app/storage</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-    <Volume>
-      <ContainerDir>/var/www/app/public/logo</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-  </Data>
-  <Environment>
-    <Variable>
-      <Name>APP_ENV</Name>
-    </Variable>
-    <Variable>
-      <Name>APP_DEBUG</Name>
-    </Variable>
-    <Variable>
-      <Name>DB_TYPE</Name>
-    </Variable>
-    <Variable>
-      <Name>DB_STRICT</Name>
-    </Variable>
-    <Variable>
-      <Name>DB_HOST</Name>
-    </Variable>
-    <Variable>
-      <Name>DB_DATABASE</Name>
-    </Variable>
-    <Variable>
-      <Name>DB_USERNAME</Name>
-    </Variable>
-    <Variable>
-      <Name>DB_PASSWORD</Name>
-    </Variable>
-    <Variable>
-      <Name>APP_URL</Name>
-    </Variable>
-    <Variable>
-      <Name>APP_KEY</Name>
-    </Variable>
-    <Variable>
-      <Name>MAIL_DRIVER</Name>
-    </Variable>
-    <Variable>
-      <Name>MAIL_PORT</Name>
-    </Variable>
-    <Variable>
-      <Name>MAIL_ENCRYPTION</Name>
-    </Variable>
-    <Variable>
-      <Name>MAIL_HOST</Name>
-    </Variable>
-    <Variable>
-      <Name>MAIL_USERNAME</Name>
-    </Variable>
-    <Variable>
-      <Name>MAIL_FROM_ADDRESS</Name>
-    </Variable>
-    <Variable>
-      <Name>MAIL_FROM_NAME</Name>
-    </Variable>
-    <Variable>
-      <Name>MAIL_PASSWORD</Name>
-    </Variable>
-  </Environment>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/invoiceninja.png</Icon>
   <Config Name="APP_ENV" Target="APP_ENV" Default="production" Description="Container Variable: APP_ENV" Type="Variable" Display="advanced" Required="false" Mask="false"/>
   <Config Name="Debug Mode" Target="APP_DEBUG" Default="0" Description="Container Variable: APP_DEBUG" Type="Variable" Display="advanced" Required="false" Mask="false"/>
   <Config Name="Database Type" Target="DB_TYPE" Default="mysql" Description="Container Variable: DB_TYPE" Type="Variable" Display="always" Required="false" Mask="false"/>

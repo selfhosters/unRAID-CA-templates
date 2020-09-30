@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Category>HomeAutomation: Tools:</Category>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/scrutiny.png</Icon>
+  <Name>scrutiny</Name>
+  <Network>bridge</Network>
+  <Overview>Hard Drive S.M.A.R.T Monitoring, Historical Trends and Real World Failure Thresholds</Overview>
+  <Privileged>true</Privileged>
+  <Project>https://github.com/AnalogJ/scrutiny</Project>
+  <Registry>https://hub.docker.com/r/analogj/scrutiny</Registry>
+  <Repository>analogj/scrutiny</Repository>
+  <Shell>bash</Shell>
+  <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/scrutiny.xml</TemplateURL>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <Config Name="Host Path 1" Target="/run/udev" Default="/run/udev" Mode="ro" Description="Container Path: /run/udev" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Host Path 2" Target="/dev/disk" Default="/dev/disk" Mode="ro" Description="Container Path: /dev/disk" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="WebUI" Target="8080" Default="8080" Mode="tcp" Description="Container Port: " Type="Port" Display="always" Required="false" Mask="false"/>
+  <Config Name="Appdata" Target="/scrutiny/config" Default="" Mode="rw" Description="Container Path: /scrutiny/config" Type="Path" Display="always" Required="false" Mask="false"/>
+</Container>

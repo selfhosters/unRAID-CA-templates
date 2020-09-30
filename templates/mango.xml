@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Mango</Name>
+  <Repository>hkalexling/mango</Repository>
+  <Registry>https://hub.docker.com/r/hkalexling/mango</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository</Support>
+  <Project>https://github.com/hkalexling/mango</Project>
+  <Overview>
+  Mango is a self-hosted manga server and reader. Its features include[br]
+ - Multi-user support[br]
+ - OPDS support[br]
+ - Dark/light mode switch[br]
+ - Supported formats: .cbz, .zip, .cbr and .rar[br]
+ - Supports nested folders in library[br]
+ - Automatically stores reading progress[br]
+ - Built-in MangaDex downloader[br]
+ - The web reader is responsive and works well on mobile, so there is no need for a mobile app[br]
+  </Overview>
+  <Beta>False</Beta>
+  <Category>MediaApp:Books</Category>
+  <WebUI>http://[IP]:[PORT:9000]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/mango.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/mango.png</Icon>
+  <Config Name="WebUI" Target="9000" Default="" Mode="tcp" Description="Port for WebUI" Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="Config" Target="/root/.config/mango" Default="/mnt/user/appdata/Mango" Mode="rw" Description="Mango appdata" Type="Path" Display="advanced" Required="true" Mask="false"/>
+  <Config Name="Config" Target="/root/mango" Default="" Mode="rw" Description="Mangas" Type="Path" Display="advanced" Required="true" Mask="false"/>
+</Container>
