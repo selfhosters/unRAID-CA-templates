@@ -1,28 +1,24 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>monica</Name>
-  <Repository>monicahq/monicahq</Repository>
-  <Registry>https://hub.docker.com/r/monicahq/monicahq/</Registry>
+  <Repository>monica</Repository>
+  <Registry>https://hub.docker.com/r/_/monica/</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository</Support>
   <Project>https://github.com/monicahq/monica</Project>
-  <Overview>
-Please Use monica rather than monicahq/monicahq
-
-
-Monica, the Personal Relationship Manager &#xD;
-[br][br]&#xD;
-Complete list of env : https://raw.githubusercontent.com/monicahq/monica/master/.env.example&#xD;
-[br][br]&#xD;
-APP_URL: https://github.com/monicahq/monica/blob/master/docs/installation/ssl.md&#xD;
+  <Overview>Monica, the Personal Relationship Manager
+[br][br]
+Complete list of env : https://raw.githubusercontent.com/monicahq/monica/master/.env.example
+[br][br]
+APP_URL: https://github.com/monicahq/monica/blob/master/docs/installation/ssl.md
   </Overview>
   <Category>Productivity:</Category>
   <WebUI>http://[IP]:[PORT:80]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/monica.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/monica.png</Icon>
   <Config Name="WebUI" Target="80" Default="80" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="false" Mask="false"/>
-  <Config Name="Appdata" Target="/var/www/monica/storage" Default="/mnt/user/appdata/monica" Mode="rw" Description="Container Path: /var/www/monica/storage" Type="Path" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Appdata" Target="/var/www/html/storage/" Default="/mnt/user/appdata/monica" Mode="rw" Description="Container Path: /var/www/html/storage/" Type="Path" Display="advanced" Required="false" Mask="false"/>
   <Config Name="APP_ENV" Target="APP_ENV" Default="production" Description="Container Variable: APP_ENV" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="APP_DEBUG" Target="APP_DEBUG" Default="false" Description="Container Variable: APP_DEBUG" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="APP_KEY" Target="APP_KEY" Default="ChangeMeBy32KeyLengthOrGenerated" Description="Container Variable: APP_KEY" Type="Variable" Display="always" Required="false" Mask="false"/>
