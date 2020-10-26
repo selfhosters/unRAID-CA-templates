@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>jira-software</Name>
+  <Repository>atlassian/jira-software</Repository>
+  <Registry>https://hub.docker.com/r/atlassian/jira-software/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
+  <Project>https://www.atlassian.com/software/jira</Project>
+  <Overview>Jira Software is a software development tool used by agile teams.&#xD;
+&#xD;
+For more information on different variables you can add, see: [b]https://hub.docker.com/r/atlassian/jira-software/[/b]&#xD;
+&#xD;
+</Overview>
+  <Category>Cloud: Tools:</Category>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/jira-software.png</Icon>
+  <Config Name="WebUI" Target="8080" Default="8080" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="Appdata" Target="/var/atlassian/application-data/jira" Default="" Mode="rw" Description="Container Path: /var/atlassian/application-data/jira" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Reverse Proxy" Target="ATL_PROXY_NAME" Default="" Mode="" Description="The reverse proxy's fully qualified hostname. CATALINA_CONNECTOR_PROXYNAME is also supported for backwards compatability." Type="Variable" Display="always" Required="false" Mask="false"/>
+</Container>
