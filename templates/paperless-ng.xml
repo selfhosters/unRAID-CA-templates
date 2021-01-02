@@ -6,7 +6,7 @@
   <Network>bridge</Network>
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
-  <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
+  <Support>https://forums.unraid.net/topic/100843-support-paperless-ng-docker/</Support>
   <Project>https://github.com/jonaswinkler/paperless-ng</Project>
   <Overview>
   Index and archive all of your scanned paper documents. Paperless-ng is a fork of paperless, adding a new interface and many other changes under the hood.[br][br]
