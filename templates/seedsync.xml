@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+ <Container version="2">
+   <Name>seedsync</Name>
+   <Repository>ipsingh06/seedsync</Repository>
+   <Registry>https://hub.docker.com/r/ipsingh06/seedsync/</Registry>
+   <Network>bridge</Network>
+   <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
+   <Project>https://github.com/ipsingh06/seedsync</Project>
+   <Overview>SeedSync is a tool to sync the files on a remote Linux server (like your seedbox, for example). It uses LFTP to transfer files fast!</Overview>
+   <Category>Tools:Utilities</Category>
+   <WebUI>http://[IP]:[PORT:8800]/</WebUI>
+   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/seedsync.png</Icon>
+   <Config Name="WebUI" Target="8800" Default="" Mode="tcp" Description="Container Port: 8800" Type="Port" Display="always" Required="true" Mask="false">8800</Config>
+   <Config Name="Appdata" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="true" Mask="false"></Config>
+   <Config Name="Downloads" Target="/downloads" Default="" Mode="rw" Description="Container Path: /downloads" Type="Path" Display="always" Required="true" Mask="false"></Config>
+ </Container> 
