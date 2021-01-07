@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Shinobi Pro CCTV</Name>
+  <Repository>shinobicctv/shinobi:latest</Repository>
+  <Registry>https://hub.docker.com/r/shinobicctv/shinobi</Registry>
+  <Network>bridge</Network>
+  <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
+  <Project>https://github.com/OpenZWave/Zwave2Mqtt</Project>
+  <Overview>Shinobi Docker from official Dockerhub repo. Note to use GPU for hardware encoding or Object detection: 1. add `--runtime=nvidia` in Extra Parameters.  2. Add Nvidia GPU Devices variables ID & Driver capabilities in advanced</Overview>
+  <Category>HomeAutomation:</Category>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/shinobi.png</Icon>
+  <Config Name="WebUI" Target="8080" Default="" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="Streams" Target="/dev/shm/Shinobi/streams" Default="/dev/shm/Shinobi/streams" Mode="rw" Description="Streams cache" Type="Path" Display="advanced" Required="false" Mask="false"/>  
+  <Config Name="Config" Target="/config" Default="/mnt/user/appdata/shinobi/config" Mode="rw" Description="Shinobi config working directory" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="customAutoLoad" Target="/home/Shinobi/libs/customAutoLoad" Default="/mnt/user/appdata/shinobi/customAutoLoad" Mode="rw" Description="customAutoLoad elements" Type="Path" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Database" Target="/var/lib/mysql" Default="/mnt/user/appdata/shinobi/database" Mode="rw" Description="Shinobi Mysql directory" Type="Path" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Videos" Target="/home/Shinobi/videos" Default="/mnt/user/appdata/shinobi/videos" Mode="rw" Description="Stored Videos location" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="Plugins" Target="/home/Shinobi/plugins" Default="/mnt/user/appdata/shinobi/plugins" Mode="rw" Description="Container Path: /usr/src/app/store" Type="Path" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Localtime" Target="/etc/localtime" Default="/etc/localtime" Mode="ro" Description="Container Path: /etc/localtime" Type="Path" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Nvidia GPU Devices" Target="NVIDIA_VISIBLE_DEVICES" Default="" Description="GPU ID - Only if using an Nvidia GPU" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Nvidia GPU Capabilities" Target="NVIDIA_DRIVER_CAPABILITIES" Default="" Description="Should be 'all'" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+</Container>
