@@ -13,7 +13,7 @@
   <Config Name="WebUI" Target="8080" Default="" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="true" Mask="false"/>
   <Config Name="Streams" Target="/dev/shm/Shinobi/streams" Default="/dev/shm/Shinobi/streams" Mode="rw" Description="Streams cache" Type="Path" Display="advanced" Required="false" Mask="false"/>  
   <Config Name="Config" Target="/config" Default="/mnt/user/appdata/Shinobi/config" Mode="rw" Description="Shinobi config working directory" Type="Path" Display="always" Required="false" Mask="false"/>
-  <Config Name="customAutoLoad" Target="/home/Shinobi/libs/customAutoLoad" Default="/mnt/user/appdata/shinobi/customAutoLoad" Mode="rw" Description="customAutoLoad elements" Type="Path" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="customAutoLoad" Target="/home/Shinobi/libs/customAutoLoad" Default="/mnt/user/appdata/Shinobi/customAutoLoad" Mode="rw" Description="customAutoLoad elements" Type="Path" Display="advanced" Required="false" Mask="false"/>
   <Config Name="Database" Target="/var/lib/mysql" Default="/mnt/user/appdata/Shinobi/database" Mode="rw" Description="Shinobi Mysql directory" Type="Path" Display="advanced" Required="false" Mask="false"/>
   <Config Name="Videos" Target="/home/Shinobi/videos" Default="/mnt/user/appdata/Shinobi/videos" Mode="rw" Description="Stored Videos location" Type="Path" Display="always" Required="false" Mask="false"/>
   <Config Name="Plugins" Target="/home/Shinobi/plugins" Default="/mnt/user/appdata/Shinobi/plugins" Mode="rw" Description="Container Path: /usr/src/app/store" Type="Path" Display="advanced" Required="false" Mask="false"/>
