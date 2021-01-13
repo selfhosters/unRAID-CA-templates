@@ -5,8 +5,8 @@
   <Registry>https://hub.docker.com/r/shinobicctv/shinobi</Registry>
   <Network>bridge</Network>
   <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
-  <Project>https://gitlab.com/Shinobi-Systems/Shinobi</Project>
-  <Overview>Shinobi Docker from official Dockerhub repo. Note to use GPU for hardware encoding or Object detection: 1. add `--runtime=nvidia` in Extra Parameters.  2. Add Nvidia GPU Devices variables ID & Driver capabilities in advanced</Overview>
+  <Project>https://github.com/OpenZWave/Zwave2Mqtt</Project>
+  <Overview>Shinobi Docker from official Dockerhub repo. Note to use GPU for hardware encoding or Object detection: 1. add `--runtime=nvidia` in Extra Parameters.  2. Add Nvidia GPU Devices variables ID &amp; Driver capabilities in advanced</Overview>
   <Category>HomeAutomation:</Category>
   <WebUI>http://[IP]:[PORT:8080]/</WebUI>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/shinobi.png</Icon>
