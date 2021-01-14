@@ -21,9 +21,9 @@
   <Category>Tools: HomeAutomation: Other</Category>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/tuyagateway.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/tuyagateway.png</Icon>
-  <Config Name="Config" Target="/usr/src/app/etc" Default="/mnt/user/appdata/tuyagateway" Mode="rw" Description="Container Path: /usr/src/app/etc" Type="Path" Display="advanced-hide" Required="true" Mask="false"></Config>
+  <Config Name="Config" Target="/usr/src/app/etc" Default="/mnt/user/appdata/tuyagateway" Mode="rw" Description="Container Path: /usr/src/app/etc" Type="Path" Display="advanced-hide" Required="true" Mask="false"/>
   <Config Name="MQTT Host" Target="MQTTHOST" Default="127.0.0.1" Mode="" Description="MQTT Host IP" Type="Variable" Display="always" Required="true" Mask="false"/>
-  <Config Name="MQTT Port" Target="MQTTPORT" Default="1883" Mode="" Description="MQTT Host Port" Type="Variable" Display="always" Required="true" Mask="false"></Config>
-  <Config Name="MQTT User" Target="MQTTUSER" Default="user" Mode="" Description="MQTT Username" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="MQTT Pass" Target="MQTTPASS" Default="password" Mode="" Description="MQTT Password" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="MQTT Port" Target="MQTTPORT" Default="1883" Mode="" Description="MQTT Host Port" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="MQTT User" Target="MQTTUSER" Default="user" Mode="" Description="MQTT Username" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="MQTT Pass" Target="MQTTPASS" Default="password" Mode="" Description="MQTT Password" Type="Variable" Display="always" Required="false" Mask="false"/>
 </Container>
