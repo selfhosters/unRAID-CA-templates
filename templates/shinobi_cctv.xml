@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>Shinobi Pro CCTV</Name>
+  <Name>shinobi-pro-cctv</Name>
   <Repository>shinobicctv/shinobi:latest</Repository>
   <Registry>https://hub.docker.com/r/shinobicctv/shinobi</Registry>
   <Network>bridge</Network>
