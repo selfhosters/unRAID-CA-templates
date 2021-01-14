@@ -4,6 +4,14 @@
 <Name>TuyaGateway</Name>
   <Repository>TradeFace/tuyagateway</Repository>
   <Registry>https://registry.hub.docker.com/u/tradeface/tuyagateway/</Registry>
+  <Branch>
+    <Tag>latest</Tag>
+    <TagDescription>Latest stable release of TuyaGateway.</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>beta</Tag>
+    <TagDescription>Latest beta release of TuyaGateway. Use with caution!</TagDescription>
+  </Branch>
   <Network>host</Network>
   <Privileged>false</Privileged>
   <Support>https://github.com/tradeface/tuyagateway/wiki/docker</Support>
@@ -13,9 +21,9 @@
   <Category>Tools: HomeAutomation: Other</Category>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/tuyagateway.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/tuyagateway.png</Icon>
-  <Config Name="Config" Target="/usr/src/app/etc" Default="/mnt/user/appdata/tuyagateway" Mode="rw" Description="Container Path: /usr/src/app/etc" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/cache/appdata/tuyagateway</Config>
-  <Config Name="MQTT Host" Target="MQTTHOST" Default="127.0.0.1" Mode="" Description="MQTT Host IP" Type="Variable" Display="always" Required="true" Mask="false">127.0.0.1</Config>
-  <Config Name="MQTT Port" Target="MQTTPORT" Default="1883" Mode="" Description="MQTT Host Port" Type="Variable" Display="always" Required="true" Mask="false">1883</Config>
-  <Config Name="MQTT User" Target="MQTTUSER" Default="user" Mode="" Description="MQTT Username" Type="Variable" Display="always" Required="false" Mask="false">user</Config>
-  <Config Name="MQTT Pass" Target="MQTTPASS" Default="password" Mode="" Description="MQTT Password" Type="Variable" Display="always" Required="false" Mask="false">pass</Config>
+  <Config Name="Config" Target="/usr/src/app/etc" Default="/mnt/user/appdata/tuyagateway" Mode="rw" Description="Container Path: /usr/src/app/etc" Type="Path" Display="advanced-hide" Required="true" Mask="false"></Config>
+  <Config Name="MQTT Host" Target="MQTTHOST" Default="127.0.0.1" Mode="" Description="MQTT Host IP" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="MQTT Port" Target="MQTTPORT" Default="1883" Mode="" Description="MQTT Host Port" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="MQTT User" Target="MQTTUSER" Default="user" Mode="" Description="MQTT Username" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="MQTT Pass" Target="MQTTPASS" Default="password" Mode="" Description="MQTT Password" Type="Variable" Display="always" Required="false" Mask="false"></Config>
 </Container>
