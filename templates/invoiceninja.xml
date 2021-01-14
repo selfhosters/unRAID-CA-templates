@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>invoiceninja</Name>
-  <Repository>anojht/invoiceninja</Repository>
-  <Registry>https://hub.docker.com/r/anojht/invoiceninja</Registry>
+  <Repository>maihai/invoiceninja</Repository>
+  <Registry>https://hub.docker.com/r/maihai/invoiceninja</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
   <Project>https://www.invoiceninja.com/</Project>
   <Overview> An open-source invoicing and time-tracking app built with Laravel https://www.invoiceninja.com  </Overview>
   <Category>Productivity: Tools:</Category>
-  <WebUI>http://[IP]:[PORT:80]/</WebUI>
+  <WebUI>https://[IP]:[PORT:8443]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/invoiceninja.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/invoiceninja.png</Icon>
   <Config Name="APP_ENV" Target="APP_ENV" Default="production" Description="Container Variable: APP_ENV" Type="Variable" Display="advanced" Required="false" Mask="false"/>
@@ -32,6 +32,7 @@
   <Config Name="MAIL_PASSWORD" Target="MAIL_PASSWORD" Default="SUPERSECRETEMAILPASSWORD" Description="Container Variable: MAIL_PASSWORD" Type="Variable" Display="always" Required="false" Mask="true"/>
   <Config Name="HTTP Port" Target="80" Default="8000" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="false" Mask="false"/>
   <Config Name="HTTPS Port" Target="443" Default="8443" Mode="tcp" Description="Container Port: 443" Type="Port" Display="always" Required="false" Mask="false"/>
+  <Config Name="SSL_HOSTNAME" Target="SSL_HOSTNAME" Default="tower" Description="Hostname to be used as SSL CN" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Storage" Target="/var/www/app/storage" Default="/mnt/user/appdata/invoiceninja/storage" Mode="rw" Description="Container Path: /var/www/app/storage" Type="Path" Display="advanced" Required="false" Mask="false"/>
   <Config Name="Logo" Target="/var/www/app/public/logo" Default="/mnt/user/appdata/invoiceninja/logo" Mode="rw" Description="Container Path: /var/www/app/public/logo" Type="Path" Display="advanced" Required="false" Mask="false"/>
 </Container>
