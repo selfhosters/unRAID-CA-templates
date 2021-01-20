@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>mealie</Name>
+  <Repository>hkotel/mealie</Repository>
+  <Registry>https://hub.docker.com/r/hkotel/mealie/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/hay-kot/mealie/issues</Support>
+  <Project>https://hay-kot.github.io/mealie/getting-started/install/</Project>
+  <Overview>Mealie is a self hosted recipe manager and meal planner with a RestAPI backend and a reactive frontend application built in Vue for a pleasant user experience for the whole family. Easily add recipes into your database by providing the url and mealie will automatically import the relevant data or add a family recipe with the UI editor.</Overview>
+  <Category>HomeAutomation: Productivity: MediaApp:Other</Category>
+  <WebUI>http://[IP]:[PORT:9000]</WebUI>
+  <DonateText>If you are not a coder, you can still contribute financially. financial contributions help me prioritize working on this project over others and helps me know that there is a real demand for project development.</DonateText>
+  <DonateLink>https://www.buymeacoffee.com/haykot</DonateLink>
+  <Description>Mealie is a self hosted recipe manager and meal planner with a RestAPI backend and a reactive frontend application built in Vue for a pleasant user experience for the whole family. Easily add recipes into your database by providing the url and mealie will automatically import the relevant data or add a family recipe with the UI editor.</Description>
+  <Config Name="db_type" Target="db_type" Default="sqlite" Mode="" Description="The database type to be used. Current Options 'sqlite' and 'mongo'" Type="Variable" Display="always" Required="true" Mask="false">sqlite</Config>
+  <Config Name="Time Zone" Target="TZ" Default="America/Anchorage" Mode="" Description="You should set your time zone accordingly so the date/time features work correctly" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="WebUI" Target="80" Default="9000" Mode="tcp" Description="Web interface port" Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="appdata" Target="/app/data" Default="/mnt/user/appdata/mealie" Mode="rw" Description="All application data is stored here" Type="Path" Display="always" Required="true" Mask="false"/>
+</Container>
