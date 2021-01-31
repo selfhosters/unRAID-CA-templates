@@ -3,7 +3,7 @@
   <Name>tdarr_node</Name>
   <Repository>haveagitgat/tdarr_node</Repository>
   <Registry>https://hub.docker.com/r/haveagitgat/tdarr_node/</Registry>
-  <Network>host</Network>
+  <Network>bridge</Network>
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/84070-support-haveagitgat-tdarr-audiovideo-library-analytics-transcode-automation/</Support>
   <Project>https://github.com/HaveAGitGat/Tdarr</Project>
@@ -27,11 +27,10 @@ Plugins here: https://github.com/HaveAGitGat/Tdarr_Plugins&#xD;
   <DonateLink>https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;amp;hosted_button_id=L5MWTNDLLB6AC&amp;amp;source=url</DonateLink>
 
   <Config Name="Server IP" Target="serverIP" Default="0.0.0.0" Mode="" Description="Server IP. Required if using Tdarr Nodes across your local network" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="Server Port" Target="serverPort" Default="8266" Mode="" Description="Server Port" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Server Port" Target="8266" Default="8266" Mode="tcp" Description="Server Port" Type="Port" Display="always" Required="false" Mask="false">8266</Config>
 
   <Config Name="Node IP" Target="nodeIP" Default="0.0.0.0" Mode="" Description="Node IP. Required if using Tdarr Nodes across your local network" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="Node Port" Target="nodePort" Default="8267" Mode="" Description="Node Port" Type="Variable" Display="always" Required="false" Mask="false"/>
-
+  <Config Name="Node Port" Target="8267" Default="8267" Mode="tcp" Description="Node Port" Type="Port" Display="always" Required="false" Mask="false">8267</Config>
 
   <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false"/>
