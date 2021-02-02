@@ -27,7 +27,7 @@ Plugins here: https://github.com/HaveAGitGat/Tdarr_Plugins&#xD;
   <DonateLink>https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;amp;hosted_button_id=L5MWTNDLLB6AC&amp;amp;source=url</DonateLink>
 
   <Config Name="Server IP" Target="serverIP" Default="0.0.0.0" Mode="" Description="Server IP. Required if using Tdarr Nodes across your local network" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="Server Port" Target="8266" Default="8266" Mode="tcp" Description="Server Port" Type="Port" Display="always" Required="false" Mask="false">8266</Config>
+  <Config Name="Server Port" Target="serverPort" Default="8266" Mode="" Description="Container Variable: serverPort" Type="Variable" Display="always" Required="false" Mask="false"></Config>
 
   <Config Name="Node IP" Target="nodeIP" Default="0.0.0.0" Mode="" Description="Node IP. Required if using Tdarr Nodes across your local network" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Node Port" Target="8267" Default="8267" Mode="tcp" Description="Node Port" Type="Port" Display="always" Required="false" Mask="false">8267</Config>
@@ -35,8 +35,8 @@ Plugins here: https://github.com/HaveAGitGat/Tdarr_Plugins&#xD;
   <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false"/>
 
-  <Config Name="Configs" Target="/mnt/user/appdata/tdarr/configs" Default="" Mode="rw" Description="Container Path: /app/configs" Type="Path" Display="always" Required="false" Mask="false"/>
-  <Config Name="Logs" Target="/mnt/user/appdata/tdarr/logs" Default="" Mode="rw" Description="Container Path: /app/logs" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="Configs" Target="/app/configs" Default="/mnt/user/appdata/tdarr/configs" Mode="rw" Description="Container Path: /app/configs" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="Logs" Target="/app/logs" Default="/mnt/user/appdata/tdarr/logs" Mode="rw" Description="Container Path: /app/logs" Type="Path" Display="always" Required="false" Mask="false"/>
   <Config Name="Media Library" Target="/mnt/media" Default="" Mode="rw" Description="Container Path: /media" Type="Path" Display="always" Required="false" Mask="false"/>
   <Config Name="Transcode Cache" Target="/mnt/transcode_cache" Default="" Mode="rw" Description="Container Path: /temp" Type="Path" Display="always" Required="false" Mask="false"/>
 </Container>
