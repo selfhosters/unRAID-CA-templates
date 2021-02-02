@@ -27,7 +27,7 @@ Plugins here: https://github.com/HaveAGitGat/Tdarr_Plugins&#xD;
   <DonateLink>https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;amp;hosted_button_id=L5MWTNDLLB6AC&amp;amp;source=url</DonateLink>
 
   <Config Name="Server IP" Target="serverIP" Default="0.0.0.0" Mode="" Description="Server IP. Required if using Tdarr Nodes across your local network" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="Server Port" Target="8266" Default="8266" Mode="tcp" Description="Server Port" Type="Port" Display="always" Required="false" Mask="false">8266</Config>
+  <Config Name="Server Port" Target="serverPort" Default="8266" Mode="" Description="Container Variable: serverPort" Type="Variable" Display="always" Required="false" Mask="false"></Config>
 
   <Config Name="Node IP" Target="nodeIP" Default="0.0.0.0" Mode="" Description="Node IP. Required if using Tdarr Nodes across your local network" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Node Port" Target="8267" Default="8267" Mode="tcp" Description="Node Port" Type="Port" Display="always" Required="false" Mask="false">8267</Config>
