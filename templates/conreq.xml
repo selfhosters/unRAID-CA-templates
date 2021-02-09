@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>conreq</Name>
+  <Repository>roxedus/conreq</Repository>
+  <Registry>https://hub.docker.com/r/roxedus/conreq</Registry>
+  <Branch>
+    <Tag>latest</Tag>
+    <TagDescription>Built on the main branch of Conreq</TagDescription>
+    <Repository>roxedus/conreq:main</Repository>
+    <Registry>https://hub.docker.com/r/roxedus/conreq</Registry>
+  </Branch>
+  <Branch>
+    <Tag>develop</Tag>
+    <TagDescription>Built on the develop branch of Conreq</TagDescription>
+    <Repository>roxedus/conreq:develop</Repository>
+    <Registry>https://hub.docker.com/r/roxedus/conreq</Registry>
+  </Branch>
+  <Branch>
+    <Tag>latest-ghcr</Tag>
+    <TagDescription>Built on the main branch of Conreq, published on GHCR for your pleasure</TagDescription>
+    <Repository>ghcr.io/roxedus/conreq:main</Repository>
+    <Registry>https://github.com/orgs/roxedus/packages/container/package/conreq</Registry>
+  </Branch>
+  <Branch>
+    <Tag>develop-ghcr</Tag>
+    <TagDescription>Built on the develop branch of Conreq, published on GHCR for your pleasure</TagDescription>
+    <Repository>ghcr.io/roxedus/conreq:develop</Repository>
+    <Registry>https://github.com/orgs/roxedus/packages/container/package/conreq</Registry>
+  </Branch>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://discord.gg/gQhGZzEjmX</Support>
+  <Project>https://github.com/Archmonger/Conreq</Project>
+  <Beta>True</Beta>
+  <Category>MediaServer:Other</Category>
+  <TemplateURL>false</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/conreq.png</Icon>
+  <Overview>
+  Conreq, a Content Requesting platform.
+
+  More configuration options available on [Github](https://github.com/Archmonger/Conreq#installation-deployment-environment)
+  </Overview>
+  <WebUI>http://[IP]:[PORT:8000]</WebUI>
+  <Network>bridge</Network>
+  <Config Name="SSL" Target="SSL" Default="false|true" Mode="" Description="If the internal webserver should run with SSL, requires `SSL_CERT` and `SSL_KEY`" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="SSL Cert location" Target="SSL_CERT" Default="/config/crt.pem" Mode="" Description="The location for the SSL certificate" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="SSL Key location" Target="SSL_KEY" Default="/config/key.pem" Mode="" Description="The location for the SSL key" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+
+  <Config Name="WebUI" Target="8000" Default="8000" Mode="tcp" Description="Container Port: 8000" Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="AppData" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always-hide" Required="true" Mask="false"/>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="UMASK" Target="UMASK" Default="002" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+</Container>
