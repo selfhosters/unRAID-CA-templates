@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>monitorss-bot</Name>
+  <Repository>synzen/monitorss</Repository>
+  <Registry>https://hub.docker.com/r/synzen/monitorss</Registry>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
+  <Project>https://github.com/synzen/MonitoRSS</Project>
+  <Category>Network:Messenger</Category>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/monitorss-bot.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/monitorss.png</Icon>
+  <Overview>
+  Discord RSS bot (formerly known as Discord.RSS) with customizable feeds.
+
+  Requires a separate container for MongoDB. Also has a optional WebUI
+
+  More configuration options available on [monitorss.xyz](https://docs.monitorss.xyz/configuration/bot-configuration)
+  </Overview>
+  <Network>bridge</Network>
+  <Config Name="BOT_PREFIX" Target="DRSS_BOT_PREFIX" Default="\" Mode="" Description="Information here https://docs.monitorss.xyz/configuration/bot-configuration#bot" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="TOKEN" Target="DRSS_BOT_TOKEN" Default="22222222222" Mode="" Description="Information here https://docs.monitorss.xyz/configuration/bot-configuration#bot" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="DATABASE_URI" Target="DRSS_DATABASE_URI" Default="mongodb://[REPLACE-WITH-IP]:27017/drss" Mode="" Description="Information here https://docs.monitorss.xyz/configuration/web-interface#database" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Component" Target="DRSS_START" Default="bot" Mode="" Description="Do not change" Type="Variable" Display="advanced-hide" Required="true" Mask="false"/>
+</Container>
