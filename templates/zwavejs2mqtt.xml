@@ -14,4 +14,5 @@
   <Config Name="Appdata" Target="/usr/src/app/store" Default="" Mode="rw" Description="Container Path: /usr/src/app/store" Type="Path" Display="advanced" Required="false" Mask="false"/>
   <Config Name="Zwavejs Log" Target="/usr/src/app/bin" Default="" Mode="rw" Description="Container Path: /usr/src/app/bin" Type="Path" Display="advanced" Required="false" Mask="false"/>
   <Config Name="Serial device" Target="" Default="/dev/ttyACM0" Mode="" Description="Container Device: /dev/ttyACM0" Type="Device" Display="always" Required="false" Mask="false"/>
+  <Config Name="Websocket Server" Target="3000" Default="" Mode="tcp" Description="Container Port: 3000" Type="Port" Display="always" Required="false" Mask="false"/>
 </Container>
