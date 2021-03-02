@@ -1,13 +1,12 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>RTMPS-Server</Name>
-  <Repository>jamiephonic/rtmps-hls-stunnel</Repository>
+  <Repository>jamiephonic/rtmps-hls-server</Repository>
   <Registry>https://hub.docker.com/r/jamiephonic/rtmps-hls-server</Registry>
   <Network>bridge</Network>
-  <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support/>
+  <Support>https://github.com/JamiePhonic/rtmps-hls-server/issues</Support>
   <Project>https://github.com/JamiePhonic/rtmps-hls-server</Project>
   <Overview>This Docker image can be used to create a video streaming server that supports RTMP, RTMPS, HLS, DASH out of the box. It also allows adaptive streaming and custom transcoding of video streams. All modules are built from source on Debian and Alpine Linux base images.&#xD;
 &#xD;
@@ -30,15 +29,8 @@ http://&amp;lt;server ip&amp;gt;:8080/players/hls.html&#xD;
 http://&amp;lt;server ip&amp;gt;:8080/players/dash.html&#xD;
 http://&amp;lt;server ip&amp;gt;:8080/players/rtmp.html</Overview>
   <Category>GameServers: Network:Other</Category>
-  <WebUI>http://[IP]:8080/stats</WebUI>
-  <TemplateURL/>
+  <WebUI>http://[IP]:[PORT:8080]/stats</WebUI>
   <Icon>https://intinor.com/wp-content/uploads/2017/01/RTMP.png</Icon>
-  <ExtraParams/>
-  <PostArgs/>
-  <CPUset/>
-  <DateInstalled>1608057256</DateInstalled>
-  <DonateText/>
-  <DonateLink/>
   <Description>This Docker image can be used to create a video streaming server that supports RTMP, RTMPS, HLS, DASH out of the box. It also allows adaptive streaming and custom transcoding of video streams. All modules are built from source on Debian and Alpine Linux base images.&#xD;
 &#xD;
 Stream live RTMP content to:&#xD;
@@ -59,51 +51,6 @@ View in Browser (assumes &amp;lt;stream-key&amp;gt; is 'test', edit the html fil
 http://&amp;lt;server ip&amp;gt;:8080/players/hls.html&#xD;
 http://&amp;lt;server ip&amp;gt;:8080/players/dash.html&#xD;
 http://&amp;lt;server ip&amp;gt;:8080/players/rtmp.html</Description>
-  <Networking>
-    <Mode>bridge</Mode>
-    <Publish>
-      <Port>
-        <HostPort>1935</HostPort>
-        <ContainerPort>1935</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-      <Port>
-        <HostPort>1936</HostPort>
-        <ContainerPort>1936</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-      <Port>
-        <HostPort>8080</HostPort>
-        <ContainerPort>8080</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-    </Publish>
-  </Networking>
-  <Data>
-    <Volume>
-      <HostDir>/mnt/user/appdata/rtmp-server</HostDir>
-      <ContainerDir>/assets</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-  </Data>
-  <Environment>
-    <Variable>
-      <Value>rtmp-server.loc</Value>
-      <Name>SSL_DOMAIN</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value>100</Value>
-      <Name>PUID</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value>99</Value>
-      <Name>PGID</Name>
-      <Mode/>
-    </Variable>
-  </Environment>
-  <Labels/>
   <Config Name="Players &amp;amp; Configs" Target="/assets" Default="/mnt/user/appdata/rtmp-server" Mode="rw" Description="Directory where the containers config files and player pages will be stored." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/rtmp-server</Config>
   <Config Name="RTMP Port" Target="1935" Default="1935" Mode="tcp" Description="The port to accept an RTMP stream on." Type="Port" Display="always" Required="false" Mask="false">1935</Config>
   <Config Name="RTMPS Port" Target="1936" Default="1936" Mode="tcp" Description="The port to accept an RTMPS stream on." Type="Port" Display="always" Required="false" Mask="false">1936</Config>
