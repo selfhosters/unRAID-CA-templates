@@ -23,10 +23,10 @@
     [br][br]&#xD;
     [b][span style='color: #E80000;']NOTE:[/span][/b][b] AAAA[/b]: You will also need to run docker with IPv6 support, or run the container with host networking enabled.</Overview>
   <Category>Tools: Network:Management Status:Stable</Category>
-  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/template/cloudflare-ddns.xml</TemplateURL>
+  <TemplateURL>false</TemplateURL>
   <Icon>https://i.imgur.com/PKa3Sm2.png</Icon>
   <Config Name="Email" Target="EMAIL" Default="" Description="Container Variable: EMAIL" Type="Variable" Display="always" Required="true" Mask="false"/>
-  <Config Name="API Key" Target="API_KEY" Default="" Description="Container Variable: API_KEY" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="API Key" Target="API_KEY" Default="" Description="Container Variable: API_KEY" Type="Variable" Display="always" Required="false" Mask="true"/>
   <Config Name="Domain" Target="ZONE" Default="" Description="Container Variable: ZONE" Type="Variable" Display="always" Required="true" Mask="false"/>
   <Config Name="Subdomain (Optional)" Target="SUBDOMAIN" Default="" Description="Container Variable: SUBDOMAIN" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Cloudflare Proxy" Target="PROXIED" Default="true|false" Description="Container Variable: PROXIED" Type="Variable" Display="always" Required="false" Mask="false"/>
