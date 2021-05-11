@@ -7,7 +7,11 @@
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository</Support>
   <Project>https://github.com/monicahq/monica</Project>
-  <Overview>Monica, the Personal Relationship Manager &#xD;
+  <Overview>
+Please Use monica rather than monicahq/monicahq
+
+
+Monica, the Personal Relationship Manager &#xD;
 [br][br]&#xD;
 Complete list of env : https://raw.githubusercontent.com/monicahq/monica/master/.env.example&#xD;
 [br][br]&#xD;

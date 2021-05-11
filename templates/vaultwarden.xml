@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>bitwardenrs</Name>
-  <Repository>bitwardenrs/server</Repository>
-  <Registry>https://hub.docker.com/r/bitwardenrs/server/</Registry>
+  <Name>vaultwarden</Name>
+  <Repository>vaultwarden/server</Repository>
+  <Registry>https://hub.docker.com/r/vaultwarden/server/</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
-  <Support>https://forums.unraid.net/topic/88086-support-bitwardenrs-bitwarden_rs/</Support>
-  <Project>https://github.com/dani-garcia/bitwarden_rs/</Project>
+  <Support>https://forums.unraid.net/topic/88086-support-vaultwarden-formerly-bitwarden_rs/</Support>
+  <Project>https://github.com/dani-garcia/vaultwarden/</Project>
   <Branch>
     <Tag>latest</Tag>
     <TagDescription>The "default image", runs on amd64. (x86, 64bit)</TagDescription>
@@ -15,7 +15,7 @@
     <Tag>alpine</Tag>
     <TagDescription>Alpine-based amd64 image, same as above but a little bit smaller.</TagDescription>
   </Branch>
-  <Overview>This is a Bitwarden server API implementation written in Rust compatible with upstream Bitwarden clients, perfect for self-hosted deployment where running the official resource-heavy service might not be ideal.&#xD;
+  <Overview>Vaultwarden (formerly bitwarden_rs) is a Bitwarden server API implementation written in Rust compatible with upstream Bitwarden clients, perfect for self-hosted deployment where running the official resource-heavy service might not be ideal.&#xD;
     [br][br]&#xD;
     Basically full implementation of Bitwarden API is provided including: &#xD;
     [br][br]&#xD;
@@ -37,11 +37,11 @@
     [br][br]&#xD;
     For more configuration see the wiki
     [br]
-    https://github.com/dani-garcia/bitwarden_rs/wiki
+    https://github.com/dani-garcia/vaultwarden/wiki
   </Overview>
   <Category>Tools:</Category>
   <WebUI>http://[IP]:[PORT:80]</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/bitwardenrs.xml</TemplateURL>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/vaultwarden.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/bitwardenrs.png</Icon>
   <Config Name="WebUI HTTP Port" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false"/>
   <Config Name="Storage" Target="/data" Default="/mnt/user/appdata/bitwarden" Mode="rw" Description="Container Path: /data" Type="Path" Display="advanced" Required="true" Mask="false"/>

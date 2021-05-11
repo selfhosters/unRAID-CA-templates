@@ -5,7 +5,7 @@
   <Registry>https://registry.gitlab.com/bockiii/deemix-docker</Registry>
   <Network>bridge</Network>
   <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
-  <Project>https://notabug.org/RemixDev/deemix</Project>
+  <Project>https://faq.deemix.app</Project>
   <Overview>deemix is a deezer downloader built from the ashes of Deezloader Remix. The base library (or core) can be used as a stand alone CLI app or implemented in an UI using the API.</Overview>
   <Category>MediaApp:Music Status:Beta</Category>
   <WebUI>http://[IP]:[PORT:6595]/</WebUI>
@@ -16,4 +16,5 @@
   <Config Name="Downloads" Target="/downloads" Default="" Mode="rw" Description="Container Path: /downloads" Type="Path" Display="always" Required="false" Mask="false"/>
   <Config Name="Appdata" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="false" Mask="false"/>
   <Config Name="ARL Token" Target="ARL" Default="" Mode="" Description="Container Variable: ARL" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Old UI" Target="DEEZUI" Default="false|true" Mode="" Description="Container Variable: DEEZUI" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
 </Container>
