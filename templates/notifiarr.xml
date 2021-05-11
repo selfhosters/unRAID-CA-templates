@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Notifiarr</Name>
+  <Repository>golift/notifiarr</Repository>
+  <Registry>https://hub.docker.com/r/golift/notifiarr/</Registry>
+  <Shell>sh</Shell>
+  <Network>bridge</Network>
+  <Privileged>true</Privileged>
+  <Changes>See https://github.com/Notifiarr/notifiarr</Changes>
+  <Support>https://golift.io/discord/</Support>
+  <Project>https://github.com/Notifiarr/notifiarr</Project>
+  <Category>MediaApp:Video MediaApp:Music MediaApp:Books</Category>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/notifiarr.xml</TemplateURL>
+  <Icon>https://docs.notifiarr.com/img/icon.png</Icon>
+  <Overview>
+Official Notifiarr Client &#xD;
+This application provides the gateway for media requests to your starr application. https://Notifiarr.com &#xD;
+&#xD;
+Edit config file in appdata folder after install; add starr app configs and plex url. &#xD;
+Variables defined in unRAID config override config file settings. &#xD;
+Must be privileged to report system drive details (for snapshot notifications). &#xD;
+Mount additional paths anywhere to report drive space usage. &#xD;
+  </Overview>
+  <Config Name="Notifiarr API Key" Target="DN_API_KEY" Default="" Description="Container Variable: DN_API_KEY - API key from notifiarr.com" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Plex Token" Target="DN_PLEX_TOKEN" Default="" Description="Container Variable: DN_PLEX_TOKEN - This is YOUR token from your plex session, see https://bit.ly/3y4cjRe" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Plex URL" Target="DN_PLEX_URL" Default="" Description="Container Variable: DN_PLEX_URL - URL for your Plex server" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="App Log File" Target="DN_LOG_FILE" Default="/config/app.log" Description="Container Variable: DN_LOG_FILE" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Web Log File" Target="DN_HTTP_LOG" Default="/config/http.log" Description="Container Variable: DN_HTTP_LOG" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="WebPort" Target="5454" Default="" Mode="tcp" Description="Container Port: 5454 - Port only needs exposure when not reverse proxying this application." Type="Port" Display="always" Required="false" Mask="false">5454</Config>
+  <Config Name="Storage Disk 1" Target="/storage/1" Default="/mnt/disk1" Mode="ro" Description="Set this and add more disks to report storage usage." Type="Path" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="appdata" Target="/config" Default="/mnt/user/appdata/Notifiarr/" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced" Required="true" Mask="false">/config</Config>
+  <Config Name="Users" Target="/var/run/utmp" Default="/var/run/utmp" Mode="ro" Description="Container Path: /var/run/utmp - This allows counting logged in users on unRAID." Type="Path" Display="advanced" Required="false" Mask="false">/var/run/utmp</Config>
+</Container>
