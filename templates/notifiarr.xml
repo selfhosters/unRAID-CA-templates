@@ -28,6 +28,6 @@ Mount additional paths anywhere to report drive space usage. &#xD;
   <Config Name="Web Log File" Target="DN_HTTP_LOG" Default="/config/http.log" Description="Container Variable: DN_HTTP_LOG" Type="Variable" Display="advanced" Required="false" Mask="false"/>
   <Config Name="WebPort" Target="5454" Default="" Mode="tcp" Description="Container Port: 5454 - Port only needs exposure when not reverse proxying this application." Type="Port" Display="always" Required="false" Mask="false">5454</Config>
   <Config Name="Storage Disk 1" Target="/storage/1" Default="/mnt/disk1" Mode="ro" Description="Set this and add more disks to report storage usage." Type="Path" Display="advanced" Required="false" Mask="false"/>
-  <Config Name="appdata" Target="/config" Default="/mnt/user/appdata/Notifiarr/" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced" Required="true" Mask="false" />
+  <Config Name="appdata" Target="/config" Default="/mnt/user/appdata/Notifiarr/" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced" Required="true" Mask="false"/>
   <Config Name="Users" Target="/var/run/utmp" Default="/var/run/utmp" Mode="ro" Description="Container Path: /var/run/utmp - This allows counting logged in users on unRAID." Type="Path" Display="advanced" Required="false" Mask="false">/var/run/utmp</Config>
 </Container>
