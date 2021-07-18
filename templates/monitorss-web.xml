@@ -24,7 +24,7 @@
   <Config Name="REDIRECTURI" Target="DRSSWEB_BOT_REDIRECTURI" Default="https://domain.com/authorize" Mode="" Description="Does not have to be a public domain. Information here https://docs.monitorss.xyz/configuration/web-interface#bot" Type="Variable" Display="always" Required="true" Mask="false"/>
   <Config Name="TOKEN" Target="DRSSWEB_BOT_TOKEN" Default="22222222222" Mode="" Description="Information here https://docs.monitorss.xyz/configuration/web-interface#bot" Type="Variable" Display="always" Required="true" Mask="true"/>
   <Config Name="DATABASE_REDIS" Target="DRSSWEB_DATABASE_REDIS" Default="redis://[REPLACE-WITH-IP]:6379" Mode="" Description="Information here https://docs.monitorss.xyz/configuration/web-interface#database" Type="Variable" Display="always" Required="true" Mask="false"/>
-  <Config Name="DATABASE_URI" Target="DRSSWEB_DATABASE_REDIS" Default="mongodb://[REPLACE-WITH-IP]:27017/drss" Mode="" Description="Information here https://docs.monitorss.xyz/configuration/web-interface#database" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="DATABASE_URI" Target="DRSSWEB_DATABASE_URI" Default="mongodb://[REPLACE-WITH-IP]:27017/drss" Mode="" Description="Information here https://docs.monitorss.xyz/configuration/web-interface#database" Type="Variable" Display="always" Required="true" Mask="false"/>
   <Config Name="WebUI" Target="8081" Default="8081" Mode="tcp" Description="Container Port: 8081" Type="Port" Display="always" Required="true" Mask="false"/>
   <Config Name="Component" Target="DRSS_START" Default="web" Mode="" Description="Do not change" Type="Variable" Display="advanced-hide" Required="true" Mask="false"/>
 </Container>
