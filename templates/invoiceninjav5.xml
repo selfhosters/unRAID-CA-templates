@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>invoiceninja-v5</Name>
+  <Repository>maihai/invoiceninja_v5</Repository>
+  <Registry>https://hub.docker.com/r/maihai/invoiceninja_v5</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
+  <Project>https://www.invoiceninja.com/</Project>
+  <Overview>Invoice Ninja v5: an open-source invoicing and time-tracking app built with Laravel https://www.invoiceninja.com.
+    This container requires a separate MySQL running container and the credentials passed via DB_* variables below.
+    SSL certificates are generated automatically and stored in certs/ folder in Storage as invoiceninja.crt and invoiceninja.key. Feel free to overwrite this files with others, if you use LetsEncrypt for example.
+    When migrating for v4 to v5 please follow this tutorial: https://github.com/kiwimato/invoiceninja_v5#upgrade-from-v4-to-v5
+  </Overview>
+  <Category>Productivity: Tools:</Category>
+  <WebUI>https://[IP]:[PORT:8443]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/kiwimato/invoiceninja_v5/master/invoiceninjav5.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/invoiceninja.png</Icon>
+  <Config Name="APP_ENV" Target="APP_ENV" Default="production" Description="Container Variable: APP_ENV" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Debug Mode" Target="APP_DEBUG" Default="0" Description="Container Variable: APP_DEBUG" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Database Host" Target="DB_HOST" Default="unraidIP" Description="Container Variable: DB_HOST" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Database Name" Target="DB_DATABASE" Default="ninjav5" Description="Container Variable: DB_DATABASE" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Database username" Target="DB_USERNAME" Default="ninjav5" Description="Container Variable: DB_USERNAME" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Database Password" Target="DB_PASSWORD" Default="ninja" Description="Container Variable: DB_PASSWORD" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="APP_URL" Target="APP_URL" Default="https://unraidIP:port" Description="Container Variable: APP_URL" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="IN_USER_EMAIL" Target="IN_USER_EMAIL" Default="" Description="Initial user email" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="IN_PASSWORD" Target="IN_PASSWORD" Default="" Description="Initial user password" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="SNAPPDF_EXECUTABLE_PATH" Target="SNAPPDF_EXECUTABLE_PATH" Default="/usr/bin/chromium-browser" Description="Container Variable: SNAPPDF_EXECUTABLE_PATH" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="PHANTOMJS_PDF_GENERATION" Target="PHANTOMJS_PDF_GENERATION" Default="false" Description="Container Variable: PHANTOMJS_PDF_GENERATION" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="QUEUE_CONNECTION" Target="QUEUE_CONNECTION" Default="database" Description="Container Variable: QUEUE_CONNECTION" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="MAIL_MAILER" Target="MAIL_MAILER" Default="log" Description="Container Variable: MAIL_MAILER" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="MAIL_PORT" Target="MAIL_PORT" Default="587" Description="Container Variable: MAIL_PORT" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="MAIL_ENCRYPTION" Target="MAIL_ENCRYPTION" Default="tls" Description="Container Variable: MAIL_ENCRYPTION" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="MAIL_HOST" Target="MAIL_HOST" Default="smtp.example.com" Description="Container Variable: MAIL_HOST" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="MAIL_USERNAME" Target="MAIL_USERNAME" Default="null" Description="Container Variable: MAIL_USERNAME" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="MAIL_FROM_ADDRESS" Target="MAIL_FROM_ADDRESS" Default="null" Description="Container Variable: MAIL_FROM_ADDRESS" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="MAIL_FROM_NAME" Target="MAIL_FROM_NAME" Default="Invoice Department" Description="Container Variable: MAIL_FROM_NAME" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="MAIL_PASSWORD" Target="MAIL_PASSWORD" Default="SUPERSECRETEMAILPASSWORD" Description="Container Variable: MAIL_PASSWORD" Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="HTTP Port" Target="80" Default="8000" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="false" Mask="false"/>
+  <Config Name="HTTPS Port" Target="443" Default="8443" Mode="tcp" Description="Container Port: 443" Type="Port" Display="always" Required="false" Mask="false"/>
+  <Config Name="Require HTTPS" Target="REQUIRE_HTTPS" Default="false" Description="Whether to force redirect http to https" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="SSL_HOSTNAME" Target="SSL_HOSTNAME" Default="tower" Description="Hostname to be used as SSL CN" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Storage" Target="/var/www/app/storage" Default="/mnt/user/appdata/invoiceninjav5/storage" Mode="rw" Description="Container Path: /var/www/app/storage" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="Logo" Target="/var/www/app/public/storage" Default="/mnt/user/appdata/invoiceninjav5/logo" Mode="rw" Description="Container Path: /var/www/app/public/storage" Type="Path" Display="always" Required="false" Mask="false"/>
+</Container>
