@@ -6,6 +6,7 @@
   <Network>bridge</Network>
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
+  <Requires>Redis container installed</Requires>
   <Support>https://forums.unraid.net/topic/100843-support-paperless-ng-docker/</Support>
   <Project>https://github.com/jonaswinkler/paperless-ng</Project>
   <Overview>
