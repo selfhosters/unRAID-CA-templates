@@ -8,6 +8,9 @@
 # unRAID-CA-templates
 An [Unraid](https://discord.gg/qWPbc8R) community repo where you can request unRAID container templates to be added to Community Applications: [Squidly271/community.applications](https://github.com/Squidly271/community.applications). 
 
+
+## Now seeking maintainers. Reach out on Discord.
+
 ## "Ask and Ye Shall Receive" 
 
 

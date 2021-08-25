@@ -6,8 +6,11 @@
   <Network>bridge</Network>
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
+  <Requires>Redis container installed</Requires>
   <Support>https://forums.unraid.net/topic/100843-support-paperless-ng-docker/</Support>
   <Project>https://github.com/jonaswinkler/paperless-ng</Project>
+  <Changes>https://paperless-ng.readthedocs.io/en/latest/changelog.html</Changes>
+  <ExtraSearchTerms>dms archiving document-management-system</ExtraSearchTerms>
   <Overview>
   Index and archive all of your scanned paper documents. Paperless-ng is a fork of paperless, adding a new interface and many other changes under the hood.[br][br]
   [b]Requirements:[/b] Paperless-ng requires Redis as external service. You can install it from the CA store. Make sure to adjust the configuration in the template accordingly.
