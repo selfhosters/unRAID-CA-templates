@@ -14,7 +14,7 @@
   <Overview>
   Index and archive all of your scanned paper documents. Paperless-ng is a fork of paperless, adding a new interface and many other changes under the hood.[br][br]
   [b]Requirements:[/b] Paperless-ng requires Redis as external service. You can install it from the CA store. Make sure to adjust the configuration in the template accordingly.
-  [b]Setup:[/b] Create a user account after this container is created i.e. from Unraids Docker UI, click the paperless-ng icon and choose Console. Then enter "python3.7 manage.py createsuperuser" in the prompt and follow the instructions.
+  [b]Setup:[/b] Create a user account after this container is created i.e. from Unraids Docker UI, click the paperless-ng icon and choose Console. Then enter "python manage.py createsuperuser" in the prompt and follow the instructions.
   [b]Paperless-ng Documentation:[/b] https://paperless-ng.readthedocs.io/en/latest/
   [b]Additional Template Variables:[/b] https://paperless-ng.readthedocs.io/en/latest/configuration.html
   </Overview>

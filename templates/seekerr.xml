@@ -23,7 +23,7 @@
   <Category>Tools:</Category>
   <WebUI/>
   <TemplateURL/>
-  <Icon>/plugins/dynamix.docker.manager/images/question.png</Icon>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/seekerr.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
