@@ -56,6 +56,6 @@ http://&amp;lt;server ip&amp;gt;:8080/players/rtmp.html</Description>
   <Config Name="RTMPS Port" Target="1936" Default="1936" Mode="tcp" Description="The port to accept an RTMPS stream on." Type="Port" Display="always" Required="false" Mask="false">1936</Config>
   <Config Name="Players &amp;amp; Stats Port" Target="8080" Default="8080" Mode="tcp" Description="The port used to access the built in players and stats page." Type="Port" Display="always" Required="false" Mask="false">8080</Config>
   <Config Name="SSL Certificate Domain" Target="SSL_DOMAIN" Default="rtmp-server.loc" Mode="" Description="Defines the domain the default self sigend certificate will be valid for." Type="Variable" Display="always" Required="false" Mask="false">rtmp-server.loc</Config>
-  <Config Name="User ID" Target="PUID" Default="100" Mode="" Description="Sets the User ID that will own the /assets directory" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
-  <Config Name="Group ID" Target="PGID" Default="99" Mode="" Description="Sets the Group ID that will own the /assets Directory" Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
+  <Config Name="User ID" Target="PUID" Default="99" Mode="" Description="Sets the User ID that will own the /assets directory" Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
+  <Config Name="Group ID" Target="PGID" Default="100" Mode="" Description="Sets the Group ID that will own the /assets Directory" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
 </Container>
