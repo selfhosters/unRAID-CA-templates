@@ -7,7 +7,7 @@
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository</Support>
-  <Project>https://github.com/Jalle19/node-ffmpeg-mpegts-proxy<Project/>
+  <Project>https://github.com/Jalle19/node-ffmpeg-mpegts-proxy</Project>
   <Overview>Simple proxy for leveraging ffmpeg to convert any source URL into MPEG-TS over HTTP</Overview>
   <WebUI>http://[IP]:[PORT:9128]</WebUI>
   <Config Name="Listen Port" Target="9128" Default="9128" Mode="tcp" Description="The port the HTTP server should be listening on" Type="Port" Display="always" Required="false" Mask="false">9128</Config>
