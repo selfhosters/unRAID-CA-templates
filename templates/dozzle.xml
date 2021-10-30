@@ -18,4 +18,5 @@
   <Config Name="Log Level" Target="DOZZLE_LEVEL" Default="info" Mode="" Description="Container Variable: DOZZLE_LEVEL" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Log Tailsize" Target="DOZZLE_TAILSIZE" Default="300" Mode="" Description="Container Variable: DOZZLE_TAILSIZE" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Secret Key" Target="DOZZLE_KEY" Default="9Q9SJ69MZhZ0WrjbF" Mode="" Description="Container Variable: DOZZLE_KEY . Dozzle uses this to make session tokens. If you expose dozzle on the internet, you need to change this, since the default secret is well known" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Disable Analytics" Target="DOZZLE_NO_ANALYTICS" Default="true" Mode="" Description="Container Variable: DOZZLE_NO_ANALYTICS . Dozzle collects anonymous user configurations using Google Analytics." Type="Variable" Display="advanced" Required="false" Mask="false"/>
 </Container>
