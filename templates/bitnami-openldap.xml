@@ -7,7 +7,7 @@
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository</Support>
   <Project>https://github.com/bitnami/bitnami-docker-openldap</Project>
-  <Overview>Docker image to run Bitnami OpenLDAP. Check project site for configuration info<Overview/>
+  <Overview>Docker image to run Bitnami OpenLDAP. Check project site for configuration info</Overview>
   <Category>HomeAutomation: Network:Management Tools:</Category>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/bitnami-openldap.xml</TemplateURL>
   <Icon>https://secure.gravatar.com/avatar/b6d982581a58a6a39d12c5d5355dde23.jpg</Icon>
