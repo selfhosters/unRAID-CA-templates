@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>docker-wyze-bridge</Name>
+  <Repository>mrlt8/wyze-bridge</Repository>
+  <Registry>https://hub.docker.com/r/mrlt8/wyze-bridge</Registry>
+  <Network>bridge</Network>
+  <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
+  <Project>https://github.com/mrlt8/docker-wyze-bridge</Project>
+  <Overview>RTMP/RTSP/HLS bridge for Wyze cams in a docker container</Overview>
+  <Category>HomeAutomation:</Category>
+  <Config Name="WYZE_EMAIL" Target="WYZE_EMAIL" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="WYZE_PASSWORD" Target="WYZE_PASSWORD" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="LAN_ONLY" Target="LAN_ONLY" Default="False" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Host Port 1" Target="8554" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false"/>
+  <Config Name="Host Path 1" Target="1935" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false"/>
+  <Config Name="Host Port 2" Target="8888" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false"/>
+  <Config Name="Fresh Data" Target="FRESH_DATA" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">True</Config>
+</Container>
