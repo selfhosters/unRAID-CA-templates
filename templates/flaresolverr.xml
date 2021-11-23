@@ -8,7 +8,6 @@
   <Overview>FlareSolverr is a proxy server to bypass Cloudflare protection. Useful as a companion for indexer proxies such as Prowlarr and Jackett.</Overview>
   <Icon>https://raw.githubusercontent.com/FlareSolverr/FlareSolverr/master/resources/flaresolverr_logo.png</Icon>
   <Category>Downloaders:</Category>
-  <Overview></Overview>
   <Config Name="Port" Target="8191" Default="8191" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false"/>
   <Config Name="Log Level" Target="LOG_LEVEL" Default="info" Mode="" Description="Verbosity of the logging. Use `LOG_LEVEL=debug` for more information." Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Time Zone" Target="TZ" Default="UTC" Mode="" Description="Timezone used in the logs and the web browser." Type="Variable" Display="always" Required="false" Mask="false"/>
