@@ -16,36 +16,33 @@
     <TagDescription>Alpine-based amd64 image, same as above but a little bit smaller.</TagDescription>
   </Branch>
   <Overview>Vaultwarden (formerly bitwarden_rs) is a Bitwarden server API implementation written in Rust compatible with upstream Bitwarden clients, perfect for self-hosted deployment where running the official resource-heavy service might not be ideal.&#xD;
-    [br][br]&#xD;
+    &#xD;
     Basically full implementation of Bitwarden API is provided including: &#xD;
-    [br][br]&#xD;
+    &#xD;
     -Basic single user functionality&#xD;
-    [br]&#xD;
+    &#xD;
     -Organizations support&#xD;
-    [br]&#xD;
+    &#xD;
     -Attachments&#xD;
-    [br]&#xD;
+    &#xD;
     -Vault API support&#xD;
-    [br]&#xD;
+    &#xD;
     -Serving the static files for Vault interface&#xD;
-    [br]&#xD;
+    #xD;
     -Website icons API&#xD;
-    [br]&#xD;
+    &#xD;
     -Authenticator and U2F support&#xD;
-    [br]&#xD;
+    &#xD;
     -YubiKey OTP&#xD;
-    [br][br]&#xD;
-    For more configuration see the wiki
-    [br]
-    https://github.com/dani-garcia/vaultwarden/wiki
+    &#xD;
+    For more configuration see the wiki https://github.com/dani-garcia/vaultwarden/wiki
   </Overview>
   <Category>Tools:</Category>
-  <WebUI>http://[IP]:[PORT:80]</WebUI>
+  <WebUI>http://[IP]:[PORT:80]/admin</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/vaultwarden.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/bitwardenrs.png</Icon>
-  <Config Name="WebUI HTTP Port" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false"/>
-  <Config Name="Storage" Target="/data" Default="/mnt/user/appdata/bitwarden" Mode="rw" Description="Container Path: /data" Type="Path" Display="advanced" Required="true" Mask="false"/>
-  <Config Name="SERVER_ADMIN_EMAIL" Target="SERVER_ADMIN_EMAIL" Default="me@domain.com" Description="Container Variable: Server Admin E-Mail" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="WebUI HTTP Port" Target="80" Default="4743" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="Storage" Target="/data" Default="/mnt/user/appdata/vaultwarden" Mode="rw" Description="Container Path: /data" Type="Path" Display="advanced" Required="true" Mask="false"/>
   <Config Name="SIGNUPS_ALLOWED" Target="SIGNUPS_ALLOWED" Default="true|false" Description="Container Variable: Signups" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="INVITATIONS_ALLOWED" Target="INVITATIONS_ALLOWED" Default="true|false" Description="Container Variable: Invitations" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="WEBSOCKET_ENABLED" Target="WEBSOCKET_ENABLED" Default="false" Description="Container Variable: Websockets Enabled" Type="Variable" Display="always" Required="false" Mask="false"/>
