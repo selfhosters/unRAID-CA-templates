@@ -7,10 +7,14 @@
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository</Support>
   <Project>https://github.com/natpuch/web-pdf-toolbox</Project>
-  <Overview>Very simple web toolbox to combine, compress, split PDF, and convert between images and PDF, change contrast of PDF, and add text watermark on PDF using Ghostscript and ImageMagick.</Overview>
+  <Overview>
+    Very simple web toolbox to combine, compress, split PDF, and convert between images and PDF, change contrast of PDF, and add text watermark on PDF using Ghostscript and ImageMagick. 
+    
+    ⚠️ WARNING: This toolbox is not secure and should not be exposed publicly. If exposed, someone might be able to access recently uploaded documents. Please, only use this toolbox behind an authentification portal or on a LAN (and access it via VPN if needed).
+  </Overview>
   <Category>Productivity: Tools:</Category>
   <WebUI>http://[IP]:[PORT:80]</WebUI>
-  <Config Name="Appdata" Target="/tmp/pdf/" Default="/mnt/user/appdata/web-pdf-toolbox" Mode="rw" Description="Container Path: /tmp/pdf/" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/web-pdf-toolbox</config>
+  <Config Name="Appdata" Target="/tmp/pdf/" Default="/mnt/user/appdata/web-pdf-toolbox" Mode="rw" Description="Container Path: /tmp/pdf/" Type="Path" Display="always" Required="true" Mask="false"/>
   <Config Name="WebUI" Target="80" Default="25568" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false">25568</Config>
   <Config Name="Timezone" Target="TZ" Default="America/Chicago" Mode="" Description="Container Variable: TZ" Type="Variable" Display="always" Required="false" Mask="false"/>
 </Container>
