@@ -9,7 +9,7 @@
   <Project>https://github.com/kopia/kopia/</Project>
   <Overview>Kopia is a simple, cross-platform tool for managing encrypted backups in the cloud. It provides fast, incremental backups, secure, client-side end-to-end encryption, compression and data deduplication.&#xD;
 &#xD;
-To run this container, you must create a htpasswd file and place it in the /mnt/user/appdata/kopia/config directory, then adjust the Post Arguments accordingly.  
+To run this container, you must create a htpasswd file (either via command line or using a tool such as https://hostingcanada.org/htpasswd-generator/) and place it in the /mnt/user/appdata/kopia/config directory, then adjust the Post Arguments accordingly.  
   </Overview>
   <Category>Backup: Cloud:</Category>
   <WebUI>http://[IP]:[PORT:51515]</WebUI>
@@ -21,5 +21,6 @@ To run this container, you must create a htpasswd file and place it in the /mnt/
   <Config Name="Config path" Target="/app/config" Default="/mnt/user/appdata/kopia/config" Mode="rw" Description="Container Path: /app/config" Type="Path" Display="always" Required="true" Mask="false"/>
   <Config Name="Cache path" Target="/app/cache" Default="/mnt/user/appdata/kopia/cache" Mode="rw" Description="Container Path: /app/cache" Type="Path" Display="always" Required="true" Mask="false"/>
   <Config Name="Log path" Target="/app/logs" Default="/mnt/user/appdata/kopia/logs" Mode="rw" Description="Container Path: /app/logs" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="Data path" Target="/app/data" Default="/mnt/user/media/kopia" Mode="rw" Description="Container Path: /app/data&#13;&#10;&#13;&#10;Enter this path as the Directory Path if creating a Filesystem repository." Type="Path" Display="always" Required="false" Mask="false"/>
   <Config Name="Timezone" Target="TZ" Default="America/Los_Angeles" Mode="" Description="Container Variable: TZ" Type="Variable" Display="always" Required="false" Mask="false"/>
 </Container>
