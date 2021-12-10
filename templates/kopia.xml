@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>kopia</Name>
+  <Repository>kopia/kopia</Repository>
+  <Registry>https://hub.docker.com/r/kopia/kopia/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://kopia.io/docs/</Support>
+  <Project>https://github.com/kopia/kopia/</Project>
+  <Overview>Kopia is a simple, cross-platform tool for managing encrypted backups in the cloud. It provides fast, incremental backups, secure, client-side end-to-end encryption, compression and data deduplication.</Overview>
+  <Category>Backup: Cloud:</Category>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
+  <TemplateURL>https://github.com/selfhosters/unRAID-CA-templates/blob/master/templates/kopia.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/kopia/kopia/master/icons/kopia.svg</Icon>
+  <Config Name="Repository password" Target="KOPIA_PASSWORD" Default="" Mode="" Description="Container Variable: KOPIA_PASSWORD" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="Config path" Target="/app/config" Default="/mnt/user/appdata/kopia/config" Mode="rw" Description="Container Path: /app/config" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Cache path" Target="/app/cache" Default="/mnt/user/appdata/kopia/cache" Mode="rw" Description="Container Path: /app/cach" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Log path" Target="/app/logs" Default="/mnt/user/appdata/kopia/logs" Mode="rw" Description="Container Path: /app/logs" Type="Path" Display="always" Required="false" Mask="false"/>
+</Container>
