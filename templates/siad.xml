@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Sia Daemon</Name>
-  <Repository>ghcr.io/siafoundation/siad:031dcde</Repository>
+  <Repository>ghcr.io/siafoundation/siad:master</Repository>
   <Registry>https://github.com/SiaFoundation/siad/pkgs/container/siad</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
