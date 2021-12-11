@@ -9,7 +9,7 @@
   <Overview>Sia is a decentralized cloud storage platform that radically alters the landscape of cloud storage. By leveraging smart contracts, client-side encryption, and sophisticated redundancy (via Reed-Solomon codes), Sia allows users to safely store their data with hosts that they do not know or trust. The result is a cloud storage marketplace where hosts compete to offer the best service at the lowest price. And since there is no barrier to entry for hosts, anyone with spare storage capacity can join the network and start making money.</Overview>
   <Category>Cloud: Other:</Category>
   <TemplateURL>https://github.com/selfhosters/unRAID-CA-templates/blob/master/templates/siad.xml</TemplateURL>
-  <Icon>https://avatars.githubusercontent.com/u/71667087?s=200&v=4</Icon>
+  <Icon>https://avatars.githubusercontent.com/u/71667087</Icon>
 
   <Config Name="Gateway Port" Target="9981" Default="9981" Mode="tcp" Description="Container Port: 9981" Type="Port" Display="always" Required="true" Mask="false">9981</Config>
 
