@@ -9,17 +9,11 @@
   <Overview>Sia is a decentralized cloud storage platform that radically alters the landscape of cloud storage. By leveraging smart contracts, client-side encryption, and sophisticated redundancy (via Reed-Solomon codes), Sia allows users to safely store their data with hosts that they do not know or trust. The result is a cloud storage marketplace where hosts compete to offer the best service at the lowest price. And since there is no barrier to entry for hosts, anyone with spare storage capacity can join the network and start making money.</Overview>
   <Category>Cloud: Other:</Category>
   <TemplateURL>https://github.com/selfhosters/unRAID-CA-templates/blob/master/templates/siad.xml</TemplateURL>
-  <Icon>https://avatars.githubusercontent.com/u/71667087</Icon>
-
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/sia.png</Icon>
   <Config Name="Gateway Port" Target="9981" Default="9981" Mode="tcp" Description="Container Port: 9981" Type="Port" Display="always" Required="true" Mask="false">9981</Config>
-
   <Config Name="Host RHP2 Port" Target="9982" Default="9982" Mode="tcp" Description="Container Port: 9982" Type="Port" Display="always" Required="true" Mask="false">9982</Config>
-
   <Config Name="Host RHP3 Port" Target="9983" Default="9983" Mode="tcp" Description="Container Port: 9983" Type="Port" Display="always" Required="true" Mask="false">9983</Config>
-
   <Config Name="Wallet Password" Target="SIA_WALLET_PASSWORD" Default="" Mode="" Description="Container Variable: SIA_WALLET_PASSWORD" Type="Variable" Display="always" Required="true" Mask="true"/>
-
   <Config Name="API Password" Target="SIA_API_PASSWORD" Default="" Mode="" Description="Container Variable: SIA_API_PASSWORD" Type="Variable" Display="always" Required="true" Mask="true"/>
-
   <Config Name="Data Directory" Target="/sia-data" Default="/mnt/user/appdata/sia" Mode="rw" Description="Container Path: /sia-data" Type="Path" Display="always" Required="true" Mask="false"/>
 </Container>
