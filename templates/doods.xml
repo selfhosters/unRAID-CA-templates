@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Doods</Name>
+  <Repository>interbiznw/doods</Repository>
+  <Registry>https://hub.docker.com/r/interbiznw/doods</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/interbiznw/doods/issues</Support>
+  <Project>https://github.com/interbiznw/doods</Project>
+  <Overview>DOODS - Dedicated Open Object Detection Service. DOODS is a GRPC/REST service that detects objects in images. It's designed to be very easy to use, run as a container and available remotely.</Overview>
+  <Category>Tools:</Category>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/doods.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/doods.png</Icon>
+  <Description>DOODS - Dedicated Open Object Detection Service. DOODS is a GRPC/REST service that detects objects in images. It's designed to be very easy to use, run as a container and available remotely.</Description>
+  <DonateText>If you like my work please consider Donating.</DonateText>
+  <DonateLink>https://interbiznw.github.io/</DonateLink>
+  <Config Name="Web UI Port" Target="8080" Default="8080" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="false" Mask="false">8080</Config>
+</Container>
