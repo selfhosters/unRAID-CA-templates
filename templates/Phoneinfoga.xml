@@ -10,8 +10,8 @@
   <Overview>Information gathering &amp;amp; OSINT framework for phone numbers</Overview>
   <Category>Tools:</Category>
   <WebUI>http://[IP]:[PORT:5000]/</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/interbiznw/unRAID-CA-templates/master/templates/Phoneinfoga.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/interbiznw/unRAID-CA-templates/master/templates/img/Phoneinfoga.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/Phoneinfoga.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/Phoneinfoga.png</Icon>
   <Description>Information gathering &amp;amp; OSINT framework for phone numbers</Description>
   <DonateText>If you like my work please consider Donating.</DonateText>
   <DonateLink>https://interbiznw.github.io/</DonateLink>
