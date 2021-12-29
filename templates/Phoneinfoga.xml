@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Phoneinfoga</Name>
+  <Repository>sundowndev/phoneinfoga</Repository>
+  <Registry>https://hub.docker.com/r/sundowndev/phoneinfoga</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/sundowndev/phoneinfoga/issues</Support>
+  <Project>https://github.com/sundowndev/phoneinfoga</Project>
+  <Overview>Information gathering &amp;amp; OSINT framework for phone numbers</Overview>
+  <Category>Tools:</Category>
+  <WebUI>http://[IP]:[PORT:5000]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/interbiznw/unRAID-CA-templates/master/templates/Phoneinfoga.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/interbiznw/unRAID-CA-templates/master/templates/img/Phoneinfoga.png</Icon>
+  <Description>Information gathering &amp;amp; OSINT framework for phone numbers</Description>
+  <DonateText>If you like my work please consider Donating.</DonateText>
+  <DonateLink>https://interbiznw.github.io/</DonateLink>
+  <PostArgs>serve</PostArgs>
+  <Config Name="Web UI Port" Target="5000" Default="4411" Mode="tcp" Description="Container Port: 5000" Type="Port" Display="always" Required="false" Mask="false">4411</Config>
+</Container>
