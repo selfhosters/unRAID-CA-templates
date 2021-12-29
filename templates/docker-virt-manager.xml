@@ -51,7 +51,6 @@
       <Mode/>
     </Variable>
   </Environment>
-  <Labels/>
   <Config Name="KVM" Target="/dev/kvm" Default="" Mode="" Description="Container Path: /dev/kvm" Type="Device" Display="always" Required="false" Mask="false">/dev/kvm</Config>
   <Config Name="/var/run/libvirt/libvirt-sock" Target="/var/run/libvirt/libvirt-sock" Default="" Mode="rw" Description="Container Path: /var/run/libvirt/libvirt-sock" Type="Path" Display="always" Required="false" Mask="false">/var/run/libvirt/libvirt-sock</Config>
   <Config Name="/var/lib/libvirt/images" Target="/var/lib/libvirt/images" Default="" Mode="rw" Description="Container Path: /var/lib/libvirt/images" Type="Path" Display="always" Required="false" Mask="false">/var/lib/libvirt/images</Config>
