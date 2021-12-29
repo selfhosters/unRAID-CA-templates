@@ -8,7 +8,9 @@
   <Support>https://github.com/interbiznw/doods/issues</Support>
   <Project>https://github.com/interbiznw/doods</Project>
   <Overview>DOODS - Dedicated Open Object Detection Service. DOODS is a GRPC/REST service that detects objects in images. It's designed to be very easy to use, run as a container and available remotely.</Overview>
-  <Category>Tools:</Category>
+  <Beta>False</Beta>
+  <Category>HomeAutomation: Security: Tools:</Category>
+  <Date>2021-12-29</Date>
   <WebUI>http://[IP]:[PORT:8080]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/doods.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/doods.png</Icon>
