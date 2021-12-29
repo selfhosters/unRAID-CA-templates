@@ -9,7 +9,7 @@
   <WebUI>http://[IP]:[PORT:5000]/</WebUI>
   <Project>https://virt-manager.org/</Project>
   <Overview>Information gathering &amp;amp; OSINT framework for phone numbers</Overview>
-  <TemplateURL>https://raw.githubusercontent.com/interbiznw/docker-virt-manager/main/UnRaid/template/docker-virt-manager.xml</TemplateURL>
+  <TemplateURL>https://raw.githubusercontent.com/interbiznw/unRAID-CA-templates/feature-add-phoneinfoga/templates/Phoneinfoga.xml</TemplateURL>
   <Icon>https://i.imgur.com/uGM5uqC.png</Icon>
   <PostArgs>serve</PostArgs>
   <DonateText>If you like my work please consider Donating.</DonateText>
