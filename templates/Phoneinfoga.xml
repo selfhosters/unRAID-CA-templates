@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Phoneinfoga</Name>
+  <Repository>sundowndev/phoneinfoga</Repository>
+  <Registry>https://hub.docker.com/r/sundowndev/phoneinfoga</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <WebUI>http://[IP]:[PORT:5000]/</WebUI>
+  <Project>https://virt-manager.org/</Project>
+  <Overview>Information gathering &amp;amp; OSINT framework for phone numbers</Overview>
+  <TemplateURL>https://raw.githubusercontent.com/interbiznw/docker-virt-manager/main/UnRaid/template/docker-virt-manager.xml</TemplateURL>
+  <Icon>https://i.imgur.com/uGM5uqC.png</Icon>
+  <PostArgs>serve</PostArgs>
+  <DonateText>If you like my work please consider Donating.</DonateText>
+  <DonateLink>https://interbiznw.github.io/</DonateLink>
+  <Description>Information gathering &amp;amp; OSINT framework for phone numbers</Description>
+  <Config Name="Web UI Port" Target="5000" Default="4411" Mode="tcp" Description="Container Port: 5000" Type="Port" Display="always" Required="false" Mask="false">4411</Config>
+</Container>
