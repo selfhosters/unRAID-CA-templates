@@ -14,7 +14,6 @@
   <WebUI>http://[IP]:[PORT:8185]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/interbiznw/docker-virt-manager/main/UnRaid/template/docker-virt-manager.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/interbiznw/docker-virt-manager/main/virt-manager-icon.png</Icon>
-  <DateInstalled>1640753675</DateInstalled>
   <DonateText>If you like my work please consider Donating.</DonateText>
   <DonateLink>https://interbiznw.github.io/</DonateLink>
   <Description>GTK Broadway web UI for libvirt. The virt-manager application is a desktop user interface for managing virtual machines through libvirt. It primarily targets KVM VMs, but also manages Xen and LXC (linux containers). It presents a summary view of running domains, their live performance &amp;amp; resource utilization statistics. Wizards enable the creation of new domains, and configuration &amp;amp; adjustment of a domain&#x2019;s resource allocation &amp;amp; virtual hardware. Uses GTK3 Broadway (HTML5) backend--no vnc, xrdp, etc needed! Also has DARK MODE</Description>
