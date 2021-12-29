@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Phoneinfoga</Name>
-  <Repository>sundowndev/phoneinfoga</Repository>
-  <Registry>https://hub.docker.com/r/sundowndev/phoneinfoga</Registry>
+  <Repository>interbiznw/phoneinfoga</Repository>
+  <Registry>https://hub.docker.com/r/interbiznw/phoneinfoga</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
-  <Support>https://github.com/sundowndev/phoneinfoga/issues</Support>
-  <Project>https://github.com/sundowndev/phoneinfoga</Project>
+  <Support>https://github.com/interbiznw/phoneinfoga/issues</Support>
+  <Project>https://github.com/interbiznw/phoneinfoga</Project>
   <Overview>Information gathering &amp;amp; OSINT framework for phone numbers</Overview>
   <Category>Tools:</Category>
   <WebUI>http://[IP]:[PORT:5000]/</WebUI>
