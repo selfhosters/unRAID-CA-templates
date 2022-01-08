@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <Container version="2">
+   <Name Default="tuya2mqtt">tuya2mqtt</Name>
+   <Overview>
+     This is a template for https://github.com/tonyfav/tuya2mqtt 's container,
+     which makes devices with serial protocols that are not supported in Tasmota
+     available to Home Assistant.
+   </Overview>
+   <Registry>https://hub.docker.com/r/thetonyfav/tuya2mqtt</Registry>
+   <Repository>tonyfav/tuya2mqtt:20210918</Repository>
+   <Privileged>false</Privileged>
+   <Network>bridge</Network>
+   <Category>HomeAutomation: Status:Stable</Category>
+   <Config
+    Type="Variable"
+    Name="MQTT Host"
+    Target="MQTT_HOST"
+    Default="localhost"
+    Description="Change to whatever IP your MQTT broker is available at. Use
+    LAN IP values, not Docker IP values."
+    Mask="false"
+    Display="basic"
+    Required="true">MQTT Host</Config>
+  <Config
+    Type="Variable"
+    Name="MQTT Port"
+    Target="MQTT_PORT"
+    Default="1883"
+    Description="Should be default 1883. Do not change unless your broker uses
+    a different port."
+    Mask="false"
+    Display="basic"
+    Required="true">MQTT Host</Config>
+  <Config
+    Type="Variable"
+    Name="MQTT User"
+    Target="MQTT_USER"
+    Default="user"
+    Description="User registered in broker"
+    Mask="false"
+    Display="basic"
+    Required="true">MQTT Host</Config>
+  <Config
+    Type="Variable"
+    Name="MQTT Password"
+    Target="MQTT_PASSWORD"
+    Default="user"
+    Description="Password registered for that user in broker"
+    Mask="false"
+    Display="basic"
+    Required="true">MQTT Host</Config>
+  <Config
+    Type="Variable"
+    Name="MQTT Client"
+    Target="MQTT_CLIENT"
+    Default="tuya2mqtt-dekala"
+    Description="The topic you want the device to appear as in Home
+    Assistant"
+    Mask="false"
+    Display="basic"
+    Required="true">MQTT Host</Config>
+  <Config
+    Type="Variable"
+    Name="MQTT QOS"
+    Target="MQTT_QOS"
+    Default="1"
+    Description="DO NOT CHANGE"
+    Mask="false"
+    Display="basic"
+    Required="true">MQTT Host</Config>
+  <Config
+    Type="Variable"
+    Name="MQTT Logging"
+    Target="MQTT_LOGGING"
+    Default="1"
+    Description="DO NOT CHANGE"
+    Mask="false"
+    Display="basic"
+    Required="true">MQTT Host</Config>
+  <Config
+    Type="Variable"
+    Name="Device topic"
+    Target="DEVICE_TOPIC"
+    Default="tasmota_XXXXXX"
+    Description="Replace this with the topic that your device appears as
+    in your broker. This can be easily found in Tasmota at the main menu
+    under 'Information' > 'MQTT Full Topic'."
+    Mask="false"
+    Display="basic"
+    Required="true">MQTT Host</Config>
+  <Config
+    Type="Variable"
+    Name="Device Type"
+    Target="DEVICE_TYPE"
+    Default="dekala_table_lamp"
+    Description="Use https://github.com/tony-fav/tuya2mqtt/tree/master/devices
+    to determine what device you have, then translate that into all lowercase
+    while replacing spaces with underscores (e.g. Asakuki Diffuser is
+    asakuki_diffuser)."
+    Mask="false"
+    Display="basic"
+    Required="true">MQTT Host</Config>
+  <Config
+    Type="Variable"
+    Name="HA Client"
+    Target="HA_CLIENT"
+    Default="tuya2mqtt/dekala_table_lamp/"
+    Description="The topic you want the device to appear as in Home
+    Assistant. If you have a different device, PLEASE PUT A FORWARD SLASH AT
+    THE END. (e.g. the diffuser used earlier is tuya2mqtt/asakuki_diffuser/)"
+    Mask="false"
+    Display="basic"
+    Required="true">MQTT Host</Config>
+ </Container>
