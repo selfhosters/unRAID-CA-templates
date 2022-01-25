@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Backblaze_Personal_Backup</Name>
+  <Repository>tessypowder/backblaze-personal-wine</Repository>
+  <Registry>https://hub.docker.com/r/tessypowder/backblaze-personal-wine</Registry>
+  <Network>bridge</Network>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository</Support>
+  <Project>https://github.com/JonathanTreffler/backblaze-personal-wine-container</Project>
+  <Overview>This Docker container runs the Backblaze personal backup client via WINE, so that you can back up your files with the separation and portability capabilities of Docker on Linux.&#xD;
+It runs the Backblaze client and starts a virtual X server and a VNC server with Web GUI, so that you can interact with it.&#xD;
+&#xD;
+This container needs additional installation steps after running the docker, which can be found here: https://github.com/JonathanTreffler/backblaze-personal-wine-container#installation</Overview>
+  <Category>Backup: Cloud: Network:Other Productivity: Tools:Utilities</Category>
+  <WebUI>http://[IP]:[PORT:5800]/</WebUI>
+  <Icon>https://www.backblaze.com/pics/cloud-blaze.png</Icon>
+  <ExtraParams>--init</ExtraParams>
+  <DonateText>I would greatly appreciate a donation, so i can continue my open source work :)</DonateText>
+  <DonateLink>https://github.com/sponsors/JonathanTreffler</DonateLink>
+  <Description>This Docker container runs the Backblaze personal backup client via WINE, so that you can back up your files with the separation and portability capabilities of Docker on Linux.&#xD;
+It runs the Backblaze client and starts a virtual X server and a VNC server with Web GUI, so that you can interact with it.&#xD;
+&#xD;
+This container needs additional installation steps after running the docker, which can be found here: https://github.com/JonathanTreffler/backblaze-personal-wine-container#installation</Description>
+  <Config Name="Http VNC GUI" Target="5800" Default="5800" Mode="tcp" Description="Port used to access the application's GUI via the web interface." Type="Port" Display="always" Required="true" Mask="false">5800</Config>
+  <Config Name="VNC" Target="5900" Default="5900" Mode="tcp" Description="Port used to access the application's GUI via the VNC protocol. Optional if no VNC client is used." Type="Port" Display="always" Required="false" Mask="false">5900</Config>
+  <Config Name="Encryption" Target="SECURE_CONNECTION" Default="0" Mode="" Description="When set to 1, an encrypted connection is used to access the application's GUI (either via a web browser or VNC client). See the Security section &#13;&#10; in the README for more details." Type="Variable" Display="always" Required="false" Mask="false">0</Config>
+  <Config Name="Timezone" Target="TZ" Default="Etc/UTC" Mode="" Description="Timezone of the container. Timezone can also be set by mapping /etc/localtime between the host and the container.&#9;" Type="Variable" Display="always" Required="false" Mask="false">Etc/UTC</Config>
+  <Config Name="Display Width" Target="DISPLAY_WIDTH" Default="657" Mode="" Description="Width (in pixels) of the virtual screen's window." Type="Variable" Display="always" Required="false" Mask="false">657</Config>
+  <Config Name="DISPLAY_HEIGHT" Target="DISPLAY_HEIGHT" Default="473" Mode="" Description="Height (in pixels) of the virtual screen's window." Type="Variable" Display="always" Required="false" Mask="false">473</Config>
+  <Config Name="VNC Password" Target="VNC_PASSWORD" Default="" Mode="" Description="Password needed to connect to the application's GUI. See the VNC Password section in the README for more details." Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="X11VNC_EXTRA_OPTS" Target="X11VNC_EXTRA_OPTS" Default="" Mode="" Description="Extra options to pass to the x11vnc server running in the Docker container. WARNING: For advanced users. Do not use unless you know what you are doing." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="ENABLE_CJK_FONT" Target="ENABLE_CJK_FONT" Default="" Mode="" Description="When set to 1, open-source computer font WenQuanYi Zen Hei is installed. This font contains a large range of Chinese/Japanese/Korean characters.&#9;" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Storage to back up" Target="/drive_d/" Default="/mnt/user/" Mode="rw" Description="This will be exposed to the Backblaze Client as drive D and therefore be backed up" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/</Config>
+  <Config Name="Config" Target="/config/" Default="/mnt/user/appdata/backblaze_personal_backup/" Mode="rw" Description="Container Path: /config/" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/backblaze_personal_backup/</Config>
+</Container>
