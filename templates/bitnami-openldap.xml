@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>bitnami-openldap</Name>
+  <Repository>bitnami/openldap</Repository>
+  <Registry>https://hub.docker.com/r/bitnami/openldap/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository</Support>
+  <Project>https://github.com/bitnami/bitnami-docker-openldap</Project>
+  <Overview>Docker image to run Bitnami OpenLDAP. Check project site for configuration info</Overview>
+  <Category>HomeAutomation: Network:Management Tools:</Category>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/bitnami-openldap.xml</TemplateURL>
+  <Icon>https://secure.gravatar.com/avatar/b6d982581a58a6a39d12c5d5355dde23.jpg</Icon>
+  <Description/>
+  <Config Name="HTTP_PORT" Target="1389" Default="1389" Mode="tcp" Description="Container Port: 1389" Type="Port" Display="always" Required="true" Mask="false">1389</Config>
+  <Config Name="HTTPS_PORT" Target="1636" Default="1636" Mode="tcp" Description="Container Port: 1636" Type="Port" Display="always" Required="true" Mask="false">1636</Config>
+  <Config Name="LDAP_ADMIN_USERNAME" Target="LDAP_ADMIN_USERNAME" Default="admin" Mode="" Description="Container Variable: LDAP_ADMIN_USERNAME" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="LDAP_ADMIN_PASSWORD" Target="LDAP_ADMIN_PASSWORD" Default="adminpassword" Mode="" Description="Container Variable: LDAP_ADMIN_PASSWORD" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="LDAP_USERS" Target="LDAP_USERS" Default="user01,user02" Mode="" Description="Comma separated list of LDAP users to create in the default LDAP tree. Default: user01,user02" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="LDAP_PASSWORDS" Target="LDAP_PASSWORDS" Default="password1,password2" Mode="" Description="Comma separated list of passwords to use for LDAP users. Default: password1,password2" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="LDAP_ENABLE_TLS" Target="LDAP_ENABLE_TLS" Default="no" Mode="" Description="Whether to enable TLS for traffic or not. Defaults to no" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Certs folder path" Target="/opt/bitnami/openldap/certs/" Default="" Mode="rw" Description="Path to your certificates e.g. if you're using SWAG it would be /mnt/user/appdata/swag/keys" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="LDAP_TLS_CERT_FILE" Target="LDAP_TLS_CERT_FILE" Default="/opt/bitnami/openldap/certs/openldap.crt" Mode="" Description="File containing the certificate file for the TSL traffic. No defaults. (container's relative path, e.g. /opt/bitnami/openldap/certs/openldap.crt)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="LDAP_TLS_KEY_FILE" Target="LDAP_TLS_KEY_FILE" Default="/opt/bitnami/openldap/certs/openldap.key" Mode="" Description="File containing the key for certificate. No defaults. (container's relative path, e.g. /opt/bitnami/openldap/certs/openldap.key)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="LDAP_TLS_CA_FILE" Target="LDAP_TLS_CA_FILE" Default="/opt/bitnami/openldap/certs/openldapCA.crt" Mode="" Description="File containing the CA of the certificate. No defaults. (container's relative path, e.g. /opt/bitnami/openldap/certs/openldapCA.crt)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="LDAP_TLS_DH_PARAMS_FILE" Target="LDAP_TLS_DH_PARAMS_FILE" Default="" Mode="" Description="File containing the DH parameters. No defaults." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="LDAP_ROOT" Target="LDAP_ROOT" Default="dc=example,dc=org" Mode="" Description="LDAP database root node of the LDAP tree. Default: dc=example,dc=org" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="LDAP_USER_DC" Target="LDAP_USER_DC" Default="users" Mode="" Description="DC for the users' organizational unit. Default: users" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="LDAP_GROUP" Target="LDAP_GROUP" Default="readers" Mode="" Description="Group used to group created users. Default: readers" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="LDAP_CONFIG_ADMIN_ENABLED" Target="LDAP_CONFIG_ADMIN_ENABLED" Default="no" Mode="" Description="Whether to create a configuration admin user. Default: no." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="LDAP_CONFIG_ADMIN_USERNAME" Target="LDAP_CONFIG_ADMIN_USERNAME" Default="admin" Mode="" Description="LDAP configuration admin user. This is separate from LDAP_ADMIN_USERNAME. Default: admin." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="LDAP_CONFIG_ADMIN_PASSWORD" Target="LDAP_CONFIG_ADMIN_PASSWORD" Default="configpassword" Mode="" Description="LDAP configuration admin password. Default: configpassword." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="LDAP_EXTRA_SCHEMAS" Target="LDAP_EXTRA_SCHEMAS" Default="cosine, inetorgperson, nis" Mode="" Description="Extra schemas to add, among OpenLDAP's distributed schemas. Default: cosine, inetorgperson, nis" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="LDAP_SKIP_DEFAULT_TREE" Target="LDAP_SKIP_DEFAULT_TREE" Default="no" Mode="" Description="Whether to skip creating the default LDAP tree based on LDAP_USERS, LDAP_PASSWORDS, LDAP_USER_DC and LDAP_GROUP. Default: no" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="LDAP_CUSTOM_LDIF_DIR" Target="/ldifs" Default="/mnt/user/appdata/bitnami-openldap/ldifs" Mode="rw" Description="Location of a directory that contains LDIF files that should be used to bootstrap the database. Only files ending in .ldif will be used. Default LDAP tree based on the LDAP_USERS, LDAP_PASSWORDS, LDAP_USER_DC and LDAP_GROUP will be skipped when LDAP_CUSTOM_LDIF_DIR is used. When using this will override the usage of LDAP_ROOT,LDAP_USERS, LDAP_PASSWORDS, LDAP_USER_DC and LDAP_GROUP." Type="Path" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="LDAP_CUSTOM_SCHEMA_FILE" Target="/schema/custom.ldif" Default="/mnt/user/appdata/bitnami-openldap/custom.ldif" Mode="rw" Description="Location of a custom internal schema file that could not be added as custom ldif file (i.e. containing some structuralObjectClass). Default is /mnt/user/appdata/bitnami-openldap/custom.ldif" Type="Path" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="LDAP_ULIMIT_NOFILES" Target="LDAP_ULIMIT_NOFILES" Default="1024" Mode="" Description="Maximum number of open file descriptors. Default: 1024." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="LDAP_ALLOW_ANON_BINDING" Target="LDAP_ALLOW_ANON_BINDING" Default="yes" Mode="" Description="Allow anonymous bindings to the LDAP server. Default: yes" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Appdata" Target="/bitnami/openldap/" Default="/mnt/user/appdata/bitnami-openldap" Mode="rw" Description="Container Path: /bitnami/openldap/data" Type="Path" Display="advanced" Required="true" Mask="false"/>
+  <Config Name="Log debug" Target="BITNAMI_DEBUG" Default="false" Mode="" Description="Turn on debug info in logs" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+</Container>

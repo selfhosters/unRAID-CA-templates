@@ -15,7 +15,7 @@ From unraid terminal and run the following:
 ```bash
 docker exec -it protonmail-bridge /bin/bash
 chmod +x entrypoint.sh
-/entrypoint.sh init
+./entrypoint.sh init
 ```
 Wait for the bridge to startup, use `login` command and follow the instructions to add your account into the bridge. Then use  `info` to see the configuration information (username and password). After that, use `exit` to exit the bridge.
 

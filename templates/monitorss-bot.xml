@@ -17,6 +17,7 @@
 
   More configuration options available on [monitorss.xyz](https://docs.monitorss.xyz/configuration/bot-configuration)
   </Overview>
+  <Requires>A MongoDB container</Requires>
   <Network>bridge</Network>
   <Config Name="BOT_PREFIX" Target="DRSS_BOT_PREFIX" Default="\" Mode="" Description="Information here https://docs.monitorss.xyz/configuration/bot-configuration#bot" Type="Variable" Display="always" Required="true" Mask="false"/>
   <Config Name="TOKEN" Target="DRSS_BOT_TOKEN" Default="22222222222" Mode="" Description="Information here https://docs.monitorss.xyz/configuration/bot-configuration#bot" Type="Variable" Display="always" Required="true" Mask="true"/>

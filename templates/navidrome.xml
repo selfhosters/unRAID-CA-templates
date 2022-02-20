@@ -13,7 +13,7 @@
    <Config Name="WebUI" Target="4533" Default="" Mode="tcp" Description="Container Port: 4533" Type="Port" Display="always" Required="false" Mask="false">4533</Config>
    <Config Name="Appdata" Target="/data" Default="" Mode="rw" Description="Container Path: /data" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/navidrome</Config>
    <Config Name="Music" Target="/music" Default="" Mode="rw" Description="Container Path: /music" Type="Path" Display="always" Required="false" Mask="false"/>
-   <Config Name="Scan Interval" Target="ND_SCANINTERVAL" Default="" Mode="" Description="Container Variable: ND_SCANINTERVAL" Type="Variable" Display="always" Required="false" Mask="false">1m</Config>
+   <Config Name="Scan Schedule" Target="ND_SCANSCHEDULE" Default="" Mode="" Description="Container Variable: ND_SCANSCHEDULE" Type="Variable" Display="always" Required="false" Mask="false">1m</Config>
    <Config Name="Log Level" Target="ND_LOGLEVEL" Default="" Mode="" Description="Container Variable: ND_LOGLEVEL" Type="Variable" Display="always" Required="false" Mask="false">info</Config>
    <Config Name="Timeout" Target="ND_SESSIONTIMEOUT" Default="" Mode="" Description="Container Variable: ND_SESSIONTIMEOUT" Type="Variable" Display="always" Required="false" Mask="false">24h</Config>
    <Config Name="BaseURL" Target="ND_BASEURL" Default="" Mode="" Description="Container Variable: ND_BASEURL" Type="Variable" Display="always" Required="false" Mask="false"/>

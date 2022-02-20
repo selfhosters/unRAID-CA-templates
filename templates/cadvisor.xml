@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>cadvisor</Name>
+  <Repository>gcr.io/cadvisor/cadvisor</Repository>
+  <Registry>https://gcr.io/cadvisor/cadvisor</Registry>
+  <Network>bridge</Network>
+  <Shell>bash</Shell>
+  <Privileged>true</Privileged>
+  <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
+  <Project>https://github.com/google/cadvisor</Project>
+  <Changes>https://github.com/google/cadvisor/blob/master/CHANGELOG.md</Changes>
+  <ExtraSearchTerms>monitoring prometheus</ExtraSearchTerms>
+  <Overview>
+  cAdvisor (Container Advisor) provides container users an understanding of the resource usage and performance characteristics of their running containers. It is a running daemon that collects, aggregates, processes, and exports information about running containers. Specifically, for each container it keeps resource isolation parameters, historical resource usage, histograms of complete historical resource usage and network statistics. This data is exported by container and machine-wide.
+  </Overview>
+  <Category>Tools:</Category>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/cadvisor.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/cadvisor.png</Icon>
+  <Config Name="Port" Target="8080" Default="8080" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="false" Mask="false"/>
+  <Config Name="Root Filesystem" Target="/rootfs" Default="/" Mode="ro" Description="Container Path: /rootfs" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Runtime Variable Data" Target="/var/run" Default="/var/run" Mode="ro" Description="Container Path: /var/run" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Sys Filesystem" Target="/sys" Default="/sys" Mode="ro" Description="Container Path: /sys" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Docker Storage Filesystem" Target="/var/lib/docker/" Default="/var/lib/docker" Mode="ro" Description="Container Path: /var/lib/docker/" Type="Path" Display="always" Required="true" Mask="false"/>
+</Container>

@@ -11,7 +11,7 @@
     [br][br]&#xD;
      Variable:[b][span style='color: #E80000;']EMAIL[/span][/b]: Your Cloudflare email. &#xD;
     [br]&#xD;
-    Variable:[b][span style='color: #E80000;']API_KEY[/span][/b]: The [b]Global API Key[/b] found on the [b]My Profile[/b] page. [b][span style='color: #E80000;']https://dash.cloudflare.com/profile[/span][/b]&#xD;
+    Variable:[b][span style='color: #E80000;']API_KEY[/span][/b]: A [b]Zone-DNS API Key[/b] to be created on the following page: [b][span style='color: #E80000;']https://dash.cloudflare.com/profile/api-tokens[/span][/b]&#xD;
     [br]&#xD;
     Variable:[b][span style='color: #E80000;']ZONE[/span][/b]: Your domain name. e.g. [b]example.com[/b] &#xD;
     [br]&#xD;
