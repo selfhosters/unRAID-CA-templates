@@ -31,7 +31,7 @@ Plugins here: https://github.com/HaveAGitGat/Tdarr_Plugins&#xD;
 
   <Config Name="Node IP" Target="nodeIP" Default="0.0.0.0" Mode="" Description="Node IP. Required if using Tdarr Nodes across your local network" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Node ID" Target="nodeID" Default="Node Name" Mode="" Description="Node ID Name" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="Node Port" Target="nodePort" Default="8267" Mode="tcp" Description="Node Port" Type="Port" Display="always" Required="false" Mask="false">8267</Config>
+  <Config Name="Node Port" Target="8267" Default="8267" Mode="tcp" Description="Node Port" Type="Port" Display="always" Required="false" Mask="false">8267</Config>
 
   <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false"/>

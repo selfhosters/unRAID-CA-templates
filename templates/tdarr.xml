@@ -33,7 +33,7 @@ Plugins here: https://github.com/HaveAGitGat/Tdarr_Plugins&#xD;
   <Config Name="Internal Node" Target="internalNode" Default="false" Mode="" Description="Enable/disable the Node within the server container by setting true/false" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Node IP" Target="nodeIP" Default="0.0.0.0" Mode="" Description="Node IP" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Node ID" Target="nodeID" Default="MyInternalNode" Mode="" Description="Node ID Name" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="Node Port" Target="nodePort" Default="8264" Mode="tcp" Description="Node Port" Type="Port" Display="always" Required="false" Mask="false">8264</Config>
+  <Config Name="Node Port" Target="8264" Default="8264" Mode="tcp" Description="Node Port" Type="Port" Display="always" Required="false" Mask="false">8264</Config>
 
   <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false"/>
