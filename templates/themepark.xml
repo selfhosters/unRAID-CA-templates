@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Category>Tools:</Category>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/themepark.png</Icon>
+  <Name>theme-park</Name>
+  <Network>bridge</Network>
+  <Overview>
+  theme.park contains 48 themed applications, with css addons on certain themes.
+[br][br]
+Installation methods include custom docker mods for linuxserver.io containers,
+custom scripts for select Hotio containers and multiple examples of subfiltering using webservers like Nginx and Apache
+[br][br]
+Choose between 10 official styles, and 22 community styles! With the possibility to easily create your own themes using the defined variables.
+[br][br]
+See https://theme-park.dev/ for more information
+  </Overview>
+  <Privileged>false</Privileged>
+  <Project>https://theme-park.dev/</Project>
+  <Registry>https://github.com/GilbN/theme.park/pkgs/container/theme.park</Registry>
+  <Repository>ghcr.io/gilbn/theme.park</Repository>
+  <ReadMe>https://docs.theme-park.dev/setup/</ReadMe>
+    <Branch>
+        <Tag>latest</Tag>
+        <TagDescription>Based on latest release on the live branch</TagDescription>
+        <ReadMe>https://docs.theme-park.dev/setup/#docker</ReadMe>
+    </Branch>
+    <Branch>
+        <Tag>development</Tag>
+        <TagDescription>Based on latest commit on the develop branch</TagDescription>
+        <ReadMe>https://docs.theme-park.dev/setup/#docker</ReadMe>
+    </Branch>
+  <Shell>bash</Shell>
+  <Support>https://docs.theme-park.dev/discord</Support>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/themepark.xml</TemplateURL>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <Config Name="WebUI" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="Appdata" Target="/config" Default="" Mode="rw" Description="Appdata" Type="Path" Display="advanced" Required="true" Mask="false"/>
+  <Config Name="Domain" Target="TP_DOMAIN" Default="" Mode="" Description="Container Variable: TP_DOMAIN" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="PUID" Target="PUID" Default="99" Description="Container Variable: PUID" Type="Variable" Display="advanced" Required="true" Mask="false"/>
+  <Config Name="PGID" Target="PGID" Default="100" Description="Container Variable: PGID" Type="Variable" Display="advanced" Required="true" Mask="false"/>
+</Container>
