@@ -32,7 +32,7 @@ See https://theme-park.dev/ for more information
   <Shell>bash</Shell>
   <Support>https://docs.theme-park.dev/discord</Support>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/themepark.xml</TemplateURL>
-  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
   <Config Name="WebUI" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false"/>
   <Config Name="Appdata" Target="/config" Default="" Mode="rw" Description="Appdata" Type="Path" Display="advanced" Required="true" Mask="false"/>
   <Config Name="Domain" Target="TP_DOMAIN" Default="" Mode="" Description="Container Variable: TP_DOMAIN" Type="Variable" Display="always" Required="false" Mask="false"/>
