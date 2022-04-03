@@ -25,7 +25,7 @@
         <ReadMe>https://docs.theme-park.dev/setup/#docker</ReadMe>
     </Branch>
     <Branch>
-        <Tag>development</Tag>
+        <Tag>develop</Tag>
         <TagDescription>Based on latest commit on the develop branch</TagDescription>
         <ReadMe>https://docs.theme-park.dev/setup/#docker</ReadMe>
     </Branch>
@@ -33,10 +33,12 @@
   <Support>https://docs.theme-park.dev/discord</Support>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/themepark.xml</TemplateURL>
   <WebUI>http://[IP]:[PORT:80]</WebUI>
-  <Config Name="WebUI" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="HTTP WebUI" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="HTTPS WebUI" Target="443" Default="" Mode="tcp" Description="Container Port: 443" Type="Port" Display="always" Required="false" Mask="false"/>
+  <Config Name="Domain" Target="TP_DOMAIN" Default="" Mode="" Description="Container Variable: TP_DOMAIN - Optional - Add your own domain. Defaults to the nginx var $http_host" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="URI Scheme" Target="TP_SCHEME" Default="https" Mode="" Description="Container Variable: TP_SCHEME - Optional - If this is set, the TP_DOMAIN domain will be set to use this URI scheme internally in the css files. Default is the nginx var $scheme" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="URL Base" Target="TP_URLBASE" Default="" Mode="" Description="Container Variable: TP_URLBASE - Optional - This will make the CSS files accessible on a subfolder instead of the root. ex domain.com/themepark/css/base/plex/overseerr.css" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Appdata" Target="/config" Default="" Mode="rw" Description="Appdata" Type="Path" Display="advanced" Required="true" Mask="false"/>
-  <Config Name="Domain" Target="TP_DOMAIN" Default="" Mode="" Description="Container Variable: TP_DOMAIN" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="Uri scheme" Target="TP_SCHEME" Default="https" Mode="" Description="Set to http for local use" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="PUID" Target="PUID" Default="99" Description="Container Variable: PUID" Type="Variable" Display="advanced" Required="true" Mask="false"/>
   <Config Name="PGID" Target="PGID" Default="100" Description="Container Variable: PGID" Type="Variable" Display="advanced" Required="true" Mask="false"/>
 </Container>
