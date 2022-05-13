@@ -7,8 +7,8 @@
   <Overview>Hard Drive S.M.A.R.T Monitoring, Historical Trends and Real World Failure Thresholds</Overview>
   <Privileged>true</Privileged>
   <Project>https://github.com/AnalogJ/scrutiny</Project>
-  <Registry>https://hub.docker.com/r/analogj/scrutiny</Registry>
-  <Repository>analogj/scrutiny</Repository>
+  <Registry>https://github.com/AnalogJ/scrutiny/pkgs/container/scrutiny</Registry>
+  <Repository>ghcr.io/analogj/scrutiny:master-omnibus</Repository>
   <Shell>bash</Shell>
   <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/scrutiny.xml</TemplateURL>
