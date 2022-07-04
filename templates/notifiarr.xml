@@ -31,4 +31,5 @@ Mount additional paths anywhere to report drive space usage. &#xD;
   <Config Name="Storage Disk 1" Target="/storage/1" Default="/mnt/disk1" Mode="ro" Description="Set this and add more disks to report storage usage." Type="Path" Display="advanced" Required="false" Mask="false"/>
   <Config Name="appdata" Target="/config" Default="/mnt/user/appdata/Notifiarr/" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced" Required="true" Mask="false"/>
   <Config Name="Users" Target="/var/run/utmp" Default="/var/run/utmp" Mode="ro" Description="Container Path: /var/run/utmp - This allows counting logged in users on unRAID." Type="Path" Display="advanced" Required="false" Mask="false">/var/run/utmp</Config>
+  <Config Name="ID File" Target="/etc/machine-id" Default="/etc/machine-id" Mode="ro" Description="Container Path: /etc/machine - This requirement allows Notifiarr to uniquely identify your server." Type="Path" Display="advanced" Required="true" Mask="false">/etc/machine-id</Config>
 </Container>
