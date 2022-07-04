@@ -15,15 +15,17 @@
  - Supported formats: .cbz, .zip, .cbr and .rar[br]
  - Supports nested folders in library[br]
  - Automatically stores reading progress[br]
- - Built-in MangaDex downloader[br]
+ - Thumbnail generation[br]
+ - Supports plugins to download from third-party sites[br]  
  - The web reader is responsive and works well on mobile, so there is no need for a mobile app[br]
+ - All the static files are embedded in the binary, so the deployment process is easy and painless[br]
   </Overview>
   <Beta>False</Beta>
   <Category>MediaApp:Books</Category>
   <WebUI>http://[IP]:[PORT:9000]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/mango.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/mango.png</Icon>
-  <Config Name="WebUI" Target="9000" Default="" Mode="tcp" Description="Port for WebUI" Type="Port" Display="always" Required="true" Mask="false"/>
-  <Config Name="Config" Target="/root/.config/mango" Default="/mnt/user/appdata/Mango" Mode="rw" Description="Mango appdata" Type="Path" Display="advanced" Required="true" Mask="false"/>
-  <Config Name="Config" Target="/root/mango" Default="" Mode="rw" Description="Mangas" Type="Path" Display="advanced" Required="true" Mask="false"/>
+  <Config Name="WebUI" Target="9000" Default="9000" Mode="tcp" Description="Port for WebUI" Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="Config" Target="/root/.config/mango" Default="/mnt/user/appdata/Mango/config" Mode="rw" Description="Mango config" Type="Path" Display="advanced" Required="true" Mask="false"/>
+  <Config Name="Data" Target="/root/mango" Default="/mnt/user/appdata/Mango/Appdata" Mode="rw" Description="Manga appdata" Type="Path" Display="advanced" Required="true" Mask="false"/>
 </Container>

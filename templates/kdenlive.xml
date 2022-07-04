@@ -6,7 +6,7 @@
   <Category>MediaApp:Video MediaApp:Music Productivity: Tools:</Category>
   <Network>bridge</Network>
   <Support>hhttps://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
-  <Project>https://github.com/TessyPowder/kdenlive-vnc-docker</Project>
+  <Project>https://github.com/JonathanTreffler/kdenlive-vnc-docker</Project>
   <Privileged>false</Privileged>
   <Overview>An instance of kdenlive accessible through vnc and noVnc (=Web Interface)</Overview>
   <WebUI>http://[IP]:[PORT:5800]</WebUI>

@@ -10,13 +10,14 @@
   <Overview>AirDC++ Web Client is a locally installed application, which is designed for frequent sharing of files or directories within groups of people in a local network or over internet. The daemon application can be installed on different types of systems, such as on file servers and NAS devices.&#xD;
 &#xD;
 Username / password for the default admin account is: admin / password</Overview>
-  <Category>Cloud:File sharing:Direct Connect</Category>
+  <Category>Cloud:</Category>
   <WebUI>http://[IP]:[PORT:5600]</WebUI>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/airdcpp.png</Icon>
   <Description>AirDC++ Web Client is a locally installed application, which is designed for frequent sharing of files or directories within groups of people in a local network or over internet. The daemon application can be installed on different types of systems, such as on file servers and NAS devices.&#xD;
 &#xD;
 Username / password for the default admin account is: admin / password</Description>
   <ExtraParams>--user 99:100</ExtraParams>
+  <Config Name="UMASK" Target="UMASK" Default="0002" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="WebUI HTTP_PORT" Target="5600" Default="" Mode="tcp" Description="Container Port: 5600" Type="Port" Display="always" Required="true" Mask="false"/>
   <Config Name="WebUI HTTPS_PORT" Target="5601" Default="" Mode="tcp" Description="Container Port: 5601" Type="Port" Display="always" Required="false" Mask="false"/>
   <Config Name="TCP_PORT" Target="21248" Default="" Mode="tcp" Description="Published TCP port for incoming connections. Defaults to 21248." Type="Port" Display="always" Required="true" Mask="false"/>
