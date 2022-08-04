@@ -1,14 +1,31 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>shoko-server</Name>
-  <Repository>shokoanime/server:daily</Repository>
+  <Date>2022-08-03</Date>
+  <Repository>shokoanime/server:latest</Repository>
+  <Branch>
+    <Tag>daily</Tag>
+    <TagDescription>The daily branch includes the latest updates and may break database compatability with prior versions, you will not be able to revert without a database backup</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>anidbrewrite</Tag>
+    <TagDescription>This branch contains the bleeding edge of the new anidb engine.  It will break your database, it will have bugs, do not use this tag unless you are coordinating with developers.</TagDescription>
+  </Branch>
   <Registry>https://hub.docker.com/r/shokoanime/server/</Registry>
-  <Category>Tools:Utilities</Category>
+  <Beta>False</Beta>
+  <ExtraSearchTerms>anime japanese media anidb myanimelist avidump plex jellyfin metadata</ExtraSearchTerms>
+  <Category>MediaApp:Video</Category>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
-  <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
-  <Project>https://github.com/ShokoAnime/ShokoServer</Project>
-  <Overview>Shoko server is the core component of the Shoko suite and with it's client-server architecture which allows any program or plugin to access Shoko. You'll have access to your entire collection locally and over the internet with no additional work outside the initial configuration required.</Overview>
+  <Support>https://discord.gg/vpeHDsg</Support>
+  <Project>https://shokoanime.com/</Project>
+  <Overview>Shoko started as a small AniDB Mylist program to a full blown client-server architecture &#xD;
+  [br][br]&#xD;
+  Have a large Anime Library?  File management is a tedious process, so why not let Shoko handle that? &#xD;
+  [br][br]&#xD;
+  Within FIVE minutes, you’ll have Shoko up and running and populating your collection database with information about the various series and episodes in your collection. For those looking for more advanced options, we offer a wide range of utilities in Shoko Desktop to configure your collection workflow to your liking. &#xD;
+  [br][br]&#xD;
+  Please note, Shoko does not provide any way to download files, stream files from streaming sites or access files that are not part of your perosnal collection.</Overview>
   <WebUI>http://[IP]:[PORT:8111]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/shoko-server.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/shoko-server.png</Icon>
