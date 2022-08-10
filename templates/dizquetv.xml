@@ -3,6 +3,30 @@
   <Name>dizquetv</Name>
   <Repository>vexorian/dizquetv:latest</Repository>
   <Registry>https://hub.docker.com/r/vexorian/dizquetv</Registry>
+  <Branch>
+    <Tag>latest</Tag>
+    <TagDescription>Latest stable release</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>latest-nvidia</Tag>
+    <TagDescription>Latest stable release with Nvidia GPU support</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>edge</Tag>
+    <TagDescription>Latest beta release</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>edge-nvidia</Tag>
+    <TagDescription>Latest beta release with Nvidia GPU support</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>development</Tag>
+    <TagDescription>Latest development release</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>development-nvidia</Tag>
+    <TagDescription>Latest development release with Nvidia GPU support</TagDescription>
+  </Branch>
   <Network>host</Network>
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
@@ -16,4 +40,6 @@ dizqueTV will show up as a HDHomeRun device within Plex. When configuring your P
   <Icon>https://raw.githubusercontent.com/vexorian/dizquetv/main/resources/dizquetv.png</Icon>
   <Config Name="Webui &amp;amp; HDHR" Target="8000" Default="" Mode="tcp" Description="Container Port: 8000" Type="Port" Display="always" Required="false" Mask="false">8000</Config>
   <Config Name="Appdata" Target="/home/node/app/.dizquetv" Default="" Mode="rw" Description="Container Path: /home/node/app/.dizquetv" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/dizquetv/</Config>
+  <Config Name="NVIDIA_VISIBLE_DEVICES" Target="NVIDIA_VISIBLE_DEVICES" Default="" Mode="" Description="Container Variable: NVIDIA_VISIBLE_DEVICES" Type="Variable" Display="always" Required="false" Mask="false">all</Config>
+  <Config Name="NVIDIA_DRIVER_CAPABILITIES" Target="NVIDIA_DRIVER_CAPABILITIES" Default="" Mode="" Description="Container Variable: NVIDIA_DRIVER_CAPABILITIES" Type="Variable" Display="always" Required="false" Mask="false">all</Config>
 </Container>
