@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>tdarr</Name>
-  <Repository>haveagitgat/tdarr</Repository>
+  <Repository>ghcr.io/haveagitgat/tdarr</Repository>
   <Registry>https://hub.docker.com/r/haveagitgat/tdarr/</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>

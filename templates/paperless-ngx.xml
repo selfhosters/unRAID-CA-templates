@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>paperless-ngx</Name>
+  <Repository>ghcr.io/paperless-ngx/paperless-ngx</Repository>
+  <Registry>https://github.com/paperless-ngx/paperless-ngx/pkgs/container/paperless-ngx</Registry>
+  <Network>bridge</Network>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Requires>Redis container installed</Requires>
+  <Support>https://forums.unraid.net/topic/121075-support-paperless-ngx-docker/</Support>
+  <Project>https://github.com/paperless-ngx/paperless-ngx</Project>
+  <Changes>https://paperless-ngx.readthedocs.io/en/latest/changelog.html</Changes>
+  <ExtraSearchTerms>dms archiving document-management-system</ExtraSearchTerms>
+  <Overview>
+  Paperless-ngx is a document management system that transforms your physical documents into a searchable online archive so you can keep, well, less paper. Paperless-ngx forked from paperless-ng to continue the great work and distribute responsibility of supporting and advancing the project among a team of people.[br][br]
+  [b]Requirements:[/b] Paperless-ngx requires Redis as external service. You can install it from the CA store. Make sure to adjust the configuration in the template accordingly.
+  [b]Setup:[/b] Create a user account after this container is created i.e. from Unraids Docker UI, click the paperless-ngx icon and choose Console. Then enter "python manage.py createsuperuser" in the prompt and follow the instructions.
+  [b]Paperless-ngx Documentation:[/b] https://paperless-ngx.readthedocs.io/en/latest/
+  [b]Additional Template Variables:[/b] https://paperless-ngx.readthedocs.io/en/latest/configuration.html
+  [b]Demo:[/b] https://demo.paperless-ngx.com/
+  </Overview>
+  <Category>Productivity:</Category>
+  <WebUI>http://[IP]:[PORT:8000]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/paperless-ngx.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/paperless.png</Icon>
+  <Config Name="Port" Target="8000" Default="8000" Mode="tcp" Description="Container Port: 8000" Type="Port" Display="always" Required="false" Mask="false"/>
+  <Config Name="Data" Target="/usr/src/paperless/data" Default="/mnt/user/appdata/paperless-ngx/data" Mode="rw" Description="Container Path: /usr/src/paperless/data . &#13;&#10;This contains the paperless database. Should be in appdata." Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Media" Target="/usr/src/paperless/media" Default="" Mode="rw" Description="Container Path: /usr/src/paperless/media . &#13;&#10;This is where your consumed documents and thumbnails are stored." Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Consumption" Target="/usr/src/paperless/consume" Default="" Mode="rw" Description="Container Path: /usr/src/paperless/consume . &#13;&#10;Files placed here will be consumed by paperless." Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Export" Target="/usr/src/paperless/export" Default="" Mode="rw" Description="Container Path: /usr/src/paperless/export . &#13;&#10;Location for files used by the exporter utility.&#13;&#10;See https://paperless-ngx.readthedocs.io/en/latest/administration.html#document-exporter" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="PAPERLESS_REDIS" Target="PAPERLESS_REDIS" Default="redis://[REPLACE-WITH-IP]:6379" Mode="" Description="Container Variable: PAPERLESS_REDIS . This is required for processing scheduled tasks such as email fetching, index optimization and for training the automatic document matcher." Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="PAPERLESS_OCR_LANGUAGE" Target="PAPERLESS_OCR_LANGUAGE" Default="eng" Mode="" Description="Container Variable: PAPERLESS_OCR_LANGUAGE . The default language to use for OCR. Set this to the language most of your documents are written in. Use a 3-letter language code consistent with ISO 639: https://www.loc.gov/standards/iso639-2/php/code_list.php. This can be a combination of multiple languages such as deu+eng, in which case tesseract will use whatever language matches best." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="PAPERLESS_OCR_LANGUAGES" Target="PAPERLESS_OCR_LANGUAGES" Default="" Mode="" Description="Container Variable: PAPERLESS_OCR_LANGUAGES . Additional languages to install for text recognition. The container installs English, German, Italian, Spanish and French by default. Use a space separated list of 3-letter language codes consistent with ISO 639: https://www.loc.gov/standards/iso639-2/php/code_list.php" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="PAPERLESS_FILENAME_FORMAT" Target="PAPERLESS_FILENAME_FORMAT" Default="{created}-{correspondent}-{title}" Mode="" Description="Container Variable: PAPERLESS_FILENAME_FORMAT . Changes the filenames paperless uses to store documents in the media directory. Setting none disables this feature. Uniqueness of filenames is ensured, as an incrementing counter is attached. See https://paperless-ngx.readthedocs.io/en/latest/advanced_usage.html#file-name-handling for placeholders." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="PAPERLESS_TIME_ZONE" Target="PAPERLESS_TIME_ZONE" Default="America/Los_Angeles" Mode="" Description="Container Variable: PAPERLESS_TIME_ZONE . Use this variable to set a timezone for the Paperless Docker containers. If not specified, defaults to UTC." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="PAPERLESS_IGNORE_DATES" Target="PAPERLESS_IGNORE_DATES" Default="" Mode="" Description="Container Variable: PAPERLESS_IGNORE_DATES . Comma separated list of dates supported by dateparser that should be ignored when extracting the creation date. Example: 2020-12-02,22.04.1999" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="PAPERLESS_CONSUMER_POLLING" Target="PAPERLESS_CONSUMER_POLLING" Default="0" Mode="" Description="Container Variable: PAPERLESS_CONSUMER_POLLING . If set to a value n greater than 0, inotify is disabled and the directory is polled every n seconds. This option is useful when inotify doesn't fire events like when the consume folder is a NFS share" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="PAPERLESS_SECRET_KEY" Target="PAPERLESS_SECRET_KEY" Default="e11fl1oa-*ytql8p)(06fbj4ukrlo+n7k&amp;q5+$1md7i+mge=ee" Mode="" Description="Container Variable: PAPERLESS_SECRET_KEY . Paperless uses this to make session tokens. If you expose paperless on the internet, you need to change this, since the default secret is well known" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="PUID" Target="USERMAP_UID" Default="99" Mode="" Description="Container Variable: USERMAP_UID" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="PGID" Target="USERMAP_GID" Default="100" Mode="" Description="Container Variable: USERMAP_GID" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+</Container>

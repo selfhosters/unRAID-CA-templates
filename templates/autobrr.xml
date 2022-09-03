@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>autobrr</Name>
+  <Repository>ghcr.io/autobrr/autobrr:latest</Repository>
+  <Registry>https://github.com/autobrr/autobrr/pkgs/container/autobrr</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
+  <Project>https://github.com/autobrr/autobrr</Project>
+  <Overview>autobrr is the modern download automation tool for torrents. With inspiration and ideas from tools like trackarr, autodl-irssi and flexget we built one tool that can do it all, and then some.</Overview>
+  <Category>Tools:</Category>
+  <WebUI>http://[IP]:[PORT:7474]</WebUI>
+  <TemplateURL>false</TemplateURL>
+  <ExtraParams>--user 99:100</ExtraParams>
+  <Icon>https://raw.githubusercontent.com/autobrr/autobrr/develop/.github/images/logo.png</Icon>
+  <Config Name="Appdata" Target="/config" Default="" Mode="rw,slave" Description="" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="WebUI" Target="7474" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">7474</Config>
+  <Config Name="PUID" Target="PUID" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="false" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="false" Mask="false">100</Config>
+</Container>
