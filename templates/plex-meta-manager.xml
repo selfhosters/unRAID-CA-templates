@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <Name>Plex Meta Manager</Name>
+    <Repository>meisnate12/plex-meta-manager</Repository>
+    <Registry>https://hub.docker.com/r/meisnate12/plex-meta-manager</Registry>
+    <Branch>
+        <Tag>latest</Tag>
+        <TagDescription>Latest stable release</TagDescription>
+    </Branch>
+    <Branch>
+        <Tag>develop</Tag>
+        <TagDescription>The most updated documented fixes and enhancements to Plex Meta Manager. This version is tested
+            and documented to some degree, but there may be rough edges.
+        </TagDescription>
+    </Branch>
+    <Branch>
+        <Tag>nightly</Tag>
+        <TagDescription>The absolute latest version of the script, but it could easily break, there is no guarantee that
+            it even works, and any new features will not be documented.
+        </TagDescription>
+    </Branch>
+    <Category>Tools: MediaServer Status:Stable</Category>
+    <Network>host</Network>
+    <Shell>bash</Shell>
+    <Privileged>false</Privileged>
+    <Support>https://github.com/meisnate12/Plex-Meta-Manager/issues</Support>
+    <Project>https://metamanager.wiki/en/latest/</Project>
+    <Overview>Plex Meta Manager is an open source Python 3 project that has been designed to ease the creation and
+        maintenance of metadata, collections, and playlists within a Plex Media Server.
+    </Overview>
+    <Category>Tools: MediaServer:Video Status:Stable</Category>
+    <Icon>https://github.com/meisnate12/Plex-Meta-Manager/blob/develop/.github/pmm.png</Icon>
+    <Config Name="Configuration" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path"
+            Display="always" Required="false" Mask="false">/mnt/user/appdata/plex-meta-manager/
+    </Config>
+    <Config Name="Daily Run Time" Target="PMM_TIME" Default="06:00" Mode=""
+            Description="Time to update each day. Format: HH:MM" Type="Variable" Display="always" Required="false"
+            Mask="false">06:00
+    </Config>
+    <Config Name="Divider" Target="PMM_DIVIDER" Default="=" Mode=""
+            Description="The character that divides the sections" Type="Variable" Display="always" Required="false"
+            Mask="false">=
+    </Config>
+    <Config Name="Screen Width" Target="PMM_WIDTH" Default="100" Mode="" Description="An integer between 90 and 300"
+            Type="Variable" Display="never" Required="false" Mask="false">100
+    </Config>
+</Container>
