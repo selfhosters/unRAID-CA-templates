@@ -37,7 +37,7 @@ http://(server ip):8080/players/hls.html&#xD;
 http://(server ip):8080/players/dash.html&#xD;
 http://(server ip):8080/players/rtmp.html</Overview>
   <Category>GameServers: Network:Other</Category>
-  <WebUI>http://(IP):(PORT:8080)/stats</WebUI>
+  <WebUI>http://[IP]:[PORT:8080]/stats</WebUI>
   <Icon>https://intinor.com/wp-content/uploads/2017/01/RTMP.png</Icon>
   <Description>This Docker image can be used to create a video streaming server that supports RTMP, RTMPS, HLS, DASH out of the box. It also allows adaptive streaming and custom transcoding of video streams. All modules are built from source on Debian and Alpine Linux base images.&#xD;
 &#xD;
