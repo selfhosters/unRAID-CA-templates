@@ -13,6 +13,6 @@
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/prometheus.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/prometheus.png</Icon>
   <Config Name="Port" Target="9090" Default="9090" Mode="tcp" Description="Container Port: 9090" Type="Port" Display="always" Required="false" Mask="false"/>
-  <Config Name="Appdata" Target="/prometheus" Default="/mnt/user/appdata/prometheus/data" Mode="rw" Description="Appdata directory" Type="Path" Display="advanced" Required="true" Mask="false"/>
+  <Config Name="Appdata" Target="/prometheus/data" Default="/mnt/user/appdata/prometheus/data" Mode="rw" Description="Appdata directory" Type="Path" Display="advanced" Required="true" Mask="false"/>
   <Config Name="Config" Target="/etc/prometheus/" Default="/mnt/user/appdata/prometheus/etc" Mode="rw" Description="Config directory" Type="Path" Display="advanced" Required="true" Mask="false"/>
 </Container>
