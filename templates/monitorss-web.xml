@@ -13,11 +13,14 @@
   <Overview>
   WebUI for the Discord RSS bot (formerly known as Discord.RSS) with customizable feeds.
 
-  Requires a separate container for the bot, as well as redis and MongoDB
-
   More configuration options available on [monitorss.xyz](https://docs.monitorss.xyz/configuration/web-interface)
   </Overview>
   <Network>bridge</Network>
+  <Requires>
+  Monitorss-bot container
+  Redis container installed
+  MongoDB database container
+  </Requires>
   <WebUI>http://[IP]:[PORT:8081]</WebUI>
   <Config Name="CLIENTID" Target="DRSSWEB_BOT_CLIENTID" Default="1111111111111" Mode="" Description="Information here https://docs.monitorss.xyz/configuration/web-interface#bot" Type="Variable" Display="always" Required="true" Mask="false"/>
   <Config Name="CLIENTSECRET" Target="DRSSWEB_BOT_CLIENTSECRET" Default="1111111111111" Mode="" Description="Information here https://docs.monitorss.xyz/configuration/web-interface#bot" Type="Variable" Display="always" Required="true" Mask="true"/>

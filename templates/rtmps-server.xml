@@ -3,6 +3,14 @@
   <Name>RTMPS-Server</Name>
   <Repository>jamiephonic/rtmps-hls-server</Repository>
   <Registry>https://hub.docker.com/r/jamiephonic/rtmps-hls-server</Registry>
+  <Branch>
+  <Tag>latest</Tag>
+  <TagDescription>Latest release based on Debian</TagDescription>
+  </Branch>
+  <Branch>
+  <Tag>latest-alpine</Tag>
+  <TagDescription>Latest release based on Alpine</TagDescription>
+  </Branch>
   <Network>bridge</Network>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
@@ -11,46 +19,46 @@
   <Overview>This Docker image can be used to create a video streaming server that supports RTMP, RTMPS, HLS, DASH out of the box. It also allows adaptive streaming and custom transcoding of video streams. All modules are built from source on Debian and Alpine Linux base images.&#xD;
 &#xD;
 Stream live RTMP content to:&#xD;
-rtmp://&amp;lt;server ip&amp;gt;:1935/live/&amp;lt;stream_key&amp;gt; &#xD;
-where &amp;lt;stream_key&amp;gt; is any stream key you specify.&#xD;
+rtmp://(server ip):1935/live/(stream_key) &#xD;
+where (stream_key) is any stream key you specify.&#xD;
 &#xD;
 Stream live RTMPS content to:&#xD;
-rtmps://&amp;lt;ssl_domain&amp;gt;:1936/live/&amp;lt;stream_key&amp;gt;&#xD;
-where &amp;lt;stream_key&amp;gt; is any stream key you specify.&#xD;
+rtmps://(ssl_domain):1936/live/(stream_key)&#xD;
+where (stream_key) is any stream key you specify.&#xD;
 (Check the Github Wiki for information on setting up RTMPS support)&#xD;
 &#xD;
 View in VLC:&#xD;
-rtmp://&amp;lt;server ip&amp;gt;:1935/live/&amp;lt;stream-key&amp;gt;&#xD;
-http://&amp;lt;server ip&amp;gt;:8080/hls/&amp;lt;stream-key&amp;gt;.m3u8 &#xD;
-http://&amp;lt;server ip&amp;gt;:8080/dash/&amp;lt;stream-key&amp;gt;_src.mpd&#xD;
+rtmp://(server ip):1935/live/(stream-key)&#xD;
+http://(server ip):8080/hls/(stream-key).m3u8 &#xD;
+http://(server ip):8080/dash/(stream-key)_src.mpd&#xD;
 &#xD;
-View in Browser (assumes &amp;lt;stream-key&amp;gt; is 'test', edit the html files from the mounted directory to change this):&#xD;
-http://&amp;lt;server ip&amp;gt;:8080/players/hls.html&#xD;
-http://&amp;lt;server ip&amp;gt;:8080/players/dash.html&#xD;
-http://&amp;lt;server ip&amp;gt;:8080/players/rtmp.html</Overview>
+View in Browser (assumes (stream-key) is 'test', edit the html files from the mounted directory to change this):&#xD;
+http://(server ip):8080/players/hls.html&#xD;
+http://(server ip):8080/players/dash.html&#xD;
+http://(server ip):8080/players/rtmp.html</Overview>
   <Category>GameServers: Network:Other</Category>
   <WebUI>http://[IP]:[PORT:8080]/stats</WebUI>
   <Icon>https://intinor.com/wp-content/uploads/2017/01/RTMP.png</Icon>
   <Description>This Docker image can be used to create a video streaming server that supports RTMP, RTMPS, HLS, DASH out of the box. It also allows adaptive streaming and custom transcoding of video streams. All modules are built from source on Debian and Alpine Linux base images.&#xD;
 &#xD;
 Stream live RTMP content to:&#xD;
-rtmp://&amp;lt;server ip&amp;gt;:1935/live/&amp;lt;stream_key&amp;gt; &#xD;
-where &amp;lt;stream_key&amp;gt; is any stream key you specify.&#xD;
+rtmp://(server ip):1935/live/(stream_key) &#xD;
+where (stream_key) is any stream key you specify.&#xD;
 &#xD;
 Stream live RTMPS content to:&#xD;
-rtmps://&amp;lt;ssl_domain&amp;gt;:1936/live/&amp;lt;stream_key&amp;gt;&#xD;
-where &amp;lt;stream_key&amp;gt; is any stream key you specify.&#xD;
+rtmps://(ssl_domain):1936/live/(stream_key)&#xD;
+where (stream_key) is any stream key you specify.&#xD;
 (Check the Github Wiki for information on setting up RTMPS support)&#xD;
 &#xD;
 View in VLC:&#xD;
-rtmp://&amp;lt;server ip&amp;gt;:1935/live/&amp;lt;stream-key&amp;gt;&#xD;
-http://&amp;lt;server ip&amp;gt;:8080/hls/&amp;lt;stream-key&amp;gt;.m3u8 &#xD;
-http://&amp;lt;server ip&amp;gt;:8080/dash/&amp;lt;stream-key&amp;gt;_src.mpd&#xD;
+rtmp://(server ip):1935/live/(stream-key)&#xD;
+http://(server ip):8080/hls/(stream-key).m3u8 &#xD;
+http://(server ip):8080/dash/(stream-key)_src.mpd&#xD;
 &#xD;
-View in Browser (assumes &amp;lt;stream-key&amp;gt; is 'test', edit the html files from the mounted directory to change this):&#xD;
-http://&amp;lt;server ip&amp;gt;:8080/players/hls.html&#xD;
-http://&amp;lt;server ip&amp;gt;:8080/players/dash.html&#xD;
-http://&amp;lt;server ip&amp;gt;:8080/players/rtmp.html</Description>
+View in Browser (assumes (stream-key) is 'test', edit the html files from the mounted directory to change this):&#xD;
+http://(server ip):8080/players/hls.html&#xD;
+http://(server ip):8080/players/dash.html&#xD;
+http://(server ip):8080/players/rtmp.html</Description>
   <Config Name="Players &amp;amp; Configs" Target="/assets" Default="/mnt/user/appdata/rtmp-server" Mode="rw" Description="Directory where the containers config files and player pages will be stored." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/rtmp-server</Config>
   <Config Name="RTMP Port" Target="1935" Default="1935" Mode="tcp" Description="The port to accept an RTMP stream on." Type="Port" Display="always" Required="false" Mask="false">1935</Config>
   <Config Name="RTMPS Port" Target="1936" Default="1936" Mode="tcp" Description="The port to accept an RTMPS stream on." Type="Port" Display="always" Required="false" Mask="false">1936</Config>
