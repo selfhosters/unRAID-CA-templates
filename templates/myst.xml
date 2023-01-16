@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>myst</Name>
+  <Repository>mysteriumnetwork/myst</Repository>
+  <Registry>https://hub.docker.com/r/mysteriumnetwork/myst/</Registry>
+  <Network>host</Network>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
+  <Project>https://github.com/mysteriumnetwork/node</Project>
+  <Overview>Mysterium Node - decentralized VPN built on blockchain&#xD;
+&#xD;
+Cross-platform software to run a node in Mysterium Network. It contains Mysterium server (node), client API (tequila API) and client-cli (console client) for Mysterium Network.</Overview>
+  <Category>Network:VPN</Category>
+  <WebUI>http://[IP]:[PORT:4449]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/myst.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/myst.png</Icon>
+  <ExtraParams>--device=/dev/net/tun --cap-add NET_ADMIN</ExtraParams>
+  <PostArgs>service --agreed-terms-and-conditions</PostArgs>
+  <Config Name="WebUI Port" Target="4449" Default="4449" Mode="tcp" Description="Container Port: 4449" Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="Myst Config" Target="/var/lib/mysterium-node" Default="" Mode="rw" Description="Container Path: /var/lib/mysterium-node" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/myst/</Config>
+</Container>
