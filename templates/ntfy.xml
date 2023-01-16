@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <Name>ntfy</Name>
+    <Repository>binwiederhier/ntfy:latest</Repository>
+    <Registry>https://hub.docker.com/r/binwiederhier/ntfy</Registry>
+    <Branch>
+        <Tag>latest</Tag>
+        <TagDescription>Latest stable release</TagDescription>
+    </Branch>
+    <Network>host</Network>
+    <Shell>bash</Shell>
+    <Privileged>false</Privileged>
+    <Support>https://github.com/binwiederhier/ntfy/issues</Support>
+    <Project>https://github.com/binwiederhier/ntfy</Project>
+    <Overview>Send push notifications to your phone or desktop using PUT/POST</Overview>
+    <Category>Productivity Tools:Utilities Network:Messenger</Category>
+    <Icon>https://raw.githubusercontent.com/binwiederhier/ntfy/main/web/public/static/img/ntfy.png</Icon>
+    <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/ntfy.xml</TemplateURL>
+    <Config Name="WebUI HTTP Port" Target="80" Default="6839" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false">6839</Config>
+    <Config Name="Config Path" Target="/etc/ntfy" Default="" Mode="rw" Description="Where advanced configuration files are stored" Type="Path" Display="always" Required="false" Mask="false" />
+    <Config Name="Cache Path" Target="/var/cache/ntfy" Default="" Mode="rw" Description="Use persistent message cache" Type="Path" Display="always" Required="false" Mask="false" />
+</Container>
