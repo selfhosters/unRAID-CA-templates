@@ -8,12 +8,18 @@
   <Project>https://github.com/mrlt8/docker-wyze-bridge</Project>
   <Overview>RTMP/RTSP/HLS bridge for Wyze cams in a docker container</Overview>
   <Category>HomeAutomation:</Category>
+  <WebUI>http://[IP]:[PORT:5000]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/docker-wyze-bridge.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/wyze.png</Icon>
-  <Config Name="WYZE_EMAIL" Target="WYZE_EMAIL" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false"/>
-  <Config Name="WYZE_PASSWORD" Target="WYZE_PASSWORD" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false"/>
-  <Config Name="Net_Mode" Target="LAN" Default="" Mode="" Description="https://github.com/mrlt8/docker-wyze-bridge#LAN-Mode" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="Host Port 1" Target="8554" Default="8554" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false"/>
-  <Config Name="Host Path 1" Target="1935" Default="1935" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false"/>
-  <Config Name="Host Port 2" Target="8888" Default="8888" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false"/>
+  <Config Name="WYZE_EMAIL" Target="WYZE_EMAIL" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="WYZE_PASSWORD" Target="WYZE_PASSWORD" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Config Name="Fresh Data" Target="FRESH_DATA" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">True</Config>
+  <Config Name="WebUI" Target="5000" Default="5000" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">5000</Config>
+  <Config Name="WB_IP" Target="WB_IP" Default="" Mode="" Description="WB_IP env needs to be set with the IP address of the server running the bridge." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="WebRTC/ICE" Target="8189" Default="8189" Mode="udp" Description="" Type="Port" Display="advanced" Required="false" Mask="false">8189</Config>
+  <Config Name="WebRTC" Target="8889" Default="8889" Mode="tcp" Description="" Type="Port" Display="advanced" Required="false" Mask="false">8889</Config>
+  <Config Name="HLS Port" Target="8888" Default="8888" Mode="tcp" Description="" Type="Port" Display="advanced" Required="false" Mask="false">8888</Config>
+  <Config Name="RTMP Port" Target="1935" Default="1935" Mode="tcp" Description="" Type="Port" Display="advanced" Required="false" Mask="false">1935</Config>
+  <Config Name="RTSP Port" Target="8554" Default="8554" Mode="tcp" Description="" Type="Port" Display="advanced" Required="false" Mask="false">8554</Config>
+  <Config Name="Net_Mode" Target="LAN" Default="LAN" Mode="" Description="https://github.com/mrlt8/docker-wyze-bridge#LAN-Mode" Type="Variable" Display="advanced" Required="false" Mask="false">LAN</Config>
 </Container>
