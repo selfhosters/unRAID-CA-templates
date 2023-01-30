@@ -36,13 +36,13 @@
     local
   </Config>
   <Config Name="FAN_SPEED" Target="FAN_SPEED" Default="5" Mode="" Description="FAN_SPEED parameter can be set as a decimal (from 0 to 100%) or hexadecimaladecimal value (from 0x00 to 0x64) you want to set the fans to. Default value is 5(%)." Type="Variable" Display="always" Required="false" Mask="false">
-    30
+    5
   </Config>
   <Config Name="CPU_TEMPERATURE_TRESHOLD" Target="CPU_TEMPERATURE_TRESHOLD" Default="50" Mode="" Description="CPU_TEMPERATURE_TRESHOLD parameter is the T&#xB0;junction (junction temperature) threshold beyond which the Dell fan mode defined in your BIOS will become active again (to protect the server hardware against overheat). Default value is 50(&#xB0;C)." Type="Variable" Display="always" Required="false" Mask="false">
     50
   </Config>
   <Config Name="CHECK_INTERVAL" Target="CHECK_INTERVAL" Default="60" Mode="" Description="CHECK_INTERVAL parameter is the time (in seconds) between each temperature check and potential profile change. Default value is 60(s).&#13;&#10;" Type="Variable" Display="always" Required="false" Mask="false">
-    30
+    60
   </Config>
   <Config Name="IDRAC_USERNAME" Target="IDRAC_USERNAME" Default="root" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">
     root
