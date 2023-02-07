@@ -7,10 +7,6 @@
     <Tag>daily</Tag>
     <TagDescription>The daily branch includes the latest updates and may break database compatability with prior versions, you will not be able to revert without a database backup</TagDescription>
   </Branch>
-  <Branch>
-    <Tag>anidbrewrite</Tag>
-    <TagDescription>This branch contains the bleeding edge of the new anidb engine.  It will break your database, it will have bugs, do not use this tag unless you are coordinating with developers.</TagDescription>
-  </Branch>
   <Registry>https://hub.docker.com/r/shokoanime/server/</Registry>
   <Beta>False</Beta>
   <ExtraSearchTerms>anime japanese media anidb myanimelist avidump plex jellyfin metadata</ExtraSearchTerms>
@@ -29,8 +25,11 @@
   <WebUI>http://[IP]:[PORT:8111]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/shoko-server.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/shoko-server.png</Icon>
-  <Config Name="AppData" Target="/home/shoko/.shoko/" Default="" Mode="rw" Description="Container Path: /home/shoko/.shoko/" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/shokoserver</Config>
+  <Config Name="AppData" Target="/home/shoko/.shoko/" Default="" Mode="rw" Description="Container Path: /home/shoko/.shoko/" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/shokoserver</Config>
   <Config Name="WebUI" Target="8111" Default="" Mode="tcp" Description="Container Port: 8111" Type="Port" Display="always" Required="true" Mask="false">8111</Config>
   <Config Name="Anime Folder" Target="/anime" Default="" Mode="rw" Description="Container Path: /anime" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/shokoserver/anime</Config>
   <Config Name="Import Folder" Target="/import" Default="" Mode="rw" Description="Container Path: /import" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/shokoserver/import</Config>
+  <Config Name="USER_ID" Target="PUID" Default="" Description="PUID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
+  <Config Name="GROUP_ID" Target="PGID" Default="" Description="PGID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
+  <Config Name="AVDUMP_MONO" Target="AVDUMP_MONO" Default="" Description="Whether to install Mono for Avdump to run" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
 </Container>
