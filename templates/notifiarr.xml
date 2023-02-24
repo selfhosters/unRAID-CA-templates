@@ -10,6 +10,7 @@
   <Support>https://golift.io/discord/</Support>
   <Project>https://github.com/Notifiarr/notifiarr</Project>
   <Category>MediaApp:Video MediaApp:Music MediaApp:Books</Category>
+  <WebUI>http://[IP]:[PORT:5454]/</WebUI>
   <ExtraParams>--hostname=$(hostname -f)</ExtraParams>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/notifiarr.xml</TemplateURL>
   <Icon>https://docs.notifiarr.com/img/icon.png</Icon>
