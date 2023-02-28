@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Dell iDRAC Fan Controller</Name>
-  <Repository>selfhosters/unRAID-CA-templates</Repository>
+  <Repository>tigerblue77/dell_idrac_fan_controller</Repository>
   <Registry>https://hub.docker.com/r/tigerblue77/dell_idrac_fan_controller/</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
-  <Support>https://hub.docker.com/r/tigerblue77/dell_idrac_fan_controller/</Support>
+  <Support>https://github.com/tigerblue77/Dell_iDRAC_fan_controller_Docker </Support>
   <Overview>https://github.com/tigerblue77/Dell_iDRAC_fan_controller_Docker&#xD;
     &#xD;
     https://hub.docker.com/r/tigerblue77/dell_idrac_fan_controller/&#xD;
