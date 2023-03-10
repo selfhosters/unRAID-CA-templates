@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>wikijs</Name>
-  <Repository>requarks/wiki:beta</Repository>
+  <Repository>requarks/wiki</Repository>
   <Registry>https://hub.docker.com/r/requarks/wiki/</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>

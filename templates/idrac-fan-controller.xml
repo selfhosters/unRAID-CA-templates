@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Dell iDRAC Fan Controller</Name>
+  <Repository>tigerblue77/dell_idrac_fan_controller</Repository>
+  <Registry>https://hub.docker.com/r/tigerblue77/dell_idrac_fan_controller/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/tigerblue77/Dell_iDRAC_fan_controller_Docker </Support>
+  <Overview>https://github.com/tigerblue77/Dell_iDRAC_fan_controller_Docker&#xD;
+    &#xD;
+    https://hub.docker.com/r/tigerblue77/dell_idrac_fan_controller/&#xD;
+    &#xD;
+    All parameters are optional as they have default values (including default iDRAC username and password).&#xD;
+    &#xD;
+    IDRAC_HOST parameter can be set to "local" or to your distant iDRAC's IP address. Default value is "local".&#xD;
+    IDRAC_USERNAME parameter is only necessary if you're adressing a distant iDRAC. Default value is "root".&#xD;
+    IDRAC_PASSWORD parameter is only necessary if you're adressing a distant iDRAC. Default value is "calvin".&#xD;
+    FAN_SPEED parameter can be set as a decimal (from 0 to 100%) or hexadecimaladecimal value (from 0x00 to 0x64) you want to set the fans to. Default value is 5(%).&#xD;
+    CPU_TEMPERATURE_TRESHOLD parameter is the T&#xB0;junction (junction temperature) threshold beyond which the Dell fan mode defined in your BIOS will become active again (to protect the server hardware against overheat). Default value is 50(&#xB0;C).&#xD;
+    CHECK_INTERVAL parameter is the time (in seconds) between each temperature check and potential profile change. Default value is 60(s).&#xD;
+    DISABLE_THIRD_PARTY_PCIE_CARD_DELL_DEFAULT_COOLING_RESPONSE parameter is a boolean that allows to disable third-party PCIe card Dell default cooling response. Default value is false.&#xD;
+    ipmi tool installation help: https://forums.unraid.net/topic/129200-plug-in-nerdtools/ for installation and check this link for missing ipmi&#xD;
+    ipmi tool can't find /dev/ipmi0?: https://serverfault.com/questions/480371/ipmitool-cant-find-dev-ipmi0-or-dev-ipmidev-0&#xD;</Overview>
+  <Config Name="IDRAC_HOST" Target="IDRAC_HOST" Default="local" Mode="" Description="IDRAC_HOST parameter can be set to local or to your distant iDRAC's IP address. Default value is local" Type="Variable" Display="always" Required="false" Mask="false">local</Config>
+  <Config Name="FAN_SPEED" Target="FAN_SPEED" Default="5" Mode="" Description="FAN_SPEED parameter can be set as a decimal (from 0 to 100%) or hexadecimaladecimal value (from 0x00 to 0x64) you want to set the fans to. Default value is 5(%)." Type="Variable" Display="always" Required="false" Mask="false">5</Config>
+  <Config Name="CPU_TEMPERATURE_TRESHOLD" Target="CPU_TEMPERATURE_TRESHOLD" Default="50" Mode="" Description="CPU_TEMPERATURE_TRESHOLD parameter is the T&#xB0;junction (junction temperature) threshold beyond which the Dell fan mode defined in your BIOS will become active again (to protect the server hardware against overheat). Default value is 50(&#xB0;C)." Type="Variable" Display="always" Required="false" Mask="false">50</Config>
+  <Config Name="CHECK_INTERVAL" Target="CHECK_INTERVAL" Default="60" Mode="" Description="CHECK_INTERVAL parameter is the time (in seconds) between each temperature check and potential profile change. Default value is 60(s).&#13;&#10;" Type="Variable" Display="always" Required="false" Mask="false">60</Config>
+  <Config Name="IDRAC_USERNAME" Target="IDRAC_USERNAME" Default="root" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">root</Config>
+  <Config Name="IDRAC_PASSWORD" Target="IDRAC_PASSWORD" Default="calvin" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">calvin</Config>
+  <Config Name="DISABLE_THIRD_PARTY_PCIE_CARD_DELL_DEFAULT_COOLING_RESPONSE" Target="DISABLE_THIRD_PARTY_PCIE_CARD_DELL_DEFAULT_COOLING_RESPONSE" Default="false" Mode="" Description="parameter is a boolean that allows to disable third-party PCIe card Dell default cooling response. Default value is false." Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="ipmi device" Target="" Default="/dev/ipmi0" Mode="" Description="Keep only if you are using a local connection and not a LAN connection. This will require your system to have ipmitool installed." Type="Device" Display="always" Required="false" Mask="false">/dev/ipmi0</Config>
+</Container>
