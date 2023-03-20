@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Companion</Name>
+  <Repository>ghcr.io/bitfocus/companion/companion:latest</Repository>
+  <Registry>https://github.com/bitfocus/companion/pkgs/container/companion%2Fcompanion</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://bitfocus.io/companion/support</Support>
+  <Project>https://bitfocus.io/companion/</Project>
+  <Overview>Official image of Bitfocus companion.&#xD;
+&#xD;
+Bitfocus Companion enables the reasonably priced Elgato Streamdeck to be a professional shotbox surface for an increasing amount of different presentation switchers, video playback software and broadcast equipment.&#xD;
+&#xD;
+You don't need an actual stream deck to use it. Companion both comes with a builtin stream deck emulator, a webpage for touch screens and the ability to trigger buttons via OSC, TCP, UDP, HTTP, WebSocket and ArtNet. It does the same job, just without the buttons.</Overview>
+  <Category>Productivity:</Category>
+  <WebUI>http://[IP]:[PORT:8000]</WebUI>
+  <Icon>https://raw.githubusercontent.com/bitfocus/companion/master/assets/icon.png</Icon>
+  <Description>Official image of Bitfocus companion.&#xD;
+&#xD;
+Bitfocus Companion enables the reasonably priced Elgato Streamdeck to be a professional shotbox surface for an increasing amount of different presentation switchers, video playback software and broadcast equipment.&#xD;
+&#xD;
+You don't need an actual stream deck to use it. Companion both comes with a builtin stream deck emulator, a webpage for touch screens and the ability to trigger buttons via OSC, TCP, UDP, HTTP, WebSocket and ArtNet. It does the same job, just without the buttons.</Description>
+  <Config Name="WebUI Port" Target="8000" Default="8000" Mode="tcp" Description="Container Port: 8000" Type="Port" Display="always" Required="false" Mask="false">8000</Config>
+  <Config Name="Config" Target="/companion/" Default="/mnt/user/appdata/companion/" Mode="rw" Description="Container Path: /companion/" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/companion/</Config>
+</Container>
