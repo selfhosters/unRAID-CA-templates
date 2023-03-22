@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>traefik</Name>
+  <Repository>traefik:latest</Repository>
+  <Registry>https://hub.docker.com/_/traefik</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview>The Cloud Native Application Proxy[br][br]&#xD;
+  Link to config and traefik files: https://github.com/priyankub/unraid-templates/tree/main/traefik&#xD;
+  [br][br]&#xD;
+  [b]Add it to your host path before starting the container. [b]</Overview>
+  <Category>Tools: Network:Management Status:Stable</Category>
+  <WebUI/>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/traefik.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/benderstwin/docker-templates/master/images/traefik.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <Config Name="HTTP" Target="80" Default="80" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false"/>
+  <Config Name="HTTPS" Target="443" Default="443" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false"/>
+  <Config Name="CF_API_EMAIL" Target="CF_API_EMAIL" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="CF_API_KEY" Target="CF_API_KEY" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="/etc/localtime" Target="/etc/localtime" Default="/etc/localtime" Mode="ro" Description="" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="/var/run/docker.sock" Target="/var/run/docker.sock" Default="/var/run/docker.sock" Mode="ro" Description="" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="/traefik.yml" Target="/traefik.yml" Default="/mnt/user/appdata/traefik/data/traefik.yml" Mode="ro" Description="" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="traefik.enable" Target="traefik.enable" Default="true" Mode="" Description="" Type="Label" Display="always" Required="false" Mask="false"/>
+  <Config Name="traefik.http.routers.traefik.entrypoints" Target="traefik.http.routers.traefik.entrypoints" Default="http" Mode="" Description="" Type="Label" Display="always" Required="false" Mask="false"/>
+  <Config Name="traefik.http.routers.traefik.rule" Target="traefik.http.routers.traefik.rule" Default="Host(`traefik-dashboard.example.com`)" Mode="" Description="" Type="Label" Display="always" Required="false" Mask="false"/>
+  <Config Name="traefik.http.routers.traefik.middlewares" Target="traefik.http.routers.traefik.middlewares" Default="traefik-https-redirect" Mode="" Description="" Type="Label" Display="always" Required="false" Mask="false"/>
+  <Config Name="traefik.http.routers.traefik-secure.entrypoints" Target="traefik.http.routers.traefik-secure.entrypoints" Default="https" Mode="" Description="" Type="Label" Display="always" Required="false" Mask="false"/>
+  <Config Name="traefik.http.routers.traefik-secure.rule" Target="traefik.http.routers.traefik-secure.rule" Default="Host(`traefik-dashboard.local.example.com`)" Mode="" Description="" Type="Label" Display="always" Required="false" Mask="false"/>
+  <Config Name="traefik.http.routers.traefik-secure.tls" Target="traefik.http.routers.traefik-secure.tls" Default="true" Mode="" Description="" Type="Label" Display="always" Required="false" Mask="false"/>
+  <Config Name="traefik.http.routers.traefik-secure.tls.certresolver" Target="traefik.http.routers.traefik-secure.tls.certresolver" Default="cloudflare" Mode="" Description="" Type="Label" Display="always" Required="false" Mask="false"/>
+  <Config Name="traefik.http.routers.traefik-secure.tls.domains[0].main" Target="traefik.http.routers.traefik-secure.tls.domains[0].main" Default="local.example.com" Mode="" Description="" Type="Label" Display="always" Required="false" Mask="false"/>
+  <Config Name="traefik.http.routers.traefik-secure.tls.domains[0].sans" Target="traefik.http.routers.traefik-secure.tls.domains[0].sans" Default="*.local.example.com" Mode="" Description="" Type="Label" Display="always" Required="false" Mask="false"/>
+  <Config Name="traefik.http.routers.traefik-secure.service" Target="traefik.http.routers.traefik-secure.service" Default="api@internal" Mode="" Description="" Type="Label" Display="always" Required="false" Mask="false"/>
+  <Config Name="config.yml" Target="/config.yml" Default="/mnt/user/appdata/traefik/data/config.yml" Mode="ro" Description="" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="acme.json" Target="/acme.json" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="traefik.http.routers.traefik-secure.tls.domains[1].main" Target="traefik.http.routers.traefik-secure.tls.domains[1].main" Default="" Mode="" Description="" Type="Label" Display="always" Required="false" Mask="false"/>
+  <Config Name="traefik.http.routers.traefik-secure.tls.domains[1].sans" Target="traefik.http.routers.traefik-secure.tls.domains[1].sans" Default="*.example.com" Mode="" Description="" Type="Label" Display="always" Required="false" Mask="false"/>
+  <Config Name="log" Target="/var/log" Default="/mnt/user/appdata/traefik/log" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="CF_DNS_API_TOKEN" Target="CF_DNS_API_TOKEN" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="CF_ZONE_API_TOKEN" Target="CF_ZONE_API_TOKEN" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="traefik.http.routers.traefik-secure.middlewares" Target="traefik.http.routers.traefik-secure.middlewares" Default="https-redirect@file, default-headers@file, forward-auth" Mode="" Description="" Type="Label" Display="always" Required="false" Mask="false"/>
+  <Config Name="UDP" Target="61542" Default="" Mode="udp" Description="" Type="Port" Display="always" Required="false" Mask="false"/>
+</Container>

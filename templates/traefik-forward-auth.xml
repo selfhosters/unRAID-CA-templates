@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>traefik-forward-auth</Name>
+  <Repository>thomseddon/traefik-forward-auth</Repository>
+  <Registry/>
+  <Network>reverse_proxy</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview>This is supposed to be used alongwith Traefik. The default settings and default options template will help one set this up with Gmail login auth.&#xD;
+  [br][br]&#xD;
+  Default options.conf file can be found here - https://github.com/priyankub/unraid-templates/blob/main/traefik/traefik-forward-auth/options.conf&#xD;
+  Ensure you mimic the directory hierarchy in the example at https://github.com/priyankub/unraid-templates/tree/main/traefik&#xD;
+  Complete instructions can be found at https://github.com/thomseddon/traefik-forward-auth</Overview>
+  <Category>Tools: Network:Management Status:Stable</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon/>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="traefik.enable" Target="traefik.enable" Default="true" Mode="" Description="" Type="Label" Display="always" Required="false" Mask="false"/>
+  <Config Name="traefik.http.routers.auth.entrypoints" Target="traefik.http.routers.auth.entrypoints" Default="http, https" Mode="" Description="" Type="Label" Display="always" Required="false" Mask="false"/>
+  <Config Name="traefik.http.routers.auth.rule" Target="traefik.http.routers.auth.rule" Default="Host(`auth.example.com`) || (Host(`example.com`) &amp;&amp; PathPrefix(`/login`)) || Host(`auth.example2.com`) || (Host(`example2.com`) &amp;&amp; PathPrefix(`/login`)) || (Host(`example2.com`) &amp;&amp; PathPrefix(`/_oauth`))" Mode="" Description="" Type="Label" Display="always" Required="false" Mask="false"/>
+  <Config Name="traefik.http.routers.auth.tls" Target="traefik.http.routers.auth.tls" Default="true" Mode="" Description="" Type="Label" Display="always" Required="false" Mask="false"/>
+  <Config Name="traefik.http.routers.auth.service" Target="traefik.http.routers.auth.service" Default="auth-service" Mode="" Description="" Type="Label" Display="always" Required="false" Mask="false"/>
+  <Config Name="traefik.http.services.auth-service.loadbalancer.server.port" Target="traefik.http.services.auth-service.loadbalancer.server.port" Default="4181" Mode="" Description="" Type="Label" Display="always" Required="false" Mask="false"/>
+  <Config Name="traefik.docker.network" Target="traefik.docker.network" Default="reverse_proxy" Mode="" Description="" Type="Label" Display="always" Required="false" Mask="false"/>
+  <Config Name="traefik.http.routers.auth.middlewares" Target="traefik.http.routers.auth.middlewares" Default="https-redirect@file, forward-auth" Mode="" Description="" Type="Label" Display="always" Required="false" Mask="false"/>
+  <Config Name="traefik.http.middlewares.forward-auth.forwardauth.trustForwardHeader" Target="traefik.http.middlewares.forward-auth.forwardauth.trustForwardHeader" Default="true" Mode="" Description="" Type="Label" Display="always" Required="false" Mask="false"/>
+  <Config Name="traefik.http.middlewares.forward-auth.forwardauth.authResponseHeaders" Target="traefik.http.middlewares.forward-auth.forwardauth.authResponseHeaders" Default="X-Forwarded-User" Mode="" Description="" Type="Label" Display="always" Required="false" Mask="false"/>
+  <Config Name="Data" Target="/data" Default="/mnt/user/appdata/traefik/traefik-forward-auth/" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="traefik.http.routers.auth.tls.options" Target="traefik.http.routers.auth.tls.options" Default="default" Mode="" Description="" Type="Label" Display="always" Required="false" Mask="false"/>
+  <Config Name="traefik.http.middlewares.forward-auth.forwardauth.address" Target="traefik.http.middlewares.forward-auth.forwardauth.address" Default="http://traefik-forward-auth:4181" Mode="" Description="" Type="Label" Display="always" Required="false" Mask="false"/>
+  <Config Name="CONFIG" Target="CONFIG" Default="/data/options.conf" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="traefik.http.routers.auth-logout.entrypoints" Target="traefik.http.routers.auth-logout.entrypoints" Default="https" Mode="" Description="" Type="Label" Display="always" Required="false" Mask="false"/>
+  <Config Name="traefik.http.routers.auth-logout.rule" Target="traefik.http.routers.auth-logout.rule" Default="(Host(`auth.example.com`) &amp;&amp; PathPrefix(`/logout`)) || (Host(`example.com`) &amp;&amp; PathPrefix(`/logout`)) || (Host(`auth.example2.com`) &amp;&amp; PathPrefix(`/logout`)) || (Host(`example2.com`) &amp;&amp; PathPrefix(`/logout`))" Mode="" Description="" Type="Label" Display="always" Required="false" Mask="false"/>
+  <Config Name="traefik.http.routers.auth-logout.tls" Target="traefik.http.routers.auth-logout.tls" Default="true" Mode="" Description="" Type="Label" Display="always" Required="false" Mask="false"/>
+  <Config Name="traefik.http.routers.auth-logout.service" Target="traefik.http.routers.auth-logout.service" Default="auth-service" Mode="" Description="" Type="Label" Display="always" Required="false" Mask="false"/>
+  <Config Name="traefik.http.routers.auth-logout.middlewares" Target="traefik.http.routers.auth-logout.middlewares" Default="https-redirect@file, auth-logout" Mode="" Description="" Type="Label" Display="always" Required="false" Mask="false"/>
+  <Config Name="traefik.http.routers.auth-logout.tls.options" Target="traefik.http.routers.auth-logout.tls.options" Default="default" Mode="" Description="" Type="Label" Display="always" Required="false" Mask="false"/>
+  <Config Name="traefik.http.middlewares.auth-logout.addPrefix.prefix" Target="traefik.http.middlewares.auth-logout.addPrefix.prefix" Default="/_oauth" Mode="" Description="" Type="Label" Display="always" Required="false" Mask="false"/>
+</Container>
