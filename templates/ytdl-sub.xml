@@ -15,7 +15,7 @@ Please take your time to go through the walkthrough&#xD;
 &#xD;
 https://github.com/jmbannon/ytdl-sub/wiki</Overview>
   <Category>Downloaders: MediaApp:Video</Category>
- <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/ytdl-sub<TemplateURL/>
+ <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/ytdl-sub.xml<TemplateURL/>
   <Icon/>
   <ExtraParams/>
   <PostArgs/>
