@@ -1,5 +1,5 @@
 ---
-name: CA Teplate Fix
+name: CA Template Fix
 about: For issuing a fix for a template
 title: Template Fix Request - <application name>
 labels: Broken Template
@@ -16,6 +16,6 @@ assignees: ''
 
 ### Description of your *pull request* and other information
 
-Help us investiagate this bug, link the discovery for the issue(like a forum post).
+Help us investigate this bug, link the discovery for the issue (like a forum post).
 
-If there is currently a open issue regarding this issue, please link this here.
+If there is currently an open issue regarding this issue, please link this here.
