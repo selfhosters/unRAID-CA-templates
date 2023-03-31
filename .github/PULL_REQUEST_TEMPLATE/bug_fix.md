@@ -9,7 +9,7 @@ assignees: ''
 
 ### Before submitting a *pull request* make sure you have
 
-- [ ] Checked that there is no [opene issue](https://github.com/selfhosters/unRAID-CA-templates/issues?q=is%3Aissue+is%3Aopen).
+- [ ] Checked that there is no [open issue](https://github.com/selfhosters/unRAID-CA-templates/issues?q=is%3Aissue+is%3Aopen).
 - [ ] A member from [Templaters team](https://github.com/orgs/selfhosters/teams/templaters/members) has not acknowledged this issue elsewhere.
 
 ---
