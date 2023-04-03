@@ -17,4 +17,4 @@ assignees: 'Templaters'
 
 Give a short description of this software
 
-If there is currently a [open issue](https://github.com/selfhosters/unRAID-CA-templates/issues?q=is%3Aopen+is%3Aissue+label%3A%22Template+Request%22) regarding this software, please link this here.
+If there is currently an [open issue](https://github.com/selfhosters/unRAID-CA-templates/issues?q=is%3Aopen+is%3Aissue+label%3A%22Template+Request%22) regarding this software, please link this here.
