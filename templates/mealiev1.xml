@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>Mealie V1</Name>
+  <Name>mealiev1</Name>
   <Repository>hkotel/mealie:omni-nightly</Repository>
   <Registry>https://hub.docker.com/r/hkotel/mealie/</Registry>
   <Network>bridge</Network>
@@ -11,49 +11,26 @@
   <Project>https://hay-kot.github.io/mealie/</Project>
   <Overview>A self-hosted recipe manager and meal planner with a RestAPI backend and a reactive frontend application built in Vue for a pleasant user experience for the whole family. &#xD;
 &#xD;
-Please read https://hay-kot.github.io/mealie/documentation/getting-started/updating/ Before updating from pre version !!
- &#xD;
 &#xD;
 This is the nightly Omni Package for Version1 &#xD;
-&#xD;
-Please read https://hay-kot.github.io/mealie/documentation/getting-started/updating/ &#xD;
-Before updating&#xD;
+Please read https://hay-kot.github.io/mealie/documentation/getting-started/updating/  before updating from earlier versions&#xD;
 </Overview>
   <Category>Productivity:</Category>
   <WebUI>http://[IP]:[PORT:80]</WebUI>
- <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/<container-name>.xml<TemplateURL/>
-  <Icon>https://cdn.statically.io/gh/KakersUK/docker-templates/master/KakersUK/images/Mealie.png</Icon>
-  <Config Name="Container Path 1" Target="/app/data" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/mealieV1/</Config>
-  <Config Name="WebUI Port" Target="80" Default="9925" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">9925</Config>
-  <Config Name="DEFAULT_EMAIL" Target="DEFAULT_EMAIL" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">changethisemail@gmail.com</Config>
-  <Config Name="SMTP_HOST" Target="SMTP_HOST" Default="" Mode="" Description="Put your SMTP Host, I.E. &#13;&#10;smtp.gmail.com" Type="Variable" Display="always" Required="true" Mask="false">smtp.gmail.com</Config>
-  <Config Name="SMTP_PORT" Target="SMTP_PORT" Default="" Mode="" Description="Put your SMTP port &#13;&#10;I.E. 587" Type="Variable" Display="always" Required="true" Mask="false">587</Config>
-  <Config Name="SMTP_FROM_EMAIL" Target="SMTP_FROM_EMAIL" Default="" Mode="" Description="Put the from email:&#13;&#10;I.E. changethisemail@gmail.com" Type="Variable" Display="always" Required="true" Mask="false">changethisemail@gmail.com</Config>
-  <Config Name=" SMTP_USER" Target=" SMTP_USER" Default="" Mode="" Description="Add your username, likely same as the email I.E.&#13;&#10;changethisemail@gmail.com" Type="Variable" Display="always" Required="true" Mask="false">changethisemail@gmail.com</Config>
-  <Config Name="SMTP_PASSWORD" Target="SMTP_PASSWORD" Default="" Mode="" Description="Put the password for the SMTP server. You likely need to create an " Type="Variable" Display="always" Required="true" Mask="true">putapppasswordhere</Config>
-  <Config Name="BASE_URL" Target="BASE_URL" Default="" Mode="" Description="Edit and put with your domain. I.E.&#13;&#10;https://mealie.yourdomainhere.com" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="Container Variable 12" Target="PIP_DISABLE_PIP_VERSION_CHECK" Default="1" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="false" Mask="false">1</Config>
-  <Config Name="Container Variable 13" Target="PIP_DEFAULT_TIMEOUT" Default="100" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="false" Mask="false">100</Config>
-  <Config Name="Container Variable 17" Target="PYSETUP_PATH" Default="/opt/pysetup" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="false" Mask="false">/opt/pysetup</Config>
-  <Config Name="Container Variable 15" Target="POETRY_VIRTUALENVS_IN_PROJECT" Default="1" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="false" Mask="false">1</Config>
-  <Config Name="Container Variable 16" Target="POETRY_NO_INTERACTION" Default="1" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="false" Mask="false">1</Config>
-  <Config Name="Container Variable 18" Target="VENV_PATH" Default="/opt/pysetup/.venv" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="false" Mask="false">/opt/pysetup/.venv</Config>
-  <Config Name="Container Variable 6" Target="PYTHON_GET_PIP_URL" Default="https://github.com/pypa/get-pip/raw/3cb8888cc2869620f57d5d2da64da38f516078c7/public/get-pip.py" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="false" Mask="false">https://github.com/pypa/get-pip/raw/3cb8888cc2869620f57d5d2da64da38f516078c7/public/get-pip.py</Config>
-  <Config Name="Container Variable 8" Target="MEALIE_HOME" Default="/app" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="false" Mask="false">/app</Config>
-  <Config Name="Container Variable 9" Target="PYTHONUNBUFFERED" Default="1" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="false" Mask="false">1</Config>
-  <Config Name="Container Variable 14" Target="POETRY_HOME" Default="/opt/poetry" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="false" Mask="false">/opt/poetry</Config>
-  <Config Name="Container Variable 19" Target="PRODUCTION" Default="1" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="false" Mask="false">1</Config>
-  <Config Name="Container Variable 3" Target="PYTHON_VERSION" Default="3.9.10" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="false" Mask="false">3.9.10</Config>
-  <Config Name="Container Variable 2" Target="GPG_KEY" Default="E3FF2839C048B25C084DEBE9B26995E310250568" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="false" Mask="false">E3FF2839C048B25C084DEBE9B26995E310250568</Config>
-  <Config Name="Container Variable 5" Target="PYTHON_SETUPTOOLS_VERSION" Default="58.1.0" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="false" Mask="false">58.1.0</Config>
-  <Config Name="Container Variable 1" Target="LANG" Default="C.UTF-8" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="false" Mask="false">C.UTF-8</Config>
-  <Config Name="Container Variable 7" Target="PYTHON_GET_PIP_SHA256" Default="c518250e91a70d7b20cceb15272209a4ded2a0c263ae5776f129e0d9b5674309" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="false" Mask="false">c518250e91a70d7b20cceb15272209a4ded2a0c263ae5776f129e0d9b5674309</Config>
-  <Config Name="Container Variable 4" Target="PYTHON_PIP_VERSION" Default="21.2.4" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="false" Mask="false">21.2.4</Config>
-  <Config Name="Container Variable 10" Target="PYTHONDONTWRITEBYTECODE" Default="1" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="false" Mask="false">1</Config>
-  <Config Name="PUID" Target="99" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="false" Mask="false">99</Config>
-  <Config Name="PGUID" Target="PGUID" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
-  <Config Name=" WEB_CONCURRENCY" Target=" WEB_CONCURRENCY" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="false" Mask="false">1</Config>
-  <Config Name="MAX_WORKERS" Target="MAX_WORKERS" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">1</Config>
-  <Config Name="TZ=America/New_York" Target="TZ" Default="" Mode="" Description="" Type="Label" Display="advanced-hide" Required="true" Mask="false">America/New_York</Config>
-  <Config Name="ALLOW_SIGNUP" Target="ALLOW_SIGNUP" Default="" Mode="" Description="Leave this alone" Type="Variable" Display="advanced-hide" Required="true" Mask="false">false</Config>
+ <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/mealiev1.xml<TemplateURL/>
+  <Icon>https://hay-kot.github.io/mealie/assets/img/favicon.png</Icon>
+  <Config Name="Front End Port" Target="3000" Default="3000" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">9925</Config>
+  <Config Name="Host Path 1" Target="/app/data" Default="/mnt/user/appdata/mealiev1" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/mealiev1</Config>
+  <Config Name="API Port" Target="9000" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">9000</Config>
+  <Config Name="ALLOW_SIGNUP" Target="ALLOW_SIGNUP" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="DEFAULT_EMAIL" Target="DEFAULT_EMAIL" Default="" Mode="" Description="Put the default email here." Type="Variable" Display="always" Required="true" Mask="false">changeme@gmail.com</Config>
+  <Config Name="SMTP_HOST" Target="SMTP_HOST" Default="" Mode="" Description="Change to suit your SMTP Host" Type="Variable" Display="always" Required="false" Mask="false">smtp.gmail.com</Config>
+  <Config Name="SMTP_USER" Target="SMTP_USER" Default="" Mode="" Description="Put the SMTP user here. &#13;&#10;Usually your email" Type="Variable" Display="always" Required="true" Mask="false">changeme@gmail.com</Config>
+  <Config Name="SMTP_PASSWORD" Target="SMTP_PASSWORD" Default="" Mode="" Description="Put your SMTP Password:&#13;&#10;Likely you will need a specific app password" Type="Variable" Display="always" Required="true" Mask="false">******</Config>
+  <Config Name="SMTP_PORT" Target="SMTP_PORT" Default="" Mode="" Description="Put the SMTP Port here" Type="Variable" Display="always" Required="true" Mask="false">587</Config>
+  <Config Name="MAX_WORKERS" Target="MAX_WORKERS" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">1</Config>
+  <Config Name="PUID" Target="PUID" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
+  <Config Name="Time Zone" Target="TZ=America" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">New_York</Config>
+  <Config Name="WEB_CONCURRENCY" Target="WEB_CONCURRENCY" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">1</Config>
 </Container>
