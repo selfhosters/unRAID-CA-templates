@@ -17,7 +17,7 @@ https://github.com/jmbannon/ytdl-sub/wiki</Overview>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/ytdl-sub.xml</TemplateURL>
   <Icon/>
   <Config Name="tmp" Target="/tmp" Default="" Mode="rw" Description="It is a temp folder, obviously this is for permanent files." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/media/temp/</Config>
-  <Config Name="Media" Target="/media" Default="" Mode="rw" Description="Where you store your media, duh" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/mediia</Config>
+  <Config Name="Media" Target="/media" Default="" Mode="rw" Description="Where you store your media, duh" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/media</Config>
   <Config Name="config" Target="/config" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata</Config>
   <Config Name="PUID" Target="PUID" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
   <Config Name="PGID" Target="PGID" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
