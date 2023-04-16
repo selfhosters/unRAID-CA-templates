@@ -16,8 +16,13 @@ This is the nightly Omni Package for Version1 &#xD;
 Please read https://hay-kot.github.io/mealie/documentation/getting-started/updating/  before updating from earlier versions&#xD;
 </Overview>
   <Category>Productivity:</Category>
+<<<<<<< Updated upstream
   <WebUI>http://[IP]:[PORT:80]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/mealiev1.xml</TemplateURL>
+=======
+  <WebUI>http://[IP]:[PORT:9925]</WebUI>
+ <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/mealiev1.xml<TemplateURL/>
+>>>>>>> Stashed changes
   <Icon>https://hay-kot.github.io/mealie/assets/img/favicon.png</Icon>
   <Config Name="Front End Port" Target="3000" Default="3000" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">9925</Config>
   <Config Name="Host Path 1" Target="/app/data" Default="/mnt/user/appdata/mealiev1" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/mealiev1</Config>
