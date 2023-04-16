@@ -20,14 +20,16 @@ Please read https://hay-kot.github.io/mealie/documentation/getting-started/updat
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/mealiev1.xml</TemplateURL>
   <Icon>https://hay-kot.github.io/mealie/assets/img/favicon.png</Icon>
   <Config Name="Front End Port" Target="3000" Default="3000" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">9925</Config>
-  <Config Name="Host Path 1" Target="/app/data" Default="/mnt/user/appdata/mealiev1" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/mealiev1</Config>
+  <Config Name="App Data" Target="/app/data" Default="/mnt/user/appdata/mealiev1" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/mealiev1</Config>
   <Config Name="API Port" Target="9000" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">9000</Config>
   <Config Name="ALLOW_SIGNUP" Target="ALLOW_SIGNUP" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
-  <Config Name="DEFAULT_EMAIL" Target="DEFAULT_EMAIL" Default="" Mode="" Description="Put the default email here." Type="Variable" Display="always" Required="true" Mask="false">changeme@gmail.com</Config>
-  <Config Name="SMTP_HOST" Target="SMTP_HOST" Default="" Mode="" Description="Change to suit your SMTP Host" Type="Variable" Display="always" Required="false" Mask="false">smtp.gmail.com</Config>
+  <Config Name="DEFAULT_EMAIL" Target="DEFAULT_EMAIL" Default="" Mode="" Description="This email will be your username" Type="Variable" Display="always" Required="true" Mask="false">changeme@gmail.com</Config>
+  <Config Name="SMTP_FROM_EMAIL" Target="SMTP_FROM_EMAIL" Default="" Mode="" Description="This is required to send emails and reset initial passowrd" Type="Variable" Display="always" Required="true" Mask="false">changeme@gmail.com</Config>
+  <Config Name="SMTP_HOST" Target="SMTP_HOST" Default="" Mode="" Description="Change to suit your SMTP Host" Type="Variable" Display="always" Required="true" Mask="false">smtp.gmail.com</Config>
   <Config Name="SMTP_USER" Target="SMTP_USER" Default="" Mode="" Description="Put the SMTP user here. &#13;&#10;Usually your email" Type="Variable" Display="always" Required="true" Mask="false">changeme@gmail.com</Config>
   <Config Name="SMTP_PASSWORD" Target="SMTP_PASSWORD" Default="" Mode="" Description="Put your SMTP Password:&#13;&#10;Likely you will need a specific app password" Type="Variable" Display="always" Required="true" Mask="false">******</Config>
   <Config Name="SMTP_PORT" Target="SMTP_PORT" Default="" Mode="" Description="Put the SMTP Port here" Type="Variable" Display="always" Required="true" Mask="false">587</Config>
+  <Config Name="DEFAULT_GROUP" Target="DEFAULT_GROUP" Default="home" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">home</Config>
   <Config Name="MAX_WORKERS" Target="MAX_WORKERS" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">1</Config>
   <Config Name="PUID" Target="PUID" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
   <Config Name="PGID" Target="PGID" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
