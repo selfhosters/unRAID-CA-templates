@@ -16,7 +16,7 @@ This is the nightly Omni Package for Version1 &#xD;
 Please read https://hay-kot.github.io/mealie/documentation/getting-started/updating/  before updating from earlier versions&#xD;
 </Overview>
   <Category>Productivity:</Category>
-  <WebUI>http://[IP]:[PORT:9925]</WebUI>
+  <WebUI>http://[IP]:[PORT:3000]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/mealiev1.xml</TemplateURL>
   <Icon>https://hay-kot.github.io/mealie/assets/img/favicon.png</Icon>
   <Config Name="Front End Port" Target="3000" Default="3000" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">9925</Config>
