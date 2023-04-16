@@ -20,9 +20,9 @@ Please read https://hay-kot.github.io/mealie/documentation/getting-started/updat
   <WebUI>http://[IP]:[PORT:3000]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/mealiev1.xml</TemplateURL>
   <Icon>https://hay-kot.github.io/mealie/assets/img/favicon.png</Icon>
-  <Config Name="Front End Port" Target="3000" Default="3000" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">8925</Config>
+  <Config Name="Front End Port" Target="3000" Default="3000" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false"></Config>
   <Config Name="App Data" Target="/app/data" Default="/mnt/user/appdata/mealiev1" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/mealiev1</Config>
-  <Config Name="API Port" Target="9000" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">9000</Config>
+  <Config Name="API Port" Target="9000" Default="" Mode="tcp" Description="" Type="Port" Display="advanced" Required="true" Mask="false">9000</Config>
   <Config Name="ALLOW_SIGNUP" Target="ALLOW_SIGNUP" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
   <Config Name="DEFAULT_EMAIL" Target="DEFAULT_EMAIL" Default="" Mode="" Description="This email will be your username" Type="Variable" Display="always" Required="true" Mask="false">changeme@email.com</Config>
   <Config Name="SMTP_FROM_EMAIL" Target="SMTP_FROM_EMAIL" Default="" Mode="" Description="This is required to send emails and reset initial passowrd" Type="Variable" Display="always" Required="true" Mask="false">changeme@gmail.com</Config>
