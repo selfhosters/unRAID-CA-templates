@@ -20,7 +20,7 @@ Please read https://hay-kot.github.io/mealie/documentation/getting-started/updat
   <WebUI>http://[IP]:[PORT:3000]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/mealiev1.xml</TemplateURL>
   <Icon>https://hay-kot.github.io/mealie/assets/img/favicon.png</Icon>
-  <Config Name="Front End Port" Target="3000" Default="3000" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">9925</Config>
+  <Config Name="Front End Port" Target="3000" Default="3000" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">8925</Config>
   <Config Name="App Data" Target="/app/data" Default="/mnt/user/appdata/mealiev1" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/mealiev1</Config>
   <Config Name="API Port" Target="9000" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">9000</Config>
   <Config Name="ALLOW_SIGNUP" Target="ALLOW_SIGNUP" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
