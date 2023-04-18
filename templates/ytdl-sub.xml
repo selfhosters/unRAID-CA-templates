@@ -5,7 +5,7 @@
   <Registry>ghcr.io/jmbannon/ytdl-sub:latest</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
-  <Support>https://github.com/jmbannon/ytdl-sub/wiki</Support>
+  <Support>https://forums.unraid.net/topic/138060-support-catudck-ytdl-sub-youtube-downloading-with-meta-data-for-plexkodijellyfin/</Support>
   <Project>https://github.com/jmbannon/ytdl-sub</Project>
   <Overview>Automate downloads and metadata generation with YoutubeDL&#xD;
 &#xD;
