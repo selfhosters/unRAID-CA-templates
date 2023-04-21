@@ -5,7 +5,7 @@
   <Registry>ghcr.io/jmbannon/ytdl-sub:latest</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
-  <Support>https://forums.unraid.net/topic/138060-support-catudck-ytdl-sub-youtube-downloading-with-meta-data-for-plexkodijellyfin/</Support>
+  <Support>https://forums.unraid.net/topic/138060-support-catduck-ytdl-sub-youtube-downloading-with-meta-data-for-plexkodijellyfin/</Support>
   <Project>https://github.com/jmbannon/ytdl-sub</Project>
   <Overview>Automate downloads and metadata generation with YoutubeDL&#xD;
 &#xD;
@@ -15,7 +15,7 @@ Please take your time to go through the walkthrough&#xD;
 https://github.com/jmbannon/ytdl-sub/wiki</Overview>
   <Category>Downloaders: MediaApp:Video</Category>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/ytdl-sub.xml</TemplateURL>
-  <Icon/>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/ytdl-sub.png</Icon>
   <Config Name="tmp" Target="/tmp" Default="" Mode="rw" Description="It is a temp folder, obviously this is for permanent files." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/media/temp/</Config>
   <Config Name="Media" Target="/media" Default="" Mode="rw" Description="Where you store your media, duh" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/media</Config>
   <Config Name="config" Target="/config" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata</Config>

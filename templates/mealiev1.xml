@@ -7,7 +7,7 @@
   <Shell>sh</Shell>
   <Beta>true</Beta>
   <Privileged>false</Privileged>
-  <Support>https://forums.unraid.net/topic/138058-support-catuck-mealie-v1/</Support>
+  <Support>https://forums.unraid.net/topic/138058-support-catduck-mealie-v1/</Support>
   <Project>https://hay-kot.github.io/mealie/</Project>
   <Overview>A self-hosted recipe manager and meal planner with a RestAPI backend and a reactive frontend application built in Vue for a pleasant user experience for the whole family. &#xD;
 &#xD;
