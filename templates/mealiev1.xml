@@ -30,6 +30,7 @@ Please read https://hay-kot.github.io/mealie/documentation/getting-started/updat
   <Config Name="SMTP_USER" Target="SMTP_USER" Default="" Mode="" Description="Put the SMTP user here. &#13;&#10;Usually your email" Type="Variable" Display="always" Required="true" Mask="false">changeme@email.com</Config>
   <Config Name="SMTP_PASSWORD" Target="SMTP_PASSWORD" Default="" Mode="" Description="Put your SMTP Password:&#13;&#10;Likely you will need a specific app password" Type="Variable" Display="always" Required="true" Mask="false">******</Config>
   <Config Name="SMTP_PORT" Target="SMTP_PORT" Default="" Mode="" Description="Put the SMTP Port here" Type="Variable" Display="always" Required="true" Mask="false">587</Config>
+  <Config Name="BASE_URL" Target="BASE_URL" Default="" Mode="" Description="Enter your domain, such as reseverse proxy here" Type="Variable" Display="always" Required="true" Mask="false">https://mydomain.net</Config>
   <Config Name="DEFAULT_GROUP" Target="DEFAULT_GROUP" Default="home" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">home</Config>
   <Config Name="MAX_WORKERS" Target="MAX_WORKERS" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">1</Config>
   <Config Name="PUID" Target="PUID" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
