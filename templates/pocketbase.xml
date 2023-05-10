@@ -31,9 +31,6 @@ http:/{UnraidServerIP}/:{Port}/api/</Overview>
   <WebUI>http://[IP]:[PORT:8080]/_/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/pocketbase.xml</TemplateURL>
   <Icon>https://github.com/pocketbase/pocketbase/blob/master/ui/public/images/favicon/mstile-144x144.png</Icon>
-  <Config Name="PUID" Target="PUID" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
-  <Config Name="PGID" Target="PGID" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
-  <Config Name="UMASK" Target="UMASK" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">002</Config>
   <Config Name="Port" Target="8080" Default="8080" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">8080</Config>
   <Config Name="Pocketbase Public Data" Target="/pb/pb_public" Default="/mnt/user/appdata/pocketbase/pb_public" Mode="rw" Description="WARNING: if pb_public directory exists, serves the static content from it (html, css, images, etc.)" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/pocketbase/pb_public</Config>
   <Config Name="Pocketbase Encryption Key" Target="ENCRYPTION_KEY" Default="" Mode="" Description="By default, PocketBase stores the applications settings in the database as plain JSON text, including the secret keys for the OAuth2 clients and the SMTP password.&#13;&#10;&#13;&#10;While this is not a security issue on its own (PocketBase applications live entirely on a single server and its expected only authorized users to have access to your server and application data), in some situations it may be a good idea to store the settings encrypted in case someone get their hands on your database file (eg. from an external stored backup)." Type="Variable" Display="always" Required="false" Mask="false"/>
