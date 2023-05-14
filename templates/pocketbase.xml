@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Pocketbase</Name>
+  <Repository>lukehagar/pocketbase</Repository>
+  <Registry>https://hub.docker.com/r/lukehagar/pocketbase</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/139061-support-blindkitty38-pocketbase/</Support>
+  <Project>https://pocketbase.io</Project>
+  <Overview>Open Source backend for your next SaaS and Mobile app in 1 file&#xD;
+&#xD;
+Pocketbase docs:&#xD;
+&#xD;
+https://pocketbase.io/docs/&#xD;
+&#xD;
+&#xD;
+SDKs:&#xD;
+&#xD;
+Dart - https://github.com/pocketbase/dart-sdk&#xD;
+JavaScript - https://github.com/pocketbase/js-sdk&#xD;
+&#xD;
+&#xD;
+On the first launch, navigate to the Web UI, which I have configured as the admin interface, and it will prompt you to create the first admin account.&#xD;
+&#xD;
+Admin UI: &#xD;
+http:/{UnraidServerIP}/:{Port}/_/&#xD;
+&#xD;
+API: &#xD;
+http:/{UnraidServerIP}/:{Port}/api/</Overview>
+  <Category>Other: Status:Beta</Category>
+  <WebUI>http://[IP]:[PORT:8080]/_/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/pocketbase.xml</TemplateURL>
+  <Icon>https://github.com/pocketbase/pocketbase/blob/master/ui/public/images/favicon/mstile-144x144.png</Icon>
+  <Config Name="Port" Target="8080" Default="8080" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">8080</Config>
+  <Config Name="Pocketbase Public Data" Target="/pb/pb_public" Default="/mnt/user/appdata/pocketbase/pb_public" Mode="rw" Description="WARNING: if pb_public directory exists, serves the static content from it (html, css, images, etc.)" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/pocketbase/pb_public</Config>
+  <Config Name="Pocketbase Encryption Key" Target="ENCRYPTION_KEY" Default="" Mode="" Description="By default, PocketBase stores the applications settings in the database as plain JSON text, including the secret keys for the OAuth2 clients and the SMTP password.&#13;&#10;&#13;&#10;While this is not a security issue on its own (PocketBase applications live entirely on a single server and its expected only authorized users to have access to your server and application data), in some situations it may be a good idea to store the settings encrypted in case someone get their hands on your database file (eg. from an external stored backup)." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Pocketbase Application Data" Target="/pb/pb_data" Default="/mnt/user/appdata/pocketbase/pb_data" Mode="rw" Description="pb_data - stores your application data, uploaded files, etc" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/pocketbase/pb_data</Config>
+</Container>
