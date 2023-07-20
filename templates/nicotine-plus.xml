@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>nicotine-plus</Name>
+  <Repository>ghcr.io/fletchto99/nicotine-plus-docker:latest</Repository>
+  <Registry>https://github.com/fletchto99/nicotine-plus-docker/pkgs/container/nicotine-plus-docker</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/fletchto99/nicotine-plus-docker/issues</Support>
+  <Project>https://github.com/fletchto99/nicotine-plus-docker</Project>
+  <Overview>
+Nicotine plus running in KasmVNC based off of linuxserver's KASMVNC docker image.
+  </Overview>
+  <Category>Downloaders:</Category>
+  <WebUI>http://[IP]:[PORT:6080]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/nicotine-plus.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/nicotine-plus.png</Icon>
+  <Config Name="WebUI" Target="6080" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">6080</Config>
+  <Config Name="P2P Port" Target="" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">63807</Config>
+  <Config Name="P2P Port Backup" Target="" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">63808</Config>
+  <Config Name="Appdata" Target="/data/.config" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/nicotine-plus</Config>
+  <Config Name="Complete Downloads" Target="/data/downloads/completed" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Complete Downloads" Target="/data/downloads/incomplete" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Share" Target="/data/share" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false"></Config>
+</Container>
