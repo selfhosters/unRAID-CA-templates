@@ -24,5 +24,5 @@ Nicotine plus running in KasmVNC based off of linuxserver's KASMVNC docker image
   <Config Name="Complete Downloads" Target="/data/downloads/completed" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false"></Config>
   <Config Name="Complete Downloads" Target="/data/downloads/incomplete" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false"></Config>
   <Config Name="Share" Target="/data/share" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Appdata" Target="/data/.config" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/nicotine-plus</Config>
+  <Config Name="Appdata" Target="/config/" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/nicotine-plus</Config>
 </Container>
