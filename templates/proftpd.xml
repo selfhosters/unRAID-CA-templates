@@ -26,7 +26,7 @@
   <Config Name="FTP_DB_HOST" Target="FTP_DB_HOST" Default="localhost" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Config Name="FTP_DB_NAME" Target="FTP_DB_NAME" Default="proftpd" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Config Name="MASQ_ADDR" Target="MASQ_ADDR" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="PWD_SALT" Target="PWD_SALT" Default="DockerCrypt" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">SomeCryptPass</Config>
+  <Config Name="PWD_SALT" Target="PWD_SALT" Default="SomeCryptPass" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">SomeCryptPass</Config>
   <Config Name="MOD_VROOT" Target="MOD_VROOT" Default="ON" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">ON</Config>
   <Config Name="FTP_VERBOSE" Target="FTP_VERBOSE" Default="UNDEF" Mode="" Description="ON/UNDEF, activate/deactivate logging to files" Type="Variable" Display="always" Required="true" Mask="false">ON</Config>
   <Config Name="VERBOSE" Target="VERBOSE" Default="OFF" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">ON</Config>
