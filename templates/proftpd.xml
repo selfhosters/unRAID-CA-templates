@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>ProFTPd</Name>
+  <Repository>tooliload/unraid-proftpd</Repository>
+  <Registry>https://hub.docker.com/r/tooliload/unraid-proftpd</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview>ProFTPd Server with Mods.</Overview>
+  <Category>Network:FTP</Category>
+  <WebUI/>
+  <TemplateURL>https://raw.githubusercontent.com/tooliload/docker-templates/master/templates/unraid-proftpd.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/tooliload/docker-templates/master/templates/icons/proftpd.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="FTP Port" Target="21" Default="21" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">21</Config>
+  <Config Name="Passive Ports" Target="49152-49407" Default="49152-49407" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">49152-49407</Config>
+  <Config Name="FTP_DB_USER" Target="FTP_DB_USER" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="FTP_DB_PASS" Target="FTP_DB_PASS" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  <Config Name="FTP_DB_HOST" Target="FTP_DB_HOST" Default="localhost" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="FTP_DB_NAME" Target="FTP_DB_NAME" Default="proftpd" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="MASQ_ADDR" Target="MASQ_ADDR" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="PWD_SALT" Target="PWD_SALT" Default="DockerCrypt" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">SomeCryptPass</Config>
+  <Config Name="MOD_VROOT" Target="MOD_VROOT" Default="ON" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">ON</Config>
+  <Config Name="FTP_VERBOSE" Target="FTP_VERBOSE" Default="UNDEF" Mode="" Description="ON/UNDEF, activate/deactivate logging to files" Type="Variable" Display="always" Required="true" Mask="false">ON</Config>
+  <Config Name="VERBOSE" Target="VERBOSE" Default="OFF" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">ON</Config>
+  <Config Name="SQL_BACKEND" Target="SQL_BACKEND" Default="mysql" Mode="" Description="postgres or mysql" Type="Variable" Display="always" Required="true" Mask="false">mysql</Config>
+  <Config Name="Datapath" Target="/srv/ftp/" Default="" Mode="rw,shared" Description="Path to FTP-Data from Host" Type="Path" Display="always" Required="false" Mask="false">/mnt/disk1/</Config>
+  <Config Name="MOD_VROOT_CONF" Target="/etc/proftpd/vroot.conf" Default="" Mode="ro" Description="" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="FTP_PG_MIGRATE" Target="FTP_PG_MIGRATE" Default="OFF" Mode="" Description="ON/OFF, activate/deactivate automatic creation of tables required by proftpd in postgresql database" Type="Variable" Display="advanced" Required="false" Mask="false">OFF</Config>
+  <Config Name="FTP_VERBOSE" Target="FTP_VERBOSE" Default="UNDEF" Mode="" Description="ON/UNDEF, activate/deactivate logging to files" Type="Variable" Display="advanced" Required="false" Mask="false">UNDEF</Config>
+</Container>
