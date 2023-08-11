@@ -14,6 +14,6 @@
   <TemplateURL>false</TemplateURL>
   <ExtraParams>--user 99:100</ExtraParams>
   <Icon>https://raw.githubusercontent.com/autobrr/autobrr/develop/.github/images/logo.png</Icon>
-  <Config Name="Appdata" Target="/config" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false"></Config>
   <Config Name="WebUI" Target="7474" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">7474</Config>
+  <Config Name="Appdata" Target="/config" Default="/mnt/user/appdata/autobrr" Mode="rw" Description="" Type="Path" Display="advanced-hide" Required="true" Mask="false"/>
 </Container>

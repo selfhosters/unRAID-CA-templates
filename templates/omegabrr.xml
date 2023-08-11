@@ -14,5 +14,5 @@
   <Requires>Autobrr installed</Requires>
   <ExtraParams>--user 99:100</ExtraParams>
   <Icon>https://raw.githubusercontent.com/autobrr/autobrr/develop/.github/images/logo.png</Icon>
-  <Config Name="Appdata" Target="/config" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Appdata" Target="/config" Default="/mnt/user/appdata/omegabrr" Mode="rw" Description="" Type="Path" Display="advanced-hide" Required="true" Mask="false"/>
 </Container>
