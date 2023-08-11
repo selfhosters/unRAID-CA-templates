@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>omegabrr</Name>
+  <Repository>ghcr.io/autobrr/omegabrr:latest</Repository>
+  <Registry>https://github.com/autobrr/omegabrr/pkgs/container/omegabrr</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
+  <Project>https://github.com/autobrr/omegabrr</Project>
+  <Overview>This application has no WebUI, reference the readme at https://github.com/autobrr/omegabrr/blob/main/README.md for documentation on how to run this application.[br][br]&#xD;[br][br]&#xD;Omegabrr transforms monitored shows, movies, books and music from arrs into Autobrr filters. It also supports adding titles from custom lists to autobrr filters.</Overview>
+  <Category>Tools:</Category>
+  <TemplateURL>false</TemplateURL>
+  <Requires>Autobrr installed</Requires>
+  <ExtraParams>--user 99:100</ExtraParams>
+  <Icon>https://raw.githubusercontent.com/autobrr/autobrr/develop/.github/images/logo.png</Icon>
+  <Config Name="Appdata" Target="/config" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false"></Config>
+</Container>
