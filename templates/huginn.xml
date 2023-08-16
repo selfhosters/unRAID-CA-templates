@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>huginn</Name>
-  <Repository>huginn/huginn</Repository>
-  <Registry>https://hub.docker.com/r/huginn/huginn/</Registry>
+  <Repository>ghcr.io/huginn/huginn</Repository>
+  <Registry>https://github.com/huginn/huginn/pkgs/container/huginn</Registry>
   <Network>bridge</Network>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>

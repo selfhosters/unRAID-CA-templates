@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>nicotine-plus</Name>
+  <Repository>ghcr.io/fletchto99/nicotine-plus-docker:latest</Repository>
+  <Registry>https://github.com/fletchto99/nicotine-plus-docker/pkgs/container/nicotine-plus-docker</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/fletchto99/nicotine-plus-docker/issues</Support>
+  <Project>https://github.com/fletchto99/nicotine-plus-docker</Project>
+  <Overview>
+Nicotine plus running in KasmVNC based off of linuxserver's KASMVNC docker image.
+  </Overview>
+  <Category>Downloaders:</Category>
+  <WebUI>http://[IP]:[PORT:6080]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/nicotine-plus.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/nicotine-plus.png</Icon>
+  <Config Name="WebUI" Target="6080" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">6080</Config>
+  <Config Name="P2P Port 1" Target="2234" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">2234</Config>
+  <Config Name="P2P Port 2" Target="2235" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">2235</Config>
+  <Config Name="P2P Port 3" Target="2236" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">2236</Config>
+  <Config Name="P2P Port 4" Target="2237" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">2237</Config>
+  <Config Name="P2P Port 5" Target="2238" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">2238</Config>
+  <Config Name="P2P Port 6" Target="2239" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">2239</Config>
+  <Config Name="Complete Downloads" Target="/data/downloads/completed" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Complete Downloads" Target="/data/downloads/incomplete" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Share" Target="/data/share" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Appdata" Target="/config/" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/nicotine-plus</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="UMASK" Target="UMASK" Default="002" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+</Container>

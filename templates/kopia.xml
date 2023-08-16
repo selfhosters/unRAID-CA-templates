@@ -15,7 +15,7 @@ To run this container, you must create a htpasswd file (either via command line 
   <WebUI>http://[IP]:[PORT:51515]</WebUI>
   <TemplateURL>https://github.com/selfhosters/unRAID-CA-templates/blob/master/templates/kopia.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/kopia/kopia/master/icons/kopia.svg</Icon>
-  <PostArgs>server --insecure --htpasswd-file /app/config/htpasswd --address 0.0.0.0:51515 --server-username=YOUR-USERNAME</PostArgs>
+  <PostArgs>server start --insecure --htpasswd-file /app/config/htpasswd --address 0.0.0.0:51515 --server-username=YOUR-USERNAME</PostArgs>
   <Config Name="Repository password" Target="KOPIA_PASSWORD" Default="" Mode="" Description="Container Variable: KOPIA_PASSWORD" Type="Variable" Display="always" Required="true" Mask="true"/>
   <Config Name="Port" Target="51515" Default="51515" Mode="tcp" Description="Container Port: 51515" Type="Port" Display="always" Required="true" Mask="false">51515</Config>
   <Config Name="Config path" Target="/app/config" Default="/mnt/user/appdata/kopia/config" Mode="rw" Description="Container Path: /app/config" Type="Path" Display="always" Required="true" Mask="false"/>

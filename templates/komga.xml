@@ -10,10 +10,10 @@
   <Overview>A Media server for comics/mangas/BDs with API and OPDS support.&#xD;
 Check logs for auto-generated username/password.</Overview>
   <Category>Network:Web MediaServer:Books Tools:Utilities</Category>
-  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <WebUI>http://[IP]:[PORT:25600]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/komga.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/komga.png</Icon>
-  <Config Name="WebUI" Target="8080" Default="8080" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="WebUI" Target="25600" Default="25600" Mode="tcp" Description="Container Port: 25600" Type="Port" Display="always" Required="true" Mask="false"/>
   <Config Name="Exclusions" Target="KOMGA_LIBRARIES_SCAN_DIRECTORY_EXCLUSIONS" Default="#recycle,@eaDir" Description="Container Variable: KOMGA_LIBRARIES_SCAN_DIRECTORY_EXCLUSIONS" Type="Variable" Display="advanced" Required="true" Mask="false"/>
   <Config Name="Config" Target="/config" Default="/mnt/user/appdata/komga/" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced" Required="true" Mask="false"/>
   <Config Name="Books" Target="/books" Default="/mnt/user/Media/books" Mode="rw" Description="Container Path: /books" Type="Path" Display="always" Required="true" Mask="false"/>
