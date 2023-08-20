@@ -9,7 +9,7 @@
   <Project>https://github.com/sarendsen/replex</Project>
   <Overview>Remix your plex recommendations.</Overview>
   <Category>Tools: MediaServer:Other</Category>
-  <WebUI>http://[IP]:[PORT:3001]/</WebUI>
+  <WebUI>http://[IP]:[PORT:80]/</WebUI>
   <Config Name="Proxy Port" Target="80" Default="3001" Mode="tcp" Description="Port used to access the Plex proxy" Type="Port" Display="always" Required="true" Mask="false">3001</Config>
   <Config Name="Plex Host" Target="REPLEX_HOST" Default="http://localhost:32400" Description="Plex target host to proxy." Type="Variable" Display="always" Required="true" Mask="false">http://localhost:32400</Config>
   <Config Name="Hero Rows" Target="REPLEX_HERO_ROWS" Default="" Description="Comma-seperated list of hubidentifiers to make hero style" Type="Variable" Display="always" Required="true" Mask="false"/>
