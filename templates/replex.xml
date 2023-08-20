@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Replex</Name>
+  <Repository>ghcr.io/sarendsen/replex</Repository>
+  <Registry>https://github.com/sarendsen/replex/pkgs/container/replex</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/sarendsen/replex/issues</Support>
+  <Project>https://github.com/sarendsen/replex</Project>
+  <Overview>Remix your plex recommendations.</Overview>
+  <Category>Tools: MediaServer:Other</Category>
+  <WebUI>http://[IP]:[PORT:80]/</WebUI>
+  <Config Name="Proxy Port" Target="80" Default="3001" Mode="tcp" Description="Port used to access the Plex proxy" Type="Port" Display="always" Required="true" Mask="false">3001</Config>
+  <Config Name="Plex Host" Target="REPLEX_HOST" Default="http://localhost:32400" Description="Plex target host to proxy." Type="Variable" Display="always" Required="true" Mask="false">http://localhost:32400</Config>
+  <Config Name="Hero Rows" Target="REPLEX_HERO_ROWS" Default="" Description="Comma-seperated list of hubidentifiers to make hero style" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Include Watched?" Target="REPLEX_INCLUDE_WATCHED" Default="false" Description="If set to false, hide watched items" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="Disable User State?" Target="REPLEX_DISABLE_USER_STATE" Default="false" Description="If set to true, remove unwatched markers from artwork" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="Disable Leaf Count?" Target="REPLEX_DISABLE_LEAF_COUNT" Default="false" Description="If set to true, remove episode count label from show artwork" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="Disable Related?" Target="REPLEX_DISABLE_RELATED" Default="false" Description="If set to true, disable grabbing related media (avoid potential issues due to metadata corruption)" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="Redirect Streams?" Target="REPLEX_REDIRECT_STREAMS" Default="false" Description="If set to true, redirect streams to another endpoint" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="Redirect Streams Endpoint" Target="REPLEX_REDIRECT_STREAMS_URL" Default="" Description="Alternative streams endpoint" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Cache TTL" Target="REPLEX_CACHE_TTL" Default="900" Description="Time to live for caches in seconds. Set to 0 to disable (not recommended)" Type="Variable" Display="always" Required="false" Mask="false">900</Config>
+  <Config Name="Auto-refresh Recommended Rows Cache?" Target="REPLEX_CACHE_REFRESH" Default="true" Description="If set to true, the cache for recommended rows are auto-refreshed for each user" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+</Container>
