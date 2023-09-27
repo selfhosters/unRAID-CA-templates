@@ -19,7 +19,7 @@ Plugins here: https://github.com/HaveAGitGat/Tdarr_Plugins&#xD;
 [br][br]&#xD;
 &#xD;
   </Overview>
-  <Category>Productivity: MediaApp:Video Status:Beta</Category>
+  <Category>Productivity: MediaApp:Video</Category>
   <WebUI>http://[IP]:[PORT:8265]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/tdarr.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/tdarr.png</Icon>
