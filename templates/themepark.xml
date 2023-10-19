@@ -5,7 +5,7 @@
   <Name>theme-park</Name>
   <Network>bridge</Network>
   <Overview>
-  theme.park contains 48 themed applications, with css addons on certain themes.
+  theme.park contains 50 themed applications, with css addons on certain themes.
   [br][br]
   Installation methods include custom docker mods for linuxserver.io containers,
   custom scripts for select Hotio containers and multiple examples of subfiltering using webservers like Nginx and Apache
@@ -16,8 +16,8 @@
   </Overview>
   <Privileged>false</Privileged>
   <Project>https://theme-park.dev/</Project>
-  <Registry>https://github.com/GilbN/theme.park/pkgs/container/theme.park</Registry>
-  <Repository>ghcr.io/gilbn/theme.park</Repository>
+  <Registry>https://github.com/themepark-dev/theme.park/pkgs/container/theme.park</Registry>
+  <Repository>ghcr.io/themepark-dev/theme.park</Repository>
   <ReadMe>https://docs.theme-park.dev/setup/</ReadMe>
     <Branch>
         <Tag>latest</Tag>
