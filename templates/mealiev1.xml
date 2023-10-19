@@ -1,28 +1,30 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>mealiev1</Name>
-  <Repository>hkotel/mealie:omni-nightly</Repository>
-  <Registry>https://hub.docker.com/r/hkotel/mealie/</Registry>
+  <Repository>ghcr.io/mealie-recipes/mealie:nightly</Repository>
+  <Registry>ghcr.io/mealie-recipes/mealie:nightly</Registry>
   <Network>bridge</Network>
   <Shell>sh</Shell>
-  <Beta>true</Beta>
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/138058-support-catduck-mealie-v1/</Support>
-  <Project>https://github.com/mealie-recipes/mealie</Project>
-  <Overview>A self-hosted recipe manager and meal planner with a RestAPI backend and a reactive frontend application built in Vue for a pleasant user experience for the whole family. &#xD;
+  <Project>https://mealie.io/</Project>
+ <Overview>Mealie is a self-hosted recipe manager and meal planner with a RestAPI backend and a reactive frontend application built in Vue for a pleasant user experience for the whole family.&#xD;
 &#xD;
+This is the NEW NIGHTLY for Version. As soon as there is an official stable image tag, this template will be updated to allow for either. &#xD;
 &#xD;
-This is the nightly Omni Package for Version1 &#xD;
-Please read https://hay-kot.github.io/mealie/documentation/getting-started/updating/  before updating from earlier versions! Default Password: MyPassword
- &#xD;
-</Overview>
+Please note, there is only one port now, previously the web port was 3000 and API was 9000. Now there is just 9000. To avoid breaking changes I have by default made the port 3000 with this template. You can of course change to anything you would like, and update your reverse proxies accordingly.&#xD;
+&#xD;
+Please read https://hay-kot.github.io/mealie/documentation/getting-started/updating/  before updating from earlier (Pre 1.X versions!)&#xD;
+&#xD;
+Lastly, Postgres is available and if you want to use mealie with postgres the variables have been added under advanced&#xD;
+&#xD;
+Default Password: MyPassword</Overview>
   <Category>Productivity:</Category>
-  <WebUI>http://[IP]:[PORT:3000]</WebUI>
+  <WebUI>http://[IP]:[PORT:9000]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/mealiev1.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/mealiev1.png</Icon>
-  <Config Name="Front End Port" Target="3000" Default="3000" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Port" Target="9000" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">3000</Config>
   <Config Name="App Data" Target="/app/data" Default="/mnt/user/appdata/mealiev1" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/mealiev1</Config>
-  <Config Name="API Port" Target="9000" Default="" Mode="tcp" Description="" Type="Port" Display="advanced" Required="true" Mask="false">9000</Config>
   <Config Name="ALLOW_SIGNUP" Target="ALLOW_SIGNUP" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
   <Config Name="DEFAULT_EMAIL" Target="DEFAULT_EMAIL" Default="" Mode="" Description="This email will be your username" Type="Variable" Display="always" Required="true" Mask="false">changeme@email.com</Config>
   <Config Name="SMTP_FROM_EMAIL" Target="SMTP_FROM_EMAIL" Default="" Mode="" Description="This is required to send emails and reset initial passowrd" Type="Variable" Display="always" Required="true" Mask="false">changeme@gmail.com</Config>
@@ -32,9 +34,15 @@ Please read https://hay-kot.github.io/mealie/documentation/getting-started/updat
   <Config Name="SMTP_PORT" Target="SMTP_PORT" Default="" Mode="" Description="Put the SMTP Port here" Type="Variable" Display="always" Required="true" Mask="false">587</Config>
   <Config Name="BASE_URL" Target="BASE_URL" Default="" Mode="" Description="Enter your domain, such as reseverse proxy here" Type="Variable" Display="always" Required="false" Mask="false">https://mealie.mydomain.net</Config>
   <Config Name="DEFAULT_GROUP" Target="DEFAULT_GROUP" Default="home" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">home</Config>
-  <Config Name="MAX_WORKERS" Target="MAX_WORKERS" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">1</Config>
   <Config Name="PUID" Target="PUID" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
   <Config Name="PGID" Target="PGID" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
   <Config Name="Time Zone" Target="TZ=America" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">New_York</Config>
   <Config Name="WEB_CONCURRENCY" Target="WEB_CONCURRENCY" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">1</Config>
+  <Config Name="MAX_WORKERS" Target="MAX_WORKERS" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">1</Config>
+  <Config Name="DB_ENGINE" Target="DB_ENGINE" Default="" Mode="" Description="you can shoose between sqlite and postgres" Type="Variable" Display="advanced" Required="false" Mask="false">sqlite</Config>
+  <Config Name="POSTGRES_USER" Target="POSTGRES_USER" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="POSTGRES_PASSWORD" Target="POSTGRES_PASSWORD" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="POSTGRES_SERVER" Target="POSTGRES_SERVER" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="POSTGRES_PORT" Target=" POSTGRES_PORT" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="POSTGRES_DB" Target="POSTGRES_DB" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
 </Container>
