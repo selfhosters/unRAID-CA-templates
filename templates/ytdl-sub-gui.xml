@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>ytdl-sub-gui</Name>
+  <Repository>ghcr.io/jmbannon/ytdl-sub-gui:latest</Repository>
+  <Registry>ghcr.io/jmbannon/ytdl-sub-gui:latest</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://discord.gg/235bWeyffD</Support>
+  <Project>https://github.com/jmbannon/ytdl-sub</Project>
+  <Overview>Automate downloads and metadata generation with YoutubeDL. The GUI image runs code-server with ytdl-sub preinstalled and can be accessed at https://localhost:8443</Overview>
+  <Category>Downloaders: MediaApp:Video</Category>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/ytdl-sub-gui.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/ytdl-sub.png</Icon>
+  <Config Name="WebUI" Target="8443" Default="" Mode="tcp" Description="Container Port: 8443" Type="Port" Display="always" Required="false" Mask="false">8443</Config>
+  <Config Name="config" Target="/config" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/ytdl-sub-gui</Config>
+  <Config Name="TV Shows" Target="/tv_shows" Default="" Mode="rw" Description="Path to store TV shows" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/tv_shows</Config>
+  <Config Name="Music" Target="/music" Default="" Mode="rw" Description="Path to store music" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/music</Config>
+  <Config Name="Music Videos" Target="/music_videos" Default="" Mode="rw" Description="Path to store music videos" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/music_videos</Config>
+  <Config Name="Movies" Target="/movies" Default="" Mode="rw" Description="Path to store movies" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/movies</Config>
+  <Config Name="PUID" Target="PUID" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
+  <Config Name="UMASK" Target="UMASK" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">002</Config>
+</Container>
