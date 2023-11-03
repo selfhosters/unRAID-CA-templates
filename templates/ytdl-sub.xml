@@ -12,6 +12,8 @@
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/ytdl-sub.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/ytdl-sub.png</Icon>
   <Config Name="config" Target="/config" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/ytdl-sub</Config>
+  <Config Name="tmp" Target="/tmp" Default="" Mode="rw" Description="Temp folder for ytdl-sub to use as a cache" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/media/temp/</Config>
+  <Config Name="Media" Target="/media" Default="" Mode="rw" Description="Top-level folder for all media, can use separate mounts instead" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/media</Config>
   <Config Name="TV Shows" Target="/tv_shows" Default="" Mode="rw" Description="Path to store TV shows" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/tv_shows</Config>
   <Config Name="Music" Target="/music" Default="" Mode="rw" Description="Path to store music" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/music</Config>
   <Config Name="Music Videos" Target="/music_videos" Default="" Mode="rw" Description="Path to store music videos" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/music_videos</Config>
