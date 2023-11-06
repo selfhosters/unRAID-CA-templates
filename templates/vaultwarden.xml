@@ -40,7 +40,7 @@
   <Category>Tools:</Category>
   <WebUI>http://[IP]:[PORT:80]/admin</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/vaultwarden.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/bitwardenrs.png</Icon>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/vaultwarden.png</Icon>
   <Config Name="WebUI HTTP Port" Target="80" Default="4743" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false"/>
   <Config Name="Storage" Target="/data" Default="/mnt/user/appdata/vaultwarden" Mode="rw" Description="Container Path: /data" Type="Path" Display="advanced" Required="true" Mask="false"/>
   <Config Name="SIGNUPS_ALLOWED" Target="SIGNUPS_ALLOWED" Default="true|false" Description="Container Variable: Signups" Type="Variable" Display="always" Required="false" Mask="false"/>
