@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+  <RemoveFromCA>false</RemoveFromCA>
+  <TemplateURL>https://raw.githubusercontent.com/tenent007963/unraid-docker/master/github-runner/github-runner.xml</TemplateURL>
+  <Beta>false</Beta>
+  <Category>productivity</Category>
+  <Name>github-runner</Name>
+  <Overview>[b]Description[/b]&#xD;
+A self hosted github action runner in docker image.   &#xD;
+&#xD;
+Because most of the existing one doesn't work properly, so here I am (here we are)&#xD;
+&#xD;
+[b]Configuration[/b]&#xD;
+[b]URL[/b] Replace the value with your correct link of GitHub Organization/ Repository&#xD;
+[b]TOKEN[/b] replace the value with your actual token for self-hosted runner&#xD;
+&#xD;
+[b]Documentation[/b]&#xD;
+https://github.com/tenent007963/unraid-docker/github-runner/readme.md[br]&#xD;
+&#xD;
+[b]Notes[/b]&#xD;
+N/A
+  </Overview>
+  <ReadMe>https://github.com/tenent007963/unraid-docker/github-runner/readme.md</ReadMe>
+  <Registry>https://hub.docker.com/r/tenent007963/github-runner</Registry>
+  <GitHub>https://github.com/tenent007963/unraid-docker/github-runner</GitHub>
+  <Repository>tenent007963/github-runner</Repository>
+  <Project>https://github.com/actions/runner</Project>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>URL</Name>
+      <Value>[Replace this with your organization link / repository link]</Value>
+    </Variable>
+    <Variable>
+      <Name>TOKEN</Name>
+      <Value>[Replace this with your actual token]</Value>
+    </Variable>
+  </Environment>
+  <Data>
+  </Data>
+  <Banner></Banner>
+  <Icon>https://raw.githubusercontent.com/tenent007963/unraid-docker/master/github-runner/github-runner.png</Icon>
+  <DonateText></DonateText>
+  <DonateLink></DonateLink>
+  <DonateImg></DonateImg>
+  <ExtraParams></ExtraParams>
+</Containers>
