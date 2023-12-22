@@ -7,10 +7,15 @@
   <Privileged>false</Privileged>
   <Support>https://gamevau.lt/</Support>
   <Project>https://github.com/Phalcode/gamevault-backend</Project>
-  <Overview>Backend for the self-hosted gaming platform for DRM-free games</Overview>
+  <Overview>
+    Backend for the self-hosted gaming platform for DRM-free games
+    [br][br]&#xD;[br][br]&#xD;
+    [b]This container requires a separate (remote) Postgres database connection.[/b]
+  </Overview>
   <Category>Game Servers:</Category>
   <WebUI>http://[IP]:[PORT:8080]</WebUI>
   <TemplateURL>https://github.com/selfhosters/unRAID-CA-templates/blob/master/templates/gamevault-backend.xml</TemplateURL>
+  <Requires>Separate (remote) Postgres database </Requires>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/gamevault-backend.png</Icon>
   <ExtraParams>--restart=unless-stopped</ExtraParams>
   <Config Name="HTTP Port" Target="8080" Default="8080" Mode="tcp" Description="GameVault HTTP Port 8080" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
