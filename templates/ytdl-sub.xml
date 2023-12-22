@@ -5,20 +5,19 @@
   <Registry>ghcr.io/jmbannon/ytdl-sub:latest</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
-  <Support>https://forums.unraid.net/topic/138060-support-catduck-ytdl-sub-youtube-downloading-with-meta-data-for-plexkodijellyfin/</Support>
+  <Support>https://discord.gg/235bWeyffD</Support>
   <Project>https://github.com/jmbannon/ytdl-sub</Project>
-  <Overview>Automate downloads and metadata generation with YoutubeDL&#xD;
-&#xD;
-&#xD;
-Please take your time to go through the walkthrough&#xD;
-&#xD;
-https://github.com/jmbannon/ytdl-sub/wiki</Overview>
+  <Overview>Automate downloads and metadata generation with YoutubeDL. This is the headless variant. See `ytdl-sub-gui` for a web-gui version.</Overview>
   <Category>Downloaders: MediaApp:Video</Category>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/ytdl-sub.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/ytdl-sub.png</Icon>
-  <Config Name="tmp" Target="/tmp" Default="" Mode="rw" Description="It is a temp folder, obviously this is for permanent files." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/media/temp/</Config>
-  <Config Name="Media" Target="/media" Default="" Mode="rw" Description="Where you store your media, duh" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/media</Config>
-  <Config Name="config" Target="/config" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata</Config>
+  <Config Name="config" Target="/config" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/ytdl-sub</Config>
+  <Config Name="TV Shows" Target="/tv_shows" Default="" Mode="rw" Description="Path to store TV shows" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/tv_shows</Config>
+  <Config Name="Music" Target="/music" Default="" Mode="rw" Description="Path to store music" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/music</Config>
+  <Config Name="Music Videos" Target="/music_videos" Default="" Mode="rw" Description="Path to store music videos" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/music_videos</Config>
+  <Config Name="Movies" Target="/movies" Default="" Mode="rw" Description="Path to store movies" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/movies</Config>
+  <Config Name="Media" Target="/media" Default="" Mode="rw" Description="Top-level folder for all media, can use separate mounts instead" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/media</Config>
+  <Config Name="tmp" Target="/tmp" Default="" Mode="rw" Description="Temp folder for ytdl-sub to use as a cache" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/media/temp/</Config>
   <Config Name="PUID" Target="PUID" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
   <Config Name="PGID" Target="PGID" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
   <Config Name="UMASK" Target="UMASK" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">002</Config>
