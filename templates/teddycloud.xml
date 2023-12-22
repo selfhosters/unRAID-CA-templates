@@ -15,11 +15,11 @@
     <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/teddycloud.xml</Icon>
     <Config Name="port 80 (optional)" Target="80" Default="" Mode="tcp" Description="optional" Type="Port" Display="always" Required="false" Mask="false">7780</Config>
     <Config Name="443" Target="443" Default="" Mode="tcp" Description="" Type="Port" Display="always-hide" Required="true" Mask="false">7443</Config>
-    <Config Name="content" Target="/content" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/teddycloud/data/content</Config>
-    <Config Name="config" Target="/config" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/teddycloud/config</Config>
-    <Config Name="certs" Target="/certs" Default="" Mode="rw" Description="Place your certs here after grabbing them off your device. (Yes you need to do this)" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/teddycloud/certs</Config>
-    <Config Name="library" Target="/library" Default="" Mode="rw" Description="" Type="Path" Display="advanced" Required="false" Mask="false">/mnt/user/appdata/teddycloud/data/library</Config>
-    <Config Name="firmware" Target="/firmware" Default="" Mode="rw" Description="" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/teddycloud/data/firmware</Config>
+    <Config Name="content" Target="/teddycloud/data/content" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/teddycloud/data/content</Config>
+    <Config Name="config" Target="/teddycloud/config" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/teddycloud/config</Config>
+    <Config Name="certs" Target="/teddycloud/certs" Default="" Mode="rw" Description="Place your certs here after grabbing them off your device. (Yes you need to do this)" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/teddycloud/certs</Config>
+    <Config Name="library" Target="/teddycloud/data/library" Default="" Mode="rw" Description="" Type="Path" Display="advanced" Required="false" Mask="false">/mnt/user/appdata/teddycloud/data/library</Config>
+    <Config Name="firmware" Target="/teddycloud/data/firmware" Default="" Mode="rw" Description="" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/teddycloud/data/firmware</Config>
     <Config Name="PUID" Target="PUID" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
     <Config Name="PGID" Target="PGID" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
 </Container>
