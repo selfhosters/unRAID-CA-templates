@@ -43,6 +43,6 @@ Default Password: MyPassword</Overview>
   <Config Name="POSTGRES_USER" Target="POSTGRES_USER" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
   <Config Name="POSTGRES_PASSWORD" Target="POSTGRES_PASSWORD" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
   <Config Name="POSTGRES_SERVER" Target="POSTGRES_SERVER" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
-  <Config Name="POSTGRES_PORT" Target=" POSTGRES_PORT" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="POSTGRES_PORT" Target="POSTGRES_PORT" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
   <Config Name="POSTGRES_DB" Target="POSTGRES_DB" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
 </Container>
