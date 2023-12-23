@@ -5,7 +5,7 @@
     <Registry>ghcr.io/toniebox-reverse-engineering/teddycloud:latest</Registry>
     <Network>bridge</Network>
     <Privileged>false</Privileged>
-    <Support>https://t.me/toniebox_reverse_engineering</Support>
+    <Support>https://forums.unraid.net/topic/138058-support-catduck-templates</Support>
     <Project>https://github.com/toniebox-reverse-engineering/teddycloud</Project>
     <Overview>teddyCloud is an alternative server for your Toniebox, allowing you to host the cloud services locally. This gives you the control about which data is sent to the original manufacturers cloud and allows you to host your own figurine audio files on e.g. your NAS or any other server.
     </Overview>
