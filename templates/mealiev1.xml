@@ -36,7 +36,6 @@ Default Password: MyPassword</Overview>
   <Config Name="DEFAULT_GROUP" Target="DEFAULT_GROUP" Default="home" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">home</Config>
   <Config Name="PUID" Target="PUID" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
   <Config Name="PGID" Target="PGID" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
-  <Config Name="Time Zone" Target="TZ=America" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">New_York</Config>
   <Config Name="WEB_CONCURRENCY" Target="WEB_CONCURRENCY" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">1</Config>
   <Config Name="MAX_WORKERS" Target="MAX_WORKERS" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">1</Config>
   <Config Name="DB_ENGINE" Target="DB_ENGINE" Default="" Mode="" Description="you can shoose between sqlite and postgres" Type="Variable" Display="advanced" Required="false" Mask="false">sqlite</Config>
