@@ -15,8 +15,6 @@
     <Config Name="Sonarr Database" Target="/sonarr.db" Default="" Mode="ro" Description="Path to Sonarr database. This is only needed if you want episode search handling." Type="Path" Display="always" Required="false" Mask="false"/>
     <Config Name="Radarr Database" Target="/radarr.db" Default="" Mode="ro" Description="Path to Radarr database. This is only needed if you want movie search handling." Type="Path" Display="always" Required="false" Mask="false"/>
     <Config Name="Completed Downloads" Target="/completed_downloads" Default="" Mode="rw" Description="Path to completed downloads to monitor." Type="Path" Display="always" Required="true" Mask="false"/>
-    <Config Name="Local Time" Target="/etc/localtime" Default="/etc/localtime" Mode="ro" Description="Reads local time." Type="Path" Display="advanced" Required="true" Mask="false"/>
     <Config Name="Config" Target="/config" Default="/mnt/user/appdata/qbitrr" Mode="rw" Description="Config folder for qBitrr" Type="Path" Display="advanced" Required="false" Mask="false"/>
     <Config Name="Restart Timer" Target="RESTART_TIMER" Default="0" Mode="" Description="Number of hours after which to restart the child processes (set 0 to disable)." Type="Variable" Display="always" Required="false" Mask="false"/>
-    <Config Name="Timezone" Target="TZ" Default="Europe/London" Mode="" Description="Container Variable: TZ" Type="Variable" Display="always" Required="false" Mask="false"/>
 </Container>
