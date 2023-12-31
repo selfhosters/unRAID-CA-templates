@@ -2,63 +2,38 @@
 <Container version="2">
   <Name>prusa-connect-rtsp</Name>
   <Repository>ghcr.io/beccazero/prusa-connect-rtsp:main</Repository>
-  <Registry/>
   <Network>bridge</Network>
-  <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support/>
   <Project>https://github.com/beccazero/prusa-connect-rtsp</Project>
   <Overview>Capture images from a RTSP camera upload them to Prusa Connect.</Overview>
   <Category>HomeAutomation:</Category>
-  <WebUI/>
-  <TemplateURL/>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/prusa-connect-rtsp.png</Icon>
-  <ExtraParams/>
-  <PostArgs/>
-  <CPUset/>
   <DateInstalled>1703979411</DateInstalled>
-  <DonateText/>
-  <DonateLink/>
   <Description>Capture images from a RTSP camera upload them to Prusa Connect.</Description>
   <Networking>
     <Mode>bridge</Mode>
-    <Publish/>
   </Networking>
-  <Data/>
   <Environment>
     <Variable>
-      <Value/>
       <Name>PRUSA_CONNECT_RTSP_URL</Name>
-      <Mode/>
     </Variable>
     <Variable>
-      <Value/>
       <Name>PRUSA_CONNECT_FINGERPRINT</Name>
-      <Mode/>
     </Variable>
     <Variable>
-      <Value/>
       <Name>PRUSA_CONNECT_TOKEN</Name>
-      <Mode/>
     </Variable>
     <Variable>
-      <Value/>
       <Name>LOGURU_LEVEL</Name>
-      <Mode/>
     </Variable>
     <Variable>
-      <Value/>
       <Name>PRUSA_CONNECT_UPLOAD_INTERVAL</Name>
-      <Mode/>
     </Variable>
     <Variable>
-      <Value/>
       <Name>PRUSA_CONNECT_URL</Name>
-      <Mode/>
     </Variable>
   </Environment>
-  <Labels/>
   <Config Name="RTSP URL" Target="PRUSA_CONNECT_RTSP_URL" Default="" Mode="" Description="Container Variable: PRUSA_CONNECT_RTSP_URL&#13;&#10;URL for the RTSP Connection" Type="Variable" Display="always" Required="true" Mask="false"/>
   <Config Name="Fingerprint" Target="PRUSA_CONNECT_FINGERPRINT" Default="" Mode="" Description="Container Variable: PRUSA_CONNECT_FINGERPRINT&#13;&#10;Unique ID for the camera. Random UUID is recommended." Type="Variable" Display="always" Required="true" Mask="false"/>
   <Config Name="Token" Target="PRUSA_CONNECT_TOKEN" Default="" Mode="" Description="Container Variable: PRUSA_CONNECT_TOKEN&#13;&#10;Prusa Connect Token. Obtain from prusa connect website after creating a camera" Type="Variable" Display="always" Required="true" Mask="true"/>
