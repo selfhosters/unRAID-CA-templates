@@ -20,6 +20,4 @@
     <Config Name="certs" Target="/teddycloud/certs" Default="" Mode="rw" Description="Place your certs here after grabbing them off your device. (Yes you need to do this)" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/teddycloud/certs</Config>
     <Config Name="library" Target="/teddycloud/data/library" Default="" Mode="rw" Description="" Type="Path" Display="advanced" Required="false" Mask="false">/mnt/user/appdata/teddycloud/data/library</Config>
     <Config Name="firmware" Target="/teddycloud/data/firmware" Default="" Mode="rw" Description="" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/teddycloud/data/firmware</Config>
-    <Config Name="PUID" Target="PUID" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
-    <Config Name="PGID" Target="PGID" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
 </Container>
