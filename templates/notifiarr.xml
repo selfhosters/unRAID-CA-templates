@@ -13,7 +13,7 @@
   <WebUI>http://[IP]:[PORT:5454]/</WebUI>
   <ExtraParams>--hostname=$(hostname -f)</ExtraParams>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/notifiarr.xml</TemplateURL>
-  <Icon>https://docs.notifiarr.com/img/icon.png</Icon>
+  <Icon>https://notifiarr.com/images/logo/notifiarr.png</Icon>
   <Overview>
 Official Notifiarr Client &#xD;
 This application provides the gateway for media requests to your starr application. https://Notifiarr.com &#xD;
