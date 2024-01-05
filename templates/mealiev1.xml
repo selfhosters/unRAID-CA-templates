@@ -6,7 +6,7 @@
   <Network>bridge</Network>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>https://forums.unraid.net/topic/138058-support-catduck-mealie-v1/</Support>
+  <Support>https://forums.unraid.net/topic/138058-support-catduck-templates/</Support>
   <Project>https://mealie.io/</Project>
  <Overview>Mealie is a self-hosted recipe manager and meal planner with a RestAPI backend and a reactive frontend application built in Vue for a pleasant user experience for the whole family.&#xD;
 &#xD;
@@ -36,13 +36,12 @@ Default Password: MyPassword</Overview>
   <Config Name="DEFAULT_GROUP" Target="DEFAULT_GROUP" Default="home" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">home</Config>
   <Config Name="PUID" Target="PUID" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
   <Config Name="PGID" Target="PGID" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
-  <Config Name="Time Zone" Target="TZ=America" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">New_York</Config>
   <Config Name="WEB_CONCURRENCY" Target="WEB_CONCURRENCY" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">1</Config>
   <Config Name="MAX_WORKERS" Target="MAX_WORKERS" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">1</Config>
   <Config Name="DB_ENGINE" Target="DB_ENGINE" Default="" Mode="" Description="you can shoose between sqlite and postgres" Type="Variable" Display="advanced" Required="false" Mask="false">sqlite</Config>
   <Config Name="POSTGRES_USER" Target="POSTGRES_USER" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
   <Config Name="POSTGRES_PASSWORD" Target="POSTGRES_PASSWORD" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
   <Config Name="POSTGRES_SERVER" Target="POSTGRES_SERVER" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
-  <Config Name="POSTGRES_PORT" Target=" POSTGRES_PORT" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="POSTGRES_PORT" Target="POSTGRES_PORT" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
   <Config Name="POSTGRES_DB" Target="POSTGRES_DB" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
 </Container>
