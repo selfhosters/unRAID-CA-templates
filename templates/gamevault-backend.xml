@@ -12,7 +12,7 @@
     [br][br]&#xD;[br][br]&#xD;
     [b]This container requires a separate (remote) Postgres database connection.[/b]
   </Overview>
-  <Category>Game Servers:</Category>
+  <Category>GameServers:</Category>
   <WebUI>http://[IP]:[PORT:8080]</WebUI>
   <TemplateURL>https://github.com/selfhosters/unRAID-CA-templates/blob/master/templates/gamevault-backend.xml</TemplateURL>
   <Requires>Separate (remote) Postgres database </Requires>
