@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <Name>teddycloud</Name>
+    <Repository>ghcr.io/toniebox-reverse-engineering/teddycloud:latest</Repository>
+    <Registry>ghcr.io/toniebox-reverse-engineering/teddycloud:latest</Registry>
+    <Network>bridge</Network>
+    <Privileged>false</Privileged>
+    <Support>https://forums.unraid.net/topic/138058-support-catduck-templates</Support>
+    <Project>https://github.com/toniebox-reverse-engineering/teddycloud</Project>
+    <Overview>teddyCloud is an alternative server for your Toniebox, allowing you to host the cloud services locally. This gives you the control about which data is sent to the original manufacturers cloud and allows you to host your own figurine audio files on e.g. your NAS or any other server.
+    </Overview>
+    <WebUI>http://[IP]:[PORT:7780]</WebUI>
+    <Category>MediaServer:Music MediaServer:Other</Category>
+    <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/teddycloud.xml</TemplateURL>
+    <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/teddycloud.xml</Icon>
+    </Config Name="WEB UI" Target="80" Default="7780" Mode="tcp" Description="This an optional port for the webui of teddycloud" Type="Port" Display="always" Required="true" Mask="false">
+    <Config Name="SSL-Certs" Target="443" Default="7443" Mode="tcp" Description="Required PORT to get certificates" Type="Port" Display="always" Required="true" Mask="false">7443</Config>
+    <Config Name="content" Target="/teddycloud/data/content" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/teddycloud/data/content</Config>
+    <Config Name="config" Target="/teddycloud/config" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/teddycloud/config</Config>
+    <Config Name="certs" Target="/teddycloud/certs" Default="" Mode="rw" Description="Place your certs here after grabbing them off your device. (Yes you need to do this)" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/teddycloud/certs</Config>
+    <Config Name="library" Target="/teddycloud/data/library" Default="" Mode="rw" Description="" Type="Path" Display="advanced" Required="false" Mask="false">/mnt/user/appdata/teddycloud/data/library</Config>
+    <Config Name="firmware" Target="/teddycloud/data/firmware" Default="" Mode="rw" Description="" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/teddycloud/data/firmware</Config>
+</Container>
