@@ -16,7 +16,7 @@ You will need to create a config.yaml file and place in the addarr appdata folde
 &#xD;
 </Overview>
   <Config Name="Config" Target="/app/config.yaml" Default="/mnt/user/appdata/addarr/config.yaml" Mode="ro" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/addarr/config.yaml</Config>
-  <Config Name="Chat ID" Target="/app/chatid.txt" Default="/mnt/user/appdata/addarr/chatid.txt" Mode="ro" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/addarr/chatid.txt</Config>
+  <Config Name="Chat ID" Target="/app/chatid.txt" Default="/mnt/user/appdata/addarr/chatid.txt" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/addarr/chatid.txt</Config>
   <Config Name="Admin ID" Target="/app/admin.txt" Default="/mnt/user/appdata/addarr/admin.txt" Mode="ro" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/addarr/admin.txt</Config>
   <Config Name="Logs" Target="/app/logs" Default="/mnt/user/appdata/addarr/logs" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/addarr/logs</Config>
 </Container>
