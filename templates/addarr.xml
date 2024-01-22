@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>addarr</Name>
+  <Repository>waterboy1602/addarr</Repository>
+  <Registry>https://hub.docker.com/r/waterboy1602/addarr/</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/Homelabbers/unraid-templates/issues/new/choose</Support>
+  <Project>https://github.com/Waterboy1602/Addarr</Project>
+  <Overview>TelegramBot for Sonarr and Radarr&#xD;
+&#xD;
+This is a Telegram Bot made to add series to Sonarr or movies to Radarr with a couple of commands. You can also communicate with your Transmission/Sabnzbd service to change its download speed.&#xD;
+&#xD;
+You will need to create a config.yaml file and place in the addarr appdata folder. To create this file, you will need to follow the guide on the Addarr wiki to get authenticated to Telegram.&#xD;
+&#xD;
+</Overview>
+  <Config Name="Config" Target="/app/config.yaml" Default="/mnt/user/appdata/addarr/config.yaml" Mode="ro" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/addarr/config.yaml</Config>
+  <Config Name="Chat ID" Target="/app/chatid.txt" Default="/mnt/user/appdata/addarr/chatid.txt" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/addarr/chatid.txt</Config>
+  <Config Name="Admin ID" Target="/app/admin.txt" Default="/mnt/user/appdata/addarr/admin.txt" Mode="ro" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/addarr/admin.txt</Config>
+  <Config Name="Logs" Target="/app/logs" Default="/mnt/user/appdata/addarr/logs" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/addarr/logs</Config>
+</Container>
