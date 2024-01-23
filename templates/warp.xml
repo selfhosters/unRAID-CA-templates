@@ -14,7 +14,7 @@
   </Overview>
   <ExtraParams>--sysctl net.ipv6.conf.all.disable_ipv6=0 --sysctl net.ipv4.conf.all.src_valid_mark=1 --cap-add NET_ADMIN</ExtraParams>
   <Config Name="WARP Sleep Cycle" Target="WARP_SLEEP" Default="2" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">2</Config>
-  <Config Name="Appdata Directory" Target="/data" Default="/mnt/user/appdata/warp/" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/warp/</Config>
+  <Config Name="Appdata Directory" Target="/var/lib/cloudflare-warp" Default="/mnt/user/appdata/warp/" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/warp/</Config>
   <Config Name="Warp Port" Target="1080" Default="1080" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">1080</Config>
   <Config Name="GOST Arguments" Target="GOST_ARGS" Default="-L :1080" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">-L :1080</Config>
   <Config Name="WARP Licensing" Target="WARP_LICENSE_KEY" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"/>
