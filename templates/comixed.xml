@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>comixed</Name>
+  <Repository>comixed/comixed</Repository>
+  <Registry>https://hub.docker.com/r/comixed/comixed/</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/comixed/comixed/</Support>
+  <Project></Project>
+  <Overview>The ComiXed Digital Comic Management System&#xD;
+&#xD;
+An application for managing digital comics.&#xD;
+Please see https://github.com/comixed/comixed/blob/main/QUICKSTART.md for default logins, how to change passwords, and getting started.
+&#xD;
+</Overview>
+  <WebUI>http://[IP]:[PORT:7171]</WebUI>
+  <Config Name="AppData Location" Target="/root/.comixed" Default="/mnt/user/appdata/comixed" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/comixed</Config>
+  <Config Name="Comic Location" Target="/comics" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/media/comics</Config>
+  <Config Name="WebUI" Target="7171" Default="7171" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">7171</Config>
+</Container>
