@@ -11,7 +11,7 @@
   <Overview>Tabby Web - an SSH/Telnet/Serial client in your browser.</Overview>
   <Category>Productivity:</Category>
   <WebUI>http://[IP]:[PORT:9090]</WebUI>
-  <Requires>MariaDB&#xD;</Requires>
+  <Requires>MariaDB</Requires>
   <Config Name="Port HTTP" Target="80" Default="9090" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">9090</Config>
   <Config Name="Database URL" Target="DATABASE_URL" Default="mysql://root:123@db/tabby" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">mysql://root:123@db/tabby</Config>
   <Config Name="Debug" Target="DEBUG" Default="false" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">false</Config>
