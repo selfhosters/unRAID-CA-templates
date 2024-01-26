@@ -8,7 +8,7 @@
   <Privileged>false</Privileged>
   <Support>https://github.com/Eugeny/tabby-web/issues/new</Support>
   <Project>https://tabby.sh</Project>
-  <Overview>Tabby Web - an SSH/Telnet/Serial client in your browser.&#xD;</Overview>
+  <Overview>Tabby Web - an SSH/Telnet/Serial client in your browser.</Overview>
   <Category>Productivity:</Category>
   <WebUI>http://[IP]:[PORT:9090]</WebUI>
   <Requires>MariaDB&#xD;</Requires>
