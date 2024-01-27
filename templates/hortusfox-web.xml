@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>hortusfox-web</Name>
+  <Repository>ghcr.io/danielbrendel/hortusfox-web:latest</Repository>
+  <Registry>https://hub.docker.com/r/outlinewiki/outline/</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/danielbrendel/hortusfox-web/issues/new</Support>
+  <Project>https://hortusfox.github.io/</Project>
+  <Overview>Self-hosted collaborative plant management system for your local environment</Overview>
+  <Category>Productivity:</Category>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <Requires>MariaDB
+    </Requires>
+  <Config Name="App Images" Target="/var/www/html/public/img" Default="/mnt/user/appdata/hortusfox-web/app_images" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/hortusfox-web/app_images</Config>
+  <Config Name="App Logs" Target="/var/www/html/app/logs" Default="/mnt/user/appdata/hortusfox-web/app_logs" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/hortusfox-web/app_logs</Config>
+  <Config Name="WebUI Port" Target="80" Default="8080" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+  <Config Name="Admin Email" Target="APP_ADMIN_EMAIL" Default="admin@example.com" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">admin@example.com</Config>
+  <Config Name="Admin Password" Target="APP_ADMIN_PASSWORD" Default="password" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">password</Config>
+  <Config Name="Debug" Target="APP_DEBUG" Default="true" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">true</Config>
+  <Config Name="Language" Target="APP_LANG" Default="en" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">en</Config>
+  <Config Name="Workspace Name" Target="APP_WORKSPACE" Default="My plant home" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">My plant home</Config>
+  <Config Name="Enable Scroller" Target="APP_ENABLE_SCROLLER" Default="true" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">true</Config>
+  <Config Name="Overlay Alpha" Target="APP_OVERLAY_ALPHA" Default="null" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">null</Config>
+  <Config Name="Enable Chat" Target="APP_ENABLE_CHAT" Default="true" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">true</Config>
+  <Config Name="" Target="APP_ONLINE_MINUTE_LIMIT" Default="5" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">5</Config>
+  <Config Name="" Target="APP_SHOW_CHAT_ONLINE_USERS" Default="false" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">false</Config>
+  <Config Name="" Target="APP_SHOW_CHAT_TYPING_INDICATOR" Default="false" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">false</Config>
+  <Config Name="" Target="APP_OVERDUE_TASK_HOURS" Default="10" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">10</Config>
+  <Config Name="" Target="APP_CRON_PW" Default="test" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">test</Config>
+  <Config Name="" Target="APP_CRON_MAIL_LIMIT" Default="5" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">5</Config>
+  <Config Name="" Target="APP_ENABLE_HISTORY" Default="true" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">true</Config>
+  <Config Name="" Target="APP_HISTORY_NAME" Default="History" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">History</Config>
+  <Config Name="" Target="APP_ENABLE_PHOTO_SHARE" Default="false" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">false</Config>
+  <Config Name="" Target="PHOTO_RESIZE_FACTOR_DEFAULT" Default="1.0" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">1.0</Config>
+  <Config Name="" Target="PHOTO_RESIZE_FACTOR_1" Default="0.5" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">0.5</Config>
+  <Config Name="" Target="PHOTO_RESIZE_FACTOR_2" Default="0.4" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">0.4</Config>
+  <Config Name="" Target="PHOTO_RESIZE_FACTOR_3" Default="0.4" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">0.4</Config>
+  <Config Name="" Target="PHOTO_RESIZE_FACTOR_4" Default="0.3" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">0.3</Config>
+  <Config Name="" Target="PHOTO_RESIZE_FACTOR_5" Default="0.2" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">0.2</Config>
+  <Config Name="" Target="DB_HOST" Default="db" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">db</Config>
+  <Config Name="" Target="DB_PORT" Default="3306" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">3306</Config>
+  <Config Name="" Target="DB_DATABASE" Default="hortusfox" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">hortusfox</Config>
+  <Config Name="" Target="DB_USERNAME" Default="root" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">root</Config>
+  <Config Name="" Target="DB_CHARSET" Default="utf8mb4" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">utf8mb4</Config>
+  <Config Name="" Target="DB_USER" Default="root" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">root</Config>
+  <Config Name="" Target="DB_PASSWORD" Default="my-secret-pw" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">my-secret-pw</Config>
+  <Config Name="" Target="SMTP_FROMNAME" Default="test@domain.tld" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="" Target="SMTP_FROMADDRESS" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="" Target="SMTP_HOST" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="" Target="SMTP_PORT" Default="587" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">587</Config>
+  <Config Name="" Target="SMTP_USERNAME" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="" Target="SMTP_PASSWORD" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="" Target="SMTP_ENCRYPTION" Default="tls" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">tls</Config>
+  <Config Name="" Target="LOG_ENABLE" Default="true" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">true</Config>
+</Container>
