@@ -11,7 +11,7 @@
   <Overview>Self-hosted collaborative plant management system for your local environment</Overview>
   <Category>Productivity:</Category>
   <WebUI>http://[IP]:[PORT:8080]</WebUI>
-  <Requires>MariaDB&#xD;
+  <Requires>MariaDB
     </Requires>
   <Config Name="App Images" Target="/var/www/html/public/img" Default="/mnt/user/appdata/hortusfox-web/app_images" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/hortusfox-web/app_images</Config>
   <Config Name="App Logs" Target="/var/www/html/app/logs" Default="/mnt/user/appdata/hortusfox-web/app_logs" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/hortusfox-web/app_logs</Config>
