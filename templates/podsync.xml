@@ -8,8 +8,13 @@
   <Privileged>false</Privileged>
   <Support>https://github.com/mxpv/podsync/issues/new</Support>
   <Project>https://github.com/mxpv/podsync/</Project>
-  <WebUI>http://[IP]:[PORT:80]</WebUI>
-  <Overview>Turn YouTube or Vimeo channels, users, or playlists into podcast feeds</Overview>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <Overview>
+    Turn YouTube or Vimeo channels, users, or playlists into podcast feeds.
+    &#xD;
+    This container expects a `config.toml` file in the "Config Location" path for settings. Refer to the Podsync documentation at https://github.com/mxpv/podsync?tab=readme-ov-file#configuration for details.
+  </Overview>
+  <Config Name="WebUI" Target="8080" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
   <Config Name="Appdata Location" Target="/app/data" Default="/mnt/user/appdata/podsync/data" Mode="rw" Description="AppData Location" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/podsync</Config>
   <Config Name="Config Location" Target="/app/config.toml" Default="/mnt/user/appdata/podsync/config.toml" Mode="rw" Description="Application Config File" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/podsync/config.toml</Config>
 </Container>
