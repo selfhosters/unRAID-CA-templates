@@ -18,7 +18,7 @@
   <Config Name="WebUI Port" Target="80" Default="8080" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
   <Config Name="Admin Email" Target="APP_ADMIN_EMAIL" Default="admin@example.com" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">admin@example.com</Config>
   <Config Name="Admin Password" Target="APP_ADMIN_PASSWORD" Default="password" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">password</Config>
-  <Config Name="Debug" Target="APP_DEBUG" Default="true" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">true</Config>
+  <Config Name="Debug" Target="APP_DEBUG" Default="true" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">true</Config>
   <Config Name="Language" Target="APP_LANG" Default="en" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">en</Config>
   <Config Name="Workspace Name" Target="APP_WORKSPACE" Default="My plant home" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">My plant home</Config>
   <Config Name="Enable Scroller" Target="APP_ENABLE_SCROLLER" Default="true" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">true</Config>
