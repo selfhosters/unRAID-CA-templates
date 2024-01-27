@@ -10,7 +10,7 @@
   <Project>https://tabby.sh</Project>
   <Overview>Tabby Web - an SSH/Telnet/Serial client in your browser.</Overview>
   <Category>Productivity:</Category>
-  <WebUI>http://[IP]:[PORT:9090]</WebUI>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
   <Requires>MariaDB</Requires>
   <Config Name="Port HTTP" Target="80" Default="9090" Mode="tcp" Description="This sets the internal to external port mapping for WebUI" Type="Port" Display="always" Required="true" Mask="false">9090</Config>
   <Config Name="Database URL" Target="DATABASE_URL" Default="mysql://root:123@db/tabby" Mode="" Description="Sets the database location and credentials." Type="Variable" Display="always" Required="true" Mask="false">mysql://root:123@db/tabby</Config>
