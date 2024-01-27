@@ -43,7 +43,7 @@
   <Config Name="" Target="DB_PORT" Default="3306" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">3306</Config>
   <Config Name="" Target="DB_DATABASE" Default="hortusfox" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">hortusfox</Config>
   <Config Name="" Target="DB_USERNAME" Default="root" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">root</Config>
-  <Config Name="" Target="DB_CHARSET" Default="utf8mb4" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">utf8mb4</Config>
+  <Config Name="" Target="DB_CHARSET" Default="utf8mb4" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">utf8mb4</Config>
   <Config Name="" Target="DB_USER" Default="root" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">root</Config>
   <Config Name="" Target="DB_PASSWORD" Default="my-secret-pw" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">my-secret-pw</Config>
   <Config Name="" Target="SMTP_FROMNAME" Default="test@domain.tld" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
