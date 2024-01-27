@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>tabby-web</Name>
+  <Repository>ghcr.io/eugeny/tabby-web:latest</Repository>
+  <Registry>https://hub.docker.com/r/outlinewiki/outline/</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/Eugeny/tabby-web/issues/new</Support>
+  <Project>https://tabby.sh</Project>
+  <Overview>Tabby Web - an SSH/Telnet/Serial client in your browser.</Overview>
+  <Category>Productivity:</Category>
+  <WebUI>http://[IP]:[PORT:9090]</WebUI>
+  <Requires>MariaDB</Requires>
+  <Config Name="Port HTTP" Target="80" Default="9090" Mode="tcp" Description="This sets the internal to external port mapping for WebUI" Type="Port" Display="always" Required="true" Mask="false">9090</Config>
+  <Config Name="Database URL" Target="DATABASE_URL" Default="mysql://root:123@db/tabby" Mode="" Description="Sets the database location and credentials." Type="Variable" Display="always" Required="true" Mask="false">mysql://root:123@db/tabby</Config>
+  <Config Name="Debug" Target="DEBUG" Default="false" Mode="" Description="Turns on/off debugging for the application." Type="Variable" Display="advanced" Required="true" Mask="false">false</Config>
+  <Config Name="Docker Arguments" Target="DOCKERIZE_ARGS" Default="-wait tcp://db:3306 -timeout 60s" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">-wait tcp://db:3306 -timeout 60s</Config>
+  <Config Name="Port" Target="PORT" Default="80" Mode="" Description="DO NOT CHANGE - This is setting the internal Web UI port for the container." Type="Variable" Display="advanced" Required="true" Mask="false">80</Config>
+</Container>
