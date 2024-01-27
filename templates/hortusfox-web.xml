@@ -28,7 +28,7 @@
   <Config Name="" Target="APP_SHOW_CHAT_ONLINE_USERS" Default="false" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">false</Config>
   <Config Name="" Target="APP_SHOW_CHAT_TYPING_INDICATOR" Default="false" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">false</Config>
   <Config Name="" Target="APP_OVERDUE_TASK_HOURS" Default="10" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">10</Config>
-  <Config Name="" Target="APP_CRON_PW" Default="test" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">test</Config>
+  <Config Name="" Target="APP_CRON_PW" Default="test" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">test</Config>
   <Config Name="" Target="APP_CRON_MAIL_LIMIT" Default="5" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">5</Config>
   <Config Name="" Target="APP_ENABLE_HISTORY" Default="true" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">true</Config>
   <Config Name="" Target="APP_HISTORY_NAME" Default="History" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">History</Config>
