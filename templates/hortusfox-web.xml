@@ -10,7 +10,7 @@
   <Project>https://hortusfox.github.io/</Project>
   <Overview>Self-hosted collaborative plant management system for your local environment</Overview>
   <Category>Productivity:</Category>
-  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
   <Requires>MariaDB
     </Requires>
   <Config Name="App Images" Target="/var/www/html/public/img" Default="/mnt/user/appdata/hortusfox-web/app_images" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/hortusfox-web/app_images</Config>
