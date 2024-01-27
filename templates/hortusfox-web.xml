@@ -53,5 +53,5 @@
   <Config Name="" Target="SMTP_USERNAME" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="" Target="SMTP_PASSWORD" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="" Target="SMTP_ENCRYPTION" Default="tls" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">tls</Config>
-  <Config Name="" Target="LOG_ENABLE" Default="true" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="" Target="LOG_ENABLE" Default="true" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">true</Config>
 </Container>
