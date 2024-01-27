@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Podsync</Name>
+  <Repository>mxpv/podsync</Repository>
+  <Registry>https://hub.docker.com/r/mxpv/podsync</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/mxpv/podsync/issues/new</Support>
+  <Project>https://github.com/mxpv/podsync/</Project>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
+  <Overview>Turn YouTube or Vimeo channels, users, or playlists into podcast feeds</Overview>
+  <Config Name="Appdata Location" Target="/app/data" Default="/mnt/user/appdata/podsync/data" Mode="rw" Description="AppData Location" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/podsync</Config>
+  <Config Name="Config Location" Target="/app/config.toml" Default="/mnt/user/appdata/podsync/config.toml" Mode="rw" Description="Application Config File" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/podsync/config.toml</Config>
+</Container>
