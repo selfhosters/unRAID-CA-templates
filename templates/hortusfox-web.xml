@@ -38,7 +38,7 @@
   <Config Name="" Target="PHOTO_RESIZE_FACTOR_2" Default="0.4" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">0.4</Config>
   <Config Name="" Target="PHOTO_RESIZE_FACTOR_3" Default="0.4" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">0.4</Config>
   <Config Name="" Target="PHOTO_RESIZE_FACTOR_4" Default="0.3" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">0.3</Config>
-  <Config Name="" Target="PHOTO_RESIZE_FACTOR_5" Default="0.2" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">0.2</Config>
+  <Config Name="" Target="PHOTO_RESIZE_FACTOR_5" Default="0.2" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">0.2</Config>
   <Config Name="" Target="DB_HOST" Default="db" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">db</Config>
   <Config Name="" Target="DB_PORT" Default="3306" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">3306</Config>
   <Config Name="" Target="DB_DATABASE" Default="hortusfox" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">hortusfox</Config>
