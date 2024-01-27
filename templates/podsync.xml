@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>podsync</Name>
+  <Name>Podsync</Name>
   <Repository>mxpv/podsync</Repository>
   <Registry>https://hub.docker.com/r/mxpv/podsync</Registry>
   <Network>bridge</Network>
