@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>planka</Name>
-  <Icon>templates\img\planka.png</Icon>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/planka.png</Icon>
   <Repository>ghcr.io/plankanban/planka</Repository>
   <Registry>https://github.com/plankanban/planka/pkgs/container/planka</Registry>
   <Network>bridge</Network>
