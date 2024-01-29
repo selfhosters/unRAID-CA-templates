@@ -2,6 +2,7 @@
 <Container version="2">
   <Name>goaccess</Name>
   <Repository>allinurl/goaccess</Repository>
+  <Icon>templates\img\goaccess.png</Icon>
   <Registry>https://hub.docker.com/r/allinurl/goaccess/</Registry>
   <Network>bridge</Network>
   <Shell>sh</Shell>
