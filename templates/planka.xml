@@ -23,5 +23,5 @@
   <Config Name="WebUI Port" Target="1337" Default="3000" Mode="" Description="Web UI Port" Type="Port" Display="always" Required="true" Mask="false">3000</Config>
   <Config Name="Base URL" Target="BASE_URL" Default="http://localhost:3000" Mode="" Description="Base URL of Planka" Type="Variable" Display="always" Required="true" Mask="false">http://localhost:3000</Config>
   <Config Name="Database URL" Target="DATABASE_URL" Default="postgresql://postgres@postgres/planka" Mode="" Description="Postgres Database Auth" Type="Variable" Display="always" Required="true" Mask="false">postgresql://postgres@postgres/planka</Config>
-  <Config Name="Secret Key" Target="SECRET_KEY" Default="notsecretkey" Mode="" Description="Secret Key" Type="Variable" Display="always" Required="true" Mask="false">notsecretkey</Config>
+  <Config Name="Secret Key" Target="SECRET_KEY" Default="notsecretkey" Mode="" Description="Secret Key" Type="Variable" Display="always" Required="true" Mask="true">notsecretkey</Config>
 </Container>
