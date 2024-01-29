@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>ampache</Name>
+  <Repository>ampache/ampache</Repository>
+  <Registry>https://hub.docker.com/r/ampache/ampache/</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/ampache/ampache/issues</Support>
+  <Project>https://ampache.org/</Project>
+  <Overview>Ampache ...for the love of music</Overview>
+  <WebUI>http://[IP]:[PORT:8084]</WebUI>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/ampache.png</Icon>
+  <Config Name="App Data Location" Target="/var/www/html" Default="/mnt/user/appdata/ampache/config" Mode="rw" Description="Location for Appdata" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/ampache/config</Config>
+  <Config Name="Log Location" Target="/var/log/ampache" Default="/mnt/user/appdata/ampache/logs" Mode="rw" Description="Location for Logs" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/ampache/logs</Config>
+  <Config Name="Music Location" Target="/media" Default="/mnt/user/music" Mode="rw" Description="Location for Music" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/music</Config>
+</Container>
