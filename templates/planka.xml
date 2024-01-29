@@ -20,8 +20,8 @@
   <Config Name="User Avatars" Target="/app/public/user-avatars" Default="/mnt/user/appdata/planka/user-avatars" Mode="rw" Description="User Avatar Storage Location" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/planka/user-avatars</Config>
   <Config Name="Project Background Images" Target="/app/public/project-background-images" Default="/mnt/user/appdata/planka/project-background-images" Mode="rw" Description="Background Image Location" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/planka/project-background-images</Config>
   <Config Name="Attachments" Target="/app/private/attachments" Default="/mnt/user/appdata/planka/attachments" Mode="rw" Description="Attachment Storage Location" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/planka/attachments</Config>
-  <Config Name="WebUI Port" Target="3000" Default="1337" Mode="" Description="Web UI Port" Type="Port" Display="always" Required="true" Mask="false">1337</Config>
+  <Config Name="WebUI Port" Target="1337" Default="3000" Mode="" Description="Web UI Port" Type="Port" Display="always" Required="true" Mask="false">3000</Config>
   <Config Name="Base URL" Target="BASE_URL" Default="http://localhost:3000" Mode="" Description="Base URL of Planka" Type="Variable" Display="always" Required="true" Mask="false">http://localhost:3000</Config>
   <Config Name="Database URL" Target="DATABASE_URL" Default="postgresql://postgres@postgres/planka" Mode="" Description="Postgres Database Auth" Type="Variable" Display="always" Required="true" Mask="false">postgresql://postgres@postgres/planka</Config>
-  <Config Name="Secret Key" Target="SECRET_KEY" Default="notsecretkey" Mode="" Description="Secret Key" Type="Variable" Display="always" Required="true" Mask="false">notsecretkey</Config>
+  <Config Name="Secret Key" Target="SECRET_KEY" Default="notsecretkey" Mode="" Description="Secret Key" Type="Variable" Display="always" Required="true" Mask="true">notsecretkey</Config>
 </Container>
