@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>planka</Name>
+  <Icon>templates\img\planka.png</Icon>
   <Repository>ghcr.io/plankanban/planka</Repository>
   <Registry>https://github.com/plankanban/planka/pkgs/container/planka</Registry>
   <Network>bridge</Network>
@@ -9,6 +10,7 @@
   <Support>https://github.com/plankanban/planka/issues</Support>
   <Project>https://planka.app/</Project>
   <Requires>Postgres</Requires>
+  <WebUI>HTTP://[IP]:[PORT:3000]</WebUI>
   <PostArgs>bash -c
         "for i in `seq 1 30`; do
           ./start.sh &&
