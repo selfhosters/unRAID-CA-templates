@@ -6,7 +6,7 @@
   <Network>bridge</Network>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>https://github.com/allinurl/goaccess/issues/new</Support>
+  <Support>https://github.com/allinurl/goaccess/issues/</Support>
   <Project>https://goaccess.io/</Project>
   <Overview>TelegramBot for Sonarr and Radarrde to add series to Sonarr or movies to Radarr with a couple of commands. You can also communicate with your Transmission/Sabnzbd service to change its download speed</Overview>
   <WebUI>http://[IP]:[PORT:7890]</WebUI>
