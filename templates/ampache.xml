@@ -13,6 +13,6 @@
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/ampache.png</Icon>
   <Config Name="Config Location" Target="/var/www/html" Default="/mnt/user/appdata/ampache/config" Mode="rw" Description="Location for app configuration" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/ampache/config</Config>
   <Config Name="Log Location" Target="/var/log/ampache" Default="/mnt/user/appdata/ampache/logs" Mode="rw" Description="Location for Logs" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/ampache/logs</Config>
-  <Config Name="Music Location" Target="/media" Default="/mnt/user/music" Mode="rw" Description="Location for Music" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/music</Config>
+  <Config Name="Music Location" Target="/media" Default="/mnt/user/appdata/ampache/media" Mode="ro" Description="Location for media files" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/ampache/media</Config>
   <Config Name="WebUI Port" Target="80" Default="8084" Mode="" Description="Web UI Port" Type="Port" Display="always" Required="true" Mask="false">8084</Config>
 </Container>
