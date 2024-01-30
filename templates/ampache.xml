@@ -8,7 +8,10 @@
   <Privileged>false</Privileged>
   <Support>https://github.com/ampache/ampache/issues</Support>
   <Project>https://ampache.org/</Project>
-  <Overview>Ampache ...for the love of music</Overview>
+  <Overview>Ampache ...for the love of music&#xD;
+  &#xD;
+  You will need to follow the configuration steps here once the container is running: https://github.com/ampache/ampache/wiki/Basic &#xD;
+  &#xD;</Overview>
   <WebUI>http://[IP]:[PORT:8084]</WebUI>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/ampache.png</Icon>
   <Config Name="Config Location" Target="/var/www/html" Default="/mnt/user/appdata/ampache/config" Mode="rw" Description="Location for app configuration" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/ampache/config</Config>
