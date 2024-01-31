@@ -27,6 +27,6 @@
   <Config Name="SMTP settings" Target="MAIL_SMTP_VARIABLES" Default="" Mode="" Description="Details for email SMTP. See https://github.com/ttionya/vaultwarden-backup?tab=readme-ov-file#mail_smtp_variables" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
   <Config Name="Email recipient" Target="MAIL_TO" Default="" Mode="" Description="Email address to send emails to." Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
   <Config Name="Send email after backup" Target="MAIL_WHEN_SUCCESS" Default="FALSE" Mode="" Description="Whether to send emails after a successful backup" Type="Variable" Display="advanced" Required="false" Mask="false">FALSE</Config>
-  <Config Name="Mail When Failed" Target="MAIL_WHEN_FAILURE" Default="TRUE" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">TRUE</Config>
+  <Config Name="Send email after failure" Target="MAIL_WHEN_FAILURE" Default="FALSE" Mode="" Description="Whether to send emails after a failed backup" Type="Variable" Display="advanced" Required="false" Mask="false">FALSE</Config>
   <Config Name="Timezone" Target="TIMEZONE" Default="UTC" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">UTC</Config>
 </Container>
