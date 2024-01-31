@@ -13,7 +13,7 @@
   <Overview>Backup vaultwarden (formerly known as bitwarden_rs)</Overview>
   <Config Name="Vaultwarden/Bitwarden data location" Target="/bitwarden/data/" Default="" Mode="rw" Description="Where Vaultwarden/Bitwarden data is stored" Type="Path" Display="always" Required="true" Mask="false"></Config>
   <Config Name="rclone config location" Target="/config/" Default="/mnt/user/appdata/vaultwarden-backup/rclone" Mode="rw" Description="Location of rclone config" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/vaultwarden-backup/rclone</Config>
-  <Config Name="Rclone Remote Name" Target="RCLONE_REMOTE_NAME" Default="BitwardenBackup" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">BitwardenBackup</Config>
+  <Config Name="rclone remote name" Target="RCLONE_REMOTE_NAME" Default="BitwardenBackup" Mode="" Description="Name of rclone remote to use for backups" Type="Variable" Display="always" Required="true" Mask="false">BitwardenBackup</Config>
   <Config Name="Rclone Remote Directory" Target="RCLONE_REMOTE_DIR" Default="/BitwardenBackup/" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">/BitwardenBackup/</Config>
   <Config Name="Rclone Global Flag" Target="RCLONE_GLOBAL_FLAG" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
   <Config Name="CRON" Target="CRON" Default="5 * * * *" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">5 * * * *</Config>
