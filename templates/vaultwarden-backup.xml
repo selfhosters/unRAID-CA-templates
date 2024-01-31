@@ -13,7 +13,6 @@
   <Overview>Backup vaultwarden (formerly known as bitwarden_rs)</Overview>
   <Config Name="Vaultwarden/Bitwarden data location" Target="/bitwarden/data/" Default="" Mode="rw" Description="Where Vaultwarden/Bitwarden data is stored" Type="Path" Display="always" Required="true" Mask="false"></Config>
   <Config Name="rclone config location" Target="/config/" Default="/mnt/user/appdata/vaultwarden-backup/rclone" Mode="rw" Description="Location of rclone config" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/vaultwarden-backup/rclone</Config>
-  <Config Name="Environment File" Target="/.env" Default="/mnt/user/appdata/vaultwarden-backup/env" Mode="rw" Description="Environment File Location" Type="Path" Display="advanced" Required="false" Mask="false">/mnt/user/appdata/vaultwarden-backup/env</Config>
   <Config Name="Rclone Remote Name" Target="RCLONE_REMOTE_NAME" Default="BitwardenBackup" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">BitwardenBackup</Config>
   <Config Name="Rclone Remote Directory" Target="RCLONE_REMOTE_DIR" Default="/BitwardenBackup/" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">/BitwardenBackup/</Config>
   <Config Name="Rclone Global Flag" Target="RCLONE_GLOBAL_FLAG" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
