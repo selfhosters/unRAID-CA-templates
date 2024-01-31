@@ -24,7 +24,7 @@
   <Config Name="Days to Keep Backup" Target="BACKUP_KEEP_DAYS" Default="0" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">0</Config>
   <Config Name="URL to Ping" Target="PING_URL" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
   <Config Name="Enable email" Target="MAIL_SMTP_ENABLE" Default="FALSE" Mode="" Description="Enable email notifications" Type="Variable" Display="advanced" Required="false" Mask="false">FALSE</Config>
-  <Config Name="SMTP Variables" Target="MAIL_SMTP_VARIABLES" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="SMTP settings" Target="MAIL_SMTP_VARIABLES" Default="" Mode="" Description="Details for email SMTP. See https://github.com/ttionya/vaultwarden-backup?tab=readme-ov-file#mail_smtp_variables" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
   <Config Name="Mail To" Target="MAIL_TO" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
   <Config Name="Mail When Successful" Target="MAIL_WHEN_SUCCESS" Default="TRUE" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">TRUE</Config>
   <Config Name="Mail When Failed" Target="MAIL_WHEN_FAILURE" Default="TRUE" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">TRUE</Config>
