@@ -10,7 +10,9 @@
   <Support>https://github.com/Homelabbers/unraid-templates/issues/new/choose</Support>
   <Project>https://github.com/ttionya/vaultwarden-backup</Project>
   <Requires>Vaultwarden</Requires>
-  <Overview>Backup vaultwarden (formerly known as bitwarden_rs)</Overview>
+  <Overview>Backup vaultwarden (formerly known as bitwarden_rs) &#xD;
+  You will need to setup rclone using this guide: https://github.com/ttionya/vaultwarden-backup?tab=readme-ov-file#configure-rclone-%EF%B8%8F-must-read-%EF%B8%8F &#xD;
+  </Overview>
   <Config Name="Vaultwarden/Bitwarden data location" Target="/bitwarden/data/" Default="" Mode="rw" Description="Where Vaultwarden/Bitwarden data is stored" Type="Path" Display="always" Required="true" Mask="false"></Config>
   <Config Name="rclone config location" Target="/config/" Default="/mnt/user/appdata/vaultwarden-backup/rclone" Mode="rw" Description="Location of rclone config" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/vaultwarden-backup/rclone</Config>
   <Config Name="rclone remote name" Target="RCLONE_REMOTE_NAME" Default="BitwardenBackup" Mode="" Description="Name of rclone remote to use for backups" Type="Variable" Display="always" Required="true" Mask="false">BitwardenBackup</Config>
