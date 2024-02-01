@@ -12,7 +12,7 @@
     <WebUI>http://[IP]:[PORT:7780]</WebUI>
     <Category>MediaServer:Music MediaServer:Other</Category>
     <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/teddycloud.xml</TemplateURL>
-    <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/teddycloud.xml</Icon>
+    <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/teddycloud.png</Icon>
     <Config Name="WEB UI" Target="80" Default="7780" Mode="tcp" Description="This an optional port for the webui of teddycloud" Type="Port" Display="always" Required="true" Mask="false"/>
     <Config Name="SSL-Certs" Target="443" Default="7443" Mode="tcp" Description="Required PORT to get certificates" Type="Port" Display="always" Required="true" Mask="false">7443</Config>
     <Config Name="content" Target="/teddycloud/data/content" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/teddycloud/data/content</Config>
