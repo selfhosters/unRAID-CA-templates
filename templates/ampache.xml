@@ -12,7 +12,7 @@
   &#xD;
   You will need to follow the configuration steps here once the container is running: https://github.com/ampache/ampache/wiki/Basic &#xD;
   &#xD;</Overview>
-  <WebUI>http://[IP]:[PORT:8084]</WebUI>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/ampache.png</Icon>
   <Config Name="Config Location" Target="/var/www/html" Default="/mnt/user/appdata/ampache/config" Mode="rw" Description="Location for app configuration" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/ampache/config</Config>
   <Config Name="Log Location" Target="/var/log/ampache" Default="/mnt/user/appdata/ampache/logs" Mode="rw" Description="Location for Logs" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/ampache/logs</Config>
