@@ -10,7 +10,7 @@
   <Support>https://github.com/plankanban/planka/issues</Support>
   <Project>https://planka.app/</Project>
   <Requires>Postgres</Requires>
-  <WebUI>http://[IP]:[PORT:3000]</WebUI>
+  <WebUI>http://[IP]:[PORT:1337]</WebUI>
   <PostArgs>bash -c
         "for i in `seq 1 30`; do
           ./start.sh &&
