@@ -19,9 +19,9 @@
   <Config Name="Config" Target="/app/" Default="/mnt/user/appdata/siteinspector" Mode="rw" Description="Config Location" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/siteinspector</Config>
   <Config Name="Web UI" Target="808" Default="808" Mode="" Description="Web UI Port" Type="Port" Display="always" Required="true" Mask="false">808</Config>
   <Config Name="Secret Key Base" Target="SECRET_KEY_BASE" Default="" Mode="" Description="Secret Key Base" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
-  <Config Name="Enable Logging" Target="RAILS_LOG_TO_STDOUT" Default="true" Mode="" Description="Enable log reporting" Type="Path" Display="always" Required="true" Mask="false">true</Config>
-  <Config Name="Database Connection" Target="DATABASE_URL" Default="postgresql://postgres:postgres@postgres:5432/siteinspector" Mode="" Description="Postgres Database Connection String" Type="Path" Display="always" Required="true" Mask="false">postgresql://postgres:postgres@postgres:5432/siteinspector</Config>
-  <Config Name="Redis Connection" Target="REDIS_URL" Default="redis://redis:6379/0" Mode="" Description="Redis Connection String" Type="Path" Display="always" Required="true" Mask="false">redis://redis:6379/0</Config>
-  <Config Name="Port for Web UI" Target="PORT" Default="808" Mode="" Description="Enable log reporting" Type="Path" Display="advanced" Required="true" Mask="false">808</Config>
-  <Config Name="Sidekiq Currency" Target="SIDEKIQ_CONCURRENCY" Default="10" Mode="" Description="" Type="Path" Display="advanced" Required="true" Mask="false">10</Config>
+  <Config Name="Enable Logging" Target="RAILS_LOG_TO_STDOUT" Default="true" Mode="" Description="Enable log reporting" Type="Variable" Display="always" Required="true" Mask="false">true</Config>
+  <Config Name="Database Connection" Target="DATABASE_URL" Default="postgresql://postgres:postgres@postgres:5432/siteinspector" Mode="" Description="Postgres Database Connection String" Type="Variable" Display="always" Required="true" Mask="false">postgresql://postgres:postgres@postgres:5432/siteinspector</Config>
+  <Config Name="Redis Connection" Target="REDIS_URL" Default="redis://redis:6379/0" Mode="" Description="Redis Connection String" Type="Variable" Display="always" Required="true" Mask="false">redis://redis:6379/0</Config>
+  <Config Name="Port for Web UI" Target="PORT" Default="808" Mode="" Description="Enable log reporting" Type="Port" Display="advanced" Required="true" Mask="false">808</Config>
+  <Config Name="Sidekiq Currency" Target="SIDEKIQ_CONCURRENCY" Default="10" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">10</Config>
 </Container>
