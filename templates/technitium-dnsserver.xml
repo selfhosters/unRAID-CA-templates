@@ -15,7 +15,7 @@
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/technitium-dnsserver.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/Technitium.png</Icon>
   <ExtraParams>--user 99:100 --sysctl="net.ipv4.ip_local_port_range=1024 65000"</ExtraParams>
-  <Config Name="App data" Target="/etc/dns/config" Default="/mnt/user/appdata/technitium-dnsserver" Mode="rw" Description="Container Path: /etc/dns/config" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/technitium-dnsserver</Config>
+  <Config Name="App data" Target="/etc/dns/" Default="/mnt/user/appdata/technitium-dnsserver" Mode="rw" Description="Container Path: /etc/dns" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/technitium-dnsserver</Config>
   <Config Name="Web UI" Target="5380" Default="5380" Mode="tcp" Description="Container Port: " Type="Port" Display="always" Required="false" Mask="false">5380</Config>
   <Config Name="DNS Port" Target="53" Default="53" Mode="udp" Description="Container Port: 53" Type="Port" Display="always" Required="false" Mask="false">53</Config>
 </Container>
