@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>ampache</Name>
+  <Repository>ampache/ampache</Repository>
+  <Registry>https://hub.docker.com/r/ampache/ampache/</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/ampache/ampache/issues</Support>
+  <Project>https://ampache.org/</Project>
+  <Overview>Ampache ...for the love of music&#xD;
+  &#xD;
+  You will need to follow the configuration steps here once the container is running: https://github.com/ampache/ampache/wiki/Basic &#xD;
+  &#xD;</Overview>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/ampache.png</Icon>
+  <Config Name="Config Location" Target="/var/www/html" Default="/mnt/user/appdata/ampache/config" Mode="rw" Description="Location for app configuration" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/ampache/config</Config>
+  <Config Name="Log Location" Target="/var/log/ampache" Default="/mnt/user/appdata/ampache/logs" Mode="rw" Description="Location for Logs" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/ampache/logs</Config>
+  <Config Name="Music Location" Target="/media" Default="/mnt/user/appdata/ampache/media" Mode="ro" Description="Location for media files" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/ampache/media</Config>
+  <Config Name="WebUI Port" Target="80" Default="8084" Mode="" Description="Web UI Port" Type="Port" Display="always" Required="true" Mask="false">8084</Config>
+</Container>
