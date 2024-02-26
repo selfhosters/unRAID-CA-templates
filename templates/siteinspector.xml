@@ -9,10 +9,10 @@
   <Support>https://github.com/siteinspector/siteinspector/issues</Support>
   <Project>https://github.com/siteinspector/siteinspector</Project>
   <WebUI>http://[IP]:[PORT:808]</WebUI>
-  <Requires>Postgres &#xD;
-  Redis &#xD;
+  <Requires>Postgres &amp;#xD;
+  Redis &amp;#xD;
   </Requires>
-  <PostParams>bash -c "rake db:migrate && foreman start"</PostParams>
+  <PostParams>bash -c "rake db:migrate &amp;&amp; foreman start"</PostParams>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/siteinspector.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/siteinspector.png</Icon>
   <Overview>A tool for catching spelling errors, grammatical errors, broken links, and other errors on websites.</Overview>
