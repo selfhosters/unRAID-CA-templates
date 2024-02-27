@@ -13,8 +13,8 @@
   <WebUI>http://[IP]:[PORT:1337]</WebUI>
   <PostArgs>bash -c
         "for i in `seq 1 30`; do
-          ./start.sh &&
-          s=$$? && break || s=$$?;
+          ./start.sh &amp;&amp;
+          s=$$? &amp;&amp; break || s=$$?;
           echo \"Tried $$i times. Waiting 5 seconds...\";
           sleep 5;
         done; (exit $$s)"</PostArgs>
