@@ -11,13 +11,7 @@
   <Project>https://planka.app/</Project>
   <Requires>Postgres</Requires>
   <WebUI>http://[IP]:[PORT:1337]</WebUI>
-  <PostArgs>bash -c
-        "for i in `seq 1 30`; do
-          ./start.sh &amp;&amp;
-          s=$$? &amp;&amp; break || s=$$?;
-          echo \"Tried $$i times. Waiting 5 seconds...\";
-          sleep 5;
-        done; (exit $$s)"</PostArgs>
+  <PostArgs></PostArgs>
   <Overview>The realtime kanban board for workgroups built with React and Redux.</Overview>
   <Config Name="User Avatars" Target="/app/public/user-avatars" Default="/mnt/user/appdata/planka/user-avatars" Mode="rw" Description="User Avatar Storage Location" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/planka/user-avatars</Config>
   <Config Name="Project Background Images" Target="/app/public/project-background-images" Default="/mnt/user/appdata/planka/project-background-images" Mode="rw" Description="Background Image Location" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/planka/project-background-images</Config>
