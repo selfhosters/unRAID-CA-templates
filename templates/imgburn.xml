@@ -13,7 +13,7 @@ It runs Imgburn and starts a virtual X server and a VNC server with Web GUI, so 
 &#xD;
 This container needs additional installation steps after running the docker, which can be found here: https://github.com/JWolvers/imgburn-wine-container/?tab=readme-ov-file#installation</Overview>
   <Category>Backup: Cloud: Network:Other Productivity: Tools:Utilities</Category>
-  <WebUI>http://[IP]:[PORT:5888]/</WebUI>
+  <WebUI>http://[IP]:[PORT:5800]/</WebUI>
   <Icon>https://upload.wikimedia.org/wikipedia/en/f/fc/ImgBurn_logo.png</Icon>
   <ExtraParams>--init</ExtraParams>
   <DonateText>I don't accept donations, please support Imgburn or the upstream developers instead.</DonateText>
