@@ -14,7 +14,7 @@ It runs the Backblaze client and starts a virtual X server and a VNC server with
 This container needs additional installation steps after running the docker, which can be found here: https://github.com/JonathanTreffler/backblaze-personal-wine-container#installation</Overview>
   <Category>Backup: Cloud: Network:Other Productivity: Tools:Utilities</Category>
   <WebUI>http://[IP]:[PORT:5800]/</WebUI>
-  <Icon>https://www.backblaze.com/pics/cloud-blaze.png</Icon>
+  <Icon>https://assets-global.website-files.com/63d32de856f6323a43a277f2/64b1ab4aa5aef8291e9291ab_Favicon.png</Icon>
   <ExtraParams>--init</ExtraParams>
   <DonateText>I would greatly appreciate a donation, so i can continue my open source work :)</DonateText>
   <DonateLink>https://github.com/sponsors/JonathanTreffler</DonateLink>
