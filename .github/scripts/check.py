@@ -7,6 +7,7 @@ import xml.etree.ElementTree as ET
 import re
 import os
 import argparse
+from urllib.parse import urlparse
 
 blacklistedChars: list = ["<", ">", "&", "\"", "'"]
 bloatTags: list = ["DateInstalled", "Networking", "Data", "Environment"]
@@ -33,6 +34,7 @@ class LineNumberingParser(ET.XMLParser): # https://stackoverflow.com/a/36430270
 def check_xml(filename: str):
   webUiPort: dict = { "port": None, "line": None }
   targetPorts: list = []
+  requiredLinks: bool = False
 
   tree = ET.parse(filename, parser=LineNumberingParser())
 
@@ -40,7 +42,14 @@ def check_xml(filename: str):
 
   # Errors
 
-  if root.find("Support") is None or root.find("Project") is None:
+  for tag in ["Support", "Project"]:
+    if (tag := root.find(tag)) is not None:
+      if len(tag.text) != 0:
+        if not (tag.text.startswith(" ") or tag.text.endswith(" ")):
+          requiredLinks = True
+          break
+
+  if not requiredLinks:
     title = "Missing Support or Project Link"
     message = "No Support or Project Link Present"
     print(f"::error file={filename},title={title}::{message}")
@@ -125,6 +134,6 @@ if __name__ == "__main__":
     directory = "templates"
     for filename in os.scandir(directory):
       if filename.name.endswith(".xml") and filename.is_file():
-          if filename.name == "ca_profile.xml":
-            pass
+          if filename.name.endswith("ca_profile.xml"):
+            continue
           check_xml(filename = filename.path)
