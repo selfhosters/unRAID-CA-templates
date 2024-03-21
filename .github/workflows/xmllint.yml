@@ -13,17 +13,27 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v1
-      - name: Prep Enviroment
-        run: sudo apt-get update -q && sudo apt-get install -qy libxml2-utils
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v43
+        with:
+          files: |
+            templates/*.xml
 
       - name: Run linter
-        env:
-          sha: ${{ github.sha }}
         run: |
-          for file in $(git diff-tree --no-commit-id --name-only -r $sha ); do
-            if [[ ${file} == *.xml ]] && [[ -f ${file} ]]
-            then
-              xmllint $file
-             fi
-          done;
+          sudo apt-get update -q && sudo apt-get install -qy libxml2-utils
+          xmllint ${{ steps.changed-files.outputs.all_changed_files }}
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.11
+
+      - name: Run template check
+        shell: bash
+        run: python .github/scripts/check.py --files ${{ steps.changed-files.outputs.all_changed_files }}
