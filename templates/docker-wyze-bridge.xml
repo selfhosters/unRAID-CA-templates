@@ -3,6 +3,22 @@
   <Name>docker-wyze-bridge</Name>
   <Repository>mrlt8/wyze-bridge</Repository>
   <Registry>https://hub.docker.com/r/mrlt8/wyze-bridge</Registry>
+  <Branch>
+    <Tag>latest</Tag>
+    <TagDescription>Latest stable release.</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>latest-hw</Tag>
+    <TagDescription>Latest stable release for amd64 with additinal drivers for harware accelerated encoding.</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>latest-qsv</Tag>
+    <TagDescription>Latest stable release for amd64 with additinal drivers for QSV accelerated encoding.</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>dev</Tag>
+    <TagDescription>Latest development release for testing future changes.</TagDescription>
+  </Branch>
   <Network>bridge</Network>
   <Support>https://github.com/mrlt8/docker-wyze-bridge</Support>
   <Project>https://github.com/mrlt8/docker-wyze-bridge</Project>
