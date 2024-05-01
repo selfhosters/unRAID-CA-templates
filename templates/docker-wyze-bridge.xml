@@ -11,7 +11,7 @@
   <WebUI>http://[IP]:[PORT:5000]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/docker-wyze-bridge.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/wyze.png</Icon>
-  <DonateText/>ko-fi</DonateText>
+  <DonateText>ko-fi</DonateText>
   <DonateLink>https://ko-fi.com/mrlt8</DonateLink>
   <Config Name="WYZE_EMAIL" Target="WYZE_EMAIL" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="WYZE_PASSWORD" Target="WYZE_PASSWORD" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="true"/>
