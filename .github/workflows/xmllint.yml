@@ -23,6 +23,7 @@ jobs:
         with:
           files: |
             templates/*.xml
+            templates/deprecated/*.xml
 
       - name: Run linter
         run: |
