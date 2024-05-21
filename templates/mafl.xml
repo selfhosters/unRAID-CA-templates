@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <Name>Mafl</Name>
+    <Repository>hywax/mafl</Repository>
+    <Registry>https://hub.docker.com/r/hywax/mafl</Registry>
+    <Network>bridge</Network>
+    <Privileged>false</Privileged>
+    <Support>https://github.com/hywax/mafl/issues/new/choose</Support>
+    <Shell>sh</Shell>
+    <Project>https://mafl.hywax.space</Project>
+    <Overview>
+        Mafl is an intuitive service for organizing your homepage. Customize Mafl to your individual needs and work even more efficiently!
+    </Overview>
+    <Beta>False</Beta>
+    <WebUI>http://[IP]:[PORT:3000]</WebUI>
+    <Category>Tools: Productivity: Status:Stable</Category>
+    <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/mafl.png</Icon>
+    <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/mafl.xml</TemplateURL>
+    <Maintainer>
+        <WebPage>https://github.com/selfhosters</WebPage>
+    </Maintainer>
+    <Requires>
+        Container expects a "config.yaml" file to be mounted at /app/data/config.yml before running. &#xD;
+        See https://mafl.hywax.space/reference/configuration.html for more information.
+    </Requires>
+    <Changes>
+        ### 2024-05-21
+
+        Initial release
+    </Changes>
+    <Config Name="WebUI Port" Target="3000" Default="3000" Mode="tcp" Description="Web UI Port" Type="Port" Display="always" Required="true" Mask="false">3000</Config>
+    <Config Name="Config" Target="/app/data/config.yml" Default="/mnt/user/appdata/mafl/config.yaml" Mode="ro" Description="" Type="Path" Display="advanced" Required="true" Mask="false"/>
+    <Config Name="Local Icons" Target="/app/public/favicons" Default="/mnt/user/appdata/mafl/favicons" Mode="rw" Description="" Type="Path" Display="advanced" Required="false" Mask="false"/>
+    <Config Name="Favicon Icons" Target="/app/public/icons" Default="/mnt/user/appdata/mafl/icons" Mode="rw" Description="" Type="Path" Display="advanced" Required="false" Mask="false"/>
+</Container>
