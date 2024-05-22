@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>goaccess</Name>
+  <Repository>allinurl/goaccess</Repository>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/goaccess.png</Icon>
+  <Registry>https://hub.docker.com/r/allinurl/goaccess/</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/allinurl/goaccess/issues/</Support>
+  <Project>https://goaccess.io/</Project>
+  <Overview>GoAccess is a real-time web log analyzer and interactive viewer that runs in a terminal in *nix systems or through your browser.</Overview>
+  <WebUI>http://[IP]:[PORT:7890]</WebUI>
+  <PostArgs>/var/log/access.log --log-format=COMBINED -o /var/www/goaccess/index.html --real-time-html --port=7890</PostArgs>
+  <Config Name="Log Location" Target="/var/log" Default="" Mode="rw" Description="Location for an access.log file" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Report Location" Target="/var/www/goaccess" Default="" Mode="rw" Description="Report Output Location" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/goaccess/reports</Config>
+  <Config Name="HTTP Port" Target="7890" Default="7890" Mode="tcp" Description="Container Port: 7890" Type="Port" Display="always" Required="false" Mask="false"/>
+</Container>
