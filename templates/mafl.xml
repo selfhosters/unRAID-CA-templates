@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <Container version="2">
     <Name>Mafl</Name>
-    <Repository>hywax/mafl</Repository>
-    <Registry>https://hub.docker.com/r/hywax/mafl</Registry>
+    <Repository>ghcr.io/hywax/mafl</Repository>
+    <Registry>https://github.com/hywax/mafl/pkgs/container/mafl</Registry>
     <Network>bridge</Network>
     <Privileged>false</Privileged>
     <Support>https://github.com/hywax/mafl/issues/new/choose</Support>
@@ -24,7 +24,7 @@
         See https://mafl.hywax.space/reference/configuration.html for more information.
     </Requires>
     <Changes>
-        ### 2024-05-21
+        ### 2024-05-22
 
         Initial release
     </Changes>
