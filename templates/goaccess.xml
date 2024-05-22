@@ -14,4 +14,5 @@
   <PostArgs>/var/log/access.log --log-format=COMBINED -o /var/www/goaccess/index.html --real-time-html --port=7890</PostArgs>
   <Config Name="Log Location" Target="/var/log" Default="" Mode="rw" Description="Location for an access.log file" Type="Path" Display="always" Required="true" Mask="false"></Config>
   <Config Name="Report Location" Target="/var/www/goaccess" Default="" Mode="rw" Description="Report Output Location" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/goaccess/reports</Config>
+  <Config Name="HTTP Port" Target="7890" Default="7890" Mode="tcp" Description="Container Port: 7890" Type="Port" Display="always" Required="false" Mask="false"/>
 </Container>
