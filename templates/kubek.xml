@@ -2,6 +2,7 @@
 <Container version="2">
   <Name>Kubek</Name>
   <Repository>ghcr.io/rxflex/kubek-minecraft-dashboard:main</Repository>
+  <Registry>https://ghcr.io/rxflex/kubek-minecraft-dashboard</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
   <Support>https://github.com/Rxflex/kubek-minecraft-dashboard/issues</Support>
