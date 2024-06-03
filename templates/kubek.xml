@@ -14,5 +14,5 @@
   <Config Name="WebUI" Target="3000" Default="3000" Mode="tcp" Description="Container Port: 3000" Type="Port" Display="always" Required="true" Mask="false"/>
   <Config Name="Minecraft Server Port" Target="25565" Default="25565" Mode="tcp" Description="Minecraft Port" Type="Port" Display="always" Required="true" Mask="false"/>
   <Config Name="Servers Directory" Target="/usr/kubek/servers" Default="/mnt/user/appdata/kubek/servers" Mode="rw" Description="Container Path: /usr/kubek/servers" Type="Path" Display="advanced" Required="true" Mask="false"/>
-  <Config Name="Java Directory" Target="/usr/kubek/binaries" Default="/mnt/user/appdata/kubek/binaries" Mode="rw" Description="Container Path: /usr/kubek/servers" Type="Path" Display="advanced" Required="true" Mask="false"/>
+  <Config Name="Java Directory" Target="/usr/kubek/binaries" Default="/mnt/user/appdata/kubek/binaries" Mode="rw" Description="Container Path: /usr/kubek/binaries" Type="Path" Display="advanced" Required="true" Mask="false"/>
 </Container>
