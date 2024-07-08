@@ -11,10 +11,8 @@
   <Overview>Lightweight network IP scanner with web GUI.</Overview>
   <Category>Tools: Network:Management</Category>
   <WebUI>http://[IP]:[PORT:8840]</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/watchyourlan.xml</TemplateURL/>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/watchyourlan.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/aceberg/WatchYourLAN/main/assets/logo.png</Icon>
   <Requires>Network Type needs to be set to Host.</Requires>
   <Config Name="Config" Target="/data" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/wyl</Config>
-  <Config Name="Timezone" Target="TZ" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Web UI" Target="GUIPORT" Default="8840" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">8840</Config>
 </Container>
