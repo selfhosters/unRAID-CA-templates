@@ -1,24 +1,32 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Replex</Name>
-  <Repository>ghcr.io/sarendsen/replex</Repository>
-  <Registry>https://github.com/sarendsen/replex/pkgs/container/replex</Registry>
+  <Repository>ghcr.io/lostb1t/replex</Repository>
+  <Registry>https://github.com/lostb1t/replex/pkgs/container/replex</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
-  <Support>https://github.com/sarendsen/replex/issues</Support>
-  <Project>https://github.com/sarendsen/replex</Project>
+  <Support>https://github.com/lostb1t/replex/issues</Support>
+  <Project>https://github.com/lostb1t/replex</Project>
   <Overview>Remix your plex recommendations.</Overview>
   <Category>Tools: MediaServer:Other</Category>
   <WebUI>http://[IP]:[PORT:80]/</WebUI>
   <Config Name="Proxy Port" Target="80" Default="3001" Mode="tcp" Description="Port used to access the Plex proxy" Type="Port" Display="always" Required="true" Mask="false">3001</Config>
-  <Config Name="Plex Host" Target="REPLEX_HOST" Default="http://localhost:32400" Description="Plex target host to proxy." Type="Variable" Display="always" Required="true" Mask="false">http://localhost:32400</Config>
-  <Config Name="Hero Rows" Target="REPLEX_HERO_ROWS" Default="" Description="Comma-seperated list of hubidentifiers to make hero style" Type="Variable" Display="always" Required="true" Mask="false"/>
-  <Config Name="Include Watched?" Target="REPLEX_INCLUDE_WATCHED" Default="false" Description="If set to false, hide watched items" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
-  <Config Name="Disable User State?" Target="REPLEX_DISABLE_USER_STATE" Default="false" Description="If set to true, remove unwatched markers from artwork" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
-  <Config Name="Disable Leaf Count?" Target="REPLEX_DISABLE_LEAF_COUNT" Default="false" Description="If set to true, remove episode count label from show artwork" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
-  <Config Name="Disable Related?" Target="REPLEX_DISABLE_RELATED" Default="false" Description="If set to true, disable grabbing related media (avoid potential issues due to metadata corruption)" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
-  <Config Name="Redirect Streams?" Target="REPLEX_REDIRECT_STREAMS" Default="false" Description="If set to true, redirect streams to another endpoint" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
-  <Config Name="Redirect Streams Endpoint" Target="REPLEX_REDIRECT_STREAMS_URL" Default="" Description="Alternative streams endpoint" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="Cache TTL" Target="REPLEX_CACHE_TTL" Default="900" Description="Time to live for caches in seconds. Set to 0 to disable (not recommended)" Type="Variable" Display="always" Required="false" Mask="false">900</Config>
-  <Config Name="Auto-refresh Recommended Rows Cache?" Target="REPLEX_CACHE_REFRESH" Default="true" Description="If set to true, the cache for recommended rows are auto-refreshed for each user" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="Plex Host" Target="REPLEX_HOST" Default="http://localhost:32400" Description="URL of your Plex instance" Type="Variable" Display="always" Required="true" Mask="false">http://localhost:32400</Config>
+  <Config Name="Plex Token" Target="REPLEX_TOKEN" Default="" Description="Plex Token need for hero images" Type="Variable" Display="always" Required="true" Mask="false">Insert Token</Config>
+  <Config Name="Interleave?" Target="REPLEX_INTERLEAVE" Default="true" Description="Interleave home hubs. Collection hubs with the same name from different libraries are interleaved (combined) into one." Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="Exclude watched?" Target="REPLEX_EXCLUDE_WATCHED" Default="true" Description="If set to true, hide watched items for hubs." Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="Hub restrictions" Target="REPLEX_HUB_RESTRICTIONS" Default="true" Description="	Apply collections restrictions to their hub's, see GitHub for more info." Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="Disable continue watching?" Target="REPLEX_DISABLE_CONTINUE_WATCHING" Default="false" Description="Disable/remove the continue watching row." Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="Disable user state?" Target="REPLEX_DISABLE_USER_STATE" Default="true" Description="Remove watched badges from hub items. Doesn't work on all clients." Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="Disable leaf count?" Target="REPLEX_DISABLE_LEAF_COUNT" Default="false" Description="Remove episode count label from show artwork." Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="Hero rows" Target="REPLEX_HERO_ROWS" Default="" Description="Comma seperated list of hub-identifiers to make built-in hubs hero style, see GitHub for the options." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Force maximum quality?" Target="REPLEX_FORCE_MAXIMUM_QUALITY" Default="false" Description="This will force clients to use the maximum quality, see GitHub for more info." Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="Force direct play for" Target="REPLEX_FORCE_DIRECT_PLAY_FOR" Default="false" Description="Force direct play for the given resolutions, see GitHub for more info." Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="Video transcode fallback for" Target="REPLEX_VIDEO_TRANSCODE_FALLBACK_FOR" Default="" Description="If the selected media triggers a video transcode fallback to another version of the media, see GitHub for more info." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Auto select version?" Target="REPLEX_AUTO_SELECT_VERSION" Default="false" Description="If you have multiple versions of a media item then this setting will choose the one thats closest to the client resolution." Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="Disable related?" Target="REPLEX_DISABLE_RELATED" Default="false" Description="See GitHub for more info." Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="Redirect streams?" Target="REPLEX_REDIRECT_STREAMS" Default="false" Description="Redirect streams to another endpoint." Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="Redirect streams endpoint" Target="REPLEX_REDIRECT_STREAMS_URL" Default="" Description="Alternative streams endpoint." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Cache TTL" Target="REPLEX_CACHE_TTL" Default="1800" Description="Time to live for general caches in seconds." Type="Variable" Display="always" Required="false" Mask="false">1800</Config>
+  <Config Name="Log type" Target="RUST_LOG" Default="info,replex=info" Description="Set info or debug after 'replex='" Type="Variable" Display="always" Required="false" Mask="false">info,replex=info</Config>
 </Container>
