@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>geoip2influx</Name>
-  <Repository>gilbn/geoip2influx</Repository>
-  <Registry>https://hub.docker.com/r/gilbn/geoip2influx/</Registry>
+  <Repository>ghcr.io/gilbn/geoip2influx</Repository>
+  <Registry>ghcr.io/gilbn/geoip2influx</Registry>
   <Network>bridge</Network>
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
@@ -25,6 +25,7 @@ https://github.com/gilbN/geoip2influx/blob/master/README.md&#xD;
   <Config Name="InfluxDB user" Target="INFLUX_USER" Default="" Mode="" Description="Container Variable: INFLUX_USER" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="InfluxDB password" Target="INFLUX_PASS" Default="" Mode="" Description="Container Variable: INFLUX_PASS" Type="Variable" Display="always" Required="false" Mask="true"/>
   <Config Name="MaxmindDB license key" Target="MAXMINDDB_LICENSE_KEY" Default="" Mode="" Description="Container Variable: MAXMINDDB_LICENSE_KEY" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="MaxmindDB account id" Target="MAXMINDDB_USER_ID" Default="" Mode="" Description="Container Variable: MAXMINDDB_USER_ID" Type="Variable" Display="always" Required="true" Mask="true"/>
   <Config Name="Appdata" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="true" Mask="false"/>
   <Config Name="Nginx access.log folder" Target="/config/log/nginx/" Default="" Mode="rw" Description="Container Path: /config/log/nginx/" Type="Path" Display="always" Required="true" Mask="false"/>
 </Container>
