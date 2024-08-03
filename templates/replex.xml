@@ -10,6 +10,7 @@
   <Overview>Remix your plex recommendations.</Overview>
   <Category>Tools: MediaServer:Other</Category>
   <WebUI>http://[IP]:[PORT:80]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/replex.png</Icon>
   <Config Name="Proxy Port" Target="80" Default="3001" Mode="tcp" Description="Port used to access the Plex proxy" Type="Port" Display="always" Required="true" Mask="false">3001</Config>
   <Config Name="Plex Host" Target="REPLEX_HOST" Default="http://localhost:32400" Description="URL of your Plex instance" Type="Variable" Display="always" Required="true" Mask="false">http://localhost:32400</Config>
   <Config Name="Plex Token" Target="REPLEX_TOKEN" Default="" Description="Plex Token need for hero images" Type="Variable" Display="always" Required="true" Mask="false">Insert Token</Config>
