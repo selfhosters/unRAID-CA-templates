@@ -13,6 +13,6 @@
   <Icon>https://raw.githubusercontent.com/IDmedia/hass-unraid/main/extras/logo.png</Icon>
   <ExtraParams>--restart always</ExtraParams>
   <Requires>NOT WORKING WITH SELF SIGNED CERTIFICATES&#xD;Ensure that Home Assistant and MQTT are correctly configured before proceeding.&#xD;For configuration please refer to the GitHub page.</Requires>
-  <Config Name="Path" Target="/data" Default="/mnt/user/appdata/hass-unraid" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/hass-unraid</Config>
+  <Config Name="Path" Target="/data" Default="/mnt/user/appdata/hass-unraid" Mode="rw" Description="" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/hass-unraid</Config>
   <Config Name="Timezone" Target="TZ" Default="Europe/Oslo" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">Europe/Oslo</Config>
 </Container>
