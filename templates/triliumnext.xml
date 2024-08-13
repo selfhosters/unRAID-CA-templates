@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>triliumnext</Name>
+  <Repository>triliumnext/notes:v0.90.3</Repository>
+  <Registry>https://hub.docker.com/r/triliumnext/notes</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
+  <Project>https://github.com/TriliumNext/Notes</Project>
+  <Overview>TriliumNext Notes is an open-source, cross-platform hierarchical note taking application with focus on building large personal knowledge bases.</Overview>
+  <Category>Productivity: Tools:Utilities</Category>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/triliumnext.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/triliumnext.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <DonateText>If you wish to help in any way, feel free to donate</DonateText>
+  <DonateLink>https://www.buymeacoffee.com/lando786</DonateLink>
+  <Description>TriliumNext Notes is a hierarchical note taking application with focus on building large personal knowledge bases.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>9999</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir/>
+      <ContainerDir>/home/node/trilium-data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir/>
+      <ContainerDir>/home/node/trilium-data/backup</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="WebUI" Target="8080" Default="8080" Mode="tcp" Description="WebUI - Default 9999" Type="Port" Display="always-hide" Required="true" Mask="false">9999</Config>
+  <Config Name="Appdata" Target="/home/node/trilium-data" Default="/mnt/user/appdata/trilium" Mode="rw" Description="Container Path: /home/node/trilium-data" Type="Path" Display="advanced-hide" Required="true" Mask="false"/>
+  <Config Name="Backups" Target="/home/node/trilium-data/backup" Default="/mnt/user/appdata/trilium/backup" Mode="rw" Description="Container Path: /home/node/trilium-data/backup" Type="Path" Display="advanced-hide" Required="true" Mask="false"/>
+</Container>
