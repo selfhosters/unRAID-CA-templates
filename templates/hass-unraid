@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>hass-unraid</Name>
+  <Repository>ghcr.io/idmedia/hass-unraid:latest</Repository>
+  <Registry>ghcr.io/idmedia/hass-unraid</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/IDmedia/hass-unraid/issues</Support>
+  <Project>https://github.com/IDmedia/hass-unraid</Project>
+  <Overview>This Docker container parses and forwards all WebSocket messages from your Unraid server to Home Assistant using the MQTT protocol. This enables you to create dashboards that provide a superior overview compared to Unraid's native capabilities.&#xD;</Overview>
+  <Beta>True</Beta>
+  <Category>HomeAutomation: Tools:</Category>
+  <Icon>https://raw.githubusercontent.com/IDmedia/hass-unraid/main/extras/logo.png</Icon>
+  <Requires>NOT WORKING WITH SELF SIGNED CERTIFICATES&#xD;Ensure that Home Assistant and MQTT are correctly configured before proceeding.&#xD;For configuration please refer to the GitHub page.</Requires>
+  <Config Name="Path" Target="/data" Default="/mnt/user/appdata/hass-unraid" Mode="rw" Description="" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/hass-unraid</Config>
+</Container>
