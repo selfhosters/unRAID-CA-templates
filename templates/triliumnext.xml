@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>triliumnext</Name>
-  <Repository>triliumnext/notes:v0.90.3</Repository>
+  <Repository>triliumnext/notes:latest</Repository>
   <Registry>https://hub.docker.com/r/triliumnext/notes</Registry>
   <Network>bridge</Network>
   <Shell>sh</Shell>
