@@ -13,36 +13,12 @@
   <WebUI>http://[IP]:[PORT:8080]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/triliumnext.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/triliumnext.png</Icon>
-  <ExtraParams/>
-  <PostArgs/>
-  <DonateText>If you wish to help in any way, feel free to donate</DonateText>
-  <DonateLink>https://www.buymeacoffee.com/lando786</DonateLink>
   <Description>TriliumNext Notes is a hierarchical note taking application with focus on building large personal knowledge bases.</Description>
   <Networking>
     <Mode>bridge</Mode>
-    <Publish>
-      <Port>
-        <HostPort>9999</HostPort>
-        <ContainerPort>8080</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-    </Publish>
   </Networking>
-  <Data>
-    <Volume>
-      <HostDir/>
-      <ContainerDir>/home/node/trilium-data</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-    <Volume>
-      <HostDir/>
-      <ContainerDir>/home/node/trilium-data/backup</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-  </Data>
-  <Environment/>
   <Labels/>
-  <Config Name="WebUI" Target="8080" Default="8080" Mode="tcp" Description="WebUI - Default 9999" Type="Port" Display="always-hide" Required="true" Mask="false">9999</Config>
+  <Config Name="WebUI" Target="8080" Default="9999" Mode="tcp" Description="WebUI - Default 9999" Type="Port" Display="always-hide" Required="true" Mask="false">9999</Config>
   <Config Name="Appdata" Target="/home/node/trilium-data" Default="/mnt/user/appdata/trilium" Mode="rw" Description="Container Path: /home/node/trilium-data" Type="Path" Display="advanced-hide" Required="true" Mask="false"/>
   <Config Name="Backups" Target="/home/node/trilium-data/backup" Default="/mnt/user/appdata/trilium/backup" Mode="rw" Description="Container Path: /home/node/trilium-data/backup" Type="Path" Display="advanced-hide" Required="true" Mask="false"/>
 </Container>
