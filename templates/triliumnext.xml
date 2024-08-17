@@ -14,9 +14,6 @@
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/triliumnext.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/triliumnext.png</Icon>
   <Description>TriliumNext Notes is a hierarchical note taking application with focus on building large personal knowledge bases.</Description>
-  <Networking>
-    <Mode>bridge</Mode>
-  </Networking>
   <Labels/>
   <Config Name="WebUI" Target="8080" Default="9999" Mode="tcp" Description="WebUI - Default 9999" Type="Port" Display="always-hide" Required="true" Mask="false">9999</Config>
   <Config Name="Appdata" Target="/home/node/trilium-data" Default="/mnt/user/appdata/trilium" Mode="rw" Description="Container Path: /home/node/trilium-data" Type="Path" Display="advanced-hide" Required="true" Mask="false"/>
