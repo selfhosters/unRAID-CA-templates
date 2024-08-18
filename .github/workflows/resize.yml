@@ -2,6 +2,8 @@ name: Resize images
 
 on:
   pull_request:
+    paths:
+      - "templates/img/**"
   push:
     paths:
       - "templates/img/**"
@@ -12,7 +14,11 @@ jobs:
   Resize-images:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
+        with: 
+          fetch-depth: 0
+          ref: ${{github.event.pull_request.head.ref}}
+          repository: ${{github.event.pull_request.head.repo.full_name}}
 
       - name: Resize images
         run: |
