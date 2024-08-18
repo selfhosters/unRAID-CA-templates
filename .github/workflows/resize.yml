@@ -1,0 +1,28 @@
+name: Resize images
+
+on:
+  pull_request:
+    paths:
+      - "templates/img/**"
+
+jobs:
+  Resize-images:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: 
+          fetch-depth: 0
+          ref: ${{github.event.pull_request.head.ref}}
+          repository: ${{github.event.pull_request.head.repo.full_name}}
+
+      - name: Resize images
+        run: |
+          docker run -d --rm --name imagemagick -v $(pwd)/templates:/inn -e FOLDER='/inn/img/' -e WIDTH=192 -e HEIGHT=192 ghcr.io/linuxserver/baseimage-alpine:3.19
+          docker exec imagemagick bash -c 'apk add --no-cache imagemagick && for match in $(find $FOLDER/ -type f \( -iname \*.png  \)); do  SIZE=$(identify -format "%w-%h" $match); WDT=${SIZE%-*}; HGT=${SIZE#*-}; if (( $WDT > $WIDTH )) || (( $HGT > $HEIGHT )); then  convert -define exclude-chunk=tIME $match -resize $WIDTHx$HEIGHT\> $match; fi; done'
+          docker stop imagemagick
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "Automated Resizing of images"
+          git push
