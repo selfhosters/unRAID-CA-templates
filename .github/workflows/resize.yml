@@ -13,8 +13,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: "0"
 
       - name: Resize images
         run: |
@@ -22,7 +20,8 @@ jobs:
           docker exec imagemagick bash -c 'apk add --no-cache imagemagick && for match in $(find $FOLDER/ -type f \( -iname \*.png  \)); do  SIZE=$(identify -format "%w-%h" $match); WDT=${SIZE%-*}; HGT=${SIZE#*-}; if (( $WDT > $WIDTH )) || (( $HGT > $HEIGHT )); then  convert -define exclude-chunk=tIME $match -resize $WIDTHx$HEIGHT\> $match; fi; done'
           docker stop imagemagick
 
-          git config --global user.email "github-actions[bot] <133769+github-actions[bot]@users.noreply.github.com>"
-          git config --global user.name "github-actions[bot]"
-          git commit -am "Automated Resizing of images" || :
-          git push || :
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "Automated Resizing of images"
+          git push
