@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<Container version="3.9">
+    <Name>spacebarchat</Name>
+    <Repository>spacebarchat/server:latest-postgressql</Repository>
+    <Registry>https://hub.docker.com/r/spacebarchat/server</Registry>
+    <Branch>
+        <Tag>latest-postgressql</Tag>
+        <TagDescription>Latest stable release with PostgreSQL support</TagDescription>
+    </Branch>
+    <Branch>
+        <Tag>latest-postgressql-amd64</Tag>
+        <TagDescription>Latest stable release with PostgreSQL support for AMD64</TagDescription>
+    </Branch>
+    <Branch>
+        <Tag>latest-postgressql-arm64</Tag>
+        <TagDescription>Latest stable release with PostgreSQL support for ARM64</TagDescription>
+    </Branch>
+    <Network>bridge</Network>
+    <WebUI>http://[IP]:[PORT:3001]/</WebUI>
+    <Privileged>false</Privileged>
+    <Support>https://docs.spacebar.chat</Support>
+    <Project>https://spacebar.chat</Project>
+    <Overview>
+        A free and open source, full-stack reverse engineering and reimplementation of Discord.
+    </Overview>
+    <Beta>False</Beta>
+    <Category>Network:Messenger Network:Privacy Other: Productivity: Tools: Status Stable</Category>
+    <ExtraSearchTerms>Discord private chat channels social</ExtraSearchTerms>
+    <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/spacebar.png</Icon>
+    <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/template/spacebar.xml</TemplateURL>
+    <Maintainer>
+        <WebPage>https://github.com/selfhosters</WebPage>
+    </Maintainer>
+    <Requires>
+        Requires a separate PostgresSQL container, see the documentation for more information. https://hub.docker.com/r/spacebarchat/server &#xD;
+        [br]
+        AWS S3 can also be used as a storage provider, see the documentation for more information. https://hub.docker.com/r/spacebarchat/server
+    </Requires>
+    <Changes>
+        ### 2024-08-19
+
+        Initial release
+    </Changes>
+    <Config Name="Web UI" Target="3001" Default="3001" Mode="tcp" Description="Container Port: 3001" Type="Port" Display="always" Required="true" Mask="false">3001</Config>
+    <Config Name="Database connection" Target="DATABASE" Default="postgres://USERNAME:PASSWORD@IP_ADDRESS:5432/DATABASE_NAME" Mode="rw" Description="Connection URL to PostgresSQL database" Type="Variable" Display="always-hide" Required="true" Mask="false"/>
+    <Config Name="Asset storage" Target="/exec/persistent/storage/" Default="/mnt/user/appdata/spacebar/storage" Mode="rw" Description="Path to asset storage" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/spacebar/storage</Config>
+    <Config Name="Storage provider type" Target="STORAGE_PROVIDER" Default="file" Mode="rw" Description="Type of storage provider" Type="Variable" Display="advanced-hide" Required="true" Mask="false">file</Config>
+    <Config Name="Storage provider internal path" Target="STORAGE_LOCATION" Default="/exec/persistent/storage/" Mode="rw" Description="Internal path to storage provider" Type="Variable" Display="advanced-hide" Required="true" Mask="false">/exec/persistent/storage/</Config>
+    <Config Name="Internal port" Target="PORT" Default="3001" Mode="rw" Description="Internal port to bind to" Type="Variable" Display="advanced-hide" Required="true" Mask="false">3001</Config>
+    <Config Name="PUID" Target="PUID" Default="099" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">099</Config>
+    <Config Name="PGID" Target="PGID" Default="100" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
+</Container>
