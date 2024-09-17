@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Wishlist</Name>
+  <Repository>wingysam/christmas-community</Repository>
+  <Registry>https://hub.docker.com/r/wingysam/christmas-community/</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/wingysam/christmas-community/</Support>
+  <Project>https://github.com/Wingysam/Christmas-Community/tree/master</Project>
+  <Overview>To create a simple place for your entire family to use to find gifts that people want, and to avoid double-gifting.&#xD;
+https://github.com/Wingysam/Christmas-Community/tree/master&#xD;
+Created by Wingysam&#xD;
+Converted by ajb3932</Overview>
+  <Category>Productivity: Tools:</Category>
+  <WebUI>http://[IP]:[PORT:8023]/</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/Wingysam/Christmas-Community/master/src/static/img/logo.transparent.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1726584173</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Web UI" Target="80" Default="80" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">8023</Config>
+  <Config Name="List Mode" Target="SINGLE_LIST" Default="false" Mode="" Description="Single list mode&#13;&#10; (for weddings, birthdays, etc. only the admin account's list is accessible)&#13;&#10; Set to 'true' to enable" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="Amazon Smile" Target="SMILE" Default="true" Mode="" Description="Amazon Smile, set to 'false' to disable." Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="Data Dir" Target="/data" Default="/mnt/user/appdata/wishlist" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/wishlist</Config>
+  <Config Name="Public Lists" Target="LISTS_PUBLIC" Default="false" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+</Container>
