@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Tado-Assistant</Name>
+  <Repository>brainic/tado-assistant:latest</Repository>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/BrainicHQ/tado-assistant/issues</Support>
+  <Project>https://github.com/BrainicHQ/tado-assistant</Project>
+  <Category>HomeAutomation:</Category>
+  <Icon>https://images.ctfassets.net/rro4wewtydcy/2lziJeBTxOCee5n43qBXiz/a03b3387644a3ea67c1a759da2244120/tado_logo_app_icon.webp</Icon>
+  <Config Name="NUM_ACCOUNTS" Target="NUM_ACCOUNTS" Default="1" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="TADO_USERNAME_1" Target="TADO_USERNAME_1" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="TADO_PASSWORD_1" Target="TADO_PASSWORD_1" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="true"></Config>
+  <Config Name="CHECKING_INTERVAL_1" Target="CHECKING_INTERVAL_1" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="ENABLE_LOG_1" Target="ENABLE_LOG_1" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="MAX_OPEN_WINDOW_DURATION_1" Target="MAX_OPEN_WINDOW_DURATION_1" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="TADO_USERNAME_2" Target="TADO_USERNAME_2" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="TADO_PASSWORD_2" Target="TADO_PASSWORD_2" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="CHECKING_INTERVAL_2" Target="CHECKING_INTERVAL_2" Default="15" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="ENABLE_LOG_2" Target="ENABLE_LOG_2" Default="false" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+</Container>
