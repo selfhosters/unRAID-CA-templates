@@ -8,6 +8,7 @@
   <Project>https://github.com/alcapone1933/docker-ddns-ipv64</Project>
   <Category>Tools: Network:DNS</Category>
   <Icon>https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQasFPd0QKbbYpPvuUG0EXhoVFF-Kw2XcdqDg&amp;amp;s</Icon>
+  <Requires>List of all Parameters that can be configured https://github.com/alcapone1933/docker-ddns-ipv64?tab=readme-ov-file#env-parameter</Requires>
   <Config Name="Timezone" Target="TZ" Default="Europe/Berlin" Mode="" Description="Timezone" Type="Variable" Display="always" Required="true" Mask="false">Europe/Berlin</Config>
   <Config Name="Polling frequency IP address" Target="CRON_TIME" Default="*/15 * * * *" Mode="" Description="Polling frequency of the current IP address" Type="Variable" Display="always" Required="true" Mask="false">*/15 * * * *</Config>
   <Config Name="Polling frequenz Domain" Target="CRON_TIME_DIG" Default="*/30 * * * *" Mode="" Description="Polling frequenz for the domain (dig DOMAIN_IPV64 A)" Type="Variable" Display="always" Required="true" Mask="false">*/30 * * * *</Config>
