@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>ddns-ipv64</Name>
+  <Repository>alcapone1933/ddns-ipv64:latest</Repository>
+  <Registry>https://hub.docker.com/r/alcapone1933/ddns-ipv64</Registry>
+  <Privileged>false</Privileged>
+  <Project>https://github.com/alcapone1933/docker-ddns-ipv64</Project>
+  <Icon>https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQasFPd0QKbbYpPvuUG0EXhoVFF-Kw2XcdqDg&amp;amp;s</Icon>
+  <Config Name="TZ" Target="TZ" Default="Europe/Berlin" Mode="" Description="Time zone" Type="Variable" Display="always" Required="true" Mask="false">Europe/Berlin</Config>
+  <Config Name="CRON_TIME" Target="CRON_TIME" Default="*/15 * * * *" Mode="" Description="Time query for the current IP" Type="Variable" Display="always" Required="true" Mask="false">*/15 * * * *</Config>
+  <Config Name="CRON_TIME_DIG" Target="CRON_TIME_DIG" Default="*/30 * * * *" Mode="" Description="Time query for the domain (dig DOMAIN_IPV64 A)" Type="Variable" Display="always" Required="true" Mask="false">*/30 * * * *</Config>
+  <Config Name="DOMAIN_IPV64" Target="DOMAIN_IPV64" Default="gries.ipv64.net,tnx.srv64.de" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">gries.ipv64.net,gries.nas64.de</Config>
+  <Config Name="DOMAIN_KEY" Target="DOMAIN_KEY" Default="5cTNVbr4GpMuBfo2nXDxKkFdyj8h19Pa" Mode="" Description="DOMAIN KEY: YOUR DOMAIN KEY or DynDNS update hash can be found at https://ipv64.net/dyndns.php" Type="Variable" Display="always" Required="true" Mask="true">1cTVm4qvrRI3SYOsDdbionXg9KyUJj0N</Config>
+</Container>
