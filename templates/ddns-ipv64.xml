@@ -6,6 +6,9 @@
   <Network>bridge</Network>
   <Privileged>false</Privileged>
   <Project>https://github.com/alcapone1933/docker-ddns-ipv64</Project>
+  <Overview>This Docker container is a DDNS updater for Free DynDNS - ipv64.net.&#xD;
+&#xD;
+If the ipv4 address at the site is changed, the new ipv4 address is sent to ipv64.net as an A-Record.</Overview>
   <Category>Tools: Network:DNS</Category>
   <Icon>https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQasFPd0QKbbYpPvuUG0EXhoVFF-Kw2XcdqDg&amp;amp;s</Icon>
   <Requires>List of all Parameters that can be configured https://github.com/alcapone1933/docker-ddns-ipv64?tab=readme-ov-file#env-parameter</Requires>
