@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Tado Assistant</Name>
+  <Repository>brainic/tado-assistant:latest</Repository>
+  <Registry>https://hub.docker.com/r/brainic/tado-assistant</Registry>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/BrainicHQ/tado-assistant/issues</Support>
+  <Project>https://github.com/BrainicHQ/tado-assistant</Project>
+  <Category>HomeAutomation:</Category>
+  <Icon>https://images.ctfassets.net/rro4wewtydcy/2lziJeBTxOCee5n43qBXiz/a03b3387644a3ea67c1a759da2244120/tado_logo_app_icon.webp</Icon>
+  <Requires>Multiple accounts can be added. See documentation for more details: https://github.com/BrainicHQ/tado-assistant?tab=readme-ov-file#-docker-installation</Requires>
+  <Config Name="Number of Accounts" Target="NUM_ACCOUNTS" Default="1" Mode="" Description="Number of Tado accounts you wish to manage. This should be set to the total number of accounts." Type="Variable" Display="always" Required="true" Mask="false">1</Config>
+  <Config Name="Account 1 - Username" Target="TADO_USERNAME_1" Default="" Mode="" Description="Your Tado account username for the nth account." Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Account 1 - Password" Target="TADO_PASSWORD_1" Default="" Mode="" Description="Your Tado account password for the nth account." Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="Account 1 - Checking Interval" Target="CHECKING_INTERVAL_1" Default="" Mode="" Description="Frequency (in seconds) for home state checks for the nth account. Default is every 15 seconds." Type="Variable" Display="always" Required="true" Mask="false">15</Config>
+  <Config Name="Account 1 - Logging" Target="ENABLE_LOG_1" Default="" Mode="" Description="Toggle logging for the nth account. Values: true or false. Default is false." Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Account 1 - Max Open Window Duration" Target="MAX_OPEN_WINDOW_DURATION_1" Default="" Mode="" Description="Define the maximum duration (in seconds) for the 'Open Window' detection feature to be active for the nth account. Leave this field empty to use the default duration set in the Tado app." Type="Variable" Display="always" Required="false" Mask="false"/>
+</Container>
