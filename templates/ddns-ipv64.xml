@@ -3,12 +3,21 @@
   <Name>ddns-ipv64</Name>
   <Repository>alcapone1933/ddns-ipv64:latest</Repository>
   <Registry>https://hub.docker.com/r/alcapone1933/ddns-ipv64</Registry>
+  <Network>bridge</Network>
   <Privileged>false</Privileged>
   <Project>https://github.com/alcapone1933/docker-ddns-ipv64</Project>
+  <Category>Tools: Network:DNS</Category>
   <Icon>https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQasFPd0QKbbYpPvuUG0EXhoVFF-Kw2XcdqDg&amp;amp;s</Icon>
-  <Config Name="TZ" Target="TZ" Default="Europe/Berlin" Mode="" Description="Time zone" Type="Variable" Display="always" Required="true" Mask="false">Europe/Berlin</Config>
-  <Config Name="CRON_TIME" Target="CRON_TIME" Default="*/15 * * * *" Mode="" Description="Time query for the current IP" Type="Variable" Display="always" Required="true" Mask="false">*/15 * * * *</Config>
-  <Config Name="CRON_TIME_DIG" Target="CRON_TIME_DIG" Default="*/30 * * * *" Mode="" Description="Time query for the domain (dig DOMAIN_IPV64 A)" Type="Variable" Display="always" Required="true" Mask="false">*/30 * * * *</Config>
-  <Config Name="DOMAIN_IPV64" Target="DOMAIN_IPV64" Default="gries.ipv64.net,tnx.srv64.de" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">gries.ipv64.net,gries.nas64.de</Config>
-  <Config Name="DOMAIN_KEY" Target="DOMAIN_KEY" Default="5cTNVbr4GpMuBfo2nXDxKkFdyj8h19Pa" Mode="" Description="DOMAIN KEY: YOUR DOMAIN KEY or DynDNS update hash can be found at https://ipv64.net/dyndns.php" Type="Variable" Display="always" Required="true" Mask="true">1cTVm4qvrRI3SYOsDdbionXg9KyUJj0N</Config>
+  <Config Name="Timezone" Target="TZ" Default="Europe/Berlin" Mode="" Description="Timezone" Type="Variable" Display="always" Required="true" Mask="false">Europe/Berlin</Config>
+  <Config Name="Polling frequency IP address" Target="CRON_TIME" Default="*/15 * * * *" Mode="" Description="Polling frequency of the current IP address" Type="Variable" Display="always" Required="true" Mask="false">*/15 * * * *</Config>
+  <Config Name="Polling frequenz Domain" Target="CRON_TIME_DIG" Default="*/30 * * * *" Mode="" Description="Polling frequenz for the domain (dig DOMAIN_IPV64 A)" Type="Variable" Display="always" Required="true" Mask="false">*/30 * * * *</Config>
+  <Config Name="Domain(s) ipv64" Target="DOMAIN_IPV64" Default="gries.ipv64.net,tnx.srv64.de" Mode="" Description="YOUR DOMAINS: e.g. your-domain.ipv64.net, your-domain.ipv64.de" Type="Variable" Display="always" Required="true" Mask="false">gries.ipv64.net,gries.nas64.de</Config>
+  <Config Name="Domain Key" Target="DOMAIN_KEY" Default="5cTNVbr4GpMuBfo2nXDxKkFdyj8h19Pa" Mode="" Description="DOMAIN KEY: YOUR DOMAIN KEY or DynDNS update hash can be found at https://ipv64.net/dyndns.php" Type="Variable" Display="always" Required="true" Mask="true">1cTVm4qvrRI3SYOsDdbionXg9KyUJj0N</Config>
+  <Config Name="Domain Präfix yes|no" Target="DOMAIN_PRAEFIX_YES" Default="yes|no" Mode="" Description="DOMAIN PRAEFIX YES: This means that the domain PRAEFIX is actively used" Type="Variable" Display="always" Required="false" Mask="false">no</Config>
+  <Config Name="Domain Präfix" Target="DOMAIN_PRAEFIX" Default="" Mode="" Description="YOUR DOMAIN PRAEFIX (subdomain) : &#x26A0;&#xFE0F; Use only one prefix &#x26A0;&#xFE0F; e.g. ddns" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="IP check" Target="IP_CHECK" Default="yes|no" Mode="" Description="IP CHECK: The IP address of the domain is checked" Type="Variable" Display="always" Required="false" Mask="false">yes</Config>
+  <Config Name="Shoutrrr URL" Target="SHOUTRRR_URL" Default="" Mode="" Description="SHOUTRRR URL: Your Shoutrrr URL as notification service e.g. ( gotify,discord,telegram,email)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Shoutrrr URL Skip Test" Target="SHOUTRRR_SKIP_TEST" Default="" Mode="" Description="SHOUTRRR_SKIP_TEST: No test message is sent when the container is started" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Name Server" Target="NAME_SERVER" Default="ns1.ipv64.net" Mode="" Description="NAME_SERVER: : The name server to check the IP address of your domain" Type="Variable" Display="always" Required="false" Mask="false">ns1.ipv64.net</Config>
+  <Config Name="Location logs and script" Target="/data" Default="/mnt/user/appdata/ddns-ipv64" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/ddns-ipv64</Config>
 </Container>
