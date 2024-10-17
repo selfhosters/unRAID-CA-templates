@@ -6,6 +6,7 @@
   <Privileged>false</Privileged>
   <Support>https://github.com/BrainicHQ/tado-assistant/issues</Support>
   <Project>https://github.com/BrainicHQ/tado-assistant</Project>
+  <Overview>Tado Assistant: Your User-Friendly, Free Tado Auto-Assist Alternative</Overview>
   <Category>HomeAutomation:</Category>
   <Icon>https://images.ctfassets.net/rro4wewtydcy/2lziJeBTxOCee5n43qBXiz/a03b3387644a3ea67c1a759da2244120/tado_logo_app_icon.webp</Icon>
   <Requires>Multiple accounts can be added. See documentation for more details: https://github.com/BrainicHQ/tado-assistant?tab=readme-ov-file#-docker-installation</Requires>
