@@ -13,7 +13,7 @@ If the ipv4 address at the site is changed, the new ipv4 address is sent to ipv6
   <Icon>https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQasFPd0QKbbYpPvuUG0EXhoVFF-Kw2XcdqDg&amp;amp;s</Icon>
   <Requires>List of all Parameters that can be configured https://github.com/alcapone1933/docker-ddns-ipv64?tab=readme-ov-file#env-parameter</Requires>
   <Config Name="Polling frequency IP address" Target="CRON_TIME" Default="*/15 * * * *" Mode="" Description="Polling frequency of the current IP address" Type="Variable" Display="always" Required="true" Mask="false">*/15 * * * *</Config>
-  <Config Name="Polling frequenz Domain" Target="CRON_TIME_DIG" Default="*/30 * * * *" Mode="" Description="Polling frequenz for the domain (dig DOMAIN_IPV64 A)" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Polling frequenz Domain" Target="CRON_TIME_DIG" Default="*/30 * * * *" Mode="" Description="Polling frequenz for the domain (dig DOMAIN_IPV64 A)" Type="Variable" Display="always" Required="true" Mask="false">*/30 * * * *</Config>
   <Config Name="Domain(s) ipv64" Target="DOMAIN_IPV64" Default="" Mode="" Description="YOUR DOMAINS: e.g. your-domain.ipv64.net, your-domain.ipv64.de" Type="Variable" Display="always" Required="true" Mask="false"/>
   <Config Name="Domain Key" Target="DOMAIN_KEY" Default="" Mode="" Description="DOMAIN KEY: YOUR DOMAIN KEY or DynDNS update hash can be found at https://ipv64.net/dyndns.php" Type="Variable" Display="always" Required="true" Mask="true"/>
   <Config Name="Domain Präfix yes|no" Target="DOMAIN_PRAEFIX_YES" Default="yes|no" Mode="" Description="DOMAIN PRAEFIX YES: This means that the domain PRAEFIX is actively used" Type="Variable" Display="always" Required="false" Mask="false"/>
