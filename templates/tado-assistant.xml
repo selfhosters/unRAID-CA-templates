@@ -3,6 +3,7 @@
   <Name>Tado Assistant</Name>
   <Repository>brainic/tado-assistant:latest</Repository>
   <Registry>https://hub.docker.com/r/brainic/tado-assistant</Registry>
+  <Network>bridge</Network>
   <Privileged>false</Privileged>
   <Support>https://github.com/BrainicHQ/tado-assistant/issues</Support>
   <Project>https://github.com/BrainicHQ/tado-assistant</Project>
