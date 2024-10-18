@@ -22,5 +22,5 @@ If the ipv4 address at the site is changed, the new ipv4 address is sent to ipv6
   <Config Name="Shoutrrr URL" Target="SHOUTRRR_URL" Default="" Mode="" Description="SHOUTRRR URL: Your Shoutrrr URL as notification service e.g. ( gotify,discord,telegram,email)" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Shoutrrr URL Skip Test" Target="SHOUTRRR_SKIP_TEST" Default="" Mode="" Description="SHOUTRRR_SKIP_TEST: No test message is sent when the container is started" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Name Server" Target="NAME_SERVER" Default="ns1.ipv64.net" Mode="" Description="NAME_SERVER: : The name server to check the IP address of your domain" Type="Variable" Display="always" Required="false" Mask="false">ns1.ipv64.net</Config>
-  <Config Name="Location logs and script" Target="/data" Default="/mnt/user/appdata/ddns-ipv64" Mode="rw" Description="" Type="Path" Display="advanced-hide" Required="false" Mask="false">/mnt/user/appdata/ddns-ipv64</Config>
+  <Config Name="Location logs and script" Target="/data" Default="/mnt/user/appdata/ddns-ipv64" Mode="rw" Description="" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/ddns-ipv64</Config>
 </Container>
