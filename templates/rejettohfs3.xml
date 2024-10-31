@@ -7,7 +7,10 @@
   <Project>https://github.com/rejetto/hfs/discussions</Project>
   <Overview>Rejeto HFS Http File Server&#xD;
 &#xD;
-https://www.rejetto.com/hfs/ &#xD;
+Rejeto HFS Http File Server&#xD;
+&#xD;
+YOU MUST ASSIGN A STATIC IP TO THE DOCKER FOR HFS3 TO WORK.&#xD;
+&#xD;
 Access via web your files directly from your disk&#xD;
 You be the server! Share files fresh from your disk, with unlimited space and bandwidth.&#xD;
 Fast! Try zipping 100GB, downloads starts immediately!&#xD;
