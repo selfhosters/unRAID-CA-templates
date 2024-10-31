@@ -37,7 +37,7 @@ The default hfs cwd of the container is `/home/hfs/.hfs`&#xD;
 openssl req -x509 -newkey rsa:4096 -keyout /mnt/user/appdata/hfs/certs/privkey.key -out /mnt/user/appdata/hfs/certs/cert.pem -days 365 -nodes&#xD;
 </Overview>
   <Category>Downloaders: Tools: MediaApp:Video MediaApp:Music MediaApp:Books MediaApp:Photos MediaApp:Other MediaServer:Video MediaServer:Music MediaServer:Books MediaServer:Photos MediaServer:Other Network:Web Network:FTP Network:Proxy Network:Other Status:Beta</Category>
-  <WebUI>http://[IP]:[PORT:80]/~/admin/</WebUI>
+  <WebUI>http://[IP]:[PORT:8080]/~/admin/</WebUI>
   <Icon>https://raw.githubusercontent.com/bmartino1/hfs-docker/refs/heads/main/hfs.png</Icon>
   <ExtraParams>--hostname HFS3</ExtraParams>
   <Config Name="hfs conf persistence" Target="/home/hfs/.hfs" Default="/mnt/user/appdata/hfs/Config" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false"/>
