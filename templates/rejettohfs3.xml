@@ -40,7 +40,7 @@ openssl req -x509 -newkey rsa:4096 -keyout /mnt/user/appdata/hfs/certs/privkey.k
   <WebUI>http://[IP]:[PORT:80]/~/admin/</WebUI>
   <Icon>https://raw.githubusercontent.com/bmartino1/hfs-docker/refs/heads/main/hfs.png</Icon>
   <ExtraParams>--hostname HFS3</ExtraParams>
-  <Config Name="hfs conf persistence" Target="/home/hfs/.hfs" Default="/mnt/user/appdata/hfs/Config" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/rejettohfs3/config/</Config>
+  <Config Name="hfs conf persistence" Target="/home/hfs/.hfs" Default="/mnt/user/appdata/hfs/Config" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false"/>
   <Config Name="Https Certificate" Target="/app/certs" Default="/mnt/user/appdata/hfs/certs" Mode="rw" Description="for HTTPS certificates&#13;&#10;created before hand or within the admin interface&#13;&#10;" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/rejettohfs3/certificate</Config>
   <Config Name="HFS Logs" Target="/app/logs" Default="/mnt/user/appdata/hfs/logs" Mode="rw" Description="for log files" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/rejettohfs3/Logs</Config>
   <Config Name="hfs files shared" Target="/app/myDisk" Default="/mnt/user/" Mode="rw" Description="For your files that you want to share" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/</Config>
