@@ -39,7 +39,7 @@ openssl req -x509 -newkey rsa:4096 -keyout /mnt/user/appdata/hfs/certs/privkey.p
   <Category>Downloaders: Tools: MediaApp:Video MediaApp:Music MediaApp:Books MediaApp:Photos MediaApp:Other MediaServer:Video MediaServer:Music MediaServer:Books MediaServer:Photos MediaServer:Other Network:Web Network:FTP Network:Proxy Network:Other Status:Beta</Category>
   <WebUI>http://[IP]:[PORT:80]/~/admin/</WebUI>
   <Icon>https://raw.githubusercontent.com/bmartino1/hfs-docker/refs/heads/main/hfs.png</Icon>
-  <ExtraParams>--mac-address 02:42:c0:a8:02:D4 --hostname HFS3 -p 8080:8080 -p 80:80 -p 443:443</ExtraParams>
+  <ExtraParams>--hostname HFS3 -p 8080:8080 -p 80:80 -p 443:443</ExtraParams>
   <PostArgs/>
   <CPUset/>
   <DateInstalled>1730352787</DateInstalled>
