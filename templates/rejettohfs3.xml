@@ -2,7 +2,7 @@
 <Container version="2">
   <Name>RejettoHFS3</Name>
   <Repository>rejetto/hfs:v0.53.0</Repository>
-  <Registry/>
+  <Registry>https://hub.docker.com/r/rejetto/hfs</Registry>
   <Network>bond0</Network>
   <MyIP>192.168.1.50</MyIP>
   <Shell>sh</Shell>
