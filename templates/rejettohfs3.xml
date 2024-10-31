@@ -34,7 +34,7 @@ You can mount as many volumes as you wish in docker to persist the file storage,
 The default hfs cwd of the container is `/home/hfs/.hfs`&#xD;
 &#xD;
 ## HTTPS make certs:&#xD;
-openssl req -x509 -newkey rsa:4096 -keyout /mnt/user/appdata/hfs/certs/privkey.pem -out /mnt/user/appdata/hfs/certs/cert.pem -days 365 -nodes&#xD;
+openssl req -x509 -newkey rsa:4096 -keyout /mnt/user/appdata/hfs/certs/privkey.key -out /mnt/user/appdata/hfs/certs/cert.pem -days 365 -nodes&#xD;
 </Overview>
   <Category>Downloaders: Tools: MediaApp:Video MediaApp:Music MediaApp:Books MediaApp:Photos MediaApp:Other MediaServer:Video MediaServer:Music MediaServer:Books MediaServer:Photos MediaServer:Other Network:Web Network:FTP Network:Proxy Network:Other Status:Beta</Category>
   <WebUI>http://[IP]:[PORT:80]/~/admin/</WebUI>
@@ -52,6 +52,6 @@ openssl req -x509 -newkey rsa:4096 -keyout /mnt/user/appdata/hfs/certs/privkey.p
   <Config Name="HFS_ADMIN_NET" Target="HFS_ADMIN_NET" Default="192.168.1.0/24" Mode="" Description="# limit admin access to your local network" Type="Variable" Display="always" Required="true" Mask="false">192.168.1.0/24</Config>
   <Config Name="HFS_CERT" Target="HFS_CERT" Default="/app/certs/cert.pem" Mode="" Description="HTTPS Self Signed Certificate" Type="Variable" Display="advanced-hide" Required="true" Mask="false">/home/hfs/.hfs/self.cer</Config>
   <Config Name="HFS_ERROR_LOG" Target="HFS_ERROR_LOG" Default="/app/logs/error.log" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">/app/logs/error.log</Config>
-  <Config Name="HFS_PRIVATE_KEY" Target="HFS_PRIVATE_KEY" Default="/app/certs/privkey.pem" Mode="" Description="HTTPS Self Signed Certificate" Type="Variable" Display="advanced-hide" Required="true" Mask="false">/home/hfs/.hfs/self.key</Config>
+  <Config Name="HFS_PRIVATE_KEY" Target="HFS_PRIVATE_KEY" Default="/app/certs/privkey.key" Mode="" Description="HTTPS Self Signed Certificate" Type="Variable" Display="advanced-hide" Required="true" Mask="false">/home/hfs/.hfs/self.key</Config>
   <Config Name="HFS_LOG" Target="HFS_LOG" Default="/app/logs/access.log" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">/app/logs/access.log</Config>
 </Container>
