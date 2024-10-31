@@ -46,7 +46,6 @@ openssl req -x509 -newkey rsa:4096 -keyout /mnt/user/appdata/hfs/certs/privkey.k
   <Config Name="hfs files shared" Target="/app/myDisk" Default="/mnt/user/" Mode="rw" Description="For your files that you want to share" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/</Config>
   <Config Name="HFS_CREATE_ADMIN" Target="HFS_CREATE_ADMIN" Default="" Mode="" Description="Set a Admin Password" Type="Variable" Display="always" Required="true" Mask="true"/>
   <Config Name="HFS_LOG_ROTATION" Target="HFS_LOG_ROTATION" Default="weekly" Mode="" Description="Rotate logs" Type="Variable" Display="always" Required="false" Mask="false">weekly</Config>
-  <Config Name="HFS_HTTPS_PORT" Target="HFS_HTTPS_PORT" Default="443" Mode="" Description="HFS https port configuration" Type="Variable" Display="always" Required="true" Mask="false">443</Config>
   <Config Name="HFS_FORCE_HTTPS" Target="HFS_FORCE_HTTPS" Default="true" Mode="" Description="force HTTPS traffic" Type="Variable" Display="always" Required="true" Mask="false">true</Config>
   <Config Name="HFS_ADMIN_NET" Target="HFS_ADMIN_NET" Default="192.168.1.0/24" Mode="" Description="# limit admin access to your local network" Type="Variable" Display="always" Required="true" Mask="false">192.168.1.0/24</Config>
   <Config Name="HFS_CERT" Target="HFS_CERT" Default="/app/certs/cert.pem" Mode="" Description="HTTPS Self Signed Certificate" Type="Variable" Display="advanced-hide" Required="true" Mask="false">/home/hfs/.hfs/self.cer</Config>
