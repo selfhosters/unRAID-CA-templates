@@ -6,7 +6,6 @@
   <Network>bridge</Network>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support/>
   <Project>https://github.com/rejetto/hfs/discussions</Project>
   <Overview>Rejeto HFS Http File Server&#xD;
 &#xD;
