@@ -4,7 +4,6 @@
   <Repository>rejetto/hfs:v0.53.0</Repository>
   <Registry>https://hub.docker.com/r/rejetto/hfs</Registry>
   <Network>bridge</Network>
-  <MyIP>192.168.1.50</MyIP>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
   <Support/>
