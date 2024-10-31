@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>RejettoHFS3</Name>
-  <Repository>rejetto/hfs:v0.53.0</Repository>
+  <Repository>rejetto/hfs:latest</Repository>
   <Registry>https://hub.docker.com/r/rejetto/hfs</Registry>
   <Network>bridge</Network>
   <Shell>sh</Shell>
