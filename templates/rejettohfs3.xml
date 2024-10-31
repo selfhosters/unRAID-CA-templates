@@ -1,1 +1,66 @@
-
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>RejettoHFS3</Name>
+  <Repository>rejetto/hfs:v0.53.0</Repository>
+  <Registry/>
+  <Network>bond0</Network>
+  <MyIP>192.168.1.50</MyIP>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://github.com/rejetto/hfs/discussions</Project>
+  <Overview>Rejeto HFS Http File Server&#xD;
+&#xD;
+https://www.rejetto.com/hfs/ &#xD;
+Access via web your files directly from your disk&#xD;
+You be the server! Share files fresh from your disk, with unlimited space and bandwidth.&#xD;
+Fast! Try zipping 100GB, downloads starts immediately!&#xD;
+Share even a single file with our virtual file system, even with a different name, all without touching the real file. Present things the way you want!&#xD;
+Watch all activities in real-time.&#xD;
+Control bandwidth: decide how much to give.&#xD;
+No intermediaries: give a huge file to your friend without waiting for it to be uploaded on a server first.&#xD;
+Intelligent: HFS tries to detect problems and suggest solutions.&#xD;
+Expandable: find the right plugin, or make you own&#xD;
+&#xD;
+Easily run a web page, mange users groups and  share a file thorugh your Web Browser.&#xD;
+&#xD;
+Docker Compose Varient&#xD;
+https://github.com/bmartino1/hfs-docker&#xD;
+&#xD;
+## Other Environment HFS Variables&#xD;
+This docker image doesn't have any specific env. Every env starting with `HFS_` will be passed to HFS.&#xD;
+Read (https://github.com/rejetto/hfs/blob/main/config.md#how-to-modify-configuration) page to learn more about how envs work.&#xD;
+&#xD;
+## Docker Volumes and Mounts&#xD;
+You can mount as many volumes as you wish in docker to persist the file storage, but keep in mind that if you want to persist HFS configurations as well you **must** mount a volume that points to the `cwd` of HFS (which you can override with `HFS_CWD` env).&#xD;
+The default hfs cwd of the container is `/home/hfs/.hfs`&#xD;
+&#xD;
+## HTTPS make certs:&#xD;
+openssl req -x509 -newkey rsa:4096 -keyout /mnt/user/appdata/hfs/certs/privkey.pem -out /mnt/user/appdata/hfs/certs/cert.pem -days 365 -nodes&#xD;
+</Overview>
+  <Category>Downloaders: Tools: MediaApp:Video MediaApp:Music MediaApp:Books MediaApp:Photos MediaApp:Other MediaServer:Video MediaServer:Music MediaServer:Books MediaServer:Photos MediaServer:Other Network:Web Network:FTP Network:Proxy Network:Other Status:Beta</Category>
+  <WebUI>http://[IP]:[PORT:80]/~/admin/</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/bmartino1/hfs-docker/refs/heads/main/hfs.png</Icon>
+  <ExtraParams>--mac-address 02:42:c0:a8:02:D4 --hostname HFS3 -p 8080:8080 -p 80:80 -p 443:443</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1730352787</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="hfs conf persistence" Target="/home/hfs/.hfs" Default="/mnt/user/appdata/hfs/Config" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/rejettohfs3/config/</Config>
+  <Config Name="Https Certificate" Target="/app/certs" Default="/mnt/user/appdata/hfs/certs" Mode="rw" Description="for HTTPS certificates&#13;&#10;created before hand or within the admin interface&#13;&#10;" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/rejettohfs3/certificate</Config>
+  <Config Name="HFS Logs" Target="/app/logs" Default="/mnt/user/appdata/hfs/logs" Mode="rw" Description="for log files" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/rejettohfs3/Logs</Config>
+  <Config Name="hfs files shared" Target="/app/myDisk" Default="/mnt/user/" Mode="rw" Description="For your files that you want to share" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/</Config>
+  <Config Name="HFS_PORT" Target="HFS_PORT" Default="8080" Mode="" Description="Set the http port for use" Type="Variable" Display="always" Required="true" Mask="false">80</Config>
+  <Config Name="HFS_CREATE_ADMIN" Target="HFS_CREATE_ADMIN" Default="" Mode="" Description="Set a Admin Password" Type="Variable" Display="always" Required="true" Mask="true">56FDsH2l1!</Config>
+  <Config Name="HFS_LOG_ROTATION" Target="HFS_LOG_ROTATION" Default="weekly" Mode="" Description="Rotate logs" Type="Variable" Display="always" Required="false" Mask="false">weekly</Config>
+  <Config Name="HFS_HTTPS_PORT" Target="HFS_HTTPS_PORT" Default="443" Mode="" Description="HFS https port configuration" Type="Variable" Display="always" Required="true" Mask="false">443</Config>
+  <Config Name="HFS_FORCE_HTTPS" Target="HFS_FORCE_HTTPS" Default="true" Mode="" Description="force HTTPS traffic" Type="Variable" Display="always" Required="true" Mask="false">true</Config>
+  <Config Name="HFS_ADMIN_NET" Target="HFS_ADMIN_NET" Default="192.168.1.0/24" Mode="" Description="# limit admin access to your local network" Type="Variable" Display="always" Required="true" Mask="false">192.168.1.0/24</Config>
+  <Config Name="HFS_CERT" Target="HFS_CERT" Default="/app/certs/cert.pem" Mode="" Description="HTTPS Self Signed Certificate:&#13;&#10;# Use Volume path to HTTPS certificate&#13;&#10;default self signed cert:&#13;&#10;/home/hfs/.hfs/self.cer&#13;&#10;&#13;&#10;Letsencrypt Create in admin interface or before hand&#13;&#10;/app/certs/cert.pem" Type="Variable" Display="advanced-hide" Required="true" Mask="false">/home/hfs/.hfs/self.cer</Config>
+  <Config Name="HFS_ERROR_LOG" Target="HFS_ERROR_LOG" Default="/app/logs/error.log" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">/app/logs/error.log</Config>
+  <Config Name="HFS_PRIVATE_KEY" Target="HFS_PRIVATE_KEY" Default="/app/certs/privkey.pem" Mode="" Description="HTTPS Self Signed Certificate:&#13;&#10;# Use Volume path to HTTPS certificate&#13;&#10;Self signed:&#13;&#10;/home/hfs/.hfs/self.key&#13;&#10;&#13;&#10;LetsEncrypt Create in admin interface or before &#13;&#10;hand&#13;&#10;/app/certs/privkey.pem" Type="Variable" Display="advanced-hide" Required="true" Mask="false">/home/hfs/.hfs/self.key</Config>
+  <Config Name="HFS_LOG" Target="HFS_LOG" Default="/app/logs/access.log" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">/app/logs/access.log</Config>
+</Container>
