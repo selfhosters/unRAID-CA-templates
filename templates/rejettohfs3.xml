@@ -3,7 +3,7 @@
   <Name>RejettoHFS3</Name>
   <Repository>rejetto/hfs:latest</Repository>
   <Registry>https://hub.docker.com/r/rejetto/hfs</Registry>
-  <Network>bridge</Network>
+  <Network>bond0</Network>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
@@ -39,17 +39,17 @@ The default hfs cwd of the container is `/home/hfs/.hfs`&#xD;
 openssl req -x509 -newkey rsa:4096 -keyout /mnt/user/appdata/hfs/certs/privkey.key -out /mnt/user/appdata/hfs/certs/cert.pem -days 365 -nodes&#xD;
 </Overview>
   <Category>Downloaders: Tools: MediaApp:Video MediaApp:Music MediaApp:Books MediaApp:Photos MediaApp:Other MediaServer:Video MediaServer:Music MediaServer:Books MediaServer:Photos MediaServer:Other Network:Web Network:FTP Network:Proxy Network:Other Status:Beta</Category>
-  <WebUI>http://[IP]:[PORT:8080]/~/admin/</WebUI>
+  <WebUI>http://[IP]:[PORT:80]/~/admin/</WebUI>
   <TemplateURL/>
   <Icon>https://raw.githubusercontent.com/bmartino1/hfs-docker/refs/heads/main/hfs.png</Icon>
   <ExtraParams>--hostname HFS3</ExtraParams>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1730405119</DateInstalled>
+  <DateInstalled>1730408130</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Requires/>
-  <Config Name="hfs conf persistence" Target="/home/hfs/.hfs" Default="/mnt/user/appdata/hfs/Config" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/rejettohfs3/rejettohfs3/config</Config>
+  <Config Name="hfs conf persistence" Target="/home/hfs/.hfs" Default="/mnt/user/appdata/hfs/Config" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/rejettohfs3/config</Config>
   <Config Name="Https Certificate" Target="/app/certs" Default="/mnt/user/appdata/hfs/certs" Mode="rw" Description="for HTTPS certificates&#13;&#10;created before hand or within the admin interface&#13;&#10;" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/rejettohfs3/certificate</Config>
   <Config Name="HFS Logs" Target="/app/logs" Default="/mnt/user/appdata/hfs/logs" Mode="rw" Description="for log files" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/rejettohfs3/logs</Config>
   <Config Name="hfs files shared" Target="/app/myDisk" Default="/mnt/user/" Mode="rw" Description="For your files that you want to share" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/</Config>
@@ -57,12 +57,10 @@ openssl req -x509 -newkey rsa:4096 -keyout /mnt/user/appdata/hfs/certs/privkey.k
   <Config Name="HFS_LOG_ROTATION" Target="HFS_LOG_ROTATION" Default="weekly" Mode="" Description="Rotate logs" Type="Variable" Display="always" Required="false" Mask="false">weekly</Config>
   <Config Name="HFS_FORCE_HTTPS" Target="HFS_FORCE_HTTPS" Default="true|false" Mode="" Description="force HTTPS traffic" Type="Variable" Display="always" Required="true" Mask="false">true</Config>
   <Config Name="HFS_ADMIN_NET" Target="HFS_ADMIN_NET" Default="" Mode="" Description="Limit admin access to your local network (with CDIR ie. 192.168.1.0/24)" Type="Variable" Display="always" Required="true" Mask="false"/>
-  <Config Name="HFS_PORT" Target="HFS_PORT" Default="8080" Mode="" Description="Set HFS VFS Server port for HTTP" Type="Variable" Display="advanced-hide" Required="true" Mask="false">8080</Config>
-  <Config Name="TCP HTTP Port" Target="8080" Default="8080" Mode="tcp" Description="HFS HTTP Docker NAT Port" Type="Port" Display="advanced-hide" Required="true" Mask="false">8080</Config>
-  <Config Name="TCP HTTPS Port" Target="443" Default="443" Mode="tcp" Description="HFS HTTPS Docker NAT Port" Type="Port" Display="advanced-hide" Required="true" Mask="false">60443</Config>
+  <Config Name="HFS_HTTPS_PORT" Target="HFS_HTTPS_PORT" Default="443" Mode="" Description="HFS_HTTPS_PORT" Type="Variable" Display="advanced-hide" Required="true" Mask="false">443</Config>
+  <Config Name="HFS_PORT" Target="HFS_PORT" Default="8080" Mode="" Description="Set HFS VFS Server port for HTTP" Type="Variable" Display="advanced-hide" Required="true" Mask="false">80</Config>
   <Config Name="HFS_CERT" Target="HFS_CERT" Default="/app/certs/cert.pem" Mode="" Description="HTTPS Self Signed Certificate" Type="Variable" Display="advanced-hide" Required="true" Mask="false">/home/hfs/.hfs/self.cer</Config>
   <Config Name="HFS_ERROR_LOG" Target="HFS_ERROR_LOG" Default="/app/logs/error.log" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">/app/logs/error.log</Config>
   <Config Name="HFS_PRIVATE_KEY" Target="HFS_PRIVATE_KEY" Default="/app/certs/privkey.key" Mode="" Description="HTTPS Self Signed Certificate" Type="Variable" Display="advanced-hide" Required="true" Mask="false">/home/hfs/.hfs/self.key</Config>
   <Config Name="HFS_LOG" Target="HFS_LOG" Default="/app/logs/access.log" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">/app/logs/access.log</Config>
-  <Config Name="HFS_HTTPS_PORT" Target="HFS_HTTPS_PORT" Default="443" Mode="" Description="Set HFS VFS Server port for HTTPS" Type="Variable" Display="advanced-hide" Required="true" Mask="false">60443</Config>
 </Container>
