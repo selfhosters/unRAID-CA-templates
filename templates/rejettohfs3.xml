@@ -39,7 +39,7 @@ openssl req -x509 -newkey rsa:4096 -keyout /mnt/user/appdata/hfs/certs/privkey.k
   <Category>Downloaders: Tools: MediaApp:Video MediaApp:Music MediaApp:Books MediaApp:Photos MediaApp:Other MediaServer:Video MediaServer:Music MediaServer:Books MediaServer:Photos MediaServer:Other Network:Web Network:FTP Network:Proxy Network:Other Status:Beta</Category>
   <WebUI>http://[IP]:[PORT:80]/~/admin/</WebUI>
   <Icon>https://raw.githubusercontent.com/bmartino1/hfs-docker/refs/heads/main/hfs.png</Icon>
-  <ExtraParams>--hostname HFS3 -p 8080:8080 -p 80:80 -p 443:443</ExtraParams>
+  <ExtraParams>--hostname HFS3</ExtraParams>
   <Config Name="hfs conf persistence" Target="/home/hfs/.hfs" Default="/mnt/user/appdata/hfs/Config" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/rejettohfs3/config/</Config>
   <Config Name="Https Certificate" Target="/app/certs" Default="/mnt/user/appdata/hfs/certs" Mode="rw" Description="for HTTPS certificates&#13;&#10;created before hand or within the admin interface&#13;&#10;" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/rejettohfs3/certificate</Config>
   <Config Name="HFS Logs" Target="/app/logs" Default="/mnt/user/appdata/hfs/logs" Mode="rw" Description="for log files" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/rejettohfs3/Logs</Config>
