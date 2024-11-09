@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>youtube-dl material</Name>
-  <Repository>tzahi12345/youtubedl-material</Repository>
+  <Repository>tzahi12345/youtubedl-material:nightly</Repository>
   <Registry>https://hub.docker.com/r/tzahi12345/youtubedl-material/</Registry>
   <Category>Downloaders: MediaApp:Video MediaApp:Music Status:Beta</Category>
   <Network>bridge</Network>
@@ -21,6 +21,8 @@ It will also keep a record of already downloaded items. Enjoy! :)</Overview>
   <Config Name="Video Downloads" Target="/app/video/" Default="" Mode="rw" Description="Video Downloads" Type="Path" Display="always" Required="true" Mask="false"/>
   <Config Name="Subscription Downloads" Target="/app/subscriptions/" Default="" Mode="rw" Description="Subscription Downloads" Type="Path" Display="always" Required="true" Mask="false"/>
   <Config Name="WebUI Title" Target="ytdl_title_top" Default="YoutubeDL Material" Mode="" Description="Container Variable: ytdl_title_top" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="User ID" Target="UID" Default="99" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">99</Config>
+  <Config Name="Group ID" Target="GID" Default="100" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
   <Config Name="AppData" Target="/app/appdata" Default="/mnt/user/appdata/youtubedl-material" Mode="rw" Description="Container Path: /app/appdata" Type="Path" Display="advanced-hide" Required="true" Mask="false"/>
   <Config Name="Advanced Configuration Mode" Target="ytdl_allow_advanced_download" Default="true|false" Mode="" Description="Allow advanced configuration (true/false)" Type="Variable" Display="advanced" Required="false" Mask="false"/>
 </Container>
