@@ -10,6 +10,7 @@
   <Privileged>false</Privileged>
   <Overview>Agate is a server for the Gemini network protocol, built with the Rust programming language. Agate has very few features, and can only serve static files. It uses async I/O, and should be quite efficient even when running on low-end hardware and serving many concurrent requests.</Overview>
   <Category>Network:Other Status:Stable</Category>
+  <Icon>https://bafybeievjpa6etxndc7uyvcayytsfdsoooeuptrv3iycoyhtgqjqf7en5a.ipfs.dweb.link/</Icon>
   <PostArgs>--hostname changeme.example.org</PostArgs>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/agate.xml</TemplateURL>
   <Requires>To get your server going you should:&#xD;
