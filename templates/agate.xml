@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Agate</Name>
+  <Repository>ghcr.io/mbrubeck/agate:latest</Repository>
+  <Registry>https://github.com/mbrubeck/agate/pkgs/container/agate</Registry>
+  <Support>https://forums.unraid.net/topic/181208-support-agate-gemini-server/</Support>
+  <Project>https://github.com/mbrubeck/agate</Project>
+  <Readme>https://github.com/mbrubeck/agate/blob/master/README.md#configuration</Readme>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Overview>Agate is a server for the Gemini network protocol, built with the Rust programming language. Agate has very few features, and can only serve static files. It uses async I/O, and should be quite efficient even when running on low-end hardware and serving many concurrent requests.</Overview>
+  <Category>Network:Other Status:Stable</Category>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/agate.png</Icon>
+  <PostArgs>--hostname changeme.example.org</PostArgs>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/agate.xml</TemplateURL>
+  <Requires>To get your server going you should:&#xD;
+- Mount your gemini content under /gmi (make a directory for each hostname if you specify more than one later)&#xD;
+- Mount your certificates directory under /certs (if this is empty then new ones will be generated)&#xD;
+- Change the Post Arguments to include your hostname(s) eg: `--hostname example.org`&#xD;
+  - Note: If you specify more than one hostname then your contents directory must have one directory for each&#xD;
+&#xD;
+There is more configuration information in the Github README: https://github.com/mbrubeck/agate . Add any additional config to the "Post Arguments" below.</Requires>
+  <Config Name="Data directory" Target="/gmi" Default="/mnt/user/appdata/agate/content" Mode="ro" Description="Your gemini content. This directory should contain your .gmi files, but must contain one directory for each hostname if you specify more than one hostname." Type="Path" Display="always-hide" Required="true" Mask="false">/mnt/user/appdata/agate/content</Config>
+  <Config Name="Gemini" Target="1965" Default="1965" Mode="tcp" Description="The port to serve on. Gemini clients expect this to be 1965 when unspecified." Type="Port" Display="always-hide" Required="true" Mask="false">1965</Config>
+  <Config Name="Certificates" Target="/certs" Default="/mnt/user/appdata/agate/certs" Mode="rw" Description="The certificates for your gemini capsules. A `/cert.der` and `/key.der` for each hostname. These will be generated automatically if not present." Type="Path" Display="always-hide" Required="true" Mask="false">/mnt/user/appdata/agate/certs</Config>
+</Container>
