@@ -10,7 +10,7 @@
   <Overview>A visual configurator tool for creating zones with the Everything Presence Lite mmWave sensor.</Overview>
   <Category>HomeAutomation: Tools:</Category>
   <WebUI>http://[IP]:[PORT:8099]/</WebUI>
-  <Icon>https://shop.everythingsmart.io/cdn/shop/files/EST_Compact_Logo_39a737b5-afce-4e67-9a42-db994df3e7d2.png</Icon>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/everything-presence-mmwave-configurator.png</Icon>
   <Config Name="WebUI port" Target="8099" Default="8099" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">8099</Config>
   <Config Name="Home Assistant URL" Target="HA_URL" Default="http://ha-ip:8123" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">http://ha-ip:8123</Config>
   <Config Name="Home Assistant Token" Target="HA_TOKEN" Default="LONG_LIVED_TOKEN" Mode="" Description="Generate Long-lived token at Profile &amp;gt; Security&#13;&#10;" Type="Variable" Display="always" Required="true" Mask="false">LONG_LIVED_TOKEN</Config>
