@@ -8,7 +8,7 @@
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
-  <Project>https://github.com/NeoPlayer13/unRAID-CA-templates</Project>
+  <Project>https://github.com/selfhosters/unRAID-CA-templates</Project>
   <Overview>Notification Server for Seafile&#xD;
 &#xD;
 Converted By Community Applications   Always verify this template (and values)  against the support page for the container&#xD;
