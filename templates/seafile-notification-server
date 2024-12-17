@@ -4,7 +4,6 @@
   <Repository>seafileltd/notification-server:12.0-latest</Repository>
   <Registry>https://hub.docker.com/r/seafileltd/notification-server/</Registry>
   <Network>seafile-net</Network>
-  <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
