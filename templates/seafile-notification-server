@@ -9,17 +9,10 @@
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
   <Project>https://github.com/selfhosters/unRAID-CA-templates</Project>
-  <Overview>Notification Server for Seafile&#xD;
-&#xD;
-Converted By Community Applications   Always verify this template (and values)  against the support page for the container&#xD;
-&#xD;
-https://hub.docker.com/r/seafileltd/notification-server/&#xD;
-&#xD;
-////////////////////////////////////////////////////////////////////////////////////////&#xD;
-///Remenber to modify the file seafile.conf with the correct values of the notification server///&#xD;
-///////////////////////////////////////////////////////////////////////////////////////&#xD;
-https://manual.seafile.com/latest/deploy/notification-server&#xD;
-https://manual.seafile.com/latest/config/seafile-conf/#notification-server-configuration&#xD;
+  <Overview>
+  	Notification Server for Seafile &#xD;
+	&#xD;
+	You must modify the file `seafile.conf` with the correct values of the notification server: https://manual.seafile.com/latest/config/seafile-conf/#notification-server-configuration
 </Overview>
   <Category>Backup: Cloud:</Category>
   <WebUI>http://[IP]:[PORT:8083]/ping</WebUI>
