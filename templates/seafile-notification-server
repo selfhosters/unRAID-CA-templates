@@ -28,5 +28,5 @@
   <Config Name="Seafile DB Name" Target="SEAFILE_MYSQL_DB_SEAFILE_DB_NAME" Default="seafile_db" Mode="" Description="" Type="Variable" Display="always-hide" Required="true" Mask="false">seafile_db</Config>
   <Config Name="JWT Private Key" Target="JWT_PRIVATE_KEY" Default="" Mode="" Description="If not sure you can find it in /conf/seafile.conf inside the seafile server container. Or you can create a new one but you have to change it also in seafile.conf inside de seafile server container." Type="Variable" Display="always" Required="true" Mask="true"></Config>
   <Config Name="Log to STDOUT" Target="SEAFILE_LOG_TO_STDOUT" Default="false|true" Mode="" Description="It shows the seafile notification server logs in the container logs. Useful for Debugging." Type="Variable" Display="advanced-hide" Required="true" Mask="false"></Config>
-  <Config Name="Log Level" Target="NOTIFICATION_SERVER_LOG_LEVEL" Default="info" Mode="" Description="Use 'debug' if you want to know what is worng." Type="Variable" Display="always" Required="false" Mask="false">info</Config>
+  <Config Name="Log Level" Target="NOTIFICATION_SERVER_LOG_LEVEL" Default="info|error|debug" Mode="" Description="Use 'debug' if you want to know what is wrong." Type="Variable" Display="advanced-hide" Required="true" Mask="false"></Config>
 </Container>
