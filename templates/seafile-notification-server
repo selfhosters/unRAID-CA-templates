@@ -17,6 +17,7 @@
   <Category>Backup: Cloud:</Category>
   <WebUI>http://[IP]:[PORT:8083]/ping</WebUI>
   <Icon>https://cdn.icon-icons.com/icons2/1381/PNG/512/seafile_93931.png</Icon>
+  <Requires>Requires a separate MySQL or MariaDB database.</Requires>
   <Config Name="Base directory" Target="/shared" Default="/mnt/user/appdata/Seafile/notification-server/config" Mode="rw" Description="Config file storage" Type="Path" Display="always-hide" Required="true" Mask="false">/mnt/user/appdata/Seafile/notification-server/config</Config>
   <Config Name="Logs directory" Target="/shared/logs/" Default="/mnt/user/appdata/Seafile/notification-server/" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/</Config>
   <Config Name="Port" Target="8083" Default="8083" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false"></Config>
