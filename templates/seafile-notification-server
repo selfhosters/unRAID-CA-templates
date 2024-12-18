@@ -17,7 +17,7 @@
   <Icon>https://cdn.icon-icons.com/icons2/1381/PNG/512/seafile_93931.png</Icon>
   <Requires>Requires a separate MySQL or MariaDB database.</Requires>
   <Config Name="Base directory" Target="/shared" Default="/mnt/user/appdata/Seafile/notification-server/config" Mode="rw" Description="Config file storage" Type="Path" Display="always-hide" Required="true" Mask="false">/mnt/user/appdata/Seafile/notification-server/config</Config>
-  <Config Name="Logs directory" Target="/shared/logs/" Default="/mnt/user/appdata/Seafile/notification-server/" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/</Config>
+  <Config Name="Logs directory" Target="/shared/logs" Default="/mnt/user/appdata/Seafile/notification-server/logs" Mode="rw" Description="Log file storage" Type="Path" Display="always-hide" Required="true" Mask="false">/mnt/user/appdata/Seafile/notification-server/logs</Config>
   <Config Name="Port" Target="8083" Default="8083" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false"></Config>
   <Config Name="MySQL DB Host" Target="SEAFILE_MYSQL_DB_HOST" Default="mariadb" Mode="" Description="Use the container name of the DB or the IP." Type="Variable" Display="always" Required="true" Mask="false">mariadb</Config>
   <Config Name="MySQL DB Port" Target="SEAFILE_MYSQL_DB_PORT" Default="3306" Mode="" Description="Change it if you used a custom port for the DB." Type="Variable" Display="always" Required="true" Mask="false">3306</Config>
