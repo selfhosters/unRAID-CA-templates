@@ -12,6 +12,12 @@
   	Notification Server for Seafile &#xD;
 	&#xD;
 	You must modify the file `seafile.conf` with the correct values of the notification server: https://manual.seafile.com/latest/config/seafile-conf/#notification-server-configuration
+	&#xD;
+	Is recommendend the use of a docker network for all the neccesary containers needed for Seafile: &#xD;
+	1. Seafile Server Container &#xD;
+	2. Database Container &#xD;
+	3. Seafile Notification Server &#xD;
+	# This specific setup increase the security of the seafile instance as the admin just need to forward 2 ports to the host: the WebGUI for the Seafile Server and the Notification Server port. 
 </Overview>
   <Category>Backup: Cloud:</Category>
   <Icon>https://cdn.icon-icons.com/icons2/1381/PNG/512/seafile_93931.png</Icon>
