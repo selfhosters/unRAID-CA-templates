@@ -1,14 +1,10 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Forgejo</Name>
-  <Repository>codeberg.org/forgejo/forgejo:1.18</Repository>
+  <Repository>codeberg.org/forgejo/forgejo:9</Repository>
   <Registry>https://codeberg.org/forgejo/-/packages/container/forgejo/versions</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
-  <Date>2023-01-02</Date>
-  <Changes>
-- Initial Release
-  </Changes>
   <Project>https://forgejo.org/</Project>
   <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository</Support>
   <Overview>
