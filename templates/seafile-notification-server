@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>seafile-notification-server</Name>
+  <Repository>seafileltd/notification-server:12.0-latest</Repository>
+  <Registry>https://hub.docker.com/r/seafileltd/notification-server/</Registry>
+  <Network>seafile-net</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
+  <Project>https://github.com/selfhosters/unRAID-CA-templates</Project>
+  <Overview>
+  	Notification Server for Seafile &#xD;
+	&#xD;
+	You must modify the file `seafile.conf` with the correct values of the notification server: https://manual.seafile.com/latest/config/seafile-conf/#notification-server-configuration
+	&#xD;
+	Is recommendend the use of a docker network for all the neccesary containers needed for Seafile: &#xD;
+	1. Seafile Server Container &#xD;
+	2. Database Container &#xD;
+	3. Seafile Notification Server &#xD;
+	# This specific setup increase the security of the seafile instance as the admin just need to forward 2 ports to the host: the WebGUI for the Seafile Server and the Notification Server port. 
+</Overview>
+  <Category>Backup: Cloud:</Category>
+  <Icon>https://cdn.icon-icons.com/icons2/1381/PNG/512/seafile_93931.png</Icon>
+  <Requires>Requires a separate MySQL or MariaDB database.</Requires>
+  <Config Name="Base directory" Target="/shared" Default="/mnt/user/appdata/Seafile/notification-server/config" Mode="rw" Description="Config file storage" Type="Path" Display="always-hide" Required="true" Mask="false">/mnt/user/appdata/Seafile/notification-server/config</Config>
+  <Config Name="Logs directory" Target="/shared/logs" Default="/mnt/user/appdata/Seafile/notification-server/logs" Mode="rw" Description="Log file storage" Type="Path" Display="always-hide" Required="true" Mask="false">/mnt/user/appdata/Seafile/notification-server/logs</Config>
+  <Config Name="Port" Target="8083" Default="8083" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="MySQL DB Host" Target="SEAFILE_MYSQL_DB_HOST" Default="mariadb" Mode="" Description="Use the container name of the DB or the IP." Type="Variable" Display="always" Required="true" Mask="false">mariadb</Config>
+  <Config Name="MySQL DB Port" Target="SEAFILE_MYSQL_DB_PORT" Default="3306" Mode="" Description="Change it if you used a custom port for the DB." Type="Variable" Display="always" Required="true" Mask="false">3306</Config>
+  <Config Name="Seafile DB User" Target="SEAFILE_MYSQL_DB_USER" Default="seafile" Mode="" Description="If not sure you can find it in /conf/seafile.conf inside the seafile server container." Type="Variable" Display="always" Required="true" Mask="false">seafile</Config>
+  <Config Name="Seafile DB Password" Target="SEAFILE_MYSQL_DB_PASSWORD" Default="" Mode="" Description="If not sure you can find it in /conf/seafile.conf inside the seafile server container." Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  <Config Name="CCNET DB Name" Target="SEAFILE_MYSQL_DB_CCNET_DB_NAME" Default="ccnet_db" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">ccnet_db</Config>
+  <Config Name="Seafile DB Name" Target="SEAFILE_MYSQL_DB_SEAFILE_DB_NAME" Default="seafile_db" Mode="" Description="" Type="Variable" Display="always-hide" Required="true" Mask="false">seafile_db</Config>
+  <Config Name="JWT Private Key" Target="JWT_PRIVATE_KEY" Default="" Mode="" Description="If not sure you can find it in /conf/seafile.conf inside the seafile server container. Or you can create a new one but you have to change it also in seafile.conf inside de seafile server container." Type="Variable" Display="always-hide" Required="true" Mask="true"></Config>
+  <Config Name="Log to STDOUT" Target="SEAFILE_LOG_TO_STDOUT" Default="false|true" Mode="" Description="It shows the seafile notification server logs in the container logs. Useful for Debugging." Type="Variable" Display="advanced-hide" Required="true" Mask="false"></Config>
+  <Config Name="Log Level" Target="NOTIFICATION_SERVER_LOG_LEVEL" Default="info|error|debug" Mode="" Description="Use 'debug' if you want to know what is wrong." Type="Variable" Display="advanced-hide" Required="true" Mask="false"></Config>
+</Container>
