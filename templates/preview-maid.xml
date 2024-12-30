@@ -14,5 +14,5 @@
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/preview-maid.png</Icon>
   <Config Name="PLEX_URL" Target="PLEX_URL" Default="" Mode="" Description="The URL to your Plex instance" Type="Variable" Display="always" Required="true" Mask="false"/>
   <Config Name="PLEX_TOKEN" Target="PLEX_TOKEN" Default="" Mode="" Description="Your plex token" Type="Variable" Display="always" Required="true" Mask="true"/>
-  <Config Name="RUN_ONCE" Target="RUN_ONCE" Default="False" Mode="" Description="Set to true if you wish for only on run after which the container will terminate." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="RUN_ONCE" Target="RUN_ONCE" Default="False|True" Mode="" Description="Set to true if you wish for only on run after which the container will terminate." Type="Variable" Display="always" Required="true" Mask="false"/>
 </Container>
