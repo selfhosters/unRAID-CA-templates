@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>PreviewMaid</Name>
+  <Repository>fletchto99/preview-maid</Repository>
+  <Registry>https://hub.docker.com/r/fletchto99/preview-maid</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
+  <Project>https://github.com/fletchto99/preview-maid</Project>
+  <Overview>Preview maid is a tool to help you find missing thumbnail previews in your plex library. By default it will run upon start and then on a schedule daily at 00:00.</Overview>
+  <Category>Tools:Utilities Status:Stable</Category>
+  <TemplateURL>https://github.com/Kometa-Team/Unraid-Templates/blob/master/ImageMaid.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/preview-maid.png</Icon>
+  <Config Name="PLEX_URL" Target="PLEX_URL" Default="" Mode="" Description="The URL to your Plex instance" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="PLEX_TOKEN" Target="PLEX_TOKEN" Default="" Mode="" Description="Your plex token" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="RUN_ONCE" Target="RUN_ONCE" Default="False" Mode="" Description="Set to true if you wish for only on run after which the container will terminate." Type="Variable" Display="always" Required="false" Mask="false"/>
+</Container>
