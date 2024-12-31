@@ -15,6 +15,6 @@
   <Config Name="PLEX_URL" Target="PLEX_URL" Default="" Mode="" Description="The URL to your Plex instance" Type="Variable" Display="always" Required="true" Mask="false"/>
   <Config Name="PLEX_TOKEN" Target="PLEX_TOKEN" Default="" Mode="" Description="Your plex token" Type="Variable" Display="always" Required="true" Mask="true"/>
   <Config Name="RUN_ONCE" Target="RUN_ONCE" Default="False|True" Mode="" Description="Set to true if you wish for only on run after which the container will terminate." Type="Variable" Display="always" Required="true" Mask="false"/>
-  <Config Name="SKIP_LIBRARY_TYPES" Target="SKIP_LIBRARY_TYPES" Default="" Mode="" Description="A comma separated list of library types to skip. Options are tv,movie,photo" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="SKIP_LIBRARY_TYPES" Target="SKIP_LIBRARY_TYPES" Default="" Mode="" Description="A comma separated list of library types to skip. Options are tv,movie,photo" Type="Variable" Display="always-hide" Required="false" Mask="false"/>
   <Config Name="SKIP_LIBRARY_NAMES" Target="SKIP_LIBRARY_NAMES" Default="" Mode="" Description="A comma separated list of library names to skip" Type="Variable" Display="always" Required="true" Mask="false"/>
 </Container>
