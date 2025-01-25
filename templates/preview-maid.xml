@@ -14,7 +14,15 @@
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/preview-maid.png</Icon>
   <Config Name="PLEX_URL" Target="PLEX_URL" Default="" Mode="" Description="The URL to your Plex instance" Type="Variable" Display="always" Required="true" Mask="false"/>
   <Config Name="PLEX_TOKEN" Target="PLEX_TOKEN" Default="" Mode="" Description="Your plex token" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="FIND_MISSING_THUMBNAIL_PREVIEWS" Target="FIND_MISSING_THUMBNAIL_PREVIEWS" Default="True|False" Mode="" Description="Set to true to find missing thumbnail previews." Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="FIND_MISSING_VOICE_ACTIVITY" Target="FIND_MISSING_VOICE_ACTIVITY" Default="False|True" Mode="" Description="Set to true to find missing voice activity analysis data." Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="FIND_MISSING_INTRO_MARKERS" Target="FIND_MISSING_INTRO_MARKERS" Default="False|True" Mode="" Description="Set to true to find missing skip intro markers (note this is slow on large libraries)" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="FIND_MISSING_CREDITS_MARKERS" Target="FIND_MISSING_CREDITS_MARKERS" Default="False|True" Mode="" Description="Set to true to find missing skip credits markers (note this is slow on large libraries)" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="FIND_MISSING_AD_MARKERS" Target="FIND_MISSING_AD_MARKERS" Default="False|True" Mode="" Description="Set to true to find missing skip ad markers (note this is slow on large libraries)" Type="Variable" Display="always" Required="true" Mask="false"/>
   <Config Name="RUN_ONCE" Target="RUN_ONCE" Default="False|True" Mode="" Description="Set to true if you wish for only on run after which the container will terminate." Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="RUN_TIME" Target="RUN_ONCE" Default="00:00" Mode="" Description="The daily time to run the job in the format HH:MM." Type="Variable" Display="always" Required="true" Mask="false"/>
   <Config Name="SKIP_LIBRARY_TYPES" Target="SKIP_LIBRARY_TYPES" Default="" Mode="" Description="A comma separated list of library types to skip. Options are tv,movie,photo" Type="Variable" Display="always-hide" Required="false" Mask="false"/>
   <Config Name="SKIP_LIBRARY_NAMES" Target="SKIP_LIBRARY_NAMES" Default="" Mode="" Description="A comma separated list of library names to skip" Type="Variable" Display="always-hide" Required="false" Mask="false"/>
+  <Config Name="DEBUG" Target="DEBUG" Default="False|True" Mode="" Description="Set to true if you wish to enable debug logging." Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Config Location" Target="/app/logs" Default="/mnt/user/appdata/previewmaid/logs" Mode="rw" Description="Application log directory" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/previewmaid/logs</Config>
 </Container>
