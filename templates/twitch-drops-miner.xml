@@ -16,7 +16,7 @@
   <Config Name="Web UI Port" Target="5800" Default="5800" Mode="tcp" Description="Port used to access the application's GUI via the web interface." Type="Port" Display="always" Required="true" Mask="false">5800</Config>
   <Config Name="Display Width" Target="DISPLAY_WIDTH" Default="1920" Mode="" Description="Width (in pixels) of the application's window." Type="Variable" Display="advanced" Required="false" Mask="false">1920</Config>
   <Config Name="Display Height" Target="DISPLAY_HEIGHT" Default="1080" Mode="" Description="Height (in pixels) of the application's window." Type="Variable" Display="advanced" Required="false" Mask="false">1080</Config>
-  <Config Name="Dark mode" Target="DARK_MODE" Default="1" Mode="" Description="1 to enable, 0 to disable." Type="Variable" Display="advanced" Required="false" Mask="false">1</Config>
+  <Config Name="Dark mode" Target="DARK_MODE" Default="1|0" Mode="" Description="1 to enable, 0 to disable." Type="Variable" Display="advanced" Required="false" Mask="false"/>
   <Config Name="User ID" Target="USER_ID" Default="99" Mode="" Description="ID of the user the application runs as." Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
   <Config Name="Group ID" Target="GROUP_ID" Default="100" Mode="" Description="ID of the group the application runs as." Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
   <Config Name="Umask" Target="UMASK" Default="000" Mode="" Description="Mask that controls how file permissions are set for newly created files. The value of the mask is in octal notation." Type="Variable" Display="advanced" Required="false" Mask="false">000</Config>
