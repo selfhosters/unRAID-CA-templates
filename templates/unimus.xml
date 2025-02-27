@@ -14,7 +14,4 @@
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/unimus.png</Icon>
   <Config Name="UI" Target="8085" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">8085</Config>
   <Config Name="Config" Target="/etc/unimus/" Default="/mnt/user/appdata/unimus/" Mode="rw" Description="Appdata Path" Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/appdata/unimus/</Config>
-  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="GID for permissions. Do not change unless you know what you're doing." Type="Variable" Display="always-hide" Required="true" Mask="false">99</Config>
-  <Config Name="PGID" Target="PGID" Default="" Mode="" Description="GID for permissions. Do not change unless you know what you're doing." Type="Variable" Display="always-hide" Required="true" Mask="false">100</Config>
-  <Config Name="UMASK" Target="UMASK" Default="022" Mode="" Description="UMASK for newly created files. Do not change unless you know what you're doing." Type="Variable" Display="always" Required="false" Mask="false">022</Config>
 </Container>
