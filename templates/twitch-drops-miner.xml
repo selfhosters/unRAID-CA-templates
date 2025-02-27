@@ -11,8 +11,8 @@
   <Category>GameServers: Tools:</Category>
   <WebUI>http://[IP]:[PORT:5800]</WebUI>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/twitch-drops-miner.png</Icon>
-  <Config Name="Config Path" Target="/config" Default="/mnt/cache/appdata/twitch-drops-miner/config" Mode="rw" Description="Path to configuration data." Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/twitch-drops-miner/config</Config>
-  <Config Name="Cache Path" Target="/cache" Default="/mnt/cache/appdata/twitch-drops-miner/cache" Mode="rw" Description="Path to cache data." Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/twitch-drops-miner/cache</Config>
+  <Config Name="Config Path" Target="/config" Default="/mnt/user/appdata/twitch-drops-miner/config" Mode="rw" Description="Path to configuration data." Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/twitch-drops-miner/config</Config>
+  <Config Name="Cache Path" Target="/cache" Default="/mnt/user/appdata/twitch-drops-miner/cache" Mode="rw" Description="Path to cache data." Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/twitch-drops-miner/cache</Config>
   <Config Name="Web UI Port" Target="5800" Default="5800" Mode="tcp" Description="Port used to access the application's GUI via the web interface." Type="Port" Display="always" Required="true" Mask="false">5800</Config>
   <Config Name="Display Width" Target="DISPLAY_WIDTH" Default="1920" Mode="" Description="Width (in pixels) of the application's window." Type="Variable" Display="advanced" Required="false" Mask="false">1920</Config>
   <Config Name="Display Height" Target="DISPLAY_HEIGHT" Default="1080" Mode="" Description="Height (in pixels) of the application's window." Type="Variable" Display="advanced" Required="false" Mask="false">1080</Config>
