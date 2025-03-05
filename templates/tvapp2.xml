@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <Name>TVApp2</Name>
+    <Repository>ghcr.io/thebinaryninja/tvapp2:latest</Repository>
+    <Branch>
+        <Tag>latest</Tag>
+        <TagDescription>Latest stable release</TagDescription>
+    </Branch>
+    <Registry>ghcr.io/thebinaryninja/tvapp2</Registry>
+    <Network>bridge</Network>
+    <Shell>sh</Shell>
+    <Privileged>false</Privileged>
+    <Support>https://discord.com/channels/1340814107124830229/1342562117651529838</Support>
+    <Project>https://github.com/TheBinaryNinja/tvapp2</Project>
+    <Overview>Automatic M3U playlist and XML guide updater for TheTvApp, TVPass, and MoveOnJoy utilized within your IPTV client.&#xD;
+        &#xD;
+        GitHub Project: https://github.com/TheBinaryNinja/tvapp2</Overview>
+    <Category>MediaApp:Video MediaApp:Other MediaServer:Video MediaServer:Other</Category>
+    <WebUI>http://[IP]:[PORT:4124]</WebUI>
+    <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/tvapp2.xml</TemplateURL>
+    <Icon>https://raw.githubusercontent.com/TheBinaryNinja/unraid-templates/refs/heads/main/assets/tvapp2-vector.ico</Icon>
+    <Config Name="Web UI Port" Target="4124" Default="4124" Mode="tcp" Description="Container Port: 4124" Type="Port" Display="always-hide" Required="true" Mask="false">4124</Config>
+    <Config Name="Config Path" Target="/config" Default="/mnt/user/appdata/tvapp2/config" Description="Path to store configuration files." Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/tvapp2/config</Config>
+    <Config Name="Build Path" Target="/usr/bin/app" Default="/mnt/user/appdata/tvapp2/build" Description="Path to store build files." Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/tvapp2/build</Config>
+    <Config Name="Internal Server IP" Target="WEB_IP" Default="0.0.0.0" Description="IP to use for webserver. Not recommended to change." Type="Variable" Display="advanced-hide" Required="true" Mask="false">0.0.0.0</Config>
+    <Config Name="Internal Server Port" Target="WEB_PORT" Default="4124" Description="Port to use for webserver. Not recommended to change." Type="Variable" Display="advanced-hide" Required="true" Mask="false">4124</Config>
+    <Config Name="Data Files Source" Target="URL_REPO" Default="https://git.binaryninja.net/BinaryNinja/" Description="Determines where the data files will be downloaded from. Do not change this or you will be unable to get M3U and EPG data." Type="Variable" Display="advanced-hide" Required="true" Mask="false">https://git.binaryninja.net/BinaryNinja/</Config>
+    <Config Name="Internal Build Directory" Target="DIR_BUILD" Default="/usr/src/app" Description="Directory to build the app in. Not recommended to change." Type="Variable" Display="advanced-hide" Required="true" Mask="false">/usr/src/app</Config>
+    <Config Name="Internal Run Directory" Target="DIR_RUN" Default="/usr/bin/app" Description="Directory to run the app in. Not recommended to change." Type="Variable" Display="advanced-hide" Required="true" Mask="false">/usr/bin/app</Config>
+</Container>
