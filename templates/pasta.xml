@@ -15,7 +15,7 @@
   <WebUI>http://[IP]:[PORT:80]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/pasta.xml</TemplateURL>
   <Icon>https://www.pastatool.com/images/android-chrome-512.png</Icon>
-  <Config Name="WebUI" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="WebUI" Target="80" Default="8087" Mode="tcp" Description="WebUI Port" Type="Port" Display="always" Required="true" Mask="false">8087</Config>
   <DonateText>Add to the Coffee / Beer fund :)</DonateText>
   <DonateLink>https://ko-fi.com/cglatot</DonateLink>
 </Container>
