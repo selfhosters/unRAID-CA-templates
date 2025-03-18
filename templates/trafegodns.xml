@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <Name>TrafegoDNS</Name>
+    <Repository>ghcr.io/elmerfds/trafegodns:latest</Repository>
+    <Registry>https://github.com/elmerfds/TrafegoDNS</Registry>
+    <Network>bridge</Network>
+    <Shell>bash</Shell>
+    <Privileged>false</Privileged>
+    <Support>https://github.com/elmerfds/TrafegoDNS/issues</Support>
+    <Project>https://github.com/elmerfds/TrafegoDNS</Project>
+    <Overview>TrafegoDNS automatically manages DNS records based on container configuration. It supports both Traefik integration and direct Docker container label mode, making it compatible with any web server or reverse proxy solution.
+    Key Features:
+    - Supports multiple DNS providers (Cloudflare, DigitalOcean, Route53)
+    - Two operation modes: Traefik API integration or direct Docker labels
+    - Optional cleanup of orphaned DNS records
+    - Real-time monitoring of Docker container events
+    - Please refer to the readme before deploying this container: https://github.com/elmerfds/TrafegoDNS</Overview>
+    <Category>Tools: Network:Management Status:Stable</Category>
+    <Icon>https://raw.githubusercontent.com/elmerfds/TrafegoDNS/main/logo/logo.png</Icon>
+    <DonateText>If you appreciate my work, please consider donating!</DonateText>
+    <DonateLink>https://github.com/elmerfds/TrafegoDNS</DonateLink>
+    <Config Name="Operation Mode" Target="OPERATION_MODE" Default="traefik|direct" Mode="" Description="Choose how to detect hostnames: Traefik API or direct container labels" Type="Variable" Display="always" Required="true" Mask="false">traefik</Config>
+    <Config Name="DNS Provider" Target="DNS_PROVIDER" Default="cloudflare|digitalocean|route53" Mode="" Description="Select DNS provider to use" Type="Variable" Display="always" Required="true" Mask="false">cloudflare</Config>
+    <Config Name="Cloudflare Token" Target="CLOUDFLARE_TOKEN" Default="" Mode="" Description="Cloudflare API token (requires DNS edit permissions) - Required when using Cloudflare provider" Type="Variable" Display="always" Required="false" Mask="true"></Config>
+    <Config Name="Cloudflare Zone" Target="CLOUDFLARE_ZONE" Default="" Mode="" Description="Your domain name managed in Cloudflare (e.g., example.com) - Required when using Cloudflare provider" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+    <Config Name="DigitalOcean Token" Target="DO_TOKEN" Default="" Mode="" Description="DigitalOcean API token (requires write access) - Required when using DigitalOcean provider" Type="Variable" Display="always" Required="false" Mask="true"></Config>
+    <Config Name="DigitalOcean Domain" Target="DO_DOMAIN" Default="" Mode="" Description="Your domain name managed in DigitalOcean (e.g., example.com) - Required when using DigitalOcean provider" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+    <Config Name="Route53 Access Key" Target="ROUTE53_ACCESS_KEY" Default="" Mode="" Description="AWS IAM access key with Route53 permissions - Required when using Route53 provider" Type="Variable" Display="always" Required="false" Mask="true"></Config>
+    <Config Name="Route53 Secret Key" Target="ROUTE53_SECRET_KEY" Default="" Mode="" Description="AWS IAM secret key - Required when using Route53 provider" Type="Variable" Display="always" Required="false" Mask="true"></Config>
+    <Config Name="Route53 Zone" Target="ROUTE53_ZONE" Default="" Mode="" Description="Your domain name managed in Route53 (e.g., example.com) - Required when using Route53 provider" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+    <Config Name="Traefik API URL" Target="TRAEFIK_API_URL" Default="http://traefik:8080/api" Mode="" Description="URL to Traefik API (including protocol and port) - Only used when Operation Mode is 'traefik'" Type="Variable" Display="always" Required="false" Mask="false">http://traefik:8080/api</Config>
+    <Config Name="Cleanup Orphaned" Target="CLEANUP_ORPHANED" Default="true|false" Mode="" Description="Whether to automatically remove orphaned DNS records" Type="Variable" Display="always" Required="false" Mask="false">false</Config>  
+    <Config Name="Config Path" Target="/config" Default="/mnt/user/appdata/trafegodns" Mode="rw" Description="Configuration storage path" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/trafegodns</Config>
+    <Config Name="Docker Socket" Target="/var/run/docker.sock" Default="/var/run/docker.sock" Mode="ro" Description="Docker socket for container monitoring" Type="Path" Display="always" Required="true" Mask="false">/var/run/docker.sock</Config>
+    <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="User ID to run as" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
+    <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Group ID to run as" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
+    <Config Name="Log Level" Target="LOG_LEVEL" Default="ERROR|WARN|INFO|DEBUG|TRACE" Mode="" Description="Logging level" Type="Variable" Display="advanced" Required="false" Mask="false">INFO</Config>
+    <Config Name="Preserved Hostnames" Target="PRESERVED_HOSTNAMES" Default="" Mode="" Description="Comma-separated list of hostnames to preserve from cleanup (supports wildcards)" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+    <Config Name="Managed Hostnames" Target="MANAGED_HOSTNAMES" Default="" Mode="" Description="Comma-separated list of hostnames to create and maintain (format: hostname:type:content:ttl:proxied)" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+    <Config Name="Traefik API Username" Target="TRAEFIK_API_USERNAME" Default="" Mode="" Description="Optional basic auth username for Traefik API - Only used when Operation Mode is 'traefik'" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+    <Config Name="Traefik API Password" Target="TRAEFIK_API_PASSWORD" Default="" Mode="" Description="Optional basic auth password for Traefik API - Only used when Operation Mode is 'traefik'" Type="Variable" Display="advanced" Required="false" Mask="true"></Config>
+    <Config Name="Route53 Zone ID" Target="ROUTE53_ZONE_ID" Default="" Mode="" Description="Alternative to ROUTE53_ZONE: Your Route53 hosted zone ID - Only used when DNS Provider is 'route53'" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+    <Config Name="Route53 Region" Target="ROUTE53_REGION" Default="eu-west-2" Mode="" Description="AWS region for Route53 API calls - Only used when DNS Provider is 'route53'" Type="Variable" Display="advanced" Required="false" Mask="false">eu-west-2</Config>
+</Container>
