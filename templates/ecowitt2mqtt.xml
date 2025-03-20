@@ -12,13 +12,12 @@
   <Category>HomeAutomation:</Category>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/ecowitt2mqtt.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/ecowitt.png</Icon>
-  <Config Name="Community Applications Conversion" Target="Community_Applications_Conversion" Default="true" Mode="{3}" Description="" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
   <Config Name="ECOWITT2MQTT_MQTT_USERNAME" Target="ECOWITT2MQTT_MQTT_USERNAME" Default="ecowitt" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">ecowitt</Config>
   <Config Name="ECOWITT2MQTT_MQTT_PASSWORD" Target="ECOWITT2MQTT_MQTT_PASSWORD" Default="ecowitt" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="true">ecowitt</Config>
   <Config Name="ECOWITT2MQTT_MQTT_BROKER" Target="ECOWITT2MQTT_MQTT_BROKER" Default="mqtt" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">MQTT</Config>
-  <Config Name="ECOWITT2MQTT_MQTT_PORT" Target="ECOWITT2MQTT_MQTT_PORT" Default="1833" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">1833</Config>
-  <Config Name="ECOWITT2MQTT_HASS_DISCOVERY" Target="ECOWITT2MQTT_HASS_DISCOVERY" Default="true" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">true </Config>
-  <Config Name="ECOWITT2MQTT_OUTPUT_UNIT_SYSTEM" Target="ECOWITT2MQTT_OUTPUT_UNIT_SYSTEM" Default="imperial" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">imperial</Config>
-  <Config Name="ECOWITT2MQTT_VERBOSE" Target="ECOWITT2MQTT_VERBOSE" Default="false" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">false</Config>
-  <Config Name="Port" Target="8080" Default="8080" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">8082</Config>
+  <Config Name="ECOWITT2MQTT_MQTT_PORT" Target="ECOWITT2MQTT_MQTT_PORT" Default="1883" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">1883</Config>
+  <Config Name="ECOWITT2MQTT_HASS_DISCOVERY" Target="ECOWITT2MQTT_HASS_DISCOVERY" Default="true|false" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">true </Config>
+  <Config Name="ECOWITT2MQTT_OUTPUT_UNIT_SYSTEM" Target="ECOWITT2MQTT_OUTPUT_UNIT_SYSTEM" Default="imperial|metric" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">imperial</Config>
+  <Config Name="ECOWITT2MQTT_VERBOSE" Target="ECOWITT2MQTT_VERBOSE" Default="false|true" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">false</Config>
+  <Config Name="Port" Target="8080" Default="8080" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">8080</Config>
 </Container>
