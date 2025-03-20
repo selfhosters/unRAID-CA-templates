@@ -19,8 +19,8 @@
     <Icon>https://raw.githubusercontent.com/elmerfds/TrafegoDNS/main/logo/logo.png</Icon>
     <DonateText>If you appreciate my work, please consider donating!</DonateText>
     <DonateLink>https://github.com/elmerfds/TrafegoDNS</DonateLink>
-    <Config Name="Operation Mode" Target="OPERATION_MODE" Default="traefik|direct" Mode="" Description="Choose how to detect hostnames: Traefik API or direct container labels" Type="Variable" Display="always" Required="true" Mask="false">traefik</Config>
-    <Config Name="DNS Provider" Target="DNS_PROVIDER" Default="cloudflare|digitalocean|route53" Mode="" Description="Select DNS provider to use" Type="Variable" Display="always" Required="true" Mask="false">cloudflare</Config>
+    <Config Name="Operation Mode" Target="OPERATION_MODE" Default="traefik|direct" Mode="" Description="Choose how to detect hostnames: Traefik API or direct container labels" Type="Variable" Display="always" Required="true" Mask="false"/>
+    <Config Name="DNS Provider" Target="DNS_PROVIDER" Default="cloudflare|digitalocean|route53" Mode="" Description="Select DNS provider to use" Type="Variable" Display="always" Required="true" Mask="false"/>
     <Config Name="Cloudflare Token" Target="CLOUDFLARE_TOKEN" Default="" Mode="" Description="Cloudflare API token (requires DNS edit permissions) - Required when using Cloudflare provider" Type="Variable" Display="always" Required="false" Mask="true"></Config>
     <Config Name="Cloudflare Zone" Target="CLOUDFLARE_ZONE" Default="" Mode="" Description="Your domain name managed in Cloudflare (e.g., example.com) - Required when using Cloudflare provider" Type="Variable" Display="always" Required="false" Mask="false"></Config>
     <Config Name="DigitalOcean Token" Target="DO_TOKEN" Default="" Mode="" Description="DigitalOcean API token (requires write access) - Required when using DigitalOcean provider" Type="Variable" Display="always" Required="false" Mask="true"></Config>
