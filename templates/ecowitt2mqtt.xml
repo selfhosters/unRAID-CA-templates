@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>ecowitt2mqtt</Name>
+  <Repository>bachya/ecowitt2mqtt</Repository>
+  <Registry>https://hub.docker.com/r/bachya/ecowitt2mqtt/</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/bachya/ecowitt2mqtt/</Support>
+  <Project>https://github.com/bachya/ecowitt2mqtt</Project>
+  <Overview>ecowitt2mqtt is a small CLI/web server that can receive data from Fine Offset weather stations (and their numerous white-labeled counterparts, like Ecowitt and Ambient Weather), adjust that data in numerous ways, and send it on to one or more MQTT brokers.</Overview>
+  <Category>HomeAutomation:</Category>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/ecowitt2mqtt.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/ecowitt.png</Icon>
+  <Config Name="Community Applications Conversion" Target="Community_Applications_Conversion" Default="true" Mode="{3}" Description="" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="ECOWITT2MQTT_MQTT_USERNAME" Target="ECOWITT2MQTT_MQTT_USERNAME" Default="ecowitt" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">ecowitt</Config>
+  <Config Name="ECOWITT2MQTT_MQTT_PASSWORD" Target="ECOWITT2MQTT_MQTT_PASSWORD" Default="ecowitt" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="true">ecowitt</Config>
+  <Config Name="ECOWITT2MQTT_MQTT_BROKER" Target="ECOWITT2MQTT_MQTT_BROKER" Default="mqtt" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">MQTT</Config>
+  <Config Name="ECOWITT2MQTT_MQTT_PORT" Target="ECOWITT2MQTT_MQTT_PORT" Default="1833" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">1833</Config>
+  <Config Name="ECOWITT2MQTT_HASS_DISCOVERY" Target="ECOWITT2MQTT_HASS_DISCOVERY" Default="true" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">true </Config>
+  <Config Name="ECOWITT2MQTT_OUTPUT_UNIT_SYSTEM" Target="ECOWITT2MQTT_OUTPUT_UNIT_SYSTEM" Default="imperial" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">imperial</Config>
+  <Config Name="ECOWITT2MQTT_VERBOSE" Target="ECOWITT2MQTT_VERBOSE" Default="false" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">false</Config>
+  <Config Name="Port" Target="8080" Default="8080" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">8082</Config>
+</Container>
