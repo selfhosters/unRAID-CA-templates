@@ -10,6 +10,7 @@
   <Overview>The leading open source automation server, Jenkins provides hundreds of plugins to support building, deploying and automating any project.</Overview>
   <Category>Productivity: Tools:</Category>
   <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <ExtraParams>-u 99:100</ExtraParams>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/jenkins.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/jenkins.png</Icon>
   <Config Name="WebUI" Target="8080" Default="8080" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="true" Mask="false"/>
