@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>k3s</Name>
+  <Repository>rancher/k3s:latest</Repository>
+  <Registry/>
+  <Network>br0</Network>
+  <MyIP>192.168.1.200</MyIP>
+  <Shell>sh</Shell>
+  <Privileged>true</Privileged>
+  <Support/>
+  <Project>https://k3s.io/</Project>
+  <Overview>This Unraid template provides a simple way to deploy a K3s server as a Docker container within an Unraid environment. K3s is a lightweight Kubernetes distribution designed for easy installation and operation, making it ideal for Unraid users who want to run containerized workloads efficiently.&#xD;
+&#xD;
+Installation Steps&#xD;
+- Advanced View Configuration&#xD;
+- In Advanced View, remove # from commented lines.&#xD;
+- Replace fixed IP address with the IP address you set.&#xD;
+</Overview>
+  <Category>Productivity:</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://k3s.io/img/k3s-logo-light.svg</Icon>
+  <ExtraParams/>
+  <PostArgs>server # --bind-address &amp;lt;fixed-ip-adress&amp;gt;</PostArgs>
+  <CPUset/>
+  <DateInstalled>1743709909</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="k3s-cni" Target="/var/lib/cni" Default="/mnt/user/appdata/k3s/cni" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/k3s/cni</Config>
+  <Config Name="k3s-kubelet" Target="/var/lib/kubelet" Default="/mnt/user/appdata/k3s/kubelet" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/k3s/kubelet</Config>
+  <Config Name="k3s-rancher" Target="/var/lib/rancher/k3s" Default="/mnt/user/appdata/k3s/rancher" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/k3s/rancher</Config>
+  <Config Name="k3s-config" Target="/config" Default="/mnt/user/appdata/k3s/config" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/k3s/config</Config>
+  <Config Name="kubelet-api" Target="6443" Default="6443" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">6443</Config>
+  <Config Name="K3S_KUBECONFIG_OUTPUT" Target="K3S_KUBECONFIG_OUTPUT" Default="/config/kubeconfig.yaml" Mode="" Description="The path where kubeconfig stored" Type="Variable" Display="always" Required="false" Mask="false">/config/kubeconfig.yaml</Config>
+  <Config Name="K3S_TOKEN" Target="K3S_TOKEN" Default="&amp;lt;your-token&amp;gt;" Mode="" Description="The token that needed to adding agents" Type="Variable" Display="always" Required="false" Mask="false">&lt;your-token&gt;</Config>
+  <TailscaleStateDir/>
+</Container>
+
