@@ -32,7 +32,7 @@ Installation Steps&#xD;
   <Config Name="k3s-rancher" Target="/var/lib/rancher/k3s" Default="/mnt/user/appdata/k3s/rancher" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/k3s/rancher</Config>
   <Config Name="k3s-config" Target="/config" Default="/mnt/user/appdata/k3s/config" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/k3s/config</Config>
   <Config Name="kubelet-api" Target="6443" Default="6443" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">6443</Config>
-  <Config Name="K3S_KUBECONFIG_OUTPUT" Target="K3S_KUBECONFIG_OUTPUT" Default="/config/kubeconfig.yaml" Mode="" Description="The path where kubeconfig stored" Type="Variable" Display="always" Required="false" Mask="false">/config/kubeconfig.yaml</Config>
+  <Config Name="K3S_KUBECONFIG_OUTPUT" Target="K3S_KUBECONFIG_OUTPUT" Default="/config/kubeconfig.yaml" Mode="" Description="The path where kubeconfig stored" Type="Variable" Display="advanced-hide" Required="false" Mask="false">/config/kubeconfig.yaml</Config>
   <Config Name="K3S_TOKEN" Target="K3S_TOKEN" Default="&amp;lt;your-token&amp;gt;" Mode="" Description="The token that needed to adding agents" Type="Variable" Display="always" Required="false" Mask="false">&lt;your-token&gt;</Config>
   <TailscaleStateDir/>
 </Container>
