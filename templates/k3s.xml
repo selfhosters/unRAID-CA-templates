@@ -2,7 +2,7 @@
 <Container version="2">
   <Name>k3s</Name>
   <Repository>rancher/k3s:latest</Repository>
-  <Registry/>
+  <Registry>https://hub.docker.com/r/rancher/k3s</Registry>
   <Network>br0</Network>
   <MyIP>192.168.1.200</MyIP>
   <Shell>sh</Shell>
