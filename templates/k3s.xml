@@ -17,16 +17,8 @@ Installation Steps&#xD;
 - Replace fixed IP address with the IP address you set.&#xD;
 </Overview>
   <Category>Productivity:</Category>
-  <WebUI/>
-  <TemplateURL/>
   <Icon>https://k3s.io/img/k3s-logo-light.svg</Icon>
-  <ExtraParams/>
-  <PostArgs>server # --bind-address &amp;lt;fixed-ip-adress&amp;gt;</PostArgs>
-  <CPUset/>
-  <DateInstalled>1743709909</DateInstalled>
-  <DonateText/>
-  <DonateLink/>
-  <Requires/>
+  <PostArgs>server # --bind-address FIXED_IP_ADDRESS</PostArgs>
   <Config Name="k3s-cni" Target="/var/lib/cni" Default="/mnt/user/appdata/k3s/cni" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/k3s/cni</Config>
   <Config Name="k3s-kubelet" Target="/var/lib/kubelet" Default="/mnt/user/appdata/k3s/kubelet" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/k3s/kubelet</Config>
   <Config Name="k3s-rancher" Target="/var/lib/rancher/k3s" Default="/mnt/user/appdata/k3s/rancher" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/k3s/rancher</Config>
