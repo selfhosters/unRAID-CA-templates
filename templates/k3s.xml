@@ -8,7 +8,7 @@
   <Privileged>true</Privileged>
   <Support>https://k3s.io</Support>
   <Project>https://k3s.io/</Project>
-  <Overview>This Unraid template provides a simple way to deploy a K3s server as a Docker container within an Unraid environment. K3s is a lightweight Kubernetes distribution designed for easy installation and operation, making it ideal for Unraid users who want to run containerized workloads efficiently.&#xD;
+  <Overview>K3s is a lightweight Kubernetes distribution designed for easy installation and operation, making it ideal for users who want to run containerized workloads efficiently.&#xD;
 &#xD;
 Installation Steps&#xD;
 - Advanced View Configuration&#xD;
