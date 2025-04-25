@@ -4,7 +4,6 @@
   <Repository>tranceer/namecheap-ddns-updater:latest</Repository>
   <Registry>https://hub.docker.com/r/tranceer/namecheap-ddns-updater</Registry>
   <Network>bridge</Network>
-  <MyIP/>
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
   <Support>https://github.com/tranceer/nraid-namecheap-ddns-updater/issues</Support>
