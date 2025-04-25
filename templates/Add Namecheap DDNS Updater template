@@ -28,26 +28,8 @@
     <a href="https://github.com/daniel-boctor/" target="_blank">Daniel Boctor</a>
     ]]>
   </Overview>
-  <Environment>
-    <Variable>
-      <Name>DOMAIN</Name>
-      <Default>yourdomain.com</Default>
-      <Description>The domain name you want to update</Description>
-    </Variable>
-    <Variable>
-      <Name>API_KEY</Name>
-      <Default></Default>
-      <Description>Your Namecheap Dynamic DNS password (API Key)</Description>
-    </Variable>
-    <Variable>
-      <Name>HOSTS</Name>
-      <Default>@,adminer,jellyfin</Default>
-      <Description>Comma-separated list of hosts to update</Description>
-    </Variable>
-    <Variable>
-      <Name>INTERVAL</Name>
-      <Default>600</Default>
-      <Description>Interval in seconds between updates (default 600s)</Description>
-    </Variable>
-  </Environment>
+  <Config Name="Domain" Target="DOMAIN" Default="yourdomain.com" Description="The domain name you want to update" Type="Variable" Display="always-hide" Required="true" Mask="false">yourdomain.com</Config>
+  <Config Name="API Key" Target="API_KEY" Default="" Description="Your Namecheap Dynamic DNS password (API Key)" Type="Variable" Display="always-hide" Required="true" Mask="true"/>
+  <Config Name="Hosts" Target="HOSTS" Default="@" Description="A comma-separated list of hosts to update" Type="Variable" Display="always-hide" Required="true" Mask="false">@</Config>
+  <Config Name="Interval" Target="INTERVAL" Default="600" Description="How often, in seconds, to update your hosts" Type="Variable" Display="always-hide" Required="true" Mask="false">600</Config>
 </Container>
