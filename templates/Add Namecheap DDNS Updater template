@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container>
   <Name>Namecheap DDNS Updater</Name>
-  <Repository>tranceer/namecheap-ddns-updater</Repository>
+  <Repository>tranceer/namecheap-ddns-updater:latest</Repository>
   <Registry>https://hub.docker.com/r/tranceer/namecheap-ddns-updater</Registry>
   <Network>bridge</Network>
   <MyIP/>
