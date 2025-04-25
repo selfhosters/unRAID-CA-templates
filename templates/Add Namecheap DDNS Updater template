@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<Container>
+  <Name>Namecheap DDNS Updater</Name>
+  <Repository>tranceer/namecheap-ddns-updater</Repository>
+  <Registry>https://hub.docker.com/r/tranceer/namecheap-ddns-updater</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://github.com/daniel-boctor/</Project>
+  <Icon>https://raw.githubusercontent.com/hernandito/unRAID-Docker-Folder-Animated-Icons---Alternate-Colors/582492d824429e9a67796c8a4b090425d5f9922c/Pale-Collection/pale-network2.svg</Icon>
+  <Overview>
+    <![CDATA[
+    This container automatically updates your Namecheap Dynamic DNS records for multiple hosts at a specified interval.
+
+    - At startup, the container generates a script located at <code>/app/entrypoint.sh</code>.
+    - You can manually edit this script inside the container for advanced customizations.
+
+    🛠️ Before using this container:
+    - Make sure you have an <b>A record</b> for <code>@.yourdomain.com</code>
+    - Add <b>CNAME records</b> for each subdomain you want to use (e.g., <code>admin.yourdomain.com</code>)
+    - Go to your Namecheap dashboard, enable Dynamic DNS, and copy the <b>API Key</b>
+
+    📺 Based on this helpful tutorial:  
+    <a href="https://www.youtube.com/watch?v=9Wd2a_69QIw" target="_blank">YouTube Video</a><br/>
+    👨‍💻 Original work by:  
+    <a href="https://github.com/daniel-boctor/" target="_blank">Daniel Boctor</a>
+    ]]>
+  </Overview>
+  <Environment>
+    <Variable>
+      <Name>DOMAIN</Name>
+      <Default>yourdomain.com</Default>
+      <Description>The domain name you want to update</Description>
+    </Variable>
+    <Variable>
+      <Name>API_KEY</Name>
+      <Default></Default>
+      <Description>Your Namecheap Dynamic DNS password (API Key)</Description>
+    </Variable>
+    <Variable>
+      <Name>HOSTS</Name>
+      <Default>@,adminer,jellyfin</Default>
+      <Description>Comma-separated list of hosts to update</Description>
+    </Variable>
+    <Variable>
+      <Name>INTERVAL</Name>
+      <Default>600</Default>
+      <Description>Interval in seconds between updates (default 600s)</Description>
+    </Variable>
+  </Environment>
+</Container>
