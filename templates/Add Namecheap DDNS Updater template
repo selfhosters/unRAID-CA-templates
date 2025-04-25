@@ -9,7 +9,7 @@
   <Support>https://github.com/tranceer/nraid-namecheap-ddns-updater/issues</Support>
   <Project>https://github.com/tranceer/nraid-namecheap-ddns-updater</Project>
   <Icon>https://raw.githubusercontent.com/hernandito/unRAID-Docker-Folder-Animated-Icons---Alternate-Colors/582492d824429e9a67796c8a4b090425d5f9922c/Pale-Collection/pale-network2.svg</Icon>
-  <Overview><![CDATA[
+  <Overview>
 This container automatically updates your Namecheap Dynamic DNS records for multiple hosts at a specified interval.
 At startup, the container generates a script located at /app/entrypoint.sh.
 You can manually edit this script inside the container for advanced customization.
@@ -19,7 +19,7 @@ Before using this container:
 - Enable Dynamic DNS in your Namecheap dashboard and copy the API key
 Based on this tutorial: https://www.youtube.com/watch?v=9Wd2a_69QlW
 Original script by Daniel Boctor: https://github.com/daniel-boctor
-]]></Overview>
+  </Overview>
   <Config Name="Domain" Target="DOMAIN" Default="yourdomain.com" Description="The domain name you want to update" Type="Variable" Display="always-hide" Required="true" Mask="false">yourdomain.com</Config>
   <Config Name="API Key" Target="API_KEY" Default="" Description="Your Namecheap Dynamic DNS password (API Key)" Type="Variable" Display="always-hide" Required="true" Mask="true"/>
   <Config Name="Hosts" Target="HOSTS" Default="@" Description="A comma-separated list of hosts to update" Type="Variable" Display="always-hide" Required="true" Mask="false">@</Config>
