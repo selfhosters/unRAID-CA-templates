@@ -8,7 +8,7 @@
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
   <Support>https://github.com/tranceer/nraid-namecheap-ddns-updater/issues</Support>
-  <Project>https://github.com/daniel-boctor/</Project>
+  <Project>https://github.com/tranceer/nraid-namecheap-ddns-updater</Project>
   <Icon>https://raw.githubusercontent.com/hernandito/unRAID-Docker-Folder-Animated-Icons---Alternate-Colors/582492d824429e9a67796c8a4b090425d5f9922c/Pale-Collection/pale-network2.svg</Icon>
   <Overview>
     <![CDATA[
