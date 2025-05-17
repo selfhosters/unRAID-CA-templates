@@ -30,15 +30,15 @@
 
         Initial release
     </Changes>
-    <Config Name="Overseerr - URL" Target="OVERSEERR_URL" Default="" Description="URL or HTTP(S)://IP:PORT" Type="Variable" Display="always-hide" Required="true" Mask="false"/>
-    <Config Name="Overseerr - API Key" Target="OVERSEERR_API_KEY" Default=""  Description="Overseerr API Key" Type="Variable" Display="always-hide" Required="true" Mask="true"/>
-    <Config Name="Overseerr - User ID" Target="OVERSEERR_USER_ID" Default="1"  Description="User ID # you want the movies or shows to be added under." Type="Variable" Display="always-hide" Required="true" Mask="false">1</Config>
-    <Config Name="Overseerr - Use 4K Quality Profile" Target="OVERSEERR_4K" Default="false|true" Description="Request Quality Profile (true for 4K, false for standard)" Type="Variable" Display="always-hide" Required="true" Mask="false"/>
-    <Config Name="Sync Interval" Target="SYNC_INTERVAL" Default="24" Description="Sync interval, in hours" Type="Variable" Display="always-hide" Required="true" Mask="false">24</Config>
-    <Config Name="Automated Mode" Target="AUTOMATED_MODE" Default="true|false" Description="Set to true for automated mode (recommended for regular syncing and Docker), false for interactive mode (recommended for quick start)" Type="Variable" Display="always-hide" Required="true" Mask="false"/>
-    <Config Name="IMDb Lists" Target="IMDB_LISTS" Default="" Description="Comma-separated list of IMDb list IDs to use. See documentation: https://github.com/Woahai321/list-sync/pkgs/container/list-sync#-obtaining-list-ids" Type="Variable" Display="always-hide" Required="false" Mask="false"/>
-    <Config Name="Trakt Lists" Target="TRAKT_LISTS" Default="" Description="Comma-separated list of Trakt list IDs to use. See documentation: https://github.com/Woahai321/list-sync/pkgs/container/list-sync#-obtaining-list-ids" Type="Variable" Display="always-hide" Required="false" Mask="false"/>
-    <Config Name="Letterboxd Lists" Target="LETTERBOXD_LISTS" Default="" Description="Comma-separated list of Letterboxd list IDs to use. See documentation: https://github.com/Woahai321/list-sync/pkgs/container/list-sync#-obtaining-list-ids" Type="Variable" Display="always-hide" Required="false" Mask="false"/>
-    <Config Name="Discord Webhook URL" Target="DISCORD_WEBHOOK_URL" Default="" Description="Discord Webhook URL for notifications" Type="Variable" Display="always-hide" Required="false" Mask="false"/>
-    <Config Name="Data Path" Target="/usr/src/app/data" Default="/mnt/user/appdata/list-sync/data" Description="Path to store data files" Type="Path" Mode="rw" Display="always-hide" Required="true" Mask="false">/mnt/user/appdata/list-sync/data</Config>
+    <Config Name="Overseerr - URL" Target="OVERSEERR_URL" Default="" Description="URL or HTTP(S)://IP:PORT" Type="Variable" Display="always" Required="true" Mask="false"/>
+    <Config Name="Overseerr - API Key" Target="OVERSEERR_API_KEY" Default=""  Description="Overseerr API Key" Type="Variable" Display="always" Required="true" Mask="true"/>
+    <Config Name="Overseerr - User ID" Target="OVERSEERR_USER_ID" Default="1"  Description="User ID # you want the movies or shows to be added under." Type="Variable" Display="always" Required="true" Mask="false">1</Config>
+    <Config Name="Overseerr - Use 4K Quality Profile" Target="OVERSEERR_4K" Default="false|true" Description="Request Quality Profile (true for 4K, false for standard)" Type="Variable" Display="always" Required="true" Mask="false"/>
+    <Config Name="Sync Interval" Target="SYNC_INTERVAL" Default="24" Description="Sync interval, in hours" Type="Variable" Display="always" Required="true" Mask="false">24</Config>
+    <Config Name="Automated Mode" Target="AUTOMATED_MODE" Default="true|false" Description="Set to true for automated mode (recommended for regular syncing and Docker), false for interactive mode (recommended for quick start)" Type="Variable" Display="always" Required="true" Mask="false"/>
+    <Config Name="IMDb Lists" Target="IMDB_LISTS" Default="" Description="Comma-separated list of IMDb list IDs to use. See documentation: https://github.com/Woahai321/list-sync/pkgs/container/list-sync#-obtaining-list-ids" Type="Variable" Display="always" Required="false" Mask="false"/>
+    <Config Name="Trakt Lists" Target="TRAKT_LISTS" Default="" Description="Comma-separated list of Trakt list IDs to use. See documentation: https://github.com/Woahai321/list-sync/pkgs/container/list-sync#-obtaining-list-ids" Type="Variable" Display="always" Required="false" Mask="false"/>
+    <Config Name="Letterboxd Lists" Target="LETTERBOXD_LISTS" Default="" Description="Comma-separated list of Letterboxd list IDs to use. See documentation: https://github.com/Woahai321/list-sync/pkgs/container/list-sync#-obtaining-list-ids" Type="Variable" Display="always" Required="false" Mask="false"/>
+    <Config Name="Discord Webhook URL" Target="DISCORD_WEBHOOK_URL" Default="" Description="Discord Webhook URL for notifications" Type="Variable" Display="always" Required="false" Mask="true"/>
+    <Config Name="Data Path" Target="/usr/src/app/data" Default="/mnt/user/appdata/list-sync/data" Description="Path to store data files" Type="Path" Mode="rw" Display="always" Required="true" Mask="false">/mnt/user/appdata/list-sync/data</Config>
 </Container>
