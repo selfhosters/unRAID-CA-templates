@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>dnsfilter</Name>
+  <Repository>dnsfilter/relay</Repository>
+  <Registry>https://hub.docker.com/r/dnsfilter/relay/</Registry>
+  <Network>host</Network>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/dnsfilter/relay/</Support>
+  <Overview>DNSFilter On-site DNS proxy provides customers the ability to have a local DNS proxy that adds requester basic information to DNS requests.</Overview>
+  <Category>Network:DNS</Category>
+  <WebUI>https://app.dnsfilter.com/login</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/dnsfilter.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/DNSFilter.png</Icon>
+  <Config Name="relay.conf" Target="./relay.conf" Default="/mnt/user/appdata/dnsfilter/relay.conf" Mode="rw" Description="relay.conf file" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/dnsfilter/relay.conf</Config>
+  <Config Name="relay.reg" Target="./relay.reg" Default="/mnt/user/appdata/dnsfilter/relay.reg" Mode="rw" Description="relay.reg file" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/dnsfilter/relay.reg</Config>
+</Container>
