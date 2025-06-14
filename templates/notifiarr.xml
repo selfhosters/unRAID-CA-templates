@@ -11,7 +11,7 @@
   <Project>https://github.com/Notifiarr/notifiarr</Project>
   <Category>MediaApp:Video MediaApp:Music MediaApp:Books</Category>
   <WebUI>http://[IP]:[PORT:5454]/</WebUI>
-  <ExtraParams>--hostname=$(hostname -f)</ExtraParams>
+  <ExtraParams>--hostname notifiarr</ExtraParams>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/notifiarr.xml</TemplateURL>
   <Icon>https://notifiarr.com/images/logo/notifiarr.png</Icon>
   <Overview>
