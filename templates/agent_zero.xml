@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>agent-zero</Name>
+  <Repository>frdel/agent-zero-run:latest</Repository>
+  <Registry>https://hub.docker.com/r/frdel/agent-zero-run</Registry>
+  <DonateText>Please consider supporting this project with a donation.[br]</DonateText>
+  <DonateLink>https://github.com/sponsors/frdel</DonateLink>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/frdel/agent-zero/issues</Support>
+  <Project>https://agent-zero.ai/</Project>
+  <Overview>
+[b]Agent-Zero[/b] is the easiest way to create and deploy autonomous AI agents.
+It's a powerful platform designed to simplify the development and management of AI agents by providing a user-friendly interface and robust backend capabilities.
+[br][br]
+Simply provide your API key from a supported Large Language Model (LLM) provider (like OpenAI, Anthropic, or Cohere), describe the agent you want to build, and Agent-Zero will generate, test, and deploy it for you.
+[br][br]
+[b]FIRST RUN SETUP:[/b] After deploying this container, access the web interface and configure your LLM provider during the initial setup. You must provide your own API key or Ollama instance URL for at least one LLM provider for the application to be useful. All configuration is done through the web interface on first run.
+[br][br]
+[b]GPU Support:[/b] This template will pass all available Nvidia GPUs to the container.
+This requires the [b]Nvidia-Plugin[/b] to be installed from Community Applications.
+[br][b]BRANCH[/b] parameter is in post-arguments, because it needs to be passed after the tailscale package completes, or the container will fail to start.[/br]
+[b]Future-Proofing Note:[/b] The GPU passthrough setting is included to future-proof the container for when the developer begins releasing CUDA-enabled images directly to Docker Hub. If you do not require GPU functionality, feel free to remove the '--runtime=nvidia' parameter from the 'Extra Parameters' field.
+</Overview>
+  <Beta>True</Beta>
+  <Category>AI: Productivity:</Category>
+  <WebUI>http://[IP]:50080</WebUI>
+  <ExtraParams>--runtime=nvidia</ExtraParams>
+  <PostArgs>--BRANCH=main</PostArgs>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/agent-zero.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/agent-zero.png</Icon>
+  <Screenshot>https://raw.githubusercontent.com/frdel/agent-zero/main/docs/res/ui-screen-2.png</Screenshot>
+  <Requires>https://forums.unraid.net/topic/98978-plugin-nvidia-driver/</Requires>
+  <Date>2025-07-01</Date>
+
+  <Config Name="Web UI Port" Target="80" Default="50080" Mode="tcp" Description="The port to access the Agent-Zero web interface. The container listens on port 80, which is mapped to the host port you specify here." Type="Port" Display="always" Required="true"/>
+  <Config Name="Appdata Path" Target="/app/data" Default="/mnt/user/appdata/agent-zero" Mode="rw" Description="Container path for storing application data, agent configurations, and logs." Type="Path" Display="always" Required="true"/>
+  <Config Name="NVIDIA Visible Devices" Target="NVIDIA_VISIBLE_DEVICES" Default="all" Description="The UUID of the NVIDIA GPU to pass to the container. 'all' will pass all available GPUs." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Labels/>
+</Container>
