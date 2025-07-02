@@ -33,7 +33,7 @@ This requires the [b]Nvidia-Plugin[/b] to be installed from Community Applicatio
   <Requires>https://forums.unraid.net/topic/98978-plugin-nvidia-driver/</Requires>
 
   <Config Name="Web UI Port" Target="80" Default="50080" Mode="tcp" Description="The port to access the Agent-Zero web interface. The container listens on port 80, which is mapped to the host port you specify here." Type="Port" Display="always" Required="true" Mask="false">50080</Config>
-  <Config Name="Appdata Path" Target="/app/data" Default="/mnt/user/appdata/agent-zero" Mode="rw" Description="Container path for storing application data, agent configurations, and logs." Type="Path" Display="always" Required="true"/>
+  <Config Name="Appdata Path" Target="/app/data" Default="/mnt/user/appdata/agent-zero" Mode="rw" Description="Container path for storing application data, agent configurations, and logs." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/app data/agent-zero</Config>
   <Config Name="NVIDIA Visible Devices" Target="NVIDIA_VISIBLE_DEVICES" Default="all" Description="The UUID of the NVIDIA GPU to pass to the container. 'all' will pass all available GPUs." Type="Variable" Display="advanced" Required="false" Mask="false"/>
   <Labels/>
 </Container>
