@@ -24,7 +24,7 @@ This requires the [b]Nvidia-Plugin[/b] to be installed from Community Applicatio
 </Overview>
   <Beta>True</Beta>
   <Category>AI: Productivity:</Category>
-  <WebUI>http://[IP]:50080</WebUI>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
   <ExtraParams>--runtime=nvidia</ExtraParams>
   <PostArgs>--BRANCH=main</PostArgs>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/agent-zero.xml</TemplateURL>
