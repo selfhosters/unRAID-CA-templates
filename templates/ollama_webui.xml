@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>ollama-webui</Name>
+  <Repository>ghcr.io/open-webui/open-webui:ollama</Repository>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Overview>Open WebUI for Ollama bundled into one container</Overview>
+  <Category>AI</Category>
+  <ExtraSearchTerms>ollama llama open-webui openwebui openweb-ui</ExtraSearchTerms>
+  <WebUI>http://[IP]:[PORT:3000]</WebUI>
+  <Icon>https://raw.githubusercontent.com/open-webui/open-webui/main/static/favicon.png</Icon>
+  <Config Name="GPU Args" Target="GPU_ARGS" Default="" Description="Optional GPU args like --gpus=all, use if using gpu" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="HTTP Port" Target="8080" Default="3000" Mode="tcp" Description="Container HTTP port" Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="App Backend data" Target="/app/backend/data" Default="/mnt/user/appdata/ollama_webui" Mode="rw" Description="Config data for webui" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/ollama_webui</Config>
+  <Config Name="Ollama data" Target="/root/.ollama" Default="/mnt/user/appdata/ollama" Mode="rw" Description="Config data for ollama" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/ollama</Config>
+  <ExtraParams>--restart=always $GPU_ARGS</ExtraParams>
+</Container>
