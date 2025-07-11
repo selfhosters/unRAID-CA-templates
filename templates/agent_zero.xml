@@ -11,6 +11,7 @@
   <Project>https://agent-zero.ai/</Project>
   <Overview>
 [b]Agent-Zero[/b] is the easiest way to create and deploy autonomous AI agents.
+[b]Configuration note:[/b] The "--BRANCH=main" post argument will break installation if you are not using Tailscale- create it as a standard variable in that case, and remove the post-arg.
 It's a powerful platform designed to simplify the development and management of AI agents by providing a user-friendly interface and robust backend capabilities.
 [br][br]
 Simply provide your API key from a supported Large Language Model (LLM) provider (like OpenAI, Anthropic, or Cohere), describe the agent you want to build, and Agent-Zero will generate, test, and deploy it for you.
