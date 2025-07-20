@@ -14,7 +14,10 @@
   <WebUI>http://[IP]:[PORT:8374]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/DockerDiscordControl/DockerDiscordControl/main/unraid-template.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/DockerDiscordControl/DockerDiscordControl/main/app/static/ddc_web.png</Icon>
-  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <Screenshot>https://raw.githubusercontent.com/DockerDiscordControl/ddc-website/main/webui1.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/DockerDiscordControl/ddc-website/main/commands.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/DockerDiscordControl/ddc-website/main/control1.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/DockerDiscordControl/ddc-website/main/task1.png</Screenshot>  <ExtraParams>--restart=unless-stopped</ExtraParams>
   <PostArgs/>
   <CPUset/>
   <DateInstalled>1734711600</DateInstalled>
