@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>DockerDiscordControl</Name>
-  <Repository>dockerdiscordcontrol/dockerdiscordcontrol</Repository>
+  <Repository>dockerdiscordcontrol/dockerdiscordcontrol:latest</Repository>
   <Registry>https://hub.docker.com/r/dockerdiscordcontrol/dockerdiscordcontrol</Registry>
+  <Default>latest</Default>
   <Network>bridge</Network>
-  <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
   <Support>https://github.com/DockerDiscordControl/DockerDiscordControl/issues</Support>
@@ -23,7 +23,7 @@
   <DateInstalled>1734711600</DateInstalled>
   <DonateText>Support DDC Development - Buy Me A Coffee or PayPal</DonateText>
   <DonateLink>https://buymeacoffee.com/dockerdiscordcontrol</DonateLink>
-  <DonateImg>https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=☕&slug=dockerdiscordcontrol&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff</DonateImg>
+  <DonateImg>https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&amp;emoji=☕&amp;slug=dockerdiscordcontrol&amp;button_colour=FFDD00&amp;font_colour=000000&amp;font_family=Cookie&amp;outline_colour=000000&amp;coffee_colour=ffffff</DonateImg>
   <MinVer>6.8.0</MinVer>
   <Description>
     Control your Docker containers directly from Discord! DockerDiscordControl provides:
