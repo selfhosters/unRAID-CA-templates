@@ -12,13 +12,12 @@
   <Overview>Control your Docker containers directly from Discord! Revolutionary performance optimizations with web UI and task scheduling. Alpine Linux based for enhanced security and minimal resource usage. Features Discord bot commands, automated scheduling, and real-time monitoring perfect for Unraid servers.</Overview>
   <Category>Tools: HomeAutomation:</Category>
   <WebUI>http://[IP]:[PORT:8374]/</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/DockerDiscordControl/DockerDiscordControl/main/unraid-template.xml</TemplateURL>
+  <TemplateURL>https://raw.githubusercontent.com/DockerDiscordControl/unRAID-CA-templates/master/templates/dockerdiscordcontrol.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/DockerDiscordControl/ddc-website/main/DDClogo.jpg</Icon>
   <Screenshot>https://raw.githubusercontent.com/DockerDiscordControl/ddc-website/main/webui1.png</Screenshot>
   <Screenshot>https://raw.githubusercontent.com/DockerDiscordControl/ddc-website/main/commands.png</Screenshot>
   <Screenshot>https://raw.githubusercontent.com/DockerDiscordControl/ddc-website/main/control1.png</Screenshot>
   <Screenshot>https://raw.githubusercontent.com/DockerDiscordControl/ddc-website/main/task1.png</Screenshot>  <ExtraParams>--restart=unless-stopped</ExtraParams>
-  <PostArgs/>
   <CPUset/>
   <DateInstalled>1734711600</DateInstalled>
   <DonateText>Support DDC Development - Buy Me A Coffee or PayPal</DonateText>
