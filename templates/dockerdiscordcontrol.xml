@@ -52,7 +52,7 @@
       </Port>
     </Publish>
   </Networking>
-  <Data>
+  <Config>
     <Volume>
       <HostDir>/mnt/user/appdata/dockerdiscordcontrol/config</HostDir>
       <ContainerDir>/app/config</ContainerDir>
@@ -68,7 +68,7 @@
       <ContainerDir>/var/run/docker.sock</ContainerDir>
       <Mode>ro</Mode>
     </Volume>
-  </Data>
+  </Config>
   <Environment>
     <Variable>
       <Value></Value>
