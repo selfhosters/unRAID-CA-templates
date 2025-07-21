@@ -18,8 +18,6 @@
   <Screenshot>https://raw.githubusercontent.com/DockerDiscordControl/ddc-website/main/commands.png</Screenshot>
   <Screenshot>https://raw.githubusercontent.com/DockerDiscordControl/ddc-website/main/control1.png</Screenshot>
   <Screenshot>https://raw.githubusercontent.com/DockerDiscordControl/ddc-website/main/task1.png</Screenshot>  <ExtraParams>--restart=unless-stopped</ExtraParams>
-  <CPUset/>
-  <DateInstalled>1734711600</DateInstalled>
   <DonateText>Support DDC Development - Buy Me A Coffee or PayPal</DonateText>
   <DonateLink>https://buymeacoffee.com/dockerdiscordcontrol</DonateLink>
   <DonateImg>https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&amp;emoji=☕&amp;slug=dockerdiscordcontrol&amp;button_colour=FFDD00&amp;font_colour=000000&amp;font_family=Cookie&amp;outline_colour=000000&amp;coffee_colour=ffffff</DonateImg>
