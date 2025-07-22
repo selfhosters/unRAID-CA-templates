@@ -3,89 +3,44 @@
   <Name>DockerDiscordControl</Name>
   <Repository>dockerdiscordcontrol/dockerdiscordcontrol:latest</Repository>
   <Registry>https://hub.docker.com/r/dockerdiscordcontrol/dockerdiscordcontrol</Registry>
-  <Default>latest</Default>
   <Network>bridge</Network>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
   <Support>https://github.com/DockerDiscordControl/DockerDiscordControl/issues</Support>
   <Project>https://ddc.bot</Project>
-  <Overview>Control your Docker containers directly from Discord! Revolutionary performance optimizations with web UI and task scheduling. Alpine Linux based for enhanced security and minimal resource usage. Features Discord bot commands, automated scheduling, and real-time monitoring perfect for Unraid servers.</Overview>
-  <Category>Tools: HomeAutomation:</Category>
+  <Overview>
+    Control your Docker containers directly from Discord! &#xD;
+    [br][br]&#xD;
+    DockerDiscordControl provides: &#xD;
+    [br][br]&#xD;
+    🎮 Discord Bot Commands - Start, stop, restart containers via Discord slash commands &#xD;
+    🌐 Web Interface - Secure configuration panel with real-time monitoring &#xD;
+    ⚡ Revolutionary Performance - 16x faster cache updates, 7x faster message processing &#xD;
+    📅 Task Scheduler - Automate container actions (daily, weekly, monthly) &#xD;
+    🔒 Security Framework - Channel-based permissions and rate limiting &#xD;
+    🏔️ Alpine Linux - 94% fewer vulnerabilities, less than 200MB RAM usage &#xD;
+    [br][br]&#xD;
+    Perfect for Unraid servers and Discord communities managing containers! &#xD;
+    [br][br]&#xD;
+    IMPORTANT: You must create a Discord bot token before first use. &#xD;
+    See the setup guide at https://ddc.bot for complete instructions. &#xD;
+    [br][br]&#xD;
+    DEFAULT LOGIN: Username 'admin', Password 'admin' - CHANGE IMMEDIATELY after first login!
+  </Overview>
+  <Category>Tools: Productivity:</Category>
   <WebUI>http://[IP]:[PORT:8374]/</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/DockerDiscordControl/unRAID-CA-templates/master/templates/dockerdiscordcontrol.xml</TemplateURL>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/dockerdiscordcontrol.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/DockerDiscordControl/ddc-website/main/DDClogo.jpg</Icon>
   <Screenshot>https://raw.githubusercontent.com/DockerDiscordControl/ddc-website/main/webui1.png</Screenshot>
   <Screenshot>https://raw.githubusercontent.com/DockerDiscordControl/ddc-website/main/commands.png</Screenshot>
   <Screenshot>https://raw.githubusercontent.com/DockerDiscordControl/ddc-website/main/control1.png</Screenshot>
-  <Screenshot>https://raw.githubusercontent.com/DockerDiscordControl/ddc-website/main/task1.png</Screenshot>  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <Screenshot>https://raw.githubusercontent.com/DockerDiscordControl/ddc-website/main/task1.png</Screenshot>
   <DonateText>Support DDC Development - Buy Me A Coffee or PayPal</DonateText>
   <DonateLink>https://buymeacoffee.com/dockerdiscordcontrol</DonateLink>
-  <DonateImg>https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&amp;emoji=☕&amp;slug=dockerdiscordcontrol&amp;button_colour=FFDD00&amp;font_colour=000000&amp;font_family=Cookie&amp;outline_colour=000000&amp;coffee_colour=ffffff</DonateImg>
-  <MinVer>6.8.0</MinVer>
-  <Description>
-    Control your Docker containers directly from Discord! DockerDiscordControl provides:
-    
-    🎮 Discord Bot Commands - Start, stop, restart containers via Discord slash commands
-    🌐 Web Interface - Secure configuration panel with real-time monitoring  
-    ⚡ Revolutionary Performance - 16x faster cache updates, 7x faster message processing
-    📅 Task Scheduler - Automate container actions (daily, weekly, monthly)
-    🔒 Security Framework - Channel-based permissions and rate limiting
-    🏔️ Alpine Linux - 94% fewer vulnerabilities, &lt;200MB RAM usage
-    
-    Perfect for Unraid servers and Discord communities managing containers!
-    
-    IMPORTANT: You must create a Discord bot token before first use.
-    See the setup guide at https://ddc.bot for complete instructions.
-    
-    DEFAULT LOGIN: Username 'admin', Password 'admin' - CHANGE IMMEDIATELY after first login!    
-    🤝 SUPPORT THE PROJECT:
-    ☕ Buy Me A Coffee: https://buymeacoffee.com/dockerdiscordcontrol
-    💳 PayPal Donation: https://www.paypal.com/donate/?hosted_button_id=XKVC6SFXU2GW4
-  </Description>
-  <Networking>
-    <Mode>bridge</Mode>
-    <Publish>
-      <Port>
-        <HostPort>8374</HostPort>
-        <ContainerPort>9374</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-    </Publish>
-  </Networking>
-  <Config>
-    <Volume>
-      <HostDir>/mnt/user/appdata/dockerdiscordcontrol/config</HostDir>
-      <ContainerDir>/app/config</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-    <Volume>
-      <HostDir>/mnt/user/appdata/dockerdiscordcontrol/logs</HostDir>
-      <ContainerDir>/app/logs</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-    <Volume>
-      <HostDir>/var/run/docker.sock</HostDir>
-      <ContainerDir>/var/run/docker.sock</ContainerDir>
-      <Mode>ro</Mode>
-    </Volume>
-  </Config>
-  <Environment>
-    <Variable>
-      <Value></Value>
-      <Name>FLASK_SECRET_KEY</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value>admin</Value>
-      <Name>DDC_ADMIN_PASSWORD</Name>
-      <Mode/>
-    </Variable>
-  </Environment>
-  <Labels/>
-  <Config Name="Web Interface Port" Target="8374" Default="8374" Mode="tcp" Description="Port for DDC web interface. Access at http://[IP]:8374" Type="Port" Display="always" Required="true" Mask="false">8374</Config>
+  <Config Name="Web UI Port" Target="8374" Default="8374" Mode="tcp" Description="Port for DDC web interface." Type="Port" Display="always" Required="true" Mask="false">8374</Config>
+  <Config Name="Flask Secret Key" Target="FLASK_SECRET_KEY" Default="" Mode="" Description="Secret key for web UI security. Generate with: openssl rand -hex 32" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="Admin Password" Target="DDC_ADMIN_PASSWORD" Default="admin" Mode="" Description="Password for web UI admin user (username: admin). CHANGE FROM DEFAULT!" Type="Variable" Display="always" Required="true" Mask="true">admin</Config>
   <Config Name="Config Directory" Target="/app/config" Default="/mnt/user/appdata/dockerdiscordcontrol/config" Mode="rw" Description="Directory to store DDC configuration files" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/dockerdiscordcontrol/config</Config>
   <Config Name="Logs Directory" Target="/app/logs" Default="/mnt/user/appdata/dockerdiscordcontrol/logs" Mode="rw" Description="Directory to store DDC log files" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/dockerdiscordcontrol/logs</Config>
   <Config Name="Docker Socket" Target="/var/run/docker.sock" Default="/var/run/docker.sock" Mode="ro" Description="Docker socket for container control (READ-ONLY)" Type="Path" Display="advanced" Required="true" Mask="false">/var/run/docker.sock</Config>
-  <Config Name="Flask Secret Key" Target="FLASK_SECRET_KEY" Default="" Mode="" Description="Secret key for web UI security. Generate with: openssl rand -hex 32" Type="Variable" Display="always" Required="true" Mask="true"></Config>
-  <Config Name="Admin Password" Target="DDC_ADMIN_PASSWORD" Default="admin" Mode="" Description="Password for web UI admin user (username: admin). CHANGE FROM DEFAULT!" Type="Variable" Display="always" Required="true" Mask="true">admin</Config>
-</Container> 
+</Container>
