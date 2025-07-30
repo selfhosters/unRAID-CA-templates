@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>agent-zero</Name>
-  <Repository>frdel/agent-zero-run:latest</Repository>
-  <Registry>https://hub.docker.com/r/frdel/agent-zero-run</Registry>
+  <Repository>agent0ai/agent-zero:latest</Repository>
+  <Registry>https://hub.docker.com/r/agent0ai/agent-zero</Registry>
   <DonateText>Please consider supporting this project with a donation.[br]</DonateText>
   <DonateLink>https://github.com/sponsors/frdel</DonateLink>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
-  <Support>https://github.com/frdel/agent-zero/issues</Support>
+  <Support>https://github.com/agent0ai/agent-zero</Support>
   <Project>https://agent-zero.ai/</Project>
   <Overview>
 [b]Agent-Zero[/b] is the easiest way to create and deploy autonomous AI agents.
