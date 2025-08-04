@@ -9,9 +9,9 @@
   <Project>https://github.com/PhasecoreX/docker-red-discordbot</Project>
   <Overview>The newest Red-Discordbot in a convenient multi-arch container &#xD;
 [br][br]&#xD;
-[b]How to create a bot account:[/b] https://discordpy.readthedocs.io/en/v1.0.1/discord.html#creating-a-bot-account&#xD;
+How to create a bot account: https://discordpy.readthedocs.io/en/v1.0.1/discord.html#creating-a-bot-account&#xD;
 [br][br]&#xD;
-[b]Readme:[/b] https://github.com/PhasecoreX/docker-red-discordbot</Overview>
+More variables for redbot can be found in the Readme https://github.com/PhasecoreX/docker-red-discordbot</Overview>
   <Category>Tools:</Category>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/red-discordbot.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/red-discordbot.png</Icon>
