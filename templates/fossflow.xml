@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>fossflow</Name>
+  <Repository>stnsmith/fossflow</Repository>
+  <Registry>https://hub.docker.com/r/stnsmith/fossflow/</Registry>
+  <Network>bridge</Network>
+  <Support>https://github.com/stan-smith/FossFLOW/issues</Support>
+  <Project>https://github.com/stan-smith/FossFLOW</Project>
+  <Overview>FossFLOW is a powerful, open-source Progressive Web App (PWA) for creating beautiful isometric diagrams. Built with React and the Isoflow (Now forked and published to NPM as fossflow) library, it runs entirely in your browser with offline support.</Overview>
+  <Category>Tools:Utilities</Category>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
+  <Config Name="WebUI" Target="80" Default="8080" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false"/>
+  <Config Name="appdata" Target="/data/diagrams" Default="/mnt/user/appdata/fossflow" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="ENABLE_SERVER_STORAGE" Target="ENABLE_SERVER_STORAGE" Default="true" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"/>
+</Container>
