@@ -11,5 +11,5 @@
   <WebUI>http://[IP]:[PORT:80]</WebUI>
   <Config Name="WebUI" Target="80" Default="8080" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false"/>
   <Config Name="appdata" Target="/data/diagrams" Default="/mnt/user/appdata/fossflow" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false"/>
-  <Config Name="ENABLE_SERVER_STORAGE" Target="ENABLE_SERVER_STORAGE" Default="true" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="ENABLE_SERVER_STORAGE" Target="ENABLE_SERVER_STORAGE" Default="true|false" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false"/>
 </Container>
