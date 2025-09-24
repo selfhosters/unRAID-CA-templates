@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Podsync</Name>
-  <Repository>mxpv/podsync</Repository>
-  <Registry>https://hub.docker.com/r/mxpv/podsync</Registry>
+  <Repository>ghcr.io/mxpv/podsync</Repository>
+  <Registry>https://github.com/mxpv/podsync/pkgs/container/podsync</Registry>
   <Network>bridge</Network>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>

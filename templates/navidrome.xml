@@ -5,7 +5,7 @@
    <Registry>https://hub.docker.com/r/deluan/navidrome/</Registry>
    <Network>bridge</Network>
    <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
-   <Project>https://github.com/deluan/navidrome</Project>
+   <Project>https://github.com/navidrome/navidrome</Project>
    <Overview>Modern Music Server and Streamer compatible with Subsonic/Airsonic</Overview>
    <Category>MediaServer:Music</Category>
    <WebUI>http://[IP]:[PORT:4533]/</WebUI>
