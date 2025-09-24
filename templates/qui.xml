@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>qui</Name>
+  <Repository>ghcr.io/autobrr/qui:latest</Repository>
+  <Registry>https://github.com/autobrr/qui/pkgs/container/qui</Registry>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
+  <Project>https://github.com/autobrr/qui</Project>
+  <Overview>A fast, modern web interface for qBittorrent. Supports managing multiple qBittorrent instances from a single, lightweight application.</Overview>
+  <Category>Downloaders:</Category>
+  <WebUI>http://[IP]:[PORT:7476]</WebUI>
+  <TemplateURL>https://github.com/selfhosters/unRAID-CA-templates/raw/master/templates/qui.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/qui.png</Icon>
+  <Config Name="WebUI" Target="7476" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false"/>
+  <Config Name="Appdata" Target="/config" Default="" Mode="rw" Description="Persistent config files" Type="Path" Display="advanced" Required="true" Mask="false"/>
+</Container>
