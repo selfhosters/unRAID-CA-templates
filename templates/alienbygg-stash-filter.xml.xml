@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <n>stash-filter</n>
+  <Repository>alienbygg/stash-filter</Repository>
+  <Registry>https://hub.docker.com/r/alienbygg/stash-filter</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/Alienbygg/stash-filter/issues</Support>
+  <Project>https://github.com/Alienbygg/stash-filter</Project>
+  <Overview>Stash-Filter automatically discovers new scenes for your favorite performers and studios from StashDB. Features professional web interface, smart filtering, and complete Whisparr integration for seamless content management.&#xD;
+&#xD;
+🎯 **Key Features:**&#xD;
+• Daily automated content discovery from StashDB&#xD;
+• Smart filtering (duplicates, unwanted categories, duration)&#xD;
+• Manual performer/studio search and monitoring&#xD;
+• Trending scenes discovery with personal filters&#xD;
+• Professional responsive web interface&#xD;
+• Complete Whisparr integration for downloads&#xD;
+• Filtered scenes manager with exception handling&#xD;
+• SQLite database with health monitoring&#xD;
+&#xD;
+🔧 **Requirements:**&#xD;
+• Stash server (local network access required)&#xD;
+• Optional: Whisparr for automatic downloads&#xD;
+• Optional: StashDB API key for enhanced features&#xD;
+&#xD;
+⚡ **Perfect for Stash users wanting automated content discovery and management**</Overview>
+  <Category>MediaApp:Video MediaServer:Video Tools:Utilities</Category>
+  <WebUI>http://[IP]:[PORT:5000]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/Alienbygg/stash-filter/main/unraid-template.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/Alienbygg/stash-filter/main/static/images/stash-filter.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText>If you find Stash-Filter helpful, consider supporting development!</DonateText>
+  <DonateLink>https://github.com/sponsors/Alienbygg</DonateLink>
+  <Requires>Stash server accessible on local network with API access enabled. Whisparr optional but recommended for automatic downloads.</Requires>
+  
+  <!-- Port Configuration -->
+  <Config Name="WebUI Port" Target="5000" Default="5000" Mode="tcp" Description="Port for web interface access" Type="Port" Display="always" Required="true" Mask="false">5000</Config>
+  
+  <!-- Volume Mounts -->
+  <Config Name="App Data" Target="/app/data" Default="/mnt/user/appdata/stash-filter/data" Mode="rw" Description="Application data and database directory" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/stash-filter/data</Config>
+  <Config Name="Logs" Target="/app/logs" Default="/mnt/user/appdata/stash-filter/logs" Mode="rw" Description="Application logs directory" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/stash-filter/logs</Config>
+  <Config Name="Config" Target="/app/config" Default="/mnt/user/appdata/stash-filter/config" Mode="rw" Description="Configuration files directory" Type="Path" Display="advanced" Required="false" Mask="false">/mnt/user/appdata/stash-filter/config</Config>
+  
+  <!-- Required Environment Variables -->
+  <Config Name="Stash URL" Target="STASH_URL" Default="http://192.168.1.100:9999" Mode="" Description="Your Stash server URL with port (e.g., http://192.168.1.100:9999)" Type="Variable" Display="always" Required="true" Mask="false">http://192.168.1.100:9999</Config>
+  <Config Name="Stash API Key" Target="STASH_API_KEY" Default="" Mode="" Description="Stash API Key from Settings → Security → API Key" Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  
+  <!-- Optional Environment Variables -->
+  <Config Name="Whisparr URL" Target="WHISPARR_URL" Default="" Mode="" Description="Whisparr server URL (optional, for automatic downloads)" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Whisparr API Key" Target="WHISPARR_API_KEY" Default="" Mode="" Description="Whisparr API Key (optional)" Type="Variable" Display="always" Required="false" Mask="true"></Config>
+  <Config Name="StashDB API Key" Target="STASHDB_API_KEY" Default="" Mode="" Description="StashDB API Key (optional, for enhanced features)" Type="Variable" Display="always" Required="false" Mask="true"></Config>
+  
+  <!-- Advanced Configuration -->
+  <Config Name="Flask Secret Key" Target="SECRET_KEY" Default="" Mode="" Description="Flask secret key for sessions (leave empty for auto-generation)" Type="Variable" Display="advanced" Required="false" Mask="true"></Config>
+  <Config Name="Log Level" Target="LOG_LEVEL" Default="INFO" Mode="" Description="Application logging level" Type="Variable" Display="advanced" Required="false" Mask="false">INFO</Config>
+  <Config Name="Database Path" Target="DATABASE_PATH" Default="/app/data/stash_filter.db" Mode="" Description="SQLite database file path" Type="Variable" Display="advanced" Required="false" Mask="false">/app/data/stash_filter.db</Config>
+</Container>
