@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>tinshop-ng</Name>
+  <Repository>hcr.io/ajmandourah/tinshop-ng:latest</Repository>
+  <Registry>hcr.io/ajmandourah/tinshop-ng:latest</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/138058-support-catduck-templates</Support>
+  <Project>https://github.com/ajmandourah/tinshop-ng</Project>
+  <Overview>Tinshop-NG is a better nut server. Everything should be able to be confiured with environment variables.
+  </Overview>
+  <WebUI>http://[IP]:[PORT:3000]</WebUI>
+  <Category>GameServers:</Category>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/tinshop-ng.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/tinshop-ng.png</Icon>
+  <Config Name="Port" Target="3000" Default="3000" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">3341</Config>
+  <Config Name="appdata" Target="/data" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/tinshop-ng</Config>
+  <Config Name="Game Directory" Target="/games" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/media/gaming/game_files/nintendo/switch/nsp/</Config>
+  <Config Name="TINSHOP_PROTOCOL" Target="TINSHOP_PROTOCOL" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">http</Config>
+  <Config Name="TINSHOP_REVERSEPROXY&#9;" Target="TINSHOP_REVERSEPROXY" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">true</Config>
+  <Config Name="TINSHOP_HOST" Target="TINSHOP_HOST" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">tinshop.fleebailey33.com</Config>
+  <Config Name="TINSHOP_NAME" Target="TINSHOP_NAME" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">Tinshop</Config>
+  <Config Name="TINSHOP_DEBUG_NFS" Target="TINSHOP_DEBUG_NFS" Default="false" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
+  <Config Name="TINSHOP_DEBUG_NOSECURITY" Target="TINSHOP_DEBUG_NOSECURITY" Default="false" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
+  <Config Name="Welcome Message" Target="TINSHOP_WELCOMEMESSAGE" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">Welcome to my Tinshop!</Config>
+  <Config Name="Games Directory" Target="TINSHOP_SOURCES_DIRECTORIES" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">/games</Config>
+  <Config Name="TINSHOP_SECURITY_WHITELIST" Target="TINSHOP_SECURITY_WHITELIST" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="TINSHOP_SECURITY_BANNEDTHEME" Target="TINSHOP_SECURITY_BANNEDTHEME" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="TINSHOP_NSP_CHECKVERIFIED" Target="TINSHOP_NSP_CHECKVERIFIED" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="TINSHOP_SECURITY_FORWARDAUTH&#9;" Target="TINSHOP_SECURITY_FORWARDAUTH" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="TINSHOP_SOURCES_NSF" Target="TINSHOP_SOURCES_NSF" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
+  <Config Name="TINSHOP_SECURITY_BLACKLIST" Target="TINSHOP_SECURITY_BLACKLIST" Default="false" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
+</Container>
