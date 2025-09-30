@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Home Information</Name>
+  <Repository>ghcr.io/cassandra/home-information:latest</Repository>
+  <Registry>https://github.com/cassandra/home-information/pkgs/container/home-information</Registry>
+  <Network>bridge</Network>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/cassandra/home-information/issues</Support>
+  <Project>https://github.com/cassandra/home-information</Project>
+  <Overview>Home Information transforms how you manage your property by creating a visual, spatial, centralized hub for everything about your home. Instead of hunting through drawers, email attachments, and scattered notes, you'll have manuals, maintenance records, device controls, and security monitoring all organized exactly where they belong - visually positioned on a map of your home.&#xD;
+&#xD;
+Key Features:&#xD;
+- Spatial organization by location (click on kitchen to see everything kitchen-related)&#xD;
+- Document and information management (manuals, warranties, maintenance records)&#xD;
+- Home Assistant integration for device control&#xD;
+- ZoneMinder integration for security cameras&#xD;
+- Visual security zone monitoring&#xD;
+- Local-first architecture (your data stays on your network)&#xD;
+&#xD;
+Perfect for homeowners who want to stay organized and maintain their property effectively, especially those with home automation or security systems.</Overview>
+  <Category>HomeAutomation:</Category>
+  <WebUI>http://[IP]:[PORT:8000]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/refs/heads/master/templates/home-information.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/cassandra/home-information/master/src/hi/static/img/hi-icon-128x128.png</Icon>
+  <Config Name="WebUI Port" Target="8000" Default="9411" Mode="tcp" Description="Port for the Web UI" Type="Port" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Database Storage" Target="/data/database" Default="/mnt/user/appdata/home-information/database" Mode="rw" Description="Directory where the SQLite database is stored" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Media Storage" Target="/data/media" Default="/mnt/user/appdata/home-information/media" Mode="rw" Description="Directory where uploaded files (manuals, images, etc.) are stored" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Environment Config" Target="/env" Default="/mnt/user/appdata/home-information/env" Mode="ro" Description="Directory containing environment configuration files (optional)" Type="Path" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="Django Secret Key" Target="DJANGO_SECRET_KEY" Default="" Mode="" Description="Django secret key - Set to a random string for security" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="Admin Email" Target="DJANGO_SUPERUSER_EMAIL" Default="admin@example.com" Mode="" Description="Email address for the admin user" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Admin Password" Target="DJANGO_SUPERUSER_PASSWORD" Default="" Mode="" Description="Password for the admin user" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="Suppress Authentication" Target="HI_SUPPRESS_AUTHENTICATION" Default="true|false" Mode="" Description="Skip login screen for local network use (set to false for multi-user setup)" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Redis Host" Target="HI_REDIS_HOST" Default="127.0.0.1" Mode="" Description="Redis hostname (use 127.0.0.1 for internal Redis)" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="Redis Port" Target="HI_REDIS_PORT" Default="6379" Mode="" Description="Redis port" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+</Container>
