@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <Name>TubeSync</Name>
+    <Beta>true</Beta>
+    <Repository>ghcr.io/meeb/tubesync</Repository>
+    <Registry>https://github.com/users/meeb/packages/container/package/tubesync</Registry>
+    <Tag>latest</Tag>
+    <TagDescription>Automated builds from the main branch</TagDescription>
+    <Network>bridge</Network>
+    <Shell>/command/with-contenv bash</Shell>
+    <Privileged>false</Privileged>
+    <Support>https://github.com/meeb/tubesync/issues</Support>
+    <Project>https://github.com/meeb/tubesync</Project>
+    <Overview>Syncs YouTube channels and playlists to a locally hosted media server</Overview>
+    <Category>Downloaders: MediaApp:Video MediaServer:Video</Category>
+    <WebUI>http://[IP]:[PORT:4848]/</WebUI>
+    <TemplateURL>https://raw.githubusercontent.com/tcely/unraid-templates/refs/heads/main/tubesync/tubesync.xml</TemplateURL>
+    <Icon>https://raw.githubusercontent.com/meeb/tubesync/main/tubesync/common/static/images/tubesync.png</Icon>
+    <Screenshot>https://raw.githubusercontent.com/meeb/tubesync/refs/heads/main/docs/dashboard-v0.5.png</Screenshot>
+    <DonateText>If you are gracious enough to sponsor me your contributions will go towards allowing me to spend time on maintaining the existing open source projects on my profile as well as polishing other projects into a state suitable to be made open source.</DonateText>
+    <DonateLink>https://github.com/sponsors/meeb</DonateLink>
+    <DonateImg>https://raw.githubusercontent.com/meeb/tubesync/main/tubesync/common/static/images/tubesync.png</DonateImg>
+    <Description>TubeSync is a PVR (personal video recorder) for YouTube. Or, like Sonarr but for YouTube (with a built-in download client). It is designed to synchronize channels and playlists from YouTube to local directories and update your media server once media is downloaded.</Description>
+    <Maintainer>tcely @ GitHub</Maintainer>
+    <WebPage>https://github.com/tcely</WebPage>
+    <Networking>
+        <Mode>bridge</Mode>
+        <Publish>
+            <Port>
+                <HostPort>4848</HostPort>
+                <ContainerPort>4848</ContainerPort>
+                <Protocol>tcp</Protocol>
+            </Port>
+        </Publish>
+    </Networking>
+    <Data>
+        <Volume>
+            <HostDir>/mnt/cache/appdata/tubesync/config</HostDir>
+            <ContainerDir>/config</ContainerDir>
+            <Mode>rw</Mode>
+        </Volume>
+        <Volume>
+            <HostDir/>
+            <ContainerDir>/downloads</ContainerDir>
+            <Mode>rw</Mode>
+        </Volume>
+    </Data>
+    <Environment>
+        <Variable>
+            <Value>99</Value>
+            <Name>PUID</Name>
+            <Mode/>
+        </Variable>
+        <Variable>
+            <Value>100</Value>
+            <Name>PGID</Name>
+            <Mode/>
+        </Variable>
+    </Environment>
+    <Config Name="Configuration" Target="/config" Default="/mnt/cache/appdata/tubesync/config" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/tubesync/config</Config>
+    <Config Name="Downloads" Target="/downloads" Default="/mnt/user/appdata/tubesync/downloads" Mode="rw" Description="Container Path: /downloads" Type="Path" Display="always" Required="true" Mask="false"/>
+    <Config Name="WebUI" Target="4848" Default="4848" Mode="tcp" Description="WebUI Port" Type="Port" Display="always" Required="true" Mask="false">4848</Config>
+    <Config Name="Database URL" Target="DATABASE_CONNECTION" Default="" Mode="" Description="Optional external database connection details. Ex: mysql://user:pass@host:port/database. Default is none." Type="Variable" Display="always" Required="false" Mask="true"/>
+    <Config Name="WebUI Username" Target="HTTP_USER" Default="" Mode="" Description="Sets the username for HTTP basic authentication. Default is none." Type="Variable" Display="always" Required="false" Mask="false"/>
+    <Config Name="WebUI Password" Target="HTTP_PASS" Default="" Mode="" Description="Sets the password for HTTP basic authentication. Default is none." Type="Variable" Display="always" Required="false" Mask="true"/>
+    <Config Name="Allowed Hosts" Target="TUBESYNC_HOSTS" Default="*" Mode="" Description="Django's ALLOWED_HOSTS; valid values for the 'Host' HTTP request header. Ex: tubesync.example.com,192.168.0.100. Default is '*'." Type="Variable" Display="always" Required="false" Mask="false"/>
+    <Config Name="Debugging" Target="TUBESYNC_DEBUG" Default="False" Mode="" Description="Must be True to enable debugging. Default is False." Type="Variable" Display="advanced" Required="false" Mask="false">False</Config>
+    <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="UID for permissions. Do not change, unless you know what you are doing." Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
+    <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="GID for permissions. Do not change, unless you know what you are doing." Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
+</Container>
