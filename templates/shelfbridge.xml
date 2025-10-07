@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>ShelfBridge</Name>
+  <Repository>ghcr.io/rohit-purandare/shelfbridge:latest</Repository>
+  <Registry>https://github.com/rohit-purandare/ShelfBridge/pkgs/container/shelfbridge</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/rohit-purandare/ShelfBridge/issues</Support>
+  <Project>https://github.com/rohit-purandare/ShelfBridge</Project>
+  <Overview>Sync your audiobook reading progress from Audiobookshelf to Hardcover automatically.</Overview>
+  <Category>Tools:Utilities</Category>
+  <WebUI/>
+  <TemplateURL>https://raw.githubusercontent.com/rohit-purandare/ShelfBridge/main/ShelfBridge-unraid-template.xml</TemplateURL>
+  <Icon>/plugins/dynamix.docker.manager/images/question.png</Icon>
+  <ExtraParams>--restart=no</ExtraParams>
+  <PostArgs/>
+  <DonateText/>
+  <DonateLink/>
+  <Requires>Audiobookshelf server with API access and Hardcover account with API token</Requires>
+  <Config Name="Config" Target="/app/config" Default="/mnt/user/appdata/shelfbridge/config" Mode="rw" Description="Container config directory" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/shelfbridge/config</Config>
+  <Config Name="Data" Target="/app/data" Default="/mnt/user/appdata/shelfbridge/data" Mode="rw" Description="Container data directory" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/shelfbridge/data</Config>
+  <Config Name="Logs" Target="/app/logs" Default="/mnt/user/appdata/shelfbridge/logs" Mode="rw" Description="Container logs directory" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/shelfbridge/logs</Config>
+  <Config Name="User ID" Target="SHELFBRIDGE_USER_0_ID" Default="" Mode="" Description="Your username/identifier (any name you choose)" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Audiobookshelf URL" Target="SHELFBRIDGE_USER_0_ABS_URL" Default="" Mode="" Description="URL of your Audiobookshelf server (include https://)" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Audiobookshelf Token" Target="SHELFBRIDGE_USER_0_ABS_TOKEN" Default="" Mode="" Description="API token from your Audiobookshelf server" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="Hardcover Token" Target="SHELFBRIDGE_USER_0_HARDCOVER_TOKEN" Default="" Mode="" Description="API token from Hardcover (hardcover.app/account/api)" Type="Variable" Display="always" Required="true" Mask="true"/>
+
+  <ReadMe>## Setup
+
+**Required:**
+1. **User ID** - Any username/identifier you choose
+2. **Audiobookshelf URL** - Your server URL (include https://)
+3. **Audiobookshelf Token** - Get from Settings → Users → [Your User] → API Tokens
+4. **Hardcover Token** - Get from https://hardcover.app/account/api
+
+**Usage:**
+Container automatically syncs progress daily at 3 AM UTC.
+
+**Advanced Configuration:**
+For custom schedules, multi-user setups, or library filtering, see the [Configuration Reference](https://github.com/rohit-purandare/ShelfBridge/wiki/admin/Configuration-Reference).
+
+**Support:**
+[Troubleshooting Guide](https://github.com/rohit-purandare/ShelfBridge/wiki/troubleshooting/Troubleshooting-Guide) | [Discussions](https://github.com/rohit-purandare/ShelfBridge/discussions)
+  </ReadMe>
+</Container>
