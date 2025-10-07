@@ -57,6 +57,7 @@
             <Mode/>
         </Variable>
     </Environment>
+    <ExtraParams>--stop-timeout=1800</ExtraParams>
     <Config Name="Configuration" Target="/config" Default="/mnt/cache/appdata/tubesync/config" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/tubesync/config</Config>
     <Config Name="Downloads" Target="/downloads" Default="/mnt/user/appdata/tubesync/downloads" Mode="rw" Description="Container Path: /downloads" Type="Path" Display="always" Required="true" Mask="false"/>
     <Config Name="WebUI" Target="4848" Default="4848" Mode="tcp" Description="WebUI Port" Type="Port" Display="always" Required="true" Mask="false">4848</Config>
