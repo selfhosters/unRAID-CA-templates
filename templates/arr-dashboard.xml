@@ -4,7 +4,6 @@
   <Repository>khak1s/arr-dashboard:latest</Repository>
   <Registry>https://hub.docker.com/r/khak1s/arr-dashboard</Registry>
   <Network>bridge</Network>
-  <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
   <Support>https://github.com/Kha-kis/arr-dashboard/issues</Support>
