@@ -4,26 +4,16 @@
   <Repository>ghcr.io/ra341/dockman:latest</Repository>
   <Registry>https://github.com/ra341/dockman/pkgs/container/dockman</Registry>
   <Network>bridge</Network>
-  <MyIP/>
-  <Shell>sh</Shell>
   <Privileged>false</Privileged>
   <Support>https://github.com/ra341/dockman/issues</Support>
   <Project>https://github.com/ra341/dockman</Project>
-  <Overview>Dockman: Manage docker-compose stacks from a simple web UI.</Overview>
+  <Overview>A Docker management tool for users who want unfiltered access to their Docker Compose files.</Overview>
   <Category>Tools:Utilities Network:Management</Category>
   <WebUI>http://[IP]:[PORT:8866]/</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/dockman.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/dockman.png</Icon>
-  <ExtraParams/>
-  <PostArgs/>
-  <CPUset/>
-  <DateInstalled/>
-  <DonateText/>
-  <DonateLink/>
-  <Requires/>
   <Config Name="Web UI" Target="8866" Default="8866" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">8866</Config>
   <Config Name="Docker Socket" Target="/var/run/docker.sock" Default="/var/run/docker.sock" Mode="rw" Description="" Type="Path" Display="advanced-hide" Required="true" Mask="false">/var/run/docker.sock</Config>
-  <Config Name="Config" Target="/config" Default="/mnt/cache/appdata/dockman/config" Mode="rw" Description="" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/cache/appdata/dockman/config</Config>
-  <Config Name="Stacks Directory Path" Target="/mnt/cache/appdata/dockman/stacks" Default="/mnt/cache/appdata/dockman/stacks" Mode="rw" Description="Host and container paths must be identical." Type="Path" Display="advanced" Required="true" Mask="false">/mnt/cache/appdata/dockman/stacks</Config>
-  <Config Name="Stacks Directory Variable" Target="DOCKMAN_COMPOSE_ROOT" Default="/mnt/cache/appdata/dockman/stacks" Mode="" Description="Must match the Stacks Directory Path exactly." Type="Variable" Display="advanced" Required="true" Mask="false">/mnt/cache/appdata/dockman/stacks</Config>
+  <Config Name="Config" Target="/config" Default="/mnt/user/appdata/dockman/config" Mode="rw" Description="" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/dockman/config</Config>
+  <Config Name="Stacks Directory Path" Target="/mnt/user/appdata/dockman/stacks" Default="/mnt/user/appdata/dockman/stacks" Mode="rw" Description="Host and container paths must be identical." Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/dockman/stacks</Config>
+  <Config Name="Stacks Directory Variable" Target="DOCKMAN_COMPOSE_ROOT" Default="/mnt/user/appdata/dockman/stacks" Mode="" Description="Must match the Stacks Directory Path exactly." Type="Variable" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/dockman/stacks</Config>
 </Container>
