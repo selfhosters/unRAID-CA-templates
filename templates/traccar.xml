@@ -20,6 +20,7 @@ Link to traccar.xml: https://raw.githubusercontent.com/traccar/traccar/master/se
   <Config Name="WebUI" Target="8082" Default="8082" Mode="tcp" Description="Container Port: 8082" Type="Port" Display="always" Required="false" Mask="false"/>
   <Config Name="Host port 1" Target="5000-5150" Default="5000-5150" Mode="tcp" Description="Container Port: 5000-5150" Type="Port" Display="always" Required="false" Mask="false"/>
   <Config Name="Host port 2" Target="5000-5150" Default="5000-5150" Mode="udp" Description="Container Port: 5000-5150" Type="Port" Display="always" Required="false" Mask="false"/>
+  <Config Name="Data" Target="/opt/traccar/data" Default="/mnt/user/appdata/traccar/data" Mode="rw" Description="Container Path: /opt/traccar/data" Type="Path" Display="always" Required="false" Mask="false"/>
   <Config Name="Logs" Target="/opt/traccar/logs" Default="/mnt/user/appdata/traccar/logs" Mode="rw" Description="Container Path: /opt/traccar/logs" Type="Path" Display="always" Required="false" Mask="false"/>
   <Config Name="traccar.xml host path" Target="/opt/traccar/conf/traccar.xml" Default="/mnt/user/appdata/traccar/traccar.xml" Mode="rw" Description="Container Path: /opt/traccar/conf/traccar.xml" Type="Path" Display="always" Required="false" Mask="false"/>
 </Container>
