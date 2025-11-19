@@ -61,7 +61,7 @@
   <Screenshot>https://raw.githubusercontent.com/DockerDiscordControl/ddc-website/main/images/WU_ContainerSettings.png</Screenshot>
   <DonateText>Support DDC Development - Buy Me A Coffee</DonateText>
   <DonateLink>https://buymeacoffee.com/dockerdiscordcontrol</DonateLink>
-  <Config Name="Web UI Port" Target="9374" Default="8374" Mode="tcp" Description="Port for DDC web interface (host port, mapped to container port 9374)." Type="Port" Display="always" Required="true" Mask="false">8374</Config>
+  <Config Name="Web UI Port" Target="9374" Default="9374" Mode="tcp" Description="Port for DDC web interface (host port, mapped to container port 9374)." Type="Port" Display="always" Required="true" Mask="false">9374</Config>
   <Config Name="Flask Secret Key" Target="FLASK_SECRET_KEY" Default="" Mode="" Description="Secret key for web UI security. RECOMMENDED: Generate with 'openssl rand -hex 32' for persistent sessions. If not set, a random key is generated (sessions reset on restart)." Type="Variable" Display="always" Required="false" Mask="true"/>
   <Config Name="Admin Password" Target="DDC_ADMIN_PASSWORD" Default="" Mode="" Description="Password for web UI admin user (username: admin). REQUIRED: Set a secure password during installation." Type="Variable" Display="always" Required="true" Mask="true"/>
   <Config Name="Discord Bot Token" Target="DISCORD_BOT_TOKEN" Default="" Mode="" Description="Optional: Discord bot token (recommended for security). Can also be configured via Web UI." Type="Variable" Display="normal" Required="false" Mask="true"/>
