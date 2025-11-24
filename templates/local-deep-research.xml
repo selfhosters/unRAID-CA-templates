@@ -29,10 +29,6 @@ This template includes the main LDR service. For full functionality, you may als
   <WebUI>http://[IP]:[PORT:5000]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/local-deep-research.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/LearningCircuit/local-deep-research/main/src/local_deep_research/web/static/favicon.png</Icon>
-  <ExtraParams></ExtraParams>
-  <PostArgs/>
-  <CPUset/>
-  <DateInstalled/>
   <DonateText>Support this project with a GitHub star!</DonateText>
   <DonateLink>https://github.com/LearningCircuit/local-deep-research</DonateLink>
   <Requires>Optional: Ollama container for local LLM, SearXNG container for local search</Requires>
