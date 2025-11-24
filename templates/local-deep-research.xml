@@ -4,7 +4,6 @@
   <Repository>localdeepresearch/local-deep-research</Repository>
   <Registry>https://hub.docker.com/r/localdeepresearch/local-deep-research</Registry>
   <Network>bridge</Network>
-  <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
   <Support>https://github.com/LearningCircuit/local-deep-research/issues</Support>
