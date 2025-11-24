@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>LocalDeepResearch</Name>
-  <Repository>localdeepresearch/local-deep-research</Repository>
+  <Repository>localdeepresearch/local-deep-research:latest</Repository>
   <Registry>https://hub.docker.com/r/localdeepresearch/local-deep-research</Registry>
   <Network>bridge</Network>
   <Shell>sh</Shell>
