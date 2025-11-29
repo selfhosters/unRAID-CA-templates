@@ -12,7 +12,7 @@
 &#xD;
 Features:&#xD;
 - Privacy-focused: Run entirely locally with Ollama&#xD;
-- Multiple research modes (Quick Summary, Detailed Research, Report Generation)&#xD;
+- Multiple research modes (Quick Summary, Detailed Research)&#xD;
 - Per-user encrypted databases (SQLCipher with AES-256)&#xD;
 - Real-time progress tracking via WebSocket&#xD;
 - Export to PDF or Markdown&#xD;
