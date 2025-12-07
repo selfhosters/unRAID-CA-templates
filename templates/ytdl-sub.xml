@@ -21,5 +21,4 @@
   <Config Name="PUID" Target="PUID" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
   <Config Name="PGID" Target="PGID" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
   <Config Name="UMASK" Target="UMASK" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">002</Config>
-  <Config Name="Docker Mods" Target="DOCKER_MODS" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">linuxserver/mods:universal-cron</Config>
 </Container>
