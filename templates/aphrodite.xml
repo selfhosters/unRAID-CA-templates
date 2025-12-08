@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+    <Container version="2">
+    <Name>Aphrodite</Name>
+    <Repository>ghcr.io/jackkerouac/aphrodite</Repository>
+    <Registry>https://ghcr.io/jackkerouac/aphrodite</Registry>
+    <Network>bridge</Network>
+    <Privileged>false</Privileged>
+    <Support>https://github.com/jackkerouac/aphrodite</Support>
+    <Project>https://github.com/jackkerouac/aphrodite</Project>
+    <Overview>Aphrodite automatically enhances your Jellyfin media library posters with quality indicators like resolution, audio codec, review ratings, and awards.</Overview>
+    <Beta>False</Beta>
+    <Category>MediaApp:Video Tools:</Category>
+    <Date>2025-06-19</Date>
+    <WebUI>http://[IP]:[PORT:5000]</WebUI>
+    <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/aphrodite.xml<TemplateURL/>
+    <Icon>https://raw.githubusercontent.com/jackkerouac/aphrodite/refs/heads/main/images/favicon.ico</Icon>
+    <ExtraParams/>
+    <PostArgs/>
+    <DonateText/>
+    <DonateLink/>
+    <Config Name="WebUI" Target="5000" Default="" Mode="rw" Description="" Type="Port" Display="always" Required="true"
+        Mask="false"/>
+    <Config Name="config" Target="/app/config" Default="/mnt/user/appdata/aphrodite/config" Mode="rw" Description="Config directory" Type="Path" Display="always" Required="false"
+        Mask="false"/>
+    <Config Name="posters" Target="/app/posters" Default="/mnt/user/appdata/aphrodite/posters" Mode="rw" Description="Persistent storage for Posters" Type="Path" Display="always" Required="false"
+        Mask="false"/>
+    <Config Name="data" Target="/app/data" Default="/mnt/user/appdata/aphrodite/data" Mode="rw" Description="Persistent storage for Aphrodite data" Type="Path" Display="always" Required="false"
+        Mask="false"/>
+</Container>
