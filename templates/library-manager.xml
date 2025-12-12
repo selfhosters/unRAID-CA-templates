@@ -23,10 +23,10 @@
   - Docker-first design for easy deployment
   </Overview>
   <Category>MediaApp:Books MediaServer:Books</Category>
-  <WebUI>http://[IP]:[PORT:5000]</WebUI>
+  <WebUI>http://[IP]:[PORT:5757]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/library-manager.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/library-manager.png</Icon>
-  <Config Name="Web UI Port" Target="5000" Default="5000" Mode="tcp" Description="Web interface port" Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="Web UI Port" Target="5757" Default="5757" Mode="tcp" Description="Web interface port" Type="Port" Display="always" Required="true" Mask="false"/>
   <Config Name="Audiobook Library" Target="/library" Default="" Mode="rw" Description="Path to your audiobook library" Type="Path" Display="always" Required="true" Mask="false"/>
   <Config Name="Config" Target="/config" Default="/mnt/user/appdata/library-manager" Mode="rw" Description="Configuration and database storage" Type="Path" Display="always" Required="true" Mask="false"/>
   <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="User ID" Type="Variable" Display="advanced" Required="false" Mask="false"/>
