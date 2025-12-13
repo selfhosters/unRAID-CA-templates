@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>library-manager</Name>
-  <Repository>deucebucket/library-manager:latest</Repository>
-  <Registry>https://hub.docker.com/r/deucebucket/library-manager</Registry>
+  <Repository>ghcr.io/deucebucket/library-manager:latest</Repository>
+  <Registry>https://github.com/deucebucket/library-manager/pkgs/container/library-manager</Registry>
   <Network>bridge</Network>
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
@@ -27,8 +27,8 @@
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/library-manager.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/library-manager.png</Icon>
   <Config Name="Web UI Port" Target="5757" Default="5757" Mode="tcp" Description="Web interface port" Type="Port" Display="always" Required="true" Mask="false"/>
-  <Config Name="Audiobook Library" Target="/library" Default="" Mode="rw" Description="Path to your audiobook library" Type="Path" Display="always" Required="true" Mask="false"/>
-  <Config Name="Config" Target="/config" Default="/mnt/user/appdata/library-manager" Mode="rw" Description="Configuration and database storage" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Audiobook Library" Target="/audiobooks" Default="/mnt/user/media/audiobooks" Mode="rw" Description="Path to your audiobook library (use /audiobooks in settings)" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Data Directory" Target="/data" Default="/mnt/user/appdata/library-manager" Mode="rw" Description="Configuration and database storage" Type="Path" Display="always" Required="true" Mask="false"/>
   <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="User ID" Type="Variable" Display="advanced" Required="false" Mask="false"/>
   <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Group ID" Type="Variable" Display="advanced" Required="false" Mask="false"/>
 </Container>
