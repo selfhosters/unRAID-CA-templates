@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>library-manager</Name>
+  <Repository>deucebucket/library-manager:latest</Repository>
+  <Registry>https://hub.docker.com/r/deucebucket/library-manager</Registry>
+  <Network>bridge</Network>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
+  <Project>https://github.com/deucebucket/library-manager</Project>
+  <Changes>https://github.com/deucebucket/library-manager/releases</Changes>
+  <ExtraSearchTerms>audiobook books media library audible</ExtraSearchTerms>
+  <Overview>
+  Library Manager - Audiobook library management with smart metadata matching, series detection, and organization.
+
+  Scans your audiobook library, matches metadata from multiple sources (Audible, OpenLibrary, etc.), detects series order, and helps organize your collection. Features a modern web UI for browsing and managing your audiobooks.
+
+  Key features:
+  - Automatic metadata matching from multiple sources
+  - Series detection and ordering
+  - Smart organization tools
+  - Modern responsive web interface
+  - Docker-first design for easy deployment
+  </Overview>
+  <Category>MediaApp:Books MediaServer:Books</Category>
+  <WebUI>http://[IP]:[PORT:5757]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/library-manager.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/library-manager.png</Icon>
+  <Config Name="Web UI Port" Target="5757" Default="5757" Mode="tcp" Description="Web interface port" Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="Audiobook Library" Target="/library" Default="" Mode="rw" Description="Path to your audiobook library" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Config" Target="/config" Default="/mnt/user/appdata/library-manager" Mode="rw" Description="Configuration and database storage" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="User ID" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Group ID" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+</Container>
