@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Classifarr</Name>
+  <Repository>ghcr.io/cloudbyday90/classifarr:latest</Repository>
+  <Registry>https://github.com/cloudbyday90/Classifarr/pkgs/container/classifarr</Registry>
+  <Branch>
+    <Tag>latest</Tag>
+    <TagDescription>Latest stable release</TagDescription>
+  </Branch>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Shell>sh</Shell>
+  <WebUI>http://[IP]:[PORT:21324]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/cloudbyday90/Classifarr/main/unraid/classifarr.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/cloudbyday90/Classifarr/main/client/public/logo.png</Icon>
+  <ExtraParams>--restart unless-stopped</ExtraParams>
+  <Overview>
+    AI-powered media classification for the *arr ecosystem.[br][br]
+    Automatically routes Overseerr/Jellyseerr requests to the correct Radarr/Sonarr library using AI decision trees and machine learning.[br][br]
+    [b]Features:[/b][br]
+    - Single self-contained container with embedded PostgreSQL[br]
+    - Webhook integration with Overseerr/Jellyseerr[br]
+    - Multi-library Radarr/Sonarr support[br]
+    - AI-powered content classification[br]
+    - Discord notifications with interactive buttons[br]
+    - Confidence-based routing[br]
+    - Media server scanning (Plex/Emby/Jellyfin)[br][br]
+    [b]Requirements:[/b][br]
+    - TMDB API key (free)[br][br]
+    [b]Setup:[/b][br]
+    1. Install this container[br]
+    2. Access WebUI and complete setup wizard[br]
+  </Overview>
+  <Description>
+    AI-powered media classification for the *arr ecosystem. Automatically routes Overseerr/Jellyseerr requests to the correct Radarr/Sonarr library using AI and machine learning.
+  </Description>
+  <Category>MediaApp:Other Tools:</Category>
+  <Support>https://github.com/cloudbyday90/Classifarr/issues</Support>
+  <Project>https://github.com/cloudbyday90/Classifarr</Project>
+  <ReadMe>https://github.com/cloudbyday90/Classifarr/blob/main/README.md</ReadMe>
+  <Changes>https://github.com/cloudbyday90/Classifarr/releases</Changes>
+  
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>21324</HostPort>
+        <ContainerPort>21324</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/classifarr/data</HostDir>
+      <ContainerDir>/app/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  
+  <Environment>
+    <Variable>
+      <Name>NODE_ENV</Name>
+      <Value>production</Value>
+    </Variable>
+    <Variable>
+      <Name>TZ</Name>
+      <Value>America/New_York</Value>
+    </Variable>
+  </Environment>
+  
+  <Config Name="Web UI Port" Target="21324" Default="21324" Mode="tcp" Description="Web interface port" Type="Port" Display="always" Required="true"/>
+  <Config Name="App Data" Target="/app/data" Default="/mnt/user/appdata/classifarr/data" Mode="rw" Description="Application data directory (includes PostgreSQL database)" Type="Path" Display="always" Required="true"/>
+  <Config Name="Timezone" Target="TZ" Default="America/New_York" Description="Container timezone" Type="Variable" Display="always" Required="false"/>
+
+</Container>
