@@ -61,6 +61,18 @@
   
   <Environment>
     <Variable>
+      <Name>PUID</Name>
+      <Value>99</Value>
+    </Variable>
+    <Variable>
+      <Name>PGID</Name>
+      <Value>100</Value>
+    </Variable>
+    <Variable>
+      <Name>UMASK</Name>
+      <Value>022</Value>
+    </Variable>
+    <Variable>
       <Name>NODE_ENV</Name>
       <Value>production</Value>
     </Variable>
@@ -70,6 +82,9 @@
     </Variable>
   </Environment>
   
+  <Config Name="PUID" Target="PUID" Default="99" Description="User ID for file permissions (default: 99 for Unraid nobody user)" Type="Variable" Display="always" Required="false"/>
+  <Config Name="PGID" Target="PGID" Default="100" Description="Group ID for file permissions (default: 100 for Unraid users group)" Type="Variable" Display="always" Required="false"/>
+  <Config Name="UMASK" Target="UMASK" Default="022" Description="File creation mask (default: 022)" Type="Variable" Display="advanced" Required="false"/>
   <Config Name="Web UI Port" Target="21324" Default="21324" Mode="tcp" Description="Web interface port" Type="Port" Display="always" Required="true"/>
   <Config Name="App Data" Target="/app/data" Default="/mnt/user/appdata/classifarr/data" Mode="rw" Description="Application data directory (includes PostgreSQL database)" Type="Path" Display="always" Required="true"/>
   <Config Name="Timezone" Target="TZ" Default="America/New_York" Description="Container timezone" Type="Variable" Display="always" Required="false"/>
