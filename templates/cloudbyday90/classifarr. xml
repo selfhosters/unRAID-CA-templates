@@ -18,6 +18,7 @@
     AI-powered media classification for the *arr ecosystem.[br][br]
     Automatically routes Overseerr/Jellyseerr requests to the correct Radarr/Sonarr library using AI decision trees and machine learning.[br][br]
     [b]Features:[/b][br]
+    - Single self-contained container with embedded PostgreSQL[br]
     - Webhook integration with Overseerr/Jellyseerr[br]
     - Multi-library Radarr/Sonarr support[br]
     - AI-powered content classification[br]
@@ -25,12 +26,10 @@
     - Confidence-based routing[br]
     - Media server scanning (Plex/Emby/Jellyfin)[br][br]
     [b]Requirements:[/b][br]
-    - PostgreSQL database (use Classifarr-DB companion container)[br]
     - TMDB API key (free)[br][br]
     [b]Setup:[/b][br]
-    1. Install Classifarr-DB container first[br]
-    2. Install this container[br]
-    3. Access WebUI and complete setup wizard[br]
+    1. Install this container[br]
+    2. Access WebUI and complete setup wizard[br]
   </Overview>
   <Description>
     AI-powered media classification for the *arr ecosystem. Automatically routes Overseerr/Jellyseerr requests to the correct Radarr/Sonarr library using AI and machine learning.
@@ -66,40 +65,13 @@
       <Value>production</Value>
     </Variable>
     <Variable>
-      <Name>PORT</Name>
-      <Value>21324</Value>
-    </Variable>
-    <Variable>
-      <Name>POSTGRES_HOST</Name>
-      <Value>classifarr-db</Value>
-    </Variable>
-    <Variable>
-      <Name>POSTGRES_PORT</Name>
-      <Value>5432</Value>
-    </Variable>
-    <Variable>
-      <Name>POSTGRES_DB</Name>
-      <Value>classifarr</Value>
-    </Variable>
-    <Variable>
-      <Name>POSTGRES_USER</Name>
-      <Value>classifarr</Value>
-    </Variable>
-    <Variable>
       <Name>TZ</Name>
       <Value>America/New_York</Value>
     </Variable>
   </Environment>
   
   <Config Name="Web UI Port" Target="21324" Default="21324" Mode="tcp" Description="Web interface port" Type="Port" Display="always" Required="true"/>
-  <Config Name="App Data" Target="/app/data" Default="/mnt/user/appdata/classifarr/data" Mode="rw" Description="Application data directory" Type="Path" Display="always" Required="true"/>
-  <Config Name="Database Host" Target="POSTGRES_HOST" Default="classifarr-db" Description="PostgreSQL hostname (use classifarr-db for companion container)" Type="Variable" Display="always" Required="true"/>
-  <Config Name="Database Port" Target="POSTGRES_PORT" Default="5432" Description="PostgreSQL port" Type="Variable" Display="advanced" Required="false"/>
-  <Config Name="Database Name" Target="POSTGRES_DB" Default="classifarr" Description="PostgreSQL database name" Type="Variable" Display="advanced" Required="false"/>
-  <Config Name="Database User" Target="POSTGRES_USER" Default="classifarr" Description="PostgreSQL username" Type="Variable" Display="advanced" Required="false"/>
+  <Config Name="App Data" Target="/app/data" Default="/mnt/user/appdata/classifarr/data" Mode="rw" Description="Application data directory (includes PostgreSQL database)" Type="Path" Display="always" Required="true"/>
   <Config Name="Timezone" Target="TZ" Default="America/New_York" Description="Container timezone" Type="Variable" Display="always" Required="false"/>
-  
-  <Requires>
-    Requires PostgreSQL database. Install the Classifarr-DB companion container first.
-  </Requires>
+
 </Container>
