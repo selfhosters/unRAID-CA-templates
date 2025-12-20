@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Classifarr-DB</Name>
+  <Repository>postgres:17-alpine</Repository>
+  <Registry>https://hub.docker.com/_/postgres</Registry>
+  <Branch>
+    <Tag>17-alpine</Tag>
+    <TagDescription>PostgreSQL 17 on Alpine Linux</TagDescription>
+  </Branch>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Shell>sh</Shell>
+  <TemplateURL>https://raw.githubusercontent.com/cloudbyday90/Classifarr/main/unraid/classifarr-db.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/docker-library/docs/master/postgres/logo.png</Icon>
+  <ExtraParams>--restart unless-stopped</ExtraParams>
+  <Overview>
+    PostgreSQL database for Classifarr.[br][br]
+    This is a companion container that provides the database backend for Classifarr.[br][br]
+    [b]Setup:[/b][br]
+    1. Install this container first[br]
+    2. Set a secure password (CHANGE THE DEFAULT!)[br]
+    3. Start the container[br]
+    4. Install the main Classifarr container[br]
+    5. Use the same password in Classifarr's database settings[br][br]
+    The database will be automatically initialized on first run.
+  </Overview>
+  <Description>
+    PostgreSQL database companion container for Classifarr media classification system.
+  </Description>
+  <Category>Tools:Database</Category>
+  <Support>https://github.com/cloudbyday90/Classifarr/issues</Support>
+  <Project>https://github.com/cloudbyday90/Classifarr</Project>
+  
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>5433</HostPort>
+        <ContainerPort>5432</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/classifarr/postgres</HostDir>
+      <ContainerDir>/var/lib/postgresql/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  
+  <Environment>
+    <Variable>
+      <Name>POSTGRES_DB</Name>
+      <Value>classifarr</Value>
+    </Variable>
+    <Variable>
+      <Name>POSTGRES_USER</Name>
+      <Value>classifarr</Value>
+    </Variable>
+    <Variable>
+      <Name>POSTGRES_PASSWORD</Name>
+      <Value>CHANGE_ME_SECURE_PASSWORD</Value>
+    </Variable>
+    <Variable>
+      <Name>TZ</Name>
+      <Value>America/New_York</Value>
+    </Variable>
+  </Environment>
+  
+  <Config Name="Database Port" Target="5432" Default="5433" Mode="tcp" Description="PostgreSQL port (external). Use 5433 to avoid conflicts with other PostgreSQL instances." Type="Port" Display="always" Required="true"/>
+  <Config Name="Database Data" Target="/var/lib/postgresql/data" Default="/mnt/user/appdata/classifarr/postgres" Mode="rw" Description="PostgreSQL data directory" Type="Path" Display="always" Required="true"/>
+  <Config Name="Database Name" Target="POSTGRES_DB" Default="classifarr" Description="Database name" Type="Variable" Display="advanced" Required="true"/>
+  <Config Name="Database User" Target="POSTGRES_USER" Default="classifarr" Description="Database username" Type="Variable" Display="advanced" Required="true"/>
+  <Config Name="Database Password" Target="POSTGRES_PASSWORD" Default="CHANGE_ME_SECURE_PASSWORD" Description="Database password - CHANGE THIS TO A SECURE PASSWORD!" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="Timezone" Target="TZ" Default="America/New_York" Description="Container timezone" Type="Variable" Display="always" Required="false"/>
+</Container>
