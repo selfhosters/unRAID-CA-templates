@@ -12,33 +12,48 @@
   <Shell>sh</Shell>
   <WebUI>http://[IP]:[PORT:21324]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/cloudbyday90/Classifarr/main/unraid/classifarr.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/cloudbyday90/Classifarr/main/client/public/logo.png</Icon>
+  <Icon>https://raw.githubusercontent.com/cloudbyday90/Classifarr/main/logo/icon.png</Icon>
   <ExtraParams>--restart unless-stopped</ExtraParams>
+  <PostArgs></PostArgs>
+  <DonateText>Support the development of Classifarr</DonateText>
+  <DonateLink>https://github.com/sponsors/cloudbyday90</DonateLink>
+  <Requires>Requires TMDB API key (free). Optionally requires Ollama for AI classification.</Requires>
   <Overview>
     AI-powered media classification for the *arr ecosystem.[br][br]
     Automatically routes Overseerr/Jellyseerr requests to the correct Radarr/Sonarr library using AI decision trees and machine learning.[br][br]
-    [b]Features:[/b][br]
+    [b]Key Features:[/b][br]
     - Single self-contained container with embedded PostgreSQL[br]
-    - Webhook integration with Overseerr/Jellyseerr[br]
-    - Multi-library Radarr/Sonarr support[br]
-    - AI-powered content classification[br]
-    - Discord notifications with interactive buttons[br]
-    - Confidence-based routing[br]
-    - Media server scanning (Plex/Emby/Jellyfin)[br][br]
+    - Multi-Radarr and Multi-Sonarr support[br]
+    - AI-powered content classification with Ollama[br]
+    - Confidence-based routing with decision trees[br]
+    - Discord notifications with interactive correction buttons[br]
+    - Media server scanning (Plex/Emby/Jellyfin)[br]
+    - Web-based configuration UI[br]
+    - Automatic learning from corrections[br][br]
+    [b]How It Works:[/b][br]
+    1. Overseerr/Jellyseerr sends webhooks to Classifarr[br]
+    2. Classifarr classifies content (anime, kids, 4K, etc.)[br]
+    3. Routes request to the appropriate Radarr/Sonarr library[br]
+    4. Notifies via Discord with correction options[br][br]
     [b]Requirements:[/b][br]
-    - TMDB API key (free)[br][br]
-    [b]Setup:[/b][br]
-    1. Install this container[br]
-    2. Access WebUI and complete setup wizard[br]
+    - TMDB API key (free from themoviedb.org)[br]
+    - Ollama instance (optional, for AI classification)[br][br]
+    [b]First-Time Setup:[/b][br]
+    1. Install and start the container[br]
+    2. Access WebUI at http://[IP]:21324[br]
+    3. Create admin account in setup wizard[br]
+    4. Configure TMDB, Radarr/Sonarr, and libraries[br]
   </Overview>
   <Description>
     AI-powered media classification for the *arr ecosystem. Automatically routes Overseerr/Jellyseerr requests to the correct Radarr/Sonarr library using AI and machine learning.
   </Description>
-  <Category>MediaApp:Other Tools:</Category>
+  <Category>MediaApp:Other MediaServer:Other Tools:</Category>
   <Support>https://github.com/cloudbyday90/Classifarr/issues</Support>
   <Project>https://github.com/cloudbyday90/Classifarr</Project>
   <ReadMe>https://github.com/cloudbyday90/Classifarr/blob/main/README.md</ReadMe>
   <Changes>https://github.com/cloudbyday90/Classifarr/releases</Changes>
+  <Beta>false</Beta>
+  <Date>2025-12-20</Date>
   
   <Networking>
     <Mode>bridge</Mode>
@@ -53,7 +68,7 @@
   
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/classifarr/data</HostDir>
+      <HostDir>/mnt/user/appdata/classifarr</HostDir>
       <ContainerDir>/app/data</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -82,11 +97,13 @@
     </Variable>
   </Environment>
   
-  <Config Name="PUID" Target="PUID" Default="99" Description="User ID for file permissions (default: 99 for Unraid nobody user)" Type="Variable" Display="always" Required="false"/>
-  <Config Name="PGID" Target="PGID" Default="100" Description="Group ID for file permissions (default: 100 for Unraid users group)" Type="Variable" Display="always" Required="false"/>
-  <Config Name="UMASK" Target="UMASK" Default="022" Description="File creation mask (default: 022)" Type="Variable" Display="advanced" Required="false"/>
-  <Config Name="Web UI Port" Target="21324" Default="21324" Mode="tcp" Description="Web interface port" Type="Port" Display="always" Required="true"/>
-  <Config Name="App Data" Target="/app/data" Default="/mnt/user/appdata/classifarr/data" Mode="rw" Description="Application data directory (includes PostgreSQL database)" Type="Path" Display="always" Required="true"/>
-  <Config Name="Timezone" Target="TZ" Default="America/New_York" Description="Container timezone" Type="Variable" Display="always" Required="false"/>
+  <!-- User-configurable settings -->
+  <Config Name="Web UI Port" Target="21324" Default="21324" Mode="tcp" Description="Web interface and API port. Access the UI at http://[IP]:[PORT]" Type="Port" Display="always" Required="true"/>
+  <Config Name="App Data" Target="/app/data" Default="/mnt/user/appdata/classifarr" Mode="rw" Description="Application data directory. Contains PostgreSQL database, configuration, and logs. DO NOT share with other containers." Type="Path" Display="always" Required="true"/>
+  <Config Name="PUID" Target="PUID" Default="99" Description="User ID for file permissions. Default 99 is Unraid's 'nobody' user. Change only if you need specific file ownership." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="PGID" Target="PGID" Default="100" Description="Group ID for file permissions. Default 100 is Unraid's 'users' group. Change only if you need specific file ownership." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Timezone" Target="TZ" Default="America/New_York" Description="Container timezone. Use format like America/New_York, Europe/London, Asia/Tokyo" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="UMASK" Target="UMASK" Default="022" Description="File creation mask. 022 allows owner full access, group/others read. 002 for group write access." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Node Environment" Target="NODE_ENV" Default="production" Description="Application environment. Keep as 'production' unless debugging." Type="Variable" Display="advanced" Required="false" Mask="false"/>
 
 </Container>
