@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>MediaRoulette</Name>
+  <Repository>ghcr.io/keltech-services/mediaroulette:latest</Repository>
+  <Registry>https://github.com/KelTech-Services/MediaRoulette/pkgs/container/mediaroulette</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/KelTech-Services/MediaRoulette/issues</Support>
+  <Project>https://github.com/KelTech-Services/MediaRoulette</Project>
+  <Overview>MediaRoulette for Plex — Can't decide what to watch? MediaRoulette randomly picks from your Movies, TV Shows, or both with optional filters (genre, rating, unwatched only, etc.). Great for large libraries where scrolling becomes overwhelming. Connects via Plex OAuth - no credentials stored.</Overview>
+  <Category>MediaApp:Other</Category>
+  <WebUI>http://[IP]:[PORT:5000]</WebUI>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/mediaroulette.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/mediaroulette.xml</TemplateURL>
+  <Config Name="Web UI Port" Target="5000" Default="5000" Mode="tcp" Description="Web interface port" Type="Port" Display="always" Required="true" Mask="false">5000</Config>
+  <Config Name="App Data" Target="/app/data" Default="/mnt/user/appdata/mediaroulette" Mode="rw" Description="Stores config, watchlist, and user data" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/mediaroulette</Config>
+  <Config Name="Secret Key" Target="SECRET_KEY" Default="" Mode="" Description="Flask session encryption key. Generate a random 32+ character string for security." Type="Variable" Display="always" Required="true" Mask="true"/>
+</Container>
