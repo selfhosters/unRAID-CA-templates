@@ -12,6 +12,7 @@
   <Category>MediaApp:Other</Category>
   <WebUI>http://[IP]:[PORT:5000]</WebUI>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/mediaroulette.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/mediaroulette.xml</TemplateURL>
   <Config Name="Web UI Port" Target="5000" Default="5000" Mode="tcp" Description="Web interface port" Type="Port" Display="always" Required="true" Mask="false">5000</Config>
   <Config Name="App Data" Target="/app/data" Default="/mnt/user/appdata/mediaroulette" Mode="rw" Description="Stores config, watchlist, and user data" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/mediaroulette</Config>
   <Config Name="Secret Key" Target="SECRET_KEY" Default="" Mode="" Description="Flask session encryption key. Generate a random 32+ character string for security." Type="Variable" Display="always" Required="true" Mask="true"/>
