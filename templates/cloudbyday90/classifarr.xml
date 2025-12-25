@@ -13,7 +13,7 @@
   <WebUI>http://[IP]:[PORT:21324]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/cloudbyday90/Classifarr/main/unraid/classifarr.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/cloudbyday90/Classifarr/main/logo/icon.png</Icon>
-  <ExtraParams>--restart unless-stopped</ExtraParams>
+  <ExtraParams>--restart unless-stopped --add-host host.docker.internal:host-gateway</ExtraParams>
   <PostArgs></PostArgs>
   <DonateText>Support the development of Classifarr</DonateText>
   <DonateLink>https://github.com/sponsors/cloudbyday90</DonateLink>
@@ -53,7 +53,7 @@
   <ReadMe>https://github.com/cloudbyday90/Classifarr/blob/main/README.md</ReadMe>
   <Changes>https://github.com/cloudbyday90/Classifarr/releases</Changes>
   <Beta>false</Beta>
-  <Date>2025-12-20</Date>
+  <Date>2025-12-25</Date>
   
   <Networking>
     <Mode>bridge</Mode>
