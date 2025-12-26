@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>dovi-convert</Name>
+  <Repository>smidley/dovi-convert</Repository>
+  <Registry>https://hub.docker.com/r/smidley/dovi-convert/</Registry>
+  <Network>bridge</Network>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/smidley/dovi-convert-docker/issues</Support>
+  <Project>https://github.com/smidley/dovi-convert-docker</Project>
+  <Overview>DoVi Convert provides a web interface for converting Dolby Vision Profile 7 MKV files (UHD Blu-ray rips) to Profile 8.1 for better compatibility with media players.&#xD;
+&#xD;
+Many devices cannot process Dolby Vision Profile 7 files, including Apple TV 4K (Plex/Infuse), Nvidia Shield, and Zidoo players. This causes fallback to HDR10 or playback issues.&#xD;
+&#xD;
+Features:&#xD;
+- Web-based interface for easy operation&#xD;
+- Scan directories for Dolby Vision files&#xD;
+- Batch conversion with progress tracking&#xD;
+- Safe mode for problematic files&#xD;
+- Automatic backup creation&#xD;
+- Real-time output streaming&#xD;
+&#xD;
+Based on the dovi_convert script by cryptochrome.</Overview>
+  <Category>MediaApp:Video Tools:</Category>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/smidley/dovi-convert-docker/main/icon.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Web UI Port" Target="8080" Default="8080" Mode="tcp" Description="Port for the web interface" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+  <Config Name="Media Path" Target="/media" Default="/mnt/user/media" Mode="rw" Description="Path to your media library containing Dolby Vision files" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/media</Config>
+  <Config Name="Config Path" Target="/config" Default="/mnt/user/appdata/dovi-convert" Mode="rw" Description="Path for persistent configuration" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/dovi-convert</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="User ID for file permissions" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Group ID for file permissions" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
+  <Config Name="TZ" Target="TZ" Default="America/New_York" Mode="" Description="Timezone" Type="Variable" Display="always" Required="false" Mask="false">America/New_York</Config>
+</Container>
+
