@@ -105,5 +105,10 @@
   <Config Name="Timezone" Target="TZ" Default="America/New_York" Description="Container timezone. Use format like America/New_York, Europe/London, Asia/Tokyo" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="UMASK" Target="UMASK" Default="022" Description="File creation mask. 022 allows owner full access, group/others read. 002 for group write access." Type="Variable" Display="advanced" Required="false" Mask="false"/>
   <Config Name="Node Environment" Target="NODE_ENV" Default="production" Description="Application environment. Keep as 'production' unless debugging." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  
+  <!-- MEDIA ACCESS (Required for Re-Classification feature) -->
+  <Config Name="Media Path" Target="/data/media" Default="" Mode="rw" Description="Path to your media folders. Required for re-classification to verify and move files. Use your Plex/Radarr/Sonarr media root folder (e.g., /mnt/user/media)." Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="Movies Path" Target="/data/movies" Default="" Mode="rw" Description="Optional: Separate path for movies if not using unified media folder (e.g., /mnt/user/media/movies)." Type="Path" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="TV Path" Target="/data/tv" Default="" Mode="rw" Description="Optional: Separate path for TV shows if not using unified media folder (e.g., /mnt/user/media/tv)." Type="Path" Display="advanced" Required="false" Mask="false"/>
 
 </Container>
