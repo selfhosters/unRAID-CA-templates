@@ -27,5 +27,4 @@ Based on the dovi_convert script by cryptochrome.</Overview>
   <Config Name="Web UI Port" Target="8080" Default="8080" Mode="tcp" Description="Port for the web interface" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
   <Config Name="Media Path" Target="/media" Default="" Mode="rw" Description="Path to your media library containing Dolby Vision files" Type="Path" Display="always-hide" Required="true" Mask="false"/>
   <Config Name="Config Path" Target="/config" Default="/mnt/user/appdata/dovi-convert" Mode="rw" Description="Path for persistent configuration" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/dovi-convert</Config>
-  <Config Name="TZ" Target="TZ" Default="America/New_York" Mode="" Description="Timezone" Type="Variable" Display="always" Required="false" Mask="false">America/New_York</Config>
 </Container>
