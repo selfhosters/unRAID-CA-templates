@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Shrinkray</Name>
+  <Repository>ghcr.io/gwlsn/shrinkray:latest</Repository>
+  <Registry>https://github.com/gwlsn/shrinkray/pkgs/container/shrinkray</Registry>
+  <Branch>
+    <Tag>latest</Tag>
+    <TagDescription>Latest stable release</TagDescription>
+  </Branch>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/gwlsn/shrinkray/issues</Support>
+  <Project>https://github.com/gwlsn/shrinkray</Project>
+  <Overview>A simple video transcoding tool for Unraid. Select a folder, pick a preset, and shrink your media library with hardware-accelerated HEVC/AV1 encoding.</Overview>
+  <Category>MediaApp:Video</Category>
+  <Icon>https://raw.githubusercontent.com/gwlsn/shrinkray/main/web/templates/logo.png</Icon>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <ExtraSearchTerms>transcode ffmpeg compression video hevc av1 shrink encode</ExtraSearchTerms>
+  <Beta>false</Beta>
+
+  <!-- Ports -->
+  <Config Name="WebUI Port" Target="8080" Default="8080" Mode="tcp" Type="Port" Description="Web interface port" Display="always" Required="true"/>
+
+  <!-- Volumes -->
+  <Config Name="Config" Target="/config" Default="/mnt/user/appdata/shrinkray" Mode="rw" Type="Path" Description="Configuration directory" Display="always" Required="true"/>
+  <Config Name="Media" Target="/media" Default="" Mode="rw" Type="Path" Description="Media library to transcode" Display="always-hide" Required="true"/>
+  <Config Name="Temp" Target="/temp" Default="" Mode="rw" Type="Path" Description="(Optional) Fast storage for temp files during transcode" Display="always" Required="false"/>
+
+  <!-- Environment Variables -->
+  <Config Name="PUID" Target="PUID" Default="99" Type="Variable" Description="User ID for file permissions" Display="advanced" Required="false"/>
+  <Config Name="PGID" Target="PGID" Default="100" Type="Variable" Description="Group ID for file permissions" Display="advanced" Required="false"/>
+</Container>
