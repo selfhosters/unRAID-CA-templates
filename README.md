@@ -31,7 +31,7 @@ For a pull request to be reviewed
 - The template must be made by a user with previous activity on GitHub
 - The application must be of certain quality
   - Not fully AI written
-  - Be attributed to a GitHub account with activity past commits
+  - Be attributed to a GitHub account with an active history
 
 ### Creating a template
 
