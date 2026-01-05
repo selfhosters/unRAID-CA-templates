@@ -11,11 +11,13 @@
   <Privileged>false</Privileged>
   <Support>https://github.com/gwlsn/shrinkray/issues</Support>
   <Project>https://github.com/gwlsn/shrinkray</Project>
-  <Overview>A simple video transcoding tool for Unraid. Select a folder, pick a preset, and shrink your media library with hardware-accelerated HEVC/AV1 encoding.</Overview>
+  <Overview>A simple video transcoding tool for Unraid. Select a folder, pick a preset, and shrink your media library with hardware-accelerated HEVC/AV1 encoding.[br][br][b]GPU Setup (Recommended):[/b][br]For hardware-accelerated encoding, add the following to "Extra Parameters" in Advanced View:[br][br]Intel/AMD: --device=/dev/dri:/dev/dri[br]NVIDIA: --runtime=nvidia --gpus all (requires Nvidia-Driver plugin)[br][br]Without GPU passthrough, Shrinkray will fall back to slower CPU encoding.</Overview>
   <Category>MediaApp:Video</Category>
   <Icon>https://raw.githubusercontent.com/gwlsn/shrinkray/main/web/templates/logo.png</Icon>
   <WebUI>http://[IP]:[PORT:8080]</WebUI>
   <ExtraSearchTerms>transcode ffmpeg compression video hevc av1 shrink encode</ExtraSearchTerms>
+  <Requires>For hardware acceleration, GPU passthrough is required. See Overview for setup instructions.</Requires>
+  <ReadMe>https://github.com/gwlsn/shrinkray#readme</ReadMe>
   <Beta>false</Beta>
 
   <!-- Ports -->
@@ -23,7 +25,7 @@
 
   <!-- Volumes -->
   <Config Name="Config" Target="/config" Default="/mnt/user/appdata/shrinkray" Mode="rw" Type="Path" Description="Configuration directory" Display="always" Required="true"/>
-  <Config Name="Media" Target="/media" Default="" Mode="rw" Type="Path" Description="Media library to transcode" Display="always-hide" Required="true"/>
+  <Config Name="Media" Target="/media" Default="/mnt/user/" Mode="rw" Type="Path" Description="Media library to transcode" Display="always" Required="true"/>
   <Config Name="Temp" Target="/temp" Default="" Mode="rw" Type="Path" Description="(Optional) Fast storage for temp files during transcode" Display="always" Required="false"/>
 
   <!-- Environment Variables -->
