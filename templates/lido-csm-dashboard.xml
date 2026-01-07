@@ -17,7 +17,7 @@
   <WebUI>http://[IP]:[PORT:3000]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/lido-csm-dashboard.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/lido-csm-dashboard.png</Icon>
-  <Config Name="Web UI Port" Target="3000" Default="3000" Mode="tcp" Description="Web interface port" Type="Port" Display="always" Required="true" Mask="false">3000</Config>
+  <Config Name="Web UI Port" Target="3000" Default="3000" Mode="tcp" Description="Web interface port" Type="Port" Display="always-hide" Required="true" Mask="false">3000</Config>
   <Config Name="App Data" Target="/app/data" Default="/mnt/user/appdata/lido-csm-dashboard" Mode="rw" Description="Application data and cache directory" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/lido-csm-dashboard</Config>
   <Config Name="ETH RPC URL" Target="ETH_RPC_URL" Default="https://eth.llamarpc.com" Mode="" Description="Ethereum RPC endpoint (default: llamarpc.com)" Type="Variable" Display="always" Required="false" Mask="false">https://eth.llamarpc.com</Config>
   <Config Name="Beacon API URL" Target="BEACON_API_URL" Default="https://beaconcha.in/api/v1" Mode="" Description="Beacon chain API endpoint (default: beaconcha.in)" Type="Variable" Display="always" Required="false" Mask="false">https://beaconcha.in/api/v1</Config>
