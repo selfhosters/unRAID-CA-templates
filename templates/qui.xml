@@ -7,6 +7,7 @@
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
   <Project>https://github.com/autobrr/qui</Project>
+  <ExtraParams>--user 99:100</ExtraParams>
   <Overview>A fast, modern web interface for qBittorrent. Supports managing multiple qBittorrent instances from a single, lightweight application.</Overview>
   <Network>bridge</Network>
   <Category>Downloaders:</Category>
