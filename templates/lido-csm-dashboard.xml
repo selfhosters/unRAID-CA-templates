@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>lido-csm-dashboard</Name>
+  <Repository>0xdespot/lido-csm-dashboard:latest</Repository>
+  <Registry>https://hub.docker.com/r/0xdespot/lido-csm-dashboard</Registry>
+  <Branch>
+    <Tag>latest</Tag>
+    <TagDescription>Latest stable release</TagDescription>
+  </Branch>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/0xdespot/lido-csm-dashboard/issues</Support>
+  <Project>https://github.com/0xdespot/lido-csm-dashboard</Project>
+  <Overview>Lido CSM Operator Dashboard - Track your Community Staking Module validator earnings, bond status, APY metrics, strikes, and health status. Features both a web UI and CLI interface.</Overview>
+  <Category>Crypto: Tools:</Category>
+  <WebUI>http://[IP]:[PORT:3000]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/lido-csm-dashboard.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/lido-csm-dashboard.png</Icon>
+  <Config Name="Web UI Port" Target="3000" Default="3000" Mode="tcp" Description="Web interface port" Type="Port" Display="always-hide" Required="true" Mask="false">3000</Config>
+  <Config Name="App Data" Target="/app/data" Default="/mnt/user/appdata/lido-csm-dashboard" Mode="rw" Description="Application data and cache directory" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/lido-csm-dashboard</Config>
+  <Config Name="ETH RPC URL" Target="ETH_RPC_URL" Default="https://eth.llamarpc.com" Mode="" Description="Ethereum RPC endpoint (default: llamarpc.com)" Type="Variable" Display="always" Required="false" Mask="false">https://eth.llamarpc.com</Config>
+  <Config Name="Beacon API URL" Target="BEACON_API_URL" Default="https://beaconcha.in/api/v1" Mode="" Description="Beacon chain API endpoint (default: beaconcha.in)" Type="Variable" Display="always" Required="false" Mask="false">https://beaconcha.in/api/v1</Config>
+  <Config Name="Beacon API Key" Target="BEACON_API_KEY" Default="" Mode="" Description="Optional - beaconcha.in API key for higher rate limits" Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="Etherscan API Key" Target="ETHERSCAN_API_KEY" Default="" Mode="" Description="Optional - enables withdrawal history tracking" Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="TheGraph API Key" Target="THEGRAPH_API_KEY" Default="" Mode="" Description="Optional - enables historical stETH APR data" Type="Variable" Display="always" Required="false" Mask="true"/>
+</Container>
