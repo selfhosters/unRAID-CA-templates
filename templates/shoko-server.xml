@@ -2,12 +2,12 @@
 <Container version="2">
   <Name>shoko-server</Name>
   <Date>2022-08-03</Date>
-  <Repository>shokoanime/server:latest</Repository>
+  <Repository>ghcr.io/shokoanime/server:latest</Repository>
   <Branch>
     <Tag>daily</Tag>
     <TagDescription>The daily branch includes the latest updates and may break database compatability with prior versions, you will not be able to revert without a database backup</TagDescription>
   </Branch>
-  <Registry>https://hub.docker.com/r/shokoanime/server/</Registry>
+  <Registry>https://github.com/ShokoAnime/ShokoServer/pkgs/container/server/</Registry>
   <Beta>False</Beta>
   <ExtraSearchTerms>anime japanese media anidb myanimelist avidump plex jellyfin metadata</ExtraSearchTerms>
   <Category>MediaApp:Video</Category>
