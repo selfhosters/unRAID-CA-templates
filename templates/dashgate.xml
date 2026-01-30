@@ -17,7 +17,7 @@
   <Config Name="WebUI Port" Target="1738" Default="1738" Mode="tcp" Description="DashGate web interface port." Type="Port" Display="always" Required="true" Mask="false"/>
   <Config Name="Config Storage" Target="/config" Default="/mnt/user/appdata/dashgate" Mode="rw" Description="Persistent storage for config.yaml and SQLite database." Type="Path" Display="always" Required="true" Mask="false"/>
   <Config Name="Port" Target="PORT" Default="1738" Mode="" Description="Internal port (should match WebUI Port)." Type="Variable" Display="advanced" Required="false" Mask="false"/>
-  <Config Name="Auth Mode" Target="AUTH_MODE" Default="local" Mode="" Description="Authentication mode: local, hybrid, or authelia." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Auth Mode" Target="AUTH_MODE" Default="local|hybrid|authelia" Mode="" Description="Authentication mode" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Session Duration (Days)" Target="SESSION_DURATION_DAYS" Default="7" Mode="" Description="How many days a login session stays valid." Type="Variable" Display="advanced" Required="false" Mask="false"/>
   <Config Name="Encryption Key" Target="ENCRYPTION_KEY" Default="" Mode="" Description="64-char hex string for encrypting secrets at rest. Leave empty to auto-generate." Type="Variable" Display="advanced" Required="false" Mask="true"/>
   <Config Name="Docker Socket" Target="/var/run/docker.sock" Default="/var/run/docker.sock" Mode="ro" Description="Docker socket for auto-discovering containers. Optional." Type="Path" Display="always" Required="false" Mask="false"/>
