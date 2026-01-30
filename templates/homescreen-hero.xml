@@ -4,7 +4,6 @@
   <Repository>trentferguson/homescreen-hero:latest</Repository>
   <Registry>https://hub.docker.com/r/trentferguson/homescreen-hero</Registry>
   <Network>bridge</Network>
-  <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/196125-support-homescreen-hero-docker-repository/</Support>
