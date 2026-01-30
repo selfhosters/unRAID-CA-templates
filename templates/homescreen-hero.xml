@@ -24,12 +24,6 @@ Setup can either be configured in environment variables below, or skipped and se
   <WebUI>http://[IP]:[PORT:8000]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/homescreen-hero.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/homescreen-hero.png</Icon>
-  <ExtraParams/>
-  <PostArgs/>
-  <CPUset/>
-  <DonateText/>
-  <DonateLink/>
-  <Requires/>
   <Config Name="WebUI Port" Target="8000" Default="8000" Mode="tcp" Description="Port for accessing the web interface" Type="Port" Display="always" Required="true" Mask="false">8000</Config>
   <Config Name="Data Directory" Target="/data" Default="/mnt/user/appdata/homescreen-hero" Mode="rw" Description="Directory for config.yaml, database, and logs" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/homescreen-hero</Config>
   <Config Name="Plex Token" Target="HSH_PLEX_TOKEN" Default="" Mode="" Description="Your Plex authentication token (required - find at: https://support.plex.tv/articles/204059436-finding-an-authentication-token-x-plex-token/)" Type="Variable" Display="always" Required="true" Mask="true"/>
