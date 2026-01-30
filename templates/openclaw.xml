@@ -6,7 +6,7 @@
   <Network>host</Network>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
+  <Support>https://forums.unraid.net/topic/196865-support-openclaw-ai-personal-assistant/#comment-1605382</Support>
   <Project>https://github.com/openclaw/openclaw</Project>
   <Overview>OpenClaw (formerly ClawdBot/MoltBot) is a powerful AI assistant gateway that connects Claude and other LLMs to messaging platforms like Discord, Telegram, WhatsApp, and more. Features include file access, shell commands, web browsing, cron jobs, and a web-based Control UI.&#xD;&#xD;IMPORTANT: To access the Control UI, add your token to the URL: http://YOUR-IP:18789/?token=YOUR-GATEWAY-TOKEN</Overview>
   <Category>Productivity: Tools: AI</Category>
