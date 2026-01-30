@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>DashGate</Name>
+  <Repository>khak1s/dashgate:latest</Repository>
+  <Registry>https://hub.docker.com/r/khak1s/dashgate</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/Kha-kis/dashgate/issues</Support>
+  <Project>https://github.com/Kha-kis/dashgate</Project>
+  <Overview>DashGate is a self-hosted application gateway and dashboard. Features multi-method authentication (local, LDAP, OIDC/SSO, proxy auth, API keys), group-based access control, automatic app discovery from Docker/Traefik/Nginx/NPM/Caddy, health monitoring, and PWA support.</Overview>
+  <Category>Tools:Utilities Network:Management</Category>
+  <WebUI>http://[IP]:[PORT:1738]</WebUI>
+  <Icon>https://raw.githubusercontent.com/Kha-kis/dashgate/main/unraid/dashgate-icon.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/dashgate.xml</TemplateURL>
+  <Description>DashGate is a self-hosted application gateway and dashboard that serves as a central hub for accessing all your web applications. It supports multiple authentication methods including local accounts, LDAP, OIDC/SSO, proxy authentication (Authelia/Authentik), and API keys. Group-based access control lets you restrict which apps users can see. Automatic app discovery pulls services from Docker, Traefik, Nginx Proxy Manager, and Caddy. Built-in health monitoring checks app availability. Includes a PWA-ready progressive web app with offline support, encrypted secrets at rest, and structured audit logging.</Description>
+  <Requires>For Docker auto-discovery, enable the Docker socket mount below.</Requires>
+  <Config Name="WebUI Port" Target="1738" Default="1738" Mode="tcp" Description="DashGate web interface port." Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="Config Storage" Target="/config" Default="/mnt/user/appdata/dashgate" Mode="rw" Description="Persistent storage for config.yaml and SQLite database." Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Port" Target="PORT" Default="1738" Mode="" Description="Internal port (should match WebUI Port)." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Auth Mode" Target="AUTH_MODE" Default="local" Mode="" Description="Authentication mode: local, hybrid, or authelia." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Session Duration (Days)" Target="SESSION_DURATION_DAYS" Default="7" Mode="" Description="How many days a login session stays valid." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Encryption Key" Target="ENCRYPTION_KEY" Default="" Mode="" Description="64-char hex string for encrypting secrets at rest. Leave empty to auto-generate." Type="Variable" Display="advanced" Required="false" Mask="true"/>
+  <Config Name="Docker Socket" Target="/var/run/docker.sock" Default="/var/run/docker.sock" Mode="ro" Description="Docker socket for auto-discovering containers. Optional." Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="Docker Discovery" Target="DOCKER_DISCOVERY" Default="true" Mode="" Description="Enable automatic Docker container discovery." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Traefik Discovery" Target="TRAEFIK_DISCOVERY" Default="false" Mode="" Description="Enable Traefik router discovery." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Traefik URL" Target="TRAEFIK_URL" Default="" Mode="" Description="Traefik API URL (e.g., http://traefik:8080)." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="NPM Discovery" Target="NPM_DISCOVERY" Default="false" Mode="" Description="Enable Nginx Proxy Manager discovery." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="NPM URL" Target="NPM_URL" Default="" Mode="" Description="NPM API URL (e.g., http://npm:81)." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="NPM Email" Target="NPM_EMAIL" Default="" Mode="" Description="NPM admin email for API login." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="NPM Password" Target="NPM_PASSWORD" Default="" Mode="" Description="NPM admin password for API login." Type="Variable" Display="advanced" Required="false" Mask="true"/>
+  <Config Name="LLDAP URL" Target="LLDAP_URL" Default="" Mode="" Description="LLDAP server URL for user directory (e.g., http://lldap:17170)." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="LLDAP Admin Username" Target="LLDAP_ADMIN_USERNAME" Default="" Mode="" Description="LLDAP admin username." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="LLDAP Admin Password" Target="LLDAP_ADMIN_PASSWORD" Default="" Mode="" Description="LLDAP admin password." Type="Variable" Display="advanced" Required="false" Mask="true"/>
+</Container>
