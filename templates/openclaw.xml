@@ -8,14 +8,16 @@
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/196865-support-openclaw-ai-personal-assistant</Support>
   <Project>https://github.com/openclaw/openclaw</Project>
-  <Overview>OpenClaw (formerly ClawdBot/MoltBot) is a powerful AI assistant gateway that connects Claude and other LLMs to messaging platforms like Discord, Telegram, WhatsApp, and more. Features include file access, shell commands, web browsing, cron jobs, and a web-based Control UI.&#xD;&#xD;IMPORTANT: To access the Control UI, add your token to the URL: http://YOUR-IP:18789/?token=YOUR-GATEWAY-TOKEN</Overview>
+  <Overview>OpenClaw (formerly ClawdBot/MoltBot) is a powerful AI assistant gateway that connects Claude and other LLMs to messaging platforms like Discord, Telegram, WhatsApp, and more. Features include file access, shell commands, web browsing, cron jobs, and a web-based Control UI.&#xD;&#xD;IMPORTANT: To access the Control UI, add your token to the URL: http://YOUR-IP:18789/?token=YOUR-GATEWAY-TOKEN&#xD;&#xD;NOTE: Default model is Anthropic Claude. If using Gemini/OpenAI/Groq/OpenRouter, change the model in Config after install (see GitHub for details).</Overview>
   <Category>Productivity: Tools: AI</Category>
   <WebUI>http://[IP]:[PORT:18789]/</WebUI>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/openclaw.png</Icon>
   <Screenshot>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/openclaw-screenshot.png</Screenshot>
   <ExtraParams>--user root --hostname OpenClaw</ExtraParams>
-  <PostArgs>sh -c "mkdir -p /root/.openclaw; echo '{\"gateway\":{\"mode\":\"local\",\"bind\":\"lan\",\"controlUi\":{\"allowInsecureAuth\":true},\"auth\":{\"mode\":\"token\"}}}' > /root/.openclaw/openclaw.json; node dist/index.js gateway --bind lan"</PostArgs>
-  <Description>OpenClaw (formerly ClawdBot/MoltBot) is a powerful AI assistant gateway that connects Claude and other LLMs to messaging platforms like Discord, Telegram, WhatsApp, and more. Features include file access, shell commands, web browsing, cron jobs, and a web-based Control UI. To access the Control UI, add your token to the URL: http://YOUR-IP:18789/?token=YOUR-GATEWAY-TOKEN</Description>
+  <PostArgs>sh -c "mkdir -p /root/.openclaw; [ -f /root/.openclaw/openclaw.json ] || echo '{\"gateway\":{\"mode\":\"local\",\"bind\":\"lan\",\"controlUi\":{\"allowInsecureAuth\":true},\"auth\":{\"mode\":\"token\"}}}' > /root/.openclaw/openclaw.json; exec node dist/index.js gateway --bind lan"</PostArgs>
+  <DonateText>Support the template maintainer</DonateText>
+  <DonateLink>https://buymeacoffee.com/jdhill777</DonateLink>
+  <Description>OpenClaw (formerly ClawdBot/MoltBot) is a powerful AI assistant gateway that connects Claude and other LLMs to messaging platforms like Discord, Telegram, WhatsApp, and more. Features include file access, shell commands, web browsing, cron jobs, and a web-based Control UI. To access the Control UI, add your token to the URL: http://YOUR-IP:18789/?token=YOUR-GATEWAY-TOKEN. NOTE: Default model is Anthropic Claude. If using a different provider (Gemini, OpenAI, Groq, OpenRouter), you must change the model in Config after install - see GitHub README for details.</Description>
 
   <!-- Port -->
   <Config Name="Control UI Port" Target="18789" Default="18789" Mode="tcp" Description="Port for Control UI and Gateway API" Type="Port" Display="always" Required="true" Mask="false">18789</Config>
