@@ -8,32 +8,33 @@
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/196865-support-openclaw-ai-personal-assistant</Support>
   <Project>https://github.com/openclaw/openclaw</Project>
-  <Overview>OpenClaw (formerly ClawdBot/MoltBot) is a powerful AI assistant gateway that connects Claude and other LLMs to messaging platforms like Discord, Telegram, WhatsApp, and more. Features include file access, shell commands, web browsing, cron jobs, and a web-based Control UI.&#xD;&#xD;IMPORTANT: To access the Control UI, add your token to the URL: http://YOUR-IP:18789/?token=YOUR-GATEWAY-TOKEN&#xD;&#xD;NOTE: Default model is Anthropic Claude. If using Gemini/OpenAI/Groq/OpenRouter, change the model in Config after install (see GitHub for details).</Overview>
+  <Overview>OpenClaw is a powerful AI assistant gateway that connects Claude and other LLMs to messaging platforms like Discord, Telegram, WhatsApp, and more. Features include file access, shell commands, web browsing, cron jobs, and a web-based Control UI.&#xD;&#xD;To access the Control UI, add your token to the URL: http://YOUR-IP:18789/?token=YOUR-GATEWAY-TOKEN&#xD;&#xD;Documentation: https://docs.openclaw.ai</Overview>
   <Category>Productivity: Tools: AI</Category>
   <WebUI>http://[IP]:[PORT:18789]/</WebUI>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/openclaw.png</Icon>
   <Screenshot>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/openclaw-screenshot.png</Screenshot>
   <ExtraParams>--user root --hostname OpenClaw</ExtraParams>
-  <PostArgs>sh -c "mkdir -p /root/.openclaw; [ -f /root/.openclaw/openclaw.json ] || echo '{\"gateway\":{\"mode\":\"local\",\"bind\":\"lan\",\"controlUi\":{\"allowInsecureAuth\":true},\"auth\":{\"mode\":\"token\"}}}' > /root/.openclaw/openclaw.json; exec node dist/index.js gateway --bind lan"</PostArgs>
+  <PostArgs>sh -c "mkdir -p /root/.openclaw /home/linuxbrew; [ -f /root/.openclaw/openclaw.json ] || echo '{\"gateway\":{\"mode\":\"local\",\"bind\":\"lan\",\"controlUi\":{\"allowInsecureAuth\":true},\"auth\":{\"mode\":\"token\"}}}' > /root/.openclaw/openclaw.json; [ -x /home/linuxbrew/.linuxbrew/bin/brew ] || { echo Installing Homebrew... &amp;&amp; NONINTERACTIVE=1 curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash; }; exec node dist/index.js gateway --bind lan"</PostArgs>
   <DonateText>Support the template maintainer</DonateText>
   <DonateLink>https://buymeacoffee.com/jdhill777</DonateLink>
-  <Description>OpenClaw (formerly ClawdBot/MoltBot) is a powerful AI assistant gateway that connects Claude and other LLMs to messaging platforms like Discord, Telegram, WhatsApp, and more. Features include file access, shell commands, web browsing, cron jobs, and a web-based Control UI. To access the Control UI, add your token to the URL: http://YOUR-IP:18789/?token=YOUR-GATEWAY-TOKEN. NOTE: Default model is Anthropic Claude. If using a different provider (Gemini, OpenAI, Groq, OpenRouter), you must change the model in Config after install - see GitHub README for details.</Description>
+  <Description>OpenClaw is a powerful AI assistant gateway that connects Claude and other LLMs to messaging platforms like Discord, Telegram, WhatsApp, and more. Features include file access, shell commands, web browsing, cron jobs, and a web-based Control UI. To access the Control UI, add your token to the URL: http://YOUR-IP:18789/?token=YOUR-GATEWAY-TOKEN</Description>
 
   <!-- Port -->
-  <Config Name="Control UI Port" Target="18789" Default="18789" Mode="tcp" Description="Port for Control UI and Gateway API" Type="Port" Display="always" Required="true" Mask="false">18789</Config>
+  <Config Name="Control UI Port" Target="18789" Default="18789" Mode="tcp" Description="Port for Control UI and Gateway API. Access at http://IP:18789/?token=YOUR_TOKEN" Type="Port" Display="always" Required="true" Mask="false">18789</Config>
 
   <!-- Volume Mappings -->
-  <Config Name="Config Path" Target="/root/.openclaw" Default="/mnt/user/appdata/openclaw/config" Mode="rw" Description="Path to store OpenClaw configuration files" Type="Path" Display="always" Required="true" Mask="false"/>
-  <Config Name="Workspace Path" Target="/home/node/clawd" Default="/mnt/user/appdata/openclaw/workspace" Mode="rw" Description="Path for agent workspace (files, memory, projects)" Type="Path" Display="always" Required="true" Mask="false"/>
-  <Config Name="Projects Path" Target="/projects" Default="/mnt/user/appdata/openclaw/projects" Mode="rw" Description="Optional path for coding projects" Type="Path" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Config Path" Target="/root/.openclaw" Default="/mnt/user/appdata/openclaw/config" Mode="rw" Description="Path to store OpenClaw configuration files, sessions, and credentials" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/openclaw/config</Config>
+  <Config Name="Workspace Path" Target="/home/node/clawd" Default="/mnt/user/appdata/openclaw/workspace" Mode="rw" Description="Path for agent workspace (files, memory, AGENTS.md, projects)" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/openclaw/workspace</Config>
+  <Config Name="Projects Path" Target="/projects" Default="/mnt/user/appdata/openclaw/projects" Mode="rw" Description="Optional additional path for coding projects" Type="Path" Display="advanced" Required="false" Mask="false">/mnt/user/appdata/openclaw/projects</Config>
+  <Config Name="Homebrew Path" Target="/home/linuxbrew/.linuxbrew" Default="/mnt/user/appdata/openclaw/homebrew" Mode="rw" Description="Persistent storage for Homebrew packages. Enables skills that require brew/go/npm tools. First start auto-installs Homebrew (~60 seconds)." Type="Path" Display="advanced" Required="false" Mask="false">/mnt/user/appdata/openclaw/homebrew</Config>
 
   <!-- Required Settings -->
-  <Config Name="Gateway Token" Target="OPENCLAW_GATEWAY_TOKEN" Default="" Mode="" Description="Secret token for authentication. Recommend generating with: openssl rand -hex 24 (but can be any value). To access the Control UI, append this token to the URL: http://IP:18789/?token=YOUR_TOKEN_HERE" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="Gateway Token" Target="OPENCLAW_GATEWAY_TOKEN" Default="" Mode="" Description="Secret token for authentication. Generate with: openssl rand -hex 24 (or use any secret value). Required to access the Control UI." Type="Variable" Display="always" Required="true" Mask="true"/>
 
   <!-- LLM API Keys (fill in at least one) -->
-  <Config Name="Anthropic API Key" Target="ANTHROPIC_API_KEY" Default="" Mode="" Description="API key for Claude models. Get from console.anthropic.com. Recommended for best experience." Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="Anthropic API Key" Target="ANTHROPIC_API_KEY" Default="" Mode="" Description="API key for Claude models (recommended). Get from console.anthropic.com" Type="Variable" Display="always" Required="false" Mask="true"/>
   <Config Name="OpenAI API Key" Target="OPENAI_API_KEY" Default="" Mode="" Description="API key for GPT models. Get from platform.openai.com" Type="Variable" Display="always" Required="false" Mask="true"/>
-  <Config Name="OpenRouter API Key" Target="OPENROUTER_API_KEY" Default="" Mode="" Description="API key for OpenRouter - access to Claude, GPT, Llama, and 100+ models. Get from openrouter.ai" Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="OpenRouter API Key" Target="OPENROUTER_API_KEY" Default="" Mode="" Description="API key for OpenRouter - access 100+ models. Get from openrouter.ai" Type="Variable" Display="always" Required="false" Mask="true"/>
   <Config Name="Gemini API Key" Target="GEMINI_API_KEY" Default="" Mode="" Description="API key for Google Gemini models. Get from aistudio.google.com" Type="Variable" Display="always" Required="false" Mask="true"/>
   <Config Name="Groq API Key" Target="GROQ_API_KEY" Default="" Mode="" Description="API key for Groq (fast Llama/Mixtral inference). Get from console.groq.com" Type="Variable" Display="always" Required="false" Mask="true"/>
 
@@ -42,6 +43,7 @@
   <Config Name="Telegram Bot Token" Target="TELEGRAM_BOT_TOKEN" Default="" Mode="" Description="(Optional) Telegram bot token from @BotFather. Can also configure via Control UI after install." Type="Variable" Display="advanced" Required="false" Mask="true"/>
 
   <!-- Advanced Settings -->
-  <Config Name="Gateway Port" Target="OPENCLAW_GATEWAY_PORT" Default="18789" Mode="" Description="Port for the gateway API and Control UI. Change if 18789 is already in use." Type="Variable" Display="advanced" Required="false" Mask="false"/>
-  <Config Name="Web Search API Key" Target="BRAVE_API_KEY" Default="" Mode="" Description="(Optional) Brave Search API key for web search capability. Get free tier at brave.com/search/api (2000 queries/month)" Type="Variable" Display="advanced" Required="false" Mask="true"/>
+  <Config Name="Gateway Port" Target="OPENCLAW_GATEWAY_PORT" Default="18789" Mode="" Description="Internal gateway port. Change if 18789 is already in use (must match Control UI Port)." Type="Variable" Display="advanced" Required="false" Mask="false">18789</Config>
+  <Config Name="PATH" Target="PATH" Default="/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/root/.bun/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin" Mode="" Description="System PATH including Homebrew. Do not modify unless you know what you're doing." Type="Variable" Display="advanced" Required="false" Mask="false">/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/root/.bun/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin</Config>
+  <Config Name="Web Search API Key" Target="BRAVE_API_KEY" Default="" Mode="" Description="(Optional) Brave Search API key for web search. Free tier: 2000 queries/month at brave.com/search/api" Type="Variable" Display="advanced" Required="false" Mask="true"/>
 </Container>
