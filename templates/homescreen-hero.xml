@@ -8,9 +8,9 @@
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/196125-support-homescreen-hero-docker-repository/</Support>
   <Project>https://github.com/trentferguson/homescreen-hero</Project>
-  <Overview>A self-hosted web app that keeps your Plex home screen fresh by automatically rotating collections (scheduled or manual) via a modern FastAPI + React dashboard.&#xD;
+  <Overview>Plex companion app with homescreen management, server insights, and useful tools, all in a sleek web dashboard.&#xD;
 &#xD;
-Features:&#xD;
+Features:
 - Web Dashboard: Manage your Plex Server, curate your homescreen(s), and get useful analytics and insights all in one place!&#xD;
 - Automated Collection Rotation: Schedule collections to rotate on your Plex home screen to constantly keep things fresh for all your users.&#xD;
 - First-Time Setup Wizard: Get started in minutes without touching config files&#xD;
