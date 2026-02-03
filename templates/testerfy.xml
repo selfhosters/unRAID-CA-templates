@@ -17,9 +17,6 @@
   <WebUI>http://[IP]:[PORT:5247]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/ozmoetr/testerfy/master/unraid/testerfy.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/ozmoetr/testerfy/master/assets/logo.png</Icon>
-  <ExtraParams/>
-  <PostArgs/>
-  <CPUset/>
   <DonateText>Support Testerfy Development</DonateText>
   <DonateLink>https://github.com/sponsors/ozmoetr</DonateLink>
   <Requires>Spotify Premium, Spotify Developer App, HTTPS access</Requires>
