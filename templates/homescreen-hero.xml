@@ -8,9 +8,9 @@
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/196125-support-homescreen-hero-docker-repository/</Support>
   <Project>https://github.com/trentferguson/homescreen-hero</Project>
-  <Overview>A self-hosted web app that keeps your Plex home screen fresh by automatically rotating collections (scheduled or manual) via a modern FastAPI + React dashboard.&#xD;
+  <Overview>Plex companion app with homescreen management, server insights, and useful tools, all in a sleek web dashboard.&#xD;
 &#xD;
-Features:&#xD;
+Features:
 - Web Dashboard: Manage your Plex Server, curate your homescreen(s), and get useful analytics and insights all in one place!&#xD;
 - Automated Collection Rotation: Schedule collections to rotate on your Plex home screen to constantly keep things fresh for all your users.&#xD;
 - First-Time Setup Wizard: Get started in minutes without touching config files&#xD;
@@ -32,9 +32,9 @@ Setup can either be configured in environment variables below, or skipped and se
   <Config Name="Trakt Client ID" Target="HSH_TRAKT_CLIENT_ID" Default="" Mode="" Description="Trakt API client ID for third-party list integration (optional - get at: https://trakt.tv/oauth/applications)" Type="Variable" Display="always" Required="false" Mask="true"/>
   <Config Name="MDBList API Key" Target="HSH_MDBLIST_API_KEY" Default="" Mode="" Description="MDBList API key for third-party list integration (optional - get at: https://mdblist.com/preferences/)" Type="Variable" Display="always" Required="false" Mask="true"/>
   <Config Name="Tautulli API Key" Target="HSH_TAUTULLI_API_KEY" Default="" Mode="" Description="Tautulli API key for dashboard analytics (optional)" Type="Variable" Display="always" Required="false" Mask="true"/>
-  <Config Name="Tautulli URL" Target="HSH_TAUTULLI_BASE_URL" Default="http://your-tautulli-url:8181" Mode="" Description="URL of your selfhosted Tautulli instance (optional)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Tautulli URL" Target="HSH_TAUTULLI_BASE_URL" Default="" Mode="" Description="URL of your selfhosted Tautulli instance (optional)" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Seerr API Key" Target="HSH_SEERR_API_KEY" Default="" Mode="" Description="Seerr (Jellyseerr/Overseerr) API Key (optional)" Type="Variable" Display="always" Required="false" Mask="true"/>
-  <Config Name="Seerr URL" Target="HSH_SEERR_BASE_URL" Default="http://your-seerr-url:5055" Mode="" Description="URL for your selfhosted Seerr (Jellyseerr/Overseerr) instance (optional)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Seerr URL" Target="HSH_SEERR_BASE_URL" Default="" Mode="" Description="URL for your selfhosted Seerr (Jellyseerr/Overseerr) instance (optional)" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Config File Path" Target="HOMESCREEN_HERO_CONFIG" Default="/data/config.yaml" Mode="" Description="Path to config file (default is recommended)" Type="Variable" Display="advanced" Required="false" Mask="false">/data/config.yaml</Config>
   <Config Name="Database Path" Target="HOMESCREEN_HERO_DB" Default="sqlite:////data/homescreen_hero.sqlite" Mode="" Description="Database path (default is recommended)" Type="Variable" Display="advanced" Required="false" Mask="false">sqlite:////data/homescreen_hero.sqlite</Config>
   <Config Name="Log Directory" Target="HOMESCREEN_HERO_LOG_DIR" Default="/data/logs" Mode="" Description="Directory for application logs (default is recommended)" Type="Variable" Display="advanced" Required="false" Mask="false">/data/logs</Config>
