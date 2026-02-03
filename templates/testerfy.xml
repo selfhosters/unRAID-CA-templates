@@ -26,5 +26,4 @@
   <Config Name="Spotify Client Secret" Target="SPOTIFY_CLIENT_SECRET" Default="" Mode="" Description="From developer.spotify.com" Type="Variable" Display="always" Required="true" Mask="true"/>
   <Config Name="Spotify Redirect URI" Target="SPOTIFY_REDIRECT_URI" Default="" Mode="" Description="Your HTTPS callback URL" Type="Variable" Display="always" Required="true" Mask="false"/>
   <Config Name="Session Secret" Target="SESSION_SECRET" Default="" Mode="" Description="Run: openssl rand -hex 32" Type="Variable" Display="always" Required="true" Mask="true"/>
-  <Config Name="Timezone" Target="TZ" Default="America/New_York" Mode="" Description="Your timezone" Type="Variable" Display="always" Required="false" Mask="false">America/New_York</Config>
 </Container>
