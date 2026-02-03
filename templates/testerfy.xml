@@ -8,7 +8,6 @@
     <TagDescription>Latest stable release</TagDescription>
   </Branch>
   <Network>bridge</Network>
-  <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
   <Support>https://github.com/ozmoetr/testerfy/issues</Support>
