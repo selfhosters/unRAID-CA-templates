@@ -15,7 +15,7 @@
   <Overview>Testerfy - Spotify Playlist Curation Made Easy. Streamline your music discovery workflow! Like a track to save and skip, dislike to remove and skip. Playlist Guard prevents accidental deletions. Requires: Spotify Premium, Spotify Developer App, HTTPS access.</Overview>
   <Category>MediaApp:Music</Category>
   <WebUI>http://[IP]:[PORT:5247]</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/ozmoetr/testerfy/master/unraid/testerfy.xml</TemplateURL>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unraid-templates/master/templates/testerfy.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/ozmoetr/testerfy/master/assets/logo.png</Icon>
   <DonateText>Support Testerfy Development</DonateText>
   <DonateLink>https://github.com/sponsors/ozmoetr</DonateLink>
