@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>testerfy</Name>
+  <Repository>ghcr.io/ozmoetr/testerfy:latest</Repository>
+  <Registry>https://github.com/ozmoetr/testerfy</Registry>
+  <Branch>
+    <Tag>latest</Tag>
+    <TagDescription>Latest stable release</TagDescription>
+  </Branch>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/ozmoetr/testerfy/issues</Support>
+  <Project>https://github.com/ozmoetr/testerfy</Project>
+  <Overview>Testerfy - Spotify Playlist Curation Made Easy. Streamline your music discovery workflow! Like a track to save and skip, dislike to remove and skip. Playlist Guard prevents accidental deletions. Requires: Spotify Premium, Spotify Developer App, HTTPS access.</Overview>
+  <Category>MediaApp:Music</Category>
+  <WebUI>http://[IP]:[PORT:5247]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unraid-templates/master/templates/testerfy.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/ozmoetr/testerfy/master/assets/logo.png</Icon>
+  <DonateText>Support Testerfy Development</DonateText>
+  <DonateLink>https://github.com/sponsors/ozmoetr</DonateLink>
+  <Requires>Spotify Premium, Spotify Developer App, HTTPS access</Requires>
+  <Config Name="Web UI Port" Target="5247" Default="5247" Mode="tcp" Description="Web interface port" Type="Port" Display="always" Required="true" Mask="false">5247</Config>
+  <Config Name="Data Path" Target="/data" Default="/mnt/user/appdata/testerfy/data" Mode="rw" Description="Database storage" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/testerfy/data</Config>
+  <Config Name="Spotify Client ID" Target="SPOTIFY_CLIENT_ID" Default="" Mode="" Description="From developer.spotify.com" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Spotify Client Secret" Target="SPOTIFY_CLIENT_SECRET" Default="" Mode="" Description="From developer.spotify.com" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="Spotify Redirect URI" Target="SPOTIFY_REDIRECT_URI" Default="" Mode="" Description="Your HTTPS callback URL" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Session Secret" Target="SESSION_SECRET" Default="" Mode="" Description="Run: openssl rand -hex 32" Type="Variable" Display="always" Required="true" Mask="true"/>
+</Container>
