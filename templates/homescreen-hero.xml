@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>homescreen-hero</Name>
+  <Repository>trentferguson/homescreen-hero:latest</Repository>
+  <Registry>https://hub.docker.com/r/trentferguson/homescreen-hero</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/196125-support-homescreen-hero-docker-repository/</Support>
+  <Project>https://github.com/trentferguson/homescreen-hero</Project>
+  <Overview>A self-hosted web app that keeps your Plex home screen fresh by automatically rotating collections (scheduled or manual) via a modern FastAPI + React dashboard.&#xD;
+&#xD;
+Features:&#xD;
+- Web Dashboard: Manage your Plex Server, curate your homescreen(s), and get useful analytics and insights all in one place!&#xD;
+- Automated Collection Rotation: Schedule collections to rotate on your Plex home screen to constantly keep things fresh for all your users.&#xD;
+- First-Time Setup Wizard: Get started in minutes without touching config files&#xD;
+- 3rd Party List Integrations: Grow your library with curated lists from your favorite websites! Create/Sync collections from Trakt, Letterboxd, and MDBLists&#xD;
+- Widgets for your favorite apps: Add widgets to your dashboard from popular self-hosted apps (Tautulli, Seerr, more to come!)&#xD;
+- Useful Tools (WIP): Collection of tools, scripts and utilites for managing your Plex server (checkout the Tools section below)&#xD;
+&#xD;
+Setup can either be configured in environment variables below, or skipped and setup in the web UI after first launch.</Overview>
+  <Category>MediaApp:Video</Category>
+  <WebUI>http://[IP]:[PORT:8000]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/homescreen-hero.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/homescreen-hero.png</Icon>
+  <Config Name="WebUI Port" Target="8000" Default="8000" Mode="tcp" Description="Port for accessing the web interface" Type="Port" Display="always" Required="true" Mask="false">8000</Config>
+  <Config Name="Data Directory" Target="/data" Default="/mnt/user/appdata/homescreen-hero" Mode="rw" Description="Directory for config.yaml, database, and logs" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/homescreen-hero</Config>
+  <Config Name="Plex Token" Target="HSH_PLEX_TOKEN" Default="" Mode="" Description="Your Plex authentication token (required - find at: https://support.plex.tv/articles/204059436-finding-an-authentication-token-x-plex-token/)" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="Plex URL" Target="HSH_PLEX_URL" Default="http://your-plex-url:32400" Mode="" Description="Your Plex server URL (e.g., http://192.168.1.100:32400)" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Auth Password" Target="HSH_AUTH_PASSWORD" Default="" Mode="" Description="Password for web UI authentication (optional but recommended)" Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="Auth Secret Key" Target="HSH_AUTH_SECRET_KEY" Default="" Mode="" Description="JWT secret key for authentication (use website or generate with: openssl rand -hex 32)" Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="Trakt Client ID" Target="HSH_TRAKT_CLIENT_ID" Default="" Mode="" Description="Trakt API client ID for third-party list integration (optional - get at: https://trakt.tv/oauth/applications)" Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="MDBList API Key" Target="HSH_MDBLIST_API_KEY" Default="" Mode="" Description="MDBList API key for third-party list integration (optional - get at: https://mdblist.com/preferences/)" Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="Tautulli API Key" Target="HSH_TAUTULLI_API_KEY" Default="" Mode="" Description="Tautulli API key for dashboard analytics (optional)" Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="Tautulli URL" Target="HSH_TAUTULLI_BASE_URL" Default="http://your-tautulli-url:8181" Mode="" Description="URL of your selfhosted Tautulli instance (optional)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Seerr API Key" Target="HSH_SEERR_API_KEY" Default="" Mode="" Description="Seerr (Jellyseerr/Overseerr) API Key (optional)" Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="Seerr URL" Target="HSH_SEERR_BASE_URL" Default="http://your-seerr-url:5055" Mode="" Description="URL for your selfhosted Seerr (Jellyseerr/Overseerr) instance (optional)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Config File Path" Target="HOMESCREEN_HERO_CONFIG" Default="/data/config.yaml" Mode="" Description="Path to config file (default is recommended)" Type="Variable" Display="advanced" Required="false" Mask="false">/data/config.yaml</Config>
+  <Config Name="Database Path" Target="HOMESCREEN_HERO_DB" Default="sqlite:////data/homescreen_hero.sqlite" Mode="" Description="Database path (default is recommended)" Type="Variable" Display="advanced" Required="false" Mask="false">sqlite:////data/homescreen_hero.sqlite</Config>
+  <Config Name="Log Directory" Target="HOMESCREEN_HERO_LOG_DIR" Default="/data/logs" Mode="" Description="Directory for application logs (default is recommended)" Type="Variable" Display="advanced" Required="false" Mask="false">/data/logs</Config>
+</Container>
+
