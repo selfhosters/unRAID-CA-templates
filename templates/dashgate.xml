@@ -16,6 +16,8 @@
   <Requires>For Docker auto-discovery, enable the Docker socket mount below.</Requires>
   <Config Name="WebUI Port" Target="1738" Default="1738" Mode="tcp" Description="DashGate web interface port." Type="Port" Display="always" Required="true" Mask="false"/>
   <Config Name="Config Storage" Target="/config" Default="/mnt/user/appdata/dashgate" Mode="rw" Description="Persistent storage for config.yaml and SQLite database." Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="User ID for file permissions (run 'id' in Unraid terminal to find yours)." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Group ID for file permissions (run 'id' in Unraid terminal to find yours)." Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Port" Target="PORT" Default="1738" Mode="" Description="Internal port (should match WebUI Port)." Type="Variable" Display="advanced" Required="false" Mask="false"/>
   <Config Name="Auth Mode" Target="AUTH_MODE" Default="local|hybrid|authelia" Mode="" Description="Authentication mode" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Session Duration (Days)" Target="SESSION_DURATION_DAYS" Default="7" Mode="" Description="How many days a login session stays valid." Type="Variable" Display="advanced" Required="false" Mask="false"/>
