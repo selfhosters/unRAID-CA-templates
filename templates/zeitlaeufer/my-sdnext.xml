@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>sdnext</Name>
+  <Repository>zeitlaeufer/sdnext:latest</Repository>
+  <Registry/>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview/>
+  <Category/>
+  <WebUI>http://192.168.178.30:7860</WebUI>
+  <TemplateURL/>
+  <Icon>/mnt/user/system/docker/icons/sdnext.png</Icon>
+  <ExtraParams>--gpus all</ExtraParams>
+  <PostArgs/>
+  <CPUset>2,3,4,5,6,7,8,9,10,11</CPUset>
+  <DateInstalled>1770297047</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="data" Target="/mnt/data" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/AI/sdnext/data/</Config>
+  <Config Name="Models" Target="/mnt/models" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/AI/sdnext/models/</Config>
+  <Config Name="Output" Target="/mnt/output" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/AI/output/</Config>
+  <Config Name="Port" Target="7860" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">7860</Config>
+  <TailscaleStateDir/>
+</Container>
