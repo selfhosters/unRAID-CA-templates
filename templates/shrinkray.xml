@@ -32,5 +32,5 @@
   <Config Name="PUID" Target="PUID" Default="99" Type="Variable" Description="User ID for file permissions" Display="advanced" Required="false"/>
   <Config Name="PGID" Target="PGID" Default="100" Type="Variable" Description="Group ID for file permissions" Display="advanced" Required="false"/>
   <Config Name="NVIDIA_VISIBLE_DEVICES" Target="NVIDIA_VISIBLE_DEVICES" Default="all" Type="Variable" Description="Exposes NVIDIA GPUs to the container. Default 'all' works for single-GPU systems. For multi-GPU, set to a specific GPU UUID from the Nvidia-Driver plugin page." Display="advanced" Required="false"/>
-  <Config Name="NVIDIA_DRIVER_CAPABILITIES" Target="NVIDIA_DRIVER_CAPABILITIES" Default="all" Type="Variable" Description="NVIDIA driver features exposed to the container." Display="always-hide" Required="false"/>
+  <Config Name="NVIDIA_DRIVER_CAPABILITIES" Target="NVIDIA_DRIVER_CAPABILITIES" Default="all" Type="Variable" Description="NVIDIA driver features exposed to the container." Display="advanced" Required="false"/>
 </Container>
