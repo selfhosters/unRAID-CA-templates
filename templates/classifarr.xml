@@ -9,12 +9,10 @@
   </Branch>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
-  <Shell>sh</Shell>
   <WebUI>http://[IP]:[PORT:21324]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/cloudbyday90/Classifarr/main/unraid/classifarr.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/cloudbyday90/Classifarr/main/logo/icon.png</Icon>
   <ExtraParams>--restart unless-stopped --add-host host.docker.internal:host-gateway</ExtraParams>
-  <PostArgs></PostArgs>
   <DonateText>Support the development of Classifarr</DonateText>
   <DonateLink>https://github.com/sponsors/cloudbyday90</DonateLink>
   <Requires>Requires TMDB API key (free). Optionally requires Ollama for AI classification.</Requires>
@@ -37,7 +35,8 @@
     4. Notifies via Discord with correction options[br][br]
     [b]Requirements:[/b][br]
     - TMDB API key (free from themoviedb.org)[br]
-    - Ollama instance (optional, for AI classification)[br][br]
+    - Ollama instance (optional, for AI classification)[br]
+    - pgvector auto-selects AVX when supported, otherwise uses generic build[br][br]
     [b]First-Time Setup:[/b][br]
     1. Install and start the container[br]
     2. Access WebUI at http://[IP]:21324[br]
@@ -54,48 +53,6 @@
   <Changes>https://github.com/cloudbyday90/Classifarr/releases</Changes>
   <Beta>false</Beta>
   <Date>2025-12-25</Date>
-  
-  <Networking>
-    <Mode>bridge</Mode>
-    <Publish>
-      <Port>
-        <HostPort>21324</HostPort>
-        <ContainerPort>21324</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-    </Publish>
-  </Networking>
-  
-  <Data>
-    <Volume>
-      <HostDir>/mnt/user/appdata/classifarr</HostDir>
-      <ContainerDir>/app/data</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-  </Data>
-  
-  <Environment>
-    <Variable>
-      <Name>PUID</Name>
-      <Value>99</Value>
-    </Variable>
-    <Variable>
-      <Name>PGID</Name>
-      <Value>100</Value>
-    </Variable>
-    <Variable>
-      <Name>UMASK</Name>
-      <Value>022</Value>
-    </Variable>
-    <Variable>
-      <Name>NODE_ENV</Name>
-      <Value>production</Value>
-    </Variable>
-    <Variable>
-      <Name>TZ</Name>
-      <Value>America/New_York</Value>
-    </Variable>
-  </Environment>
   
   <!-- User-configurable settings -->
   <Config Name="Web UI Port" Target="21324" Default="21324" Mode="tcp" Description="Web interface and API port. Access the UI at http://[IP]:[PORT]" Type="Port" Display="always" Required="true"/>
