@@ -11,7 +11,7 @@
   <Privileged>false</Privileged>
   <Support>https://github.com/gwlsn/shrinkray/issues</Support>
   <Project>https://github.com/gwlsn/shrinkray</Project>
-  <Overview>A simple video transcoding tool for Unraid. Select a folder, pick a preset, and shrink your media library with hardware-accelerated HEVC/AV1 encoding.[br][br][b]GPU Setup (Recommended):[/b][br]For hardware-accelerated encoding, add the following to "Extra Parameters" in Advanced View:[br][br]Intel/AMD: --device=/dev/dri:/dev/dri[br]NVIDIA: --runtime=nvidia --gpus all (requires Nvidia-Driver plugin)[br][br]Without GPU passthrough, Shrinkray will fall back to slower CPU encoding.</Overview>
+  <Overview>A simple video transcoding tool for Unraid. Select a folder, pick a preset, and shrink your media library with hardware-accelerated HEVC/AV1 encoding.[br][br][b]GPU Setup (Recommended):[/b][br]Without GPU passthrough, Shrinkray falls back to slower CPU encoding.[br][br][b]Intel/AMD:[/b] Add --device=/dev/dri to Extra Parameters.[br][br][b]NVIDIA:[/b] Install the Nvidia-Driver plugin (reboot after) and add --runtime=nvidia to Extra Parameters.</Overview>
   <Category>MediaApp:Video</Category>
   <Icon>https://raw.githubusercontent.com/gwlsn/shrinkray/main/web/templates/logo.png</Icon>
   <WebUI>http://[IP]:[PORT:8080]</WebUI>
@@ -25,10 +25,12 @@
 
   <!-- Volumes -->
   <Config Name="Config" Target="/config" Default="/mnt/user/appdata/shrinkray" Mode="rw" Type="Path" Description="Configuration directory" Display="always" Required="true"/>
-  <Config Name="Media" Target="/media" Default="" Mode="rw" Type="Path" Description="Media library to transcode" Display="always-hide" Required="true"/>
+  <Config Name="Media" Target="/media" Default="/mnt/user/" Mode="rw" Type="Path" Description="Media library to transcode" Display="always" Required="true"/>
   <Config Name="Temp" Target="/temp" Default="" Mode="rw" Type="Path" Description="(Optional) Fast storage for temp files during transcode" Display="always" Required="false"/>
 
   <!-- Environment Variables -->
   <Config Name="PUID" Target="PUID" Default="99" Type="Variable" Description="User ID for file permissions" Display="advanced" Required="false"/>
-  <Config Name="PGID" Target="PGID" Default="100" Type="Variable" Description="Group ID for file permissions" Display="advanced" Required="false"/>
+  <Config Name="PGID" Target="PGID" Default="100" Type="Variable" Description="Group ID for file permissions. For GPU encoding, set this to the group that owns /dev/dri/renderD128 on your host." Display="advanced" Required="false"/>
+  <Config Name="NVIDIA_VISIBLE_DEVICES" Target="NVIDIA_VISIBLE_DEVICES" Default="all" Type="Variable" Description="Exposes NVIDIA GPUs to the container. Default 'all' works for single-GPU systems. For multi-GPU, set to a specific GPU UUID from the Nvidia-Driver plugin page." Display="advanced" Required="false"/>
+  <Config Name="NVIDIA_DRIVER_CAPABILITIES" Target="NVIDIA_DRIVER_CAPABILITIES" Default="all" Type="Variable" Description="NVIDIA driver features exposed to the container." Display="always-hide" Required="false"/>
 </Container>
