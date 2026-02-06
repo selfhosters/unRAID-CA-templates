@@ -2,7 +2,7 @@
 <Container version="2">
   <Name>sdnext</Name>
   <Repository>zeitlaeufer/sdnext:latest</Repository>
-  <Registry>https://hub.docker.com/r/zeitlaeufer/sdnext</Registry>
+  <Registry/>
   <Network>bridge</Network>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
@@ -10,28 +10,24 @@
   <Support>https://github.com/vladmandic/sdnext</Support>
   <Project>https://github.com/vladmandic/sdnext</Project>
   <Overview>Stable Diffusion Next WebUI with GPU acceleration support.</Overview>
-  <Category>AI:</Category>
+  <Category>AI</Category>
 
   <WebUI>http://[IP]:[PORT:7860]</WebUI>
 
   <TemplateURL>
-https://raw.githubusercontent.com/zeitlaeufer/unraid-sdnext/main/templates/zeitlaeufer/sdnext.xml
+https://raw.githubusercontent.com/zeitlaeufer/unRAID-CA-templates/master/templates/zeitlaeufer/sdnext.xml
   </TemplateURL>
 
   <Icon>
-https://raw.githubusercontent.com/zeitlaeufer/unraid-sdnext/main/icons/sdnext.png
+https://raw.githubusercontent.com/zeitlaeufer/unRAID-CA-templates/master/templates/zeitlaeufer/icon.png
   </Icon>
 
   <ExtraParams>--gpus all</ExtraParams>
 
-  <!-- APPDATA -->
   <Config Name="App Data" Target="/mnt/data" Default="/mnt/user/appdata/sdnext/data" Mode="rw" Type="Path" Display="always" Required="true" Mask="false"/>
-  
   <Config Name="Models" Target="/mnt/models" Default="/mnt/user/appdata/sdnext/models" Mode="rw" Type="Path" Display="always" Required="true" Mask="false"/>
-  
   <Config Name="Output" Target="/mnt/output" Default="/mnt/user/appdata/sdnext/output" Mode="rw" Type="Path" Display="always" Required="true" Mask="false"/>
 
-  <!-- PORT -->
   <Config Name="WebUI Port" Target="7860" Default="7860" Mode="tcp" Type="Port" Display="always" Required="true" Mask="false">7860</Config>
 
 </Container>
