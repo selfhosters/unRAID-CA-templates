@@ -24,8 +24,8 @@
   <Config Name="WebUI Port" Target="8080" Default="8080" Mode="tcp" Type="Port" Description="Web interface port" Display="always" Required="true"/>
 
   <!-- Volumes -->
-  <Config Name="Config" Target="/config" Default="/mnt/user/appdata/shrinkray" Mode="rw" Type="Path" Description="Configuration directory" Display="always" Required="true"/>
-  <Config Name="Media" Target="/media" Default="" Mode="rw" Type="Path" Description="Media library to transcode" Display="always" Required="true"/>
+  <Config Name="Config" Target="/config" Default="/mnt/user/appdata/shrinkray" Mode="rw" Type="Path" Description="Configuration directory" Display="always-hide" Required="true"/>
+  <Config Name="Media" Target="/media" Default="" Mode="rw" Type="Path" Description="Media library to transcode" Display="always-hide" Required="true"/>
   <Config Name="Temp" Target="/temp" Default="" Mode="rw" Type="Path" Description="(Optional) Fast storage for temp files during transcode" Display="always" Required="false"/>
 
   <!-- Environment Variables -->
