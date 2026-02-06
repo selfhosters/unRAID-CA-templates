@@ -25,7 +25,7 @@
 
   <!-- Volumes -->
   <Config Name="Config" Target="/config" Default="/mnt/user/appdata/shrinkray" Mode="rw" Type="Path" Description="Configuration directory" Display="always" Required="true"/>
-  <Config Name="Media" Target="/media" Default="/mnt/user/" Mode="rw" Type="Path" Description="Media library to transcode" Display="always" Required="true"/>
+  <Config Name="Media" Target="/media" Default="" Mode="rw" Type="Path" Description="Media library to transcode" Display="always" Required="true"/>
   <Config Name="Temp" Target="/temp" Default="" Mode="rw" Type="Path" Description="(Optional) Fast storage for temp files during transcode" Display="always" Required="false"/>
 
   <!-- Environment Variables -->
