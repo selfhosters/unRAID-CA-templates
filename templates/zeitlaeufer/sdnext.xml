@@ -15,7 +15,7 @@
   <Icon>https://raw.githubusercontent.com/vladmandic/sdnext/master/html/logo-transparent.png</Icon>
   <ExtraParams>--gpus all</ExtraParams>
   <Config Name="WebUI Port" Target="7860" Default="7860" Mode="tcp" Type="Port" Display="always-hide" Required="true" Mask="false">7860</Config>
-  <Config Name="App Data" Target="/mnt/data" Default="/mnt/user/appdata/sdnext/data" Mode="rw" Type="Path" Display="always-hide" Required="true" Mask="false">/mnt/user/appdata/sdnext/data</Config>
-  <Config Name="Models" Target="/mnt/models" Default="/mnt/user/appdata/sdnext/models" Mode="rw" Type="Path" Display="always-hide" Required="true" Mask="false">/mnt/user/appdata/sdnext/models</Config>
-  <Config Name="Output" Target="/mnt/output" Default="/mnt/user/appdata/sdnext/output" Mode="rw" Type="Path" Display="always-hide" Required="true" Mask="false">/mnt/user/appdata/sdnext/output</Config>
+  <Config Name="App Data" Target="/sdnext/data" Default="/mnt/user/appdata/sdnext/data" Mode="rw" Type="Path" Display="always-hide" Required="true" Mask="false">/mnt/user/appdata/sdnext/data</Config>
+  <Config Name="Models" Target="/sdnext/models" Default="/mnt/user/appdata/sdnext/models" Mode="rw" Type="Path" Display="always-hide" Required="true" Mask="false">/mnt/user/appdata/sdnext/models</Config>
+  <Config Name="Output" Target="/sdnext/output" Default="/mnt/user/appdata/sdnext/output" Mode="rw" Type="Path" Display="always-hide" Required="true" Mask="false">/mnt/user/appdata/sdnext/output</Config>
 </Container>
