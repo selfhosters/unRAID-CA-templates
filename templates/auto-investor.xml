@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/auto-investor.xml</TemplateURL>
+  <Name>Auto Investor</Name>
+  <Repository>ghcr.io/kenyonj/auto-investor</Repository>
+  <Registry>https://github.com/kenyonj/auto-investor/pkgs/container/auto-investor</Registry>
+  <Branch>
+    <Tag>latest</Tag>
+    <TagDescription>Latest stable release</TagDescription>
+  </Branch>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/kenyonj/auto-investor/issues</Support>
+  <Project>https://github.com/kenyonj/auto-investor</Project>
+  <Overview>AI-driven automated trading bot using Claude AI + Alpaca API.&#xD;
+[br][br]&#xD;
+Trades equities during market hours and crypto 24/7 with configurable watchlists and risk management.&#xD;
+[br][br]&#xD;
+Features:&#xD;
+[br]- Real-time web dashboard with WebSocket updates&#xD;
+[br]- Split equity/crypto P&amp;L tracking&#xD;
+[br]- AI-powered trade decisions via Claude&#xD;
+[br]- Wash sale prevention for equities&#xD;
+[br]- Paper trading by default&#xD;
+[br][br]&#xD;
+Requires Alpaca API credentials and an Anthropic API key.</Overview>
+  <Category>Productivity: Finance: Status:Stable</Category>
+  <WebUI>http://[IP]:[PORT:8000]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/auto-investor.png</Icon>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/auto-investor</HostDir>
+      <ContainerDir>/app/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Name>ALPACA_API_KEY</Name>
+      <Value/>
+    </Variable>
+    <Variable>
+      <Name>ALPACA_SECRET_KEY</Name>
+      <Value/>
+    </Variable>
+    <Variable>
+      <Name>ANTHROPIC_API_KEY</Name>
+      <Value/>
+    </Variable>
+  </Environment>
+  <Config Name="Web UI Port" Target="8000" Default="8000" Mode="tcp" Description="Port for the web dashboard" Type="Port" Display="always" Required="true" Mask="false">8000</Config>
+  <Config Name="Data Path" Target="/app/data" Default="/mnt/user/appdata/auto-investor" Mode="rw" Description="Persistent storage for SQLite database" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/auto-investor</Config>
+  <Config Name="Config File" Target="/app/config.yaml" Default="/mnt/user/appdata/auto-investor/config.yaml" Mode="ro" Description="Trading configuration file (watchlist, risk params, schedule)" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/auto-investor/config.yaml</Config>
+  <Config Name="Alpaca API Key" Target="ALPACA_API_KEY" Default="" Description="Alpaca API key (paper or live)" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="Alpaca Secret Key" Target="ALPACA_SECRET_KEY" Default="" Description="Alpaca API secret key" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="Anthropic API Key" Target="ANTHROPIC_API_KEY" Default="" Description="Anthropic API key for Claude AI" Type="Variable" Display="always" Required="true" Mask="true"/>
+</Container>
