@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>GridMind</Name>
+  <Repository>ghcr.io/smidley/gridmind:latest</Repository>
+  <Registry>https://github.com/smidley/gridmind/pkgs/container/gridmind</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/smidley/gridmind/issues</Support>
+  <Project>https://github.com/smidley/gridmind</Project>
+  <Overview>GridMind is a personal Tesla Powerwall 3 automation and monitoring app. Features a real-time animated power flow dashboard (Solar, Battery, Home, Grid, EV), EV charging integration with smart scheduling (TOU-aware, solar surplus, departure planner), solar generation forecasting, financial tracking with TOU rate optimization, Powerwall health monitoring with battery capacity estimation, Wall Connector status, and optional AI-powered energy insights via OpenAI. Includes automation rules, GridMind Optimize (smart peak export strategy), off-grid mode simulation, and email/webhook notifications. All configuration is done through the web UI -- no environment variables required. Requires a Tesla Developer App with Fleet API credentials.</Overview>
+  <Category>HomeAutomation: Tools: Status:Stable</Category>
+  <WebUI>http://[IP]:[PORT:8000]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/gridmind.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/gridmind.png</Icon>
+  <ExtraParams>--restart unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DonateText/>
+  <DonateLink/>
+  <Requires>Tesla Powerwall 3 with Fleet API credentials from developer.tesla.com</Requires>
+  <Config Name="WebUI Port" Target="8000" Default="8080" Mode="tcp" Description="Port for the GridMind web interface." Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+  <Config Name="Data Directory" Target="/app/data" Default="/mnt/user/appdata/gridmind" Mode="rw" Description="Persistent storage for database, Tesla tokens, and configuration. Back this up to preserve your settings and history." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/gridmind</Config>
+</Container>
