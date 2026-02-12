@@ -13,11 +13,6 @@
   <WebUI>http://[IP]:[PORT:8000]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/gridmind.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/gridmind.png</Icon>
-  <ExtraParams>--restart unless-stopped</ExtraParams>
-  <PostArgs/>
-  <CPUset/>
-  <DonateText/>
-  <DonateLink/>
   <Config Name="WebUI Port" Target="8000" Default="8080" Mode="tcp" Description="Port for the GridMind web interface." Type="Port" Display="always" Required="true" Mask="false">8080</Config>
   <Config Name="Data Directory" Target="/app/data" Default="/mnt/user/appdata/gridmind" Mode="rw" Description="Persistent storage for database, Tesla tokens, and configuration. Back this up to preserve your settings and history." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/gridmind</Config>
 </Container>
