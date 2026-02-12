@@ -4,7 +4,6 @@
   <Repository>ghcr.io/smidley/gridmind:latest</Repository>
   <Registry>https://github.com/smidley/gridmind/pkgs/container/gridmind</Registry>
   <Network>bridge</Network>
-  <MyIP/>
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
   <Support>https://github.com/smidley/gridmind/issues</Support>
@@ -19,7 +18,6 @@
   <CPUset/>
   <DonateText/>
   <DonateLink/>
-  <Requires>Tesla Powerwall 3 with Fleet API credentials from developer.tesla.com</Requires>
   <Config Name="WebUI Port" Target="8000" Default="8080" Mode="tcp" Description="Port for the GridMind web interface." Type="Port" Display="always" Required="true" Mask="false">8080</Config>
   <Config Name="Data Directory" Target="/app/data" Default="/mnt/user/appdata/gridmind" Mode="rw" Description="Persistent storage for database, Tesla tokens, and configuration. Back this up to preserve your settings and history." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/gridmind</Config>
 </Container>
