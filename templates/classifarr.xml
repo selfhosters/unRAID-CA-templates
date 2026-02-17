@@ -12,6 +12,7 @@
   <WebUI>http://[IP]:[PORT:21324]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/cloudbyday90/Classifarr/main/unraid/classifarr.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/cloudbyday90/Classifarr/main/logo/icon.png</Icon>
+  <PostArgs>--add-host=host.docker.internal:host-gateway</PostArgs>
   <DonateText>Support the development of Classifarr</DonateText>
   <DonateLink>https://github.com/sponsors/cloudbyday90</DonateLink>
   <Requires>Requires TMDB API key (free). Optionally requires Ollama for AI classification.</Requires>
