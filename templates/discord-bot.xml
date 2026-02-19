@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>discord-bot</Name>
+  <Repository>thalf/discord-bot:latest</Repository>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+
+  <Project>Discord Bot</Project>
+  <Overview>Discord.js bot container. Set DISCORD_TOKEN and run. Unraid-friendly.</Overview>
+
+  <Support>https://github.com/thalf/Discord-bot</Support>
+  <Icon>https://cdn-icons-png.flaticon.com/512/2111/2111370.png</Icon>
+
+  <!-- Remove these two lines if you don't have a Web UI yet -->
+  <WebUI>http://[IP]:[PORT:3000]/</WebUI>
+
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+
+  <Config Name="Discord Bot Token" Target="DISCORD_TOKEN" Default=""
+          Description="Paste your Discord bot token here"
+          Type="Variable" Display="always" Required="true" Mask="true" />
+
+  <Config Name="Web UI Key (optional)" Target="WEB_KEY" Default=""
+          Description="Optional key to protect the Web UI (recommended)"
+          Type="Variable" Display="advanced" Required="false" Mask="true" />
+
+  <Config Name="Web UI Port" Target="3000" Default="3000" Mode="tcp"
+          Description="Host port for the Web UI"
+          Type="Port" Display="always" Required="true" />
+</Container>
