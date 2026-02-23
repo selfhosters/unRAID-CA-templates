@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>kometizarr-frontend</Name>
+  <Repository>ghcr.io/p2chill/kometizarr-frontend:latest</Repository>
+  <Registry>https://github.com/P2Chill/kometizarr/pkgs/container/kometizarr-frontend</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/P2Chill/kometizarr/discussions</Support>
+  <Project>https://github.com/P2Chill/kometizarr</Project>
+  <Overview>
+    Kometizarr Frontend — Web UI for Kometizarr (rating overlays and collection management for Plex).
+
+    Install kometizarr-backend FIRST, then install this container.
+
+    The frontend proxies API requests to kometizarr-backend. Both containers must be running for the UI to work.
+  </Overview>
+  <Category>MediaApp:Other Tools:</Category>
+  <WebUI>http://[IP]:[PORT:3001]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/P2Chill/kometizarr/main/unraid/kometizarr-frontend.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/P2Chill/kometizarr/main/docs/icon.png</Icon>
+  <ExtraDescription>Requires kometizarr-backend to be installed and running first. The --link flag in Extra Parameters connects this container to the backend.</ExtraDescription>
+  <ExtraParams>--link kometizarr-backend:backend</ExtraParams>
+  <Date>2026-02-23</Date>
+
+  <!-- Ports -->
+  <Config Name="Web UI Port" Target="80" Default="3001" Mode="tcp"
+    Type="Port" Display="always" Required="true" Mask="false"
+    Description="Port for the Kometizarr web interface. Open http://[IP]:3001 after starting."/>
+</Container>

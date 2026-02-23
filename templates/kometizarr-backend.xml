@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>kometizarr-backend</Name>
+  <Repository>ghcr.io/p2chill/kometizarr-backend:latest</Repository>
+  <Registry>https://github.com/P2Chill/kometizarr/pkgs/container/kometizarr-backend</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/P2Chill/kometizarr/discussions</Support>
+  <Project>https://github.com/P2Chill/kometizarr</Project>
+  <Overview>
+    Kometizarr Backend — automatically adds multi-source rating overlays (TMDB, IMDb, Rotten Tomatoes) to your Plex posters.
+
+    Install kometizarr-backend first, then install kometizarr-frontend.
+
+    Requires API keys from: TMDB (free), MDBList (free), and optionally OMDb.
+    Get your Plex token: https://support.plex.tv/articles/204059436
+  </Overview>
+  <Category>MediaApp:Other Tools:</Category>
+  <WebUI>http://[IP]:[PORT:8000]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/P2Chill/kometizarr/main/unraid/kometizarr-backend.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/P2Chill/kometizarr/main/docs/icon.png</Icon>
+  <ExtraDescription>Install kometizarr-backend FIRST, then install kometizarr-frontend. The backend handles all processing and exposes the API on port 8000.</ExtraDescription>
+  <Date>2026-02-23</Date>
+
+  <!-- Ports -->
+  <Config Name="API Port" Target="8000" Default="8000" Mode="tcp"
+    Type="Port" Display="always" Required="true" Mask="false"
+    Description="Backend API port. Also used for the Plex webhook endpoint (/webhook/plex)."/>
+
+  <!-- Volumes -->
+  <Config Name="Poster Backups" Target="/backups" Default="/mnt/user/appdata/kometizarr/backups" Mode="rw"
+    Type="Path" Display="always" Required="true" Mask="false"
+    Description="Persistent storage for original poster backups. Keep this safe — it is required for restoring originals."/>
+
+  <Config Name="App Data" Target="/app/kometizarr/data" Default="/mnt/user/appdata/kometizarr/data" Mode="rw"
+    Type="Path" Display="always" Required="true" Mask="false"
+    Description="Persistent storage for Kometizarr settings (cron schedule, webhook config, etc.)."/>
+
+  <!-- Required environment variables -->
+  <Config Name="Plex URL" Target="PLEX_URL" Default="http://192.168.1.x:32400" Mode=""
+    Type="Variable" Display="always" Required="true" Mask="false"
+    Description="URL to your Plex Media Server. Use the LAN IP, not localhost."/>
+
+  <Config Name="Plex Token" Target="PLEX_TOKEN" Default="" Mode=""
+    Type="Variable" Display="always" Required="true" Mask="true"
+    Description="Your Plex authentication token. See https://support.plex.tv/articles/204059436 for how to find it."/>
+
+  <Config Name="TMDB API Key" Target="TMDB_API_KEY" Default="" Mode=""
+    Type="Variable" Display="always" Required="true" Mask="true"
+    Description="The Movie Database API key (free). Get one at https://www.themoviedb.org/settings/api"/>
+
+  <Config Name="MDBList API Key" Target="MDBLIST_API_KEY" Default="" Mode=""
+    Type="Variable" Display="always" Required="true" Mask="true"
+    Description="MDBList API key for Rotten Tomatoes scores (free). Get one at https://mdblist.com/"/>
+
+  <!-- Optional environment variables -->
+  <Config Name="OMDb API Key" Target="OMDB_API_KEY" Default="" Mode=""
+    Type="Variable" Display="advanced" Required="false" Mask="true"
+    Description="Optional: OMDb API key for IMDb ratings. Get one at https://www.omdbapi.com/"/>
+</Container>
