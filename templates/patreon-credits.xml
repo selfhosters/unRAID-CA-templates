@@ -12,7 +12,6 @@
   <WebUI>http://[IP]:[PORT:8787]</WebUI>
   <Icon>https://raw.githubusercontent.com/mscrnt/patreon-credits/main/icon.png</Icon>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/patreon-credits.xml</TemplateURL>
-  <Description>Patreon Credits Generator creates scrolling end-credits videos for YouTube creators. Connect your Patreon account to automatically fetch supporter names, or paste names manually. Configure fonts, colors, column layouts, header text, and resolution (720p/1080p/4K) through the web UI. Browse and manage generated videos in the built-in gallery. Videos are rendered as MP4 using FFmpeg. Also includes a REST API with Swagger documentation.</Description>
   <DonateText>Buy Me a Coffee</DonateText>
   <DonateLink>https://buymeacoffee.com/mscrnt</DonateLink>
   <Config Name="WebUI Port" Target="8787" Default="8787" Mode="tcp" Description="Port for the web interface." Type="Port" Display="always" Required="true" Mask="false"/>
