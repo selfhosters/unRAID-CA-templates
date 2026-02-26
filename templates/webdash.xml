@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>webdash</Name>
+  <Repository>floppy001/webdash:latest</Repository>
+  <Registry>https://hub.docker.com/r/floppy001/webdash/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/floppy007/webdash/issues</Support>
+  <Project>https://github.com/floppy007/webdash</Project>
+  <Overview>Lightweight, self-hosted server dashboard. Discovers Docker containers automatically, shows live status, and provides a clean start page for all your web apps and services.</Overview>
+  <Category>Tools:Utilities Network:Management</Category>
+  <WebUI>http://[IP]:[PORT:80]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/webdash.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/webdash.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Web UI Port" Target="80" Default="8080" Mode="tcp" Description="Port for the web interface" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+  <Config Name="Docker Mode" Target="WEBDASH_DOCKER_MODE" Default="true" Description="Enable Docker container discovery" Type="Variable" Display="always" Required="true" Mask="false">true</Config>
+  <Config Name="Host IP" Target="WEBDASH_HOST_IP" Default="" Description="Host IP for container URLs. Leave empty for auto-detect." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Hostname" Target="WEBDASH_HOSTNAME" Default="" Description="Display name in dashboard (default: system hostname)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Scan Directory" Target="WEBDASH_SCAN_DIR" Default="" Description="Additional directory to scan for web apps" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="App Data" Target="/var/www/html/.dashboard" Default="/mnt/user/appdata/webdash" Description="Persistent config and data" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/webdash</Config>
+  <Config Name="Docker Socket" Target="/var/run/docker.sock" Default="/var/run/docker.sock" Description="Docker socket for container discovery (read-only)" Type="Path" Display="advanced" Required="true" Mask="false">/var/run/docker.sock</Config>
+</Container>
