@@ -1,8 +1,15 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>mealiev1</Name>
-  <Repository>ghcr.io/mealie-recipes/mealie:nightly</Repository>
-  <Registry>ghcr.io/mealie-recipes/mealie:nightly</Registry>
+  <Repository>mealie-recipes/mealie</Repository>
+  <Registry>ghcr.io/mealie-recipes/mealie</Registry>
+  <Branch>
+    <Tag>latest</Tag>
+    <TagDescription>Latest stable release</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>nightly</Tag>
+    <TagDescription>Latest nightly release</TagDescription>
   <Network>bridge</Network>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
