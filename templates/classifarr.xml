@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Classifarr</Name>
+  <Repository>ghcr.io/cloudbyday90/classifarr:latest</Repository>
+  <Registry>https://github.com/cloudbyday90/Classifarr/pkgs/container/classifarr</Registry>
+  <Branch>
+    <Tag>latest</Tag>
+    <TagDescription>Latest stable release</TagDescription>
+  </Branch>
+  <Network>host</Network>
+  <Privileged>false</Privileged>
+  <WebUI>http://[IP]:[PORT:21324]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/classifarr.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/cloudbyday90/Classifarr/main/logo/icon.png</Icon>
+  <DonateText>Support the development of Classifarr</DonateText>
+  <DonateLink>https://github.com/sponsors/cloudbyday90</DonateLink>
+  <Requires>Requires TMDB API key (free). Optionally requires a separate Ollama instance for AI classification.</Requires>
+  <Overview>
+    AI-powered media classification for the *arr ecosystem.[br][br]
+    Automatically routes Overseerr/Jellyseerr requests to the correct Radarr/Sonarr library using AI decision trees and machine learning.[br][br]
+    [b]Key Features:[/b][br]
+    - Single self-contained container with embedded PostgreSQL[br]
+    - Multi-Radarr and Multi-Sonarr support[br]
+    - AI-powered content classification with Ollama[br]
+    - Confidence-based routing with decision trees[br]
+    - Discord notifications with interactive correction buttons[br]
+    - Media server scanning (Plex/Emby/Jellyfin)[br]
+    - Web-based configuration UI[br]
+    - Automatic learning from corrections[br][br]
+    [b]How It Works:[/b][br]
+    1. Overseerr/Jellyseerr sends webhooks to Classifarr[br]
+    2. Classifarr classifies content (anime, kids, 4K, etc.)[br]
+    3. Routes request to the appropriate Radarr/Sonarr library[br]
+    4. Notifies via Discord with correction options[br][br]
+  </Overview>
+  <Category>AI: MediaApp:Other MediaServer:Other Tools:</Category>
+  <Support>https://github.com/cloudbyday90/Classifarr/issues</Support>
+  <Project>https://github.com/cloudbyday90/Classifarr</Project>
+  <ReadMe>https://github.com/cloudbyday90/Classifarr/blob/main/README.md</ReadMe>
+  <Beta>false</Beta>
+  
+  <!-- User-configurable settings -->
+  <Config Name="Web UI Port" Target="21324" Default="21324" Mode="tcp" Description="Web interface and API port. Access the UI at http://[IP]:[PORT]" Type="Port" Display="always-hide" Required="true">21324</Config>
+  <Config Name="App Data" Target="/app/data" Default="/mnt/user/appdata/classifarr" Mode="rw" Description="Application data directory. Contains PostgreSQL database, configuration, and logs." Type="Path" Display="advanced-hide" Required="true">/mnt/user/appdata/classifarr</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Description="User ID for file permissions. Default 99 is Unraid's 'nobody' user. Change only if you need specific file ownership." Type="Variable" Display="advanced" Required="false" Mask="false">099</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Description="Group ID for file permissions. Default 100 is Unraid's 'users' group. Change only if you need specific file ownership." Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
+  <Config Name="UMASK" Target="UMASK" Default="022" Description="File creation mask. 022 allows owner full access, group/others read. 002 for group write access." Type="Variable" Display="advanced" Required="false" Mask="false">022</Config>
+  <Config Name="Node Environment" Target="NODE_ENV" Default="production" Description="Application environment. Keep as 'production' unless debugging." Type="Variable" Display="advanced-hide" Required="true" Mask="false">production</Config>
+  
+  <!-- MEDIA ACCESS (Required for Re-Classification feature) -->
+  <Config Name="Media Path" Target="/data/media" Default="" Mode="rw" Description="Path to your media folders. Required for re-classification to verify and move files. Use your Plex/Radarr/Sonarr media root folder (e.g., /mnt/user/media)." Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="Movies Path" Target="/data/movies" Default="" Mode="rw" Description="Optional: Separate path for movies if not using unified media folder (e.g., /mnt/user/media/movies)." Type="Path" Display="always" Required=false" Mask="false"/>
+  <Config Name="TV Path" Target="/data/tv" Default="" Mode="rw" Description="Optional: Separate path for TV shows if not using unified media folder (e.g., /mnt/user/media/tv)." Type="Path" Display="always" Required="false" Mask="false"/>
+
+</Container>
