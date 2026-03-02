@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>CHD-Converter</Name>
+  <Repository>hythamjurdi/chd-converter:latest</Repository>
+  <Registry>https://hub.docker.com/r/hythamjurdi/chd-converter</Registry>
+  <Network>bridge</Network>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/hythamjurdi/CHD-Converter/issues</Support>
+  <Project>https://github.com/hythamjurdi/CHD-Converter</Project>
+  <Overview>Bulk ISO to CHD converter with a web UI. Converts PS2, PS1, PSP and other disc-based ISOs to CHD format using chdman. Supports direct ISO files and archives (.7z, .zip, .rar). Features real-time progress, game name lookup by disc ID, bad dump detection, rezip output, conflict resolution, and persistent conversion history. Scan your source folder, pick which files to queue, and start converting — all from the browser.</Overview>
+  <Category>MediaApp:Other Tools:</Category>
+  <WebUI>http://[IP]:[PORT:9292]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/hythamjurdi/CHD-Converter/main/unraid/CHD-Converter.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/hythamjurdi/CHD-Converter/main/icon.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText/>
+  <DonateLink/>
+  <Description>
+    Bulk ISO to CHD converter with a web UI. Converts PS2, PS1, PSP and other disc-based ISOs to CHD format using chdman (MAME tools).
+
+    Features:
+    - Converts ISO, IMG, BIN/CUE, MDF, NRG to CHD
+    - Extracts and converts from .7z, .zip, .rar, .tar.gz archives
+    - Scan source folder and select exactly which files to queue
+    - Real-time progress with Extracting / Running / Rezipping status
+    - Rezip finished CHDs back into .7z archives
+    - PS2 game name lookup by disc ID (SLUS/SCES) — renames output files
+    - Bad dump detection (size check or full MD5)
+    - Ask / Skip / Overwrite conflict resolution with apply-to-all
+    - Persistent conversion history across restarts
+    - Dark and light mode
+    - Custom game database support at /config/ps2_db.json
+  </Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>9292</HostPort>
+        <ContainerPort>9292</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/isos</HostDir>
+      <ContainerDir>/source</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/chd</HostDir>
+      <ContainerDir>/destination</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/chd-converter</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="Web UI Port" Target="9292" Default="9292" Mode="tcp" Description="Port for the web interface" Type="Port" Display="always" Required="true" Mask="false">9292</Config>
+  <Config Name="Source Folder" Target="/source" Default="/mnt/user/isos" Mode="rw" Description="Folder containing your ISO files or archives to convert" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/isos</Config>
+  <Config Name="Destination Folder" Target="/destination" Default="/mnt/user/chd" Mode="rw" Description="Folder where converted CHD files will be saved" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/chd</Config>
+  <Config Name="Config Folder" Target="/config" Default="/mnt/user/appdata/chd-converter" Mode="rw" Description="Stores settings and conversion history between restarts" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/chd-converter</Config>
+</Container>
