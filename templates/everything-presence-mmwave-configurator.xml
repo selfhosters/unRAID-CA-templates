@@ -14,4 +14,5 @@
   <Config Name="WebUI port" Target="42069" Default="42069" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">42069</Config>
   <Config Name="Home Assistant URL" Target="HA_BASE_URL" Default="http://ha-ip:8123" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">http://ha-ip:8123</Config>
   <Config Name="Home Assistant Token" Target="HA_LONG_LIVED_TOKEN" Default="LONG_LIVED_TOKEN" Mode="" Description="Generate Long-lived token at Profile &amp;gt; Security&#13;&#10;" Type="Variable" Display="always" Required="true" Mask="false">LONG_LIVED_TOKEN</Config>
+  <Config Name="Config path" Target="/config/everything-presence-zone-configurator" Default="/mnt/user/appdata/everything-presence-zone-configurator" Mode="rw" Description="" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/everything-presence-zone-configurator</Config>
 </Container>
