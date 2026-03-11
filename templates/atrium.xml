@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>atrium</Name>
+  <Repository>vibralabs/atrium:latest</Repository>
+  <Registry>https://hub.docker.com/r/vibralabs/atrium</Registry>
+  <Branch>
+    <Tag>latest</Tag>
+    <TagDescription>Latest stable release</TagDescription>
+  </Branch>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/Vibra-Labs/Atrium/issues</Support>
+  <Project>https://github.com/Vibra-Labs/Atrium</Project>
+  <Overview>Atrium is a self-hosted client portal for agencies and freelancers. Share project progress, files, and updates with your clients through a beautiful branded portal.[br][br][b]Features:[/b][br]- Project management with status tracking[br]- File sharing with S3/MinIO/R2 or local storage[br]- Branded client portal[br]- Email notifications via Resend[br]- Multi-user with role-based access[br][br][b]Database:[/b] Includes a built-in PostgreSQL database by default. To use an existing external database, set "Use Built-in DB" to false and provide your DATABASE_URL.</Overview>
+  <Category>Productivity: Tools: Network:Web</Category>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/atrium.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/atrium.png</Icon>
+  <Description>Atrium is a self-hosted client portal for agencies and freelancers. Includes a built-in database — no separate container needed.</Description>
+
+  <!-- Required: Auth Secret (only field users MUST fill in) -->
+  <Config Name="Auth Secret" Target="BETTER_AUTH_SECRET" Default="" Description="Random string (min 32 chars) for signing auth tokens. Generate at: https://generate-secret.vercel.app/32" Type="Variable" Display="always" Required="true" Mask="true"/>
+
+  <!-- Port -->
+  <Config Name="Web UI Port" Target="8080" Default="8080" Mode="tcp" Description="Port for the Atrium web interface" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+
+  <!-- Storage -->
+  <Config Name="Uploads" Target="/app/uploads" Default="/mnt/user/appdata/atrium/uploads" Description="Path to store uploaded files" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/atrium/uploads</Config>
+
+  <!-- Database -->
+  <Config Name="Use Built-in DB" Target="USE_BUILT_IN_DB" Default="true" Description="Use the built-in PostgreSQL. Set to false and provide DATABASE_URL to use an external database." Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="Database Storage" Target="/var/lib/postgresql/data" Default="/mnt/user/appdata/atrium/db" Description="Path to store built-in PostgreSQL data (only used when built-in DB is enabled)" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/atrium/db</Config>
+  <Config Name="Database URL" Target="DATABASE_URL" Default="" Description="External PostgreSQL connection string. Only needed if built-in DB is disabled. Example: postgresql://user:pass@host:5432/atrium" Type="Variable" Display="always" Required="false" Mask="false"/>
+
+  <!-- S3/MinIO/R2 Storage -->
+  <Config Name="Storage Provider" Target="STORAGE_PROVIDER" Default="local" Description="Storage backend: local, s3, minio, or r2" Type="Variable" Display="advanced" Required="false" Mask="false">local</Config>
+  <Config Name="S3 Endpoint" Target="S3_ENDPOINT" Default="" Description="S3-compatible endpoint URL (for MinIO, R2, etc.)" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="S3 Region" Target="S3_REGION" Default="us-east-1" Description="S3 region" Type="Variable" Display="advanced" Required="false" Mask="false">us-east-1</Config>
+  <Config Name="S3 Bucket" Target="S3_BUCKET" Default="atrium" Description="S3 bucket name" Type="Variable" Display="advanced" Required="false" Mask="false">atrium</Config>
+  <Config Name="S3 Access Key" Target="S3_ACCESS_KEY" Default="" Description="S3 access key" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="S3 Secret Key" Target="S3_SECRET_KEY" Default="" Description="S3 secret key" Type="Variable" Display="advanced" Required="false" Mask="true"/>
+
+  <!-- Email -->
+  <Config Name="Resend API Key" Target="RESEND_API_KEY" Default="" Description="Resend API key for sending emails (optional)" Type="Variable" Display="advanced" Required="false" Mask="true"/>
+  <Config Name="Email From Address" Target="EMAIL_FROM" Default="noreply@yourdomain.com" Description="From address for outgoing emails" Type="Variable" Display="advanced" Required="false" Mask="false">noreply@yourdomain.com</Config>
+
+  <!-- Advanced -->
+  <Config Name="Max File Size (MB)" Target="MAX_FILE_SIZE_MB" Default="50" Description="Maximum file upload size in megabytes" Type="Variable" Display="advanced" Required="false" Mask="false">50</Config>
+  <Config Name="Skip DB Push" Target="SKIP_DB_PUSH" Default="false" Description="Skip automatic database schema sync on startup (for pooled connections)" Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
+</Container>
