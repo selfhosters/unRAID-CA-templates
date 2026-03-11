@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>taskflow</Name>
+  <Repository>floppy001/taskflow:latest</Repository>
+  <Registry>https://hub.docker.com/r/floppy001/taskflow/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/floppy007/taskflow/issues</Support>
+  <Project>https://github.com/floppy007/taskflow</Project>
+  <Overview>Lightweight, self-hosted project and task management tool. No database required - all data is stored as flat JSON files. Features include Kanban boards with drag and drop, task management, user roles, LDAP/AD integration, dark mode, and multi-language support (DE/EN).</Overview>
+  <Category>Productivity:Tools:</Category>
+  <WebUI>http://[IP]:[PORT:80]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/taskflow.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/floppy007/unraid-templates/master/images/taskflow.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Web UI Port" Target="80" Default="8080" Mode="tcp" Description="Port for the web interface" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+  <Config Name="App Data" Target="/var/www/html/data" Default="/mnt/data/appdata/taskflow" Mode="rw" Description="Persistent config and data" Type="Path" Display="always" Required="true" Mask="false">/mnt/data/appdata/taskflow</Config>
+  <Config Name="Admin Username" Target="TASKFLOW_ADMIN_USER" Default="admin" Description="Username for the admin account (only used on first start)" Type="Variable" Display="always" Required="true" Mask="false">admin</Config>
+  <Config Name="Admin Password" Target="TASKFLOW_ADMIN_PASS" Default="admin" Description="Password for the admin account (only used on first start)" Type="Variable" Display="always" Required="true" Mask="true">admin</Config>
+  <Config Name="Admin Display Name" Target="TASKFLOW_ADMIN_NAME" Default="Administrator" Description="Display name for the admin account (only used on first start)" Type="Variable" Display="always" Required="false" Mask="false">Administrator</Config>
+  <Config Name="Timezone" Target="TZ" Default="Europe/Berlin" Description="Timezone (e.g. Europe/Berlin, America/New_York)" Type="Variable" Display="always" Required="false" Mask="false">Europe/Berlin</Config>
+</Container>
