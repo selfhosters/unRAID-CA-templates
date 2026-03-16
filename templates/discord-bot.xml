@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>thalf-discord-bot</Name>
+  <Repository>thalf/discord-bot:latest</Repository>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+
+  <Category>Tools: Utilities</Category>
+  <Project>Discord Bot</Project>
+  <Overview>Discord.js bot container. Set DISCORD_TOKEN to start. Optional Web UI on port 3000.</Overview>
+
+  <Support>https://github.com/thalf/Discord-bot</Support>
+  <Registry>https://hub.docker.com/r/thalf/discord-bot</Registry>
+  <Icon>https://cdn-icons-png.flaticon.com/512/2111/2111370.png</Icon>
+  <WebUI>http://[IP]:[PORT:3000]/</WebUI>
+
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+
+  <Config Name="Discord Bot Token"
+          Target="DISCORD_TOKEN"
+          Default=""
+          Description="Discord bot token (required)"
+          Type="Variable"
+          Display="always"
+          Required="true"
+          Mask="true" />
+
+  <Config Name="Web UI Port"
+          Target="3000"
+          Default="3000"
+          Mode="tcp"
+          Description="Host port for the Web UI (container port 3000)"
+          Type="Port"
+          Display="always"
+          Required="false" />
+</Container>
