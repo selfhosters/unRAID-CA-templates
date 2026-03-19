@@ -8,17 +8,9 @@
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/196125-support-homescreen-hero-docker-repository/</Support>
   <Project>https://github.com/trentferguson/homescreen-hero</Project>
-  <Overview>Plex companion app with homescreen management, server insights, and useful tools, all in a sleek web dashboard.&#xD;
-&#xD;
-Features:
-- Web Dashboard: Manage your Plex Server, curate your homescreen(s), and get useful analytics and insights all in one place!&#xD;
-- Automated Collection Rotation: Schedule collections to rotate on your Plex home screen to constantly keep things fresh for all your users.&#xD;
-- First-Time Setup Wizard: Get started in minutes without touching config files&#xD;
-- 3rd Party List Integrations: Grow your library with curated lists from your favorite websites! Create/Sync collections from Trakt, Letterboxd, and MDBLists&#xD;
-- Widgets for your favorite apps: Add widgets to your dashboard from popular self-hosted apps (Tautulli, Seerr, more to come!)&#xD;
-- Useful Tools (WIP): Collection of tools, scripts and utilites for managing your Plex server (checkout the Tools section below)&#xD;
-&#xD;
-Setup can either be configured in environment variables below, or skipped and setup in the web UI after first launch.</Overview>
+  <Overview>Plex companion app for users who want more control over how their libraries feel, not just how they're stored. It brings together collection management, automation, personalization, and server tools in one self-hosted app, all so that you get to choose what appears, when it appears, and who sees it.&#xD;
+&#xD;Wanna see it in action first? Check out the demo! https://demo.homescreenhero.com &#xD;
+&#xD;More info on features, installation, and general documenation can be found at https://docs.homescreenhero.com/</Overview>
   <Category>MediaApp:Video</Category>
   <WebUI>http://[IP]:[PORT:8000]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/homescreen-hero.xml</TemplateURL>
@@ -31,6 +23,8 @@ Setup can either be configured in environment variables below, or skipped and se
   <Config Name="Auth Secret Key" Target="HSH_AUTH_SECRET_KEY" Default="" Mode="" Description="JWT secret key for authentication (use website or generate with: openssl rand -hex 32)" Type="Variable" Display="always" Required="false" Mask="true"/>
   <Config Name="Trakt Client ID" Target="HSH_TRAKT_CLIENT_ID" Default="" Mode="" Description="Trakt API client ID for third-party list integration (optional - get at: https://trakt.tv/oauth/applications)" Type="Variable" Display="always" Required="false" Mask="true"/>
   <Config Name="MDBList API Key" Target="HSH_MDBLIST_API_KEY" Default="" Mode="" Description="MDBList API key for third-party list integration (optional - get at: https://mdblist.com/preferences/)" Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="TMDB API Key" Target="HSH_TMDB_API_KEY" Default="" Mode="" Description="TMDB API key for third-party list integration (optional - get at: https://www.themoviedb.org/settings/api)" Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="MAL Client ID" Target="HSH_MAL_CLIENT_ID" Default="" Mode="" Description="MyAnimeList (MAL) Client ID for third-party list integration (optional - get at: https://myanimelist.net/apiconfig)" Type="Variable" Display="always" Required="false" Mask="true"/>
   <Config Name="Tautulli API Key" Target="HSH_TAUTULLI_API_KEY" Default="" Mode="" Description="Tautulli API key for dashboard analytics (optional)" Type="Variable" Display="always" Required="false" Mask="true"/>
   <Config Name="Tautulli URL" Target="HSH_TAUTULLI_BASE_URL" Default="" Mode="" Description="URL of your selfhosted Tautulli instance (optional)" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Seerr API Key" Target="HSH_SEERR_API_KEY" Default="" Mode="" Description="Seerr (Jellyseerr/Overseerr) API Key (optional)" Type="Variable" Display="always" Required="false" Mask="true"/>
