@@ -13,7 +13,7 @@ Supports single-tenant (one website) and multi-tenant (multiple projects) modes.
 [br][br]&#xD;
 More info: https://github.com/GeiserX/Way-CMS</Overview>
   <Category>Productivity: Network:Web</Category>
-  <WebUI>http://[IP]:[PORT:5001]/</WebUI>
+  <WebUI>http://[IP]:[PORT:5000]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/way-cms.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/way-cms.png</Icon>
   <ExtraSearchTerms>cms html editor website static site content management</ExtraSearchTerms>
