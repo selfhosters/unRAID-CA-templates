@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>telegram-archive-viewer</Name>
+  <Repository>drumsergio/telegram-archive-viewer:latest</Repository>
+  <Registry>https://hub.docker.com/r/drumsergio/telegram-archive-viewer</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/GeiserX/Telegram-Archive/issues</Support>
+  <Project>https://github.com/GeiserX/Telegram-Archive</Project>
+  <Overview>Read-only web interface for browsing Telegram messages archived by the Telegram Archive backup container. Search messages, view media, and browse chat statistics with optional authentication.&#xD;
+[br][br]&#xD;
+[b]Requires the Telegram Archive backup container[/b] to have run at least once. Point the backup paths to the same directories used by the backup container (read-only recommended).&#xD;
+[br][br]&#xD;
+More info: https://github.com/GeiserX/Telegram-Archive</Overview>
+  <Category>Backup: Network:Messenger</Category>
+  <WebUI>http://[IP]:[PORT:8000]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/telegram-archive-viewer.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/telegram-archive.png</Icon>
+  <ExtraSearchTerms>telegram backup viewer chat messages archive browse</ExtraSearchTerms>
+  <Requires>Telegram Archive backup container with existing backup data</Requires>
+  <Config Name="Web UI Port" Target="8000" Default="8000" Mode="tcp" Description="Web viewer port" Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="Backups" Target="/data/backups" Default="/mnt/user/appdata/telegram-archive/backups" Mode="ro" Description="Backup data directory (read-only, shared with backup container)" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Database" Target="/data/db" Default="/mnt/user/appdata/telegram-archive/session" Mode="ro" Description="SQLite database directory (read-only, shared with backup container)" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Username" Target="VIEWER_USERNAME" Default="" Mode="" Description="Web viewer login username (empty = no auth)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Password" Target="VIEWER_PASSWORD" Default="" Mode="" Description="Web viewer login password" Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="Timezone" Target="VIEWER_TIMEZONE" Default="Europe/Madrid" Mode="" Description="Timezone for message timestamps" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Show Stats" Target="SHOW_STATS" Default="true" Mode="" Description="Show chat statistics in the viewer" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+</Container>

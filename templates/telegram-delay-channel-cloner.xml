@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>telegram-delay-channel-cloner</Name>
+  <Repository>drumsergio/telegram-delay-channel-cloner:latest</Repository>
+  <Registry>https://hub.docker.com/r/drumsergio/telegram-delay-channel-cloner</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/GeiserX/telegram-delay-channel-cloner/issues</Support>
+  <Project>https://github.com/GeiserX/telegram-delay-channel-cloner</Project>
+  <Overview>Telegram bot that relays messages from a source channel to a target channel after a configurable delay. Handles deleted and edited messages gracefully with SQLite persistence. Perfect for creating delayed mirrors of channels or implementing message scheduling workflows.&#xD;
+[br][br]&#xD;
+[b]Requires a Telegram bot token[/b] and the bot must be admin in both source and target channels.&#xD;
+[br][br]&#xD;
+More info: https://github.com/GeiserX/telegram-delay-channel-cloner</Overview>
+  <Category>Network:Messenger</Category>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/telegram-delay-channel-cloner.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/telegram-delay-channel-cloner.png</Icon>
+  <ExtraSearchTerms>telegram channel clone delay mirror relay bot schedule</ExtraSearchTerms>
+  <Config Name="Data" Target="/data" Default="/mnt/user/appdata/telegram-delay-channel-cloner" Mode="rw" Description="SQLite database for message persistence" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Bot Token" Target="BOT_TOKEN" Default="" Mode="" Description="Telegram bot API token from @BotFather" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="Source Channel" Target="SOURCE_CHANNEL" Default="" Mode="" Description="Source channel ID (numeric, e.g. -1001234567890)" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Target Channel" Target="TARGET_CHANNEL" Default="" Mode="" Description="Target channel ID (numeric, e.g. -1001234567890)" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Delay (seconds)" Target="DELAY" Default="10" Mode="" Description="Delay in seconds before relaying messages" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Copy Mode" Target="COPY_MESSAGE" Default="True" Mode="" Description="True = copy message, False = forward message" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Batch Size" Target="BATCH_SIZE" Default="10" Mode="" Description="Messages to process per cycle" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Retention Days" Target="RETENTION_PERIOD" Default="7" Mode="" Description="Days to keep message records in database" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+</Container>

@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>duplicacy-exporter</Name>
+  <Repository>ghcr.io/geiserx/duplicacy-exporter:latest</Repository>
+  <Registry>https://github.com/GeiserX/duplicacy-exporter/pkgs/container/duplicacy-exporter</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/GeiserX/duplicacy-exporter/issues</Support>
+  <Project>https://github.com/GeiserX/duplicacy-exporter</Project>
+  <Overview>Prometheus exporter for Duplicacy backup metrics. Provides real-time progress, speed, and post-run summaries for Grafana dashboards. Supports Duplicacy CLI (via Docker log tailing or file monitoring) and Duplicacy Web UI (via webhook).&#xD;
+[br][br]&#xD;
+Tiny Alpine image (~30 MB). Three collection modes: log_tail (Docker socket), log_file (file path), or webhook (HTTP push).&#xD;
+[br][br]&#xD;
+More info: https://github.com/GeiserX/duplicacy-exporter</Overview>
+  <Category>Backup: Tools:Monitoring</Category>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/duplicacy-exporter.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/duplicacy-exporter.png</Icon>
+  <ExtraSearchTerms>duplicacy prometheus grafana metrics backup monitoring exporter</ExtraSearchTerms>
+  <Config Name="Metrics Port" Target="9750" Default="9750" Mode="tcp" Description="Prometheus metrics and webhook endpoint port" Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="Docker Socket" Target="/var/run/docker.sock" Default="/var/run/docker.sock" Mode="ro" Description="Docker socket for log tailing mode (read-only)" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="Log Directory" Target="/logs" Default="/mnt/user/appdata/duplicacy/logs" Mode="ro" Description="Log file directory for log_file mode (read-only)" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="Mode" Target="MODE" Default="log_tail" Mode="" Description="Collection mode: log_tail, log_file, or webhook" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Container Name" Target="DOCKER_CONTAINER_NAME" Default="duplicacy-cli-cron" Mode="" Description="Container name to tail logs from (log_tail mode)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Machine Name" Target="MACHINE_NAME" Default="" Mode="" Description="Machine identifier label for metrics" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Replay Hours" Target="REPLAY_HOURS" Default="25" Mode="" Description="Hours of Docker log history to replay on startup" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+</Container>

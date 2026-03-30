@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>pumperly</Name>
+  <Repository>drumsergio/pumperly:latest</Repository>
+  <Registry>https://hub.docker.com/r/drumsergio/pumperly</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/GeiserX/pumperly/issues</Support>
+  <Project>https://github.com/GeiserX/pumperly</Project>
+  <Overview>Open-source fuel price comparison and EV route planner with real-time prices across 36 countries. Combines route planning with fuel stations and EV chargers, featuring detour calculation and "cheapest within N minutes" filtering. Multi-language (16 languages), multi-currency.&#xD;
+[br][br]&#xD;
+[b]Requires PostgreSQL with PostGIS extension.[/b] Optional Valhalla (routing) and Photon (geocoding) containers for full functionality.&#xD;
+[br][br]&#xD;
+[b]Note:[/b] Full setup with Valhalla tiles requires ~300 GB disk and ~24 GB RAM during tile building.&#xD;
+[br][br]&#xD;
+More info: https://github.com/GeiserX/pumperly</Overview>
+  <Category>Tools: Productivity:</Category>
+  <WebUI>http://[IP]:[PORT:3000]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/pumperly.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/pumperly.png</Icon>
+  <ExtraSearchTerms>fuel gas petrol price compare route planner ev charger station</ExtraSearchTerms>
+  <Requires>PostgreSQL with PostGIS extension</Requires>
+  <Config Name="Web UI Port" Target="3000" Default="3000" Mode="tcp" Description="Pumperly web interface port" Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="Database URL" Target="DATABASE_URL" Default="postgresql://pumperly:password@postgres:5432/pumperly" Mode="" Description="PostgreSQL connection string (PostGIS required)" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Default Country" Target="PUMPERLY_DEFAULT_COUNTRY" Default="ES" Mode="" Description="Default country for initial map view (ISO code)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Enabled Countries" Target="PUMPERLY_ENABLED_COUNTRIES" Default="" Mode="" Description="Comma-separated ISO codes to enable (empty = all)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Default Fuel" Target="PUMPERLY_DEFAULT_FUEL" Default="" Mode="" Description="Default fuel type for price display" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Valhalla URL" Target="VALHALLA_URL" Default="" Mode="" Description="Valhalla routing engine URL (optional)" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Photon URL" Target="PHOTON_URL" Default="" Mode="" Description="Photon geocoding service URL (optional)" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="EV Enabled" Target="PUMPERLY_EV_ENABLED" Default="1" Mode="" Description="Enable EV charger data scraping" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+</Container>

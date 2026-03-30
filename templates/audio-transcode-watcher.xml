@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>audio-transcode-watcher</Name>
+  <Repository>drumsergio/audio-transcoder:latest</Repository>
+  <Registry>https://hub.docker.com/r/drumsergio/audio-transcoder</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/GeiserX/audio-transcode-watcher/issues</Support>
+  <Project>https://github.com/GeiserX/audio-transcode-watcher</Project>
+  <Overview>Watches a source folder for audio files and automatically transcodes them to multiple formats (ALAC, AAC, MP3, Opus, FLAC, WAV) in parallel using FFmpeg. Configured via a YAML config file for flexible source/output directory mapping.&#xD;
+[br][br]&#xD;
+Ideal for music library management — keep lossless originals and automatically generate compressed versions for mobile devices or streaming.&#xD;
+[br][br]&#xD;
+More info: https://github.com/GeiserX/audio-transcode-watcher</Overview>
+  <Category>MediaApp:Music</Category>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/audio-transcode-watcher.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/audio-transcode-watcher.png</Icon>
+  <ExtraSearchTerms>audio transcode ffmpeg flac mp3 alac aac music convert</ExtraSearchTerms>
+  <Config Name="Config File" Target="/app/config.yaml" Default="/mnt/user/appdata/audio-transcoder/config.yaml" Mode="ro" Description="YAML configuration file (read-only)" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Source Audio" Target="/music/flac" Default="/mnt/user/Multimedia/Music/FLAC" Mode="ro" Description="Source audio folder (read-only)" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="ALAC Output" Target="/music/alac" Default="/mnt/user/Multimedia/Music/ALAC" Mode="rw" Description="ALAC output directory" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="MP3 Output" Target="/music/mp3" Default="/mnt/user/Multimedia/Music/MP3" Mode="rw" Description="MP3 output directory" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="AAC Output" Target="/music/aac" Default="/mnt/user/Multimedia/Music/AAC" Mode="rw" Description="AAC output directory" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="TZ" Target="TZ" Default="America/New_York" Mode="" Description="Timezone" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+</Container>

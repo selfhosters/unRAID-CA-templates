@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>jellyfin-encoder</Name>
+  <Repository>drumsergio/jellyfin-encoder:latest</Repository>
+  <Registry>https://hub.docker.com/r/drumsergio/jellyfin-encoder</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/GeiserX/jellyfin-encoder/issues</Support>
+  <Project>https://github.com/GeiserX/jellyfin-encoder</Project>
+  <Overview>Monitors a media library and automatically transcodes videos to 720p in HEVC or AV1 codec with hardware acceleration (NVIDIA NVENC or Intel QSV). Creates symlinks for Jellyfin version management with configurable filename suffixes. Includes periodic cleanup of orphaned symlinks.&#xD;
+[br][br]&#xD;
+[b]For NVIDIA GPU:[/b] Pass through the GPU runtime. [b]For Intel QSV:[/b] Map /dev/dri.&#xD;
+[br][br]&#xD;
+More info: https://github.com/GeiserX/jellyfin-encoder</Overview>
+  <Category>MediaApp:Video</Category>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/jellyfin-encoder.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/jellyfin-encoder.png</Icon>
+  <ExtraSearchTerms>jellyfin transcode encode hevc av1 nvidia qsv ffmpeg video</ExtraSearchTerms>
+  <Config Name="Source Media" Target="/app/source" Default="/mnt/user/Multimedia/Movies" Mode="ro" Description="Original video files (read-only)" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Encoded Output" Target="/app/destination" Default="/mnt/user/Multimedia/Movies-720p" Mode="rw" Description="Encoded output directory" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="HW Acceleration" Target="ENABLE_HW_ACCEL" Default="true" Mode="" Description="Enable hardware-accelerated encoding" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="HW Type" Target="HW_ENCODING_TYPE" Default="nvidia" Mode="" Description="Hardware encoder type: nvidia or intel" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Codec" Target="ENCODING_CODEC" Default="hevc" Mode="" Description="Output codec: hevc or av1" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Quality" Target="ENCODING_QUALITY" Default="LOW" Mode="" Description="Encoding quality: LOW, MEDIUM, or HIGH" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Symlink Suffix" Target="SYMLINK_VERSION_SUFFIX" Default="- 720p" Mode="" Description="Filename suffix for Jellyfin version detection" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Cleanup Interval" Target="CLEANUP_INTERVAL_HOURS" Default="6" Mode="" Description="Hours between orphaned symlink cleanup" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+</Container>

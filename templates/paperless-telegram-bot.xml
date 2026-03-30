@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>paperless-telegram-bot</Name>
+  <Repository>drumsergio/paperless-telegram-bot:latest</Repository>
+  <Registry>https://hub.docker.com/r/drumsergio/paperless-telegram-bot</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/GeiserX/paperless-telegram-bot/issues</Support>
+  <Project>https://github.com/GeiserX/paperless-telegram-bot</Project>
+  <Overview>Telegram bot for managing your Paperless-NGX document archive. Upload documents by sending files or photos, search your archive, tag documents, and organize your inbox — all from Telegram without accessing the web UI.&#xD;
+[br][br]&#xD;
+Features health check endpoint, user whitelisting, and auto-detection of inbox tags.&#xD;
+[br][br]&#xD;
+[b]Requires a running Paperless-NGX instance and a Telegram bot token.[/b]&#xD;
+[br][br]&#xD;
+More info: https://github.com/GeiserX/paperless-telegram-bot</Overview>
+  <Category>Productivity: Tools:</Category>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/paperless-telegram-bot.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/paperless-telegram-bot.png</Icon>
+  <ExtraSearchTerms>paperless document telegram bot upload search archive</ExtraSearchTerms>
+  <Requires>Paperless-NGX instance and Telegram bot token from @BotFather</Requires>
+  <Config Name="Health Port" Target="8080" Default="8080" Mode="tcp" Description="Health check endpoint port" Type="Port" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Bot Token" Target="TELEGRAM_BOT_TOKEN" Default="" Mode="" Description="Telegram bot token from @BotFather" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="Paperless URL" Target="PAPERLESS_URL" Default="http://paperless:8000" Mode="" Description="Paperless-NGX instance URL" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Paperless Token" Target="PAPERLESS_TOKEN" Default="" Mode="" Description="Paperless-NGX API authentication token" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="Allowed Users" Target="TELEGRAM_ALLOWED_USERS" Default="" Mode="" Description="Comma-separated Telegram user IDs (empty = open access)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Public URL" Target="PAPERLESS_PUBLIC_URL" Default="" Mode="" Description="User-facing Paperless URL for clickable links (defaults to PAPERLESS_URL)" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Max Results" Target="MAX_SEARCH_RESULTS" Default="10" Mode="" Description="Maximum search results to display" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+</Container>

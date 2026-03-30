@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>duplicacy-cli-cron</Name>
+  <Repository>drumsergio/duplicacy-cli-cron:latest</Repository>
+  <Registry>https://hub.docker.com/r/drumsergio/duplicacy-cli-cron</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/GeiserX/duplicacy-cli-cron/issues</Support>
+  <Project>https://github.com/GeiserX/duplicacy-cli-cron</Project>
+  <Overview>Duplicacy CLI with automated cron-scheduled backups to two independent S3-compatible storage endpoints for cross-site redundancy. Supports daily, weekly, and monthly backup schedules with parallel threading, Shoutrrr notifications, and configurable retention policies.&#xD;
+[br][br]&#xD;
+Alpine-based, multi-arch (amd64/arm64/armv7). Designed to back up Unraid shares to S3 storage (Garage, MinIO, Backblaze, etc.).&#xD;
+[br][br]&#xD;
+More info: https://github.com/GeiserX/duplicacy-cli-cron</Overview>
+  <Category>Backup:</Category>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/duplicacy-cli-cron.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/duplicacy-cli-cron.png</Icon>
+  <ExtraSearchTerms>duplicacy backup s3 cron deduplication redundancy</ExtraSearchTerms>
+  <Config Name="Config" Target="/config" Default="/mnt/user/appdata/duplicacy-cli-cron/config" Mode="rw" Description="Duplicacy configuration and scripts" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Cron Jobs" Target="/etc/periodic" Default="/mnt/user/appdata/duplicacy-cli-cron/periodic" Mode="rw" Description="Cron job scripts (daily, weekly, monthly)" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Data to Back Up" Target="/local_shares" Default="/mnt/user" Mode="ro" Description="Source data directories to back up (read-only)" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Boot USB" Target="/boot_usb" Default="/boot" Mode="ro" Description="Unraid boot USB for backup (read-only, optional)" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="Primary S3 Endpoint" Target="ENDPOINT_1" Default="" Mode="" Description="Primary S3 endpoint URL" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Secondary S3 Endpoint" Target="ENDPOINT_2" Default="" Mode="" Description="Secondary S3 endpoint URL for redundancy" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="S3 Bucket" Target="BUCKET" Default="" Mode="" Description="S3 bucket name" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="S3 Region" Target="REGION" Default="garage" Mode="" Description="S3 region identifier" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Daily Schedule" Target="CRON_DAILY" Default="0 2 * * *" Mode="" Description="Cron expression for daily backups" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Threads" Target="DUPLICACY_THREADS" Default="4" Mode="" Description="Number of parallel upload threads" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Notification URL" Target="SHOUTRRR_URL" Default="" Mode="" Description="Shoutrrr notification URL for backup alerts" Type="Variable" Display="advanced" Required="false" Mask="true"/>
+  <Config Name="TZ" Target="TZ" Default="America/New_York" Mode="" Description="Timezone" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+</Container>

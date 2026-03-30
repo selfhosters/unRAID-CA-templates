@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>way-cms</Name>
+  <Repository>drumsergio/way-cms:latest</Repository>
+  <Registry>https://hub.docker.com/r/drumsergio/way-cms</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/GeiserX/Way-CMS/issues</Support>
+  <Project>https://github.com/GeiserX/Way-CMS</Project>
+  <Overview>Simple self-hosted CMS for editing HTML and CSS files with real-time preview. Edit your static website files through a clean web interface with syntax highlighting, auto-backups, and session management. No database required — works directly with your HTML files.&#xD;
+[br][br]&#xD;
+Supports single-tenant (one website) and multi-tenant (multiple projects) modes. Built with Flask and nginx.&#xD;
+[br][br]&#xD;
+More info: https://github.com/GeiserX/Way-CMS</Overview>
+  <Category>Productivity: Network:Web</Category>
+  <WebUI>http://[IP]:[PORT:5001]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/way-cms.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/way-cms.png</Icon>
+  <ExtraSearchTerms>cms html editor website static site content management</ExtraSearchTerms>
+  <Config Name="CMS Admin Port" Target="5000" Default="5001" Mode="tcp" Description="CMS admin interface port" Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="Website Port" Target="80" Default="8080" Mode="tcp" Description="Public website port (nginx)" Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="Website Files" Target="/var/www/html" Default="/mnt/user/appdata/way-cms/website" Mode="rw" Description="Website HTML/CSS files" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Backups" Target="/.way-cms-backups" Default="/mnt/user/appdata/way-cms/backups" Mode="rw" Description="Auto-backup storage" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="Admin Password" Target="CMS_PASSWORD" Default="" Mode="" Description="Admin password for the CMS interface" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="Admin Username" Target="CMS_USERNAME" Default="admin" Mode="" Description="Admin username" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Website URL" Target="WEBSITE_URL" Default="" Mode="" Description="Live website URL (shown in CMS header)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Website Name" Target="WEBSITE_NAME" Default="" Mode="" Description="Website name (shown in breadcrumb and backups)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Read Only Mode" Target="READ_ONLY_MODE" Default="false" Mode="" Description="Disable editing (view-only mode)" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+</Container>

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>genieacs</Name>
+  <Repository>drumsergio/genieacs:latest</Repository>
+  <Registry>https://hub.docker.com/r/drumsergio/genieacs</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/GeiserX/genieacs-docker/issues</Support>
+  <Project>https://github.com/GeiserX/genieacs-docker</Project>
+  <Overview>Production-ready Docker image for GenieACS, an open-source TR-069 (CWMP) Auto Configuration Server. Manage and provision CPE devices (routers, ONTs, gateways) via TR-069 protocol with a built-in web UI, REST API, and firmware file server. Multi-arch (amd64/arm64), non-root runtime, integrated log rotation.&#xD;
+[br][br]&#xD;
+Includes 4 services managed by supervisord: CWMP (device communication), NBI (REST API), FS (file server), and UI (web dashboard).&#xD;
+[br][br]&#xD;
+[b]Requires MongoDB.[/b] Set GENIEACS_MONGODB_CONNECTION_URL to your MongoDB instance.&#xD;
+[br][br]&#xD;
+More info: https://github.com/GeiserX/genieacs-docker</Overview>
+  <Category>Network:Management</Category>
+  <WebUI>http://[IP]:[PORT:3000]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/genieacs.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/genieacs.png</Icon>
+  <ExtraSearchTerms>tr-069 cwmp acs cpe router provisioning onu ont</ExtraSearchTerms>
+  <Requires>MongoDB container or external MongoDB instance</Requires>
+  <Config Name="Web UI Port" Target="3000" Default="3000" Mode="tcp" Description="GenieACS web dashboard port" Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="CWMP Port" Target="7547" Default="7547" Mode="tcp" Description="TR-069 CWMP port for CPE device communication" Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="NBI Port" Target="7557" Default="7557" Mode="tcp" Description="Northbound Interface (REST API) port" Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="FS Port" Target="7567" Default="7567" Mode="tcp" Description="File server port for firmware and config uploads" Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="Extensions" Target="/opt/genieacs/ext" Default="/mnt/user/appdata/genieacs/ext" Mode="rw" Description="Custom extension scripts directory" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="Logs" Target="/var/log/genieacs" Default="/mnt/user/appdata/genieacs/log" Mode="rw" Description="Log files (rotated daily, 30-day retention)" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="MongoDB URL" Target="GENIEACS_MONGODB_CONNECTION_URL" Default="mongodb://mongo:27017" Mode="" Description="MongoDB connection string (e.g. mongodb://host:27017)" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="JWT Secret" Target="GENIEACS_UI_JWT_SECRET" Default="changeme" Mode="" Description="JWT secret for web UI authentication. Change in production!" Type="Variable" Display="always" Required="true" Mask="true"/>
+</Container>

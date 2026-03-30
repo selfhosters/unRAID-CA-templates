@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>jellyfin-telegram-channel-sync</Name>
+  <Repository>drumsergio/jellytelegram-sync:latest</Repository>
+  <Registry>https://hub.docker.com/r/drumsergio/jellytelegram-sync</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/GeiserX/jellyfin-telegram-channel-sync/issues</Support>
+  <Project>https://github.com/GeiserX/jellyfin-telegram-channel-sync</Project>
+  <Overview>Automatically syncs Jellyfin user access with Telegram channel membership. Users are disabled when leaving the channel and re-enabled when rejoining. Supports multi-ID mapping (multiple Telegram accounts per Jellyfin user) with SQLite persistence and safety thresholds.&#xD;
+[br][br]&#xD;
+[b]Requires:[/b] Telegram API credentials from my.telegram.org and a Jellyfin API key.&#xD;
+[br][br]&#xD;
+More info: https://github.com/GeiserX/jellyfin-telegram-channel-sync</Overview>
+  <Category>MediaApp:Video Network:Management</Category>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/jellyfin-telegram-channel-sync.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/jellyfin-telegram-channel-sync.png</Icon>
+  <ExtraSearchTerms>jellyfin telegram sync users access control membership</ExtraSearchTerms>
+  <Requires>Telegram API credentials and Jellyfin API key</Requires>
+  <Config Name="Data" Target="/app/data" Default="/mnt/user/appdata/jellyfin-telegram-sync" Mode="rw" Description="SQLite database and Telegram session files" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Telegram API ID" Target="TELEGRAM_API_ID" Default="" Mode="" Description="Telegram API ID from my.telegram.org" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Telegram API Hash" Target="TELEGRAM_API_HASH" Default="" Mode="" Description="Telegram API hash from my.telegram.org" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="Telegram Channel" Target="TELEGRAM_CHANNEL" Default="" Mode="" Description="Telegram channel ID (numeric, e.g. -1001234567890)" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Jellyfin URL" Target="JELLYFIN_URL" Default="http://jellyfin:8096" Mode="" Description="Jellyfin server URL" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Jellyfin API Key" Target="JELLYFIN_API_KEY" Default="" Mode="" Description="Jellyfin API key" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="Safety Threshold" Target="THRESHOLD_ENTRIES" Default="5" Mode="" Description="Minimum channel members to prevent accidental mass-disabling" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Sync Interval" Target="SCRIPT_INTERVAL" Default="3600" Mode="" Description="Sync interval in seconds (default: 1 hour)" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+</Container>

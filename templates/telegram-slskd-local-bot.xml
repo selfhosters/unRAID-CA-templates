@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>telegram-slskd-local-bot</Name>
+  <Repository>drumsergio/telegram-slskd-local-bot:latest</Repository>
+  <Registry>https://hub.docker.com/r/drumsergio/telegram-slskd-local-bot</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/GeiserX/telegram-slskd-local-bot/issues</Support>
+  <Project>https://github.com/GeiserX/telegram-slskd-local-bot</Project>
+  <Overview>Telegram bot for automated music discovery and downloading. Resolves track metadata from Spotify, searches Soulseek (via slskd) for FLAC files, and places them in your music library with proper naming. Includes a scoring algorithm for quality selection.&#xD;
+[br][br]&#xD;
+[b]Requires:[/b] slskd instance, Spotify API credentials, and a Telegram bot token.&#xD;
+[br][br]&#xD;
+More info: https://github.com/GeiserX/telegram-slskd-local-bot</Overview>
+  <Category>MediaApp:Music</Category>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/telegram-slskd-local-bot.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/telegram-slskd-local-bot.png</Icon>
+  <ExtraSearchTerms>soulseek slskd music download telegram spotify flac bot</ExtraSearchTerms>
+  <Requires>slskd instance, Spotify Developer API credentials, Telegram bot token</Requires>
+  <Config Name="Downloads" Target="/downloads" Default="/mnt/user/Multimedia/Music/Downloads" Mode="ro" Description="slskd completed downloads directory (read-only)" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Music Output" Target="/music" Default="/mnt/user/Multimedia/Music/FLAC" Mode="rw" Description="Output directory for renamed FLAC files" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Bot Token" Target="TELEGRAM_BOT_TOKEN" Default="" Mode="" Description="Telegram bot token from @BotFather" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="Spotify Client ID" Target="SPOTIFY_CLIENT_ID" Default="" Mode="" Description="Spotify Developer API client ID" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Spotify Client Secret" Target="SPOTIFY_CLIENT_SECRET" Default="" Mode="" Description="Spotify Developer API client secret" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="slskd Host" Target="SLSKD_HOST" Default="http://slskd:5030" Mode="" Description="URL of your slskd instance" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="slskd API Key" Target="SLSKD_API_KEY" Default="" Mode="" Description="slskd API key" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="Allowed Users" Target="TELEGRAM_ALLOWED_USERS" Default="" Mode="" Description="Comma-separated Telegram user IDs (empty = open)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Auto Mode" Target="AUTO_MODE" Default="false" Mode="" Description="Automatically download best match without confirmation" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Max Results" Target="MAX_RESULTS" Default="5" Mode="" Description="Number of search results to display" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+</Container>

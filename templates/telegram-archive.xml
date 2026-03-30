@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>telegram-archive</Name>
+  <Repository>drumsergio/telegram-archive:latest</Repository>
+  <Registry>https://hub.docker.com/r/drumsergio/telegram-archive</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/GeiserX/Telegram-Archive/issues</Support>
+  <Project>https://github.com/GeiserX/Telegram-Archive</Project>
+  <Overview>Automated Telegram backup service that periodically archives messages and media from your chats, groups, and channels. Uses Telethon for scheduled exports with optional real-time message listening. Supports SQLite or PostgreSQL, media deduplication, and configurable retention.&#xD;
+[br][br]&#xD;
+This is the backup container. For browsing archived messages, install the [b]Telegram Archive Viewer[/b] container separately.&#xD;
+[br][br]&#xD;
+[b]Requires Telegram API credentials[/b] from https://my.telegram.org&#xD;
+[br][br]&#xD;
+More info: https://github.com/GeiserX/Telegram-Archive</Overview>
+  <Category>Backup: Network:Messenger</Category>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/telegram-archive.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/telegram-archive.png</Icon>
+  <ExtraSearchTerms>telegram backup chat messages media archive export</ExtraSearchTerms>
+  <Requires>Telegram API credentials from my.telegram.org</Requires>
+  <Config Name="Session Data" Target="/data/session" Default="/mnt/user/appdata/telegram-archive/session" Mode="rw" Description="Telethon session storage" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Backups" Target="/data/backups" Default="/mnt/user/appdata/telegram-archive/backups" Mode="rw" Description="Backup data and media files" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="API ID" Target="TELEGRAM_API_ID" Default="" Mode="" Description="Telegram API ID from my.telegram.org" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="API Hash" Target="TELEGRAM_API_HASH" Default="" Mode="" Description="Telegram API hash from my.telegram.org" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="Phone Number" Target="TELEGRAM_PHONE" Default="" Mode="" Description="Phone number with country code (e.g. +1234567890)" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Schedule" Target="SCHEDULE" Default="0 */6 * * *" Mode="" Description="Cron schedule for backups (default: every 6 hours)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Download Media" Target="DOWNLOAD_MEDIA" Default="true" Mode="" Description="Download media files during backup" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Max Media Size (MB)" Target="MAX_MEDIA_SIZE_MB" Default="100" Mode="" Description="Maximum media file size to download in MB" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Enable Listener" Target="ENABLE_LISTENER" Default="false" Mode="" Description="Enable real-time message listening between scheduled backups" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Chat IDs" Target="CHAT_IDS" Default="" Mode="" Description="Comma-separated chat IDs to back up (empty = all chats)" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Chat Types" Target="CHAT_TYPES" Default="private,groups,channels" Mode="" Description="Types of chats to back up" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+</Container>

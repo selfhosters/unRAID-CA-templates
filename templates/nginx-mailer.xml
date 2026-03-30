@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>nginx-mailer</Name>
+  <Repository>drumsergio/nginx-mailer:latest</Repository>
+  <Registry>https://hub.docker.com/r/drumsergio/nginx-mailer</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/GeiserX/nginx-mailer/issues</Support>
+  <Project>https://github.com/GeiserX/nginx-mailer</Project>
+  <Overview>Lightweight nginx-based container (~35MB) for serving static websites with an integrated contact form that sends emails via SMTP. Single container runs both nginx and a Go API backend via supervisord. Includes optional Cloudflare Turnstile CAPTCHA integration.&#xD;
+[br][br]&#xD;
+Multi-arch (amd64/arm64). Perfect for personal or portfolio sites that need a simple contact form without a full backend.&#xD;
+[br][br]&#xD;
+More info: https://github.com/GeiserX/nginx-mailer</Overview>
+  <Category>Network:Web Tools:</Category>
+  <WebUI>http://[IP]:[PORT:80]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/nginx-mailer.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/nginx-mailer.png</Icon>
+  <ExtraSearchTerms>nginx static website contact form email smtp</ExtraSearchTerms>
+  <Config Name="HTTP Port" Target="80" Default="8080" Mode="tcp" Description="HTTP port for the website" Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="Website Files" Target="/usr/share/nginx/html" Default="/mnt/user/appdata/nginx-mailer/html" Mode="ro" Description="Static website files (read-only)" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="SMTP Host" Target="SMTP_HOST" Default="" Mode="" Description="SMTP server hostname" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="SMTP Port" Target="SMTP_PORT" Default="465" Mode="" Description="SMTP port (465 for SSL, 587 for STARTTLS)" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="SMTP User" Target="SMTP_USER" Default="" Mode="" Description="SMTP username" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="SMTP Password" Target="SMTP_PASSWORD" Default="" Mode="" Description="SMTP password" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="From Email" Target="SMTP_FROM" Default="" Mode="" Description="Sender email address" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Contact Email" Target="CONTACT_EMAIL" Default="" Mode="" Description="Recipient email for contact form submissions" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Turnstile Secret" Target="CLOUDFLARE_TURNSTILE_SECRET_KEY" Default="" Mode="" Description="Cloudflare Turnstile CAPTCHA secret key (optional)" Type="Variable" Display="advanced" Required="false" Mask="true"/>
+</Container>

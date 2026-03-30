@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>media-triage</Name>
+  <Repository>drumsergio/media-triage:latest</Repository>
+  <Registry>https://hub.docker.com/r/drumsergio/media-triage</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/GeiserX/media-triage/issues</Support>
+  <Project>https://github.com/GeiserX/media-triage</Project>
+  <Overview>Automated media pipeline that monitors a Telegram group for torrent tracker posts, parses release metadata using regex, and presents everything in a review-ready web dashboard. Integrates with Prowlarr (indexer aggregator), qBittorrent, and TMDB for metadata enrichment.&#xD;
+[br][br]&#xD;
+Built on FastAPI with PostgreSQL and Telethon.&#xD;
+[br][br]&#xD;
+[b]Requires:[/b] PostgreSQL, Telegram API credentials, TMDB API key.&#xD;
+[br][br]&#xD;
+More info: https://github.com/GeiserX/media-triage</Overview>
+  <Category>MediaApp:Video Downloaders:</Category>
+  <WebUI>http://[IP]:[PORT:4850]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/media-triage.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/media-triage.png</Icon>
+  <ExtraSearchTerms>media torrent telegram prowlarr qbittorrent tmdb dashboard</ExtraSearchTerms>
+  <Requires>PostgreSQL, Telegram API credentials, TMDB API key</Requires>
+  <Config Name="Web UI Port" Target="4850" Default="4850" Mode="tcp" Description="Web dashboard port" Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="Sessions" Target="/data/sessions" Default="/mnt/user/appdata/media-triage/sessions" Mode="rw" Description="Telethon session files" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Telegram API ID" Target="TELEGRAM_API_ID" Default="" Mode="" Description="Telegram API ID from my.telegram.org" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Telegram API Hash" Target="TELEGRAM_API_HASH" Default="" Mode="" Description="Telegram API hash" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="Telegram Phone" Target="TELEGRAM_PHONE" Default="" Mode="" Description="Phone number with country code" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Telegram Group ID" Target="TELEGRAM_GROUP_ID" Default="" Mode="" Description="Telegram group ID to monitor" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Bot Token" Target="TELEGRAM_BOT_TOKEN" Default="" Mode="" Description="Telegram bot token" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="Owner ID" Target="TELEGRAM_OWNER_ID" Default="" Mode="" Description="Your Telegram user ID for admin commands" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="TMDB API Key" Target="TMDB_API_KEY" Default="" Mode="" Description="TMDB API key for metadata" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="PostgreSQL Host" Target="POSTGRES_HOST" Default="media-triage-postgres" Mode="" Description="PostgreSQL hostname" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="PostgreSQL Password" Target="POSTGRES_PASSWORD" Default="" Mode="" Description="PostgreSQL password" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="Prowlarr URL" Target="PROWLARR_URL" Default="" Mode="" Description="Prowlarr instance URL (optional)" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Prowlarr API Key" Target="PROWLARR_API_KEY" Default="" Mode="" Description="Prowlarr API key" Type="Variable" Display="advanced" Required="false" Mask="true"/>
+  <Config Name="qBittorrent URL" Target="QBITTORRENT_URL" Default="" Mode="" Description="qBittorrent instance URL (optional)" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+</Container>
