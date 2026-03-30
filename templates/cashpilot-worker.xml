@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>cashpilot-worker</Name>
+  <Repository>drumsergio/cashpilot-worker:latest</Repository>
+  <Registry>https://hub.docker.com/r/drumsergio/cashpilot-worker</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/GeiserX/CashPilot/issues</Support>
+  <Project>https://github.com/GeiserX/CashPilot</Project>
+  <Overview>(CashPilot UI required separately) CashPilot Worker is the Docker agent that deploys and monitors passive income containers on this server. It requires Docker socket access and reports container health back to the CashPilot UI via heartbeats every 60 seconds.&#xD;
+[br][br]&#xD;
+Deploy one worker per server. Each worker manages local containers and reports status to the central CashPilot UI dashboard.&#xD;
+[br][br]&#xD;
+[b]Required:[/b] Set CASHPILOT_UI_URL to point to your CashPilot UI instance (e.g. http://192.168.1.100:8080) and use the same CASHPILOT_API_KEY as the UI.&#xD;
+[br][br]&#xD;
+The worker exposes a minimal status page on port 8081 showing connection status and local container list.&#xD;
+[br][br]&#xD;
+More info: https://github.com/GeiserX/CashPilot</Overview>
+  <Category>Crypto: Tools: Productivity:</Category>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/cashpilot-worker.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/cashpilot.png</Icon>
+  <ExtraSearchTerms>passive income bandwidth sharing earnings money</ExtraSearchTerms>
+  <Requires>CashPilot UI container (cashpilot) must be running and accessible</Requires>
+  <Config Name="Worker Port" Target="8081" Default="8081" Mode="tcp" Description="Port for the worker mini-UI and API" Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="Docker Socket" Target="/var/run/docker.sock" Default="/var/run/docker.sock" Mode="rw" Description="Docker socket for container management. Required." Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Data" Target="/data" Default="/mnt/user/appdata/cashpilot-worker" Mode="rw" Description="Worker configuration and state persistence" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="TZ" Target="TZ" Default="America/New_York" Mode="" Description="Timezone (e.g. America/New_York, Europe/London)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="UI URL" Target="CASHPILOT_UI_URL" Default="http://192.168.1.100:8080" Mode="" Description="URL of the CashPilot UI instance (e.g. http://192.168.1.100:8080). Worker sends heartbeats here." Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="API Key" Target="CASHPILOT_API_KEY" Default="" Mode="" Description="Shared API key for UI authentication. Must match the key set on the CashPilot UI." Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="Worker Name" Target="CASHPILOT_WORKER_NAME" Default="unraid" Mode="" Description="Human-readable name for this worker shown in the UI dashboard. Defaults to hostname if empty." Type="Variable" Display="always" Required="false" Mask="false"/>
+</Container>
