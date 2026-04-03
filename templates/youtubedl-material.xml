@@ -1,18 +1,14 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>youtube-dl material</Name>
-  <Repository>voc0der/youtubedl-material:nightly</Repository>
-  <Registry>https://hub.docker.com/r/voc0der/youtubedl-material/</Registry>
+  <Repository>voc0der/ytdl-material:nightly</Repository>
+  <Registry>https://hub.docker.com/r/voc0der/ytdl-material</Registry>
   <Category>Downloaders: MediaApp:Video MediaApp:Music</Category>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
-  <Project>https://github.com/voc0der/YoutubeDL-Material</Project>
-  <Overview>YoutubeDL-Material is a self-hosted youtube-dl Server with a modern Material-based GUI and the capability to apply advanced configurations, like setting your own download paths based on rules.&#xD;
-&#xD;
-It is designed to be more customizable than the alternatives out there.&#xD;
-&#xD;
-It will also keep a record of already downloaded items. Enjoy! :)</Overview>
+  <Project>https://github.com/voc0der/ytdl-material</Project>
+  <Overview>ytdl-material is a full suite UI for yt-dlp. It's coded using Angular 21 for the frontend, and Node.js on the backend. See a list of features here.</Overview>
   <WebUI>http://[IP]:[PORT:17442]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/youtubedl-material.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/youtubedl-material.png</Icon>
