@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Groly</Name>
+  <Repository>ghcr.io/peterthepeter/groly:latest</Repository>
+  <Registry>https://ghcr.io/peterthepeter/groly</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/peterthepeter/groly/issues</Support>
+  <Project>https://github.com/peterthepeter/groly</Project>
+  <Overview>Groly – Mobile-first grocery list app for self-hosting. Designed for families and small teams. The entire UI is built from the bottom up for mobile — bottom navigation, large tap targets, swipe gestures. Install it as a PWA on iOS and Android for the full experience.&#xA;&#xA;Features: Shared lists with real-time sync · Offline-first · Barcode scanner · Push notifications · Recipes (import by URL) · Category sorting · Location-based list opening&#xA;&#xA;⚠️ HTTPS is required. Without HTTPS the following features will NOT work: offline mode, PWA installation, push notifications, barcode scanner, and location-based opening. Use a reverse proxy (Nginx Proxy Manager, Caddy, Traefik) or Tailscale to get HTTPS — even on a local network.&#xA;&#xA;Push notifications (optional): The VAPID keys (VAPID_PUBLIC_KEY, VAPID_PRIVATE_KEY, PUBLIC_VAPID_PUBLIC_KEY, VAPID_SUBJECT) are only needed if you want push notifications on iOS and Android. You can leave them empty to start — push can be enabled later in Settings.&#xA;&#xA;Documentation &amp; setup guide: https://github.com/peterthepeter/groly</Overview>
+  <Category>Productivity:</Category>
+  <WebUI>http://[IP]:[PORT:3000]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/peterthepeter/groly/main/unraid/groly.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/peterthepeter/groly/main/static/icons/icon-512.png</Icon>
+  <ExtraParams></ExtraParams>
+  <PostArgs></PostArgs>
+  <DonateText></DonateText>
+  <DonateLink></DonateLink>
+
+  <Config Name="WebUI Port" Target="3000" Default="3000" Mode="tcp"
+    Description="Port for the Groly web interface."
+    Type="Port" Display="always" Required="true" Mask="false">3000</Config>
+
+  <Config Name="Data Path" Target="/app/data" Default="/mnt/user/appdata/groly" Mode="rw"
+    Description="Directory where the SQLite database is stored. The container runs as UID/GID 1000 — make sure this path is owned by user 1000 (run: chown -R 1000:1000 /mnt/user/appdata/groly)."
+    Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/groly</Config>
+
+  <Config Name="ORIGIN" Target="ORIGIN" Default="" Mode=""
+    Description="Full HTTPS URL of your Groly instance, e.g. https://groly.example.com or your Tailscale hostname. Required — HTTPS is mandatory for offline mode, push notifications, and the barcode scanner."
+    Type="Variable" Display="always" Required="true" Mask="false"></Config>
+
+  <Config Name="ADMIN_USERNAME" Target="ADMIN_USERNAME" Default="admin" Mode=""
+    Description="Username for the initial admin account. Only used on first start."
+    Type="Variable" Display="always" Required="true" Mask="false">admin</Config>
+
+  <Config Name="ADMIN_PASSWORD" Target="ADMIN_PASSWORD" Default="" Mode=""
+    Description="Password for the initial admin account. Only used on first start. You will be prompted to change it on first login."
+    Type="Variable" Display="always" Required="true" Mask="true"></Config>
+
+  <Config Name="ADDRESS_HEADER" Target="ADDRESS_HEADER" Default="X-Forwarded-For" Mode=""
+    Description="Set to X-Forwarded-For when running behind a reverse proxy (Nginx Proxy Manager, Caddy, Traefik). Required for login rate limiting to work correctly per client IP."
+    Type="Variable" Display="always" Required="false" Mask="false">X-Forwarded-For</Config>
+
+  <Config Name="VAPID_PUBLIC_KEY" Target="VAPID_PUBLIC_KEY" Default="" Mode=""
+    Description="VAPID public key for push notifications (optional). Generate a key pair once with: node -e &quot;const wp=require('web-push'); const k=wp.generateVAPIDKeys(); console.log(JSON.stringify(k,null,2))&quot;"
+    Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+
+  <Config Name="VAPID_PRIVATE_KEY" Target="VAPID_PRIVATE_KEY" Default="" Mode=""
+    Description="VAPID private key for push notifications (optional). Must match VAPID_PUBLIC_KEY."
+    Type="Variable" Display="advanced" Required="false" Mask="true"></Config>
+
+  <Config Name="PUBLIC_VAPID_PUBLIC_KEY" Target="PUBLIC_VAPID_PUBLIC_KEY" Default="" Mode=""
+    Description="Must be the same value as VAPID_PUBLIC_KEY. Required for push notifications."
+    Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+
+  <Config Name="VAPID_SUBJECT" Target="VAPID_SUBJECT" Default="" Mode=""
+    Description="A https:// URL or mailto: address for VAPID identification (e.g. https://your-domain.com). Required for push notifications. Must not be a .local domain."
+    Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+</Container>
