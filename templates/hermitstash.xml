@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>HermitStash</Name>
-  <Repository>ghcr.io/dotcoocoo/hermitstash:latest</Repository>
+  <Repository>ghcr.io/dotcoocoo/hermitstash:1</Repository>
   <Registry>https://github.com/dotCooCoo/hermitstash/pkgs/container/hermitstash</Registry>
   <Branch>
-    <Tag>latest</Tag>
-    <TagDescription>Latest stable release</TagDescription>
+    <Tag>1</Tag>
+    <TagDescription>Rolling latest in the 1.x major</TagDescription>
   </Branch>
   <Network>bridge</Network>
-  <Shell>bash</Shell>
+  <Shell>sh</Shell>
   <Privileged>false</Privileged>
   <Support>https://github.com/dotCooCoo/hermitstash/issues</Support>
   <Project>https://github.com/dotCooCoo/hermitstash</Project>
@@ -21,13 +21,17 @@ After starting, visit http://[IP]:[PORT:3000] to complete the setup wizard.</Ove
   <WebUI>http://[IP]:[PORT:3000]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/hermitstash.xml</TemplateURL>
   <Icon>https://assets.hermitstash.com/img/icons/icon-512.png</Icon>
-  <ExtraParams>--shm-size=256m</ExtraParams>
+  <ExtraParams>--shm-size=256m --init --security-opt=no-new-privileges:true --cap-drop=ALL --cap-add=CHOWN --cap-add=SETUID --cap-add=SETGID --cap-add=DAC_OVERRIDE</ExtraParams>
   <DonateText>Support on Ko-fi</DonateText>
   <DonateLink>https://ko-fi.com/dotcoocoo</DonateLink>
   <Requires>Requires at least 256MB shared memory (--shm-size=256m) for the in-memory encrypted database.</Requires>
   <Config Name="Web UI Port" Target="3000" Default="3000" Mode="tcp" Description="Web interface port" Type="Port" Display="always" Required="true" Mask="false">3000</Config>
   <Config Name="Data" Target="/app/data" Default="/mnt/user/appdata/hermitstash/data" Mode="rw" Description="Encrypted database, vault keys, TLS certs. BACK THIS UP." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/hermitstash/data</Config>
   <Config Name="Uploads" Target="/app/uploads" Default="/mnt/user/appdata/hermitstash/uploads" Mode="rw" Description="Uploaded files (local storage only, not needed with S3)" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/hermitstash/uploads</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="User ID for file permissions (Unraid default 99 = nobody)." Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Group ID for file permissions (Unraid default 100 = users)." Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
+  <Config Name="UMASK" Target="UMASK" Default="022" Mode="" Description="File permission mask. 022 = 755 dirs / 644 files. Use 000 to match Unraid's nobody:users sharing model." Type="Variable" Display="advanced" Required="false" Mask="false">022</Config>
+  <Config Name="Timezone" Target="TZ" Default="" Mode="" Description="Container timezone, e.g. America/New_York" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Site Origin" Target="RP_ORIGIN" Default="" Mode="" Description="Full URL of your site (e.g. https://files.example.com). Required for passkeys and HSTS." Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Trust Proxy" Target="TRUST_PROXY" Default="true" Mode="" Description="Set to true if behind a reverse proxy (nginx, Cloudflare, SWAG)" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
   <Config Name="Storage Backend" Target="STORAGE_BACKEND" Default="local" Mode="" Description="local for disk or s3 for S3-compatible storage" Type="Variable" Display="always" Required="false" Mask="false">local</Config>
