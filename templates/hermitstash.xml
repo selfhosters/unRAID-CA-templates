@@ -21,6 +21,7 @@ After starting, visit http://[IP]:[PORT:3000] to complete the setup wizard.</Ove
   <WebUI>http://[IP]:[PORT:3000]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/hermitstash.xml</TemplateURL>
   <Icon>https://assets.hermitstash.com/img/icons/icon-512.png</Icon>
+  <Screenshot>https://raw.githubusercontent.com/dotCooCoo/hermitstash/main/public/img/screenshots/1.png</Screenshot>
   <ExtraParams>--shm-size=256m --init --security-opt=no-new-privileges:true --cap-drop=ALL --cap-add=CHOWN --cap-add=SETUID --cap-add=SETGID --cap-add=DAC_OVERRIDE</ExtraParams>
   <DonateText>Support on Ko-fi</DonateText>
   <DonateLink>https://ko-fi.com/dotcoocoo</DonateLink>
