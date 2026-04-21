@@ -12,7 +12,7 @@
 Interactive Discord bot with buttons to start, stop, restart, and monitor containers. Includes a web dashboard for configuration, task scheduling, auto-actions, and channel translation (DeepL/Google/Microsoft). Available in 40 languages.[br][br]
 Alpine-based image, less than 200 MB RAM.[br][br]
 [b]Setup:[/b] Access the Web UI at http://[YOUR-IP]:9374 and log in with username "admin", password "setup".[br]
-[a href="https://ddc.bot"]Homepage[/a] | [a href="https://github.com/DockerDiscordControl/DockerDiscordControl/wiki"]Wiki[/a]</Overview>
+Homepage: https://ddc.bot</Overview>
   <Category>Tools:Utilities</Category>
   <WebUI>http://[IP]:[PORT:9374]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/dockerdiscordcontrol.xml</TemplateURL>
