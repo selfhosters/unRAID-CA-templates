@@ -30,5 +30,4 @@ Then paste your server config (Copy Command from launcher) into:
 
   <Config Name="PUID" Target="PUID" Default="99" Type="Variable" />
   <Config Name="PGID" Target="PGID" Default="100" Type="Variable" />
-  <Config Name="TZ" Target="TZ" Default="Europe/Zagreb" Type="Variable" />
 </Container>
