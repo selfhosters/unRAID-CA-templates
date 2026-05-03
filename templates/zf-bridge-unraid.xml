@@ -4,7 +4,6 @@
   <Repository>zonefoundry/bridge:latest</Repository>
   <Registry>https://hub.docker.com/r/zonefoundry/bridge</Registry>
   <Network>host</Network>
-  <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
   <Support>https://relay.zonefoundry.dev</Support>
@@ -15,16 +14,9 @@ First launch: pair with a one-time code from your iOS app, container persists cr
 &#xD;
 Host network mode is required so the bridge can SSDP-discover Sonos speakers on your LAN. Container runs as non-root user (UID 10001) with --cap-drop ALL — make sure the host data path is chowned 10001:10001.</Overview>
   <Category>HomeAutomation: Other:</Category>
-  <WebUI/>
   <TemplateURL>https://raw.githubusercontent.com/kisssam6886/zonefoundry/main/docker/unraid/zf-bridge-unraid.xml</TemplateURL>
   <Icon>https://relay.zonefoundry.dev/icon-512.png</Icon>
-  <ExtraParams>--restart unless-stopped --cap-drop ALL --read-only --tmpfs /tmp:rw,nosuid,nodev,size=16m</ExtraParams>
-  <PostArgs/>
-  <CPUset/>
-  <DateInstalled>1745000000</DateInstalled>
-  <DonateText/>
-  <DonateLink/>
-  <Requires/>
+  <ExtraParams>--cap-drop ALL --read-only --tmpfs /tmp:rw,nosuid,nodev,size=16m</ExtraParams>
   <Config Name="Relay URL" Target="ZF_RELAY_URL" Default="wss://relay.zonefoundry.dev/ws" Mode="" Description="ZoneFoundry cloud relay WebSocket URL." Type="Variable" Display="always" Required="true" Mask="false">wss://relay.zonefoundry.dev/ws</Config>
   <Config Name="Pair Code (first launch only)" Target="ZF_PAIR_CODE" Default="" Mode="" Description="One-time 6-letter code from your iOS app's Add Bridge screen. Only needed for first launch — once paired, container caches credentials in /app/data and you can clear this field." Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="User ID (override)" Target="ZF_USER_ID" Default="" Mode="" Description="Advanced: explicit user_id from existing pairing (skips pair-code redeem). Leave empty to use pair code instead." Type="Variable" Display="advanced" Required="false" Mask="false"/>
