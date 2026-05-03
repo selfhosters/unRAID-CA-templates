@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>zf-bridge-unraid</Name>
-  <Repository>kisssam6886/zonefoundry-bridge:latest</Repository>
-  <Registry>https://hub.docker.com/r/kisssam6886/zonefoundry-bridge</Registry>
+  <Repository>zonefoundry/bridge:latest</Repository>
+  <Registry>https://hub.docker.com/r/zonefoundry/bridge</Registry>
   <Network>host</Network>
   <MyIP/>
   <Shell>sh</Shell>
