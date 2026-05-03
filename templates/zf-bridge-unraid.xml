@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>zf-bridge-unraid</Name>
+  <Repository>kisssam6886/zonefoundry-bridge:latest</Repository>
+  <Registry>https://hub.docker.com/r/kisssam6886/zonefoundry-bridge</Registry>
+  <Network>host</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://relay.zonefoundry.dev</Support>
+  <Project>https://relay.zonefoundry.dev</Project>
+  <Overview>ZoneFoundry Bridge — connects your Sonos system to ZoneFoundry's iOS app, voice assistant, and IM bots (Telegram, WeChat, QQ) via the cloud relay.&#xD;
+&#xD;
+First launch: pair with a one-time code from your iOS app, container persists credentials in /app/data and reuses on restart.&#xD;
+&#xD;
+Host network mode is required so the bridge can SSDP-discover Sonos speakers on your LAN. Container runs as non-root user (UID 10001) with --cap-drop ALL — make sure the host data path is chowned 10001:10001.</Overview>
+  <Category>HomeAutomation: Other:</Category>
+  <WebUI/>
+  <TemplateURL>https://raw.githubusercontent.com/kisssam6886/zonefoundry/main/docker/unraid/zf-bridge-unraid.xml</TemplateURL>
+  <Icon>https://relay.zonefoundry.dev/icon-512.png</Icon>
+  <ExtraParams>--restart unless-stopped --cap-drop ALL --read-only --tmpfs /tmp:rw,nosuid,nodev,size=16m</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1745000000</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Relay URL" Target="ZF_RELAY_URL" Default="wss://relay.zonefoundry.dev/ws" Mode="" Description="ZoneFoundry cloud relay WebSocket URL." Type="Variable" Display="always" Required="true" Mask="false">wss://relay.zonefoundry.dev/ws</Config>
+  <Config Name="Pair Code (first launch only)" Target="ZF_PAIR_CODE" Default="" Mode="" Description="One-time 6-letter code from your iOS app's Add Bridge screen. Only needed for first launch — once paired, container caches credentials in /app/data and you can clear this field." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="User ID (override)" Target="ZF_USER_ID" Default="" Mode="" Description="Advanced: explicit user_id from existing pairing (skips pair-code redeem). Leave empty to use pair code instead." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Agent Secret (override)" Target="ZF_AGENT_SECRET" Default="" Mode="" Description="Advanced: explicit secret matching User ID. Leave empty to use pair code instead." Type="Variable" Display="advanced" Required="false" Mask="true"/>
+  <Config Name="Connector ID (override)" Target="ZF_CONNECTOR_ID" Default="" Mode="" Description="Advanced: explicit connector identity for multi-bridge users. Leave empty for default-legacy." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Data Volume" Target="/app/data" Default="/mnt/user/appdata/zonefoundry-bridge" Mode="rw" Description="Persistent data: cached pairing credentials. Must be chowned 10001:10001 on host (chown -R 10001:10001 /mnt/user/appdata/zonefoundry-bridge)." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/zonefoundry-bridge</Config>
+</Container>
