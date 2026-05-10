@@ -17,24 +17,18 @@ Default user is 99:100. If you change PUID/PGID, also change the --user value in
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/bindery.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/vavallee/bindery/main/.github/assets/logo.png</Icon>
   <ExtraParams>--user 99:100</ExtraParams>
-  <PostArgs/>
-  <CPUset/>
-  <DateInstalled/>
-  <DonateText/>
-  <DonateLink/>
-  <Requires/>
   <Config Name="WebUI" Target="8787" Default="8787" Mode="tcp" Description="HTTP port for the web interface, API, and OPDS catalogue." Type="Port" Display="always" Required="true" Mask="false">8787</Config>
   <Config Name="Config" Target="/config" Default="/mnt/user/appdata/bindery" Mode="rw" Description="SQLite database, image cache, and backups. Must persist across container restarts." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/bindery</Config>
-  <Config Name="Books" Target="/books" Default="/mnt/user/Books" Mode="rw" Description="Imported ebook library root. Bindery moves/copies/hardlinks files here from Downloads after import." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/Books</Config>
+  <Config Name="Books" Target="/books" Default="" Mode="rw" Description="Imported ebook library root. Bindery moves/copies/hardlinks files here from Downloads after import." Type="Path" Display="always" Required="true" Mask="false"/>
   <Config Name="Audiobooks" Target="/audiobooks" Default="" Mode="rw" Description="Optional separate root for imported audiobook folders. Leave blank to keep audiobooks under /books. If you map a path here, also set BINDERY_AUDIOBOOK_DIR=/audiobooks below." Type="Path" Display="always" Required="false" Mask="false"/>
-  <Config Name="Downloads" Target="/downloads" Default="/mnt/user/downloads/bindery" Mode="rw" Description="Watch folder for completed downloads. Should match the path SABnzbd / qBittorrent writes to." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/downloads/bindery</Config>
-  <Config Name="Log Level" Target="BINDERY_LOG_LEVEL" Default="info" Mode="" Description="Log verbosity: debug, info, warn, error." Type="Variable" Display="always" Required="false" Mask="false">info</Config>
+  <Config Name="Downloads" Target="/downloads" Default="" Mode="rw" Description="Watch folder for completed downloads. Should match the path SABnzbd / qBittorrent writes to." Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Log Level" Target="BINDERY_LOG_LEVEL" Default="info|debug|warn|error" Mode="" Description="Log verbosity: debug, info, warn, error." Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="PUID" Target="BINDERY_PUID" Default="99" Mode="" Description="UID the container will validate against. Must match the UID half of the --user flag in Extra Parameters. Default 99 = Unraid 'nobody'." Type="Variable" Display="always" Required="false" Mask="false">99</Config>
   <Config Name="PGID" Target="BINDERY_PGID" Default="100" Mode="" Description="GID the container will validate against. Must match the GID half of the --user flag in Extra Parameters. Default 100 = Unraid 'users'." Type="Variable" Display="always" Required="false" Mask="false">100</Config>
   <Config Name="Audiobook Directory" Target="BINDERY_AUDIOBOOK_DIR" Default="" Mode="" Description="Set to /audiobooks if you mapped a separate Audiobooks path above. If blank, audiobooks are imported into /books alongside ebooks." Type="Variable" Display="advanced" Required="false" Mask="false"/>
   <Config Name="URL Base" Target="BINDERY_URL_BASE" Default="" Mode="" Description="Subpath prefix when hosting behind a reverse proxy at /bindery (e.g. SWAG / Nginx Proxy Manager). Leave blank for root." Type="Variable" Display="advanced" Required="false" Mask="false"/>
   <Config Name="Trusted Proxies" Target="BINDERY_TRUSTED_PROXY" Default="" Mode="" Description="Comma-separated CIDR list of reverse proxies allowed to set X-Forwarded-* headers. Required if you rely on X-Forwarded-For for auth or rate limits." Type="Variable" Display="advanced" Required="false" Mask="false"/>
-  <Config Name="Cookie Secure" Target="BINDERY_COOKIE_SECURE" Default="auto" Mode="" Description="Session cookie Secure flag: auto (detect TLS via X-Forwarded-Proto), always, or never." Type="Variable" Display="advanced" Required="false" Mask="false">auto</Config>
+  <Config Name="Cookie Secure" Target="BINDERY_COOKIE_SECURE" Default="auto|always|never" Mode="" Description="Session cookie Secure flag: auto (detect TLS via X-Forwarded-Proto), always, or never." Type="Variable" Display="advanced" Required="false" Mask="false"/>
   <Config Name="Download Path Remap" Target="BINDERY_DOWNLOAD_PATH_REMAP" Default="" Mode="" Description="Comma-separated from:to pairs, used when SABnzbd / qBittorrent reports a path that doesn't match what Bindery sees. Example: /downloads:/data/downloads" Type="Variable" Display="advanced" Required="false" Mask="false"/>
   <Config Name="Allow Private Webhook URLs" Target="BINDERY_NOTIFICATIONS_ALLOW_PRIVATE" Default="false" Mode="" Description="Set to 1 to allow webhook destinations on RFC1918 networks (ntfy / Home Assistant on the LAN). Default false blocks them as SSRF protection." Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
   <Config Name="API Key Seed" Target="BINDERY_API_KEY" Default="" Mode="" Description="One-time seed for the persisted API key. Leave blank to let Bindery generate one on first boot; rotate from the WebUI afterwards." Type="Variable" Display="advanced" Required="false" Mask="true"/>
