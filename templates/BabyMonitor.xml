@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>BabyMonitor</Name>
+  <Repository>ghcr.io/aldendana/ha-baby-monitor:latest</Repository>
+  <Registry>https://github.com/AldenDana/ha-baby-monitor/pkgs/container/ha-baby-monitor</Registry>
+  <Network>bridge</Network>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/AldenDana/ha-baby-monitor/issues</Support>
+  <Project>https://github.com/AldenDana/ha-baby-monitor</Project>
+  <Overview>Monitors audio from an RTSP camera stream and sends alerts to Home Assistant when noise exceeds a configurable threshold. Designed for baby monitoring but works with any RTSP camera.&#xD;
+&#xD;
+Uses FFmpeg ebur128 filter for accurate volume measurement. Publishes live volume to MQTT and fires a Home Assistant webhook when noise is detected. Features dual camera fallback on connection loss, auto-reconnect, and configurable threshold + trigger count to avoid false positives.&#xD;
+&#xD;
+No code changes needed — fully configured via environment variables.</Overview>
+  <Category>HomeAutomation:</Category>
+  <WebUI/>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/BabyMonitor.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/AldenDana/ha-baby-monitor/main/icon.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Primary Camera URL" Target="CAMERA_URL" Default="" Mode="" Description="Primary RTSP stream URL — e.g. rtsp://user:pass@192.168.1.x:554/stream" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Fallback Camera URL" Target="CAMERA_FALLBACK_URL" Default="" Mode="" Description="Secondary RTSP URL — used automatically when the primary fails (optional)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Noise Threshold (dBFS)" Target="THRESHOLD" Default="-30" Mode="" Description="Volume threshold in dBFS. Higher = more sensitive. Silent room: -60 to -45. Baby crying: -20 to -10. Start at -30 and adjust." Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Trigger Count" Target="TRIGGER_COUNT" Default="2" Mode="" Description="Consecutive loud readings required before alert fires — avoids false positives from brief sounds" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Sample Interval (s)" Target="SAMPLE_INTERVAL" Default="2" Mode="" Description="Seconds between volume samples" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="MQTT Host" Target="MQTT_HOST" Default="" Mode="" Description="MQTT broker IP address (e.g. 192.168.1.x)" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="MQTT Port" Target="MQTT_PORT" Default="1883" Mode="" Description="MQTT broker port" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="MQTT Username" Target="MQTT_USER" Default="homeassistant" Mode="" Description="MQTT username" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="MQTT Password" Target="MQTT_PASS" Default="" Mode="" Description="MQTT password" Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="MQTT Topic" Target="MQTT_TOPIC" Default="home/baby_monitor/volume" Mode="" Description="Topic for live volume readings (used for MQTT sensor in HA)" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="HA Webhook URL" Target="WEBHOOK_URL" Default="http://homeassistant:8123/api/webhook/baby_noise_alert" Mode="" Description="Home Assistant webhook URL to call when noise is detected" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Retry Delay (s)" Target="RETRY_DELAY" Default="5" Mode="" Description="Seconds to wait before reconnecting after camera connection loss" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="FFmpeg Log Level" Target="FFMPEG_LOGLEVEL" Default="warning" Mode="" Description="FFmpeg verbosity: warning, verbose, debug" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+</Container>
