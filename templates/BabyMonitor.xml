@@ -14,16 +14,8 @@ Uses FFmpeg ebur128 filter for accurate volume measurement. Publishes live volum
 &#xD;
 No code changes needed — fully configured via environment variables.</Overview>
   <Category>HomeAutomation:</Category>
-  <WebUI/>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/BabyMonitor.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/AldenDana/ha-baby-monitor/main/icon.png</Icon>
-  <ExtraParams/>
-  <PostArgs/>
-  <CPUset/>
-  <DateInstalled/>
-  <DonateText/>
-  <DonateLink/>
-  <Requires/>
   <Config Name="Primary Camera URL" Target="CAMERA_URL" Default="" Mode="" Description="Primary RTSP stream URL — e.g. rtsp://user:pass@192.168.1.x:554/stream" Type="Variable" Display="always" Required="true" Mask="false"/>
   <Config Name="Fallback Camera URL" Target="CAMERA_FALLBACK_URL" Default="" Mode="" Description="Secondary RTSP URL — used automatically when the primary fails (optional)" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Noise Threshold (dBFS)" Target="THRESHOLD" Default="-30" Mode="" Description="Volume threshold in dBFS. Higher = more sensitive. Silent room: -60 to -45. Baby crying: -20 to -10. Start at -30 and adjust." Type="Variable" Display="always" Required="true" Mask="false"/>
