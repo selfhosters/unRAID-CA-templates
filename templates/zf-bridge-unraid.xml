@@ -10,7 +10,9 @@
   <Project>https://relay.zonefoundry.dev</Project>
   <Overview>ZoneFoundry Bridge — connects your Sonos system to ZoneFoundry's iOS app, voice assistant, and IM bots (Telegram, WeChat, QQ) via the cloud relay.&#xD;
 &#xD;
-First launch: pair with a one-time code from your iOS app, container persists credentials in /app/data and reuses on restart.&#xD;
+First launch (recommended): leave "Pair Code" empty. On first start the container will print a 6-letter "Setup code" in its log (e.g. ZF-LMNO). Open the ZoneFoundry iOS app → More → Bridges → tap the + button → "Enter setup code", type the code in, and the bridge auto-pairs within ~5 seconds. Credentials are then cached in /app/data so restarts skip pairing.&#xD;
+&#xD;
+First launch (power-user path): if you prefer to pre-generate a pair code from the iOS app, set "Pair Code" to that code and the container will redeem it on start instead.&#xD;
 &#xD;
 1-tap updates: the iOS app's Bridges screen surfaces "升级" / "Apply Update" when a new bridge image is published — tap once and the bridge pulls the new image via the mounted docker socket and restarts itself. No SSH or Container Manager interaction needed.&#xD;
 &#xD;
@@ -20,7 +22,7 @@ Host network mode is required so the bridge can SSDP-discover Sonos speakers on 
   <Icon>https://relay.zonefoundry.dev/icon-512.png</Icon>
   <ExtraParams>--cap-drop ALL --read-only --tmpfs /tmp:rw,nosuid,nodev,size=16m --group-add 281</ExtraParams>
   <Config Name="Relay URL" Target="ZF_RELAY_URL" Default="wss://relay.zonefoundry.dev/ws" Mode="" Description="ZoneFoundry cloud relay WebSocket URL." Type="Variable" Display="always" Required="true" Mask="false">wss://relay.zonefoundry.dev/ws</Config>
-  <Config Name="Pair Code (first launch only)" Target="ZF_PAIR_CODE" Default="" Mode="" Description="One-time 6-letter code from your iOS app's Add Bridge screen. Only needed for first launch — once paired, container caches credentials in /app/data and you can clear this field." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Pair Code (optional)" Target="ZF_PAIR_CODE" Default="" Mode="" Description="Leave EMPTY to use the recommended Setup code flow — container will print a 6-letter code in its log on first start, enter it in iOS → More → Bridges → Enter setup code. Set this only if you pre-generated a pair code from the iOS app (Generate pair code path). Once paired, credentials are cached in /app/data and this field can stay empty forever." Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="User ID (override)" Target="ZF_USER_ID" Default="" Mode="" Description="Advanced: explicit user_id from existing pairing (skips pair-code redeem). Leave empty to use pair code instead." Type="Variable" Display="advanced" Required="false" Mask="false"/>
   <Config Name="Agent Secret (override)" Target="ZF_AGENT_SECRET" Default="" Mode="" Description="Advanced: explicit secret matching User ID. Leave empty to use pair code instead." Type="Variable" Display="advanced" Required="false" Mask="true"/>
   <Config Name="Connector ID (override)" Target="ZF_CONNECTOR_ID" Default="" Mode="" Description="Advanced: explicit connector identity for multi-bridge users. Leave empty for default-legacy." Type="Variable" Display="advanced" Required="false" Mask="false"/>
