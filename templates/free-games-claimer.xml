@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>free-games-claimer</Name>
+  <Repository>ghcr.io/feldorn/free-games-claimer</Repository>
+  <Registry>https://github.com/feldorn/free-games-claimer/pkgs/container/free-games-claimer</Registry>
+  <Support>https://github.com/feldorn/free-games-claimer/issues</Support>
+  <Project>https://github.com/feldorn/free-games-claimer</Project>
+  <Overview>A self-hosted scheduler that claims free games and rewards across multiple storefronts on its own. Logs in once via your browser session, then keeps watch &#x2014; daily checks, captcha-aware pause-and-notify when a human is needed, in-app stats showing what got claimed, what's pending, and how your Microsoft Rewards points are trending.&#13;
+&#13;
+Claimers &#x2014; log in once, then auto-claim any free game that drops:&#13;
+Amazon Prime Gaming: Free games + GOG / MS Store / Xbox keys delivered via Prime&#13;
+Epic Games Store: Weekly free-game claim&#13;
+GOG: Homepage giveaways + catalog watch for tag-flagged free items&#13;
+Steam: Free-to-keep promotions only (not F2P or free weekends)&#13;
+&#13;
+Point / coin collectors &#x2014; daily-cadence reward grinding:&#13;
+Microsoft Rewards: Daily Bing searches + activity cards for points, with before/after balance tracking&#13;
+AliExpress: Daily check-in coins (opt-in; disabled by default; deprecated)&#13;
+&#13;
+Watchers &#x2014; notify-only; surface new free items so you can grab them yourself:&#13;
+Ubisoft Connect: Pings on new free-week promos (opt-in)&#13;
+Humble Bundle: Pings on new free items in the Humble store (opt-in)&#13;
+Fanatical: Pings on new free Steam-key giveaways (opt-in)&#13;
+Lenovo Gaming Key Drops: Tracks scheduled drops + fires push notifications 1h before / 5min before / at drop time so you can land the queue before keys run out (opt-in)</Overview>
+  <Category>Tools:Utilities Other:</Category>
+  <WebUI>http://[IP]:[PORT:7080]</WebUI>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/free-games-claimer.png</Icon>
+  <Config Name="FGC Data" Target="/fgc/data" Default="/mnt/user/appdata/free-games-claimer" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/fgc</Config>
+  <Config Name="VNC" Target="6080" Default="6080" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">6080</Config>
+  <Config Name="WebUI" Target="7080" Default="7080" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">7080</Config>
+</Container>
