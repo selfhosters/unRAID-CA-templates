@@ -25,7 +25,7 @@ Lenovo Gaming Key Drops: Tracks scheduled drops + fires push notifications 1h be
   <Category>Tools:Utilities Other:</Category>
   <WebUI>http://[IP]:[PORT:7080]</WebUI>
   <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/free-games-claimer.png</Icon>
-  <Config Name="FGC Data" Target="/fgc/data" Default="/mnt/user/appdata/free-games-claimer" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/fgc</Config>
+  <Config Name="FGC Data" Target="/fgc/data" Default="/mnt/user/appdata/free-games-claimer" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/free-games-claimer</Config>
   <Config Name="VNC" Target="6080" Default="6080" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">6080</Config>
   <Config Name="WebUI" Target="7080" Default="7080" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">7080</Config>
 </Container>
