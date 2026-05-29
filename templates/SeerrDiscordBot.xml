@@ -4,7 +4,6 @@
   <Repository>pejkaa/seerr-discord-bot</Repository>
   <Registry>https://hub.docker.com/r/pejkaa/seerr-discord-bot</Registry>
   <Network>bridge</Network>
-  <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
   <Support>https://github.com/pejkaa/seerr-discord-bot</Support>
