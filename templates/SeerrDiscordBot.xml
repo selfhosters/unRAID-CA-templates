@@ -31,7 +31,7 @@
   <Config Name="Seerr API Key" Target="SEER_API_KEY" Default="" Mode="" Description="Your Overseerr or Jellyseerr API key. Found in Jellyseerr/Overseerr → Settings → General → API Key." Type="Variable" Display="always" Required="true" Mask="true"/>
 
   <Config Name="Library 1 Name" Target="LIBRARY_1_NAME" Default="Movies" Mode="" Description="Name of your first library. This becomes the slash command /request-movies. Use letters, numbers and spaces only." Type="Variable" Display="always" Required="true" Mask="false"/>
-  <Config Name="Library 1 Type" Target="LIBRARY_1_TYPE" Default="movie" Mode="" Description="Media type for Library 1. Use 'movie' for movies or 'tv' for TV shows." Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Library 1 Type" Target="LIBRARY_1_TYPE" Default="movie|tv" Mode="" Description="Media type for Library 1. Use 'movie' for movies or 'tv' for TV shows." Type="Variable" Display="always" Required="true" Mask="false"/>
   <Config Name="Library 1 Server ID" Target="LIBRARY_1_SERVER_ID" Default="0" Mode="" Description="Jellyseerr server ID for Library 1. In Jellyseerr Settings → Radarr/Sonarr, the first server is ID 0, second is ID 1, etc." Type="Variable" Display="always" Required="true" Mask="false"/>
 
   <Config Name="Library 2 Name" Target="LIBRARY_2_NAME" Default="TV Shows" Mode="" Description="Name of your second library. This becomes the slash command /request-tv-shows." Type="Variable" Display="always" Required="true" Mask="false"/>
