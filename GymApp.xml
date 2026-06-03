@@ -12,9 +12,6 @@
   <WebUI>http://[IP]:[PORT:3001]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/thaihoang987/Gym-app/main/unraid-template.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/thaihoang987/Gym-app/main/public/pwa-512.png</Icon>
-  <ExtraParams>--restart=unless-stopped</ExtraParams>
-  <Author>thaihoang987</Author>
-  <Date>2026-06-01</Date>
 
   <!-- PORT -->
   <Config
@@ -45,35 +42,21 @@
     Name="Admin Password"
     Target="ADMIN_PASSWORD"
     Default="admin123"
-    Mode=""
     Description="Password for the default admin account on first run. Change this before starting! Only applies when creating a fresh database."
     Type="Variable"
     Display="always"
     Required="false"
     Mask="true">admin123</Config>
 
-  <!-- TIMEZONE -->
-  <Config
-    Name="Timezone"
-    Target="TZ"
-    Default="Asia/Ho_Chi_Minh"
-    Mode=""
-    Description="Your timezone for correct date/time display. E.g. Asia/Ho_Chi_Minh, America/New_York, Europe/London."
-    Type="Variable"
-    Display="always"
-    Required="false"
-    Mask="false">Asia/Ho_Chi_Minh</Config>
-
   <!-- PORT ENV -->
   <Config
     Name="Server Port (internal)"
     Target="PORT"
     Default="3001"
-    Mode=""
     Description="Internal server port. Keep this matching the Web Port above."
     Type="Variable"
-    Display="advanced"
-    Required="false"
+    Display="advanced-hide"
+    Required="true"
     Mask="false">3001</Config>
 
 </Container>
