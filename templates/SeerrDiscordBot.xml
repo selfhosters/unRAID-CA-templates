@@ -6,7 +6,7 @@
   <Network>bridge</Network>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>https://github.com/pejkaa/seerr-discord-bot</Support>
+  <Support>https://forums.unraid.net/topic/199112-seerr-discord-bot/</Support>
   <Project>https://github.com/pejkaa/seerr-discord-bot</Project>
   <Overview>A Discord bot that lets users request movies and TV shows via slash commands, routed through your Overseerr or Jellyseerr instance. Users can link their Discord account to their Seerr profile. Supports multiple configurable libraries (Movies, Kids Movies, TV Shows, Kids TV Shows, etc) and availability notifications.</Overview>
   <Category>MediaApp:Other Tools:</Category>
