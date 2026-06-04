@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>SeerrDiscordBot</Name>
+  <Repository>pejkaa/seerr-discord-bot</Repository>
+  <Registry>https://hub.docker.com/r/pejkaa/seerr-discord-bot</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/199112-seerr-discord-bot/</Support>
+  <Project>https://github.com/pejkaa/seerr-discord-bot</Project>
+  <Overview>A Discord bot that lets users request movies and TV shows via slash commands, routed through your Overseerr or Jellyseerr instance. Users can link their Discord account to their Seerr profile. Supports multiple configurable libraries (Movies, Kids Movies, TV Shows, Kids TV Shows, etc) and availability notifications.</Overview>
+  <Category>MediaApp:Other Tools:</Category>
+  <TemplateURL>https://raw.githubusercontent.com/pejkaa/unraid-templates/main/SeerrDiscordBot.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/png/discord.png</Icon>
+  <Requires>A Discord Bot Token (from https://discord.com/developers/applications) and a running Overseerr or Jellyseerr instance. After starting, register slash commands by running: docker exec SeerrDiscordBot node src/register.js</Requires>
+
+  <Config Name="Discord - Bot Token" Target="DISCORD_TOKEN" Default="" Mode="" Description="Your Discord bot token. Get it from https://discord.com/developers/applications → Your App → Bot → Reset Token." Type="Variable" Display="always-hide" Required="true" Mask="true"/>
+  <Config Name="Discord - Client ID" Target="DISCORD_CLIENT_ID" Default="" Mode="" Description="Your Discord application Client ID (Application ID). Found at https://discord.com/developers/applications → Your App → General Information." Type="Variable" Display="always-hide" Required="true" Mask="false"/>
+  <Config Name="Discord - Server ID" Target="DISCORD_GUILD_ID" Default="" Mode="" Description="Your Discord server ID. Enable Developer Mode in Discord (Settings → Advanced), then right-click your server and select Copy Server ID." Type="Variable" Display="always-hide" Required="true" Mask="false"/>
+  <Config Name="Discord - Requests Channel ID" Target="REQUESTS_CHANNEL_ID" Default="" Mode="" Description="Discord channel ID where new requests are posted. Right-click the channel and select Copy Channel ID." Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Discord - Notify Channel ID" Target="NOTIFY_CHANNEL_ID" Default="" Mode="" Description="Discord channel ID where availability notifications are sent when media is ready. Can be the same as Requests Channel." Type="Variable" Display="always" Required="false" Mask="false"/>
+
+  <Config Name="Seerr - URL" Target="SEER_URL" Default="" Mode="" Description="URL of your Overseerr or Jellyseerr instance including port. Example: http://192.168.1.100:5055" Type="Variable" Display="always-hide" Required="true" Mask="false"/>
+  <Config Name="Seerr - API Key" Target="SEER_API_KEY" Default="" Mode="" Description="Your Overseerr or Jellyseerr API key. Found in Jellyseerr/Overseerr → Settings → General → API Key." Type="Variable" Display="always-hide" Required="true" Mask="true"/>
+
+  <Config Name="Movies Library - Name" Target="LIBRARY_1_NAME" Default="Movies" Description="Name of your first library. This becomes the slash command /request-movies. Use letters, numbers and spaces only." Type="Variable" Display="always-hide" Required="true" Mask="false"/>Movies</Config>
+  <Config Name="Movies Library - Type" Target="LIBRARY_1_TYPE" Default="movie" Description="Media type for Library 1. Use 'movie' for movies or 'tv' for TV shows." Type="Variable" Display="always-hide" Required="true" Mask="false">movie</Config>
+  <Config Name="Movies Library - Server ID" Target="LIBRARY_1_SERVER_ID" Default="" Description="Jellyseerr server ID for Library 1. In Jellyseerr Settings → Radarr/Sonarr, the first server is ID 0, second is ID 1, etc." Type="Variable" Display="always-hide" Required="true" Mask="false"/>
+
+  <Config Name="TV Shows Library - Name" Target="LIBRARY_2_NAME" Default="TV Shows" Description="Name of your second library. This becomes the slash command /request-tv-shows." Type="Variable" Display="always-hide" Required="true" Mask="false">TV Shows</Config>
+  <Config Name="TV Shows Library - Type" Target="LIBRARY_2_TYPE" Default="tv" Description="Media type for Library 2. Use 'movie' for movies or 'tv' for TV shows." Type="Variable" Display="always-hide" Required="true" Mask="false">tv</Config>
+  <Config Name="TV Shows Library - Server ID" Target="LIBRARY_2_SERVER_ID" Default="" Description="Jellyseerr server ID for Library 2." Type="Variable" Display="always-hide" Required="true" Mask="false"/>
+
+  <Config Name="Library 3 - Name" Target="LIBRARY_3_NAME" Default="" Description="Optional. Name of a third library. Example: Kids Movies. Leave blank if not needed." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Library 3 - Type" Target="LIBRARY_3_TYPE" Default="" Description="Optional. Media type for Library 3. Use 'movie' or 'tv'." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Library 3 - Server ID" Target="LIBRARY_3_SERVER_ID" Default="" Description="Optional. Jellyseerr server ID for Library 3." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+
+  <Config Name="Library 4 - Name" Target="LIBRARY_4_NAME" Default="" Description="Optional. Name of a fourth library. Example: Kids TV Shows. Leave blank if not needed." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Library 4 - Type" Target="LIBRARY_4_TYPE" Default="" Description="Optional. Media type for Library 4. Use 'movie' or 'tv'." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Library 4 - Server ID" Target="LIBRARY_4_SERVER_ID" Default="" Description="Optional. Jellyseerr server ID for Library 4." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+
+  <Config Name="Discord - Allowed Role ID" Target="ALLOWED_ROLE_ID" Default="" Description="Optional. If set, only Discord users with this role can use /request commands. Leave blank to allow everyone." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Discord - Admin Role ID" Target="ADMIN_ROLE_ID" Default="" Description="Optional. If set, only Discord users with this role can use /linklist. Leave blank to allow everyone." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+
+  <Config Name="Data Directory" Target="/app/data" Default="/mnt/user/appdata/SeerrDiscordBot/data" Mode="rw" Description="Path to store persistent data (user links and request history). This data survives container restarts and updates." Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/SeerrDiscordBot/data</Config>
+
+</Container>
