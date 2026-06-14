@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/airbridge.xml</TemplateURL>
+  <Name>Airbridge</Name>
+  <Repository>ghcr.io/kenyonj/airbridge</Repository>
+  <Registry>https://github.com/kenyonj/airbridge/pkgs/container/airbridge</Registry>
+  <Branch>
+    <Tag>latest</Tag>
+    <TagDescription>Latest stable release</TagDescription>
+  </Branch>
+  <Network>host</Network>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/kenyonj/airbridge/issues</Support>
+  <Project>https://github.com/kenyonj/airbridge</Project>
+  <Overview>Airbridge bridges DLNA/UPnP audio streams to AirPlay (RAOP) devices.&#xD;
+[br][br]&#xD;
+Creates virtual DLNA renderers that forward audio to AirPlay speakers, allowing media servers like Music Assistant or Plex to stream to AirPlay-only devices through DLNA.&#xD;
+[br][br]&#xD;
+Features:&#xD;
+[br]- Virtual DLNA renderer per AirPlay zone&#xD;
+[br]- Automatic AirPlay device discovery (mDNS)&#xD;
+[br]- Web admin interface for managing devices&#xD;
+[br]- Volume control support&#xD;
+[br][br]&#xD;
+Requires host network mode for mDNS device discovery and SSDP announcements.</Overview>
+  <Category>MediaServer:Music MediaServer:Other Status:Stable</Category>
+  <WebUI>http://[IP]:[PORT:8200]/admin</WebUI>
+  <Icon>https://raw.githubusercontent.com/kenyonj/airbridge/main/unraid/airbridge-icon.png</Icon>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/airbridge</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Config Name="Data Path" Target="/data" Default="/mnt/user/appdata/airbridge" Mode="rw" Description="Persistent storage for database and configuration" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/airbridge</Config>
+</Container>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>PatreonCredits</Name>
+  <Repository>mscrnt/patreon-credits:latest</Repository>
+  <Registry>https://hub.docker.com/r/mscrnt/patreon-credits</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/mscrnt/patreon-credits/discussions</Support>
+  <Project>https://github.com/mscrnt/patreon-credits</Project>
+  <Overview>Generate professional scrolling end-credits videos (MP4) for YouTube content creators, featuring their Patreon supporters. Fetch patrons directly from the Patreon API or paste custom names. Supports 35 bundled fonts with CJK character support, 1-5 column layouts, 720p/1080p/4K resolution, and fully customizable colors, sizes, and styling. Includes a web-based UI, REST API, and Swagger docs.</Overview>
+  <Category>Productivity: MediaApp:Video</Category>
+  <WebUI>http://[IP]:[PORT:8787]</WebUI>
+  <Icon>https://raw.githubusercontent.com/mscrnt/patreon-credits/main/icon.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/patreon-credits.xml</TemplateURL>
+  <DonateText>Buy Me a Coffee</DonateText>
+  <DonateLink>https://buymeacoffee.com/mscrnt</DonateLink>
+  <Config Name="WebUI Port" Target="8787" Default="8787" Mode="tcp" Description="Port for the web interface." Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="Output Directory" Target="/app/output" Default="/mnt/user/appdata/patreon-credits/output" Mode="rw" Description="Directory where generated videos are saved." Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Patreon Token" Target="PATREON_TOKEN" Default="" Mode="" Description="Patreon Creator Access Token. Leave empty to configure in the web UI or use dummy data." Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="Campaign ID" Target="PATREON_CAMPAIGN_ID" Default="" Mode="" Description="Patreon Campaign ID. Leave empty to configure in the web UI." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Use Dummy Data" Target="USE_DUMMY_DATA" Default="false|true" Mode="" Description="Use dummy patron names for testing without Patreon credentials." Type="Variable" Display="always" Required="false" Mask="false"/>
+</Container>
