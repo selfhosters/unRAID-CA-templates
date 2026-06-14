@@ -2,7 +2,7 @@
 <Container version="2">
   <Name>testerfy</Name>
   <Repository>ghcr.io/ozmoetr/testerfy:latest</Repository>
-  <Registry>https://github.com/ozmoetr/testerfy</Registry>
+  <Registry>https://github.com/ozmoetr/testerfy/pkgs/container/testerfy</Registry>
   <Branch>
     <Tag>latest</Tag>
     <TagDescription>Latest stable release</TagDescription>
@@ -12,18 +12,34 @@
   <Privileged>false</Privileged>
   <Support>https://github.com/ozmoetr/testerfy/issues</Support>
   <Project>https://github.com/ozmoetr/testerfy</Project>
-  <Overview>Testerfy - Spotify Playlist Curation Made Easy. Streamline your music discovery workflow! Like a track to save and skip, dislike to remove and skip. Playlist Guard prevents accidental deletions. Requires: Spotify Premium, Spotify Developer App, HTTPS access.</Overview>
+  <ExtraSearchTerms>spotify playlist music discovery oauth like dislike curation</ExtraSearchTerms>
+  <Overview>Testerfy — Spotify Playlist Curation Made Easy&#xD;
+&#xD;
+Burn through discovery playlists at speed. Like saves to your target playlists and skips, dislike removes and skips. Every decision is logged with timestamps, decision speed, and listening stats.&#xD;
+&#xD;
+Features: one-tap like/dislike with auto-skip, playlist guard, passive listening tracker, decision time analytics, undo support, mobile-friendly UI, encrypted tokens (AES-256-GCM).&#xD;
+&#xD;
+SETUP (about 5 min):&#xD;
+1. Expose the Web UI with a URL Spotify can redirect to (HTTPS is usually required for production redirect URIs). Pick one approach:&#xD;
+   • Optional: Tailscale — install the Unraid Tailscale plugin, then run: tailscale serve --bg --https 5247 http://localhost:5247&#xD;
+   • Or use your own reverse proxy / TLS (Nginx Proxy Manager, Caddy, Cloudflare Tunnel, etc.) in front of http://[IP]:5247&#xD;
+2. Create a Spotify Developer App at developer.spotify.com/dashboard&#xD;
+3. Add a redirect URI that exactly matches your public URL, e.g. https://your-domain/api/auth/callback or https://MACHINE.TAILNET.ts.net:5247/api/auth/callback if you use Tailscale Serve&#xD;
+4. Generate session secret: openssl rand -hex 32&#xD;
+5. Fill in the fields below and click Apply&#xD;
+&#xD;
+Full guide: https://github.com/ozmoetr/testerfy#setup</Overview>
   <Category>MediaApp:Music</Category>
   <WebUI>http://[IP]:[PORT:5247]</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unraid-templates/master/templates/testerfy.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/ozmoetr/testerfy/master/assets/logo.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/testerfy.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/testerfy.png</Icon>
   <DonateText>Support Testerfy Development</DonateText>
   <DonateLink>https://github.com/sponsors/ozmoetr</DonateLink>
-  <Requires>Spotify Premium, Spotify Developer App, HTTPS access</Requires>
-  <Config Name="Web UI Port" Target="5247" Default="5247" Mode="tcp" Description="Web interface port" Type="Port" Display="always" Required="true" Mask="false">5247</Config>
-  <Config Name="Data Path" Target="/data" Default="/mnt/user/appdata/testerfy/data" Mode="rw" Description="Database storage" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/testerfy/data</Config>
-  <Config Name="Spotify Client ID" Target="SPOTIFY_CLIENT_ID" Default="" Mode="" Description="From developer.spotify.com" Type="Variable" Display="always" Required="true" Mask="false"/>
-  <Config Name="Spotify Client Secret" Target="SPOTIFY_CLIENT_SECRET" Default="" Mode="" Description="From developer.spotify.com" Type="Variable" Display="always" Required="true" Mask="true"/>
-  <Config Name="Spotify Redirect URI" Target="SPOTIFY_REDIRECT_URI" Default="" Mode="" Description="Your HTTPS callback URL" Type="Variable" Display="always" Required="true" Mask="false"/>
-  <Config Name="Session Secret" Target="SESSION_SECRET" Default="" Mode="" Description="Run: openssl rand -hex 32" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Requires>Optional: Tailscale plugin if you want HTTPS via tailscale serve (see Overview). Spotify Premium and a Spotify Developer App are required.</Requires>
+  <Config Name="Web UI Port" Target="5247" Default="5247" Mode="tcp" Description="Container port. Map host port as needed; put HTTPS in front with a reverse proxy or optional Tailscale Serve." Type="Port" Display="always" Required="true" Mask="false">5247</Config>
+  <Config Name="Data Path" Target="/data" Default="/mnt/user/appdata/testerfy/data" Mode="rw" Description="Database and config storage. Back this up to preserve your history." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/testerfy/data</Config>
+  <Config Name="Spotify Client ID" Target="SPOTIFY_CLIENT_ID" Default="" Mode="" Description="From developer.spotify.com → Dashboard → Your App → Settings" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Spotify Client Secret" Target="SPOTIFY_CLIENT_SECRET" Default="" Mode="" Description="From developer.spotify.com → Dashboard → Your App → Settings → View client secret" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="Spotify Redirect URI" Target="SPOTIFY_REDIRECT_URI" Default="" Mode="" Description="Must match your Spotify Dashboard exactly — e.g. https://your-domain/api/auth/callback, or https://MACHINE.TAILNET.ts.net:5247/api/auth/callback if using Tailscale Serve" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Session Secret" Target="SESSION_SECRET" Default="" Mode="" Description="Random security key. Generate with: openssl rand -hex 32" Type="Variable" Display="always" Required="true" Mask="true"/>
 </Container>
