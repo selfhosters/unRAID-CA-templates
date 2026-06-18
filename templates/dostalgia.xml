@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>dostalgia</Name>
+  <Repository>droideparanoico/dostalgia</Repository>
+  <Registry>https://hub.docker.com/r/droideparanoico/dostalgia/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/droideparanoico/dostalgia/</Support>
+  <Project>https://github.com/droideparanoico/dostalgia</Project>
+  <ReadMe>https://github.com/droideparanoico/dostalgia/blob/main/README.md</ReadMe>
+  <Overview>A nostalgic DOS game hub. Upload your old DOS games, auto-scrape artwork and metadata from IGDB, and play them directly in your browser via js-dos (DOSBox compiled to WebAssembly).</Overview>
+  <Category>GameServers:</Category>
+  <WebUI>https://[IP]:[PORT:8765]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/droideparanoico/dostalgia/main/images/icon-512.png</Icon>
+  <Description>A nostalgic DOS game hub. Upload your old DOS games, auto-scrape artwork and metadata from IGDB, and play them directly in your browser via js-dos (DOSBox compiled to WebAssembly).</Description>
+  <Config Name="Data" Target="/data" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/dostalgia</Config>
+  <Config Name="Port" Target="8765" Default="8765" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">8765</Config>
+  <Config Name="Data directory" Target="DOSTALGIA_DATA_DIR" Default="/data" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">/data</Config>
+  <Config Name="Twitch id" Target="TWITCH_CLIENT_ID" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Twitch secret" Target="TWITCH_CLIENT_SECRET" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"/>
+</Container>
