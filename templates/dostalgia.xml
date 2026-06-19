@@ -13,9 +13,9 @@
   <WebUI>https://[IP]:[PORT:8765]/</WebUI>
   <Icon>https://raw.githubusercontent.com/droideparanoico/dostalgia/main/images/icon-512.png</Icon>
   <Description>A nostalgic DOS game hub. Upload your old DOS games, auto-scrape artwork and metadata from IGDB, and play them directly in your browser via js-dos (DOSBox compiled to WebAssembly).</Description>
-  <Config Name="Data" Target="/data" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/dostalgia</Config>
-  <Config Name="Port" Target="8765" Default="8765" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">8765</Config>
-  <Config Name="Data directory" Target="DOSTALGIA_DATA_DIR" Default="/data" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">/data</Config>
+  <Config Name="Data" Target="/data" Default="/mnt/user/appdata/dostalgia" Mode="rw" Description="" Type="Path" Display="always-hide" Required="true" Mask="false">/mnt/user/appdata/dostalgia</Config>
+  <Config Name="Port" Target="8765" Default="8765" Mode="tcp" Description="" Type="Port" Display="always-hide" Required="true" Mask="false">8765</Config>
+  <Config Name="Data directory" Target="DOSTALGIA_DATA_DIR" Default="/data" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">/data</Config>
   <Config Name="Twitch id" Target="TWITCH_CLIENT_ID" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Twitch secret" Target="TWITCH_CLIENT_SECRET" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"/>
 </Container>
