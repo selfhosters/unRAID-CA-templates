@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>pirarara-ai</Name>
+  <Repository>caiquebrito/pirarara-ai:latest</Repository>
+  <Registry>https://hub.docker.com/r/caiquebrito/pirarara-ai</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/199638-support-pirarara-ai-self-hosted-local-ai-platform/</Support>
+  <Project>https://github.com/caiquebrito/PirararaAI</Project>
+  <Overview>Pirarara AI is a self-hosted local AI platform — a lightweight alternative to Open WebUI. Named after the Pirarara (Phractocephalus hemioliopterus), the red-tailed catfish of the Amazon.&#xD;
+[br][br]&#xD;
+Features:&#xD;
+[br]- Chat UI with streaming responses&#xD;
+[br]- Multi-conversation sidebar with history&#xD;
+[br]- Model management (pull, load, delete)&#xD;
+[br]- Agent loop with filesystem access&#xD;
+[br]- Workspace file viewer with terminal panel&#xD;
+[br]- User authentication with JWT&#xD;
+[br]- OpenAI-compatible API endpoint&#xD;
+[br]- System stats (CPU / RAM / GPU)&#xD;
+[br][br]&#xD;
+Requires Ollama running on your network. No external database needed — uses SQLite internally.</Overview>
+  <Category>AI: Tools:</Category>
+  <WebUI>http://[IP]:[PORT:3000]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/pirarara-ai.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/caiquebrito/PirararaAI/main/frontend/public/logo.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <DateInstalled/>
+  <DonateText/>
+  <DonateLink/>
+
+  <Config Name="Host Port" Target="3000" Default="3000" Mode="tcp" Description="Web UI port" Type="Port" Display="always" Required="true" Mask="false">3000</Config>
+  <Config Name="Ollama URL" Target="OLLAMA_URL" Default="http://192.168.1.1:11434" Mode="" Description="URL of your Ollama instance (replace with your Unraid server IP)" Type="Variable" Display="always" Required="true" Mask="false">http://192.168.1.1:11434</Config>
+  <Config Name="Default Model" Target="OLLAMA_DEFAULT_MODEL" Default="qwen2.5-coder:7b-instruct-q4_K_M" Mode="" Description="Ollama model to use by default" Type="Variable" Display="always" Required="true" Mask="false">qwen2.5-coder:7b-instruct-q4_K_M</Config>
+  <Config Name="Secret Key" Target="SECRET_KEY" Default="" Mode="" Description="Random secret for JWT signing — generate with: openssl rand -hex 32" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="Anthropic API Key" Target="ANTHROPIC_API_KEY" Default="" Mode="" Description="Optional — for Claude models via Anthropic API" Type="Variable" Display="advanced" Required="false" Mask="true"/>
+  <Config Name="OpenAI API Key" Target="OPENAI_API_KEY" Default="" Mode="" Description="Optional — for OpenAI models" Type="Variable" Display="advanced" Required="false" Mask="true"/>
+  <Config Name="Database Path" Target="/data" Default="/mnt/user/appdata/pirarara/db" Mode="rw" Description="Where the SQLite database file is stored" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/pirarara/db</Config>
+  <Config Name="Workspace" Target="/workspace" Default="/mnt/user/appdata/pirarara/workspace" Mode="rw" Description="Directory where the agent can read/write files" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/pirarara/workspace</Config>
+</Container>
