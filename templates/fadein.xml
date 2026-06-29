@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>fade-in</Name>
+  <Repository>violentone/fadein:latest</Repository>
+  <Registry>https://hub.docker.com/r/violentone/fadein</Registry>
+  <Network>bridge</Network>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/trumblejoe/docker-fadein/issues</Support>
+  <Project>https://www.fadeinpro.com</Project>
+  <Overview>
+    Fade-In Professional is a full-featured screenwriting application. This container runs Fade-In inside a KDE desktop environment accessible through your browser via KasMVNC (port 3001). No VNC client required — just open the WebUI link.
+
+    [br][br]
+    [b]First run:[/b] Allow a moment for the desktop to initialize, then Fade-In will launch automatically.
+    [br]
+    [b]Data persistence:[/b] All Fade-In preferences, projects, and configuration are stored in the /config volume.
+  </Overview>
+  <Category>Productivity:</Category>
+  <WebUI>http://[IP]:[PORT:3001]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/trumblejoe/docker-fadein/main/unraid/fadein.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/trumblejoe/docker-fadein/main/fadein-icon.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Fade-In Professional screenwriting software running in a browser-accessible KDE desktop (KasMVNC).</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>3001</HostPort>
+        <ContainerPort>3001</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/fadein</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>1000</Value>
+      <Name>PUID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>1000</Value>
+      <Name>PGID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>America/New_York</Value>
+      <Name>TZ</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>PASSWORD</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+</Container>
