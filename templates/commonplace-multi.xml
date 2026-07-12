@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="2">
+  <Name>commonplace-multi</Name>
+  <Repository>ghcr.io/cansas/commonplace-multi:latest</Repository>
+  <Registry>https://github.com/cansas/commonplace-multi</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/cansas/commonplace-multi/issues</Support>
+  <Project>https://github.com/cansas/commonplace-multi</Project>
+  <Overview>Commonplace Multi-User is a self-hosted Readwise alternative with multi-user support — capture, browse, review, and resurface your book and article highlights. Built on the original Commonplace with per-user scoping, invite-based registration, and independent settings per user.
+
+Features:
+• All single-user features — import from KOReader, Kindle, Obsidian, Readwise API
+• Multi-user support — each user gets their own highlights, tags, settings, and review queue
+• Admin invite system — admin creates one-time invite tokens, users register with password
+• Per-user BookOrbit sync — each user can sync their own BookOrbit annotations
+• Per-user push notification settings and review reminders
+• Full-text search with filter by source, tags, favorites, and book
+• Multi-source cover art via Hardcover.app and Open Library
+• Achievement system with per-user streak tracking
+• Backup & restore database and covers as ZIP
+• Responsive mobile UI with PWA push notification support
+
+First run: Open the web UI and the setup wizard will guide you through creating your admin account. Then invite additional users via the Admin panel.</Overview>
+  <Category>Productivity</Category>
+  <WebUI>http://[IP]:[PORT:8765]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/cansas/commonplace-multi/main/.unraid/template.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/cansas/commonplace-multi/main/.unraid/icon.svg</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText/>
+  <DonateLink/>
+  <Changes>v2.0.0 — Multi-user release: per-user settings, invite registration, scoped highlights/reviews/tags/sources, per-user push notifications and BookOrbit sync, admin dedup with FTS rebuild</Changes>
+
+  <Config Name="Web UI Port" Target="8765" Default="8765" Mode="tcp" Description="Main web interface port" Type="Port" Required="true" Mask="false"/>
+  <Config Name="Data path" Target="/app/data" Default="/mnt/user/appdata/commonplace-multi/data" Mode="rw" Description="Persistent storage for SQLite database, covers, backups, and settings. Maps to /app/data in the container." Type="Path" Required="true" Mask="false"/>
+  <Config Name="SESSION_SECRET" Target="SESSION_SECRET" Default="" Mode="" Description="Secret key for signing session cookies and CSRF tokens. If left empty, a random one is generated and persisted in data/.session_secret on first start. Set explicitly for production to avoid invalidating sessions on restart." Type="Variable" Required="false" Mask="false"/>
+  <Config Name="TZ" Target="TZ" Default="America/Chicago" Mode="" Description="Timezone for the container (used by the email digest scheduler and review timestamps)." Type="Variable" Required="false" Mask="false"/>
+  <Config Name="COMMONPLACE_USERNAME" Target="COMMONPLACE_USERNAME" Default="" Mode="" Description="Optional — admin username for auto-creating the initial account on first start. If not set, the setup wizard prompts for credentials in the browser on first launch." Type="Variable" Required="false" Mask="false"/>
+  <Config Name="COMMONPLACE_PASSWORD" Target="COMMONPLACE_PASSWORD" Default="" Mode="" Description="Optional — admin password. Must be set together with COMMONPLACE_USERNAME if that is set. Ignored if USERNAME is empty." Type="Variable" Required="false" Mask="true"/>
+  <Config Name="SESSION_HTTPS_ONLY" Target="SESSION_HTTPS_ONLY" Default="false" Mode="" Description="Set to 'true' if you access Commonplace over HTTPS with a valid certificate. Ensures the session cookie is only sent over encrypted connections. Keep 'false' for LAN-only HTTP access." Type="Variable" Required="false" Mask="false"/>
+  <Config Name="HARDCOVER_API_KEY" Target="HARDCOVER_API_KEY" Default="" Mode="" Description="Optional — API key for Hardcover.app for better book cover art. Can also be set later from the Settings page in the web UI. When empty, falls back to Open Library covers (no key needed)." Type="Variable" Required="false" Mask="true"/>
+</Container>
