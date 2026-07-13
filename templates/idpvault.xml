@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>IdPVault</Name>
+  <Repository>ghcr.io/keltech-services/idpvault:latest</Repository>
+  <Registry>https://github.com/KelTech-Services/IdPVault/pkgs/container/idpvault</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/KelTech-Services/IdPVault/issues</Support>
+  <Project>https://github.com/KelTech-Services/IdPVault</Project>
+  <Overview>Self-hosted backup, drift detection, and restore for identity providers (Authentik, Okta, and Auth0). Encrypted configuration snapshots on a schedule, a diff of every change, selective restore with dry-run preview, and Users and Access backup/restore on paid tiers. No telemetry, no phone-home; license keys verify offline. Free Community tier included (1 tenant).&#13;&#10;&#13;&#10;Requires a PostgreSQL database - install any PostgreSQL container from CA and point the Database URL below at it. The encryption master key generates itself on first boot in the Secrets path: back that folder up and never delete it, or existing snapshots become unreadable.&#13;&#10;&#13;&#10;The container runs as a non-root user (uid 10001). If it fails to start with permission errors, run: chown -R 10001:10001 /mnt/user/appdata/idpvault</Overview>
+  <Category>Backup: Security:</Category>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/idpvault.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/idpvault.xml</TemplateURL>
+  <Config Name="Web UI Port" Target="8080" Default="8480" Mode="tcp" Description="Web interface port" Type="Port" Display="always" Required="true" Mask="false">8480</Config>
+  <Config Name="Snapshot Data" Target="/data" Default="/mnt/user/appdata/idpvault/data" Mode="rw" Description="Encrypted configuration snapshots" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/idpvault/data</Config>
+  <Config Name="Secrets" Target="/secrets" Default="/mnt/user/appdata/idpvault/secrets" Mode="rw" Description="Holds the auto-generated encryption master key. BACK THIS FOLDER UP and never delete it - snapshots cannot be decrypted without it." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/idpvault/secrets</Config>
+  <Config Name="Database URL" Target="IDPVAULT_DATABASE_URL" Default="" Mode="" Description="PostgreSQL connection string, e.g. postgresql+psycopg://idpvault:PASSWORD@SERVER-IP:5432/idpvault" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Data Dir" Target="IDPVAULT_DATA_DIR" Default="/data" Mode="" Description="Internal data path - do not change" Type="Variable" Display="advanced" Required="true" Mask="false">/data</Config>
+  <Config Name="Master Key File" Target="IDPVAULT_MASTER_KEY_FILE" Default="/secrets/master.key" Mode="" Description="Internal key path - do not change" Type="Variable" Display="advanced" Required="true" Mask="false">/secrets/master.key</Config>
+</Container>
