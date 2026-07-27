@@ -13,8 +13,7 @@
   <WebUI>http://[IP]:[PORT:17800]</WebUI>
   <Icon>https://raw.githubusercontent.com/zerx-lab/FluxDown/main/assets/logo/fluxdown_logo.png</Icon>
   <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/fluxdown.xml</TemplateURL>
-  <Config Name="Web UI Port" Target="17800" Default="17800" Mode="tcp" Description="Web UI, REST API and WebSocket" Type="Port" Display="always" Required="true" Mask="false">17800</Config>
-  <Config Name="Data" Target="/data" Default="/mnt/user/appdata/fluxdown" Mode="rw" Description="Database, logs and the admin token" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/fluxdown</Config>
-  <Config Name="Downloads" Target="/root/Downloads" Default="/mnt/user/downloads" Mode="rw" Description="Default download directory" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/downloads</Config>
-  <Config Name="TZ" Target="TZ" Default="Etc/UTC" Mode="" Description="Timezone" Type="Variable" Display="advanced" Required="false" Mask="false">Etc/UTC</Config>
+  <Config Name="Web UI Port" Target="17800" Default="17800" Mode="tcp" Description="Web UI, REST API and WebSocket" Type="Port" Display="always-hide" Required="true" Mask="false">17800</Config>
+  <Config Name="Downloads" Target="/root/Downloads" Default="" Mode="rw" Description="Default download directory" Type="Path" Display="always-hide" Required="true" Mask="false"/>
+  <Config Name="Data" Target="/data" Default="/mnt/user/appdata/fluxdown" Mode="rw" Description="Database, logs and the admin token" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/fluxdown</Config>
 </Container>
