@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>FluxDown</Name>
+  <Repository>ghcr.io/zerx-lab/fluxdown-server:latest</Repository>
+  <Registry>https://github.com/zerx-lab/FluxDown/pkgs/container/fluxdown-server</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/zerx-lab/FluxDown/issues</Support>
+  <Project>https://github.com/zerx-lab/FluxDown</Project>
+  <Overview>Multi-protocol download manager with a built-in web UI, written in Rust/Tokio. Handles HTTP/HTTPS, FTP, BitTorrent (DHT and magnet links), eD2K/Kad, HLS and DASH. Dynamic file segmentation, per-task and global rate limiting, and SQLite-backed crash-safe resume. It also exposes an aria2-compatible JSON-RPC API, so existing aria2 front-ends can drive it.&#13;&#10;&#13;&#10;First launch prints a one-time admin token to the container log. Open the container log from the Docker tab and look for the line containing the word token - the management API needs it, and the web UI asks for it on first visit.&#13;&#10;&#13;&#10;The Downloads path is where finished files land. The Data path holds the database, logs and the admin token, so keep it on appdata.</Overview>
+  <Category>Downloaders: Network:Web</Category>
+  <WebUI>http://[IP]:[PORT:17800]</WebUI>
+  <Icon>https://raw.githubusercontent.com/zerx-lab/FluxDown/main/assets/logo/fluxdown_logo.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/fluxdown.xml</TemplateURL>
+  <Config Name="Web UI Port" Target="17800" Default="17800" Mode="tcp" Description="Web UI, REST API and WebSocket" Type="Port" Display="always" Required="true" Mask="false">17800</Config>
+  <Config Name="Data" Target="/data" Default="/mnt/user/appdata/fluxdown" Mode="rw" Description="Database, logs and the admin token" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/fluxdown</Config>
+  <Config Name="Downloads" Target="/root/Downloads" Default="/mnt/user/downloads" Mode="rw" Description="Default download directory" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/downloads</Config>
+  <Config Name="TZ" Target="TZ" Default="Etc/UTC" Mode="" Description="Timezone" Type="Variable" Display="advanced" Required="false" Mask="false">Etc/UTC</Config>
+</Container>
