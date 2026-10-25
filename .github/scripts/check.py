@@ -36,7 +36,19 @@ def check_xml(filename: str):
   targetPorts: list = []
   requiredLinks: bool = False
 
-  tree = ET.parse(filename, parser=LineNumberingParser())
+  try:
+    tree = ET.parse(filename, parser=LineNumberingParser())
+  except ET.ParseError as e:
+    title = "XML Parse Error"
+    message = f"Failed to parse XML: {str(e)}"
+    # Extract line number if available from the error message
+    line_match = re.search(r'line (\d+)', str(e))
+    if line_match:
+      line = line_match.group(1)
+      print(f"::error file={filename},line={line},title={title}::{message}")
+    else:
+      print(f"::error file={filename},title={title}::{message}")
+    return  # Exit the function early since we can't continue without a valid tree
 
   root = tree.getroot()
 
